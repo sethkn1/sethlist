@@ -2216,3 +2216,83 @@ main {
   .modal-body { padding: 24px 20px; }
   .year-label { font-size: 64px; top: 78px; }
 }
+
+/* ============================================================
+   ACTION CHIPS (Random, Screensaver on Posters view)
+   Inherits base .chip styling but adds a subtle accent border so
+   they read as "buttons that do things" vs. filter toggles.
+   ============================================================ */
+.filter-bar .chip.action-chip {
+  border-color: var(--muted);
+  color: var(--paper-dim);
+}
+.filter-bar .chip.action-chip:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+.filter-bar .chip.screensaver-chip:hover {
+  background: var(--accent-2, var(--accent));
+  border-color: var(--accent-2, var(--accent));
+}
+
+/* ============================================================
+   SCREENSAVER MODE
+   Full-screen overlay above everything. Black background, centered
+   poster image, caption below, exit hint in bottom-right.
+   z-index: 300 — above the modal (z-index 100) and lightbox (200).
+   ============================================================ */
+.screensaver {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 40px;
+  /* Remove default browser focus outline — we indicate focus via the whole overlay */
+  outline: none;
+}
+.screensaver[hidden] { display: none; }
+.screensaver-img {
+  max-width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  /* Subtle fade-in so the transition between posters feels less abrupt */
+  animation: ssFadeIn 450ms ease-out;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.8);
+}
+@keyframes ssFadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+.screensaver-caption {
+  margin-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--paper-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  animation: ssFadeIn 450ms ease-out;
+}
+.screensaver-hint {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+@media (max-width: 640px) {
+  .screensaver { padding: 20px; }
+  .screensaver-img { max-height: 75vh; }
+  .screensaver-caption { font-size: 11px; margin-top: 16px; }
+  .screensaver-hint { font-size: 8px; bottom: 12px; right: 14px; }
+}

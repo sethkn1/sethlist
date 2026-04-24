@@ -156,7 +156,7 @@ const ROUTES = {
 
 function router() {
   let hash = window.location.hash || "#/timeline";
-  const [path] = hash.split("?");
+  const [path, queryStr] = hash.split("?");
   const fn = ROUTES[path] || renderTimeline;
   document.querySelectorAll(".main-nav a").forEach(a => {
     a.classList.toggle("active", a.getAttribute("href") === path);
@@ -169,6 +169,36 @@ function router() {
     window.scrollTo({ top: 0, behavior: "instant" });
   }
   withPreservedFocus(fn);
+
+  // Deep-link: if the URL contains ?modal=<id>, open the appropriate modal
+  // after the view renders. Uses a small delay so the render completes first.
+  const params = new URLSearchParams(queryStr || "");
+  const modalId = params.get("modal");
+  if (modalId !== null && modal.hidden) {
+    setTimeout(() => openModalFromDeepLink(path, modalId), 50);
+  }
+}
+
+/**
+ * Resolve and open a modal based on the current route and modal id from the URL.
+ * Concert modals on Timeline; poster modals on Posters view. If the id matches
+ * neither, silently no-op (clears the stale param).
+ */
+function openModalFromDeepLink(route, modalId) {
+  const id = parseInt(modalId, 10);
+  if (isNaN(id)) return;
+
+  if (route === "#/posters") {
+    // Find a poster group whose primary poster has this id
+    const list = STATE._posterNavList || [];
+    const idx = list.findIndex(g => g.posters && g.posters[0] && g.posters[0].id === id);
+    if (idx >= 0) openPosterModal(list[idx], { list, index: idx });
+  } else if (route === "#/timeline" || route === "") {
+    const list = STATE._timelineNavList || [];
+    const idx = list.findIndex(c => c.id === id);
+    if (idx >= 0) openConcertModal(list[idx], { list, index: idx });
+  }
+  // Songs view etc. don't deep-link to modals (yet)
 }
 
 /* ============================================================
@@ -645,6 +675,7 @@ function renderTimeline() {
   const q = params.get("q") || "";
   const state = params.get("state") || "";
   const artist = params.get("artist") || "";
+  const venue = params.get("venue") || "";  // deep-link target for "More at [Venue]"
   const posterOnly = params.get("posterOnly") === "1";
   const festival = params.get("festival") || ""; // festivalKey to focus on
   // Attended-with filter: comma-separated list of canonical names
@@ -721,6 +752,7 @@ function renderTimeline() {
   let filtered = STATE.concerts.filter(c => {
     if (state && c.state !== state) return false;
     if (artist && c.artist !== artist) return false;
+    if (venue && c.venue !== venue) return false;
     if (posterOnly && !c.hasPoster) return false;
     if (attendedWithFilter.length > 0) {
       const attendees = splitAttendedWith(c.attendedWith);
@@ -764,6 +796,10 @@ function renderTimeline() {
 
   // Count for display: count each concert (days in a festival count individually)
   countEl.textContent = `${filtered.length} show${filtered.length === 1 ? "" : "s"}`;
+
+  // Stash the filtered list on STATE so click handlers can build nav context for arrow-key nav.
+  // We store only concerts (not festival-level grouping) — arrow-nav walks individual shows.
+  STATE._timelineNavList = filtered;
 
   if (groupedItems.length === 0) {
     app.appendChild(el("div", { class: "loading" }, "No shows match these filters."));
@@ -903,7 +939,7 @@ function festivalDayCard(c) {
 
   return el("div", {
     class: "fest-day-card" + (c.hasPoster ? " has-poster" : ""),
-    on: { click: () => openConcertModal(c) }
+    on: { click: () => openConcertModalWithNav(c) }
   },
     el("div", { class: "fest-day-num" }, `Day ${dayNum} of ${total}`),
     el("div", { class: "fest-day-date" }, formatDate(c.date), c.dayOfWeek ? " · " + c.dayOfWeek : ""),
@@ -918,7 +954,7 @@ function concertCard(c) {
 
   const card = el("div", {
     class: classes.join(" "),
-    on: { click: () => openConcertModal(c) }
+    on: { click: () => openConcertModalWithNav(c) }
   });
 
   // Inner wrapper for band thumb + text content
@@ -1263,6 +1299,27 @@ function renderPosters() {
   const totalPosters = filtered.reduce((s, g) => s + g.posters.length, 0);
   countEl.textContent = `${filtered.length} show${filtered.length === 1 ? "" : "s"} · ${totalPosters} poster${totalPosters === 1 ? "" : "s"}`;
 
+  // Stash the filtered groups on STATE so click handlers can build nav context
+  // for arrow-key navigation across posters in the current filter.
+  STATE._posterNavList = filtered;
+
+  // Add "Random" + "Screensaver" action buttons to the filter bar (after count)
+  filterBar.appendChild(el("button", {
+    class: "chip action-chip",
+    title: "Open a random poster from the current filter",
+    on: { click: () => {
+      if (filtered.length === 0) return;
+      const idx = Math.floor(Math.random() * filtered.length);
+      openPosterModal(filtered[idx], { list: filtered, index: idx });
+    }}
+  }, "🎲 Random"));
+
+  filterBar.appendChild(el("button", {
+    class: "chip action-chip screensaver-chip",
+    title: "Full-screen rotating poster display — any key to exit",
+    on: { click: () => startScreensaver() }
+  }, "🖼 Screensaver"));
+
   // Poster marquee: a scrolling strip of poster thumbnails at the top of the view.
   // Uses the filtered set so it reflects whatever the user is currently looking at.
   // Inserted above the filter bar so it's the first visual thing you see.
@@ -1419,7 +1476,7 @@ function buildPosterMarquee(groupList) {
     const tile = el("div", {
       class: "marquee-tile",
       title: `${g.artist} · ${formatDate(g.date)}`,
-      on: { click: () => openPosterModal(g) }
+      on: { click: () => openPosterModalWithNav(g) }
     });
 
     let attempt = 0;
@@ -1522,7 +1579,7 @@ function posterGroupCard(g) {
 
   const card = el("div", {
     class: "poster-group" + (g.attended ? "" : " not-attended"),
-    on: { click: () => openPosterModal(g) }
+    on: { click: () => openPosterModalWithNav(g) }
   }, thumb, info);
   return card;
 }
@@ -2342,10 +2399,30 @@ modal.addEventListener("click", e => {
 });
 document.addEventListener("keydown", e => {
   if (e.key !== "Escape") return;
-  // Priority: close the topmost thing first. Lightbox > modal.
+  // Priority: close the topmost thing first. Lightbox > modal > screensaver-is-handled-separately.
   if (closeLightbox()) return;
   closeModal();
 });
+
+/**
+ * Central modal state. When a modal opens, the opener records:
+ *   - kind: "concert" | "poster"
+ *   - id:   the identifier (concert.id or poster group's primary poster id)
+ *   - list: the ordered array of items the user can navigate through
+ *           (e.g., the currently-filtered concerts from the Timeline, or
+ *           the currently-filtered poster groups from the Posters page)
+ *   - index: current position in list
+ * This enables:
+ *   - Arrow-key navigation (prev/next within the current filter)
+ *   - Deep-linkable URLs (hash parameter updates with modal state)
+ */
+const MODAL_STATE = {
+  kind: null,       // "concert" | "poster" | null
+  id: null,
+  list: null,
+  index: -1,
+};
+
 function openModal() {
   modal.hidden = false;
   document.body.style.overflow = "hidden";
@@ -2353,6 +2430,223 @@ function openModal() {
 function closeModal() {
   modal.hidden = true;
   document.body.style.overflow = "";
+  // Clean up deep-link param from URL without triggering a full re-render
+  const [route, queryStr] = (location.hash || "#/timeline").split("?");
+  const params = new URLSearchParams(queryStr || "");
+  if (params.has("modal")) {
+    params.delete("modal");
+    const newHash = route + (params.toString() ? "?" + params.toString() : "");
+    // Use replaceState to avoid an extra history entry
+    history.replaceState(null, "", newHash);
+  }
+  MODAL_STATE.kind = null;
+  MODAL_STATE.id = null;
+  MODAL_STATE.list = null;
+  MODAL_STATE.index = -1;
+}
+
+/* ============================================================
+   SCREENSAVER MODE
+   Full-screen rotating display of stock poster images. Cycles every
+   30 seconds (or on spacebar). Any key or click exits.
+   ============================================================ */
+
+let _screensaverEl = null;
+let _screensaverTimer = null;
+let _screensaverIdx = 0;
+let _screensaverList = null;
+
+const SCREENSAVER_INTERVAL_MS = 30000;  // 30 seconds per poster
+
+/**
+ * Build the eligible poster list: every poster with a resolvable stock image.
+ * We don't pre-verify the URL works — the <img> onerror handler advances to
+ * the next poster so a broken image doesn't wedge the screensaver on one slide.
+ */
+function buildScreensaverList() {
+  const out = [];
+  for (const p of STATE.posters) {
+    // Prefer stock — if there's no stock URL at all, skip.
+    const src = posterImageSrc(p, "stock");
+    const hasLocal = true;  // may still resolve to images/stock/poster-<id>.jpg
+    if (src || hasLocal) {
+      out.push(p);
+    }
+  }
+  // Shuffle so each session feels different
+  return out.sort(() => Math.random() - 0.5);
+}
+
+function startScreensaver() {
+  const list = buildScreensaverList();
+  if (list.length === 0) return;
+  _screensaverList = list;
+  _screensaverIdx = 0;
+
+  if (!_screensaverEl) {
+    _screensaverEl = el("div", {
+      class: "screensaver",
+      hidden: true,
+      tabindex: "0",  // receive focus for keydown
+      on: {
+        click: () => stopScreensaver(),
+      }
+    });
+    const caption = el("div", { class: "screensaver-caption" });
+    const img = el("img", { class: "screensaver-img", src: "", alt: "" });
+    const hint = el("div", { class: "screensaver-hint" }, "Press any key or click to exit · space for next");
+    _screensaverEl.appendChild(img);
+    _screensaverEl.appendChild(caption);
+    _screensaverEl.appendChild(hint);
+    document.body.appendChild(_screensaverEl);
+  }
+  _screensaverEl.hidden = false;
+  document.body.style.overflow = "hidden";
+  _screensaverEl.focus();
+  showScreensaverPoster();
+  _screensaverTimer = setInterval(advanceScreensaver, SCREENSAVER_INTERVAL_MS);
+}
+
+function showScreensaverPoster() {
+  if (!_screensaverEl || !_screensaverList) return;
+  const p = _screensaverList[_screensaverIdx];
+  const img = _screensaverEl.querySelector(".screensaver-img");
+  const caption = _screensaverEl.querySelector(".screensaver-caption");
+
+  // Build a fallback chain so broken images auto-advance rather than stalling
+  const tries = [
+    posterImageSrc(p, "stock"),
+    `images/stock/poster-${p.id}.jpg`,
+  ].filter((v, i, a) => v && a.indexOf(v) === i);
+  let attempt = 0;
+  img.onerror = () => {
+    attempt++;
+    if (attempt < tries.length) {
+      img.src = tries[attempt];
+    } else {
+      // This poster can't be shown — skip ahead
+      setTimeout(advanceScreensaver, 300);
+    }
+  };
+  img.src = tries[0] || "";
+  img.alt = `${p.artist} poster`;
+  caption.textContent = `${p.artist} · ${formatDate(p.date)}${p.location ? " · " + p.location : ""}`;
+}
+
+function advanceScreensaver() {
+  if (!_screensaverList) return;
+  _screensaverIdx = (_screensaverIdx + 1) % _screensaverList.length;
+  showScreensaverPoster();
+}
+
+function stopScreensaver() {
+  if (!_screensaverEl || _screensaverEl.hidden) return;
+  _screensaverEl.hidden = true;
+  document.body.style.overflow = "";
+  if (_screensaverTimer) {
+    clearInterval(_screensaverTimer);
+    _screensaverTimer = null;
+  }
+}
+
+// Any keypress while screensaver is open exits (space advances to next instead)
+document.addEventListener("keydown", e => {
+  if (!_screensaverEl || _screensaverEl.hidden) return;
+  if (e.key === " " || e.key === "ArrowRight") {
+    e.preventDefault();
+    advanceScreensaver();
+    return;
+  }
+  if (e.key === "ArrowLeft") {
+    e.preventDefault();
+    _screensaverIdx = (_screensaverIdx - 1 + _screensaverList.length) % _screensaverList.length;
+    showScreensaverPoster();
+    return;
+  }
+  // Any other key exits
+  e.preventDefault();
+  stopScreensaver();
+});
+
+/**
+ * Update the URL hash to include modal=<id> so the current modal is
+ * deep-linkable. Uses replaceState so we don't accumulate history entries
+ * as the user arrow-keys through posters.
+ */
+function setModalDeepLink(kind, id) {
+  const [route, queryStr] = (location.hash || "#/timeline").split("?");
+  const params = new URLSearchParams(queryStr || "");
+  params.set("modal", String(id));
+  const newHash = route + "?" + params.toString();
+  history.replaceState(null, "", newHash);
+}
+
+/**
+ * Navigate to the previous/next item in the current modal's list.
+ * No-op if there's no list or we're already at the boundary.
+ */
+function navigateModal(direction) {
+  if (!MODAL_STATE.list || MODAL_STATE.list.length === 0) return;
+  const next = MODAL_STATE.index + direction;
+  if (next < 0 || next >= MODAL_STATE.list.length) return;
+  const item = MODAL_STATE.list[next];
+  if (MODAL_STATE.kind === "concert") {
+    openConcertModal(item, { list: MODAL_STATE.list, index: next });
+  } else if (MODAL_STATE.kind === "poster") {
+    openPosterModal(item, { list: MODAL_STATE.list, index: next });
+  }
+}
+
+// Arrow-key navigation — left/right walks the current modal's list
+document.addEventListener("keydown", e => {
+  // Ignore if a text field has focus (so filter search boxes still work)
+  const t = e.target;
+  if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+  if (modal.hidden) return;
+  if (_lightboxEl && !_lightboxEl.hidden) return;  // lightbox open: don't steal arrows
+  if (e.key === "ArrowLeft") {
+    e.preventDefault();
+    navigateModal(-1);
+  } else if (e.key === "ArrowRight") {
+    e.preventDefault();
+    navigateModal(1);
+  }
+});
+
+/**
+ * Helper: open a concert modal with navigation context pulled from whatever
+ * list is currently on STATE (the Timeline's filtered list). Falls back to
+ * opening without a list if we can't find the concert in the stashed list.
+ */
+function openConcertModalWithNav(c) {
+  const list = STATE._timelineNavList;
+  if (list && Array.isArray(list)) {
+    const idx = list.findIndex(x => x.id === c.id);
+    if (idx >= 0) {
+      openConcertModal(c, { list, index: idx });
+      return;
+    }
+  }
+  openConcertModal(c);
+}
+
+/**
+ * Helper: open a poster modal with nav context from STATE._posterNavList.
+ */
+function openPosterModalWithNav(g) {
+  const list = STATE._posterNavList;
+  if (list && Array.isArray(list)) {
+    // Match groups by the primary poster id (groups may be new objects on re-render,
+    // but the underlying poster ids are stable).
+    const primaryId = g.posters && g.posters[0] ? g.posters[0].id : null;
+    const idx = list.findIndex(x =>
+      x.posters && x.posters[0] && x.posters[0].id === primaryId);
+    if (idx >= 0) {
+      openPosterModal(g, { list, index: idx });
+      return;
+    }
+  }
+  openPosterModal(g);
 }
 
 /**
@@ -2401,7 +2695,26 @@ function closeLightbox() {
 /* ============================================================
    CONCERT MODAL
    ============================================================ */
-function openConcertModal(c) {
+/**
+ * Open the modal for a concert. Optional `navContext` wires arrow-key
+ * navigation through a list of sibling concerts.
+ *
+ * @param {object} c - the concert record
+ * @param {object} [navContext] - { list, index } for prev/next navigation
+ */
+function openConcertModal(c, navContext) {
+  // Record state for keyboard nav and deep-linking
+  MODAL_STATE.kind = "concert";
+  MODAL_STATE.id = c.id;
+  if (navContext && Array.isArray(navContext.list)) {
+    MODAL_STATE.list = navContext.list;
+    MODAL_STATE.index = navContext.index;
+  } else {
+    MODAL_STATE.list = null;
+    MODAL_STATE.index = -1;
+  }
+  setModalDeepLink("concert", c.id);
+
   // Fuzzy match posters to this concert
   const normalizeArtist = s => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "").replace(/and/g, "");
   const dateDiffDays = (a, b) => Math.abs(
@@ -2553,6 +2866,10 @@ function openConcertModal(c) {
   if (c.setlistLink && c.setlistLink.startsWith("http")) {
     links.appendChild(el("a", { class: "m-link accent-link", href: c.setlistLink, target: "_blank", rel: "noopener" }, "Setlist.fm ↗"));
   }
+  if (c.venue && !c.festivalKey) {
+    links.appendChild(el("a", { class: "m-link", href: "#/timeline?venue=" + encodeURIComponent(c.venue) },
+      "More at " + c.venue));
+  }
   if (c.state) {
     links.appendChild(el("a", { class: "m-link", href: "#/timeline?state=" + encodeURIComponent(c.state) },
       "More from " + (STATE.stateNames[c.state] || c.state)));
@@ -2569,7 +2886,27 @@ function openConcertModal(c) {
 /* ============================================================
    POSTER MODAL
    ============================================================ */
-function openPosterModal(group) {
+/**
+ * Open the poster modal for a group (all poster variants for a given show).
+ * Optional `navContext` wires arrow-key navigation through sibling groups.
+ *
+ * Group identity is determined by the primary poster's id — that's what the
+ * deep-link URL records, and what we match against when a shared URL loads.
+ */
+function openPosterModal(group, navContext) {
+  const primaryPosterId = group.posters[0] ? group.posters[0].id : null;
+
+  MODAL_STATE.kind = "poster";
+  MODAL_STATE.id = primaryPosterId;
+  if (navContext && Array.isArray(navContext.list)) {
+    MODAL_STATE.list = navContext.list;
+    MODAL_STATE.index = navContext.index;
+  } else {
+    MODAL_STATE.list = null;
+    MODAL_STATE.index = -1;
+  }
+  if (primaryPosterId !== null) setModalDeepLink("poster", primaryPosterId);
+
   modalBody.innerHTML = "";
   modalBody.appendChild(el("div", { class: "modal-eyebrow" },
     formatDate(group.date) + (group.attended ? "" : " · NOT ATTENDED")
