@@ -1503,6 +1503,148 @@ main {
   }
 }
 
+/* ============= Songs view ============= */
+.songs-breadcrumb {
+  margin-bottom: 8px;
+}
+.crumb-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+.crumb-link:hover { color: var(--accent); }
+
+.coverage-note {
+  background: var(--ink-2);
+  border-left: 3px solid var(--muted);
+  padding: 10px 16px;
+  margin-bottom: 18px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--paper-dim);
+  line-height: 1.5;
+}
+.coverage-note p { margin: 0; }
+.coverage-note strong {
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.songs-table {
+  background: var(--ink-2);
+  border: 2px solid var(--paper);
+  margin-top: 16px;
+}
+.songs-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 130px 130px 80px;
+  gap: 12px;
+  align-items: baseline;
+  padding: 12px 18px;
+  border-bottom: 1px dashed var(--muted);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--paper);
+}
+.songs-row:last-child { border-bottom: none; }
+.songs-header {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background: var(--ink);
+  border-bottom: 2px solid var(--paper-dim);
+}
+.col-rank {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+.col-song strong { font-weight: 700; }
+.song-cover-note {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 12px;
+}
+.col-artist {
+  color: var(--paper-dim);
+}
+.artist-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+.artist-link:hover { text-decoration: underline; }
+.col-first, .col-last {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.col-count {
+  text-align: right;
+}
+.play-count-btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 3px 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 120ms, color 120ms;
+}
+.play-count-btn:hover {
+  background: var(--accent);
+  color: var(--paper);
+}
+.songs-detail {
+  padding: 10px 18px 14px 60px;
+  background: var(--ink);
+  border-bottom: 1px dashed var(--muted);
+}
+.song-play {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--paper-dim);
+  padding: 3px 0;
+}
+.song-play-meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Narrow viewports: hide artist/first/last columns on the data rows,
+   and hide their headers too. The song title and count are what matter most. */
+@media (max-width: 700px) {
+  .songs-row {
+    grid-template-columns: 32px 1fr 60px;
+    gap: 8px;
+    row-gap: 4px;
+  }
+  .songs-row .col-artist {
+    grid-column: 2 / 3;
+    font-size: 11px;
+  }
+  .songs-row .col-first,
+  .songs-row .col-last {
+    display: none;
+  }
+  .songs-header .col-first,
+  .songs-header .col-last {
+    display: none;
+  }
+}
+
 /* ============= Setlist block (in concert modal) ============= */
 .setlist-block {
   margin: 20px 0;

@@ -148,6 +148,7 @@ const ROUTES = {
   "#/timeline": renderTimeline,
   "#/map": renderMap,
   "#/posters": renderPosters,
+  "#/songs": renderSongs,
   "#/stats": renderStats,
 };
 
@@ -260,10 +261,33 @@ function openerSetlistFor(artistName, dateIso) {
  * setlist entry (which is the canonical setlist.fm version).
  */
 function* iterAllSongPerformances() {
+  // Build a lookup: setlist-key -> concert, so each performance can point back
+  // to the show it came from. Headliner entries are keyed by setlist-id; opener
+  // entries are keyed by "opener:artist-slug:YYYY-MM-DD".
+  if (!STATE._concertByKey) {
+    const idx = new Map();
+    for (const c of STATE.concerts) {
+      const sid = extractSetlistId(c.setlistLink);
+      if (sid) idx.set(sid, c);
+      // Openers: for each named opener, map the slug-key back to the concert
+      for (const opener of splitActs(c.openingActs)) {
+        idx.set(openerCacheKey(opener, c.date), c);
+      }
+    }
+    STATE._concertByKey = idx;
+  }
+
   for (const [key, entry] of Object.entries(STATE.setlists || {})) {
     if (!entry || entry._error) continue;
     const artist = entry.artist || "(unknown)";
-    const date = entry.eventDate || null;  // DD-MM-YYYY from setlist.fm
+    // Convert setlist.fm's DD-MM-YYYY → app's YYYY-MM-DD for consistent sorting/linking
+    let dateIso = null;
+    if (entry.eventDate && /^\d{2}-\d{2}-\d{4}$/.test(entry.eventDate)) {
+      const [d, m, y] = entry.eventDate.split("-");
+      dateIso = `${y}-${m}-${d}`;
+    }
+    const concert = STATE._concertByKey.get(key) || null;
+
     for (const s of entry.sets || []) {
       for (const song of s.songs || []) {
         if (!song.name) continue;
@@ -271,9 +295,11 @@ function* iterAllSongPerformances() {
         yield {
           artist,
           song: song.name,
-          date,
+          date: dateIso,
           role: entry.role || "headliner",
           cover: song.cover || null,
+          concert,          // full concert object for linking back
+          setlistUrl: entry.url || null,  // setlist.fm URL if we want to link out
         };
       }
     }
@@ -1607,6 +1633,300 @@ function posterGroupCard(g) {
 }
 
 /* ============================================================
+   SONGS VIEW
+   Two modes:
+     #/songs                — global song explorer
+     #/songs?artist=Tool    — drill-down to one artist
+   Optional params:
+     q=<text>               — search within song/artist names
+     song=<name>            — filter to a specific song (shows all plays of it)
+     count=<N>              — show only songs heard exactly N times
+     covers=1               — only covers (song.cover is set)
+   ============================================================ */
+function renderSongs() {
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+
+  const params = new URLSearchParams((location.hash.split("?")[1] || ""));
+  const q = (params.get("q") || "").toLowerCase();
+  const artistFilter = params.get("artist") || "";
+  const songFilter = params.get("song") || "";
+  const countFilter = params.get("count") || "";
+  const coversOnly = params.get("covers") === "1";
+
+  // Aggregate performances once
+  // songKey = "normArtist||songLower" — collapses "Mars Volta" vs "The Mars Volta"
+  // into one entry and treats case-insensitively.
+  const perfByKey = {};  // songKey -> { artist, song, plays: [{date, concert, cover}], cover }
+  const artistSet = new Map();  // normArtist -> display name (most common spelling)
+
+  let totalPerfs = 0;
+  for (const perf of iterAllSongPerformances()) {
+    totalPerfs++;
+    const normArt = normalizeArtistKey(perf.artist);
+    if (!normArt) continue;
+    if (!artistSet.has(normArt)) artistSet.set(normArt, perf.artist);
+
+    const key = `${normArt}||${perf.song.toLowerCase()}`;
+    if (!perfByKey[key]) {
+      perfByKey[key] = {
+        normArtist: normArt,
+        artist: perf.artist,
+        song: perf.song,
+        plays: [],
+        cover: perf.cover || null,
+      };
+    }
+    perfByKey[key].plays.push({
+      date: perf.date,
+      concert: perf.concert,
+      role: perf.role,
+    });
+    // If we see a "cover of X" annotation on at least one performance, keep it
+    if (perf.cover) perfByKey[key].cover = perf.cover;
+  }
+
+  const allSongs = Object.values(perfByKey);
+  const totalUniqueSongs = allSongs.length;
+
+  if (totalPerfs === 0) {
+    app.appendChild(el("div", { class: "view-header" },
+      el("h2", { class: "view-title" }, "Songs ", el("span", { class: "accent" }, "heard live")),
+      el("p", { class: "view-sub" }, "No setlist data yet — run prefetch_setlists.py to populate.")
+    ));
+    return;
+  }
+
+  // Resolve artist-filter (if set) to its normalized form + display name
+  let filterNormArtist = null;
+  let filterArtistDisplay = null;
+  if (artistFilter) {
+    filterNormArtist = normalizeArtistKey(artistFilter);
+    filterArtistDisplay = artistSet.get(filterNormArtist) || artistFilter;
+  }
+
+  // Header
+  if (filterNormArtist) {
+    // Drill-down view for one artist
+    app.appendChild(el("div", { class: "view-header" },
+      el("div", { class: "songs-breadcrumb" },
+        el("a", { href: "#/songs", class: "crumb-link" }, "← All songs"),
+      ),
+      el("h2", { class: "view-title" },
+        el("span", { class: "accent" }, filterArtistDisplay),
+        " ", el("span", {}, "on stage")
+      ),
+      el("p", { class: "view-sub" }, `Every song you've heard ${filterArtistDisplay} play live.`)
+    ));
+  } else {
+    app.appendChild(el("div", { class: "view-header" },
+      el("h2", { class: "view-title" }, "Songs ", el("span", { class: "accent" }, "heard live")),
+      el("p", { class: "view-sub" },
+        `${totalPerfs.toLocaleString()} total performances · ${totalUniqueSongs.toLocaleString()} unique songs.`
+      )
+    ));
+  }
+
+  // Coverage caveat — only show on the global view, not inside an artist drill-down
+  if (!filterNormArtist) {
+    app.appendChild(el("div", { class: "coverage-note" },
+      el("p", {},
+        el("strong", {}, "About this data: "),
+        "Pulled from setlist.fm. Coverage is strong for headliners and top festival acts, ",
+        "partial for named openers, and thin for smaller festival-lineup bands. Counts reflect ",
+        "what's in setlist.fm — the true numbers of times you heard something live may be higher."
+      )
+    ));
+  }
+
+  // Filter bar
+  const filterBar = el("div", { class: "filter-bar" });
+  filterBar.appendChild(el("input", {
+    type: "text",
+    placeholder: filterNormArtist ? "Search songs…" : "Search song or artist…",
+    value: params.get("q") || "",
+    on: { input: e => updateParamDebounced("q", e.target.value) }
+  }));
+
+  // Heard-N-times dropdown (distinct play-counts present in data)
+  const playCounts = [...new Set(allSongs.map(s => s.plays.length))].sort((a, b) => a - b);
+  const countSelect = el("select", {
+    on: { change: e => updateParam("count", e.target.value) }
+  });
+  countSelect.appendChild(el("option", { value: "" }, "Any play-count"));
+  playCounts.forEach(n => {
+    const o = el("option", { value: String(n) }, `Heard exactly ${n}×`);
+    if (String(n) === countFilter) o.selected = true;
+    countSelect.appendChild(o);
+  });
+  filterBar.appendChild(countSelect);
+
+  // Covers-only toggle
+  filterBar.appendChild(el("button", {
+    class: "chip" + (coversOnly ? " active" : ""),
+    on: { click: () => updateParam("covers", coversOnly ? "0" : "1") }
+  }, "Covers only"));
+
+  // If we're on global view, show an "all artists" dropdown (jump to drill-down)
+  if (!filterNormArtist) {
+    const artistList = [...artistSet.entries()]
+      .map(([k, v]) => ({ key: k, display: v }))
+      .sort((a, b) => a.display.localeCompare(b.display));
+    const artistSelect = el("select", {
+      on: { change: e => {
+        const v = e.target.value;
+        if (v) location.hash = "#/songs?artist=" + encodeURIComponent(v);
+      }}
+    });
+    artistSelect.appendChild(el("option", { value: "" }, "Jump to artist…"));
+    artistList.forEach(a => artistSelect.appendChild(el("option", { value: a.display }, a.display)));
+    filterBar.appendChild(artistSelect);
+  }
+
+  const countEl = el("span", { class: "filter-count" });
+  filterBar.appendChild(countEl);
+  app.appendChild(filterBar);
+
+  // Apply filters
+  let filtered = allSongs;
+  if (filterNormArtist) {
+    filtered = filtered.filter(s => s.normArtist === filterNormArtist);
+  }
+  if (songFilter) {
+    const sf = songFilter.toLowerCase();
+    filtered = filtered.filter(s => s.song.toLowerCase() === sf);
+  }
+  if (q) {
+    filtered = filtered.filter(s =>
+      s.song.toLowerCase().includes(q) ||
+      s.artist.toLowerCase().includes(q)
+    );
+  }
+  if (countFilter) {
+    const n = parseInt(countFilter, 10);
+    filtered = filtered.filter(s => s.plays.length === n);
+  }
+  if (coversOnly) {
+    filtered = filtered.filter(s => s.cover);
+  }
+
+  // Sort: most-played first, then alphabetical by song
+  filtered.sort((a, b) => b.plays.length - a.plays.length || a.song.localeCompare(b.song));
+
+  countEl.textContent = `${filtered.length} song${filtered.length === 1 ? "" : "s"}`;
+
+  if (filtered.length === 0) {
+    app.appendChild(el("div", { class: "loading" }, "No songs match these filters."));
+    return;
+  }
+
+  // Render the table
+  const table = el("div", { class: "songs-table" });
+
+  // Header row
+  const showArtistCol = !filterNormArtist;
+  const header = el("div", { class: "songs-row songs-header" });
+  header.appendChild(el("span", { class: "col-rank" }, "#"));
+  header.appendChild(el("span", { class: "col-song" }, "Song"));
+  if (showArtistCol) {
+    header.appendChild(el("span", { class: "col-artist" }, "Artist"));
+  }
+  header.appendChild(el("span", { class: "col-first" }, "First heard"));
+  header.appendChild(el("span", { class: "col-last" }, "Last heard"));
+  header.appendChild(el("span", { class: "col-count" }, "Plays"));
+  table.appendChild(header);
+
+  filtered.slice(0, 300).forEach((s, i) => {  // cap render at 300 for perf on huge data
+    // Derive first/last from play dates
+    const datedPlays = s.plays.filter(p => p.date).sort((a, b) => a.date.localeCompare(b.date));
+    const first = datedPlays[0];
+    const last = datedPlays[datedPlays.length - 1];
+
+    const row = el("div", { class: "songs-row" });
+    row.appendChild(el("span", { class: "col-rank" }, String(i + 1).padStart(3, "0")));
+
+    // Song cell: name + optional cover annotation
+    const songCell = el("span", { class: "col-song" },
+      el("strong", {}, s.song)
+    );
+    if (s.cover) {
+      songCell.appendChild(el("span", { class: "song-cover-note" }, ` · cover of ${s.cover}`));
+    }
+    row.appendChild(songCell);
+
+    if (showArtistCol) {
+      // Artist cell — clickable to drill down to that artist
+      const artistCell = el("span", { class: "col-artist" },
+        el("a", {
+          href: "#/songs?artist=" + encodeURIComponent(s.artist),
+          class: "artist-link"
+        }, s.artist)
+      );
+      row.appendChild(artistCell);
+    }
+
+    row.appendChild(el("span", { class: "col-first" }, first ? formatDateShort(first.date) : "—"));
+    row.appendChild(el("span", { class: "col-last" }, last ? formatDateShort(last.date) : "—"));
+
+    // Play count — clickable to reveal a show list inline
+    const countCell = el("span", { class: "col-count" },
+      el("button", {
+        class: "play-count-btn",
+        title: "Click to see which shows",
+        on: { click: () => togglePlayDetails(row, s) }
+      }, `${s.plays.length}×`)
+    );
+    row.appendChild(countCell);
+
+    table.appendChild(row);
+  });
+  app.appendChild(table);
+
+  if (filtered.length > 300) {
+    app.appendChild(el("div", { class: "loading", style: "margin-top:16px;" },
+      `Showing first 300 of ${filtered.length}. Narrow the filter to see more.`
+    ));
+  }
+}
+
+/**
+ * Expand a song row to show the list of shows where it was played.
+ * Clicking the "N×" button toggles an inline detail row beneath.
+ */
+function togglePlayDetails(rowEl, songEntry) {
+  const existing = rowEl.nextElementSibling;
+  if (existing && existing.classList.contains("songs-detail")) {
+    existing.remove();
+    return;
+  }
+  const detail = el("div", { class: "songs-detail" });
+  const plays = [...songEntry.plays].sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+  plays.forEach(p => {
+    const line = el("div", { class: "song-play" });
+    if (p.concert) {
+      line.appendChild(el("a", {
+        class: "crumb-link",
+        href: "#/timeline?q=" + encodeURIComponent(p.concert.artist || ""),
+        title: "View in timeline",
+      }, formatDate(p.date)));
+      line.appendChild(el("span", { class: "song-play-meta" },
+        ` · ${p.concert.venue || "?"}${p.concert.city ? " · " + p.concert.city : ""}${p.role === "opener" ? " · opening slot" : ""}`
+      ));
+    } else {
+      line.appendChild(el("span", {}, formatDate(p.date) + (p.role === "opener" ? " · opening slot" : "")));
+    }
+    detail.appendChild(line);
+  });
+  rowEl.insertAdjacentElement("afterend", detail);
+}
+
+function formatDateShort(iso) {
+  if (!iso) return "";
+  const d = new Date(iso + "T00:00:00");
+  return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+}
+
+/* ============================================================
    STATS VIEW
    ============================================================ */
 function renderStats() {
@@ -1834,7 +2154,14 @@ function renderStats() {
       const songList = el("div", { class: "top-list" },
         el("h3", {}, "Most-heard songs (overall)"),
         el("ol", {}, ...topSongs.map((s, i) =>
-          el("li", {},
+          el("li", {
+            on: { click: () => {
+              // Jump to the Songs page, filtered to this song by this artist
+              location.hash = "#/songs?artist=" + encodeURIComponent(s.artist) +
+                              "&song=" + encodeURIComponent(s.song);
+            }},
+            style: "cursor:pointer;"
+          },
             el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
             el("span", { class: "name" },
               el("strong", {}, s.song),
@@ -1870,7 +2197,13 @@ function renderStats() {
       const artistSongList = el("div", { class: "top-list" },
         el("h3", {}, "Top song per artist"),
         el("ol", {}, ...artistSongLeaders.map((e, i) =>
-          el("li", {},
+          el("li", {
+            on: { click: () => {
+              // Jump to this artist's drill-down in the Songs page
+              location.hash = "#/songs?artist=" + encodeURIComponent(e.artist);
+            }},
+            style: "cursor:pointer;"
+          },
             el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
             el("span", { class: "name" },
               el("strong", {}, e.artist),
