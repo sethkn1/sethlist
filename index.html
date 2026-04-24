@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sethlist — Concert & Poster Journey</title>
 <meta name="description" content="Concert and poster journey — a lifetime of live music, venues, and poster art." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
 <!-- Fonts: gig-poster display + readable serif body -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,17 +25,19 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand">
+    <a class="brand" href="#/timeline" aria-label="Sethlist — home">
       <div class="brand-mark">SL</div>
       <div class="brand-text">
         <h1>Sethlist</h1>
+        <p class="brand-tagline">A <span class="accent">Seth</span><span class="sethtime-time">Time</span> of live music</p>
         <p class="brand-sub" id="brand-sub">loading…</p>
       </div>
-    </div>
+    </a>
     <nav class="main-nav" role="navigation">
       <a href="#/timeline" data-view="timeline">Timeline</a>
       <a href="#/map" data-view="map">Map</a>
       <a href="#/posters" data-view="posters">Posters</a>
+      <a href="#/songs" data-view="songs">Songs</a>
       <a href="#/stats" data-view="stats">Stats</a>
     </nav>
   </div>

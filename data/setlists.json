@@ -102,7 +102,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "7bd63e94": {
     "id": "7bd63e94",
@@ -176,7 +177,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "4bc2ab8a": {
     "id": "4bc2ab8a",
@@ -247,7 +249,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "23d4b4eb": {
     "id": "23d4b4eb",
@@ -312,7 +315,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6bd9fa9a": {
     "id": "6bd9fa9a",
@@ -321,7 +325,8 @@
     "eventDate": "29-07-2008",
     "url": "https://www.setlist.fm/setlist/maroon-5/2008/time-warner-cable-music-pavilion-raleigh-nc-6bd9fa9a.html",
     "sets": [],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "53d47fb5": {
     "id": "53d47fb5",
@@ -415,7 +420,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "2bdf6842": {
     "id": "2bdf6842",
@@ -558,7 +564,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "7bdb0208": {
     "id": "7bdb0208",
@@ -654,7 +661,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "4bc77be6": {
     "id": "4bc77be6",
@@ -752,7 +760,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "3bc5cc90": {
     "id": "3bc5cc90",
@@ -834,7 +843,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "63c1daab": {
     "id": "63c1daab",
@@ -913,7 +923,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "63ceea7f": {
     "id": "63ceea7f",
@@ -984,7 +995,8 @@
         ]
       }
     ],
-    "info": "\"Only\" was on the setlist, but not played."
+    "info": "\"Only\" was on the setlist, but not played.",
+    "role": "headliner"
   },
   "13cfcd31": {
     "id": "13cfcd31",
@@ -1102,7 +1114,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "43c80b7f": {
     "id": "43c80b7f",
@@ -1190,7 +1203,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "4bf6c74e": {
     "id": "4bf6c74e",
@@ -1281,7 +1295,8 @@
         ]
       }
     ],
-    "info": "\"Rope\" was on the setlist, but was not played. \"Seven Nation Army\" was not on the setlist."
+    "info": "\"Rope\" was on the setlist, but was not played. \"Seven Nation Army\" was not on the setlist.",
+    "role": "headliner"
   },
   "13f66935": {
     "id": "13f66935",
@@ -1360,7 +1375,8 @@
         ]
       }
     ],
-    "info": "Soundcheck: \"Rise of the Fall\" twice, \"A Small Victory,\" and \"Mark Bowen\" twice."
+    "info": "Soundcheck: \"Rise of the Fall\" twice, \"A Small Victory,\" and \"Mark Bowen\" twice.",
+    "role": "headliner"
   },
   "3bf51804": {
     "id": "3bf51804",
@@ -1457,7 +1473,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "2bf3f8da": {
     "id": "2bf3f8da",
@@ -1525,7 +1542,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "7bf1a644": {
     "id": "7bf1a644",
@@ -1603,7 +1621,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6bf1f2ca": {
     "id": "6bf1f2ca",
@@ -1703,7 +1722,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "2bff68ae": {
     "id": "2bff68ae",
@@ -1712,7 +1732,8 @@
     "eventDate": "18-07-2016",
     "url": "https://www.setlist.fm/setlist/flight-of-the-conchords/2016/koka-booth-amphitheatre-cary-nc-2bff68ae.html",
     "sets": [],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6bfc26be": {
     "id": "6bfc26be",
@@ -1812,7 +1833,8 @@
         ]
       }
     ],
-    "info": "With Axl Rose on lead vocals."
+    "info": "With Axl Rose on lead vocals.",
+    "role": "headliner"
   },
   "63fc5693": {
     "id": "63fc5693",
@@ -1956,7 +1978,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6bfdfaf2": {
     "id": "6bfdfaf2",
@@ -1965,7 +1988,8 @@
     "eventDate": "20-09-2016",
     "url": "https://www.setlist.fm/setlist/hellyeah/2016/cone-denim-entertainment-center-greensboro-nc-6bfdfaf2.html",
     "sets": [],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "43fd2fbf": {
     "id": "43fd2fbf",
@@ -2039,7 +2063,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "23e6cc0f": {
     "id": "23e6cc0f",
@@ -2113,7 +2138,8 @@
         ]
       }
     ],
-    "info": "\"Parallel Universe\" was on the setlist, but was replaced with \"Californication\"."
+    "info": "\"Parallel Universe\" was on the setlist, but was replaced with \"Californication\".",
+    "role": "headliner"
   },
   "3be7ec0c": {
     "id": "3be7ec0c",
@@ -2207,7 +2233,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "23e7cc63": {
     "id": "23e7cc63",
@@ -2279,7 +2306,8 @@
         ]
       }
     ],
-    "info": "Soundcheck included: 'The Grudge', 'Parabola', 'Sweat' and 'Schism'"
+    "info": "Soundcheck included: 'The Grudge', 'Parabola', 'Sweat' and 'Schism'",
+    "role": "headliner"
   },
   "4be5bb12": {
     "id": "4be5bb12",
@@ -2345,7 +2373,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "33e5bcbd": {
     "id": "33e5bcbd",
@@ -2416,7 +2445,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "3be51090": {
     "id": "3be51090",
@@ -2547,7 +2577,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "3be25cb8": {
     "id": "3be25cb8",
@@ -2661,7 +2692,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "3e3f9bf": {
     "id": "3e3f9bf",
@@ -2751,7 +2783,8 @@
         ]
       }
     ],
-    "info": "'Fortress' listed third to last, but not played"
+    "info": "'Fortress' listed third to last, but not played",
+    "role": "headliner"
   },
   "2bec1842": {
     "id": "2bec1842",
@@ -2835,7 +2868,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "5bed4b2c": {
     "id": "5bed4b2c",
@@ -2908,7 +2942,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "2bea1486": {
     "id": "2bea1486",
@@ -2979,7 +3014,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "43e86b6f": {
     "id": "43e86b6f",
@@ -3116,7 +3152,8 @@
         ]
       }
     ],
-    "info": "\"Leatherman\", \"Know Your Rights\", \"Unthought Known\" and \"Do the Evolution\" were on the printed setlist, but not played; \"Leatherman\" was replaced with \"U\"."
+    "info": "\"Leatherman\", \"Know Your Rights\", \"Unthought Known\" and \"Do the Evolution\" were on the printed setlist, but not played; \"Leatherman\" was replaced with \"U\".",
+    "role": "headliner"
   },
   "4b96738a": {
     "id": "4b96738a",
@@ -3190,7 +3227,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "3947d37": {
     "id": "3947d37",
@@ -3269,7 +3307,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "43958bb7": {
     "id": "43958bb7",
@@ -3361,7 +3400,8 @@
         ]
       }
     ],
-    "info": "Attendance of 20,052, which set a new record for venue."
+    "info": "Attendance of 20,052, which set a new record for venue.",
+    "role": "headliner"
   },
   "392253b": {
     "id": "392253b",
@@ -3464,7 +3504,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "5b93eb20": {
     "id": "5b93eb20",
@@ -3569,7 +3610,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "b901d02": {
     "id": "b901d02",
@@ -3627,7 +3669,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6b905a76": {
     "id": "6b905a76",
@@ -3700,7 +3743,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "7b9f3a70": {
     "id": "7b9f3a70",
@@ -3772,7 +3816,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "1b9cd98c": {
     "id": "1b9cd98c",
@@ -3874,7 +3919,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "5b9c3390": {
     "id": "5b9c3390",
@@ -3995,7 +4041,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "639a82f3": {
     "id": "639a82f3",
@@ -4066,7 +4113,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "1b9ad1e0": {
     "id": "1b9ad1e0",
@@ -4137,7 +4185,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6b9b72de": {
     "id": "6b9b72de",
@@ -4205,7 +4254,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "3398d04d": {
     "id": "3398d04d",
@@ -4313,7 +4363,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "538c1731": {
     "id": "538c1731",
@@ -4394,7 +4445,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "138d89b5": {
     "id": "138d89b5",
@@ -4523,7 +4575,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "238a1413": {
     "id": "238a1413",
@@ -4632,7 +4685,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "4b885f0e": {
     "id": "4b885f0e",
@@ -4702,7 +4756,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "1b89f108": {
     "id": "1b89f108",
@@ -4778,7 +4833,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "33892099": {
     "id": "33892099",
@@ -4841,7 +4897,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "7bb66208": {
     "id": "7bb66208",
@@ -4931,7 +4988,8 @@
         ]
       }
     ],
-    "info": "Soundcheck: \u201cGave Up\u201d and \u201cSanctified\u201d"
+    "info": "Soundcheck: \u201cGave Up\u201d and \u201cSanctified\u201d",
+    "role": "headliner"
   },
   "73b5ba69": {
     "id": "73b5ba69",
@@ -5001,7 +5059,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "53b213d9": {
     "id": "53b213d9",
@@ -5088,7 +5147,8 @@
         ]
       }
     ],
-    "info": "Zack de la Rocha performed the entire show seated due to a leg injury he sustained while performing in Chicago on 7/11/2022."
+    "info": "Zack de la Rocha performed the entire show seated due to a leg injury he sustained while performing in Chicago on 7/11/2022.",
+    "role": "headliner"
   },
   "4bb3cb62": {
     "id": "4bb3cb62",
@@ -5199,7 +5259,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6bb3422e": {
     "id": "6bb3422e",
@@ -5317,7 +5378,8 @@
         ]
       }
     ],
-    "info": "First show in Philadelphia since April 26th, 2012.  Originally scheduled for August 23, 2020, and then August 26, 2021, but was postponed to this date."
+    "info": "First show in Philadelphia since April 26th, 2012.  Originally scheduled for August 23, 2020, and then August 26, 2021, but was postponed to this date.",
+    "role": "headliner"
   },
   "3bb1a468": {
     "id": "3bb1a468",
@@ -5383,7 +5445,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "7bbedaa8": {
     "id": "7bbedaa8",
@@ -5453,7 +5516,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "5ba47f00": {
     "id": "5ba47f00",
@@ -5540,7 +5604,8 @@
         ]
       }
     ],
-    "info": "Soundcheck: \"Creeping Death\", \"Harvester of Sorrow\", \"72 Seasons\", \"If Darkness Had a Son\", \"Fade to Black\", \"Shadows Follow\", \"Orion\", \"Sad But True\", \"The Day That Never Comes\", \"Lux \u00c6terna\", \"Spit Out the Bone\""
+    "info": "Soundcheck: \"Creeping Death\", \"Harvester of Sorrow\", \"72 Seasons\", \"If Darkness Had a Son\", \"Fade to Black\", \"Shadows Follow\", \"Orion\", \"Sad But True\", \"The Day That Never Comes\", \"Lux \u00c6terna\", \"Spit Out the Bone\"",
+    "role": "headliner"
   },
   "5ba34ff0": {
     "id": "5ba34ff0",
@@ -5676,7 +5741,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "73a00ec9": {
     "id": "73a00ec9",
@@ -5728,7 +5794,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "43a18703": {
     "id": "43a18703",
@@ -5827,7 +5894,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "2ba108e6": {
     "id": "2ba108e6",
@@ -5898,7 +5966,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "3ac9973": {
     "id": "3ac9973",
@@ -5960,7 +6029,8 @@
         ]
       }
     ],
-    "info": "Soundcheck included Swamp Song"
+    "info": "Soundcheck included Swamp Song",
+    "role": "headliner"
   },
   "bad819e": {
     "id": "bad819e",
@@ -6027,7 +6097,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "1babb504": {
     "id": "1babb504",
@@ -6095,7 +6166,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "4babf382": {
     "id": "4babf382",
@@ -6292,7 +6364,8 @@
         ]
       }
     ],
-    "info": "Note: \"Kindred\", \"The Package\", and \"Weak and Powerless\" were soundchecked without vocals"
+    "info": "Note: \"Kindred\", \"The Package\", and \"Weak and Powerless\" were soundchecked without vocals",
+    "role": "headliner"
   },
   "13aba105": {
     "id": "13aba105",
@@ -6373,7 +6446,8 @@
         ]
       }
     ],
-    "info": "\"Under the Bridge\" was listed on the setlist, but \"I Could Have Lied\" was played instead."
+    "info": "\"Under the Bridge\" was listed on the setlist, but \"I Could Have Lied\" was played instead.",
+    "role": "headliner"
   },
   "63571a17": {
     "id": "63571a17",
@@ -6446,7 +6520,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "355a1e7": {
     "id": "355a1e7",
@@ -6514,7 +6589,8 @@
         ]
       }
     ],
-    "info": "Rescheduled from September 1, 2024"
+    "info": "Rescheduled from September 1, 2024",
+    "role": "headliner"
   },
   "2ba8582e": {
     "id": "2ba8582e",
@@ -6581,7 +6657,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6b53eed2": {
     "id": "6b53eed2",
@@ -6663,7 +6740,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "35ef1bb": {
     "id": "35ef1bb",
@@ -6846,7 +6924,8 @@
         ]
       }
     ],
-    "info": "Emily and Mike came out for the encore wearing Carolina Hurricanes jerseys that were made for each band member."
+    "info": "Emily and Mike came out for the encore wearing Carolina Hurricanes jerseys that were made for each band member.",
+    "role": "headliner"
   },
   "2b5fcc02": {
     "id": "2b5fcc02",
@@ -6947,7 +7026,8 @@
         ]
       }
     ],
-    "info": "\"Got to Give\" was on the setlist but was replaced with \"Waiting for Stevie\". \"Wasted Reprise\" was on the setlist but was not played. \"Rearviewmirror\" was listed as an alternate to \"Porch\"."
+    "info": "\"Got to Give\" was on the setlist but was replaced with \"Waiting for Stevie\". \"Wasted Reprise\" was on the setlist but was not played. \"Rearviewmirror\" was listed as an alternate to \"Porch\".",
+    "role": "headliner"
   },
   "2353d8e3": {
     "id": "2353d8e3",
@@ -7024,7 +7104,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "2351d8bb": {
     "id": "2351d8bb",
@@ -7135,7 +7216,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "73427609": {
     "id": "73427609",
@@ -7195,7 +7277,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "535d0ff5": {
     "id": "535d0ff5",
@@ -7290,7 +7373,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "6b5f023a": {
     "id": "6b5f023a",
@@ -7390,7 +7474,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "135d0141": {
     "id": "135d0141",
@@ -7503,7 +7588,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "73458e75": {
     "id": "73458e75",
@@ -7522,7 +7608,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "4b59af5e": {
     "id": "4b59af5e",
@@ -7610,7 +7697,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "2b593086": {
     "id": "2b593086",
@@ -7680,7 +7768,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "34109bf": {
     "id": "34109bf",
@@ -7796,7 +7885,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "43482fbb": {
     "id": "43482fbb",
@@ -7857,7 +7947,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "1b4e5524": {
     "id": "1b4e5524",
@@ -7954,7 +8045,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "634e2ab7": {
     "id": "634e2ab7",
@@ -8041,7 +8133,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "34f0193": {
     "id": "34f0193",
@@ -8168,7 +8261,8 @@
         ]
       }
     ],
-    "info": null
+    "info": null,
+    "role": "headliner"
   },
   "opener:mr-bungle:2000-02-15": {
     "_error": "no artist match"
@@ -8285,66 +8379,8 @@
   "opener:neil-hamburger:2010-07-05": {
     "_error": "empty setlist"
   },
-  "opener:mike-bray:2013-03-03": {
-    "id": "23c2cc63",
-    "artist": "Mike Bray",
-    "tour": "Old School Acoustic Style",
-    "eventDate": "03-03-2013",
-    "url": "https://www.setlist.fm/setlist/mike-bray/2013/lupos-heartbreak-hotel-providence-ri-23c2cc63.html",
-    "sets": [
-      {
-        "name": null,
-        "encore": null,
-        "songs": [
-          {
-            "name": "Hello There",
-            "cover": "Cheap Trick"
-          },
-          {
-            "name": "Black Betty",
-            "cover": "[traditional]",
-            "info": "Black Yeti"
-          },
-          {
-            "name": "Strawberry River"
-          },
-          {
-            "name": "Guitar Solo"
-          },
-          {
-            "name": "Bigfoot Thumpin'",
-            "info": "Band of Bigfoot song"
-          },
-          {
-            "name": "Moby Dick",
-            "cover": "Led Zeppelin",
-            "info": "Moby's Dick"
-          },
-          {
-            "name": "Drum Solo"
-          },
-          {
-            "name": "Finding Nimoy",
-            "info": "Band of Bigfoot song"
-          },
-          {
-            "name": "Ready for Love",
-            "cover": "Mott the Hoople",
-            "info": "Yeti for Love"
-          },
-          {
-            "name": "Soul Shoes",
-            "info": "Band of Bigfoot song"
-          },
-          {
-            "name": "Don't Stop Believin'",
-            "cover": "Journey"
-          }
-        ]
-      }
-    ],
-    "info": null,
-    "role": "opener"
+  "opener:sasquatch:2013-03-03": {
+    "_error": "no artist match"
   },
   "opener:godspeed-you-black-emperor:2013-10-21": {
     "id": "4bf55b8e",
@@ -9683,141 +9719,6 @@
     ],
     "info": null,
     "role": "opener"
-  },
-  "opener:foo-fighters:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:bring-me-the-horizon:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:311:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:live:2018-05-20": {
-    "_error": "no artist match"
-  },
-  "opener:mastodon:2018-05-20": {
-    "id": "13edd16d",
-    "artist": "Mastodon",
-    "tour": "Emperor of Sand",
-    "eventDate": "20-05-2018",
-    "url": "https://www.setlist.fm/setlist/mastodon/2018/red-hat-amphitheater-raleigh-nc-13edd16d.html",
-    "sets": [
-      {
-        "name": null,
-        "encore": null,
-        "songs": [
-          {
-            "name": "Indian Theme",
-            "tape": true
-          },
-          {
-            "name": "Sultan's Curse"
-          },
-          {
-            "name": "Divinations"
-          },
-          {
-            "name": "Crystal Skull"
-          },
-          {
-            "name": "Ancient Kingdom"
-          },
-          {
-            "name": "Bladecatcher"
-          },
-          {
-            "name": "Black Tongue"
-          },
-          {
-            "name": "Ember City"
-          },
-          {
-            "name": "Megalodon"
-          },
-          {
-            "name": "Andromeda"
-          },
-          {
-            "name": "Toe to Toes"
-          },
-          {
-            "name": "Sleeping Giant"
-          },
-          {
-            "name": "Show Yourself"
-          },
-          {
-            "name": "Precious Stones"
-          },
-          {
-            "name": "Roots Remain"
-          },
-          {
-            "name": "Ghost of Karelia"
-          },
-          {
-            "name": "Mother Puncher"
-          },
-          {
-            "name": "Steambreather"
-          }
-        ]
-      }
-    ],
-    "info": null,
-    "role": "opener"
-  },
-  "opener:killswitch-engage:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:architects:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:tom-morello:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:fever-333:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:reignwolf:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:yungblud:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:the-glorious-sons:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:ho99o9:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:while-she-sleeps:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:basement:2018-05-20": {
-    "_error": "empty setlist"
-  },
-  "opener:scarlxrd:2018-05-20": {
-    "_error": "empty setlist"
-  },
-  "opener:movements:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:teenage-wrist:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:demob-happy:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:boston-manor:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:cleopatrick:2018-05-20": {
-    "_error": "no match"
-  },
-  "opener:the-dirty-ni:2018-05-20": {
-    "_error": "no match"
   },
   "opener:tool:2018-05-20": {
     "id": "63edd68f",
@@ -12174,6 +12075,62 @@
       }
     ],
     "info": "Opening act for Tool.",
+    "role": "opener"
+  },
+  "opener:chevelle:2022-03-11": {
+    "id": "389f1fb",
+    "artist": "Chevelle",
+    "tour": null,
+    "eventDate": "11-03-2022",
+    "url": "https://www.setlist.fm/setlist/chevelle/2022/greensboro-coliseum-complex-greensboro-nc-389f1fb.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "An Island"
+          },
+          {
+            "name": "Door to Door Cannibals"
+          },
+          {
+            "name": "Self Destructor"
+          },
+          {
+            "name": "Vitamin R (Leading Us Along)"
+          },
+          {
+            "name": "Joyride (Omen)"
+          },
+          {
+            "name": "Face to the Floor"
+          },
+          {
+            "name": "Verruckt"
+          },
+          {
+            "name": "Young Wicked"
+          },
+          {
+            "name": "The Clincher"
+          },
+          {
+            "name": "Send the Pain Below"
+          },
+          {
+            "name": "The Red"
+          },
+          {
+            "name": "I Get It"
+          },
+          {
+            "name": "Mars Simula"
+          }
+        ]
+      }
+    ],
+    "info": null,
     "role": "opener"
   },
   "opener:the-acid-helps:2022-03-20": {
@@ -15187,5 +15144,8 @@
   },
   "opener:dave-hill:2026-04-01": {
     "_error": "empty setlist"
+  },
+  "opener:puddles-pity-party:2026-04-01": {
+    "_error": "no match"
   }
 }

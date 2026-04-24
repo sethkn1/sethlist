@@ -1,8 +1,15 @@
 """
 download_drive_images.py — One-time bulk download of Google Drive poster images.
 
-Reads data/poster_images.csv, finds every row with a Google Drive URL in
-`personal_url`, downloads the image, and saves it to images/personal/poster-<id>.jpg.
+Reads data/poster_images.csv and for each row with a Google Drive URL in
+`stock_url` or `personal_url`, downloads the image to:
+  - images/stock/poster-<id>.jpg     (stock image — used as primary display)
+  - images/personal/poster-<id>.jpg  (user's own photo of the framed copy)
+
+The app prefers stock images in most places (gallery tiles, marquee), and shows
+both side-by-side in the poster modal. Each image has its own source column
+in the CSV so they're downloaded independently — a poster with no stock URL
+still downloads its personal photo.
 
 Why this exists:
   Google Drive stopped reliably serving embedded <img> tags from other domains in
@@ -11,14 +18,15 @@ Why this exists:
   once and serving them from your own repo.
 
 What it does NOT do:
-  - It won't overwrite existing files in images/personal/ unless you pass --force.
-  - It won't touch images/official/ (you fill those in as you find stock URLs).
-  - It doesn't modify poster_images.csv. The app still reads URLs from there; if
+  - It won't overwrite existing files unless you pass --force.
+  - It doesn't modify poster_images.csv. The app reads URLs from there; if
     a URL is present AND a local file exists, the local file wins on fallback.
 
 Usage:
     python3 download_drive_images.py
     python3 download_drive_images.py --force           # re-download everything
+    python3 download_drive_images.py --kind stock      # only stock images
+    python3 download_drive_images.py --kind personal   # only personal images
     python3 download_drive_images.py --csv path/to/poster_images.csv
 
 Requirements:
@@ -89,8 +97,8 @@ def main():
     parser = argparse.ArgumentParser(description="Download Drive poster images locally.")
     parser.add_argument("--csv", default="data/poster_images.csv",
                         help="Path to poster_images.csv (default: data/poster_images.csv)")
-    parser.add_argument("--out", default="images/personal",
-                        help="Output directory (default: images/personal)")
+    parser.add_argument("--kind", default="both", choices=["both", "stock", "personal"],
+                        help="Which images to download (default: both)")
     parser.add_argument("--force", action="store_true",
                         help="Re-download even if a local file exists")
     parser.add_argument("--pause", type=float, default=0.5,
@@ -102,66 +110,76 @@ def main():
         print("Run build_data.py first to generate it.", file=sys.stderr)
         sys.exit(1)
 
-    os.makedirs(args.out, exist_ok=True)
-
-    # Read the CSV
+    # Read the CSV once
     rows = []
     with open(args.csv, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             rows.append(row)
 
-    drive_rows = []
-    for row in rows:
-        url = (row.get("personal_url") or "").strip()
-        drive_id = extract_drive_id(url)
-        if drive_id:
-            drive_rows.append((row, drive_id))
+    # Collect download jobs. Each job knows its CSV column, output directory,
+    # and the Drive file id extracted from the URL. We run "kind"-scoped jobs
+    # in sequence so output is readable and rate limiting stays predictable.
+    kinds = []
+    if args.kind in ("both", "stock"):
+        kinds.append(("stock", "stock_url", "images/stock"))
+    if args.kind in ("both", "personal"):
+        kinds.append(("personal", "personal_url", "images/personal"))
 
-    print(f"Found {len(rows)} total poster rows, {len(drive_rows)} with Drive URLs.")
-    if not drive_rows:
-        print("Nothing to download.")
-        return
+    total_success, total_skipped, total_failed = 0, 0, 0
+    all_failures = []
 
-    print()
-    success = []
-    skipped = []
-    failed = []
+    for kind, col, out_dir in kinds:
+        os.makedirs(out_dir, exist_ok=True)
 
-    for i, (row, file_id) in enumerate(drive_rows, 1):
-        poster_id = row["poster_id"]
-        artist = row.get("artist", "?")
-        date = row.get("date", "?")
-        out_path = os.path.join(args.out, f"poster-{poster_id}.jpg")
+        drive_rows = []
+        for row in rows:
+            url = (row.get(col) or "").strip()
+            drive_id = extract_drive_id(url)
+            if drive_id:
+                drive_rows.append((row, drive_id))
 
-        prefix = f"[{i:>3}/{len(drive_rows)}] poster-{poster_id:>3} ({date} {artist})"
-
-        if os.path.exists(out_path) and not args.force:
-            print(f"{prefix} — skip (exists)")
-            skipped.append(row)
+        print(f"\n=== {kind.upper()} IMAGES ({col}) ===")
+        print(f"Found {len(rows)} total poster rows, {len(drive_rows)} with Drive URLs.")
+        if not drive_rows:
+            print("Nothing to download.")
             continue
 
-        ok, info = download_drive_image(file_id, out_path)
-        if ok:
-            print(f"{prefix} — ok ({info})")
-            success.append(row)
-        else:
-            print(f"{prefix} — FAILED ({info})")
-            failed.append((row, info))
+        for i, (row, file_id) in enumerate(drive_rows, 1):
+            poster_id = row["poster_id"]
+            artist = row.get("artist", "?")
+            date = row.get("date", "?")
+            out_path = os.path.join(out_dir, f"poster-{poster_id}.jpg")
 
-        time.sleep(args.pause)
+            prefix = f"[{i:>3}/{len(drive_rows)}] {kind[0]}-poster-{poster_id:>3} ({date} {artist})"
 
-    # Summary
+            if os.path.exists(out_path) and not args.force:
+                print(f"{prefix} — skip (exists)")
+                total_skipped += 1
+                continue
+
+            ok, info = download_drive_image(file_id, out_path)
+            if ok:
+                print(f"{prefix} — ok ({info})")
+                total_success += 1
+            else:
+                print(f"{prefix} — FAILED ({info})")
+                total_failed += 1
+                all_failures.append((kind, row, info))
+
+            time.sleep(args.pause)
+
+    # Overall summary
     print()
     print("=" * 50)
-    print(f"Downloaded:  {len(success)}")
-    print(f"Skipped:     {len(skipped)}  (use --force to re-download)")
-    print(f"Failed:      {len(failed)}")
+    print(f"Downloaded:  {total_success}")
+    print(f"Skipped:     {total_skipped}  (use --force to re-download)")
+    print(f"Failed:      {total_failed}")
 
-    if failed:
+    if all_failures:
         print()
         print("Failures (first 10):")
-        for row, reason in failed[:10]:
-            print(f"  poster-{row['poster_id']} {row.get('artist', '?')}: {reason}")
+        for kind, row, reason in all_failures[:10]:
+            print(f"  [{kind}] poster-{row['poster_id']} {row.get('artist', '?')}: {reason}")
         print()
         print("Common causes:")
         print("  - Drive file isn't shared 'Anyone with the link can view'")
@@ -169,7 +187,7 @@ def main():
         print("  - File deleted or moved in Drive")
 
     print()
-    print(f"Images saved to: {args.out}/")
+    print("Images saved to: images/stock/ and images/personal/")
     print("Commit these to your repo — the app will pick them up automatically.")
 
 
