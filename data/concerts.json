@@ -92,7 +92,7 @@
     "hasPoster": false,
     "setlistLink": "https://www.setlist.fm/setlist/maroon-5/2008/time-warner-cable-music-pavilion-raleigh-nc-6bd9fa9a.html",
     "tourName": "Maroon V Tour / Counting Crows co-headline",
-    "openingActs": "Sara Bareilles",
+    "openingActs": "Sara Bareilles, Counting Crows",
     "notes": "Co-headline tour with Counting Crows.",
     "festivalKey": null,
     "festivalName": null,
@@ -232,7 +232,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/nine-inch-nails/2014/midflorida-credit-union-amphitheatre-tampa-fl-63ceea7f.html",
     "tourName": "NIN + Soundgarden Tour",
-    "openingActs": "Soundgarden (co-headline); Death Grips (dropped)",
+    "openingActs": "Soundgarden",
     "notes": "Co-headline with Soundgarden.",
     "festivalKey": null,
     "festivalName": null,
@@ -612,7 +612,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/guns-n-roses/2017/bbandt-field-winston-salem-nc-3be51090.html",
     "tourName": "Not in This Lifetime... Tour",
-    "openingActs": "Sturgill Simpson",
+    "openingActs": "Live",
     "notes": "PIT",
     "festivalKey": null,
     "festivalName": null,
@@ -692,7 +692,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Rock+on+the+Range+05%2F18%2F2018",
     "tourName": "Rock on the Range 2018",
-    "openingActs": "Alice in Chains, A Perfect Circle, Breaking Benjamin, Machine Gun Kelly, Greta Van Fleet",
+    "openingActs": "Alice in Chains, A Perfect Circle, Breaking Benjamin, Machine Gun Kelly, Greta Van Fleet, 10 Years, The Bronx, Underoath, Quicksand, Hawthorne Heights, Turnstile, Senses Fail, The Fever 333, I See Stars, Body Count, Atreyu, Power Trip, Dance Gavin Dance, Mutoid Man, Spirit Animal",
     "notes": null,
     "festivalKey": "rock_on_the_range_2018",
     "festivalName": "Rock on the Range 2018",
@@ -712,7 +712,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Rock+on+the+Range+05%2F18%2F2018",
     "tourName": "Rock on the Range 2018",
-    "openingActs": "Avenged Sevenfold, Stone Sour, Three Days Grace, Black Veil Brides",
+    "openingActs": "Avenged Sevenfold, Stone Sour, Three Days Grace, Bullet for My Valentine, Black Veil Brides, Asking Alexandria, New Years Day, Tech N9ne, Trivium, From Ashes to New, Stick to Your Guns, Jelly Roll, My Ticket Home, Like Moths to Flames, Andrew W.K., Emmure, Miss May I, Wilson, Them Evils",
     "notes": null,
     "festivalKey": "rock_on_the_range_2018",
     "festivalName": "Rock on the Range 2018",
@@ -724,6 +724,26 @@
     "date": "2018-05-20",
     "year": 2018,
     "dayOfWeek": "Sunday",
+    "artist": "Tool",
+    "city": "Columbus",
+    "state": "OH",
+    "venue": "Mapfre Stadium",
+    "attendedWith": "Sean Ingalls, Joe Petrone, Josh Atwell",
+    "hasPoster": true,
+    "setlistLink": "https://www.setlist.fm/search?query=Tool+05%2F20%2F2018",
+    "tourName": "2018 Summer Tour",
+    "openingActs": "Foo Fighters, Bring Me the Horizon, 311, Live, Mastodon, Killswitch Engage, Architects, Tom Morello, Fever 333, Reignwolf, Yungblud, The Glorious Sons, Ho99o9, While She Sleeps, Basement, Scarlxrd, Movements, Teenage Wrist, Demob Happy, Boston Manor, Cleopatrick, The Dirty Ni",
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 37,
+    "date": "2018-05-20",
+    "year": 2018,
+    "dayOfWeek": "Sunday",
     "artist": "Rock on the Range Festival - Day 3",
     "city": "Columbus",
     "state": "OH",
@@ -732,32 +752,12 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Rock+on+the+Range+05%2F18%2F2018",
     "tourName": "Rock on the Range 2018",
-    "openingActs": "Tool, Godsmack, Stone Temple Pilots, Babymetal",
+    "openingActs": "Tool, Godsmack, Stone Temple Pilots, The Used, I Prevail, Red Sun Rising, Tyler Bryant & The Shakedown, BABYMETAL, Baroness, Code Orange, Like a Storm, Shaman's Harvest, Shim, Stitched Up Heart, Yelawolf, Anti-Flag, We Came as Romans, Toothgrinder, Joyous Wolf, Pray for Sleep",
     "notes": null,
     "festivalKey": "rock_on_the_range_2018",
     "festivalName": "Rock on the Range 2018",
     "festivalDayNumber": 3,
     "festivalTotalDays": 3
-  },
-  {
-    "id": 37,
-    "date": "2018-05-20",
-    "year": 2018,
-    "dayOfWeek": "Sunday",
-    "artist": "Tool",
-    "city": "Columbus",
-    "state": "OH",
-    "venue": "Mapfre Stadium",
-    "attendedWith": "Sean Ingalls, Joe Petrone, Josh Atwell",
-    "hasPoster": true,
-    "setlistLink": "https://www.setlist.fm/search?query=Tool+05%2F20%2F2018",
-    "tourName": "\u2014",
-    "openingActs": null,
-    "notes": null,
-    "festivalKey": null,
-    "festivalName": null,
-    "festivalDayNumber": null,
-    "festivalTotalDays": null
   },
   {
     "id": 38,
@@ -772,7 +772,7 @@
     "hasPoster": false,
     "setlistLink": "https://www.setlist.fm/setlist/def-leppard/2018/pnc-arena-raleigh-nc-5bed4b2c.html",
     "tourName": "Def Leppard + Journey 2018 Tour",
-    "openingActs": null,
+    "openingActs": "Journey",
     "notes": "Journey co-headline tour.",
     "festivalKey": null,
     "festivalName": null,
@@ -832,7 +832,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/a-perfect-circle/2018/bojangles-coliseum-charlotte-nc-4b96738a.html",
     "tourName": "Eat the Elephant Tour",
-    "openingActs": null,
+    "openingActs": "Tricky, Night Club",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -924,23 +924,63 @@
     "date": "2019-05-10",
     "year": 2019,
     "dayOfWeek": "Friday",
-    "artist": "Epicenter",
+    "artist": "Epicenter Festival - Day 1",
     "city": "Rockingham",
     "state": "NC",
     "venue": "Rockingham Motor Speedway",
     "attendedWith": "Josh Rife, William Baroniunas, Sean Ingalls",
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Epicenter+05%2F10%2F2019",
-    "tourName": "\u2014",
-    "openingActs": null,
+    "tourName": "Epicenter 2019",
+    "openingActs": "Korn, Rob Zombie, Machine Gun Kelly, Evanescence, Meshuggah, Skillet, Beartooth, Mark Lanegan Band, Dorothy, Black Pistol Fire, Zeal & Ardor, Knocked Loose, Slothrust, Wilson, Hands Like Houses, Hyro the Hero, Amigo the Devil, Ded, Arrested Youth, Vein, Black Coffee, The Crystal Method",
     "notes": null,
-    "festivalKey": null,
-    "festivalName": null,
-    "festivalDayNumber": null,
-    "festivalTotalDays": null
+    "festivalKey": "epicenter_2019",
+    "festivalName": "Epicenter 2019",
+    "festivalDayNumber": 1,
+    "festivalTotalDays": 3
   },
   {
     "id": 47,
+    "date": "2019-05-11",
+    "year": 2019,
+    "dayOfWeek": "Saturday",
+    "artist": "Epicenter Festival - Day 2",
+    "city": "Rockingham",
+    "state": "NC",
+    "venue": "Rockingham Motor Speedway",
+    "attendedWith": "Josh Rife, William Baroniunas, Sean Ingalls",
+    "hasPoster": true,
+    "setlistLink": "https://www.setlist.fm/search?query=Epicenter+05%2F10%2F2019",
+    "tourName": "Epicenter 2019",
+    "openingActs": "Motionless in White, Badflower, The Damned Things, Wage War, Crobot, Sylar, Shvpes, Dirty Honey, Alien Weaponry, Hyde, Tetrarch, Dead Girls Academy",
+    "notes": "Note: Tool, Judas Priest, The Cult, Bush, Black Label Society, Circa Survive, Yelawolf, Grandson, Memphis May Fire, and Starset were all cancelled or cut short due to the storm evacuation.",
+    "festivalKey": "epicenter_2019",
+    "festivalName": "Epicenter 2019",
+    "festivalDayNumber": 2,
+    "festivalTotalDays": 3
+  },
+  {
+    "id": 48,
+    "date": "2019-05-12",
+    "year": 2019,
+    "dayOfWeek": "Sunday",
+    "artist": "Epicenter Festival - Day 3",
+    "city": "Rockingham",
+    "state": "NC",
+    "venue": "Rockingham Motor Speedway",
+    "attendedWith": "Josh Rife, William Baroniunas, Sean Ingalls",
+    "hasPoster": true,
+    "setlistLink": "https://www.setlist.fm/search?query=Epicenter+05%2F10%2F2019",
+    "tourName": "Epicenter 2019",
+    "openingActs": "Foo Fighters, Bring Me the Horizon, 311, Live, Mastodon, Killswitch Engage, Architects, Tom Morello, Fever 333, Reignwolf, Yungblud, The Glorious Sons, Ho99o9, While She Sleeps, Basement, Scarlxrd, Movements, Teenage Wrist, Demob Happy, Boston Manor, Cleopatrick, The Dirty Nil",
+    "notes": null,
+    "festivalKey": "epicenter_2019",
+    "festivalName": "Epicenter 2019",
+    "festivalDayNumber": 3,
+    "festivalTotalDays": 3
+  },
+  {
+    "id": 49,
     "date": "2019-05-16",
     "year": 2019,
     "dayOfWeek": "Thursday",
@@ -960,7 +1000,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 48,
+    "id": 50,
     "date": "2019-05-28",
     "year": 2019,
     "dayOfWeek": "Tuesday",
@@ -980,7 +1020,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 49,
+    "id": 51,
     "date": "2019-08-18",
     "year": 2019,
     "dayOfWeek": "Sunday",
@@ -992,7 +1032,7 @@
     "hasPoster": false,
     "setlistLink": "https://www.setlist.fm/setlist/breaking-benjamin/2019/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-7b9f3a70.html",
     "tourName": "Ember Tour",
-    "openingActs": null,
+    "openingActs": "Chevelle, Three Days Grace, Dorothy, Diamente",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1000,7 +1040,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 50,
+    "id": 52,
     "date": "2019-09-19",
     "year": 2019,
     "dayOfWeek": "Thursday",
@@ -1020,7 +1060,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 51,
+    "id": 53,
     "date": "2019-09-25",
     "year": 2019,
     "dayOfWeek": "Wednesday",
@@ -1040,7 +1080,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 52,
+    "id": 54,
     "date": "2019-11-19",
     "year": 2019,
     "dayOfWeek": "Tuesday",
@@ -1052,7 +1092,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/tool/2019/barclays-center-brooklyn-ny-639a82f3.html",
     "tourName": "Fear Inoculum Tour",
-    "openingActs": null,
+    "openingActs": "Author and Punisher",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1060,7 +1100,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 53,
+    "id": 55,
     "date": "2019-11-24",
     "year": 2019,
     "dayOfWeek": "Sunday",
@@ -1072,7 +1112,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/tool/2019/pnc-arena-raleigh-nc-1b9ad1e0.html",
     "tourName": "Fear Inoculum Tour",
-    "openingActs": null,
+    "openingActs": "Author and Punisher",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1080,7 +1120,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 54,
+    "id": 56,
     "date": "2020-01-17",
     "year": 2020,
     "dayOfWeek": "Friday",
@@ -1092,7 +1132,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/tool/2020/t-mobile-arena-las-vegas-nv-6b9b72de.html",
     "tourName": "Fear Inoculum Tour",
-    "openingActs": null,
+    "openingActs": "Author and Punisher",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1100,7 +1140,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 55,
+    "id": 57,
     "date": "2020-02-08",
     "year": 2020,
     "dayOfWeek": "Saturday",
@@ -1112,7 +1152,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/kiss/2020/greensboro-coliseum-greensboro-nc-3398d04d.html",
     "tourName": "End of the Road World Tour",
-    "openingActs": null,
+    "openingActs": "David Lee Roth",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1120,7 +1160,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 56,
+    "id": 58,
     "date": "2021-09-11",
     "year": 2021,
     "dayOfWeek": "Saturday",
@@ -1140,7 +1180,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 57,
+    "id": 59,
     "date": "2021-09-29",
     "year": 2021,
     "dayOfWeek": "Wednesday",
@@ -1160,7 +1200,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 58,
+    "id": 60,
     "date": "2021-11-11",
     "year": 2021,
     "dayOfWeek": "Thursday",
@@ -1172,7 +1212,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Welcome+To+Rockville+Festival+11%2F11%2F2021",
     "tourName": "Welcome to Rockville 2021",
-    "openingActs": "Slipknot, A Day to Remember, Gojira",
+    "openingActs": "Slipknot, Cypress Hill, Grandson, Dead Sara, Spiritbox, Dana Dentata, A Day to Remember, Gojira, Dorothy, Teenage Wrist, Siiickbrain, Brass Against, NASCAR Aloe, Jeris Johnson, Blame My Youth, Contracult Collective, Them Evils, Revision, Revised, The Alpha Complex, A War Within, Scarlett O'hara, Dead Reckoning, Shadow the Earth, As You Were",
     "notes": null,
     "festivalKey": "welcome_to_rockville_2021",
     "festivalName": "Welcome to Rockville 2021",
@@ -1180,7 +1220,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 59,
+    "id": 61,
     "date": "2021-11-12",
     "year": 2021,
     "dayOfWeek": "Friday",
@@ -1192,7 +1232,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Welcome+To+Rockville+Festival+11%2F11%2F2021",
     "tourName": "Welcome to Rockville 2021",
-    "openingActs": "Metallica, Social Distortion, Rob Zombie, Chevelle",
+    "openingActs": "Metallica, Social Distortion, Pennywise, Ice Nine Kills, Ayron Jones, Austin Meade, Rob Zombie, Chevelle, Beartooth, Starset, Zero 9:36, Whit3 Collr, Wage War, Butcher Babies, Amigo the Devil, Bad Omens, Tallah, Eva Under Fire, Zero 9:36, Whit3 Collr, Divided Truth, ReBirth, Tragic, VENTRUSS, The Coursing, As You Were",
     "notes": null,
     "festivalKey": "welcome_to_rockville_2021",
     "festivalName": "Welcome to Rockville 2021",
@@ -1200,7 +1240,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 60,
+    "id": 62,
     "date": "2021-11-13",
     "year": 2021,
     "dayOfWeek": "Saturday",
@@ -1212,7 +1252,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Welcome+To+Rockville+Festival+11%2F11%2F2021",
     "tourName": "Welcome to Rockville 2021",
-    "openingActs": "Disturbed, Staind ,The Offspring, Lamb of God",
+    "openingActs": "Disturbed, Staind, The Offspring, Badflower, Fever 333, Dead Poet Society, Brkn Love, Lamb of God, Asking Alexandria, Atreyu, Sick Puppies, Fame on Fire, Gwar, Crown the Empire, 3Teeth, All Good Things, Joyous Wolf, Reach NYC, Magnolia Bayou, Actus Reus, Widow7, Timmy Taylor, NoSelf, Troy, Higher Ground, As You Were",
     "notes": null,
     "festivalKey": "welcome_to_rockville_2021",
     "festivalName": "Welcome to Rockville 2021",
@@ -1220,7 +1260,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 61,
+    "id": 63,
     "date": "2021-11-14",
     "year": 2021,
     "dayOfWeek": "Sunday",
@@ -1232,7 +1272,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Welcome+To+Rockville+Festival+11%2F11%2F2021",
     "tourName": "Welcome to Rockville 2021",
-    "openingActs": "Metallica, Lynyrd Skynyrd, Mudvayne",
+    "openingActs": "Metallica, Mudvayne, Falling in Reverse, Sleeping with Sirens, Alien Weaponry, Goodbye June, Lynyrd Skynyrd, Mastodon, Anthrax, Dance Gavin Dance, Fire from the Gods, Survive the Sun, Code Orange, Jelly Roll, The Warning, Avoid, Hero the Band, As You Were, Lone Wolf, The Dev, Imperial Tide, Lines of Loyalty",
     "notes": null,
     "festivalKey": "welcome_to_rockville_2021",
     "festivalName": "Welcome to Rockville 2021",
@@ -1240,7 +1280,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 62,
+    "id": 64,
     "date": "2021-11-19",
     "year": 2021,
     "dayOfWeek": "Friday",
@@ -1260,7 +1300,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 63,
+    "id": 65,
     "date": "2022-02-22",
     "year": 2022,
     "dayOfWeek": "Tuesday",
@@ -1272,7 +1312,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/tool/2022/capital-one-arena-washington-dc-4b885f0e.html",
     "tourName": "Fear Inoculum Tour",
-    "openingActs": null,
+    "openingActs": "The Acid Helps",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1280,7 +1320,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 64,
+    "id": 66,
     "date": "2022-03-11",
     "year": 2022,
     "dayOfWeek": "Friday",
@@ -1300,7 +1340,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 65,
+    "id": 67,
     "date": "2022-03-20",
     "year": 2022,
     "dayOfWeek": "Sunday",
@@ -1312,7 +1352,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/tool/2022/rocket-mortgage-fieldhouse-cleveland-oh-33892099.html",
     "tourName": "Fear Inoculum Tour",
-    "openingActs": null,
+    "openingActs": "The Acid Helps",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1320,7 +1360,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 66,
+    "id": 68,
     "date": "2022-04-28",
     "year": 2022,
     "dayOfWeek": "Thursday",
@@ -1332,7 +1372,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/nine-inch-nails/2022/red-hat-amphitheater-raleigh-nc-7bb66208.html",
     "tourName": "NIN 2022 Tour",
-    "openingActs": null,
+    "openingActs": "Boy Harsher",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1340,7 +1380,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 67,
+    "id": 69,
     "date": "2022-05-20",
     "year": 2022,
     "dayOfWeek": "Friday",
@@ -1351,8 +1391,8 @@
     "attendedWith": "Rojer Frazier",
     "hasPoster": false,
     "setlistLink": "https://www.setlist.fm/search?query=Lunatic+Luau+05%2F20%2F2022",
-    "tourName": "\u2014",
-    "openingActs": null,
+    "tourName": "Lunatic Luau 2022",
+    "openingActs": "Distrubed, The Pretty Reckless, Living Colour, Dirty Honey, Bad Wolves, Ayron Jones",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1360,7 +1400,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 68,
+    "id": 70,
     "date": "2022-06-22",
     "year": 2022,
     "dayOfWeek": "Wednesday",
@@ -1372,7 +1412,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/puscifer/2022/durham-performing-arts-center-durham-nc-73b5ba69.html",
     "tourName": "Existential Reckoning Tour 2022",
-    "openingActs": null,
+    "openingActs": "Moodie Black",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1380,7 +1420,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 69,
+    "id": 71,
     "date": "2022-07-31",
     "year": 2022,
     "dayOfWeek": "Sunday",
@@ -1392,7 +1432,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/rage-against-the-machine/2022/pnc-arena-raleigh-nc-53b213d9.html",
     "tourName": "Public Service Announcement Tour",
-    "openingActs": null,
+    "openingActs": "Run the Jewels",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1400,7 +1440,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 70,
+    "id": 72,
     "date": "2022-08-18",
     "year": 2022,
     "dayOfWeek": "Thursday",
@@ -1420,7 +1460,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 71,
+    "id": 73,
     "date": "2022-08-31",
     "year": 2022,
     "dayOfWeek": "Sunday",
@@ -1432,7 +1472,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/rammstein/2022/lincoln-financial-field-philadelphia-pa-6bb3422e.html",
     "tourName": "2022 North American Stadium Tour",
-    "openingActs": null,
+    "openingActs": "AB\u00c9LARD",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1440,7 +1480,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 72,
+    "id": 74,
     "date": "2022-09-27",
     "year": 2022,
     "dayOfWeek": "Tuesday",
@@ -1452,7 +1492,7 @@
     "hasPoster": false,
     "setlistLink": "https://www.setlist.fm/setlist/alice-in-chains/2022/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-3bb1a468.html",
     "tourName": "2022 North American Tour",
-    "openingActs": null,
+    "openingActs": "Breaking Benjamin",
     "notes": "Co-headline with Breaking Benjamin",
     "festivalKey": null,
     "festivalName": null,
@@ -1460,7 +1500,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 73,
+    "id": 75,
     "date": "2022-11-01",
     "year": 2022,
     "dayOfWeek": "Tuesday",
@@ -1472,7 +1512,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/puscifer/2022/ovens-auditorium-charlotte-nc-7bbedaa8.html",
     "tourName": "Existential Reckoning: Re-Wired Tour",
-    "openingActs": null,
+    "openingActs": "Night Club",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1480,27 +1520,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 74,
-    "date": "2023-05-21",
-    "year": 2023,
-    "dayOfWeek": "Sunday",
-    "artist": "Tool",
-    "city": "Daytona",
-    "state": "FL",
-    "venue": "Daytona Speedway",
-    "attendedWith": "William Baroniunas",
-    "hasPoster": true,
-    "setlistLink": "https://www.setlist.fm/search?query=Tool+05%2F21%2F2023",
-    "tourName": "\u2014",
-    "openingActs": null,
-    "notes": null,
-    "festivalKey": null,
-    "festivalName": null,
-    "festivalDayNumber": null,
-    "festivalTotalDays": null
-  },
-  {
-    "id": 75,
+    "id": 76,
     "date": "2023-05-21",
     "year": 2023,
     "dayOfWeek": "Sunday",
@@ -1512,7 +1532,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Welcome+To+Rockville+Festival+05%2F18%2F2023",
     "tourName": "Welcome to Rockville 2023",
-    "openingActs": "Tool, Deftones, Incubus, The Mars Volta",
+    "openingActs": "Tool, Deftones, Incubus, The Mars Volta, Coheed & Cambria, Pennywise, Ghostemane, Grandson, Sueco, Filter, Deafheaven, Anti-Flag, Senses Fail, New Years Day, Nothing,Nowhere, Angel Dust, Nova Twins, Point North, Bob Vylan, Capital Theatre, Uncured, Reddstar",
     "notes": null,
     "festivalKey": "welcome_to_rockville_2023",
     "festivalName": "Welcome to Rockville 2023",
@@ -1520,7 +1540,27 @@
     "festivalTotalDays": 1
   },
   {
-    "id": 76,
+    "id": 77,
+    "date": "2023-05-21",
+    "year": 2023,
+    "dayOfWeek": "Sunday",
+    "artist": "Tool",
+    "city": "Daytona",
+    "state": "FL",
+    "venue": "Daytona Speedway",
+    "attendedWith": "William Baroniunas",
+    "hasPoster": true,
+    "setlistLink": "https://www.setlist.fm/search?query=Tool+05%2F21%2F2023",
+    "tourName": "Fear Inoculum Tour (2023 leg)",
+    "openingActs": null,
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 78,
     "date": "2023-08-04",
     "year": 2023,
     "dayOfWeek": "Friday",
@@ -1532,7 +1572,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/metallica/2023/metlife-stadium-east-rutherford-nj-5ba47f00.html",
     "tourName": "M72 World Tour",
-    "openingActs": null,
+    "openingActs": "Pantera, Mammoth",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1540,7 +1580,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 77,
+    "id": 79,
     "date": "2023-09-07",
     "year": 2023,
     "dayOfWeek": "Thursday",
@@ -1552,7 +1592,7 @@
     "hasPoster": false,
     "setlistLink": "https://www.setlist.fm/search?query=Blue+Ridge+Rock+Festival+09%2F07%2F2023",
     "tourName": "Blue Ridge Rock Fest 2023",
-    "openingActs": "Slipknot, Sleep Token, Glenn Danzig, Motionless in White",
+    "openingActs": "Slipknot, Danzig, Motionless In White, Sleep Token, Knocked Loose, Lorna Shore, Polyphia, Testament, VV, Electric Callboy, Coal Chamber, Flyleaf, The Black Dahlia Murder, Job For Cowboy, After The Burial, Woe Is Me, Like Moths To Flames, The Acacia Strain, Of Mice & Men, Chelsea Grin, Catch Your Breath, Black Stone Cherry, Upon A Burning Body, Afterlife, Struggle Jennings, Angelmaker, Crown the Empire, Conquer Divide, TrustCompany, Savage Hands, Demun Jones, Archers, Starbenders, Oliver Anthony",
     "notes": "Blue Ride Disaster Shitshow: https://digitalbeatmag.com/a-2023-blue-ridge-rock-fest-review/",
     "festivalKey": "blue_ridge_rock_fest_2023",
     "festivalName": "Blue Ridge Rock Fest 2023",
@@ -1560,7 +1600,7 @@
     "festivalTotalDays": 1
   },
   {
-    "id": 78,
+    "id": 80,
     "date": "2023-10-14",
     "year": 2023,
     "dayOfWeek": "Saturday",
@@ -1580,7 +1620,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 79,
+    "id": 81,
     "date": "2023-10-29",
     "year": 2023,
     "dayOfWeek": "Sunday",
@@ -1600,7 +1640,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 80,
+    "id": 82,
     "date": "2023-11-09",
     "year": 2023,
     "dayOfWeek": "Thursday",
@@ -1612,7 +1652,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/eagles/2023/pnc-arena-raleigh-nc-43a18703.html",
     "tourName": "The Long Goodbye",
-    "openingActs": null,
+    "openingActs": "The Doobie Brothers",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1620,7 +1660,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 81,
+    "id": 83,
     "date": "2023-11-17",
     "year": 2023,
     "dayOfWeek": "Friday",
@@ -1632,7 +1672,7 @@
     "hasPoster": false,
     "setlistLink": "https://www.setlist.fm/setlist/bush/2023/durham-performing-arts-center-durham-nc-2ba108e6.html",
     "tourName": "The Art of Survival Tour",
-    "openingActs": null,
+    "openingActs": "Bad Wolves, Eva Under Fire",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1640,7 +1680,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 82,
+    "id": 84,
     "date": "2024-01-21",
     "year": 2024,
     "dayOfWeek": "Sunday",
@@ -1652,7 +1692,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/tool/2024/spectrum-center-charlotte-nc-3ac9973.html",
     "tourName": "Fear Inoculum Tour (2024 leg)",
-    "openingActs": null,
+    "openingActs": "Elder",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1660,7 +1700,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 83,
+    "id": 85,
     "date": "2024-02-18",
     "year": 2024,
     "dayOfWeek": "Sunday",
@@ -1672,7 +1712,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/tool/2024/t-mobile-arena-las-vegas-nv-bad819e.html",
     "tourName": "Fear Inoculum Tour (2024 leg)",
-    "openingActs": null,
+    "openingActs": "Elder",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1680,7 +1720,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 84,
+    "id": 86,
     "date": "2024-03-29",
     "year": 2024,
     "dayOfWeek": "Friday",
@@ -1692,7 +1732,7 @@
     "hasPoster": false,
     "setlistLink": "https://www.setlist.fm/setlist/avenged-sevenfold/2024/pnc-arena-raleigh-nc-1babb504.html",
     "tourName": "Life Is But a Dream... Tour",
-    "openingActs": null,
+    "openingActs": "Poppy",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1700,7 +1740,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 85,
+    "id": 87,
     "date": "2024-04-07",
     "year": 2024,
     "dayOfWeek": "Sunday",
@@ -1720,7 +1760,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 86,
+    "id": 88,
     "date": "2024-05-16",
     "year": 2024,
     "dayOfWeek": "Thursday",
@@ -1732,7 +1772,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Sonic+Temple+Festival+05%2F16%2F2024",
     "tourName": "Sonic Temple 2024",
-    "openingActs": "Disturbed, Judas Priest, Evanescence, Kerry King, Mudvayne",
+    "openingActs": "Disturbed, Evanescence, Mudvayne, Theory of a Deadman, P.O.D., Drowning Pool, Nita Strauss, Judas Priest, Kerry King, The Ghost Inside, Nova Twins, Taipei Houston, Bob Vylan, Tim Montana, Cypress Hill, Electric Callboy, Enter Shikari, The Chats, Magnolia Park, TX2, L\u00f8 Spirit, Machine Head, August Burns Red, Frank Carter & The Rattlesnakes, Fire from the Gods, Miss May I, Catch Your Breath, SiM, HotBox",
     "notes": null,
     "festivalKey": "sonic_temple_2024",
     "festivalName": "Sonic Temple 2024",
@@ -1740,7 +1780,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 87,
+    "id": 89,
     "date": "2024-05-17",
     "year": 2024,
     "dayOfWeek": "Friday",
@@ -1752,7 +1792,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Sonic+Temple+Festival+05%2F16%2F2024",
     "tourName": "Sonic Temple 2024",
-    "openingActs": "The Original Misfits, Sum 41, Rise Against, Falling In Reverse",
+    "openingActs": "The Original Misfits, Falling In Reverse, Seether, Anthrax, Dirty Honey, Nonpoint, Point North, Rise Against, Sum 41, Black Veil Brides, Movements, Terror, Scowl, Gel, Code Orange, Mr. Bungle, Drain, Militarie Gun, Rain City Drive, The Chisel, Gideon, Avatar, Atreyu, Soulfly, Kublai Khan TX, New Years Day, Fleshwater, I See Stars, Fuming Mouth",
     "notes": null,
     "festivalKey": "sonic_temple_2024",
     "festivalName": "Sonic Temple 2024",
@@ -1760,7 +1800,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 88,
+    "id": 90,
     "date": "2024-05-18",
     "year": 2024,
     "dayOfWeek": "Saturday",
@@ -1772,7 +1812,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Sonic+Temple+Festival+05%2F16%2F2024",
     "tourName": "Sonic Temple 2024",
-    "openingActs": "Pantera, Sleep Token, Staind, In This Moment, Breaking Benjamin",
+    "openingActs": "Pantera, Staind, Breaking Benjamin, Starset, Living Colour, Saint Asonia, Flat Black, Sleep Token, In This Moment, Flyleaf with Lacey Sturm, Kittie, Destroy Boys, Calva Louise, VUKOVI, Polyphia, The Amity Affliction, Currents, Spite, Bodysnatcher, Thrown, Dying Wish, Slaughter to Prevail, In Flames, Lacuna Coil, Harm's Way, Empire State Bastard, Imminence, Mike's Dead",
     "notes": null,
     "festivalKey": "sonic_temple_2024",
     "festivalName": "Sonic Temple 2024",
@@ -1780,7 +1820,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 89,
+    "id": 91,
     "date": "2024-05-19",
     "year": 2024,
     "dayOfWeek": "Sunday",
@@ -1792,7 +1832,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/search?query=Sonic+Temple+Festival+05%2F16%2F2024",
     "tourName": "Sonic Temple 2024",
-    "openingActs": "Slipknot, 311, Limp Bizkit, Architects",
+    "openingActs": "Slipknot, Limp Bizkit, A Day to Remember, Royal Blood, Bad Religion, Saliva, Sleep Theory, 311, Architects, Wage War, Of Mice & Men, Reignwolf, Kim Dracula, Blind Channel, Clutch, Baroness, Helmet, Red Fang, Crobot, Plush, Moon Fever, Return to Dust, Tech N9ne, L7, While She Sleeps, Taproot, Bad Nerves, Dead Poet Society, Eva Under Fire",
     "notes": null,
     "festivalKey": "sonic_temple_2024",
     "festivalName": "Sonic Temple 2024",
@@ -1800,7 +1840,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 90,
+    "id": 92,
     "date": "2024-06-26",
     "year": 2024,
     "dayOfWeek": "Wednesday",
@@ -1820,7 +1860,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 91,
+    "id": 93,
     "date": "2024-08-27",
     "year": 2024,
     "dayOfWeek": "Tuesday",
@@ -1840,7 +1880,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 92,
+    "id": 94,
     "date": "2024-09-02",
     "year": 2024,
     "dayOfWeek": "Monday",
@@ -1860,7 +1900,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 93,
+    "id": 95,
     "date": "2024-09-18",
     "year": 2024,
     "dayOfWeek": "Wednesday",
@@ -1880,7 +1920,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 94,
+    "id": 96,
     "date": "2025-03-24",
     "year": 2025,
     "dayOfWeek": "Monday",
@@ -1900,7 +1940,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 95,
+    "id": 97,
     "date": "2025-05-06",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -1920,7 +1960,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 96,
+    "id": 98,
     "date": "2025-05-13",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -1932,7 +1972,7 @@
     "hasPoster": true,
     "setlistLink": "https://www.setlist.fm/setlist/pearl-jam/2025/lenovo-center-raleigh-nc-2b5fcc02.html",
     "tourName": "Dark Matter World Tour",
-    "openingActs": null,
+    "openingActs": "Teen Jesus and the Jean Teaser",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
@@ -1940,7 +1980,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 97,
+    "id": 99,
     "date": "2025-05-31",
     "year": 2025,
     "dayOfWeek": "Saturday",
@@ -1960,7 +2000,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 98,
+    "id": 100,
     "date": "2025-07-15",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -1980,7 +2020,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 99,
+    "id": 101,
     "date": "2025-07-29",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -2000,7 +2040,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 100,
+    "id": 102,
     "date": "2025-08-21",
     "year": 2025,
     "dayOfWeek": "Thursday",
@@ -2020,7 +2060,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 101,
+    "id": 103,
     "date": "2025-08-27",
     "year": 2025,
     "dayOfWeek": "Wednesday",
@@ -2040,7 +2080,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 102,
+    "id": 104,
     "date": "2025-09-05",
     "year": 2025,
     "dayOfWeek": "Friday",
@@ -2060,7 +2100,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 103,
+    "id": 105,
     "date": "2025-09-11",
     "year": 2025,
     "dayOfWeek": "Thursday",
@@ -2080,7 +2120,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 104,
+    "id": 106,
     "date": "2025-10-25",
     "year": 2025,
     "dayOfWeek": "Saturday",
@@ -2100,7 +2140,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 105,
+    "id": 107,
     "date": "2025-11-04",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -2120,7 +2160,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 106,
+    "id": 108,
     "date": "2026-02-10",
     "year": 2026,
     "dayOfWeek": "Tuesday",
@@ -2140,7 +2180,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 107,
+    "id": 109,
     "date": "2026-03-07",
     "year": 2026,
     "dayOfWeek": "Saturday",
@@ -2160,7 +2200,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 108,
+    "id": 110,
     "date": "2026-03-16",
     "year": 2026,
     "dayOfWeek": "Monday",
@@ -2180,7 +2220,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 109,
+    "id": 111,
     "date": "2026-04-01",
     "year": 2026,
     "dayOfWeek": "Wednesday",
@@ -2200,7 +2240,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 110,
+    "id": 112,
     "date": "2026-04-17",
     "year": 2026,
     "dayOfWeek": "Friday",
