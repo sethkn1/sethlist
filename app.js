@@ -1887,6 +1887,154 @@ function renderSongs() {
       `Showing first 300 of ${filtered.length}. Narrow the filter to see more.`
     ));
   }
+
+  // Missing coverage — only shown on the artist drill-down view.
+  // Walks every concert where this artist appeared (as headliner or opener)
+  // and reports which ones don't have setlist data in our cache.
+  if (filterNormArtist) {
+    const coverage = computeArtistCoverage(filterArtistDisplay, filterNormArtist);
+    if (coverage.withoutData.length > 0 || coverage.withData.length > 0) {
+      app.appendChild(renderCoverageBlock(filterArtistDisplay, coverage));
+    }
+  }
+}
+
+/**
+ * For a given artist, walk STATE.concerts and classify each appearance by
+ * whether we have setlist data for it. Appearances can be:
+ *   - headliner: concert.artist matches
+ *   - opener:    artist is in concert.openingActs
+ *
+ * Returns { withData: [...], withoutData: [{concert, role, reason}] } where
+ * `reason` explains why no data (no URL, search miss, fetch error, etc.).
+ */
+function computeArtistCoverage(displayName, normArtistKey) {
+  const withData = [];
+  const withoutData = [];
+
+  for (const c of STATE.concerts) {
+    // Figure out this artist's role at this show, if any
+    const headlinerMatch = normalizeArtistKey(c.artist) === normArtistKey && !c.festivalKey;
+
+    let openerMatch = false;
+    for (const opener of splitActs(c.openingActs)) {
+      if (normalizeArtistKey(opener) === normArtistKey) {
+        openerMatch = true;
+        break;
+      }
+    }
+
+    if (!headlinerMatch && !openerMatch) continue;
+
+    const role = headlinerMatch ? "headliner" : "opener";
+
+    // Check cache for data
+    let cacheKey = null;
+    let cached = null;
+    if (role === "headliner") {
+      cacheKey = extractSetlistId(c.setlistLink);
+      if (cacheKey) cached = STATE.setlists[cacheKey];
+    } else {
+      // Opener key uses the exact spelling from openingActs, not the display name.
+      // Find the original spelling by walking the acts for this concert.
+      for (const opener of splitActs(c.openingActs)) {
+        if (normalizeArtistKey(opener) === normArtistKey) {
+          cacheKey = openerCacheKey(opener, c.date);
+          cached = STATE.setlists[cacheKey];
+          break;
+        }
+      }
+    }
+
+    // Has usable data?
+    if (cached && !cached._error && cached.sets && cached.sets.length) {
+      withData.push({ concert: c, role });
+    } else {
+      // Classify the reason
+      let reason;
+      if (role === "headliner" && !c.setlistLink) {
+        reason = "No setlist URL in your spreadsheet";
+      } else if (!cached) {
+        reason = role === "headliner"
+          ? "Not yet fetched (run prefetch_setlists.py)"
+          : "Not yet searched (run prefetch_setlists.py)";
+      } else if (cached._error === "no match") {
+        reason = "No match on setlist.fm";
+      } else if (cached._error === "no artist match") {
+        reason = "setlist.fm returned different artists";
+      } else if (cached._error === "empty setlist") {
+        reason = "setlist.fm has the show but no songs listed";
+      } else if (cached._error) {
+        reason = `Fetch error: ${cached._error}`;
+      } else {
+        reason = "No songs in cached data";
+      }
+      withoutData.push({ concert: c, role, reason });
+    }
+  }
+
+  // Sort by date, newest first (matches timeline order)
+  const byDateDesc = (a, b) => (b.concert.date || "").localeCompare(a.concert.date || "");
+  withData.sort(byDateDesc);
+  withoutData.sort(byDateDesc);
+
+  return { withData, withoutData };
+}
+
+/**
+ * Render the "Coverage" block shown at the bottom of an artist drill-down.
+ * Shows a summary ("6 of 8 shows covered") and lists any shows without data,
+ * with an explanation for each.
+ */
+function renderCoverageBlock(displayName, coverage) {
+  const total = coverage.withData.length + coverage.withoutData.length;
+  const pct = total > 0 ? Math.round((coverage.withData.length / total) * 100) : 0;
+
+  const block = el("div", { class: "coverage-block" });
+  block.appendChild(el("h3", { class: "coverage-title" }, "Setlist coverage"));
+
+  block.appendChild(el("p", { class: "coverage-summary" },
+    `You've seen ${displayName} `,
+    el("strong", {}, `${total} time${total === 1 ? "" : "s"}`),
+    `. Setlist data available for `,
+    el("strong", {}, `${coverage.withData.length}`),
+    ` of them (${pct}%).`
+  ));
+
+  if (coverage.withoutData.length === 0) {
+    block.appendChild(el("p", { class: "coverage-summary", style: "color: var(--accent-2);" },
+      "✓ Full coverage — every show you saw them is represented in the song data above."
+    ));
+    return block;
+  }
+
+  block.appendChild(el("p", { class: "coverage-summary" },
+    "Shows without setlist data (their songs are ",
+    el("em", {}, "not"),
+    " in the counts above):"
+  ));
+
+  const list = el("div", { class: "coverage-list" });
+  coverage.withoutData.forEach(entry => {
+    const c = entry.concert;
+    const line = el("div", {
+      class: "coverage-item",
+      title: "Click to view show details",
+      on: { click: () => openConcertModal(c) }
+    });
+    line.appendChild(el("span", { class: "cov-date" }, formatDate(c.date)));
+    line.appendChild(el("span", { class: "cov-venue" },
+      `${c.venue || "?"}${c.city ? " · " + c.city : ""}`
+    ));
+    line.appendChild(el("span", { class: "cov-role" },
+      entry.role === "opener" ? "opener" : "headliner"
+    ));
+    line.appendChild(el("span", { class: "cov-reason" }, entry.reason));
+    list.appendChild(line);
+  });
+  block.appendChild(list);
+
+  return block;
 }
 
 /**
@@ -1902,20 +2050,33 @@ function togglePlayDetails(rowEl, songEntry) {
   const detail = el("div", { class: "songs-detail" });
   const plays = [...songEntry.plays].sort((a, b) => (a.date || "").localeCompare(b.date || ""));
   plays.forEach(p => {
-    const line = el("div", { class: "song-play" });
+    // Build the label once so we can use it in both the clickable and
+    // non-clickable variants below.
+    const label = formatDate(p.date);
+    const metaText = p.concert
+      ? ` · ${p.concert.venue || "?"}${p.concert.city ? " · " + p.concert.city : ""}${p.role === "opener" ? " · opening slot" : ""}`
+      : (p.role === "opener" ? " · opening slot" : "");
+
     if (p.concert) {
-      line.appendChild(el("a", {
-        class: "crumb-link",
-        href: "#/timeline?q=" + encodeURIComponent(p.concert.artist || ""),
-        title: "View in timeline",
-      }, formatDate(p.date)));
-      line.appendChild(el("span", { class: "song-play-meta" },
-        ` · ${p.concert.venue || "?"}${p.concert.city ? " · " + p.concert.city : ""}${p.role === "opener" ? " · opening slot" : ""}`
-      ));
+      // Whole line is clickable; clicking opens the concert modal directly.
+      // Using a button-styled div rather than an <a href> so we can trigger
+      // the modal via JS without navigating away from the Songs page.
+      const line = el("div", {
+        class: "song-play song-play-clickable",
+        title: "View show details",
+        on: { click: () => openConcertModal(p.concert) }
+      });
+      line.appendChild(el("span", { class: "song-play-date" }, label));
+      line.appendChild(el("span", { class: "song-play-meta" }, metaText));
+      detail.appendChild(line);
     } else {
-      line.appendChild(el("span", {}, formatDate(p.date) + (p.role === "opener" ? " · opening slot" : "")));
+      // Data refers to a show we don't have a matching concert record for
+      // (shouldn't normally happen, but safe fallback).
+      const line = el("div", { class: "song-play" });
+      line.appendChild(el("span", { class: "song-play-date" }, label));
+      if (metaText) line.appendChild(el("span", { class: "song-play-meta" }, metaText));
+      detail.appendChild(line);
     }
-    detail.appendChild(line);
   });
   rowEl.insertAdjacentElement("afterend", detail);
 }
