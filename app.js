@@ -492,6 +492,64 @@ function splitActs(s) {
 }
 
 /**
+ * Build a compact "On this day" block: any concerts whose month+day match
+ * today's date from previous years. Returns null if no matches (so Timeline
+ * can skip the section entirely on most days).
+ *
+ * Shows up to 4 matches — beyond that, space gets cramped. If more exist,
+ * a small "+N more" hint is shown. Each entry is clickable → concert modal.
+ */
+function buildOnThisDayBlock() {
+  const today = new Date();
+  const monthDay = String(today.getMonth() + 1).padStart(2, "0") + "-" +
+                   String(today.getDate()).padStart(2, "0");
+  const currentYear = today.getFullYear();
+
+  // Filter: non-future concerts whose date's MM-DD matches today's, excluding
+  // the current year (if the user already saw a show today, that's not "on this day").
+  const matches = STATE.concerts.filter(c => {
+    if (!c.date || c.year === currentYear) return false;
+    return c.date.slice(5) === monthDay;
+  }).sort((a, b) => b.date.localeCompare(a.date));  // newest first
+
+  if (matches.length === 0) return null;
+
+  const block = el("div", { class: "on-this-day" });
+  const monthName = today.toLocaleDateString("en-US", { month: "long" });
+  const dayNum = today.getDate();
+  block.appendChild(el("div", { class: "otd-header" },
+    el("span", { class: "otd-label" }, "On this day · " + monthName + " " + dayNum),
+    el("span", { class: "otd-count" },
+      matches.length + " show" + (matches.length === 1 ? "" : "s") + " in previous years")
+  ));
+
+  const displayed = matches.slice(0, 4);
+  const cardRow = el("div", { class: "otd-cards" });
+  displayed.forEach(c => {
+    const yearsAgo = currentYear - c.year;
+    const card = el("div", {
+      class: "otd-card",
+      on: { click: () => openConcertModal(c) }
+    },
+      el("div", { class: "otd-years" }, yearsAgo + " year" + (yearsAgo === 1 ? "" : "s") + " ago"),
+      el("div", { class: "otd-year" }, String(c.year)),
+      el("div", { class: "otd-artist" }, c.artist || "Unknown"),
+      el("div", { class: "otd-venue" },
+        [c.venue, c.city].filter(Boolean).join(" · "))
+    );
+    cardRow.appendChild(card);
+  });
+  block.appendChild(cardRow);
+
+  if (matches.length > displayed.length) {
+    block.appendChild(el("div", { class: "otd-more" },
+      "+" + (matches.length - displayed.length) + " more from " + monthName + " " + dayNum));
+  }
+
+  return block;
+}
+
+/**
  * Return all artists the user saw at a given concert: the headliner plus
  * every band in `openingActs` (which for festival rows contains the full day lineup).
  * For festival rows we skip the synthetic "Festival" headliner name since
@@ -692,6 +750,16 @@ function renderTimeline() {
     ),
     el("p", { class: "view-sub" }, "Chronological. Newest on top.")
   ));
+
+  // "On this day" — shows that match today's month+day from prior years.
+  // Only renders when there's at least one match AND no filters are active
+  // (wouldn't make sense to show this while user is exploring a subset).
+  const hasAnyFilter = q || state || artist || venue || posterOnly || festival ||
+    attendedWithFilter.length > 0;
+  if (!hasAnyFilter) {
+    const otdBlock = buildOnThisDayBlock();
+    if (otdBlock) app.appendChild(otdBlock);
+  }
 
   // Build filters
   const allStates = [...new Set(STATE.concerts.map(c => c.state).filter(Boolean))].sort();
@@ -1196,10 +1264,19 @@ function renderPosters() {
   const autographed = params.get("autographed") === "1";
   const notAttended = params.get("notAttended") === "1";
 
-  app.appendChild(el("div", { class: "view-header" },
+  // View header: title on the left, action buttons (Random / Screensaver) on the right.
+  // The action buttons live here (not in the filter bar) because they're page-level
+  // primary actions rather than filter controls.
+  const header = el("div", { class: "view-header view-header-split" });
+  const headerText = el("div", { class: "view-header-text" },
     el("h2", { class: "view-title" }, "Paper ", el("span", { class: "accent" }, "artifacts")),
-    el("p", { class: "view-sub" }, "Multiple posters from the same show are grouped together.")
-  ));
+    el("p", { class: "view-sub" }, "In the era of digital ticket stubs, Seth's collection of Posters are physical momentos during his journey to #rawk")
+  );
+  const headerActions = el("div", { class: "view-header-actions" });
+  // Buttons are added later, after `filtered` is computed, so they can use it.
+  header.appendChild(headerText);
+  header.appendChild(headerActions);
+  app.appendChild(header);
 
   // Group posters by show (date + artist + location)
   const groupKey = p => `${p.date}||${(p.artist || "").toLowerCase()}||${(p.location || "").toLowerCase()}`;
@@ -1303,9 +1380,10 @@ function renderPosters() {
   // for arrow-key navigation across posters in the current filter.
   STATE._posterNavList = filtered;
 
-  // Add "Random" + "Screensaver" action buttons to the filter bar (after count)
-  filterBar.appendChild(el("button", {
-    class: "chip action-chip",
+  // Attach Random + Screensaver action buttons to the page header (right side).
+  // Built here (not earlier) so they can reference the `filtered` closure.
+  headerActions.appendChild(el("button", {
+    class: "header-action-btn",
     title: "Open a random poster from the current filter",
     on: { click: () => {
       if (filtered.length === 0) return;
@@ -1314,8 +1392,8 @@ function renderPosters() {
     }}
   }, "🎲 Random"));
 
-  filterBar.appendChild(el("button", {
-    class: "chip action-chip screensaver-chip",
+  headerActions.appendChild(el("button", {
+    class: "header-action-btn screensaver-btn",
     title: "Full-screen rotating poster display — any key to exit",
     on: { click: () => startScreensaver() }
   }, "🖼 Screensaver"));
@@ -2331,11 +2409,24 @@ function renderStats() {
     }
   }
 
-  // "Show buddies" — people I've attended shows with, by count
+  // "Show buddies" — people I've attended shows with, by count.
+  // Each entry expands to show the top artists we saw together.
   const buddyCount = {};
+  const buddyArtists = {};  // name -> { artist-norm-key -> { display, count } }
   past.forEach(c => {
-    splitAttendedWith(c.attendedWith).forEach(n => {
+    const attendees = splitAttendedWith(c.attendedWith);
+    attendees.forEach(n => {
       buddyCount[n] = (buddyCount[n] || 0) + 1;
+      // For each artist at this concert, tally for this buddy
+      allArtistsAtConcert(c).forEach(artistName => {
+        const akey = normalizeArtistKey(artistName);
+        if (!akey) return;
+        if (!buddyArtists[n]) buddyArtists[n] = {};
+        if (!buddyArtists[n][akey]) {
+          buddyArtists[n][akey] = { display: artistName, count: 0 };
+        }
+        buddyArtists[n][akey].count++;
+      });
     });
   });
   const topBuddies = Object.entries(buddyCount)
@@ -2344,19 +2435,207 @@ function renderStats() {
   if (topBuddies.length > 0) {
     const buddyList = el("div", { class: "top-list" },
       el("h3", {}, "Show buddies"),
-      el("ol", {}, ...topBuddies.map(([name, count], i) =>
-        el("li", {
+      el("ol", {}, ...topBuddies.map(([name, count], i) => {
+        // Top 3 artists seen with this person
+        const artistEntries = Object.values(buddyArtists[name] || {})
+          .sort((a, b) => b.count - a.count)
+          .slice(0, 3);
+        const artistSummary = artistEntries.length
+          ? artistEntries.map(a =>
+              `${a.display}${a.count > 1 ? " ×" + a.count : ""}`
+            ).join(" · ")
+          : "";
+
+        return el("li", {
           on: { click: () => location.hash = "#/timeline?withPerson=" + encodeURIComponent(name) },
           style: "cursor:pointer;"
         },
           el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
-          el("span", { class: "name" }, name),
-          el("span", { class: "count" }, `${count} show${count === 1 ? "" : "s"}`)
-        )
-      ))
+          el("div", { class: "buddy-main" },
+            el("div", { class: "buddy-name-row" },
+              el("span", { class: "name" }, name),
+              el("span", { class: "count" }, `${count} show${count === 1 ? "" : "s"}`)
+            ),
+            artistSummary
+              ? el("div", { class: "buddy-artists" }, artistSummary)
+              : null
+          )
+        );
+      }))
     );
     buddyList.style.marginTop = "24px";
     app.appendChild(buddyList);
+  }
+
+  // ========================================================================
+  // Gaps & streaks
+  // ========================================================================
+  // Sort concerts chronologically (unique dates — same-day shows count once
+  // for gap calculations, since the question is "periods with no shows").
+  const sortedDates = [...new Set(past.map(c => c.date).filter(Boolean))].sort();
+  if (sortedDates.length >= 2) {
+    // Longest gap between shows (in days)
+    let maxGap = 0, gapStart = "", gapEnd = "";
+    for (let i = 1; i < sortedDates.length; i++) {
+      const prev = new Date(sortedDates[i - 1] + "T00:00:00");
+      const curr = new Date(sortedDates[i] + "T00:00:00");
+      const days = Math.round((curr - prev) / 86400000);
+      if (days > maxGap) {
+        maxGap = days;
+        gapStart = sortedDates[i - 1];
+        gapEnd = sortedDates[i];
+      }
+    }
+
+    // Longest consecutive-year streak (years with at least one show, no gap)
+    const yearsWithShows = [...new Set(past.map(c => c.year).filter(Boolean))].sort();
+    let maxYearStreak = 1, curYearStreak = 1;
+    let yearStreakStart = yearsWithShows[0], yearStreakEnd = yearsWithShows[0];
+    let tempStart = yearsWithShows[0];
+    for (let i = 1; i < yearsWithShows.length; i++) {
+      if (yearsWithShows[i] === yearsWithShows[i - 1] + 1) {
+        curYearStreak++;
+      } else {
+        tempStart = yearsWithShows[i];
+        curYearStreak = 1;
+      }
+      if (curYearStreak > maxYearStreak) {
+        maxYearStreak = curYearStreak;
+        yearStreakStart = tempStart;
+        yearStreakEnd = yearsWithShows[i];
+      }
+    }
+
+    // Longest consecutive-month streak (months with at least one show)
+    const monthsWithShows = [...new Set(past.map(c =>
+      c.date ? c.date.slice(0, 7) : null).filter(Boolean))].sort();
+    const monthToInt = (ym) => {
+      const [y, m] = ym.split("-").map(Number);
+      return y * 12 + m;
+    };
+    let maxMonthStreak = 1, curMonthStreak = 1;
+    let monthStreakStart = monthsWithShows[0], monthStreakEnd = monthsWithShows[0];
+    let tempMonthStart = monthsWithShows[0];
+    for (let i = 1; i < monthsWithShows.length; i++) {
+      if (monthToInt(monthsWithShows[i]) === monthToInt(monthsWithShows[i - 1]) + 1) {
+        curMonthStreak++;
+      } else {
+        tempMonthStart = monthsWithShows[i];
+        curMonthStreak = 1;
+      }
+      if (curMonthStreak > maxMonthStreak) {
+        maxMonthStreak = curMonthStreak;
+        monthStreakStart = tempMonthStart;
+        monthStreakEnd = monthsWithShows[i];
+      }
+    }
+
+    const formatYM = (ym) => {
+      const [y, m] = ym.split("-");
+      const d = new Date(Number(y), Number(m) - 1, 1);
+      return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+    };
+
+    const streaksCard = el("div", { class: "top-list streaks-card" },
+      el("h3", {}, "Gaps & streaks"),
+      el("div", { class: "streaks-grid" },
+        el("div", { class: "streak-item" },
+          el("div", { class: "streak-label" }, "Longest gap between shows"),
+          el("div", { class: "streak-value" }, maxGap + " days"),
+          el("div", { class: "streak-detail" },
+            formatDate(gapStart) + " → " + formatDate(gapEnd))
+        ),
+        el("div", { class: "streak-item" },
+          el("div", { class: "streak-label" }, "Longest consecutive-year streak"),
+          el("div", { class: "streak-value" }, maxYearStreak + " year" + (maxYearStreak === 1 ? "" : "s")),
+          el("div", { class: "streak-detail" },
+            yearStreakStart + " → " + yearStreakEnd)
+        ),
+        el("div", { class: "streak-item" },
+          el("div", { class: "streak-label" }, "Longest consecutive-month streak"),
+          el("div", { class: "streak-value" }, maxMonthStreak + " month" + (maxMonthStreak === 1 ? "" : "s")),
+          el("div", { class: "streak-detail" },
+            formatYM(monthStreakStart) + " → " + formatYM(monthStreakEnd))
+        )
+      )
+    );
+    streaksCard.style.marginTop = "24px";
+    app.appendChild(streaksCard);
+  }
+
+  // ========================================================================
+  // Monthly heatmap: rows = years, cols = months (Jan-Dec).
+  // Cell darkness = show count. Hover shows counts; click jumps Timeline.
+  // ========================================================================
+  const heatData = {};  // year -> month (1-12) -> count
+  let heatMax = 0;
+  past.forEach(c => {
+    if (!c.date || !c.year) return;
+    const m = Number(c.date.slice(5, 7));
+    if (!heatData[c.year]) heatData[c.year] = {};
+    heatData[c.year][m] = (heatData[c.year][m] || 0) + 1;
+    if (heatData[c.year][m] > heatMax) heatMax = heatData[c.year][m];
+  });
+  const heatYears = Object.keys(heatData).sort();
+  if (heatYears.length > 0 && heatMax > 0) {
+    const MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const heatCard = el("div", { class: "top-list heatmap-card" },
+      el("h3", {}, "Concert heatmap")
+    );
+    const heatDesc = el("p", { class: "heatmap-desc" },
+      "Darker = more shows that month. Click a cell to filter.");
+    heatCard.appendChild(heatDesc);
+
+    const table = el("div", { class: "heatmap-table" });
+
+    // Header row with month abbreviations
+    const headRow = el("div", { class: "heatmap-row heatmap-head" },
+      el("div", { class: "heatmap-year-label" }, "")
+    );
+    MONTH_ABBR.forEach(m => {
+      headRow.appendChild(el("div", { class: "heatmap-cell heatmap-month-label" }, m));
+    });
+    table.appendChild(headRow);
+
+    // Data rows
+    heatYears.forEach(y => {
+      const row = el("div", { class: "heatmap-row" },
+        el("div", { class: "heatmap-year-label" }, y)
+      );
+      for (let m = 1; m <= 12; m++) {
+        const count = (heatData[y] && heatData[y][m]) || 0;
+        // Scale 0..heatMax → 0..1
+        const intensity = count === 0 ? 0 : Math.max(0.15, count / heatMax);
+        const cellTitle = count === 0
+          ? `${MONTH_ABBR[m - 1]} ${y}: no shows`
+          : `${MONTH_ABBR[m - 1]} ${y}: ${count} show${count === 1 ? "" : "s"}`;
+        const cell = el("div", {
+          class: "heatmap-cell" + (count > 0 ? " has-shows" : ""),
+          title: cellTitle,
+          style: count > 0 ? `--intensity:${intensity};` : "",
+          on: count > 0 ? {
+            click: () => {
+              // Navigate to the Timeline showing just that year (no month filter yet)
+              location.hash = "#/timeline";
+              // After render, scroll to the year
+              setTimeout(() => {
+                const anchor = document.getElementById("year-" + y);
+                if (anchor) anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+              }, 150);
+            }
+          } : {}
+        });
+        if (count > 0) {
+          cell.appendChild(el("span", { class: "heatmap-count" }, String(count)));
+        }
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    });
+    heatCard.appendChild(table);
+    heatCard.style.marginTop = "24px";
+    app.appendChild(heatCard);
   }
 
   // Year chart

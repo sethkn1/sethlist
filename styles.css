@@ -2218,22 +2218,78 @@ main {
 }
 
 /* ============================================================
-   ACTION CHIPS (Random, Screensaver on Posters view)
-   Inherits base .chip styling but adds a subtle accent border so
-   they read as "buttons that do things" vs. filter toggles.
+   VIEW HEADER — split layout (title left, actions right)
+   The Posters view uses this variant to place Random + Screensaver
+   buttons alongside the title instead of in the filter bar.
    ============================================================ */
-.filter-bar .chip.action-chip {
-  border-color: var(--muted);
-  color: var(--paper-dim);
+.view-header.view-header-split {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
 }
-.filter-bar .chip.action-chip:hover {
+.view-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;  /* let title shrink below content size if needed */
+  /* Cap width so a long tagline wraps into multiple lines instead of
+     pushing the action buttons to a new line below. */
+  max-width: min(780px, 70%);
+}
+.view-header-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  /* Slight bottom offset so buttons sit on the subtitle baseline, not the huge title's baseline */
+  padding-bottom: 6px;
+}
+
+/* Buttons that live in the page header — similar visual weight to filter chips
+   but a bit more distinct so they read as page-level actions. */
+.header-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  background: transparent;
+  color: var(--paper);
+  border: 2px solid var(--paper);
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 150ms;
+  white-space: nowrap;
+}
+.header-action-btn:hover {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--paper);
 }
-.filter-bar .chip.screensaver-chip:hover {
+.header-action-btn.screensaver-btn:hover {
   background: var(--accent-2, var(--accent));
   border-color: var(--accent-2, var(--accent));
+}
+.header-action-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* On narrow screens, let buttons wrap below the title */
+@media (max-width: 640px) {
+  .view-header.view-header-split {
+    align-items: flex-start;
+  }
+  .view-header-actions {
+    padding-bottom: 0;
+  }
+  .header-action-btn {
+    padding: 8px 14px;
+    font-size: 10px;
+  }
 }
 
 /* ============================================================
@@ -2295,4 +2351,235 @@ main {
   .screensaver-img { max-height: 75vh; }
   .screensaver-caption { font-size: 11px; margin-top: 16px; }
   .screensaver-hint { font-size: 8px; bottom: 12px; right: 14px; }
+}
+
+/* ============================================================
+   ON THIS DAY (top of Timeline)
+   Compact row of cards showing matching shows from prior years.
+   Muted styling so it doesn't compete with the year blocks below.
+   ============================================================ */
+.on-this-day {
+  margin: 0 0 32px 0;
+  padding: 18px 20px 20px;
+  border: 1px dashed var(--muted);
+  background: rgba(255, 255, 255, 0.015);
+}
+.otd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.otd-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.otd-count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+.otd-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.otd-card {
+  padding: 12px 14px;
+  border: 1px solid var(--paper);
+  background: var(--ink);
+  cursor: pointer;
+  transition: all 120ms;
+}
+.otd-card:hover {
+  border-color: var(--accent);
+  background: rgba(217, 59, 43, 0.06);
+}
+.otd-years {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 2px;
+}
+.otd-year {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.otd-artist {
+  font-family: var(--font-display-alt);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--paper);
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+.otd-venue {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+.otd-more {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ============================================================
+   SHOW BUDDY × ARTIST enhancement
+   Each buddy <li> now shows a secondary line of top artists.
+   ============================================================ */
+.top-list .buddy-main {
+  flex: 1;
+  min-width: 0;
+}
+.top-list .buddy-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.top-list .buddy-artists {
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  /* Truncate if it overflows — mostly shouldn't since we cap at 3 artists */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   GAPS & STREAKS CARD
+   3-column grid on wide screens; stacks vertically on narrow.
+   ============================================================ */
+.streaks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 720px) {
+  .streaks-grid { grid-template-columns: 1fr; }
+}
+.streak-item {
+  padding: 14px 16px;
+  background: var(--ink);
+  border: 1px solid var(--paper);
+}
+.streak-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.streak-value {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.streak-detail {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--paper-dim);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   MONTHLY HEATMAP
+   Table-like grid: year label + 12 month cells per row.
+   --intensity CSS variable drives cell color (0..1).
+   ============================================================ */
+.heatmap-desc {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: -4px 0 14px 0;
+}
+.heatmap-table {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  /* Allow horizontal scroll on narrow screens rather than cramping cells */
+  overflow-x: auto;
+}
+.heatmap-row {
+  display: grid;
+  grid-template-columns: 50px repeat(12, minmax(32px, 1fr));
+  gap: 2px;
+  align-items: stretch;
+  min-width: 480px;
+}
+.heatmap-head .heatmap-cell {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 2px 0;
+  text-align: center;
+}
+.heatmap-year-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--paper-dim);
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+}
+.heatmap-month-label {
+  /* uses .heatmap-cell sizing but .heatmap-head strips visual styling */
+}
+.heatmap-cell {
+  aspect-ratio: 1/1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: transparent;  /* count only visible on has-shows */
+  min-height: 32px;
+}
+.heatmap-cell.has-shows {
+  /* Blend accent color with ink, mixed by --intensity (0..1).
+     Higher intensity = more opaque accent over the dark base. */
+  background: rgba(217, 59, 43, calc(var(--intensity) * 0.85));
+  border-color: rgba(217, 59, 43, calc(var(--intensity) * 0.5 + 0.3));
+  color: var(--paper);
+  cursor: pointer;
+  transition: transform 120ms;
+}
+.heatmap-cell.has-shows:hover {
+  transform: scale(1.12);
+  border-color: var(--paper);
+  z-index: 2;
+}
+.heatmap-count {
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }

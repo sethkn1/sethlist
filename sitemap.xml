@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!--
+    Sethlist sitemap.
+    Since the app is a single-page hash-routed site, search engines don't
+    follow #/ routes natively. This sitemap lists the canonical entry URL;
+    the internal hash routes are reachable from the nav once the page loads.
+  -->
+  <url>
+    <loc>https://sethlist.live/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
