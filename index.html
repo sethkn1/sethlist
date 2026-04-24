@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sethlist — Concert & Poster Journey</title>
+<meta name="description" content="Concert and poster journey — a lifetime of live music, venues, and poster art." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+<!-- Fonts: gig-poster display + readable serif body -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Big+Shoulders+Display:wght@700;900&family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+<!-- D3 for the US map (vendored locally for offline/GitHub Pages reliability) -->
+<script src="vendor/d3.min.js"></script>
+<script src="vendor/topojson-client.min.js"></script>
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Noise overlay for texture -->
+<div class="noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#/timeline" aria-label="Sethlist — home">
+      <div class="brand-mark">SL</div>
+      <div class="brand-text">
+        <h1>Sethlist</h1>
+        <p class="brand-tagline">A <span class="accent">Seth</span><span class="sethtime-time">Time</span> of live music</p>
+        <p class="brand-sub" id="brand-sub">loading…</p>
+      </div>
+    </a>
+    <nav class="main-nav" role="navigation">
+      <a href="#/timeline" data-view="timeline">Timeline</a>
+      <a href="#/map" data-view="map">Map</a>
+      <a href="#/posters" data-view="posters">Posters</a>
+      <a href="#/stats" data-view="stats">Stats</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app">
+  <div class="loading">Loading your journey…</div>
+</main>
+
+<footer class="site-footer">
+  <span>Built from a couple of spreadsheets and a lot of live music.</span>
+</footer>
+
+<!-- Modal for concert/poster details -->
+<div class="modal-backdrop" id="modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true">
+    <button class="modal-close" aria-label="Close">×</button>
+    <div class="modal-body"></div>
+  </div>
+</div>
+
+<script src="cities.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

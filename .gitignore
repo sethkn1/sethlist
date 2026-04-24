@@ -1,0 +1,27 @@
+# Sensitive config — never commit
+.secrets
+.setlistfm_key
+setlistfm.key
+*.env
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor leftovers
+*.swp
+*~
+.vscode/
+.idea/
+
+# OS junk
+Thumbs.db
+
+# The source spreadsheets aren't needed by the site — keep them local.
+# (Uncomment these if you'd rather not have your spreadsheets on GitHub.)
+# *.xlsx
+# *.xlsm
