@@ -228,13 +228,71 @@ function setlistForConcert(c) {
 }
 
 /**
+ * Build the cache key used in setlists.json for opener entries.
+ * Must match prefetch_setlists.py's opener_cache_key() exactly.
+ */
+function openerCacheKey(artistName, dateIso) {
+  const slug = (artistName || "")
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return `opener:${slug}:${dateIso}`;
+}
+
+/**
+ * Look up an opener's setlist for a specific show. Returns null if not cached
+ * or if the cached entry is an error (e.g. "no match on setlist.fm").
+ */
+function openerSetlistFor(artistName, dateIso) {
+  const key = openerCacheKey(artistName, dateIso);
+  const entry = STATE.setlists[key];
+  if (!entry || entry._error) return null;
+  return entry;
+}
+
+/**
+ * Yield every song-performance in every cached setlist, as
+ * {artist, song, date, role}. Used by stats aggregation.
+ *
+ * Skips entries with errors, skips songs played on tape (those weren't
+ * actually performed), and normalizes artist name to what's stored in the
+ * setlist entry (which is the canonical setlist.fm version).
+ */
+function* iterAllSongPerformances() {
+  for (const [key, entry] of Object.entries(STATE.setlists || {})) {
+    if (!entry || entry._error) continue;
+    const artist = entry.artist || "(unknown)";
+    const date = entry.eventDate || null;  // DD-MM-YYYY from setlist.fm
+    for (const s of entry.sets || []) {
+      for (const song of s.songs || []) {
+        if (!song.name) continue;
+        if (song.tape) continue;  // tape intro / interlude, not a live performance
+        yield {
+          artist,
+          song: song.name,
+          date,
+          role: entry.role || "headliner",
+          cover: song.cover || null,
+        };
+      }
+    }
+  }
+}
+
+/**
  * Render a setlist block from the pre-fetched cache.
  * Shows each set in order; encores get "Encore" label. Songs are numbered
  * continuously. Covers and tape intros get small annotations inline.
+ *
+ * Options:
+ *   subtitle — override the "Setlist" title with a custom string (e.g.,
+ *              "The Mars Volta · opener" for opener setlists in a show modal).
  */
-function renderSetlistBlock(setlist) {
+function renderSetlistBlock(setlist, options = {}) {
   const block = el("div", { class: "setlist-block" });
-  block.appendChild(el("h4", { class: "setlist-title" }, "Setlist"));
+  const titleText = options.subtitle || "Setlist";
+  block.appendChild(el("h4", { class: "setlist-title" }, titleText));
   if (setlist.tour && !setlist.tour.match(/^[\s\-—]*$/)) {
     block.appendChild(el("div", { class: "setlist-tour" }, setlist.tour));
   }
@@ -1578,6 +1636,14 @@ function renderStats() {
   const uniqueVenues = new Set(past.map(c => c.venue).filter(Boolean));
   const uniqueStates = new Set(past.map(c => c.state).filter(Boolean));
   const uniqueFestivals = new Set(past.map(c => c.festivalKey).filter(Boolean));
+
+  // Unique cities: use city+state as the key since "Portland OR" and "Portland ME"
+  // shouldn't collapse into one entry. Display label is "City, ST" for consistency.
+  const cityKey = c => c.city ? `${c.city}||${c.state || ""}` : null;
+  const cityLabel = c => c.state ? `${c.city}, ${c.state}` : c.city;
+  const uniqueCities = new Set();
+  past.forEach(c => { const k = cityKey(c); if (k) uniqueCities.add(k); });
+
   const firstYear = Math.min(...past.map(c => c.year));
   const lastYear = Math.max(...past.map(c => c.year));
 
@@ -1587,7 +1653,7 @@ function renderStats() {
     { label: "Festivals", value: uniqueFestivals.size, unit: "multi-day events" },
     { label: "Unique artists", value: uniqueArtists.size, unit: "headliners + openers" },
     { label: "Unique venues", value: uniqueVenues.size },
-    { label: "States visited", value: uniqueStates.size, unit: "of 50 + DC" },
+    { label: "Unique cities", value: uniqueCities.size, unit: "across " + uniqueStates.size + " states" },
     { label: "Posters", value: STATE.posters.length, unit: "collected" },
     { label: "Autographed", value: STATE.posters.filter(p => p.autographed).length, unit: "posters" },
     { label: "Years of live music", value: (lastYear - firstYear + 1), unit: `${firstYear} – ${lastYear}` },
@@ -1672,6 +1738,152 @@ function renderStats() {
   );
   twoCol.appendChild(venueList);
   app.appendChild(twoCol);
+
+  // ------------------------------------------------------------------
+  // Most-visited cities leaderboard
+  // ------------------------------------------------------------------
+  const cityCount = {};
+  const cityDisplay = {};
+  past.forEach(c => {
+    const k = cityKey(c);
+    if (!k) return;
+    cityCount[k] = (cityCount[k] || 0) + 1;
+    cityDisplay[k] = cityLabel(c);
+  });
+  const topCities = Object.entries(cityCount)
+    .filter(([, n]) => n > 1)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 12);
+
+  if (topCities.length > 0) {
+    const cityList = el("div", { class: "top-list" },
+      el("h3", {}, "Most-visited cities"),
+      el("ol", {}, ...topCities.map(([key, count], i) => {
+        const label = cityDisplay[key] || key;
+        return el("li", {
+          on: { click: () => {
+            // Filter timeline by the city — use the city name as search query,
+            // since the timeline doesn't have a dedicated city param yet.
+            const cityName = label.split(",")[0].trim();
+            location.hash = "#/timeline?q=" + encodeURIComponent(cityName);
+          }},
+          style: "cursor:pointer;"
+        },
+          el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
+          el("span", { class: "name" }, label),
+          el("span", { class: "count" }, `${count}×`)
+        );
+      }))
+    );
+    cityList.style.marginTop = "24px";
+    app.appendChild(cityList);
+  }
+
+  // ------------------------------------------------------------------
+  // Setlist-based stats: top songs (overall) and by artist
+  // Aggregates across every cached setlist (headliners + openers).
+  // ------------------------------------------------------------------
+  const songsByArtist = {};       // normArtist -> { songName -> count }
+  const songTotalCount = {};      // "artist — song" -> count (global across artists)
+  const songDisplayArtist = {};   // normArtist -> display name (most common spelling)
+  const artistTotalSongs = {};    // normArtist -> total song performances (for "most musical")
+
+  const performances = [];
+  for (const perf of iterAllSongPerformances()) {
+    performances.push(perf);
+    const normArt = normalizeArtistKey(perf.artist);
+    if (!normArt) continue;
+    // Track display name
+    songDisplayArtist[normArt] = songDisplayArtist[normArt] || perf.artist;
+
+    // Per-artist song tally
+    songsByArtist[normArt] = songsByArtist[normArt] || {};
+    songsByArtist[normArt][perf.song] = (songsByArtist[normArt][perf.song] || 0) + 1;
+
+    // Global "artist — song" tally for overall top songs
+    const globalKey = `${normArt}||${perf.song.toLowerCase()}`;
+    songTotalCount[globalKey] = songTotalCount[globalKey] || { artist: perf.artist, song: perf.song, count: 0 };
+    songTotalCount[globalKey].count++;
+
+    artistTotalSongs[normArt] = (artistTotalSongs[normArt] || 0) + 1;
+  }
+
+  const totalUniqueSongs = Object.keys(songTotalCount).length;
+  const totalPerformances = performances.length;
+
+  if (totalPerformances > 0) {
+    // Intro/meta KPIs specific to setlist data
+    const songStatsIntro = el("div", { class: "song-stats-intro" },
+      el("h3", { style: "margin-bottom:8px;" }, "Songs heard live"),
+      el("p", { class: "song-stats-note" },
+        `Aggregated from ${totalPerformances.toLocaleString()} song performances across every setlist we have for your shows. `,
+        `${totalUniqueSongs.toLocaleString()} unique songs. `,
+        el("em", {}, "Based on setlists pulled from setlist.fm — coverage is best for headliners and top festival acts, partial for smaller openers.")
+      )
+    );
+    songStatsIntro.style.marginTop = "32px";
+    app.appendChild(songStatsIntro);
+
+    // Overall top songs (limit 15)
+    const topSongs = Object.values(songTotalCount)
+      .filter(s => s.count > 1)
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 15);
+
+    if (topSongs.length > 0) {
+      const songList = el("div", { class: "top-list" },
+        el("h3", {}, "Most-heard songs (overall)"),
+        el("ol", {}, ...topSongs.map((s, i) =>
+          el("li", {},
+            el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
+            el("span", { class: "name" },
+              el("strong", {}, s.song),
+              el("span", { class: "song-artist" }, ` — ${s.artist}`)
+            ),
+            el("span", { class: "count" }, `${s.count}×`)
+          )
+        ))
+      );
+      songList.style.marginTop = "16px";
+      app.appendChild(songList);
+    }
+
+    // Top song per artist — for each artist we've heard 5+ songs from,
+    // show their most-played song at our shows.
+    const artistSongLeaders = Object.entries(songsByArtist)
+      .filter(([normArt, songs]) => artistTotalSongs[normArt] >= 5)
+      .map(([normArt, songs]) => {
+        const [topSong, topCount] = Object.entries(songs)
+          .sort((a, b) => b[1] - a[1])[0] || [];
+        return {
+          artist: songDisplayArtist[normArt],
+          song: topSong,
+          count: topCount,
+          artistTotal: artistTotalSongs[normArt],
+        };
+      })
+      .filter(e => e.song && e.count > 1)  // drop cases where every song played only once
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 12);
+
+    if (artistSongLeaders.length > 0) {
+      const artistSongList = el("div", { class: "top-list" },
+        el("h3", {}, "Top song per artist"),
+        el("ol", {}, ...artistSongLeaders.map((e, i) =>
+          el("li", {},
+            el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
+            el("span", { class: "name" },
+              el("strong", {}, e.artist),
+              el("span", { class: "song-artist" }, ` — ${e.song}`)
+            ),
+            el("span", { class: "count" }, `${e.count}×`)
+          )
+        ))
+      );
+      artistSongList.style.marginTop = "16px";
+      app.appendChild(artistSongList);
+    }
+  }
 
   // "Show buddies" — people I've attended shows with, by count
   const buddyCount = {};
@@ -1932,6 +2144,20 @@ function openConcertModal(c) {
   if (setlist && setlist.sets && setlist.sets.length) {
     modalBody.appendChild(renderSetlistBlock(setlist));
   }
+
+  // Opener setlists — pulled by artist+date search during prefetch.
+  // For festivals, only the top 5 acts are fetched (per prefetch config).
+  // Renders a smaller block per opener with the band name as the header.
+  const openerActs = splitActs(c.openingActs);
+  const actsToCheck = c.festivalKey ? openerActs.slice(0, 5) : openerActs;
+  const openerSetlists = [];
+  actsToCheck.forEach(actName => {
+    const sl = openerSetlistFor(actName, c.date);
+    if (sl && sl.sets && sl.sets.length) openerSetlists.push({ name: actName, setlist: sl });
+  });
+  openerSetlists.forEach(({ name, setlist: sl }) => {
+    modalBody.appendChild(renderSetlistBlock(sl, { subtitle: `${name} · opener` }));
+  });
 
   // Action links
   const links = el("div", { class: "modal-links" });

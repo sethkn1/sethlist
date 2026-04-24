@@ -948,6 +948,36 @@ main {
   font-size: 13px;
   color: var(--accent-2);
 }
+/* Song stats intro block — explains the data source and coverage caveat */
+.song-stats-intro {
+  background: var(--ink-2);
+  border-left: 4px solid var(--accent-2);
+  padding: 18px 24px;
+  margin-bottom: 16px;
+}
+.song-stats-intro h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin: 0 0 4px 0;
+  color: var(--paper);
+}
+.song-stats-note {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--paper-dim);
+  margin: 4px 0 0 0;
+  line-height: 1.5;
+}
+.song-stats-note em {
+  color: var(--muted);
+  font-size: 12px;
+}
+/* The " — ArtistName" suffix on top-songs rows */
+.top-list .name .song-artist {
+  color: var(--muted);
+  font-weight: normal;
+  font-style: italic;
+}
 
 .year-chart {
   background: var(--ink-2);

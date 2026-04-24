@@ -59,7 +59,8 @@ Then visit <http://localhost:8000>.
 - **Multi-poster shows** get a stacked thumbnail and "X posters" badge on the gallery card
 - **Band images** via Wikipedia auto-lookup, CSV override for misses
 - **Poster images** via a one-time Drive download script (avoids Google's 2024 hotlink restrictions)
-- **Setlists inline**: each concert modal shows the actual song list (numbered, with encore labels) pulled from setlist.fm and cached at build time
+- **Setlists inline**: each concert modal shows the actual song list (numbered, with encore labels) pulled from setlist.fm and cached at build time. Both headliners AND openers are fetched — for festivals, the top 5 acts per day.
+- **Song-level stats**: Most-heard songs across all your shows, plus top song per artist, aggregated from every cached setlist
 - **Scrolling poster marquee** at the top of the Posters view — pauses on hover, click a thumbnail to open the show modal, mirrors the current filter
 - **Click any poster image** (in the show modal) to open it at full size as a lightbox — click backdrop, press Escape, or click × to dismiss
 - **Not-attended posters** are desaturated with a "DIDN'T ATTEND" badge, and filterable via a chip
@@ -125,7 +126,18 @@ Each concert modal shows the actual setlist (song-by-song, numbered, with encore
    python3 prefetch_setlists.py
    ```
 
-The script will hit the API once per concert that has a setlist URL (~110 requests, takes roughly 2 minutes at the default 1-second pace). Cached to `data/setlists.json`. The script retries automatically on rate-limit or network timeouts, and saves progress every 10 requests, so interruptions are safe to resume.
+The script will hit the API for:
+- Every headliner setlist (via the setlist.fm URL in your spreadsheet)
+- Every opening act setlist (via artist+date search on setlist.fm)
+- For festival days, only the top 5 acts in the Opening Acts column (those you most likely saw)
+
+First run typically takes around 5 minutes at the default 1-second pace — roughly 110 headliner + 200 opener requests. Cached to `data/setlists.json`. The script retries automatically on rate-limit or network timeouts, and saves progress every 10 requests, so interruptions are safe to resume. Opener searches that return no match are cached as errors so they're skipped on subsequent runs.
+
+**Useful flags:**
+- `--skip-openers` — only fetch headliners (faster, if you just added new shows)
+- `--refresh` — re-fetch everything, including previously-cached errors
+- `--limit 5` — only the first 5 headliners (smoke test)
+- `--festival-top-n 10` — pull more acts per festival day (default 5)
 
 **Re-running:**
 
