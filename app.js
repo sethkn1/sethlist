@@ -177,6 +177,25 @@ function router() {
   if (modalId !== null && modal.hidden) {
     setTimeout(() => openModalFromDeepLink(path, modalId), 50);
   }
+
+  // Auto-launch screensaver mode when ?autoscreensaver=1 is in the URL.
+  // This exists specifically so macOS screensaver wrappers like
+  // WebViewScreenSaver can point at a single URL and get fullscreen rotation
+  // with zero interaction. We wait a bit longer than the modal deep-link to
+  // let posters.json and images load.
+  if (params.get("autoscreensaver") === "1" && _screensaverEl?.hidden !== false) {
+    // Wait for data and render to settle before starting
+    setTimeout(() => {
+      if (STATE.posters && STATE.posters.length > 0) {
+        startScreensaver();
+      } else {
+        // Data still loading — retry once more after a longer delay
+        setTimeout(() => {
+          if (STATE.posters && STATE.posters.length > 0) startScreensaver();
+        }, 1500);
+      }
+    }, 400);
+  }
 }
 
 /**
