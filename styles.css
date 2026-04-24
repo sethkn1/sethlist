@@ -1806,6 +1806,30 @@ main {
   font-size: 12px;
   font-style: italic;
 }
+/* YouTube search link — a small triangle icon next to each song name.
+   Muted by default so it doesn't dominate the setlist; brightens on hover. */
+.song-yt-link {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0 5px;
+  font-size: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: color 120ms, background 120ms, border-color 120ms, transform 120ms;
+  /* Align the play-triangle glyph with the song text baseline */
+  transform: translateY(-1px);
+}
+.song-yt-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(217, 59, 43, 0.08);
+}
+.song-yt-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 .setlist-attrib {
   font-family: var(--font-mono);
   font-size: 10px;

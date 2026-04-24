@@ -323,6 +323,15 @@ function renderSetlistBlock(setlist, options = {}) {
     block.appendChild(el("div", { class: "setlist-tour" }, setlist.tour));
   }
 
+  // Derive the year from the event date (DD-MM-YYYY) — used in the YouTube
+  // search query to anchor results to roughly the right era. Helps when a
+  // band has been playing the same song for 30 years.
+  const yearStr = (() => {
+    const d = setlist.eventDate || "";
+    const m = d.match(/\d{4}$/);
+    return m ? m[0] : "";
+  })();
+
   let songNumber = 0;
   setlist.sets.forEach((s, setIdx) => {
     // Label the set header if it has one, or "Encore"
@@ -355,6 +364,28 @@ function renderSetlistBlock(setlist, options = {}) {
       if (notes.length) {
         li.appendChild(el("span", { class: "song-note" }, ` · ${notes.join(" · ")}`));
       }
+
+      // YouTube search link — skipped for tape intros (there's nothing to watch).
+      // Opens in a new tab with a pre-built query like:
+      //   "Tool Schism live 2024"
+      // YouTube's own search does the rest; no API, no data storage.
+      if (!song.tape && song.name && setlist.artist) {
+        const searchQuery = `${setlist.artist} ${song.name} live${yearStr ? " " + yearStr : ""}`;
+        const ytUrl = "https://www.youtube.com/results?search_query=" +
+          encodeURIComponent(searchQuery);
+        li.appendChild(el("a", {
+          class: "song-yt-link",
+          href: ytUrl,
+          target: "_blank",
+          rel: "noopener",
+          title: `Search YouTube for "${setlist.artist} ${song.name} live"`,
+          "aria-label": "Search YouTube for this song",
+          // Stop click propagation so if the setlist-song ever becomes clickable
+          // (unrelated handler), the YT link still opens cleanly.
+          on: { click: (e) => e.stopPropagation() }
+        }, "▶"));
+      }
+
       ol.appendChild(li);
     });
     block.appendChild(ol);
