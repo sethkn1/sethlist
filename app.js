@@ -1428,6 +1428,7 @@ function renderPosters() {
   const illustrator = params.get("illustrator") || "";  // poster artist (e.g., Don Pendleton)
   const type = params.get("type") || "";
   const autographed = params.get("autographed") === "1";
+  const framedOnly = params.get("framed") === "1";  // chip toggle: framed posters only
   const festivalOnly = params.get("festival") === "1";  // chip toggle: festival-related posters
   const notAttended = params.get("notAttended") === "1";
 
@@ -1574,6 +1575,7 @@ function renderPosters() {
     ? [...new Set(bandPosters.map(p => classifyType(p.type)).filter(Boolean))].sort()
     : allTypes;
   const bandHasAutographed = bandPosters.some(p => p.autographed);
+  const bandHasFramed = bandPosters.some(p => p.framed);
   const bandHasFestival = bandPosters.some(p => isFestivalPoster(p));
   const bandHasNotAttended = artist
     ? STATE.posters.filter(p => p.artist === artist).some(p => !p.attended)
@@ -1645,6 +1647,7 @@ function renderPosters() {
   };
 
   filterBar.appendChild(makeChip("Autographed", autographed, !bandHasAutographed, "autographed"));
+  filterBar.appendChild(makeChip("Framed", framedOnly, !bandHasFramed, "framed"));
   filterBar.appendChild(makeChip("Festival", festivalOnly, !bandHasFestival, "festival", {
     title: bandHasFestival
       ? "Show only posters from festival events (festival-wide posters and band posters from festival days)"
@@ -1655,7 +1658,7 @@ function renderPosters() {
   // Reset link: visible whenever any filter is active. Clears all filter
   // params at once and returns the user to the unfiltered Posters view.
   const anyFilterActive = artist || illustrator || type || autographed ||
-    festivalOnly || notAttended || q;
+    framedOnly || festivalOnly || notAttended || q;
   if (anyFilterActive) {
     filterBar.appendChild(el("button", {
       class: "filter-reset-link",
@@ -1680,6 +1683,9 @@ function renderPosters() {
       }
       if (autographed) {
         posters = posters.filter(v => v.autographed);
+      }
+      if (framedOnly) {
+        posters = posters.filter(v => v.framed);
       }
       if (illustrator) {
         posters = posters.filter(v => v.illustrator === illustrator);
