@@ -2522,6 +2522,17 @@ function renderStats() {
   });
   const uniqueArtists = uniqueArtistsMap;  // keep variable for length use below
 
+  // Unique headliners — distinct top-billed artists (excluding festivals,
+  // since "Festival" isn't a band). Smaller number than Unique bands; included
+  // as a sub-metric on the Unique Bands KPI.
+  const uniqueHeadliners = new Set();
+  past.forEach(c => {
+    headlinerAtConcert(c).forEach(name => {
+      const key = normalizeArtistKey(name);
+      if (key) uniqueHeadliners.add(key);
+    });
+  });
+
   const uniqueVenues = new Set(past.map(c => c.venue).filter(Boolean));
   const uniqueStates = new Set(past.map(c => c.state).filter(Boolean));
   const uniqueFestivals = new Set(past.map(c => c.festivalKey).filter(Boolean));
@@ -2536,24 +2547,130 @@ function renderStats() {
   const firstYear = Math.min(...past.map(c => c.year));
   const lastYear = Math.max(...past.map(c => c.year));
 
+  // Sub-metric values for cards that have them
+  const showsSolo = past.filter(c => !c.attendedWith || splitAttendedWith(c.attendedWith).length === 0).length;
+  const showsWithFriends = past.length - showsSolo;
+  const totalFestivalDays = past.filter(c => c.festivalKey).length;
+  const postersAttended = STATE.posters.filter(p => p.attended).length;
+  const postersNotAttended = STATE.posters.length - postersAttended;
+  const autographedCount = STATE.posters.filter(p => p.autographed).length;
+
+  // KPI cards. Each card may have sub-metrics (small lines below the unit)
+  // and an onClick handler that navigates to the relevant view.
   const grid = el("div", { class: "stats-grid" });
-  [
-    { label: "Shows attended", value: past.length, unit: "days logged" },
-    { label: "Festivals", value: uniqueFestivals.size, unit: "multi-day events" },
-    { label: "Unique bands", value: uniqueArtists.size, unit: "headliners + openers" },
-    { label: "Unique venues", value: uniqueVenues.size },
-    { label: "Unique cities", value: uniqueCities.size, unit: "across " + uniqueStates.size + " states" },
-    { label: "Posters", value: STATE.posters.length, unit: "collected" },
-    { label: "Autographed", value: STATE.posters.filter(p => p.autographed).length, unit: "posters" },
-    { label: "Years of live music", value: (lastYear - firstYear + 1), unit: `${firstYear} – ${lastYear}` },
-  ].forEach(s => {
-    grid.appendChild(el("div", { class: "stat-card" },
+  const kpis = [
+    {
+      label: "Shows attended",
+      value: past.length,
+      unit: "days logged",
+      submetrics: showsWithFriends > 0
+        ? [`${showsWithFriends} with friends · ${showsSolo} solo`]
+        : null,
+      onClick: () => { location.hash = "#/timeline"; }
+    },
+    {
+      label: "Festivals",
+      value: uniqueFestivals.size,
+      unit: "multi-day events",
+      submetrics: totalFestivalDays > 0
+        ? [`${totalFestivalDays} festival days total`]
+        : null,
+      onClick: () => openFestivalsListModal()
+    },
+    {
+      label: "Unique bands",
+      value: uniqueArtists.size,
+      unit: "headliners + openers",
+      submetrics: [`${uniqueHeadliners.size} unique headliners`],
+      onClick: () => openBandsHeatmapModal(artistCountByKey, canonicalDisplay, artistRole)
+    },
+    {
+      label: "Unique venues",
+      value: uniqueVenues.size,
+      onClick: () => {
+        // Stay on Stats page, set picker to Venues, scroll to that card
+        const [route, queryStr] = (location.hash || "#/stats").split("?");
+        const p = new URLSearchParams(queryStr || "");
+        p.delete("placesView");  // Venues is the default
+        const newHash = route + (p.toString() ? "?" + p.toString() : "");
+        location.hash = newHash;
+        scrollToPlaces();
+      }
+    },
+    {
+      label: "Unique cities",
+      value: uniqueCities.size,
+      unit: "across " + uniqueStates.size + " states",
+      onClick: () => {
+        const [route, queryStr] = (location.hash || "#/stats").split("?");
+        const p = new URLSearchParams(queryStr || "");
+        p.set("placesView", "cities");
+        const newHash = route + (p.toString() ? "?" + p.toString() : "");
+        location.hash = newHash;
+        scrollToPlaces();
+      }
+    },
+    {
+      label: "Posters",
+      value: STATE.posters.length,
+      unit: "collected",
+      submetrics: postersNotAttended > 0
+        ? [`${postersAttended} from attended shows · ${postersNotAttended} not attended`]
+        : null,
+      onClick: () => { location.hash = "#/posters"; }
+    },
+    {
+      label: "Autographed",
+      value: autographedCount,
+      unit: "posters",
+      onClick: () => { location.hash = "#/posters?autographed=1"; }
+    },
+    {
+      label: "Years of live music",
+      value: (lastYear - firstYear + 1),
+      unit: `${firstYear} – ${lastYear}`,
+      onClick: () => {
+        // Already on stats — scroll to the year chart
+        setTimeout(() => {
+          const yc = document.querySelector(".year-chart");
+          if (yc) yc.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 50);
+      }
+    },
+  ];
+  kpis.forEach(s => {
+    const cardChildren = [
       el("p", { class: "stat-label" }, s.label),
       el("p", { class: "stat-value" }, String(s.value)),
-      s.unit ? el("p", { class: "stat-unit" }, s.unit) : null
-    ));
+    ];
+    if (s.unit) cardChildren.push(el("p", { class: "stat-unit" }, s.unit));
+    if (s.submetrics && s.submetrics.length) {
+      s.submetrics.forEach(sm => {
+        cardChildren.push(el("p", { class: "stat-submetric" }, sm));
+      });
+    }
+    const card = el("div", {
+      class: "stat-card" + (s.onClick ? " stat-card-clickable" : ""),
+      title: s.onClick ? "Click for more" : null,
+      on: s.onClick ? { click: s.onClick } : {}
+    }, ...cardChildren);
+    grid.appendChild(card);
   });
   app.appendChild(grid);
+
+  // Helper: scroll to the Most-visited card. Used by Unique venues / cities clicks.
+  function scrollToPlaces() {
+    setTimeout(() => {
+      // Find the leaderboard with "Most-visited" header
+      const cards = document.querySelectorAll(".top-list");
+      for (const c of cards) {
+        if (c.querySelector("h3")?.textContent?.trim() === "Most-visited") {
+          c.scrollIntoView({ behavior: "smooth", block: "start" });
+          return;
+        }
+      }
+    }, 80);
+  }
 
   // Role filter for the Most-seen artists leaderboard. Reads from URL so
   // it persists across stat-page reloads. Values: "all" (default), "headliner", "opener".
@@ -2829,31 +2946,6 @@ function renderStats() {
       .sort((a, b) => b.count - a.count)
       .slice(0, 15);
 
-    if (topSongs.length > 0) {
-      const songList = el("div", { class: "top-list" },
-        el("h3", {}, "Most-heard songs (overall)"),
-        el("ol", {}, ...topSongs.map((s, i) =>
-          el("li", {
-            on: { click: () => {
-              // Jump to the Songs page, filtered to this song by this artist
-              location.hash = "#/songs?artist=" + encodeURIComponent(s.artist) +
-                              "&song=" + encodeURIComponent(s.song);
-            }},
-            style: "cursor:pointer;"
-          },
-            el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
-            el("span", { class: "name" },
-              el("strong", {}, s.song),
-              el("span", { class: "song-artist" }, ` — ${s.artist}`)
-            ),
-            el("span", { class: "count" }, `${s.count}×`)
-          )
-        ))
-      );
-      songList.style.marginTop = "16px";
-      app.appendChild(songList);
-    }
-
     // Top song per artist — for each artist we've heard 5+ songs from,
     // show their most-played song at our shows.
     const artistSongLeaders = Object.entries(songsByArtist)
@@ -2868,17 +2960,71 @@ function renderStats() {
           artistTotal: artistTotalSongs[normArt],
         };
       })
-      .filter(e => e.song && e.count > 1)  // drop cases where every song played only once
+      .filter(e => e.song && e.count > 1)
       .sort((a, b) => b.count - a.count)
       .slice(0, 12);
 
-    if (artistSongLeaders.length > 0) {
-      const artistSongList = el("div", { class: "top-list" },
-        el("h3", {}, "Top song per band"),
-        el("ol", {}, ...artistSongLeaders.map((e, i) =>
+    // Combined card with a picker that flips between the two views.
+    // Same pattern as Most-visited (Venues/Cities/States) and Most-seen bands
+    // (All/Headliners/Openers): one card, one picker, URL-persistent.
+    const songsView = (() => {
+      const v = (statsParams.get("songsView") || "").toLowerCase();
+      return v === "topPerBand".toLowerCase() ? "topPerBand" : "heard";
+    })();
+
+    if (topSongs.length > 0 || artistSongLeaders.length > 0) {
+      const songsPicker = el("select", {
+        class: "leaderboard-role-toggle",
+        title: "Switch between most-heard songs and top song per band",
+        on: { change: e => {
+          const next = e.target.value;
+          const [route, queryStr] = (location.hash || "#/stats").split("?");
+          const p = new URLSearchParams(queryStr || "");
+          if (next === "heard") p.delete("songsView");
+          else p.set("songsView", next);
+          const newHash = route + (p.toString() ? "?" + p.toString() : "");
+          history.replaceState(null, "", newHash);
+          renderStats();
+        }}
+      });
+      [
+        ["heard", "Most-heard songs"],
+        ["topPerBand", "Top song per band"]
+      ].forEach(([val, label]) => {
+        const o = el("option", { value: val }, label);
+        if (val === songsView) o.selected = true;
+        songsPicker.appendChild(o);
+      });
+
+      const songsCard = el("div", { class: "top-list" },
+        el("div", { class: "leaderboard-header" },
+          el("h3", {}, "Songs"),
+          songsPicker
+        )
+      );
+
+      // Render the active view's list
+      if (songsView === "heard" && topSongs.length > 0) {
+        songsCard.appendChild(el("ol", {}, ...topSongs.map((s, i) =>
           el("li", {
             on: { click: () => {
-              // Jump to this artist's drill-down in the Songs page
+              location.hash = "#/songs?artist=" + encodeURIComponent(s.artist) +
+                              "&song=" + encodeURIComponent(s.song);
+            }},
+            style: "cursor:pointer;"
+          },
+            el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
+            el("span", { class: "name" },
+              el("strong", {}, s.song),
+              el("span", { class: "song-artist" }, ` — ${s.artist}`)
+            ),
+            el("span", { class: "count" }, `${s.count}×`)
+          )
+        )));
+      } else if (songsView === "topPerBand" && artistSongLeaders.length > 0) {
+        songsCard.appendChild(el("ol", {}, ...artistSongLeaders.map((e, i) =>
+          el("li", {
+            on: { click: () => {
               location.hash = "#/songs?artist=" + encodeURIComponent(e.artist);
             }},
             style: "cursor:pointer;"
@@ -2890,22 +3036,34 @@ function renderStats() {
             ),
             el("span", { class: "count" }, `${e.count}×`)
           )
-        ))
-      );
-      artistSongList.style.marginTop = "16px";
-      app.appendChild(artistSongList);
+        )));
+      }
+      songsCard.style.marginTop = "16px";
+      app.appendChild(songsCard);
     }
   }
 
-  // "Show buddies" — people I've attended shows with, by count.
-  // Each entry expands to show the top artists we saw together.
+  // "Show buddies" — people I've attended shows with.
+  // Two views, switchable via a picker:
+  //   - Individual (default): one row per person, ranked by show count.
+  //     Includes top-3 bands seen together (sub-line).
+  //   - Groups: one row per *exact* attendee combination (2+ people who
+  //     went together on the same date). A show with Bill+Josh+Mike contributes
+  //     ONLY to the "Bill, Josh, Mike" group, not to "Bill+Josh" or "Josh+Mike."
+  //     Filters out solo shows (no attendee names) since those aren't groups.
+  // URL param: ?buddiesView=individual|groups
+  const buddiesView = (() => {
+    const v = (statsParams.get("buddiesView") || "").toLowerCase();
+    return v === "groups" ? "groups" : "individual";
+  })();
+
+  // Individual buddies + co-seen artists (existing logic)
   const buddyCount = {};
   const buddyArtists = {};  // name -> { artist-norm-key -> { display, count } }
   past.forEach(c => {
     const attendees = splitAttendedWith(c.attendedWith);
     attendees.forEach(n => {
       buddyCount[n] = (buddyCount[n] || 0) + 1;
-      // For each artist at this concert, tally for this buddy
       allArtistsAtConcert(c).forEach(artistName => {
         const akey = normalizeArtistKey(artistName);
         if (!akey) return;
@@ -2917,14 +3075,60 @@ function renderStats() {
       });
     });
   });
-  const topBuddies = Object.entries(buddyCount)
+  const topBuddiesIndividual = Object.entries(buddyCount)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 15);
-  if (topBuddies.length > 0) {
+
+  // Exact groups: keyed by sorted-and-joined attendee names. A show with
+  // Bill+Josh on 2024-01-20 contributes to key "Bill||Josh"; a separate show
+  // with Bill+Josh+Mike contributes to key "Bill||Josh||Mike" — different group.
+  // Solo shows (single attendee) are excluded since the user asked for "groups."
+  const groupCount = {};
+  past.forEach(c => {
+    const attendees = splitAttendedWith(c.attendedWith);
+    if (attendees.length < 2) return;  // not a group
+    const key = [...attendees].sort().join("||");
+    groupCount[key] = (groupCount[key] || 0) + 1;
+  });
+  const topGroups = Object.entries(groupCount)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 15);
+
+  // Render whichever view is active
+  const hasAnyBuddies = topBuddiesIndividual.length > 0 || topGroups.length > 0;
+  if (hasAnyBuddies) {
+    const buddiesPicker = el("select", {
+      class: "leaderboard-role-toggle",
+      title: "Switch between individual buddies and exact groups",
+      on: { change: e => {
+        const next = e.target.value;
+        const [route, queryStr] = (location.hash || "#/stats").split("?");
+        const p = new URLSearchParams(queryStr || "");
+        if (next === "individual") p.delete("buddiesView");
+        else p.set("buddiesView", next);
+        const newHash = route + (p.toString() ? "?" + p.toString() : "");
+        history.replaceState(null, "", newHash);
+        renderStats();
+      }}
+    });
+    [
+      ["individual", "Individual"],
+      ["groups", "Groups"]
+    ].forEach(([val, label]) => {
+      const o = el("option", { value: val }, label);
+      if (val === buddiesView) o.selected = true;
+      buddiesPicker.appendChild(o);
+    });
+
     const buddyList = el("div", { class: "top-list" },
-      el("h3", {}, "Show buddies"),
-      el("ol", {}, ...topBuddies.map(([name, count], i) => {
-        // Top 3 artists seen with this person
+      el("div", { class: "leaderboard-header" },
+        el("h3", {}, "Show buddies"),
+        buddiesPicker
+      )
+    );
+
+    if (buddiesView === "individual") {
+      buddyList.appendChild(el("ol", {}, ...topBuddiesIndividual.map(([name, count], i) => {
         const artistEntries = Object.values(buddyArtists[name] || {})
           .sort((a, b) => b.count - a.count)
           .slice(0, 3);
@@ -2949,8 +3153,35 @@ function renderStats() {
               : null
           )
         );
-      }))
-    );
+      })));
+    } else {
+      // Groups view
+      if (topGroups.length === 0) {
+        buddyList.appendChild(el("p", { class: "heatmap-desc" },
+          "No multi-person groups yet — add attendee names to your concerts to see this view."));
+      } else {
+        buddyList.appendChild(el("ol", {}, ...topGroups.map(([key, count], i) => {
+          const names = key.split("||");
+          // Build a comma-separated display label, e.g. "Bill, Josh, Mike"
+          const displayLabel = names.join(", ");
+          // Click goes to Timeline filtered to ALL named members (multi-select).
+          // The withPerson param supports multiple values — we encode each separately.
+          const params = new URLSearchParams();
+          names.forEach(n => params.append("withPerson", n));
+          return el("li", {
+            on: { click: () => {
+              location.hash = "#/timeline?" + params.toString();
+            }},
+            style: "cursor:pointer;",
+            title: `Click to see all shows with ${displayLabel}`
+          },
+            el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
+            el("span", { class: "name" }, displayLabel),
+            el("span", { class: "count" }, `${count} show${count === 1 ? "" : "s"}`)
+          );
+        })));
+      }
+    }
     buddyList.style.marginTop = "24px";
     app.appendChild(buddyList);
   }
@@ -3770,6 +4001,82 @@ function concertsFeaturingArtist(artistName) {
     return allArtistsAtConcert(c)
       .some(name => normalizeArtistKey(name) === targetKey);
   }).sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+}
+
+/**
+ * Open a small modal listing all festivals the user has attended. Each
+ * festival entry shows the name, year span, and total day count. Clicking
+ * a festival navigates to the Timeline filtered to that festival.
+ */
+function openFestivalsListModal() {
+  // Group concerts by festivalKey to find each festival's day range
+  const byFest = {};
+  STATE.concerts.forEach(c => {
+    if (!c.festivalKey) return;
+    if (!byFest[c.festivalKey]) {
+      byFest[c.festivalKey] = {
+        key: c.festivalKey,
+        name: c.festivalName || c.festivalKey,
+        dates: [],
+        totalDays: 0,
+      };
+    }
+    byFest[c.festivalKey].dates.push(c.date);
+    byFest[c.festivalKey].totalDays++;
+  });
+  const festivals = Object.values(byFest)
+    // Sort chronologically (earliest first) — matches Timeline filter order
+    .sort((a, b) => {
+      const aDate = a.dates.length ? a.dates.sort()[0] : "";
+      const bDate = b.dates.length ? b.dates.sort()[0] : "";
+      return aDate.localeCompare(bDate);
+    });
+
+  MODAL_STATE.kind = "festivalsList";
+  MODAL_STATE.id = null;
+  MODAL_STATE.list = null;
+  MODAL_STATE.index = -1;
+
+  modalBody.innerHTML = "";
+  modalBody.appendChild(el("div", { class: "modal-eyebrow artist-eyebrow" }, "FESTIVALS"));
+  modalBody.appendChild(el("h2", { class: "modal-title" }, "Festivals attended"));
+  modalBody.appendChild(el("div", { class: "modal-meta" },
+    `${festivals.length} festival${festivals.length === 1 ? "" : "s"}, ${festivals.reduce((s, f) => s + f.totalDays, 0)} festival days total`));
+
+  if (festivals.length === 0) {
+    modalBody.appendChild(el("p", { class: "artist-strip-desc" }, "No festivals logged yet."));
+    openModal();
+    return;
+  }
+
+  const list = el("div", { class: "artist-show-list" });
+  festivals.forEach(f => {
+    const dates = [...f.dates].sort();
+    const earliestDate = dates[0];
+    const latestDate = dates[dates.length - 1];
+    const dateRange = earliestDate === latestDate
+      ? formatDate(earliestDate)
+      : `${formatDate(earliestDate)} → ${formatDate(latestDate)}`;
+    list.appendChild(el("div", {
+      class: "artist-show-item",
+      on: { click: () => {
+        closeModal();
+        setTimeout(() => {
+          location.hash = "#/timeline?festival=" + encodeURIComponent(f.key);
+        }, 50);
+      }}
+    },
+      el("div", { class: "artist-show-date" }, dateRange),
+      el("div", { class: "artist-show-meta" },
+        el("span", { class: "artist-show-venue" }, f.name),
+        el("span", { class: "artist-show-role" },
+          `${f.totalDays} day${f.totalDays === 1 ? "" : "s"} attended`)
+      )
+    ));
+  });
+  modalBody.appendChild(list);
+
+  openModal();
 }
 
 /**

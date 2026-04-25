@@ -2545,10 +2545,10 @@ main {
 }
 .heatmap-row {
   display: grid;
-  grid-template-columns: 50px repeat(12, minmax(32px, 1fr));
+  grid-template-columns: 44px repeat(12, minmax(24px, 1fr));
   gap: 2px;
   align-items: stretch;
-  min-width: 480px;
+  min-width: 380px;
 }
 .heatmap-head .heatmap-cell {
   background: transparent;
@@ -2560,12 +2560,13 @@ main {
   letter-spacing: 0.15em;
   padding: 2px 0;
   text-align: center;
+  min-height: 0;  /* don't stretch the header row */
 }
 .heatmap-year-label {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 10px;
   color: var(--paper-dim);
-  padding: 6px 8px;
+  padding: 0 6px;
   display: flex;
   align-items: center;
 }
@@ -2573,16 +2574,14 @@ main {
   /* uses .heatmap-cell sizing but .heatmap-head strips visual styling */
 }
 .heatmap-cell {
-  aspect-ratio: 1/1;
+  /* Compressed from previous 32px square. Now ~16px tall (about half the
+     original real estate) — count number lives in the tooltip on hover, not
+     inside the cell. Year-row at-a-glance is what matters; precise counts
+     are one hover away. */
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: transparent;  /* count only visible on has-shows */
-  min-height: 32px;
+  min-height: 16px;
+  /* No aspect-ratio: cells stretch to column width, height is fixed */
 }
 .heatmap-cell.has-shows {
   /* Blend accent color with ink, mixed by --intensity (0..1).
@@ -2594,13 +2593,14 @@ main {
   transition: transform 120ms;
 }
 .heatmap-cell.has-shows:hover {
-  transform: scale(1.12);
+  transform: scale(1.25);
   border-color: var(--paper);
   z-index: 2;
 }
 .heatmap-count {
-  font-weight: 700;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  /* Hidden in compressed view — too small to read inline. Tooltip carries
+     the precise count instead. Kept in the DOM for accessibility/debugging. */
+  display: none;
 }
 
 /* ============================================================
@@ -3182,4 +3182,37 @@ main {
   margin-top: 20px;
   /* Slightly larger gap than the inline version since we have room */
   gap: 10px;
+}
+
+/* ============================================================
+   STAT CARD — CLICKABLE STATE + SUB-METRICS
+   When a KPI card is clickable, hover gives an accent border and
+   subtle lift to signal interactivity. Sub-metrics are small lines
+   below the unit label, intended for secondary numbers (e.g.
+   "62 unique headliners" under the Unique Bands main number).
+   ============================================================ */
+.stat-card.stat-card-clickable {
+  cursor: pointer;
+  transition: border-color 120ms, transform 120ms, box-shadow 120ms;
+}
+.stat-card.stat-card-clickable:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.stat-card.stat-card-clickable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.stat-card .stat-submetric {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--paper-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 6px 0 0 0;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  /* Slightly indented from the main unit to read as supplementary */
 }
