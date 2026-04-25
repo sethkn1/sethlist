@@ -9,21 +9,25 @@
 <!-- Canonical URL (single-page site; the one real canonical entry is root) -->
 <link rel="canonical" href="https://sethlist.live/" />
 
-<!-- Open Graph — for sharing previews in iMessage, Slack, LinkedIn, Facebook, etc. -->
+<!-- Open Graph — for sharing previews in iMessage, Slack, LinkedIn, Facebook, etc.
+     Note: og:image must be a raster format (PNG/JPG). Facebook & most other
+     platforms don't support SVG and will report "Bad Response Code" if served one. -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Sethlist" />
 <meta property="og:title" content="Sethlist — Concert & Poster Journey" />
 <meta property="og:description" content="A lifetime of live music — concerts, venues, setlists, and a poster collection from the era of digital ticket stubs." />
 <meta property="og:url" content="https://sethlist.live/" />
-<meta property="og:image" content="https://sethlist.live/og-image.svg" />
+<meta property="og:image" content="https://sethlist.live/og-image.png" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Sethlist — A SethTime of live music" />
 
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Sethlist — Concert & Poster Journey" />
 <meta name="twitter:description" content="A lifetime of live music — concerts, venues, setlists, and a poster collection." />
-<meta name="twitter:image" content="https://sethlist.live/og-image.svg" />
+<meta name="twitter:image" content="https://sethlist.live/og-image.png" />
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
@@ -59,6 +63,7 @@
       <a href="#/posters" data-view="posters">Posters</a>
       <a href="#/songs" data-view="songs">Songs</a>
       <a href="#/stats" data-view="stats">Stats</a>
+      <a href="#/about" data-view="about">About</a>
     </nav>
   </div>
 </header>

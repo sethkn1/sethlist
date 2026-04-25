@@ -152,6 +152,7 @@ const ROUTES = {
   "#/posters": renderPosters,
   "#/songs": renderSongs,
   "#/stats": renderStats,
+  "#/about": renderAbout,
 };
 
 function router() {
@@ -3052,6 +3053,179 @@ function renderStats() {
   });
   yearChart.appendChild(bars);
   app.appendChild(yearChart);
+}
+
+/* ============================================================
+   ABOUT VIEW
+   Static-content page with Seth's bio, story, and contact info.
+   The "What this site is" paragraph pulls live counts from STATE
+   so the numbers stay accurate as new shows/posters are added.
+   Photo gallery is stubbed via a constant array; populate the
+   ABOUT_PHOTOS list with image paths to enable the gallery.
+   ============================================================ */
+
+// Photos for the About page. Each entry: { src, alt, caption (optional) }.
+// Keep this list small (4-6 items recommended); the layout adapts to length.
+// Drop image files into images/about/ and reference them here.
+const ABOUT_PHOTOS = [
+  // Example shape — replace with actual photos when ready:
+  // { src: "images/about/photo-1.jpg", alt: "At Rock on the Range 2018", caption: "Rock on the Range, 2018" },
+];
+
+function renderAbout() {
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+
+  // Compute live stats so the bio's "What this site is" sentence stays current.
+  // Uses the past-only concerts (already filtered to exclude future-dated shows
+  // at load time) and the full poster collection.
+  const concertCount = STATE.concerts ? STATE.concerts.length : 0;
+  const posterCount = STATE.posters ? STATE.posters.length : 0;
+  const earliestYear = (() => {
+    if (!STATE.concerts || STATE.concerts.length === 0) return null;
+    const years = STATE.concerts.map(c => c.year).filter(Boolean);
+    return years.length ? Math.min(...years) : null;
+  })();
+  const sinceYearText = earliestYear ? `since ${earliestYear}` : "across the years";
+
+  app.appendChild(el("div", { class: "view-header" },
+    el("h2", { class: "view-title" },
+      "About ",
+      el("span", { class: "accent" }, "Seth")
+    ),
+    el("p", { class: "view-sub" }, "The story behind the archive.")
+  ));
+
+  const wrap = el("div", { class: "about-page" });
+
+  // Photo gallery (only renders if photos are configured)
+  if (ABOUT_PHOTOS.length > 0) {
+    const gallery = el("div", { class: "about-gallery" });
+    ABOUT_PHOTOS.forEach(photo => {
+      const fig = el("figure", { class: "about-photo" });
+      const img = el("img", {
+        src: photo.src,
+        alt: photo.alt || "",
+        loading: "lazy",
+        on: {
+          // If the image fails to load, hide the figure rather than show a broken icon
+          error: function() { fig.style.display = "none"; }
+        }
+      });
+      fig.appendChild(img);
+      if (photo.caption) {
+        fig.appendChild(el("figcaption", {}, photo.caption));
+      }
+      gallery.appendChild(fig);
+    });
+    wrap.appendChild(gallery);
+  }
+
+  // Lead paragraph
+  wrap.appendChild(el("p", { class: "about-lead" },
+    "I'm Seth from Raleigh, NC. This site is my live music journey, made physical. ",
+    "A passion project years in the making, focused on the live shows I've attended ",
+    "and the poster collection I've built."
+  ));
+
+  // Section: Why this exists
+  wrap.appendChild(el("h3", { class: "about-section" }, "Why this exists"));
+  wrap.appendChild(el("p", {},
+    "I lost a parent when I was young, and that loss has shaped everything since. ",
+    "It made me want to live deliberately. To say yes to experiences and not put things off."
+  ));
+  wrap.appendChild(el("p", {},
+    "Music was the thing that came with me through all of it. While other kids were ",
+    "reading books, I was listening to albums front-to-back, over and over. Long car ",
+    "rides, doing homework, working through whatever I was working through, music was ",
+    "always running. The 90s rock scene (what people now affectionately call \"dad rock\") ",
+    "hit me hard and never let go. I played baritone horn from middle school through ",
+    "my first year in college, but the bigger thing was just listening. Albums were the ",
+    "language I was fluent in."
+  ));
+
+  // Section: The shows that lit the fuse
+  wrap.appendChild(el("h3", { class: "about-section" }, "The shows that lit the fuse"));
+  wrap.appendChild(el("p", {},
+    "In college I joined my local station, 90.7 WXIN in Providence, RI. The station ",
+    "had a relationship with Lupos, the local music venue, and we'd get tickets to shows. ",
+    "I went to a lot of them. Some I remember vividly. Others, the details are a bit ",
+    "more vague."
+  ));
+  wrap.appendChild(el("p", {},
+    "A few years later, the spark was a Faith No More show in New York, for their ",
+    "reunion tour. I travelled to NY with three friends who loved the band as much as ",
+    "I did, and something clicked. After that, I'd find ways to fit shows in around ",
+    "raising a family and a career. Work travel became opportunity travel: a meeting ",
+    "in another city was a chance to catch a show I couldn't see at home with friends."
+  ));
+  wrap.appendChild(el("p", {},
+    "Then came Rock on the Range, my first festival. Camping with friends, three days ",
+    "of bands I loved back-to-back, perfect weather, the whole thing. I came home ",
+    "knowing I needed more of that in my life. Festivals get harder to pull off as you ",
+    "get older, but every one I make it to is a deliberate choice to keep showing up ",
+    "for the things that matter."
+  ));
+
+  // Section: Why I keep going
+  wrap.appendChild(el("h3", { class: "about-section" }, "Why I keep going"));
+  wrap.appendChild(el("p", {},
+    "There are artists I'll never get to see live. Chester Bennington. Tom Petty. ",
+    "Chris Cornell. Kurt Cobain. Vinny Paul. I think about that list a lot."
+  ));
+  wrap.appendChild(el("p", {},
+    "So when an artist I love comes through town or is in a decent travelable location, ",
+    "I go. When a festival announces a lineup that hits, I'm going to try to get there. ",
+    "The list of who I haven't seen yet is longer than the list of who I have, and ",
+    "that's the whole point."
+  ));
+
+  // Section: What this site is — with live counts
+  wrap.appendChild(el("h3", { class: "about-section" }, "What this site is"));
+  wrap.appendChild(el("p", {},
+    "Sethlist is an archive of every show I've been to: ",
+    el("strong", {}, `${concertCount} concerts ${sinceYearText}`),
+    ", plus ",
+    el("strong", {}, `${posterCount} posters`),
+    " from those shows. Five views: timeline, map, posters, setlists, stats. All of ",
+    "it is from my own data, none of it is generic."
+  ));
+  wrap.appendChild(el("p", {},
+    "The poster collection started during COVID lockdown. With no shows to attend, ",
+    "I started looking back at what posters existed for the shows I'd already been to. ",
+    "Could I track them down? It became a project: physical keepsakes for every show ",
+    "I'd been to, then every show going forward. Some are signed. Some are limited ",
+    "editions. Some I'm still hunting for."
+  ));
+
+  // Section: How this was built
+  wrap.appendChild(el("h3", { class: "about-section" }, "A note on how this was built"));
+  wrap.appendChild(el("p", {},
+    "I'm not an engineer. I'm a SaaS CX leader who knows enough about software to be ",
+    "dangerous. But I wanted to see what was possible when someone with a clear vision ",
+    "and patience for iteration paired up with the right AI tools."
+  ));
+  wrap.appendChild(el("p", {},
+    "This entire site, from data pipeline to interactive heatmap to that scrolling ",
+    "poster marquee at the top of the Posters page, was built in collaboration with ",
+    "Claude and Gemini. It's bespoke, tailored to me, and not really meant to be ",
+    "replicated. But it's a small example of what one person with an idea can now make real."
+  ));
+
+  // Section: Get in touch
+  wrap.appendChild(el("h3", { class: "about-section" }, "Get in touch"));
+  wrap.appendChild(el("p", {},
+    "Have we seen a show at the same time? Are you an artist whose poster I have, ",
+    "a venue I've been to, a festival promoter, or someone who just wants to talk about ",
+    "live music? ",
+    el("a", { class: "accent-link", href: "mailto:seth@sethlist.live" }, "seth@sethlist.live"),
+    ". I read everything."
+  ));
+  wrap.appendChild(el("p", {},
+    "If you're going to a show and want company, even better."
+  ));
+
+  app.appendChild(wrap);
 }
 
 /* ============================================================
