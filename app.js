@@ -2587,24 +2587,16 @@ function renderStats() {
     {
       label: "Unique venues",
       value: uniqueVenues.size,
+      submetrics: [
+        `${uniqueCities.size} unique cities · across ${uniqueStates.size} states`
+      ],
       onClick: () => {
-        // Stay on Stats page, set picker to Venues, scroll to that card
+        // Stay on Stats page, set picker to Venues, scroll to that card.
+        // The sub-line lists cities and states for context; if the user wants
+        // to see those leaderboards, they can switch the picker themselves.
         const [route, queryStr] = (location.hash || "#/stats").split("?");
         const p = new URLSearchParams(queryStr || "");
         p.delete("placesView");  // Venues is the default
-        const newHash = route + (p.toString() ? "?" + p.toString() : "");
-        location.hash = newHash;
-        scrollToPlaces();
-      }
-    },
-    {
-      label: "Unique cities",
-      value: uniqueCities.size,
-      unit: "across " + uniqueStates.size + " states",
-      onClick: () => {
-        const [route, queryStr] = (location.hash || "#/stats").split("?");
-        const p = new URLSearchParams(queryStr || "");
-        p.set("placesView", "cities");
         const newHash = route + (p.toString() ? "?" + p.toString() : "");
         location.hash = newHash;
         scrollToPlaces();
@@ -2615,7 +2607,7 @@ function renderStats() {
       value: STATE.posters.length,
       unit: "collected",
       submetrics: postersNotAttended > 0
-        ? [`${postersAttended} from attended shows · ${postersNotAttended} not attended`]
+        ? [`${postersAttended} attended posters · ${postersNotAttended} unattended posters`]
         : null,
       onClick: () => { location.hash = "#/posters"; }
     },
@@ -2797,6 +2789,11 @@ function renderStats() {
     .filter(([, n]) => n > 1)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 12);
+  // Full venue list (no top-12 cap) for the heatmap modal — keep "2+ visits"
+  // filter so we don't drown the heatmap in single-show venues.
+  const allVenues = Object.entries(venueCount)
+    .filter(([, n]) => n > 1)
+    .sort((a, b) => b[1] - a[1]);
 
   // Cities: from the cityKey/cityLabel helpers defined above for KPI counts.
   const placeCityCount = {};
@@ -2811,6 +2808,9 @@ function renderStats() {
     .filter(([, n]) => n > 1)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 12);
+  const allCities = Object.entries(placeCityCount)
+    .filter(([, n]) => n > 1)
+    .sort((a, b) => b[1] - a[1]);
 
   // States: simple state-code rollup. Friendly label uses STATE.stateNames
   // so "NC" displays as "North Carolina".
@@ -2876,9 +2876,47 @@ function renderStats() {
     placesPicker.appendChild(o);
   });
 
+  // Build the FULL list for the heatmap modal (not capped at 12).
+  // Each entry is [label, count, onClick] — same shape as placesData.
+  const placesDataFull = (() => {
+    if (placesView === "cities") {
+      return allCities.map(([key, count]) => {
+        const label = placeCityDisplay[key] || key;
+        return [label, count, () => {
+          const cityName = label.split(",")[0].trim();
+          location.hash = "#/timeline?q=" + encodeURIComponent(cityName);
+        }];
+      });
+    }
+    // venues (states doesn't support heatmap)
+    return allVenues.map(([name, count]) => {
+      return [name, count, () => {
+        location.hash = "#/timeline?venue=" + encodeURIComponent(name.split(" — ")[0]);
+      }];
+    });
+  })();
+
+  // Title is clickable when in Venues or Cities view — opens a heatmap modal
+  // showing all entries sized by visit count. States view skips the modal
+  // because with only ~13 states (and one big outlier), a heatmap is overkill;
+  // the simple list is enough on its own.
+  const supportsHeatmap = placesView === "venues" || placesView === "cities";
+  const placesHeader = supportsHeatmap
+    ? el("h3", { class: "leaderboard-title-clickable" },
+        el("button", {
+          class: "leaderboard-title-btn",
+          title: `Open the ${placesView} heatmap`,
+          on: { click: () => openPlacesHeatmapModal(placesView, placesDataFull) }
+        },
+          "Most-visited ",
+          el("span", { class: "leaderboard-title-icon" }, "▦")
+        )
+      )
+    : el("h3", {}, "Most-visited");
+
   const venueList = el("div", { class: "top-list" },
     el("div", { class: "leaderboard-header" },
-      el("h3", {}, "Most-visited"),
+      placesHeader,
       placesPicker
     ),
     el("ol", {}, ...placesData.map(([label, count, onClick], i) =>
@@ -2927,8 +2965,12 @@ function renderStats() {
   const totalUniqueSongs = Object.keys(songTotalCount).length;
   const totalPerformances = performances.length;
 
-  if (totalPerformances > 0) {
-    // Intro/meta KPIs specific to setlist data
+  // Songs section: rendered below Show buddies (per user preference).
+  // We compute the data here but defer DOM append until after the buddies block.
+  // Click a song row → opens Song Insights modal showing every time you heard it.
+  const renderSongsSection = () => {
+    if (totalPerformances === 0) return;
+
     const songStatsIntro = el("div", { class: "song-stats-intro" },
       el("h3", { style: "margin-bottom:8px;" }, "Songs heard live"),
       el("p", { class: "song-stats-note" },
@@ -2940,14 +2982,11 @@ function renderStats() {
     songStatsIntro.style.marginTop = "32px";
     app.appendChild(songStatsIntro);
 
-    // Overall top songs (limit 15)
     const topSongs = Object.values(songTotalCount)
       .filter(s => s.count > 1)
       .sort((a, b) => b.count - a.count)
       .slice(0, 15);
 
-    // Top song per artist — for each artist we've heard 5+ songs from,
-    // show their most-played song at our shows.
     const artistSongLeaders = Object.entries(songsByArtist)
       .filter(([normArt, songs]) => artistTotalSongs[normArt] >= 5)
       .map(([normArt, songs]) => {
@@ -2964,84 +3003,82 @@ function renderStats() {
       .sort((a, b) => b.count - a.count)
       .slice(0, 12);
 
-    // Combined card with a picker that flips between the two views.
-    // Same pattern as Most-visited (Venues/Cities/States) and Most-seen bands
-    // (All/Headliners/Openers): one card, one picker, URL-persistent.
     const songsView = (() => {
       const v = (statsParams.get("songsView") || "").toLowerCase();
       return v === "topPerBand".toLowerCase() ? "topPerBand" : "heard";
     })();
 
-    if (topSongs.length > 0 || artistSongLeaders.length > 0) {
-      const songsPicker = el("select", {
-        class: "leaderboard-role-toggle",
-        title: "Switch between most-heard songs and top song per band",
-        on: { change: e => {
-          const next = e.target.value;
-          const [route, queryStr] = (location.hash || "#/stats").split("?");
-          const p = new URLSearchParams(queryStr || "");
-          if (next === "heard") p.delete("songsView");
-          else p.set("songsView", next);
-          const newHash = route + (p.toString() ? "?" + p.toString() : "");
-          history.replaceState(null, "", newHash);
-          renderStats();
-        }}
-      });
-      [
-        ["heard", "Most-heard songs"],
-        ["topPerBand", "Top song per band"]
-      ].forEach(([val, label]) => {
-        const o = el("option", { value: val }, label);
-        if (val === songsView) o.selected = true;
-        songsPicker.appendChild(o);
-      });
+    if (topSongs.length === 0 && artistSongLeaders.length === 0) return;
 
-      const songsCard = el("div", { class: "top-list" },
-        el("div", { class: "leaderboard-header" },
-          el("h3", {}, "Songs"),
-          songsPicker
+    const songsPicker = el("select", {
+      class: "leaderboard-role-toggle",
+      title: "Switch between most-heard songs and top song per band",
+      on: { change: e => {
+        const next = e.target.value;
+        const [route, queryStr] = (location.hash || "#/stats").split("?");
+        const p = new URLSearchParams(queryStr || "");
+        if (next === "heard") p.delete("songsView");
+        else p.set("songsView", next);
+        const newHash = route + (p.toString() ? "?" + p.toString() : "");
+        history.replaceState(null, "", newHash);
+        renderStats();
+      }}
+    });
+    [
+      ["heard", "Most-heard songs"],
+      ["topPerBand", "Top song per band"]
+    ].forEach(([val, label]) => {
+      const o = el("option", { value: val }, label);
+      if (val === songsView) o.selected = true;
+      songsPicker.appendChild(o);
+    });
+
+    const songsCard = el("div", { class: "top-list" },
+      el("div", { class: "leaderboard-header" },
+        el("h3", {}, "Songs"),
+        songsPicker
+      )
+    );
+
+    // Most-heard view: rows click → Song Insights modal showing every play.
+    // Top-per-band view: rows click → Songs page filtered to that artist
+    // (preserves existing behavior; the song is just informational here).
+    if (songsView === "heard" && topSongs.length > 0) {
+      songsCard.appendChild(el("ol", {}, ...topSongs.map((s, i) =>
+        el("li", {
+          on: { click: () => openSongInsightsModal(s.artist, s.song) },
+          style: "cursor:pointer;",
+          title: `Click to see every time you heard "${s.song}"`
+        },
+          el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
+          el("span", { class: "name" },
+            el("strong", {}, s.song),
+            el("span", { class: "song-artist" }, ` — ${s.artist}`)
+          ),
+          el("span", { class: "count" }, `${s.count}×`)
         )
-      );
-
-      // Render the active view's list
-      if (songsView === "heard" && topSongs.length > 0) {
-        songsCard.appendChild(el("ol", {}, ...topSongs.map((s, i) =>
-          el("li", {
-            on: { click: () => {
-              location.hash = "#/songs?artist=" + encodeURIComponent(s.artist) +
-                              "&song=" + encodeURIComponent(s.song);
-            }},
-            style: "cursor:pointer;"
-          },
-            el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
-            el("span", { class: "name" },
-              el("strong", {}, s.song),
-              el("span", { class: "song-artist" }, ` — ${s.artist}`)
-            ),
-            el("span", { class: "count" }, `${s.count}×`)
-          )
-        )));
-      } else if (songsView === "topPerBand" && artistSongLeaders.length > 0) {
-        songsCard.appendChild(el("ol", {}, ...artistSongLeaders.map((e, i) =>
-          el("li", {
-            on: { click: () => {
-              location.hash = "#/songs?artist=" + encodeURIComponent(e.artist);
-            }},
-            style: "cursor:pointer;"
-          },
-            el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
-            el("span", { class: "name" },
-              el("strong", {}, e.artist),
-              el("span", { class: "song-artist" }, ` — ${e.song}`)
-            ),
-            el("span", { class: "count" }, `${e.count}×`)
-          )
-        )));
-      }
-      songsCard.style.marginTop = "16px";
-      app.appendChild(songsCard);
+      )));
+    } else if (songsView === "topPerBand" && artistSongLeaders.length > 0) {
+      songsCard.appendChild(el("ol", {}, ...artistSongLeaders.map((e, i) =>
+        el("li", {
+          on: { click: () => {
+            location.hash = "#/songs?artist=" + encodeURIComponent(e.artist);
+          }},
+          style: "cursor:pointer;"
+        },
+          el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
+          el("span", { class: "name" },
+            el("strong", {}, e.artist),
+            el("span", { class: "song-artist" }, ` — ${e.song}`)
+          ),
+          el("span", { class: "count" }, `${e.count}×`)
+        )
+      )));
     }
-  }
+    songsCard.style.marginTop = "16px";
+    app.appendChild(songsCard);
+  };
+
 
   // "Show buddies" — people I've attended shows with.
   // Two views, switchable via a picker:
@@ -3083,12 +3120,24 @@ function renderStats() {
   // Bill+Josh on 2024-01-20 contributes to key "Bill||Josh"; a separate show
   // with Bill+Josh+Mike contributes to key "Bill||Josh||Mike" — different group.
   // Solo shows (single attendee) are excluded since the user asked for "groups."
+  // Track per-group band counts so we can show a "top bands seen with this group"
+  // sub-line, mirroring the individual buddies view's behavior.
   const groupCount = {};
+  const groupArtists = {};  // group-key -> { artist-norm-key -> { display, count } }
   past.forEach(c => {
     const attendees = splitAttendedWith(c.attendedWith);
     if (attendees.length < 2) return;  // not a group
     const key = [...attendees].sort().join("||");
     groupCount[key] = (groupCount[key] || 0) + 1;
+    allArtistsAtConcert(c).forEach(artistName => {
+      const akey = normalizeArtistKey(artistName);
+      if (!akey) return;
+      if (!groupArtists[key]) groupArtists[key] = {};
+      if (!groupArtists[key][akey]) {
+        groupArtists[key][akey] = { display: artistName, count: 0 };
+      }
+      groupArtists[key][akey].count++;
+    });
   });
   const topGroups = Object.entries(groupCount)
     .sort((a, b) => b[1] - a[1])
@@ -3164,6 +3213,18 @@ function renderStats() {
           const names = key.split("||");
           // Build a comma-separated display label, e.g. "Bill, Josh, Mike"
           const displayLabel = names.join(", ");
+
+          // Top 3 bands this exact group has seen together (mirrors the individual
+          // buddies sub-line). Shows what the group's shared concert taste looks like.
+          const artistEntries = Object.values(groupArtists[key] || {})
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 3);
+          const artistSummary = artistEntries.length
+            ? artistEntries.map(a =>
+                `${a.display}${a.count > 1 ? " ×" + a.count : ""}`
+              ).join(" · ")
+            : "";
+
           // Click goes to Timeline filtered to ALL named members (multi-select).
           // The withPerson param supports multiple values — we encode each separately.
           const params = new URLSearchParams();
@@ -3176,8 +3237,15 @@ function renderStats() {
             title: `Click to see all shows with ${displayLabel}`
           },
             el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
-            el("span", { class: "name" }, displayLabel),
-            el("span", { class: "count" }, `${count} show${count === 1 ? "" : "s"}`)
+            el("div", { class: "buddy-main" },
+              el("div", { class: "buddy-name-row" },
+                el("span", { class: "name" }, displayLabel),
+                el("span", { class: "count" }, `${count} show${count === 1 ? "" : "s"}`)
+              ),
+              artistSummary
+                ? el("div", { class: "buddy-artists" }, artistSummary)
+                : null
+            )
           );
         })));
       }
@@ -3185,6 +3253,9 @@ function renderStats() {
     buddyList.style.marginTop = "24px";
     app.appendChild(buddyList);
   }
+
+  // Songs section now renders AFTER Show buddies (per user preference).
+  renderSongsSection();
 
   // ========================================================================
   // Gaps & streaks
@@ -4137,6 +4208,140 @@ function openBandsHeatmapModal(artistCountByKey, canonicalDisplay, initialRole) 
     grid.appendChild(tile);
   });
   modalBody.appendChild(grid);
+
+  openModal();
+}
+
+/**
+ * Open a heatmap modal for venues or cities. Same visual pattern as the
+ * Bands heatmap: a flex grid of tiles, each sized and colored by visit count.
+ * Clicking a tile triggers the entry's existing onClick (Timeline filter).
+ *
+ * @param {string} kind - "venues" or "cities" (used for header label only)
+ * @param {Array} entries - Array of [label, count, onClick] tuples (sorted desc)
+ */
+function openPlacesHeatmapModal(kind, entries) {
+  if (!entries || entries.length === 0) return;
+
+  MODAL_STATE.kind = "placesHeatmap";
+  MODAL_STATE.id = null;
+  MODAL_STATE.list = null;
+  MODAL_STATE.index = -1;
+
+  const titleByKind = {
+    venues: "All venues, sized by visits",
+    cities: "All cities, sized by visits",
+  };
+  const eyebrow = kind === "venues" ? "VENUES HEATMAP" : "CITIES HEATMAP";
+  const title = titleByKind[kind] || "Places heatmap";
+
+  // The Stats card only shows top 12. The modal pulls from the same dataset
+  // but isn't artificially capped — show everything the user has visited.
+  // For the modal we want the FULL list, not the truncated leaderboard.
+  // entries here is already capped to 12 by the caller; we'd need the full
+  // list. For now we'll use what was passed in and note it; a fuller version
+  // could re-derive from STATE.concerts.
+  const maxCount = entries[0][1];
+
+  modalBody.innerHTML = "";
+  modalBody.appendChild(el("div", { class: "modal-eyebrow artist-eyebrow" }, eyebrow));
+  modalBody.appendChild(el("h2", { class: "modal-title" }, title));
+  modalBody.appendChild(el("div", { class: "modal-meta" },
+    `${entries.length} ${kind} you've visited 2+ times. Click any tile to filter the Timeline.`));
+
+  const grid = el("div", { class: "bands-heatmap-grid bands-heatmap-grid-modal" });
+  entries.forEach(([label, count, onClick]) => {
+    const intensity = Math.max(0.25, count / maxCount);
+    const sizeScale = 0.7 + (count / maxCount) * 0.6;
+    const tile = el("div", {
+      class: "band-tile",
+      style: `--intensity:${intensity};--size-scale:${sizeScale};`,
+      title: `${label}: ${count} show${count === 1 ? "" : "s"}`,
+      on: { click: () => {
+        // Close the modal first so the navigation feels clean
+        closeModal();
+        setTimeout(() => onClick(), 50);
+      }}
+    },
+      el("span", { class: "band-tile-name" }, label),
+      el("span", { class: "band-tile-count" }, `${count}×`)
+    );
+    grid.appendChild(tile);
+  });
+  modalBody.appendChild(grid);
+
+  openModal();
+}
+
+/**
+ * Open a modal showing every time the user heard a specific song live.
+ * Lists each play with date, venue, and the band that played it.
+ * Useful for answering "when did I hear Sober?" — the X-ray view.
+ *
+ * @param {string} artist - Display name of the artist whose song this is
+ * @param {string} song - Song title (case-sensitive match)
+ */
+function openSongInsightsModal(artist, song) {
+  // Find every performance of this song. Iterates all setlist data and
+  // matches on artist normalized key + case-insensitive song title.
+  const targetArtKey = normalizeArtistKey(artist);
+  const songLower = song.toLowerCase();
+  const plays = [];
+  for (const perf of iterAllSongPerformances()) {
+    if (normalizeArtistKey(perf.artist) !== targetArtKey) continue;
+    if ((perf.song || "").toLowerCase() !== songLower) continue;
+    plays.push(perf);
+  }
+  if (plays.length === 0) return;
+
+  // Sort chronologically (earliest first) so the user can see how the song
+  // has accompanied them over time.
+  plays.sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+
+  MODAL_STATE.kind = "songInsights";
+  MODAL_STATE.id = `${artist}::${song}`;
+  MODAL_STATE.list = null;
+  MODAL_STATE.index = -1;
+
+  modalBody.innerHTML = "";
+  modalBody.appendChild(el("div", { class: "modal-eyebrow artist-eyebrow" }, "SONG INSIGHTS"));
+  modalBody.appendChild(el("h2", { class: "modal-title" }, song));
+  modalBody.appendChild(el("div", { class: "modal-meta" },
+    `${artist} · heard ${plays.length} time${plays.length === 1 ? "" : "s"}`));
+
+  // Build a list of every play. Click a row → opens the underlying concert modal.
+  const list = el("div", { class: "artist-show-list" });
+  plays.forEach(perf => {
+    // Find the concert this performance came from (perf.date + perf.artist match)
+    const concert = STATE.concerts.find(c =>
+      c.date === perf.date &&
+      (normalizeArtistKey(c.artist) === targetArtKey ||
+       splitActs(c.openingActs).some(a => normalizeArtistKey(a) === targetArtKey))
+    );
+    const venueText = concert
+      ? [concert.venue, concert.city, concert.state].filter(Boolean).join(", ")
+      : "Unknown venue";
+    const roleText = perf.role === "headliner"
+      ? null
+      : (perf.role === "opener" ? "as opener" : null);
+
+    list.appendChild(el("div", {
+      class: "artist-show-item",
+      on: { click: () => {
+        if (concert) {
+          closeModal();
+          setTimeout(() => openConcertModal(concert), 50);
+        }
+      }}
+    },
+      el("div", { class: "artist-show-date" }, formatDate(perf.date)),
+      el("div", { class: "artist-show-meta" },
+        el("span", { class: "artist-show-venue" }, venueText),
+        roleText ? el("span", { class: "artist-show-role" }, roleText) : null
+      )
+    ));
+  });
+  modalBody.appendChild(list);
 
   openModal();
 }
