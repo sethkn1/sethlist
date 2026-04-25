@@ -3063,3 +3063,123 @@ main {
   .artist-show-item { grid-template-columns: 100px 1fr; padding: 8px 10px; }
   .artist-show-venue { font-size: 13px; }
 }
+
+/* ============================================================
+   BANDS HEATMAP
+   Flex grid of band tiles. Each tile is one band; size and color
+   intensity scale with show count. Tiles wrap to fill rows.
+   ============================================================ */
+.bands-heatmap-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.band-tile {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: calc(110px * var(--size-scale, 1));
+  min-height: calc(70px * var(--size-scale, 1));
+  padding: 10px 14px;
+  /* Same accent-mixed background as the monthly heatmap cells, for visual
+     consistency. Border slightly more present so smaller tiles don't dissolve. */
+  background: rgba(217, 59, 43, calc(var(--intensity) * 0.85));
+  border: 1px solid rgba(217, 59, 43, calc(var(--intensity) * 0.5 + 0.35));
+  cursor: pointer;
+  transition: transform 120ms, border-color 120ms, box-shadow 120ms;
+  /* Truncate long band names cleanly */
+  overflow: hidden;
+}
+.band-tile:hover {
+  transform: scale(1.05);
+  border-color: var(--paper);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.band-tile-name {
+  font-family: var(--font-display-alt);
+  font-weight: 700;
+  font-size: calc(13px * var(--size-scale, 1));
+  color: var(--paper);
+  line-height: 1.15;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  /* If the name is super long, allow it to wrap but cap at 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.band-tile-count {
+  font-family: var(--font-mono);
+  font-size: calc(10px * var(--size-scale, 1));
+  color: var(--paper);
+  margin-top: 4px;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 640px) {
+  .band-tile {
+    min-width: calc(90px * var(--size-scale, 1));
+    min-height: calc(60px * var(--size-scale, 1));
+    padding: 8px 10px;
+  }
+}
+
+/* ============================================================
+   CLICKABLE LEADERBOARD TITLE (Most-seen bands → opens heatmap modal)
+   The H3 is wrapped around a button that styles to look like text.
+   Adds a hover affordance and a small grid icon to signal interactivity.
+   ============================================================ */
+.leaderboard-title-clickable {
+  margin: 0;  /* H3 default margins fight the leaderboard-header layout */
+  display: flex;
+}
+.leaderboard-title-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  /* Inherit H3 typography */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  letter-spacing: inherit;
+  transition: color 120ms;
+}
+.leaderboard-title-btn:hover {
+  color: var(--accent);
+}
+.leaderboard-title-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.leaderboard-title-icon {
+  font-size: 0.75em;
+  color: var(--muted);
+  transition: color 120ms;
+}
+.leaderboard-title-btn:hover .leaderboard-title-icon {
+  color: var(--accent);
+}
+
+/* ============================================================
+   BANDS HEATMAP — MODAL VARIANT
+   Same tile design as before but with more breathing room since
+   the modal gives it dedicated space (no longer squeezed below the
+   leaderboard or competing with other Stats sections).
+   ============================================================ */
+.bands-heatmap-grid-modal {
+  margin-top: 20px;
+  /* Slightly larger gap than the inline version since we have room */
+  gap: 10px;
+}

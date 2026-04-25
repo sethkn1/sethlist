@@ -2623,7 +2623,20 @@ function renderStats() {
 
   const artistList = el("div", { class: "top-list" },
     el("div", { class: "leaderboard-header" },
-      el("h3", {}, "Most-seen bands"),
+      // Title is clickable — opens the bands heatmap modal. Wrap it as a
+      // button so it's keyboard-focusable and reads as interactive. The
+      // picker dropdown is a sibling so click events on it don't bubble
+      // up to the title.
+      el("h3", { class: "leaderboard-title-clickable" },
+        el("button", {
+          class: "leaderboard-title-btn",
+          title: "Open the bands heatmap",
+          on: { click: () => openBandsHeatmapModal(artistCountByKey, canonicalDisplay, artistRole) }
+        },
+          "Most-seen bands ",
+          el("span", { class: "leaderboard-title-icon" }, "▦")
+        )
+      ),
       roleSelect
     ),
     el("ol", {}, ...topArtists.map(([name, count], i) =>
@@ -2764,82 +2777,6 @@ function renderStats() {
   );
   twoCol.appendChild(venueList);
   app.appendChild(twoCol);
-
-  // ====================================================================
-  // BANDS HEATMAP
-  // A flat grid of bands sized/colored by show count. Reuses the same
-  // role toggle (artistRole URL param) as the Most-seen bands leaderboard,
-  // so flipping the leaderboard toggle also reshapes this heatmap.
-  // Only includes bands you've seen 2+ times (single-show bands would be
-  // a wall of tiny same-color tiles and add little signal).
-  // ====================================================================
-  const heatmapBands = Object.entries(artistCountByKey)
-    .filter(([, n]) => n > 1)
-    .sort((a, b) => b[1] - a[1])
-    .map(([key, count]) => ({
-      name: canonicalDisplay(key),
-      count,
-    }));
-
-  if (heatmapBands.length > 0) {
-    const maxBandCount = heatmapBands[0].count;  // already sorted desc
-    const bandsHeatCard = el("div", { class: "top-list bands-heatmap-card" });
-
-    // Heatmap header mirrors the leaderboard header (title + role toggle).
-    // Toggle is wired to the same URL param so the two views stay in sync.
-    const bandsHeatRoleToggle = el("select", {
-      class: "leaderboard-role-toggle",
-      title: "Show all bands, only headliners, or only openers",
-      on: { change: e => {
-        const next = e.target.value;
-        const [route, queryStr] = (location.hash || "#/stats").split("?");
-        const p = new URLSearchParams(queryStr || "");
-        if (next === "all") p.delete("artistRole");
-        else p.set("artistRole", next);
-        const newHash = route + (p.toString() ? "?" + p.toString() : "");
-        history.replaceState(null, "", newHash);
-        renderStats();
-      }}
-    });
-    [
-      ["all", "All"],
-      ["headliner", "Headliners"],
-      ["opener", "Openers"]
-    ].forEach(([val, label]) => {
-      const o = el("option", { value: val }, label);
-      if (val === artistRole) o.selected = true;
-      bandsHeatRoleToggle.appendChild(o);
-    });
-
-    bandsHeatCard.appendChild(el("div", { class: "leaderboard-header" },
-      el("h3", {}, "Bands heatmap"),
-      bandsHeatRoleToggle
-    ));
-    bandsHeatCard.appendChild(el("p", { class: "heatmap-desc" },
-      "Every band you've seen 2+ times. Larger and darker = seen more often. Click any tile to drill in."));
-
-    const bandsGrid = el("div", { class: "bands-heatmap-grid" });
-    heatmapBands.forEach(({ name, count }) => {
-      const intensity = Math.max(0.25, count / maxBandCount);
-      // Tile size scales with count too — biggest bands are visibly larger.
-      // Range: ~80px (1×) to ~160px (max). Caps so a single outlier doesn't
-      // dominate.
-      const sizeScale = 0.7 + (count / maxBandCount) * 0.6;  // 0.7 to 1.3
-      const tile = el("div", {
-        class: "band-tile",
-        style: `--intensity:${intensity};--size-scale:${sizeScale};`,
-        title: `${name}: ${count} show${count === 1 ? "" : "s"}`,
-        on: { click: () => openArtistInsightsModal(name) }
-      },
-        el("span", { class: "band-tile-name" }, name),
-        el("span", { class: "band-tile-count" }, `${count}×`)
-      );
-      bandsGrid.appendChild(tile);
-    });
-    bandsHeatCard.appendChild(bandsGrid);
-    bandsHeatCard.style.marginTop = "24px";
-    app.appendChild(bandsHeatCard);
-  }
 
   // ------------------------------------------------------------------
   // Setlist-based stats: top songs (overall) and by artist
@@ -3833,6 +3770,68 @@ function concertsFeaturingArtist(artistName) {
     return allArtistsAtConcert(c)
       .some(name => normalizeArtistKey(name) === targetKey);
   }).sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+}
+
+/**
+ * Open a modal showing the bands heatmap — every band the user has seen
+ * 2+ times, sized/colored by show count. Clicking a band tile opens the
+ * Band Insights modal for that band.
+ *
+ * @param {object} artistCountByKey - Map of normalized artist key to show count
+ * @param {function} canonicalDisplay - Function returning the canonical display name for a key
+ * @param {string} initialRole - Current role filter ("all" | "headliner" | "opener")
+ */
+function openBandsHeatmapModal(artistCountByKey, canonicalDisplay, initialRole) {
+  // Mark modal state. This isn't a navigable modal (no prev/next), so we
+  // don't set list/index — keyboard arrows do nothing here.
+  MODAL_STATE.kind = "bandsHeatmap";
+  MODAL_STATE.id = null;
+  MODAL_STATE.list = null;
+  MODAL_STATE.index = -1;
+
+  const bands = Object.entries(artistCountByKey)
+    .filter(([, n]) => n > 1)
+    .sort((a, b) => b[1] - a[1])
+    .map(([key, count]) => ({ name: canonicalDisplay(key), count }));
+
+  modalBody.innerHTML = "";
+  modalBody.appendChild(el("div", { class: "modal-eyebrow artist-eyebrow" }, "BANDS HEATMAP"));
+  modalBody.appendChild(el("h2", { class: "modal-title" }, "All bands, sized by shows"));
+  modalBody.appendChild(el("div", { class: "modal-meta" },
+    `${bands.length} band${bands.length === 1 ? "" : "s"} you've seen 2+ times. Click any tile for details.`));
+
+  if (bands.length === 0) {
+    modalBody.appendChild(el("p", { class: "artist-strip-desc" },
+      "No bands match the current role filter."));
+    openModal();
+    return;
+  }
+
+  const maxBandCount = bands[0].count;  // sorted desc
+
+  const grid = el("div", { class: "bands-heatmap-grid bands-heatmap-grid-modal" });
+  bands.forEach(({ name, count }) => {
+    const intensity = Math.max(0.25, count / maxBandCount);
+    const sizeScale = 0.7 + (count / maxBandCount) * 0.6;
+    const tile = el("div", {
+      class: "band-tile",
+      style: `--intensity:${intensity};--size-scale:${sizeScale};`,
+      title: `${name}: ${count} show${count === 1 ? "" : "s"}`,
+      on: { click: () => {
+        // Close this modal and open the band insights modal. Defer slightly
+        // so the previous modal's state cleans up before the new one opens.
+        closeModal();
+        setTimeout(() => openArtistInsightsModal(name), 60);
+      }}
+    },
+      el("span", { class: "band-tile-name" }, name),
+      el("span", { class: "band-tile-count" }, `${count}×`)
+    );
+    grid.appendChild(tile);
+  });
+  modalBody.appendChild(grid);
+
+  openModal();
 }
 
 /**
