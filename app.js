@@ -2554,6 +2554,7 @@ function renderStats() {
   const postersAttended = STATE.posters.filter(p => p.attended).length;
   const postersNotAttended = STATE.posters.length - postersAttended;
   const autographedCount = STATE.posters.filter(p => p.autographed).length;
+  const framedCount = STATE.posters.filter(p => p.framed).length;
 
   // KPI cards. Each card may have sub-metrics (small lines below the unit)
   // and an onClick handler that navigates to the relevant view.
@@ -2606,9 +2607,16 @@ function renderStats() {
       label: "Posters",
       value: STATE.posters.length,
       unit: "collected",
-      submetrics: postersNotAttended > 0
-        ? [`${postersAttended} attended posters · ${postersNotAttended} unattended posters`]
-        : null,
+      submetrics: (() => {
+        const lines = [];
+        if (postersNotAttended > 0) {
+          lines.push(`${postersAttended} attended posters · ${postersNotAttended} unattended posters`);
+        }
+        if (framedCount > 0) {
+          lines.push(`${framedCount} framed`);
+        }
+        return lines.length > 0 ? lines : null;
+      })(),
       onClick: () => { location.hash = "#/posters"; }
     },
     {
@@ -3548,10 +3556,10 @@ function renderAbout() {
   // Section: The shows that lit the fuse
   wrap.appendChild(el("h3", { class: "about-section" }, "The shows that lit the fuse"));
   wrap.appendChild(el("p", {},
-    "In college I joined my local station, 90.7 WXIN in Providence, RI. The station ",
-    "had a relationship with Lupos, the local music venue, and we'd get tickets to shows. ",
-    "I went to a lot of them. Some I remember vividly. Others, the details are a bit ",
-    "more vague."
+    "In college I joined my local station, 90.7 WXIN in Providence, RI. ",
+    "I developed a relationship with Lupos, the local music venue, and we'd ",
+    "get tickets to shows for listeners and staff. I went to a lot of them. ",
+    "Some I remember vividly. Others, the details are a bit more vague."
   ));
   wrap.appendChild(el("p", {},
     "A few years later, the spark was a Faith No More show in New York, for their ",
