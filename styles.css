@@ -1494,10 +1494,16 @@ main {
   height: 100%;
   padding: 18px 0;
   width: max-content;  /* let it grow to fit all tiles without wrapping */
-  animation: marquee-scroll linear infinite;
+  animation: marquee-scroll-single linear infinite;
   align-items: center;
   /* Don't let the animation re-trigger on re-renders */
   will-change: transform;
+}
+/* When the track has duplicated content (filter has 5+ items), use the
+   -50% animation so the loop is seamless. Otherwise, scroll the single
+   copy fully off-screen and reset (small visible jump but no duplicates). */
+.marquee-track.marquee-track-duplicated {
+  animation-name: marquee-scroll;
 }
 .poster-marquee:hover .marquee-track {
   animation-play-state: paused;
@@ -1506,6 +1512,14 @@ main {
   0%   { transform: translateX(0); }
   /* -50% moves one full copy off-screen; the duplicate is already in place */
   100% { transform: translateX(-50%); }
+}
+@keyframes marquee-scroll-single {
+  /* For non-duplicated tracks: drift slowly to give some motion, but don't
+     wrap (would reveal that there's no duplicate behind). The cubic loop
+     reverses direction at boundaries so it never reaches an empty edge. */
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-30%); }
+  100% { transform: translateX(0); }
 }
 .marquee-tile {
   flex: 0 0 auto;
@@ -2108,12 +2122,17 @@ main {
   position: relative;
   display: inline-block;
 }
-.filter-popover-btn {
-  /* inherits .chip styles; just adjust max-width */
+.filter-bar .filter-popover-btn {
+  /* Match the height of sibling select dropdowns. The select renders with a
+     larger intrinsic content height than a button at the same font-size,
+     so we explicitly set line-height to compensate. */
   max-width: 280px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 17px;
 }
 .filter-popover-panel {
   position: absolute;
@@ -2749,4 +2768,51 @@ main {
 .fact-value.tour-link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* ============================================================
+   CHIP DISABLED STATE
+   When a filter chip wouldn't add any value (e.g., "Autographed"
+   when the selected band has no autographed posters), it's still
+   visible but greyed out and unclickable.
+   ============================================================ */
+.filter-bar .chip.disabled,
+.filter-bar .chip:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background: transparent !important;
+  color: var(--paper) !important;
+  /* Don't trigger the hover state on disabled chips */
+}
+.filter-bar .chip.disabled:hover,
+.filter-bar .chip:disabled:hover {
+  background: transparent !important;
+  color: var(--paper) !important;
+}
+
+/* ============================================================
+   FILTER RESET LINK
+   Subtle text-button that clears all filters at once.
+   Sits inside the filter bar after the chips.
+   ============================================================ */
+.filter-reset-link {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  padding: 8px 4px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 120ms;
+}
+.filter-reset-link:hover {
+  color: var(--paper);
+}
+.filter-reset-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

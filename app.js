@@ -921,15 +921,26 @@ function renderTimeline() {
     }}
   });
   [
-    ["", "All shows"],
-    ["yes", "With poster"],
-    ["no", "Without poster"]
+    ["", "With or Without Poster"],
+    ["yes", "With Poster"],
+    ["no", "Without Poster"]
   ].forEach(([val, label]) => {
     const opt = el("option", { value: val }, label);
     if (val === posterFilter) opt.selected = true;
     posterSelect.appendChild(opt);
   });
   filterBar.appendChild(posterSelect);
+
+  // Reset link: visible whenever any Timeline filter is active.
+  const anyTimelineFilter = q || artist || venue || tour || festival ||
+    posterFilter || attendedWithFilter.length > 0;
+  if (anyTimelineFilter) {
+    filterBar.appendChild(el("button", {
+      class: "filter-reset-link",
+      title: "Clear all filters",
+      on: { click: () => { location.hash = "#/timeline"; } }
+    }, "Reset"));
+  }
 
   const countEl = el("div", { class: "filter-count" });
   filterBar.appendChild(countEl);
@@ -1511,11 +1522,48 @@ function renderPosters() {
     (p.tourShowSpecific || "").toLowerCase() === "festival" ||
     (p.date && festivalDates.has(p.date));
 
+  // ====================================================================
+  // CASCADING FILTERS: when a band is selected, restrict the illustrator
+  // and type dropdowns to values that exist within that band's posters.
+  // Chips (Autographed, Festival, Not attended) are disabled (greyed out)
+  // when no poster from the selected band qualifies. This prevents users
+  // from picking filters that would always return zero.
+  //
+  // If no band is selected, all filter options remain available.
+  // Currently-active chip filters stay active even if they no longer apply
+  // (they're not auto-deselected) — the user can manually clear them.
+  // ====================================================================
+  const bandPosters = artist
+    ? STATE.posters.filter(p => p.artist === artist && p.attended)
+    : STATE.posters;
+  const availableIllustrators = artist
+    ? [...new Set(bandPosters.map(p => p.illustrator).filter(Boolean))].sort()
+    : allIllustrators;
+  const availableTypes = artist
+    ? [...new Set(bandPosters.map(p => classifyType(p.type)).filter(Boolean))].sort()
+    : allTypes;
+  const bandHasAutographed = bandPosters.some(p => p.autographed);
+  const bandHasFestival = bandPosters.some(p => isFestivalPoster(p));
+  const bandHasNotAttended = artist
+    ? STATE.posters.filter(p => p.artist === artist).some(p => !p.attended)
+    : STATE.posters.some(p => !p.attended);
+
   const filterBar = el("div", { class: "filter-bar" });
 
   // Band filter (first) — was previously labeled "Artist", renamed to clarify
   // that it filters by the band/headliner, not the poster designer.
-  const bandSelect = el("select", { on: { change: e => updateParam("artist", e.target.value) } });
+  const bandSelect = el("select", { on: { change: e => {
+    // Clear illustrator and type when band changes — the previously selected
+    // values may not be valid for the new band. (Active chips stay; user
+    // can clear via reset link.)
+    const [route, queryStr] = (location.hash || "#/posters").split("?");
+    const p = new URLSearchParams(queryStr || "");
+    if (e.target.value) p.set("artist", e.target.value); else p.delete("artist");
+    p.delete("illustrator");
+    p.delete("type");
+    const newHash = route + (p.toString() ? "?" + p.toString() : "");
+    location.hash = newHash;
+  }}});
   bandSelect.appendChild(el("option", { value: "" }, "All bands"));
   allArtists.forEach(a => {
     const o = el("option", { value: a }, a);
@@ -1524,12 +1572,12 @@ function renderPosters() {
   });
   filterBar.appendChild(bandSelect);
 
-  // Poster Artist (Illustrator) filter — filters by who designed the poster
+  // Poster Artist (Illustrator) filter — restricted to band's illustrators when band is selected
   const illustratorSelect = el("select", {
     on: { change: e => updateParam("illustrator", e.target.value) }
   });
   illustratorSelect.appendChild(el("option", { value: "" }, "All poster artists"));
-  allIllustrators.forEach(name => {
+  availableIllustrators.forEach(name => {
     const o = el("option", { value: name }, name);
     if (name === illustrator) o.selected = true;
     illustratorSelect.appendChild(o);
@@ -1538,28 +1586,52 @@ function renderPosters() {
 
   const ts = el("select", { on: { change: e => updateParam("type", e.target.value) } });
   ts.appendChild(el("option", { value: "" }, "All types"));
-  allTypes.forEach(t => {
+  availableTypes.forEach(t => {
     const o = el("option", { value: t }, t);
     if (t === type) o.selected = true;
     ts.appendChild(o);
   });
   filterBar.appendChild(ts);
 
-  filterBar.appendChild(el("button", {
-    class: "chip" + (autographed ? " active" : ""),
-    on: { click: () => updateParam("autographed", autographed ? "0" : "1") }
-  }, "Autographed"));
+  // Helper for chip disabled state: if disabled but currently active, the
+  // chip should still be visible (don't hide an active filter), but it
+  // should still indicate the disabled-when-not-applicable state on hover.
+  const makeChip = (label, active, isDisabled, paramName, options = {}) => {
+    const cls = ["chip"];
+    if (active) cls.push("active");
+    if (isDisabled) cls.push("disabled");
+    return el("button", {
+      class: cls.join(" "),
+      disabled: isDisabled && !active ? "" : null,
+      title: options.title || (isDisabled
+        ? `No ${label.toLowerCase()} posters for this band`
+        : null),
+      on: { click: () => {
+        if (isDisabled && !active) return;
+        updateParam(paramName, active ? "0" : "1");
+      }}
+    }, label);
+  };
 
-  filterBar.appendChild(el("button", {
-    class: "chip" + (festivalOnly ? " active" : ""),
-    title: "Show only posters from festival events (festival-wide posters and band posters from festival days)",
-    on: { click: () => updateParam("festival", festivalOnly ? "0" : "1") }
-  }, "Festival"));
+  filterBar.appendChild(makeChip("Autographed", autographed, !bandHasAutographed, "autographed"));
+  filterBar.appendChild(makeChip("Festival", festivalOnly, !bandHasFestival, "festival", {
+    title: bandHasFestival
+      ? "Show only posters from festival events (festival-wide posters and band posters from festival days)"
+      : "No festival posters for this band"
+  }));
+  filterBar.appendChild(makeChip("Not attended", notAttended, !bandHasNotAttended, "notAttended"));
 
-  filterBar.appendChild(el("button", {
-    class: "chip" + (notAttended ? " active" : ""),
-    on: { click: () => updateParam("notAttended", notAttended ? "0" : "1") }
-  }, "Not attended"));
+  // Reset link: visible whenever any filter is active. Clears all filter
+  // params at once and returns the user to the unfiltered Posters view.
+  const anyFilterActive = artist || illustrator || type || autographed ||
+    festivalOnly || notAttended || q;
+  if (anyFilterActive) {
+    filterBar.appendChild(el("button", {
+      class: "filter-reset-link",
+      title: "Clear all filters",
+      on: { click: () => { location.hash = "#/posters"; } }
+    }, "Reset"));
+  }
 
   const countEl = el("div", { class: "filter-count" });
   filterBar.appendChild(countEl);
@@ -1815,11 +1887,19 @@ function buildPosterMarquee(groupList) {
   const marquee = el("div", { class: "poster-marquee" });
   const track = el("div", { class: "marquee-track" });
 
-  // Duplicate the content so it loops seamlessly. Animation slides -50%
-  // (i.e. the full width of one copy) and then reuses the second copy
-  // underneath without a visible jump.
+  // The marquee normally duplicates its content so it can scroll seamlessly:
+  // animation slides -50% (full width of one copy), then the second copy
+  // becomes visible without a jump. But when the filter has few items, this
+  // duplication makes the same poster appear twice within one viewport,
+  // which reads as a bug. Below a threshold we skip duplication and the
+  // marquee scrolls a single set; the loop is less seamless but the absence
+  // of visible duplicates is more important than perfect smoothness.
+  const DUP_THRESHOLD = 5;
   shuffled.forEach(g => track.appendChild(buildTile(g)));
-  shuffled.forEach(g => track.appendChild(buildTile(g)));
+  if (shuffled.length >= DUP_THRESHOLD) {
+    shuffled.forEach(g => track.appendChild(buildTile(g)));
+    track.classList.add("marquee-track-duplicated");
+  }
 
   // Speed: constant pixels-per-second regardless of how many posters we have.
   // With ~40 posters per copy at ~200px wide = 8000px track → at 40px/sec = 200s per loop.
@@ -2003,14 +2083,48 @@ function renderSongs() {
     ));
   }
 
-  // Filter bar
+  // Filter bar.
+  // Order (matching Posters page convention): Band → Song Title → Heard count → Covers.
+  // Search box was removed for consistency with the other pages — the
+  // dropdowns cover the common filtering needs.
   const filterBar = el("div", { class: "filter-bar" });
-  filterBar.appendChild(el("input", {
-    type: "text",
-    placeholder: filterNormArtist ? "Search songs…" : "Search song or artist…",
-    value: params.get("q") || "",
-    on: { input: e => updateParamDebounced("q", e.target.value) }
-  }));
+
+  // Band selector (first). On the global view, switching the band navigates
+  // to the artist drill-down. On the drill-down view, the band is fixed and
+  // we don't show this selector — it'd be redundant.
+  if (!filterNormArtist) {
+    const artistList = [...artistSet.entries()]
+      .map(([k, v]) => ({ key: k, display: v }))
+      .sort((a, b) => a.display.localeCompare(b.display));
+    const bandSelect = el("select", {
+      on: { change: e => {
+        const v = e.target.value;
+        if (v) location.hash = "#/songs?artist=" + encodeURIComponent(v);
+      }}
+    });
+    bandSelect.appendChild(el("option", { value: "" }, "All bands"));
+    artistList.forEach(a => bandSelect.appendChild(el("option", { value: a.display }, a.display)));
+    filterBar.appendChild(bandSelect);
+  }
+
+  // Song Title selector — only on global view (no point on drill-down where
+  // the song list is right there in the page).
+  if (!filterNormArtist) {
+    // Build unique song titles, sorted alphabetically. Each title shown once
+    // even if multiple bands have a song with the same name (selecting it
+    // filters across all of them).
+    const allSongTitles = [...new Set(allSongs.map(s => s.song))].sort();
+    const songSelect = el("select", {
+      on: { change: e => updateParam("song", e.target.value) }
+    });
+    songSelect.appendChild(el("option", { value: "" }, "All song titles"));
+    allSongTitles.forEach(title => {
+      const o = el("option", { value: title }, title);
+      if (title === songFilter) o.selected = true;
+      songSelect.appendChild(o);
+    });
+    filterBar.appendChild(songSelect);
+  }
 
   // Heard-N-times dropdown (distinct play-counts present in data)
   const playCounts = [...new Set(allSongs.map(s => s.plays.length))].sort((a, b) => a - b);
@@ -2031,20 +2145,14 @@ function renderSongs() {
     on: { click: () => updateParam("covers", coversOnly ? "0" : "1") }
   }, "Covers only"));
 
-  // If we're on global view, show an "all artists" dropdown (jump to drill-down)
-  if (!filterNormArtist) {
-    const artistList = [...artistSet.entries()]
-      .map(([k, v]) => ({ key: k, display: v }))
-      .sort((a, b) => a.display.localeCompare(b.display));
-    const artistSelect = el("select", {
-      on: { change: e => {
-        const v = e.target.value;
-        if (v) location.hash = "#/songs?artist=" + encodeURIComponent(v);
-      }}
-    });
-    artistSelect.appendChild(el("option", { value: "" }, "Jump to artist…"));
-    artistList.forEach(a => artistSelect.appendChild(el("option", { value: a.display }, a.display)));
-    filterBar.appendChild(artistSelect);
+  // Reset link: visible whenever any Songs filter is active.
+  const anySongsFilter = q || artistFilter || songFilter || countFilter || coversOnly;
+  if (anySongsFilter) {
+    filterBar.appendChild(el("button", {
+      class: "filter-reset-link",
+      title: "Clear all filters",
+      on: { click: () => { location.hash = "#/songs"; } }
+    }, "Reset"));
   }
 
   const countEl = el("span", { class: "filter-count" });
