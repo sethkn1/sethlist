@@ -1297,14 +1297,78 @@ function renderPosters() {
   header.appendChild(headerActions);
   app.appendChild(header);
 
-  // Group posters by show (date + artist + location)
-  const groupKey = p => `${p.date}||${(p.artist || "").toLowerCase()}||${(p.location || "").toLowerCase()}`;
-  const groups = {};
+  // Group posters by show AND by print identity. A "print" is the unique
+  // poster art — two physical copies of the same numbered edition (one
+  // autographed, one not, or numbers 14/250 and 15/250) are still the same
+  // print. But VIP vs SE, or SE numbered /350 vs SE Unnumbered, are
+  // different prints and should be displayed as separate tiles.
+  //
+  // Rule: same group when date + artist + location + type + variant + denominator
+  //       all match. "Denominator" is the part after "/" in "224/500"; an
+  //       unrecorded number ("Unknown") is treated as matching any denominator
+  //       within the same type+variant (since the user knows which print it
+  //       belongs to even if they didn't write the number down). "Unnumbered"
+  //       is treated as a distinct edition class — a numbered run and an
+  //       unnumbered run are different prints even of the same type/variant.
+  function denominatorKey(p) {
+    const num = (p.number || "").toString().trim();
+    if (!num) return "_blank";
+    if (/^unknown$/i.test(num)) return "_unknown";  // matches any denom in same type/variant
+    if (/^unnumbered$/i.test(num)) return "_unnumbered";  // distinct edition class
+    const m = num.match(/\/(\d+)/);
+    if (m) return "denom:" + m[1];
+    return "raw:" + num.toLowerCase();
+  }
+  function groupKey(p) {
+    const dateArtLoc = `${p.date}||${(p.artist || "").toLowerCase()}||${(p.location || "").toLowerCase()}`;
+    const type = (p.type || "").toLowerCase();
+    const variant = (p.variant || "").toLowerCase();
+    return `${dateArtLoc}||${type}||${variant}||${denominatorKey(p)}`;
+  }
+
+  // First-pass grouping by full key
+  const byKey = {};
   STATE.posters.forEach(p => {
     const k = groupKey(p);
-    (groups[k] = groups[k] || []).push(p);
+    (byKey[k] = byKey[k] || []).push(p);
   });
-  const groupList = Object.values(groups).map(list => ({
+
+  // Second pass: within a single show (date+artist+location), if a group has
+  // a `_unknown` denominator and there's exactly one OTHER group with the same
+  // type+variant, merge them — the "Unknown" copy belongs to that print.
+  // (We skip the merge if the only other group is `_unnumbered`, since Unknown
+  // most likely refers to a numbered edition and shouldn't collapse into the
+  // unnumbered run.)
+  const showKey = p => `${p.date}||${(p.artist || "").toLowerCase()}||${(p.location || "").toLowerCase()}`;
+  const showGroups = {};
+  Object.entries(byKey).forEach(([k, list]) => {
+    const sk = showKey(list[0]);
+    (showGroups[sk] = showGroups[sk] || []).push({ key: k, posters: list });
+  });
+  Object.values(showGroups).forEach(showEntries => {
+    if (showEntries.length < 2) return;
+    // For each entry whose denominator is _unknown, look for a sibling with same type+variant
+    const remaining = [...showEntries];
+    showEntries.forEach(entry => {
+      const p = entry.posters[0];
+      if (denominatorKey(p) !== "_unknown") return;
+      const typeVariant = `${(p.type || "").toLowerCase()}||${(p.variant || "").toLowerCase()}`;
+      const candidates = remaining.filter(other =>
+        other !== entry &&
+        `${(other.posters[0].type || "").toLowerCase()}||${(other.posters[0].variant || "").toLowerCase()}` === typeVariant &&
+        denominatorKey(other.posters[0]) !== "_unnumbered"
+      );
+      if (candidates.length === 1) {
+        // Merge entry into candidates[0]
+        candidates[0].posters.push(...entry.posters);
+        delete byKey[entry.key];
+        const idx = remaining.indexOf(entry);
+        if (idx >= 0) remaining.splice(idx, 1);
+      }
+    });
+  });
+
+  const groupList = Object.values(byKey).map(list => ({
     date: list[0].date,
     year: list[0].year,
     artist: list[0].artist,
