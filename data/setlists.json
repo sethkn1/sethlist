@@ -12992,5 +12992,3057 @@
   },
   "opener:dave-hill:2026-04-01": {
     "_error": "empty setlist"
+  },
+  "opener:counting-crows:2008-07-29": {
+    "id": "73d6e2fd",
+    "artist": "Counting Crows",
+    "tour": "Saturday Nights & Sunday Mornings",
+    "eventDate": "29-07-2008",
+    "url": "https://www.setlist.fm/setlist/counting-crows/2008/time-warner-cable-music-pavilion-raleigh-nc-73d6e2fd.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "When I Dream of Michelangelo"
+          },
+          {
+            "name": "Hard Candy"
+          },
+          {
+            "name": "Hanging Tree"
+          },
+          {
+            "name": "Recovering the Satellites"
+          },
+          {
+            "name": "Mr. Jones"
+          },
+          {
+            "name": "Goodnight Elisabeth"
+          },
+          {
+            "name": "Time and Time Again"
+          },
+          {
+            "name": "You Can't Count on Me"
+          },
+          {
+            "name": "Cowboys"
+          },
+          {
+            "name": "Goodnight L.A."
+          },
+          {
+            "name": "Round Here"
+          },
+          {
+            "name": "A Long December"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:sasquatch:2013-03-03": {
+    "_error": "no artist match"
+  },
+  "opener:live:2017-08-11": {
+    "id": "5be51340",
+    "artist": "Live",
+    "tour": null,
+    "eventDate": "11-08-2017",
+    "url": "https://www.setlist.fm/setlist/live/2017/bbandt-field-winston-salem-nc-5be51340.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "All Over You",
+            "info": "with The Rolling Stones\u2019 \u201cSympathy For The Devil\u201d snippet intro"
+          },
+          {
+            "name": "Operation Spirit (The Tyranny of Tradition)",
+            "info": "with Sex Pistol\u2019s \u201cHolidays In The Sun\u201d snippet intro"
+          },
+          {
+            "name": "Pain Lies on the Riverside"
+          },
+          {
+            "name": "Requiem: I. Kyrie",
+            "cover": "Wolfgang Amadeus Mozart",
+            "tape": true
+          },
+          {
+            "name": "The Dolphin's Cry"
+          },
+          {
+            "name": "Selling the Drama"
+          },
+          {
+            "name": "I Alone"
+          },
+          {
+            "name": "Lakini's Juice"
+          },
+          {
+            "name": "I Am the Highway",
+            "cover": "Audioslave"
+          },
+          {
+            "name": "Lightning Crashes"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:s-sour:2018-05-19": {
+    "_error": "no match"
+  },
+  "opener:bullet-for-my-valentine:2018-05-19": {
+    "_error": "no match"
+  },
+  "opener:s-temple-pilots:2018-05-20": {
+    "_error": "no match"
+  },
+  "opener:the-used:2018-05-20": {
+    "id": "73edd685",
+    "artist": "The Used",
+    "tour": "The Canyon",
+    "eventDate": "20-05-2018",
+    "url": "https://www.setlist.fm/setlist/the-used/2018/mapfre-stadium-columbus-oh-73edd685.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Take It Away"
+          },
+          {
+            "name": "Listening"
+          },
+          {
+            "name": "Blood on My Hands"
+          },
+          {
+            "name": "Cry"
+          },
+          {
+            "name": "I Caught Fire"
+          },
+          {
+            "name": "The Taste of Ink"
+          },
+          {
+            "name": "Rise Up Lights"
+          },
+          {
+            "name": "Pretty Handsome Awkward"
+          },
+          {
+            "name": "A Box Full of Sharp Objects",
+            "info": "with \u201cSmells Like Teen Spirit\u201d intro and outro"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:i-prevail:2018-05-20": {
+    "id": "6bedd686",
+    "artist": "I Prevail",
+    "tour": null,
+    "eventDate": "20-05-2018",
+    "url": "https://www.setlist.fm/setlist/i-prevail/2018/mapfre-stadium-columbus-oh-6bedd686.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "RISE"
+          },
+          {
+            "name": "Stuck in Your Head"
+          },
+          {
+            "name": "Pull the Plug"
+          },
+          {
+            "name": "Come and Get It",
+            "info": "Break stuff by Limp Bizkit intro"
+          },
+          {
+            "name": "Already Dead"
+          },
+          {
+            "name": "Chaos"
+          },
+          {
+            "name": "Lifelines"
+          },
+          {
+            "name": "Scars"
+          }
+        ]
+      }
+    ],
+    "info": "Brian Burkheiser did not perform at this show. Guitarist Dylan Bowman filled in for all his lead vocal parts.",
+    "role": "opener"
+  },
+  "opener:journey:2018-06-05": {
+    "id": "53ed4b2d",
+    "artist": "Journey",
+    "tour": "North American Tour 2018",
+    "eventDate": "05-06-2018",
+    "url": "https://www.setlist.fm/setlist/journey/2018/pnc-arena-raleigh-nc-53ed4b2d.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Separate Ways (Worlds Apart)"
+          },
+          {
+            "name": "Only the Young"
+          },
+          {
+            "name": "Be Good to Yourself"
+          },
+          {
+            "name": "Stone in Love"
+          },
+          {
+            "name": "Any Way You Want It"
+          },
+          {
+            "name": "Guitar Solo"
+          },
+          {
+            "name": "Lights"
+          },
+          {
+            "name": "Piano Solo",
+            "info": "With snippets of \u201cWhen You Love a Woman\u201d and \u201cSend Her My Love\u201d"
+          },
+          {
+            "name": "Open Arms"
+          },
+          {
+            "name": "Who's Crying Now"
+          },
+          {
+            "name": "La Do Da",
+            "info": "with Steve Smith drum solo"
+          },
+          {
+            "name": "Guitar Solo"
+          },
+          {
+            "name": "Wheel in the Sky"
+          },
+          {
+            "name": "Faithfully"
+          },
+          {
+            "name": "Don't Stop Believin'"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "Lovin', Touchin', Squeezin'"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:tricky:2018-11-01": {
+    "id": "5b967388",
+    "artist": "Tricky",
+    "tour": "Ununiform",
+    "eventDate": "01-11-2018",
+    "url": "https://www.setlist.fm/setlist/tricky/2018/bojangles-coliseum-charlotte-nc-5b967388.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "You Don't Wanna"
+          },
+          {
+            "name": "I'm Not Going"
+          },
+          {
+            "name": "Armor"
+          },
+          {
+            "name": "My Palestine Girl"
+          },
+          {
+            "name": "Nothing's Changed"
+          },
+          {
+            "name": "Here My Dear"
+          },
+          {
+            "name": "Breathe Me",
+            "cover": "Sia"
+          },
+          {
+            "name": "Parenthesis"
+          },
+          {
+            "name": "Vent"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:night-club:2018-11-01": {
+    "_error": "empty setlist"
+  },
+  "opener:korn:2019-05-10": {
+    "id": "b90e5be",
+    "artist": "Korn",
+    "tour": null,
+    "eventDate": "10-05-2019",
+    "url": "https://www.setlist.fm/setlist/korn/2019/rockingham-dragway-rockingham-nc-b90e5be.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Falling Away From Me"
+          },
+          {
+            "name": "Here to Stay"
+          },
+          {
+            "name": "Rotting in Vain"
+          },
+          {
+            "name": "Y'All Want a Single"
+          },
+          {
+            "name": "Make Me Bad"
+          },
+          {
+            "name": "Shoots and Ladders",
+            "info": "with snippet of One by Metallica"
+          },
+          {
+            "name": "Got the Life"
+          },
+          {
+            "name": "Coming Undone",
+            "info": "with snippet of We Will Rock You by Queen"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "4 U"
+          },
+          {
+            "name": "Twist"
+          },
+          {
+            "name": "Blind"
+          },
+          {
+            "name": "Get Up!"
+          },
+          {
+            "name": "Freak on a Leash"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:rob-zombie:2019-05-10": {
+    "id": "1390e5bd",
+    "artist": "Rob Zombie",
+    "tour": null,
+    "eventDate": "10-05-2019",
+    "url": "https://www.setlist.fm/setlist/rob-zombie/2019/rockingham-dragway-rockingham-nc-1390e5bd.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Dead City Radio and the New Gods of Supertown"
+          },
+          {
+            "name": "Superbeast"
+          },
+          {
+            "name": "Well, Everybody's Fucking in a U.F.O."
+          },
+          {
+            "name": "Living Dead Girl"
+          },
+          {
+            "name": "More Human Than Human",
+            "cover": "White Zombie"
+          },
+          {
+            "name": "In the Age of the Consecrated Vampire We All Get High"
+          },
+          {
+            "name": "Never Gonna Stop (The Red, Red Kroovy)"
+          },
+          {
+            "name": "The Hideous Exhibitions of a Dedicated Gore Whore"
+          },
+          {
+            "name": "House of 1000 Corpses"
+          },
+          {
+            "name": "Thunder Kiss '65",
+            "cover": "White Zombie"
+          },
+          {
+            "name": "Blitzkrieg Bop",
+            "cover": "Ramones"
+          },
+          {
+            "name": "School's Out",
+            "cover": "Alice Cooper"
+          },
+          {
+            "name": "Dragula"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:machine-gun-kelly:2019-05-10": {
+    "_error": "no artist match"
+  },
+  "opener:evanescence:2019-05-10": {
+    "id": "7390ea91",
+    "artist": "Evanescence",
+    "tour": "Evanescence in Concert 2019",
+    "eventDate": "10-05-2019",
+    "url": "https://www.setlist.fm/setlist/evanescence/2019/rockingham-dragway-rockingham-nc-7390ea91.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "What You Want"
+          },
+          {
+            "name": "Going Under"
+          },
+          {
+            "name": "The Other Side"
+          },
+          {
+            "name": "Made of Stone"
+          },
+          {
+            "name": "Lithium"
+          },
+          {
+            "name": "Sick"
+          },
+          {
+            "name": "Call Me When You're Sober"
+          },
+          {
+            "name": "Imperfection",
+            "info": "Rock Version"
+          },
+          {
+            "name": "Disappear",
+            "with": "Nita Strauss"
+          },
+          {
+            "name": "Imaginary"
+          },
+          {
+            "name": "Bring Me to Life"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:meshuggah:2019-05-10": {
+    "id": "1390d569",
+    "artist": "Meshuggah",
+    "tour": "2019 U.S. Tour",
+    "eventDate": "10-05-2019",
+    "url": "https://www.setlist.fm/setlist/meshuggah/2019/rockingham-dragway-rockingham-nc-1390d569.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Born in Dissonance"
+          },
+          {
+            "name": "The Hurt That Finds You First"
+          },
+          {
+            "name": "Rational Gaze"
+          },
+          {
+            "name": "Future Breed Machine"
+          },
+          {
+            "name": "Lethargica"
+          },
+          {
+            "name": "Bleed"
+          },
+          {
+            "name": "Demiurge"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:motionless-in-white:2019-05-11": {
+    "id": "390dde7",
+    "artist": "Motionless in White",
+    "tour": "Spring Invasion Tour 2019",
+    "eventDate": "11-05-2019",
+    "url": "https://www.setlist.fm/setlist/motionless-in-white/2019/rockingham-dragway-rockingham-nc-390dde7.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Rats"
+          },
+          {
+            "name": "Reincarnate"
+          },
+          {
+            "name": "Necessary Evil"
+          },
+          {
+            "name": "Disguise"
+          },
+          {
+            "name": "Abigail"
+          },
+          {
+            "name": "Voices"
+          },
+          {
+            "name": "Brand New Numb"
+          },
+          {
+            "name": "Devil's Night"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:badflower:2019-05-11": {
+    "id": "2390d4af",
+    "artist": "Badflower",
+    "tour": null,
+    "eventDate": "11-05-2019",
+    "url": "https://www.setlist.fm/setlist/badflower/2019/rockingham-dragway-rockingham-nc-2390d4af.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "x ANA x"
+          },
+          {
+            "name": "Drop Dead"
+          },
+          {
+            "name": "Die"
+          },
+          {
+            "name": "The Jester"
+          },
+          {
+            "name": "Heroin"
+          },
+          {
+            "name": "Animal"
+          },
+          {
+            "name": "Ghost"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:the-damned-things:2019-05-11": {
+    "id": "1390d5ed",
+    "artist": "The Damned Things",
+    "tour": "High Crimes",
+    "eventDate": "11-05-2019",
+    "url": "https://www.setlist.fm/setlist/the-damned-things/2019/rockingham-dragway-rockingham-nc-1390d5ed.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Ironiclast"
+          },
+          {
+            "name": "Friday Night (Going Down in Flames)"
+          },
+          {
+            "name": "Cells"
+          },
+          {
+            "name": "Omen"
+          },
+          {
+            "name": "Carry a Brick"
+          },
+          {
+            "name": "Invincible"
+          },
+          {
+            "name": "Something Good"
+          },
+          {
+            "name": "Graverobber"
+          },
+          {
+            "name": "We've Got a Situation Here"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:wage-war:2019-05-11": {
+    "id": "b903d96",
+    "artist": "Wage War",
+    "tour": null,
+    "eventDate": "11-05-2019",
+    "url": "https://www.setlist.fm/setlist/wage-war/2019/rockingham-dragway-rockingham-nc-b903d96.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Don't Let Me Fade Away"
+          },
+          {
+            "name": "Low"
+          },
+          {
+            "name": "Alive"
+          },
+          {
+            "name": "Witness"
+          },
+          {
+            "name": "The River"
+          },
+          {
+            "name": "Gravity"
+          },
+          {
+            "name": "Stitch"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:crobot:2019-05-11": {
+    "id": "b90dd4a",
+    "artist": "Crobot",
+    "tour": null,
+    "eventDate": "11-05-2019",
+    "url": "https://www.setlist.fm/setlist/crobot/2019/rockingham-dragway-rockingham-nc-b90dd4a.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Legend of the Spaceborne Killer"
+          },
+          {
+            "name": "Skull of Geronimo"
+          },
+          {
+            "name": "Keep Me Down"
+          },
+          {
+            "name": "La mano de Lucifer"
+          },
+          {
+            "name": "Alpha Dawg"
+          },
+          {
+            "name": "Nowhere to Hide"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:foo-fighters:2019-05-12": {
+    "id": "2b90d4ae",
+    "artist": "Foo Fighters",
+    "tour": null,
+    "eventDate": "12-05-2019",
+    "url": "https://www.setlist.fm/setlist/foo-fighters/2019/rockingham-dragway-rockingham-nc-2b90d4ae.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "All My Life"
+          },
+          {
+            "name": "Learn to Fly"
+          },
+          {
+            "name": "The Pretender"
+          },
+          {
+            "name": "The Sky Is a Neighborhood"
+          },
+          {
+            "name": "Times Like These"
+          },
+          {
+            "name": "Drum Solo"
+          },
+          {
+            "name": "Sunday Rain"
+          },
+          {
+            "name": "My Hero"
+          },
+          {
+            "name": "These Days"
+          },
+          {
+            "name": "La Dee Da"
+          },
+          {
+            "name": "Walk"
+          },
+          {
+            "name": "Guitar Solo / Another One Bites the Dust / Imagine / Jump / Blitzkrieg Bop / Day-Oh"
+          },
+          {
+            "name": "Under Pressure",
+            "cover": "Queen & David Bowie"
+          },
+          {
+            "name": "Run"
+          },
+          {
+            "name": "Breakout"
+          },
+          {
+            "name": "Make It Right"
+          },
+          {
+            "name": "Monkey Wrench"
+          },
+          {
+            "name": "Best of You"
+          },
+          {
+            "name": "Breakdown",
+            "cover": "Tom Petty and the Heartbreakers"
+          },
+          {
+            "name": "Stay With Me",
+            "cover": "Faces",
+            "info": "Taylor on vocals; with \"Ain't Talkin' 'Bout Love\" tease"
+          },
+          {
+            "name": "Everlong"
+          }
+        ]
+      }
+    ],
+    "info": "\"Stacked Actors\" and \"Let There Be Rock\" were on the setlist, but were replaced with \"Breakdown\" and \"Stay With Me\".",
+    "role": "opener"
+  },
+  "opener:bring-me-the-horizon:2019-05-12": {
+    "id": "2390d4a3",
+    "artist": "Bring Me the Horizon",
+    "tour": "The Second Base tour",
+    "eventDate": "12-05-2019",
+    "url": "https://www.setlist.fm/setlist/bring-me-the-horizon/2019/rockingham-dragway-rockingham-nc-2390d4a3.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Welcome to MANTRA",
+            "tape": true
+          },
+          {
+            "name": "MANTRA"
+          },
+          {
+            "name": "The House of Wolves"
+          },
+          {
+            "name": "medicine"
+          },
+          {
+            "name": "wonderful life"
+          },
+          {
+            "name": "Shadow Moses"
+          },
+          {
+            "name": "mother tongue"
+          },
+          {
+            "name": "Happy Song"
+          },
+          {
+            "name": "Can You Feel My Heart"
+          },
+          {
+            "name": "Antivist"
+          },
+          {
+            "name": "Drown"
+          },
+          {
+            "name": "Throne"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:311:2019-05-12": {
+    "id": "2b90d4a2",
+    "artist": "311",
+    "tour": "Spring Tour 2019",
+    "eventDate": "12-05-2019",
+    "url": "https://www.setlist.fm/setlist/311/2019/rockingham-dragway-rockingham-nc-2b90d4a2.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Beautiful Disaster"
+          },
+          {
+            "name": "Homebrew"
+          },
+          {
+            "name": "All Mixed Up"
+          },
+          {
+            "name": "Come Original"
+          },
+          {
+            "name": "Freeze Time"
+          },
+          {
+            "name": "Don't Stay Home"
+          },
+          {
+            "name": "Beyond the Gray Sky"
+          },
+          {
+            "name": "Too Late"
+          },
+          {
+            "name": "Applied Science"
+          },
+          {
+            "name": "Amber"
+          },
+          {
+            "name": "You Wouldn't Believe"
+          },
+          {
+            "name": "Feels So Good"
+          },
+          {
+            "name": "Down"
+          }
+        ]
+      }
+    ],
+    "info": "\"Creatures (For a While)\" was on setlist, but not played.",
+    "role": "opener"
+  },
+  "opener:live:2019-05-12": {
+    "id": "3390d4a1",
+    "artist": "Live",
+    "tour": null,
+    "eventDate": "12-05-2019",
+    "url": "https://www.setlist.fm/setlist/live/2019/rockingham-dragway-rockingham-nc-3390d4a1.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "All Over You"
+          },
+          {
+            "name": "I Alone"
+          },
+          {
+            "name": "Lightning Crashes",
+            "info": "Ed apologised to the crowd for the band arriving late to the show"
+          }
+        ]
+      }
+    ],
+    "info": "Shortened set due to band arriving late, the band skipped their usual intro and excluded the \"Sympathy For the Devil\" snippet intro jam in \"All Over You\"",
+    "role": "opener"
+  },
+  "opener:mastodon:2019-05-12": {
+    "id": "3b90d4a0",
+    "artist": "Mastodon",
+    "tour": null,
+    "eventDate": "12-05-2019",
+    "url": "https://www.setlist.fm/setlist/mastodon/2019/rockingham-dragway-rockingham-nc-3b90d4a0.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Sultan's Curse"
+          },
+          {
+            "name": "Crystal Skull"
+          },
+          {
+            "name": "Ember City"
+          },
+          {
+            "name": "Ancient Kingdom"
+          },
+          {
+            "name": "The Motherload"
+          },
+          {
+            "name": "Precious Stones"
+          },
+          {
+            "name": "Show Yourself"
+          },
+          {
+            "name": "Toe to Toes"
+          },
+          {
+            "name": "High Road"
+          },
+          {
+            "name": "Steambreather"
+          },
+          {
+            "name": "Blood and Thunder"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:chevelle:2019-08-18": {
+    "id": "39fc553",
+    "artist": "Chevelle",
+    "tour": null,
+    "eventDate": "18-08-2019",
+    "url": "https://www.setlist.fm/setlist/chevelle/2019/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-39fc553.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Young Wicked"
+          },
+          {
+            "name": "The Clincher"
+          },
+          {
+            "name": "Get Some"
+          },
+          {
+            "name": "Vitamin R (Leading Us Along)"
+          },
+          {
+            "name": "Door to Door Cannibals"
+          },
+          {
+            "name": "Face to the Floor"
+          },
+          {
+            "name": "Joyride (Omen)"
+          },
+          {
+            "name": "Send the Pain Below"
+          },
+          {
+            "name": "The Red"
+          },
+          {
+            "name": "Still Running"
+          },
+          {
+            "name": "I Get It"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:three-days-grace:2019-08-18": {
+    "id": "3b9fc050",
+    "artist": "Three Days Grace",
+    "tour": "Outsider",
+    "eventDate": "18-08-2019",
+    "url": "https://www.setlist.fm/setlist/three-days-grace/2019/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-3b9fc050.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "The Mountain"
+          },
+          {
+            "name": "Home"
+          },
+          {
+            "name": "The Good Life"
+          },
+          {
+            "name": "Pain"
+          },
+          {
+            "name": "Infra-Red"
+          },
+          {
+            "name": "Break"
+          },
+          {
+            "name": "I Hate Everything About You"
+          },
+          {
+            "name": "Animal I Have Become",
+            "info": "with \u201cSeven Nation Army\u201d snippet"
+          },
+          {
+            "name": "Never Too Late"
+          },
+          {
+            "name": "Riot"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:dorothy:2019-08-18": {
+    "id": "539f3b85",
+    "artist": "Dorothy",
+    "tour": "Freedom Tour 2019",
+    "eventDate": "18-08-2019",
+    "url": "https://www.setlist.fm/setlist/dorothy/2019/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-539f3b85.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "After Midnight"
+          },
+          {
+            "name": "Raise Hell"
+          },
+          {
+            "name": "Flawless"
+          },
+          {
+            "name": "Who Do You Love"
+          },
+          {
+            "name": "Down to the Bottom"
+          },
+          {
+            "name": "Freedom"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for Breaking Benjamin.",
+    "role": "opener"
+  },
+  "opener:diamente:2019-08-18": {
+    "_error": "no match"
+  },
+  "opener:author-and-punisher:2019-11-19": {
+    "_error": "no match"
+  },
+  "opener:author-and-punisher:2019-11-24": {
+    "_error": "no match"
+  },
+  "opener:author-and-punisher:2020-01-17": {
+    "_error": "no match"
+  },
+  "opener:david-lee-roth:2020-02-08": {
+    "id": "3b98d034",
+    "artist": "David Lee Roth",
+    "tour": null,
+    "eventDate": "08-02-2020",
+    "url": "https://www.setlist.fm/setlist/david-lee-roth/2020/greensboro-coliseum-greensboro-nc-3b98d034.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "You Really Got Me",
+            "cover": "The Kinks"
+          },
+          {
+            "name": "Beautiful Girls",
+            "cover": "Van Halen"
+          },
+          {
+            "name": "Unchained",
+            "cover": "Van Halen"
+          },
+          {
+            "name": "Panama",
+            "cover": "Van Halen"
+          },
+          {
+            "name": "Jamie's Cryin'",
+            "cover": "Van Halen"
+          },
+          {
+            "name": "Tobacco Road",
+            "cover": "John D. Loudermilk"
+          },
+          {
+            "name": "Runnin' With the Devil",
+            "cover": "Van Halen"
+          },
+          {
+            "name": "Just Like Paradise"
+          },
+          {
+            "name": "Ain't Talkin' 'bout Love",
+            "cover": "Van Halen"
+          },
+          {
+            "name": "Just a Gigolo / I Ain't Got Nobody",
+            "cover": "Louis Prima"
+          },
+          {
+            "name": "Jump",
+            "cover": "Van Halen"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for KISS",
+    "role": "opener"
+  },
+  "opener:cypress-hill:2021-11-11": {
+    "id": "4b8adbe6",
+    "artist": "Cypress Hill",
+    "tour": null,
+    "eventDate": "11-11-2021",
+    "url": "https://www.setlist.fm/setlist/cypress-hill/2021/daytona-international-speedway-daytona-beach-fl-4b8adbe6.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "I Ain't Goin' Out Like That"
+          },
+          {
+            "name": "When the Shit Goes Down"
+          },
+          {
+            "name": "A to the K"
+          },
+          {
+            "name": "Hand on the Pump"
+          },
+          {
+            "name": "Shoot 'Em Up"
+          },
+          {
+            "name": "Pigs"
+          },
+          {
+            "name": "Latin Lingo"
+          },
+          {
+            "name": "Latin Thugs"
+          },
+          {
+            "name": "DJ Lord and Eric Bobo Jam"
+          },
+          {
+            "name": "Roll It Up, Light It Up, Smoke It Up / I Wanna Get High / Cisco Kid / Dr. Greenthumb / Hits From the Bong"
+          },
+          {
+            "name": "How I Could Just Kill a Man"
+          },
+          {
+            "name": "(Rock) Superstar"
+          },
+          {
+            "name": "Insane in the Brain"
+          },
+          {
+            "name": "Jump Around",
+            "cover": "House of Pain"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:grandson:2021-11-11": {
+    "id": "538adbd5",
+    "artist": "grandson",
+    "tour": null,
+    "eventDate": "11-11-2021",
+    "url": "https://www.setlist.fm/setlist/grandson/2021/daytona-international-speedway-daytona-beach-fl-538adbd5.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "In Over My Head"
+          },
+          {
+            "name": "Despicable"
+          },
+          {
+            "name": "We Did It!!!"
+          },
+          {
+            "name": "Oh No!!!"
+          },
+          {
+            "name": "6:00"
+          },
+          {
+            "name": "Blood // Water"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:dead-sara:2021-11-11": {
+    "id": "438adbcb",
+    "artist": "Dead Sara",
+    "tour": null,
+    "eventDate": "11-11-2021",
+    "url": "https://www.setlist.fm/setlist/dead-sara/2021/daytona-international-speedway-daytona-beach-fl-438adbcb.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Lemon Scent"
+          },
+          {
+            "name": "Unamerican",
+            "info": "With Song 2 (Blur Cover) outro"
+          },
+          {
+            "name": "Mona Lisa"
+          },
+          {
+            "name": "Hypnotic"
+          },
+          {
+            "name": "Gimme Gimme"
+          },
+          {
+            "name": "Weatherman"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:spiritbox:2021-11-11": {
+    "id": "538adbcd",
+    "artist": "Spiritbox",
+    "tour": null,
+    "eventDate": "11-11-2021",
+    "url": "https://www.setlist.fm/setlist/spiritbox/2021/daytona-international-speedway-daytona-beach-fl-538adbcd.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Sun Killer"
+          },
+          {
+            "name": "Rule of Nines"
+          },
+          {
+            "name": "Blessed Be"
+          },
+          {
+            "name": "Hurt You"
+          },
+          {
+            "name": "Constance"
+          },
+          {
+            "name": "Circle With Me"
+          },
+          {
+            "name": "Holy Roller"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:pennywise:2021-11-12": {
+    "id": "238ad0fb",
+    "artist": "Pennywise",
+    "tour": null,
+    "eventDate": "12-11-2021",
+    "url": "https://www.setlist.fm/setlist/pennywise/2021/daytona-international-speedway-daytona-beach-fl-238ad0fb.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Wouldn't It Be Nice"
+          },
+          {
+            "name": "Living for Today"
+          },
+          {
+            "name": "My Own Country"
+          },
+          {
+            "name": "Fight Till You Die"
+          },
+          {
+            "name": "Same Old Story"
+          },
+          {
+            "name": "Fight for Your Right",
+            "cover": "Beastie Boys"
+          },
+          {
+            "name": "Pennywise"
+          },
+          {
+            "name": "T.N.T.",
+            "cover": "AC/DC"
+          },
+          {
+            "name": "Society"
+          },
+          {
+            "name": "Fuck Authority"
+          },
+          {
+            "name": "Bro Hymn"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:ice-nine-kills:2021-11-12": {
+    "id": "2b8ad0f2",
+    "artist": "Ice Nine Kills",
+    "tour": "Hip To Be Scared Tour",
+    "eventDate": "12-11-2021",
+    "url": "https://www.setlist.fm/setlist/ice-nine-kills/2021/daytona-international-speedway-daytona-beach-fl-2b8ad0f2.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Rainy Day",
+            "info": "Extended intro"
+          },
+          {
+            "name": "SAVAGES",
+            "info": "Spencer's mic goes out, Joe sings the 2nd verse and chorus"
+          },
+          {
+            "name": "Hip to Be Scared",
+            "info": "Spencer \"kills\" Jose Mangin on stage"
+          },
+          {
+            "name": "Funeral Derangements"
+          },
+          {
+            "name": "Welcome to Horrorwood"
+          },
+          {
+            "name": "The American Nightmare"
+          },
+          {
+            "name": "IT Is the End"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:ayron-jones:2021-11-12": {
+    "id": "2b8ad0f6",
+    "artist": "Ayron Jones",
+    "tour": "On The Road",
+    "eventDate": "12-11-2021",
+    "url": "https://www.setlist.fm/setlist/ayron-jones/2021/daytona-international-speedway-daytona-beach-fl-2b8ad0f6.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Boys From the Puget Sound"
+          },
+          {
+            "name": "Emily"
+          },
+          {
+            "name": "Supercharged"
+          },
+          {
+            "name": "Breed",
+            "cover": "Nirvana"
+          },
+          {
+            "name": "Baptized in Muddy Waters"
+          },
+          {
+            "name": "Mercy"
+          },
+          {
+            "name": "Take Me Away"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:badflower:2021-11-13": {
+    "id": "738aca59",
+    "artist": "Badflower",
+    "tour": "This Is How The World Ends",
+    "eventDate": "13-11-2021",
+    "url": "https://www.setlist.fm/setlist/badflower/2021/daytona-international-speedway-daytona-beach-fl-738aca59.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Fukboi"
+          },
+          {
+            "name": "Don't Hate Me"
+          },
+          {
+            "name": "Johnny Wants to Fight"
+          },
+          {
+            "name": "The Jester"
+          },
+          {
+            "name": "Stalker"
+          },
+          {
+            "name": "Heroin"
+          },
+          {
+            "name": "Ghost"
+          },
+          {
+            "name": "30"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:fever-333:2021-11-13": {
+    "id": "6b8aca66",
+    "artist": "FEVER 333",
+    "tour": null,
+    "eventDate": "13-11-2021",
+    "url": "https://www.setlist.fm/setlist/fever-333/2021/daytona-international-speedway-daytona-beach-fl-6b8aca66.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "BITE BACK"
+          },
+          {
+            "name": "Only One"
+          },
+          {
+            "name": "Made an America"
+          },
+          {
+            "name": "One of Us"
+          },
+          {
+            "name": "Trigger"
+          },
+          {
+            "name": "Burn It"
+          },
+          {
+            "name": "Hunting Season"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:falling-in-reverse:2021-11-14": {
+    "id": "6b8ac27e",
+    "artist": "Falling in Reverse",
+    "tour": null,
+    "eventDate": "14-11-2021",
+    "url": "https://www.setlist.fm/setlist/falling-in-reverse/2021/daytona-international-speedway-daytona-beach-fl-6b8ac27e.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "I'm Not a Vampire"
+          },
+          {
+            "name": "Guillotine IV (The Final Chapter)"
+          },
+          {
+            "name": "Rolling Stone"
+          },
+          {
+            "name": "Born to Lead"
+          },
+          {
+            "name": "Drugs"
+          },
+          {
+            "name": "The Drug in Me Is You"
+          },
+          {
+            "name": "Just Like You"
+          },
+          {
+            "name": "Popular Monster"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:sleeping-with-sirens:2021-11-14": {
+    "id": "6b8ac272",
+    "artist": "Sleeping With Sirens",
+    "tour": null,
+    "eventDate": "14-11-2021",
+    "url": "https://www.setlist.fm/setlist/sleeping-with-sirens/2021/daytona-international-speedway-daytona-beach-fl-6b8ac272.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Leave It All Behind"
+          },
+          {
+            "name": "Kick Me"
+          },
+          {
+            "name": "Tally It Up: Settle the Score"
+          },
+          {
+            "name": "Never Enough"
+          },
+          {
+            "name": "Agree to Disagree"
+          },
+          {
+            "name": "Bloody Knuckles"
+          },
+          {
+            "name": "If You Can't Hang"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:alien-weaponry:2021-11-14": {
+    "id": "6b8ac276",
+    "artist": "Alien Weaponry",
+    "tour": "Tangaroa North American Tour",
+    "eventDate": "14-11-2021",
+    "url": "https://www.setlist.fm/setlist/alien-weaponry/2021/daytona-international-speedway-daytona-beach-fl-6b8ac276.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Hatupatu"
+          },
+          {
+            "name": "Holding My Breath"
+          },
+          {
+            "name": "Tangaroa"
+          },
+          {
+            "name": "Buried Underground"
+          },
+          {
+            "name": "Kai tangata"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:the-acid-helps:2022-02-22": {
+    "id": "3b885488",
+    "artist": "The Acid Helps",
+    "tour": null,
+    "eventDate": "22-02-2022",
+    "url": "https://www.setlist.fm/setlist/the-acid-helps/2022/capital-one-arena-washington-dc-3b885488.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Killing An Animal"
+          },
+          {
+            "name": "Disco Blanco"
+          },
+          {
+            "name": "Idiot VS. Moron"
+          },
+          {
+            "name": "Sick City"
+          },
+          {
+            "name": "Rattled"
+          },
+          {
+            "name": "This Thing Will Not Die"
+          },
+          {
+            "name": "All Insane"
+          },
+          {
+            "name": "Sink Pisser"
+          },
+          {
+            "name": "LA BREA"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for Tool.",
+    "role": "opener"
+  },
+  "opener:chevelle:2022-03-11": {
+    "id": "389f1fb",
+    "artist": "Chevelle",
+    "tour": null,
+    "eventDate": "11-03-2022",
+    "url": "https://www.setlist.fm/setlist/chevelle/2022/greensboro-coliseum-complex-greensboro-nc-389f1fb.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "An Island"
+          },
+          {
+            "name": "Door to Door Cannibals"
+          },
+          {
+            "name": "Self Destructor"
+          },
+          {
+            "name": "Vitamin R (Leading Us Along)"
+          },
+          {
+            "name": "Joyride (Omen)"
+          },
+          {
+            "name": "Face to the Floor"
+          },
+          {
+            "name": "Verruckt"
+          },
+          {
+            "name": "Young Wicked"
+          },
+          {
+            "name": "The Clincher"
+          },
+          {
+            "name": "Send the Pain Below"
+          },
+          {
+            "name": "The Red"
+          },
+          {
+            "name": "I Get It"
+          },
+          {
+            "name": "Mars Simula"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:the-acid-helps:2022-03-20": {
+    "id": "63890ad3",
+    "artist": "The Acid Helps",
+    "tour": null,
+    "eventDate": "20-03-2022",
+    "url": "https://www.setlist.fm/setlist/the-acid-helps/2022/rocket-mortgage-fieldhouse-cleveland-oh-63890ad3.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Killing An Animal"
+          },
+          {
+            "name": "Disco Blanco"
+          },
+          {
+            "name": "Idiot VS. Moron"
+          },
+          {
+            "name": "Sick City"
+          },
+          {
+            "name": "Rattled"
+          },
+          {
+            "name": "This Thing Will Not Die"
+          },
+          {
+            "name": "All Insane"
+          },
+          {
+            "name": "Sink Pisser"
+          },
+          {
+            "name": "LA BREA"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for Tool.",
+    "role": "opener"
+  },
+  "opener:boy-harsher:2022-04-28": {
+    "id": "3bb658b8",
+    "artist": "Boy Harsher",
+    "tour": null,
+    "eventDate": "28-04-2022",
+    "url": "https://www.setlist.fm/setlist/boy-harsher/2022/red-hat-amphitheater-raleigh-nc-3bb658b8.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Keep Driving"
+          },
+          {
+            "name": "Fate"
+          },
+          {
+            "name": "Westerners"
+          },
+          {
+            "name": "Come Closer"
+          },
+          {
+            "name": "Tears"
+          },
+          {
+            "name": "Modulations"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:distrubed:2022-05-20": {
+    "_error": "no match"
+  },
+  "opener:the-pretty-reckless:2022-05-20": {
+    "id": "63b70acb",
+    "artist": "The Pretty Reckless",
+    "tour": "Death By Rock and Roll",
+    "eventDate": "20-05-2022",
+    "url": "https://www.setlist.fm/setlist/the-pretty-reckless/2022/veterans-united-home-loans-amphitheater-at-virginia-beach-virginia-beach-va-63b70acb.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Loud Love",
+            "cover": "Soundgarden"
+          },
+          {
+            "name": "Since You're Gone"
+          },
+          {
+            "name": "Only Love Can Save Me Now"
+          },
+          {
+            "name": "Death by Rock and Roll"
+          },
+          {
+            "name": "And So It Went"
+          },
+          {
+            "name": "Make Me Wanna Die"
+          },
+          {
+            "name": "Fucked Up World"
+          },
+          {
+            "name": "Going to Hell"
+          },
+          {
+            "name": "Heaven Knows"
+          },
+          {
+            "name": "Take Me Down"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:living-colour:2022-05-20": {
+    "id": "73b70acd",
+    "artist": "Living Colour",
+    "tour": null,
+    "eventDate": "20-05-2022",
+    "url": "https://www.setlist.fm/setlist/living-colour/2022/veterans-united-home-loans-amphitheater-at-virginia-beach-virginia-beach-va-73b70acd.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Middle Man"
+          },
+          {
+            "name": ""
+          },
+          {
+            "name": "Desperate People"
+          },
+          {
+            "name": "Ignorance Is Bliss"
+          },
+          {
+            "name": "Love Rears Its Ugly Head",
+            "info": "Preceded by accidental \"I Want to Know\" cue."
+          },
+          {
+            "name": "Glamour Boys",
+            "info": "With unknown intro snippet"
+          },
+          {
+            "name": "Type"
+          },
+          {
+            "name": "Cult of Personality"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:dirty-honey:2022-05-20": {
+    "id": "73b70ac9",
+    "artist": "Dirty Honey",
+    "tour": null,
+    "eventDate": "20-05-2022",
+    "url": "https://www.setlist.fm/setlist/dirty-honey/2022/veterans-united-home-loans-amphitheater-at-virginia-beach-virginia-beach-va-73b70ac9.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Gypsy"
+          },
+          {
+            "name": "Heartbreaker"
+          },
+          {
+            "name": "Down the Road"
+          },
+          {
+            "name": "Let's Go Crazy",
+            "cover": "Prince"
+          },
+          {
+            "name": "California Dreamin'"
+          },
+          {
+            "name": "Another Last Time"
+          },
+          {
+            "name": "Bass Solo"
+          },
+          {
+            "name": "Drum Solo"
+          },
+          {
+            "name": "The Wire"
+          },
+          {
+            "name": "When I'm Gone"
+          },
+          {
+            "name": "Rolling 7s"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:bad-wolves:2022-05-20": {
+    "_error": "empty setlist"
+  },
+  "opener:ayron-jones:2022-05-20": {
+    "_error": "empty setlist"
+  },
+  "opener:moodie-black:2022-06-22": {
+    "_error": "empty setlist"
+  },
+  "opener:run-the-jewels:2022-07-31": {
+    "id": "73b20eed",
+    "artist": "Run the Jewels",
+    "tour": "\u201cPublic Service Announcement\u201d Tour",
+    "eventDate": "31-07-2022",
+    "url": "https://www.setlist.fm/setlist/run-the-jewels/2022/pnc-arena-raleigh-nc-73b20eed.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "We Are the World",
+            "cover": "USA for Africa",
+            "tape": true
+          },
+          {
+            "name": "Close Your Eyes (And Count to Fuck)"
+          },
+          {
+            "name": "yankee and the brave (ep. 4)"
+          },
+          {
+            "name": "ooh la la"
+          },
+          {
+            "name": "Blockbuster Night Part 1"
+          },
+          {
+            "name": "Oh My Darling Don't Cry"
+          },
+          {
+            "name": "Legend Has It"
+          },
+          {
+            "name": "JU$T"
+          },
+          {
+            "name": "Stay Gold"
+          },
+          {
+            "name": "Don't Get Captured"
+          },
+          {
+            "name": "walking in the snow"
+          },
+          {
+            "name": "a few words for the firing squad (radiation)"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:ab\u00e9lard:2022-08-31": {
+    "id": "6bb34222",
+    "artist": "AB\u00c9LARD",
+    "tour": null,
+    "eventDate": "31-08-2022",
+    "url": "https://www.setlist.fm/setlist/abelard/2022/lincoln-financial-field-philadelphia-pa-6bb34222.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Sonne",
+            "cover": "Rammstein"
+          },
+          {
+            "name": "Mutter",
+            "cover": "Rammstein"
+          },
+          {
+            "name": "Diamant",
+            "cover": "Rammstein"
+          },
+          {
+            "name": "Mein Herz brennt",
+            "cover": "Rammstein"
+          },
+          {
+            "name": "Zeit",
+            "cover": "Rammstein"
+          },
+          {
+            "name": "Fr\u00fchling in Paris",
+            "cover": "Rammstein"
+          },
+          {
+            "name": "Ohne dich",
+            "cover": "Rammstein"
+          },
+          {
+            "name": "Deutschland",
+            "cover": "Rammstein"
+          },
+          {
+            "name": "Du hast",
+            "cover": "Rammstein"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:breaking-benjamin:2022-09-27": {
+    "id": "33b1a475",
+    "artist": "Breaking Benjamin",
+    "tour": "American Tour 2022",
+    "eventDate": "27-09-2022",
+    "url": "https://www.setlist.fm/setlist/breaking-benjamin/2022/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-33b1a475.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Blow Me Away"
+          },
+          {
+            "name": "Sooner or Later"
+          },
+          {
+            "name": "Firefly"
+          },
+          {
+            "name": "Follow"
+          },
+          {
+            "name": "So Cold"
+          },
+          {
+            "name": "Angels Fall"
+          },
+          {
+            "name": "Breath"
+          },
+          {
+            "name": "Failure"
+          },
+          {
+            "name": "Who Wants to Live Forever",
+            "cover": "Queen"
+          },
+          {
+            "name": "Polyamorous"
+          },
+          {
+            "name": "Give Me a Sign"
+          },
+          {
+            "name": "Red Cold River"
+          },
+          {
+            "name": "Until the End"
+          },
+          {
+            "name": "Torn in Two"
+          },
+          {
+            "name": "I Will Not Bow"
+          },
+          {
+            "name": "The Diary of Jane"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:night-club:2022-11-01": {
+    "_error": "no match"
+  },
+  "opener:coheed-cambria:2023-05-21": {
+    "_error": "no artist match"
+  },
+  "opener:pantera:2023-08-04": {
+    "id": "1ba421b4",
+    "artist": "Pantera",
+    "tour": "North American Tour 2023",
+    "eventDate": "04-08-2023",
+    "url": "https://www.setlist.fm/setlist/pantera/2023/metlife-stadium-east-rutherford-nj-1ba421b4.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Regular People (Conceit)",
+            "tape": true
+          },
+          {
+            "name": "In Heaven (Lady in the Radiator Song)",
+            "cover": "Peter Ivers & David Lynch",
+            "tape": true
+          },
+          {
+            "name": "A New Level"
+          },
+          {
+            "name": "Mouth for War"
+          },
+          {
+            "name": "Strength Beyond Strength"
+          },
+          {
+            "name": "Becoming",
+            "info": "With 'Thrones of Rejection' outro"
+          },
+          {
+            "name": "I'm Broken",
+            "info": "With 'By Demons Be Driven' outro"
+          },
+          {
+            "name": "Cemetery Gates",
+            "tape": true,
+            "info": "With Dimebag Darrell and Vinnie Paul memorial on video"
+          },
+          {
+            "name": "5 Minutes Alone"
+          },
+          {
+            "name": "This Love"
+          },
+          {
+            "name": "Fucking Hostile"
+          },
+          {
+            "name": "Walk"
+          },
+          {
+            "name": "Domination / Hollow"
+          },
+          {
+            "name": "Cowboys From Hell"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:mammoth:2023-08-04": {
+    "id": "3a421af",
+    "artist": "Mammoth",
+    "tour": "Mammoth II",
+    "eventDate": "04-08-2023",
+    "url": "https://www.setlist.fm/setlist/mammoth/2023/metlife-stadium-east-rutherford-nj-3a421af.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Mammoth"
+          },
+          {
+            "name": "Mr. Ed"
+          },
+          {
+            "name": "Like a Pastime"
+          },
+          {
+            "name": "I'm Alright"
+          },
+          {
+            "name": "You're to Blame"
+          },
+          {
+            "name": "Another Celebration at the End of the World"
+          },
+          {
+            "name": "Don't Back Down"
+          }
+        ]
+      }
+    ],
+    "info": "Opening for Metallica",
+    "role": "opener"
+  },
+  "opener:danzig:2023-09-07": {
+    "_error": "no match"
+  },
+  "opener:knocked-loose:2023-09-07": {
+    "_error": "no match"
+  },
+  "opener:the-doobie-brothers:2023-11-09": {
+    "id": "4ba18702",
+    "artist": "The Doobie Brothers",
+    "tour": "50th Anniversary Tour",
+    "eventDate": "09-11-2023",
+    "url": "https://www.setlist.fm/setlist/the-doobie-brothers/2023/pnc-arena-raleigh-nc-4ba18702.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Rockin' Down the Highway"
+          },
+          {
+            "name": "Here to Love You"
+          },
+          {
+            "name": "Take Me in Your Arms (Rock Me a Little While)",
+            "cover": "Eddie Holland"
+          },
+          {
+            "name": "It Keeps You Runnin'"
+          },
+          {
+            "name": "Jesus Is Just Alright",
+            "cover": "The Art Reynolds Singers"
+          },
+          {
+            "name": "Minute by Minute"
+          },
+          {
+            "name": "Black Water"
+          },
+          {
+            "name": "What a Fool Believes",
+            "cover": "Kenny Loggins"
+          },
+          {
+            "name": "Takin' It to the Streets"
+          },
+          {
+            "name": "Long Train Runnin'"
+          },
+          {
+            "name": "China Grove"
+          },
+          {
+            "name": "Listen to the Music"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for the Eagles, replacing Steely Dan",
+    "role": "opener"
+  },
+  "opener:bad-wolves:2023-11-17": {
+    "id": "33a100d9",
+    "artist": "Bad Wolves",
+    "tour": null,
+    "eventDate": "17-11-2023",
+    "url": "https://www.setlist.fm/setlist/bad-wolves/2023/durham-performing-arts-center-durham-nc-33a100d9.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Bad Friend"
+          },
+          {
+            "name": "If Tomorrow Never Comes"
+          },
+          {
+            "name": "Killing Me Slowly"
+          },
+          {
+            "name": "Savior"
+          },
+          {
+            "name": "Comatose"
+          },
+          {
+            "name": "Sober"
+          },
+          {
+            "name": "Legends Never Die"
+          },
+          {
+            "name": "Die About It"
+          },
+          {
+            "name": "Lifeline"
+          },
+          {
+            "name": "Zombie",
+            "cover": "The Cranberries"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:eva-under-fire:2023-11-17": {
+    "id": "3ba100d8",
+    "artist": "Eva Under Fire",
+    "tour": null,
+    "eventDate": "17-11-2023",
+    "url": "https://www.setlist.fm/setlist/eva-under-fire/2023/durham-performing-arts-center-durham-nc-3ba100d8.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Comatose"
+          },
+          {
+            "name": "Heroin(e)"
+          },
+          {
+            "name": "Devil in Disguise"
+          },
+          {
+            "name": "Coming for Blood"
+          },
+          {
+            "name": "Separate Ways (Worlds Apart)",
+            "cover": "Journey"
+          },
+          {
+            "name": "Unstoppable/We Will Rock You"
+          },
+          {
+            "name": "Blow"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:elder:2024-01-21": {
+    "id": "13ac9971",
+    "artist": "Elder",
+    "tour": "USA Tour 2024",
+    "eventDate": "21-01-2024",
+    "url": "https://www.setlist.fm/setlist/elder/2024/spectrum-center-charlotte-nc-13ac9971.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Sanctuary"
+          },
+          {
+            "name": "Merged in Dreams - Ne Plus Ultra"
+          },
+          {
+            "name": "Halcyon"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for Tool",
+    "role": "opener"
+  },
+  "opener:elder:2024-02-18": {
+    "id": "13ad819d",
+    "artist": "Elder",
+    "tour": "USA Tour 2024",
+    "eventDate": "18-02-2024",
+    "url": "https://www.setlist.fm/setlist/elder/2024/t-mobile-arena-las-vegas-nv-13ad819d.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Sanctuary"
+          },
+          {
+            "name": "Merged in Dreams - Ne Plus Ultra"
+          },
+          {
+            "name": "Halcyon"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for Tool",
+    "role": "opener"
+  },
+  "opener:poppy:2024-03-29": {
+    "id": "babb5fe",
+    "artist": "Poppy",
+    "tour": null,
+    "eventDate": "29-03-2024",
+    "url": "https://www.setlist.fm/setlist/poppy/2024/pnc-arena-raleigh-nc-babb5fe.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "BLOODMONEY"
+          },
+          {
+            "name": "Church Outfit"
+          },
+          {
+            "name": "Bite Your Teeth"
+          },
+          {
+            "name": "I Disagree"
+          },
+          {
+            "name": "X"
+          },
+          {
+            "name": "Hard"
+          },
+          {
+            "name": "Sit/Stay"
+          },
+          {
+            "name": "V.A.N",
+            "cover": "Bad Omens"
+          },
+          {
+            "name": "Fill the Crown"
+          },
+          {
+            "name": "Anything Like Me"
+          },
+          {
+            "name": "Scary Mask"
+          },
+          {
+            "name": "Concrete"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:theory-of-a-deadman:2024-05-16": {
+    "id": "2babf0e2",
+    "artist": "Theory of a Deadman",
+    "tour": null,
+    "eventDate": "16-05-2024",
+    "url": "https://www.setlist.fm/setlist/theory-of-a-deadman/2024/temple-stage-columbus-oh-2babf0e2.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Sweet Caroline",
+            "cover": "Neil Diamond",
+            "tape": true
+          },
+          {
+            "name": "The Last of Us Theme Song",
+            "cover": "Gustavo Santaolalla",
+            "tape": true
+          },
+          {
+            "name": "Dinosaur"
+          },
+          {
+            "name": "Bitch Came Back"
+          },
+          {
+            "name": "Two of Us (Stuck)"
+          },
+          {
+            "name": "Lowlife"
+          },
+          {
+            "name": "Ambulance"
+          },
+          {
+            "name": "Hate My Life"
+          },
+          {
+            "name": "Rx (Medicate)"
+          },
+          {
+            "name": "Bad Girlfriend"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:pod:2024-05-16": {
+    "id": "23abf0e7",
+    "artist": "P.O.D.",
+    "tour": "I Got That Tour 2024",
+    "eventDate": "16-05-2024",
+    "url": "https://www.setlist.fm/setlist/pod/2024/temple-stage-columbus-oh-23abf0e7.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Drop"
+          },
+          {
+            "name": "Boom"
+          },
+          {
+            "name": "Murdered Love"
+          },
+          {
+            "name": "I Won't Bow Down"
+          },
+          {
+            "name": "Youth of the Nation"
+          },
+          {
+            "name": "Southtown",
+            "info": "Followed by crowd singing Happy Birthday to Sonny. Sonny then threw the cake into the crowd."
+          },
+          {
+            "name": "Alive"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:seether:2024-05-17": {
+    "id": "33abf099",
+    "artist": "Seether",
+    "tour": null,
+    "eventDate": "17-05-2024",
+    "url": "https://www.setlist.fm/setlist/seether/2024/temple-stage-columbus-oh-33abf099.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Gasoline"
+          },
+          {
+            "name": "Fine Again"
+          },
+          {
+            "name": "Broken",
+            "info": "Acoustic"
+          },
+          {
+            "name": "Country Song"
+          },
+          {
+            "name": "Rise Above This"
+          },
+          {
+            "name": "Nobody Praying for Me"
+          },
+          {
+            "name": "Dangerous"
+          },
+          {
+            "name": "Fake It"
+          },
+          {
+            "name": "Remedy"
+          }
+        ]
+      }
+    ],
+    "info": "Temple Stage",
+    "role": "opener"
+  },
+  "opener:anthrax:2024-05-17": {
+    "id": "23abf09f",
+    "artist": "Anthrax",
+    "tour": null,
+    "eventDate": "17-05-2024",
+    "url": "https://www.setlist.fm/setlist/anthrax/2024/temple-stage-columbus-oh-23abf09f.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Blues Brothers Intro",
+            "cover": "The Blues Brothers Band",
+            "tape": true
+          },
+          {
+            "name": "Among the Living"
+          },
+          {
+            "name": "Caught in a Mosh"
+          },
+          {
+            "name": "Madhouse"
+          },
+          {
+            "name": "Metal Thrashing Mad"
+          },
+          {
+            "name": "Antisocial",
+            "cover": "Trust"
+          },
+          {
+            "name": "A.I.R."
+          },
+          {
+            "name": "Got the Time",
+            "cover": "Joe Jackson"
+          },
+          {
+            "name": "Indians"
+          }
+        ]
+      }
+    ],
+    "info": "Temple Stage",
+    "role": "opener"
+  },
+  "opener:dirty-honey:2024-05-17": {
+    "id": "3babf09c",
+    "artist": "Dirty Honey",
+    "tour": "Can't Find the Brakes Tour",
+    "eventDate": "17-05-2024",
+    "url": "https://www.setlist.fm/setlist/dirty-honey/2024/temple-stage-columbus-oh-3babf09c.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Can't Find the Brakes"
+          },
+          {
+            "name": "California Dreamin'"
+          },
+          {
+            "name": "Heartbreaker"
+          },
+          {
+            "name": "Dirty Mind"
+          },
+          {
+            "name": "Don't Put Out the Fire"
+          },
+          {
+            "name": "When I'm Gone"
+          },
+          {
+            "name": "Won't Take Me Alive"
+          },
+          {
+            "name": "Rolling 7s"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:starset:2024-05-18": {
+    "id": "4babf33e",
+    "artist": "STARSET",
+    "tour": "IMMERSION: THE FINAL CHAPTER",
+    "eventDate": "18-05-2024",
+    "url": "https://www.setlist.fm/setlist/starset/2024/temple-stage-columbus-oh-4babf33e.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "MANIFEST"
+          },
+          {
+            "name": "TRIALS"
+          },
+          {
+            "name": "Carnivore"
+          },
+          {
+            "name": "Monster"
+          },
+          {
+            "name": "Waiting on the Sky to Change",
+            "cover": "Downplay",
+            "with": "Benjamin Burnley",
+            "info": "First time performed with Ben"
+          },
+          {
+            "name": "Brave New World"
+          },
+          {
+            "name": "DEVOLUTION"
+          },
+          {
+            "name": "My Demons"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:living-colour:2024-05-18": {
+    "id": "4babf332",
+    "artist": "Living Colour",
+    "tour": null,
+    "eventDate": "18-05-2024",
+    "url": "https://www.setlist.fm/setlist/living-colour/2024/temple-stage-columbus-oh-4babf332.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Middle Man"
+          },
+          {
+            "name": "Leave It Alone"
+          },
+          {
+            "name": "Kick Out the Jams",
+            "cover": "MC5"
+          },
+          {
+            "name": "Ignorance Is Bliss"
+          },
+          {
+            "name": "Type"
+          },
+          {
+            "name": "Time's Up"
+          },
+          {
+            "name": "Sailin' On",
+            "cover": "Bad Brains"
+          },
+          {
+            "name": "Cult of Personality"
+          },
+          {
+            "name": "Should I Stay or Should I Go",
+            "cover": "The Clash"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:a-day-to-remember:2024-05-19": {
+    "id": "43abf3f3",
+    "artist": "A Day to Remember",
+    "tour": null,
+    "eventDate": "19-05-2024",
+    "url": "https://www.setlist.fm/setlist/a-day-to-remember/2024/temple-stage-columbus-oh-43abf3f3.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "The Downfall of Us All"
+          },
+          {
+            "name": "All I Want"
+          },
+          {
+            "name": "Paranoia"
+          },
+          {
+            "name": "Miracle"
+          },
+          {
+            "name": "2nd Sucks"
+          },
+          {
+            "name": "Right Back at It Again"
+          },
+          {
+            "name": "Rescue Me",
+            "cover": "Marshmello"
+          },
+          {
+            "name": "Have Faith in Me"
+          },
+          {
+            "name": "I'm Made of Wax, Larry, What Are You Made Of?"
+          },
+          {
+            "name": "Mindreader"
+          },
+          {
+            "name": "Resentment"
+          },
+          {
+            "name": "If It Means a Lot to You"
+          },
+          {
+            "name": "All Signs Point to Lauderdale"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:royal-blood:2024-05-19": {
+    "id": "4babf3f2",
+    "artist": "Royal Blood",
+    "tour": "Back to the Water Below",
+    "eventDate": "19-05-2024",
+    "url": "https://www.setlist.fm/setlist/royal-blood/2024/temple-stage-columbus-oh-4babf3f2.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Out of the Black"
+          },
+          {
+            "name": "Come on Over"
+          },
+          {
+            "name": "Boilermaker"
+          },
+          {
+            "name": "Mountains at Midnight"
+          },
+          {
+            "name": "Lights Out"
+          },
+          {
+            "name": "Trouble's Coming"
+          },
+          {
+            "name": "Little Monster"
+          },
+          {
+            "name": "How Did We Get So Dark?"
+          },
+          {
+            "name": "Figure It Out"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:bad-religion:2024-05-19": {
+    "id": "53abf3f1",
+    "artist": "Bad Religion",
+    "tour": null,
+    "eventDate": "19-05-2024",
+    "url": "https://www.setlist.fm/setlist/bad-religion/2024/temple-stage-columbus-oh-53abf3f1.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "The Defense"
+          },
+          {
+            "name": "No Control"
+          },
+          {
+            "name": "New Dark Ages"
+          },
+          {
+            "name": "Recipe for Hate"
+          },
+          {
+            "name": "21st Century (Digital Boy)"
+          },
+          {
+            "name": "Do What You Want"
+          },
+          {
+            "name": "Infected"
+          },
+          {
+            "name": "I Want to Conquer the World"
+          },
+          {
+            "name": "We're Only Gonna Die"
+          },
+          {
+            "name": "Sorrow"
+          },
+          {
+            "name": "You"
+          },
+          {
+            "name": "American Jesus"
+          }
+        ]
+      }
+    ],
+    "info": "Setlist incomplete and out of order",
+    "role": "opener"
+  },
+  "opener:teen-jesus-and-the-jean-teaser:2025-05-13": {
+    "_error": "no match"
+  },
+  "opener:puddles-pity-party:2026-04-01": {
+    "_error": "no match"
   }
 }
