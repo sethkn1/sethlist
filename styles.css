@@ -2866,25 +2866,75 @@ main {
   border-bottom-color: var(--paper);
 }
 
-/* Photo gallery — flex grid that handles 1-6+ photos gracefully.
-   Photos auto-fit at min 200px wide; figcaption sits below each image. */
-.about-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 14px;
-  margin-bottom: 32px;
+/* Photo gallery section — heading + descriptive paragraph + masonry layout.
+   Sits between "Why I keep going" and "What this site is" in the bio. */
+.about-gallery-section {
+  margin: 40px 0;
+  /* Allow the gallery to extend wider than the main reading column so
+     21 photos have room to breathe without squashing into 2 narrow columns. */
+  margin-left: -40px;
+  margin-right: -40px;
 }
+.about-gallery-heading {
+  /* Override default about-section spacing inside the gallery wrapper */
+  margin-top: 0 !important;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.about-gallery-desc {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: -8px 40px 24px 40px;
+}
+
+/* Masonry-style layout via CSS columns. Each photo retains its natural
+   aspect ratio (no crop), and the layout flows top-to-bottom within each
+   column. Reads as a real photo wall vs. a uniform grid. */
+.about-gallery {
+  column-count: 4;
+  column-gap: 14px;
+  padding: 0 40px;
+  margin-bottom: 0;
+}
+@media (max-width: 1100px) {
+  .about-gallery { column-count: 3; }
+}
+@media (max-width: 720px) {
+  .about-gallery {
+    column-count: 2;
+    padding: 0 20px;
+  }
+  .about-gallery-section { margin-left: -20px; margin-right: -20px; }
+  .about-gallery-heading,
+  .about-gallery-desc { margin-left: 20px; margin-right: 20px; }
+}
+@media (max-width: 460px) {
+  .about-gallery { column-count: 1; }
+}
+
 .about-photo {
-  margin: 0;
+  /* Keep each figure intact within its column (don't break across columns) */
+  break-inside: avoid;
+  page-break-inside: avoid;  /* legacy fallback */
+  margin: 0 0 14px 0;
   border: 1px solid var(--muted);
   background: var(--ink);
+  /* Subtle inertia on hover for the "I want to look closer" instinct */
+  transition: border-color 120ms, transform 200ms;
+}
+.about-photo:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 .about-photo img {
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  /* No aspect-ratio override — let each image keep its natural shape so
+     portrait + landscape mix gracefully in the masonry. */
 }
 .about-photo figcaption {
   font-family: var(--font-mono);

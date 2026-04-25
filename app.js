@@ -3479,13 +3479,57 @@ function renderStats() {
    ABOUT_PHOTOS list with image paths to enable the gallery.
    ============================================================ */
 
-// Photos for the About page. Each entry: { src, alt, caption (optional) }.
-// Keep this list small (4-6 items recommended); the layout adapts to length.
-// Drop image files into images/about/ and reference them here.
+// Photos for the About page. Each entry has:
+//   - src: path to the image (drop files into images/about/)
+//   - alt: alt text for accessibility (defaults to the auto-caption if not set)
+//   - caption: optional short label shown below the photo. If omitted, the
+//     date is auto-derived from the timestamp embedded in the filename and
+//     used as the caption (e.g., "January 2014"). Override the caption per
+//     photo to add real context like "Rock on the Range, 2018."
+//
+// Source filenames are kept as-is (Pixel/Samsung timestamp format) so we
+// don't have to rename files manually. The layout sorts chronologically by
+// the embedded timestamp.
 const ABOUT_PHOTOS = [
-  // Example shape — replace with actual photos when ready:
-  // { src: "images/about/photo-1.jpg", alt: "At Rock on the Range 2018", caption: "Rock on the Range, 2018" },
+  { src: "images/about/20140130_223458.jpg" },
+  { src: "images/about/20140811_195752.jpg" },
+  { src: "images/about/20140917_194606.jpg" },
+  { src: "images/about/IMG_20150731_220108620.jpg" },
+  { src: "images/about/20171010_220039.jpg" },
+  { src: "images/about/20171010_223416.jpg" },
+  { src: "images/about/20180424_213621.jpg" },
+  { src: "images/about/20190312_214748.jpg" },
+  { src: "images/about/20200208_213414.jpg" },
+  { src: "images/about/20220222_225814.jpg" },
+  { src: "images/about/20220622_221750.jpg" },
+  { src: "images/about/20220927_223449.jpg" },
+  { src: "images/about/PXL_20230909_000133262.jpg" },
+  { src: "images/about/PXL_20231015_052313979.jpg" },
+  { src: "images/about/PXL_20240122_033607454.jpg" },
+  { src: "images/about/PXL_20240218_205053163.jpg" },
+  { src: "images/about/PXL_20240408_022234697.MP.jpg" },
+  { src: "images/about/PXL_20240520_013741498.jpg" },
+  { src: "images/about/PXL_20250601_023753531.jpg" },
+  { src: "images/about/PXL_20250822_001543892.jpg" },
+  { src: "images/about/PXL_20250906_014050081.MP.jpg" },
 ];
+
+/**
+ * Auto-derive a caption from a photo filename's embedded timestamp.
+ * Handles formats: "20240520_013741498.jpg", "PXL_20240520_013741498.jpg",
+ * "IMG_20150731_220108620.jpg". Returns "May 2024" or similar.
+ * Falls back to empty string if no recognizable date is found.
+ */
+function aboutPhotoAutoCaption(src) {
+  const m = src.match(/(\d{4})(\d{2})\d{2}/);
+  if (!m) return "";
+  const year = m[1];
+  const monthIdx = parseInt(m[2], 10) - 1;
+  const months = ["January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"];
+  if (monthIdx < 0 || monthIdx > 11) return year;
+  return `${months[monthIdx]} ${year}`;
+}
 
 function renderAbout() {
   const app = document.getElementById("app");
@@ -3513,14 +3557,24 @@ function renderAbout() {
 
   const wrap = el("div", { class: "about-page" });
 
-  // Photo gallery (only renders if photos are configured)
-  if (ABOUT_PHOTOS.length > 0) {
+  // Helper: build the photo gallery. Called once and inserted between
+  // "Why I keep going" and "What this site is" — gives the reader visual
+  // pacing after the emotional context, before the practical site info.
+  const buildGallery = () => {
+    if (ABOUT_PHOTOS.length === 0) return null;
+    const section = el("section", { class: "about-gallery-section" });
+    section.appendChild(el("h3", { class: "about-section about-gallery-heading" },
+      "Snapshots from the journey"));
+    section.appendChild(el("p", { class: "about-gallery-desc" },
+      "A chronological look at concerts, festivals, and shows along the way."));
     const gallery = el("div", { class: "about-gallery" });
     ABOUT_PHOTOS.forEach(photo => {
       const fig = el("figure", { class: "about-photo" });
+      const caption = photo.caption || aboutPhotoAutoCaption(photo.src);
+      const altText = photo.alt || caption || "About Seth";
       const img = el("img", {
         src: photo.src,
-        alt: photo.alt || "",
+        alt: altText,
         loading: "lazy",
         on: {
           // If the image fails to load, hide the figure rather than show a broken icon
@@ -3528,13 +3582,14 @@ function renderAbout() {
         }
       });
       fig.appendChild(img);
-      if (photo.caption) {
-        fig.appendChild(el("figcaption", {}, photo.caption));
+      if (caption) {
+        fig.appendChild(el("figcaption", {}, caption));
       }
       gallery.appendChild(fig);
     });
-    wrap.appendChild(gallery);
-  }
+    section.appendChild(gallery);
+    return section;
+  };
 
   // Lead paragraph
   wrap.appendChild(el("p", { class: "about-lead" },
@@ -3594,6 +3649,11 @@ function renderAbout() {
     "The list of who I haven't seen yet is longer than the list of who I have, and ",
     "that's the whole point."
   ));
+
+  // Gallery sits between "Why I keep going" and "What this site is" —
+  // breaks up the wall of text and gives the bio visual texture.
+  const galleryEl = buildGallery();
+  if (galleryEl) wrap.appendChild(galleryEl);
 
   // Section: What this site is — with live counts
   wrap.appendChild(el("h3", { class: "about-section" }, "What this site is"));
