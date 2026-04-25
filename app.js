@@ -787,7 +787,16 @@ function renderTimeline() {
   const state = params.get("state") || "";
   const artist = params.get("artist") || "";
   const venue = params.get("venue") || "";  // deep-link target for "More at [Venue]"
-  const posterOnly = params.get("posterOnly") === "1";
+  const tour = params.get("tour") || "";    // deep-link target for "Tour: ..." link in concert modal
+  // Poster filter: 3-state dropdown (all / with poster / without poster).
+  // Uses URL param `poster` ("yes"|"no"|""). Backward-compatible with the
+  // legacy `posterOnly=1` param used by older shared links.
+  const posterFilter = (() => {
+    const v = (params.get("poster") || "").toLowerCase();
+    if (v === "yes" || v === "no") return v;
+    if (params.get("posterOnly") === "1") return "yes";
+    return "";
+  })();
   const festival = params.get("festival") || ""; // festivalKey to focus on
   // Optional MM-DD param: when present, show the "On this day" block scoped
   // to that calendar date instead of today's. Used for shareable historical-
@@ -814,7 +823,7 @@ function renderTimeline() {
   //   - No ?date param + filters active → suppress (would clash with filter focus)
   //   - ?date=MM-DD set → ALWAYS show, regardless of filters (user explicitly
   //     asked for this date, so we honor it)
-  const hasAnyFilter = q || state || artist || venue || posterOnly || festival ||
+  const hasAnyFilter = q || state || artist || venue || posterFilter || festival ||
     attendedWithFilter.length > 0;
   if (overrideDate || !hasAnyFilter) {
     const otdBlock = buildOnThisDayBlock(overrideDate || undefined);
@@ -842,26 +851,43 @@ function renderTimeline() {
 
   // Build the unique list of festivals from concert data, preserving each
   // festival's most-readable display name (we strip "- Day N" suffixes since
-  // the filter selects the whole festival, not a specific day).
-  const festivalsMap = new Map();  // festivalKey -> displayName
+  // the filter selects the whole festival, not a specific day). Track the
+  // earliest date per festival so we can present the dropdown in chronological
+  // order, oldest first — matches how the user thinks about their concert
+  // history (1999 → present).
+  const festivalsMap = new Map();  // festivalKey -> { name, earliestDate }
   STATE.concerts.forEach(c => {
-    if (!c.festivalKey || festivalsMap.has(c.festivalKey)) return;
+    if (!c.festivalKey) return;
+    if (festivalsMap.has(c.festivalKey)) {
+      // Update earliestDate if this concert is earlier
+      const existing = festivalsMap.get(c.festivalKey);
+      if (c.date && (!existing.earliestDate || c.date < existing.earliestDate)) {
+        existing.earliestDate = c.date;
+      }
+      return;
+    }
     // Reconstruct name from key: rock_on_the_range_2018 → "Rock on the Range 2018"
     const name = c.festivalKey
       .split("_")
       .map(w => /^\d{4}$/.test(w) ? w : w[0].toUpperCase() + w.slice(1))
       .join(" ");
-    festivalsMap.set(c.festivalKey, name);
+    festivalsMap.set(c.festivalKey, { name, earliestDate: c.date || "" });
   });
-  const allFestivals = [...festivalsMap.entries()].sort((a, b) =>
-    a[1].localeCompare(b[1]));
+  // Sort by earliest date ascending (oldest first). Festivals without a
+  // resolvable date sort last alphabetically as a fallback.
+  const allFestivals = [...festivalsMap.entries()].sort((a, b) => {
+    const da = a[1].earliestDate || "9999-99-99";
+    const db = b[1].earliestDate || "9999-99-99";
+    if (da !== db) return da.localeCompare(db);
+    return a[1].name.localeCompare(b[1].name);
+  });
 
   const festivalSelect = el("select", {
     on: { change: e => updateParam("festival", e.target.value) }
   });
   festivalSelect.appendChild(el("option", { value: "" }, "All festivals"));
-  allFestivals.forEach(([key, name]) => {
-    const opt = el("option", { value: key }, name);
+  allFestivals.forEach(([key, info]) => {
+    const opt = el("option", { value: key }, info.name);
     if (key === festival) opt.selected = true;
     festivalSelect.appendChild(opt);
   });
@@ -881,10 +907,29 @@ function renderTimeline() {
   // Attended With multi-select popover
   filterBar.appendChild(attendedWithPopover(allNames, nameCounts, attendedWithFilter));
 
-  filterBar.appendChild(el("button", {
-    class: "chip" + (posterOnly ? " active" : ""),
-    on: { click: () => updateParam("posterOnly", posterOnly ? "0" : "1") }
-  }, "With poster"));
+  const posterSelect = el("select", {
+    on: { change: e => {
+      // When user picks a value, also clear the legacy posterOnly param to
+      // avoid the two params fighting on URL reload.
+      const [route, queryStr] = (location.hash || "#/timeline").split("?");
+      const p = new URLSearchParams(queryStr || "");
+      const v = e.target.value;
+      if (v) p.set("poster", v); else p.delete("poster");
+      p.delete("posterOnly");
+      const newHash = route + (p.toString() ? "?" + p.toString() : "");
+      location.hash = newHash;
+    }}
+  });
+  [
+    ["", "All shows"],
+    ["yes", "With poster"],
+    ["no", "Without poster"]
+  ].forEach(([val, label]) => {
+    const opt = el("option", { value: val }, label);
+    if (val === posterFilter) opt.selected = true;
+    posterSelect.appendChild(opt);
+  });
+  filterBar.appendChild(posterSelect);
 
   const countEl = el("div", { class: "filter-count" });
   filterBar.appendChild(countEl);
@@ -896,8 +941,10 @@ function renderTimeline() {
     if (state && c.state !== state) return false;
     if (artist && c.artist !== artist) return false;
     if (venue && c.venue !== venue) return false;
+    if (tour && c.tourName !== tour) return false;
     if (festival && c.festivalKey !== festival) return false;
-    if (posterOnly && !c.hasPoster) return false;
+    if (posterFilter === "yes" && !c.hasPoster) return false;
+    if (posterFilter === "no" && c.hasPoster) return false;
     if (attendedWithFilter.length > 0) {
       const attendees = splitAttendedWith(c.attendedWith);
       // ANY match — show the show if ANY selected person attended
@@ -1334,10 +1381,12 @@ function renderPosters() {
   app.innerHTML = "";
 
   const params = new URLSearchParams((location.hash.split("?")[1] || ""));
-  const q = params.get("q") || "";
+  const q = params.get("q") || "";  // legacy: free-text search box was removed but param still respected for shareable links
   const artist = params.get("artist") || "";
+  const illustrator = params.get("illustrator") || "";  // poster artist (e.g., Don Pendleton)
   const type = params.get("type") || "";
   const autographed = params.get("autographed") === "1";
+  const festivalOnly = params.get("festival") === "1";  // chip toggle: festival-related posters
   const notAttended = params.get("notAttended") === "1";
 
   // View header: title on the left, action buttons (Random / Screensaver) on the right.
@@ -1441,21 +1490,51 @@ function renderPosters() {
   // Filter UI
   const allArtists = [...new Set(groupList.map(g => g.artist).filter(Boolean))].sort();
   const allTypes = [...new Set(STATE.posters.map(p => classifyType(p.type)).filter(Boolean))].sort();
+  // Unique illustrators (poster artists) — the people who designed the posters,
+  // distinct from the bands the posters are for. Sorted alphabetically.
+  const allIllustrators = [...new Set(
+    STATE.posters.map(p => p.illustrator).filter(Boolean)
+  )].sort();
+
+  // Pre-compute the set of dates that fall on a festival the user attended.
+  // A poster counts as "festival-related" if either:
+  //   - tourShowSpecific === "Festival" (festival event poster), OR
+  //   - the poster's date matches any concert with a festivalKey
+  // Since the user can't attend a non-festival show on a festival day,
+  // every poster on a festival date came from that festival.
+  const festivalDates = new Set(
+    STATE.concerts
+      .filter(c => c.festivalKey && c.date)
+      .map(c => c.date)
+  );
+  const isFestivalPoster = p =>
+    (p.tourShowSpecific || "").toLowerCase() === "festival" ||
+    (p.date && festivalDates.has(p.date));
 
   const filterBar = el("div", { class: "filter-bar" });
-  filterBar.appendChild(el("input", {
-    type: "text", placeholder: "Search artist, illustrator, notes…", value: q,
-    on: { input: e => updateParamDebounced("q", e.target.value) }
-  }));
 
-  const as = el("select", { on: { change: e => updateParam("artist", e.target.value) } });
-  as.appendChild(el("option", { value: "" }, "All artists"));
+  // Band filter (first) — was previously labeled "Artist", renamed to clarify
+  // that it filters by the band/headliner, not the poster designer.
+  const bandSelect = el("select", { on: { change: e => updateParam("artist", e.target.value) } });
+  bandSelect.appendChild(el("option", { value: "" }, "All bands"));
   allArtists.forEach(a => {
     const o = el("option", { value: a }, a);
     if (a === artist) o.selected = true;
-    as.appendChild(o);
+    bandSelect.appendChild(o);
   });
-  filterBar.appendChild(as);
+  filterBar.appendChild(bandSelect);
+
+  // Poster Artist (Illustrator) filter — filters by who designed the poster
+  const illustratorSelect = el("select", {
+    on: { change: e => updateParam("illustrator", e.target.value) }
+  });
+  illustratorSelect.appendChild(el("option", { value: "" }, "All poster artists"));
+  allIllustrators.forEach(name => {
+    const o = el("option", { value: name }, name);
+    if (name === illustrator) o.selected = true;
+    illustratorSelect.appendChild(o);
+  });
+  filterBar.appendChild(illustratorSelect);
 
   const ts = el("select", { on: { change: e => updateParam("type", e.target.value) } });
   ts.appendChild(el("option", { value: "" }, "All types"));
@@ -1472,6 +1551,12 @@ function renderPosters() {
   }, "Autographed"));
 
   filterBar.appendChild(el("button", {
+    class: "chip" + (festivalOnly ? " active" : ""),
+    title: "Show only posters from festival events (festival-wide posters and band posters from festival days)",
+    on: { click: () => updateParam("festival", festivalOnly ? "0" : "1") }
+  }, "Festival"));
+
+  filterBar.appendChild(el("button", {
     class: "chip" + (notAttended ? " active" : ""),
     on: { click: () => updateParam("notAttended", notAttended ? "0" : "1") }
   }, "Not attended"));
@@ -1483,15 +1568,21 @@ function renderPosters() {
   const qLower = q.toLowerCase();
   const filtered = groupList
     .map(g => {
-      // When a filter is active that applies to individual posters (type, autographed),
-      // trim the group's posters to only the matching ones. This makes the card
-      // preview and modal show only what the filter asked for.
+      // When a filter applies to individual posters (type, autographed,
+      // illustrator, festival), trim the group's posters to only matching
+      // ones. The card preview and modal then show only what the filter asked for.
       let posters = g.posters;
       if (type) {
         posters = posters.filter(v => classifyType(v.type) === type);
       }
       if (autographed) {
         posters = posters.filter(v => v.autographed);
+      }
+      if (illustrator) {
+        posters = posters.filter(v => v.illustrator === illustrator);
+      }
+      if (festivalOnly) {
+        posters = posters.filter(v => isFestivalPoster(v));
       }
       return posters.length === g.posters.length ? g : { ...g, posters };
     })
@@ -1501,6 +1592,9 @@ function renderPosters() {
       if (artist && g.artist !== artist) return false;
       if (notAttended && g.attended) return false;
       if (qLower) {
+        // Legacy: q param still works for shared/bookmarked URLs even though
+        // the search box was removed from the UI. Searches across artist,
+        // location, illustrator, notes, and variant fields.
         const hay = [
           g.artist, g.location,
           ...g.posters.map(v => v.illustrator),
@@ -2269,6 +2363,12 @@ function renderStats() {
     el("p", { class: "view-sub" }, "By the tally.")
   ));
 
+  // Read heatmap scale preference from URL. Defaults to per-year (each row
+  // scales independently); users can flip to "all" to compare years against
+  // the single busiest month across all years.
+  const statsParams = new URLSearchParams((location.hash.split("?")[1] || ""));
+  const heatScale = statsParams.get("heatScale") === "all" ? "all" : "year";
+
   const past = STATE.concerts;  // already filtered at load time
 
   // Unique artists: every band we saw ANYWHERE — headliner, opener, or festival lineup.
@@ -2705,14 +2805,16 @@ function renderStats() {
 
   // ========================================================================
   // Monthly heatmap: rows = years, cols = months (Jan-Dec).
-  // Cell darkness = show count, scaled per-year: a year's busiest month is
-  // 100% intensity within that row, regardless of how that count compares to
-  // other years. This means sparse early years still show clearly visible
-  // contrast within their own row, instead of being uniformly faint vs. heavy
-  // recent years.
+  // Cell darkness = show count. Two scaling modes:
+  //   - "year" (default): each row independent; year's busiest month = 100%.
+  //     Sparse early years still show clear contrast within their own row.
+  //   - "all": all cells share one scale; the single busiest month across
+  //     all years = 100%. Better for comparing absolute volume across years.
+  // Toggle via the dropdown-style button in the heatmap card header.
   // ========================================================================
-  const heatData = {};  // year -> month (1-12) -> count
-  const heatMaxByYear = {};  // year -> max count across that year's months
+  const heatData = {};        // year -> month (1-12) -> count
+  const heatMaxByYear = {};   // year -> max count across that year's months
+  let heatMaxAll = 0;         // max count across all years/months
   past.forEach(c => {
     if (!c.date || !c.year) return;
     const m = Number(c.date.slice(5, 7));
@@ -2721,17 +2823,42 @@ function renderStats() {
     if (!heatMaxByYear[c.year] || heatData[c.year][m] > heatMaxByYear[c.year]) {
       heatMaxByYear[c.year] = heatData[c.year][m];
     }
+    if (heatData[c.year][m] > heatMaxAll) heatMaxAll = heatData[c.year][m];
   });
   const heatYears = Object.keys(heatData).sort();
-  if (heatYears.length > 0) {
+  if (heatYears.length > 0 && heatMaxAll > 0) {
     const MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const heatCard = el("div", { class: "top-list heatmap-card" },
-      el("h3", {}, "Concert heatmap")
+    const heatCard = el("div", { class: "top-list heatmap-card" });
+
+    // Header: title on left, scale toggle on right
+    const heatHeader = el("div", { class: "heatmap-header" },
+      el("h3", {}, "Concert heatmap"),
+      el("button", {
+        class: "heatmap-scale-toggle",
+        title: "Toggle scaling: per-year (each row independent) vs across all years",
+        on: { click: () => {
+          const next = heatScale === "year" ? "all" : "year";
+          // Update URL param and re-render
+          const [route, queryStr] = (location.hash || "#/stats").split("?");
+          const params = new URLSearchParams(queryStr || "");
+          if (next === "all") {
+            params.set("heatScale", "all");
+          } else {
+            params.delete("heatScale");
+          }
+          const newHash = route + (params.toString() ? "?" + params.toString() : "");
+          history.replaceState(null, "", newHash);
+          renderStats();
+        }}
+      }, heatScale === "year" ? "Per year ▾" : "Across all years ▾")
     );
-    const heatDesc = el("p", { class: "heatmap-desc" },
-      "Darker = busier month within that year. Click a cell to filter.");
-    heatCard.appendChild(heatDesc);
+    heatCard.appendChild(heatHeader);
+
+    const heatDescText = heatScale === "year"
+      ? "Darker = busier month within that year. Click a cell to filter."
+      : "Darker = busier month overall. Click a cell to filter.";
+    heatCard.appendChild(el("p", { class: "heatmap-desc" }, heatDescText));
 
     const table = el("div", { class: "heatmap-table" });
 
@@ -2752,8 +2879,13 @@ function renderStats() {
       );
       for (let m = 1; m <= 12; m++) {
         const count = (heatData[y] && heatData[y][m]) || 0;
-        // Scale 0..yearMax → 0..1 (relative to this year's busiest month)
-        const intensity = count === 0 ? 0 : Math.max(0.25, count / yearMax);
+        // Scale per the active mode
+        const denominator = heatScale === "year" ? yearMax : heatMaxAll;
+        // Floor at 0.15 in "all" mode so a single show is still visible against
+        // the much-larger global max; floor at 0.25 in "year" mode where the
+        // dynamic range is tighter.
+        const floor = heatScale === "year" ? 0.25 : 0.15;
+        const intensity = count === 0 ? 0 : Math.max(floor, count / denominator);
         const cellTitle = count === 0
           ? `${MONTH_ABBR[m - 1]} ${y}: no shows`
           : `${MONTH_ABBR[m - 1]} ${y}: ${count} show${count === 1 ? "" : "s"}`;
@@ -3386,16 +3518,29 @@ function openConcertModal(c, navContext) {
 
   // Facts grid — for regular concerts, this holds opening acts.
   // For festival days, we render the lineup in a dedicated section below (richer format).
+  // Special case for tour: render as a clickable link that filters Timeline
+  // to all shows on that tour (exact-name match).
   const facts = el("div", { class: "modal-facts" });
   const factList = [
-    c.tourName && !c.festivalKey && ["Tour", c.tourName],
-    c.openingActs && !c.festivalKey && ["Opening acts", c.openingActs],
-    c.attendedWith && ["Attended with", c.attendedWith],
+    c.tourName && !c.festivalKey && ["Tour", c.tourName, "tour"],
+    c.openingActs && !c.festivalKey && ["Opening acts", c.openingActs, null],
+    c.attendedWith && ["Attended with", c.attendedWith, null],
   ].filter(Boolean);
-  factList.forEach(([label, val]) => {
+  factList.forEach(([label, val, kind]) => {
+    let valueNode;
+    if (kind === "tour") {
+      // Clickable tour name → filter timeline
+      valueNode = el("a", {
+        class: "fact-value tour-link",
+        href: "#/timeline?tour=" + encodeURIComponent(val),
+        title: `See all shows on the "${val}" tour`,
+      }, val);
+    } else {
+      valueNode = el("div", { class: "fact-value" }, val);
+    }
     facts.appendChild(el("div", { class: "fact" },
       el("div", { class: "fact-label" }, label),
-      el("div", { class: "fact-value" }, val)
+      valueNode
     ));
   });
   if (factList.length) modalBody.appendChild(facts);

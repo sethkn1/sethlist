@@ -2693,3 +2693,60 @@ main {
   .shortcuts-keys { font-size: 11px; }
   .shortcuts-desc { font-size: 12px; }
 }
+
+/* ============================================================
+   HEATMAP HEADER + SCALE TOGGLE
+   ============================================================ */
+.heatmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.heatmap-header h3 {
+  margin: 0;
+}
+.heatmap-scale-toggle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: transparent;
+  color: var(--paper-dim);
+  border: 1px solid var(--muted);
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 120ms;
+  white-space: nowrap;
+}
+.heatmap-scale-toggle:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+.heatmap-scale-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   TOUR LINK in concert modal facts grid
+   Inherits .fact-value sizing but adds an underline + accent on hover
+   to signal interactivity. Tour names link to a Timeline filter.
+   ============================================================ */
+.fact-value.tour-link {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--muted);
+  padding-bottom: 1px;
+  transition: color 120ms, border-color 120ms;
+}
+.fact-value.tour-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.fact-value.tour-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
