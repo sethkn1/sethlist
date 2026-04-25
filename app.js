@@ -3562,6 +3562,9 @@ function renderAbout() {
   // aspect ratios; click any tile to open the photo at full size in the
   // existing lightbox component.
   //
+  // Photos are shuffled on each page load so visitors see a different order
+  // each time — keeps the strip feeling alive rather than a fixed timeline.
+  //
   // Captions show on hover (desktop, where hover exists) and always on
   // touch devices via a CSS media query that flips the rules.
   //
@@ -3569,13 +3572,23 @@ function renderAbout() {
   // without adding clutter (no arrow buttons, no auto-scroll).
   const buildGallery = () => {
     if (ABOUT_PHOTOS.length === 0) return null;
+
+    // Shuffle a copy of the array so each page load shows a different order.
+    // Original ABOUT_PHOTOS stays untouched (never mutate the source).
+    // Fisher-Yates shuffle: O(n), unbiased, simple.
+    const shuffled = [...ABOUT_PHOTOS];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
     const section = el("section", { class: "about-strip-section" });
     // Visual wrapper wraps the scrolling track + the fade overlays. The
     // track itself is the only thing that scrolls.
     const stripWrap = el("div", { class: "about-strip-wrap" });
     const track = el("div", { class: "about-strip-track" });
 
-    ABOUT_PHOTOS.forEach(photo => {
+    shuffled.forEach(photo => {
       const fig = el("figure", { class: "about-strip-tile" });
       const caption = photo.caption || aboutPhotoAutoCaption(photo.src);
       const altText = photo.alt || caption || "About Seth photo";
