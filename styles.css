@@ -2900,3 +2900,166 @@ main {
   .about-lead { font-size: 17px; }
   .about-section { font-size: 24px; margin-top: 28px; }
 }
+
+/* ============================================================
+   LEADERBOARD ROLE TOGGLE
+   The dropdown that flips Most-seen artists between All / Headliners / Openers.
+   Sits in the leaderboard header next to the "Most-seen artists" title.
+   ============================================================ */
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.leaderboard-header h3 {
+  margin: 0;
+}
+.leaderboard-role-toggle {
+  background: var(--ink);
+  border: 1px solid var(--muted);
+  color: var(--paper);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: border-color 120ms;
+}
+.leaderboard-role-toggle:hover { border-color: var(--accent); }
+.leaderboard-role-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.leaderboard-role-toggle option { background: var(--ink); color: var(--paper); }
+
+/* ============================================================
+   ARTIST INSIGHTS MODAL
+   Distinct visual treatment from concert/poster modals via the
+   ARTIST INSIGHTS eyebrow. Year strip is a compact horizontal grid;
+   show list uses a clean stack of date+venue+role rows.
+   ============================================================ */
+.modal-eyebrow.artist-eyebrow {
+  color: var(--accent);
+  /* Slightly tighter spacing so the artist title sits closer below */
+}
+.artist-role-breakdown {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.artist-section-h {
+  font-family: var(--font-display-alt);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--paper);
+  margin: 28px 0 8px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--muted);
+}
+.artist-strip-desc {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 0 12px 0;
+}
+
+/* Year strip: cells flow horizontally; wraps if necessary on narrow screens */
+.artist-year-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.artist-year-cell {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+.artist-year-cell.has-shows {
+  background: rgba(217, 59, 43, calc(var(--intensity) * 0.85));
+  border-color: rgba(217, 59, 43, calc(var(--intensity) * 0.6 + 0.3));
+  color: var(--paper);
+}
+.artist-year-cell-year {
+  font-size: 11px;
+}
+.artist-year-cell-count {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Show list: stack of clickable rows */
+.artist-show-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.artist-show-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--ink);
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  transition: border-left-color 120ms, background 120ms;
+}
+.artist-show-item:hover {
+  border-left-color: var(--accent);
+  background: rgba(217, 59, 43, 0.08);
+}
+.artist-show-date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  align-self: center;
+}
+.artist-show-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.artist-show-venue {
+  color: var(--paper);
+  font-size: 14px;
+}
+.artist-show-role {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.artist-show-role.festival { color: var(--accent); }
+
+@media (max-width: 640px) {
+  .artist-year-cell { width: 48px; height: 48px; }
+  .artist-show-item { grid-template-columns: 100px 1fr; padding: 8px 10px; }
+  .artist-show-venue { font-size: 13px; }
+}

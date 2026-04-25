@@ -619,6 +619,36 @@ function allArtistsAtConcert(c) {
 }
 
 /**
+ * Headliner-only artists at a concert. For festival rows, returns nothing
+ * (the "headliner" is the festival itself, not a band). For regular shows,
+ * returns the top-billed band only.
+ */
+function headlinerAtConcert(c) {
+  if (c.festivalKey) return [];
+  return c.artist ? [c.artist] : [];
+}
+
+/**
+ * Opener-only artists at a concert. For regular shows, this is the
+ * supporting acts (the bands listed under the headliner). For festival
+ * rows, all bands listed are equivalent — we treat them all as openers
+ * because no single band was the festival's "headliner" in the user's
+ * personal experience (multiple stages, multi-day, etc.).
+ */
+function openersAtConcert(c) {
+  return splitActs(c.openingActs);
+}
+
+/**
+ * Return artists at a concert filtered by role: "all", "headliner", "opener".
+ */
+function artistsAtConcertByRole(c, role) {
+  if (role === "headliner") return headlinerAtConcert(c);
+  if (role === "opener") return openersAtConcert(c);
+  return allArtistsAtConcert(c);
+}
+
+/**
  * Lower-case, strip punctuation, drop leading "The " — used to determine
  * whether two artist strings refer to the same band. "Mars Volta" should
  * match "The Mars Volta", and case/punctuation differences are ignored.
@@ -2476,7 +2506,6 @@ function renderStats() {
   // scales independently); users can flip to "all" to compare years against
   // the single busiest month across all years.
   const statsParams = new URLSearchParams((location.hash.split("?")[1] || ""));
-  const heatScale = statsParams.get("heatScale") === "all" ? "all" : "year";
 
   const past = STATE.concerts;  // already filtered at load time
 
@@ -2526,13 +2555,20 @@ function renderStats() {
   });
   app.appendChild(grid);
 
-  // Top artists: count every band we saw — headliner, opener, or festival lineup.
+  // Role filter for the Most-seen artists leaderboard. Reads from URL so
+  // it persists across stat-page reloads. Values: "all" (default), "headliner", "opener".
+  const artistRole = (() => {
+    const v = (statsParams.get("artistRole") || "").toLowerCase();
+    return (v === "headliner" || v === "opener") ? v : "all";
+  })();
+
+  // Top artists: count every band per the selected role.
   // We normalize keys so "Mars Volta" and "The Mars Volta" count as one entry,
   // but display the most common version as the label.
   const artistCountByKey = {};   // norm-key -> count
   const artistDisplayByKey = {}; // norm-key -> {display-name: count-of-uses}
   past.forEach(c => {
-    allArtistsAtConcert(c).forEach(name => {
+    artistsAtConcertByRole(c, artistRole).forEach(name => {
       const key = normalizeArtistKey(name);
       if (!key) return;
       artistCountByKey[key] = (artistCountByKey[key] || 0) + 1;
@@ -2557,12 +2593,44 @@ function renderStats() {
 
   const twoCol = el("div", { style: "display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;" });
 
+  // Build the role-toggle dropdown (matches the heatmap toggle style)
+  const roleSelect = el("select", {
+    class: "leaderboard-role-toggle",
+    title: "Show all artists, only headliners, or only openers",
+    on: { change: e => {
+      const next = e.target.value;
+      const [route, queryStr] = (location.hash || "#/stats").split("?");
+      const params = new URLSearchParams(queryStr || "");
+      if (next === "all") {
+        params.delete("artistRole");
+      } else {
+        params.set("artistRole", next);
+      }
+      const newHash = route + (params.toString() ? "?" + params.toString() : "");
+      history.replaceState(null, "", newHash);
+      renderStats();
+    }}
+  });
+  [
+    ["all", "All"],
+    ["headliner", "Headliners"],
+    ["opener", "Openers"]
+  ].forEach(([val, label]) => {
+    const o = el("option", { value: val }, label);
+    if (val === artistRole) o.selected = true;
+    roleSelect.appendChild(o);
+  });
+
   const artistList = el("div", { class: "top-list" },
-    el("h3", {}, "Most-seen artists"),
+    el("div", { class: "leaderboard-header" },
+      el("h3", {}, "Most-seen artists"),
+      roleSelect
+    ),
     el("ol", {}, ...topArtists.map(([name, count], i) =>
       el("li", {
-        on: { click: () => location.hash = "#/timeline?artist=" + encodeURIComponent(name) },
-        style: "cursor:pointer;"
+        on: { click: () => openArtistInsightsModal(name) },
+        style: "cursor:pointer;",
+        title: `Click to see when you saw ${name}`
       },
         el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
         el("span", { class: "name" }, name),
@@ -2912,62 +2980,27 @@ function renderStats() {
     app.appendChild(streaksCard);
   }
 
-  // ========================================================================
   // Monthly heatmap: rows = years, cols = months (Jan-Dec).
-  // Cell darkness = show count. Two scaling modes:
-  //   - "year" (default): each row independent; year's busiest month = 100%.
-  //     Sparse early years still show clear contrast within their own row.
-  //   - "all": all cells share one scale; the single busiest month across
-  //     all years = 100%. Better for comparing absolute volume across years.
-  // Toggle via the dropdown-style button in the heatmap card header.
-  // ========================================================================
+  // Cell darkness scales globally — the single busiest month across all years
+  // is 100% intensity; everything else is proportional.
   const heatData = {};        // year -> month (1-12) -> count
-  const heatMaxByYear = {};   // year -> max count across that year's months
   let heatMaxAll = 0;         // max count across all years/months
   past.forEach(c => {
     if (!c.date || !c.year) return;
     const m = Number(c.date.slice(5, 7));
     if (!heatData[c.year]) heatData[c.year] = {};
     heatData[c.year][m] = (heatData[c.year][m] || 0) + 1;
-    if (!heatMaxByYear[c.year] || heatData[c.year][m] > heatMaxByYear[c.year]) {
-      heatMaxByYear[c.year] = heatData[c.year][m];
-    }
     if (heatData[c.year][m] > heatMaxAll) heatMaxAll = heatData[c.year][m];
   });
   const heatYears = Object.keys(heatData).sort();
   if (heatYears.length > 0 && heatMaxAll > 0) {
     const MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const heatCard = el("div", { class: "top-list heatmap-card" });
-
-    // Header: title on left, scale toggle on right
-    const heatHeader = el("div", { class: "heatmap-header" },
-      el("h3", {}, "Concert heatmap"),
-      el("button", {
-        class: "heatmap-scale-toggle",
-        title: "Toggle scaling: per-year (each row independent) vs across all years",
-        on: { click: () => {
-          const next = heatScale === "year" ? "all" : "year";
-          // Update URL param and re-render
-          const [route, queryStr] = (location.hash || "#/stats").split("?");
-          const params = new URLSearchParams(queryStr || "");
-          if (next === "all") {
-            params.set("heatScale", "all");
-          } else {
-            params.delete("heatScale");
-          }
-          const newHash = route + (params.toString() ? "?" + params.toString() : "");
-          history.replaceState(null, "", newHash);
-          renderStats();
-        }}
-      }, heatScale === "year" ? "Per year ▾" : "Across all years ▾")
+    const heatCard = el("div", { class: "top-list heatmap-card" },
+      el("h3", {}, "Concert heatmap")
     );
-    heatCard.appendChild(heatHeader);
-
-    const heatDescText = heatScale === "year"
-      ? "Darker = busier month within that year. Click a cell to filter."
-      : "Darker = busier month overall. Click a cell to filter.";
-    heatCard.appendChild(el("p", { class: "heatmap-desc" }, heatDescText));
+    heatCard.appendChild(el("p", { class: "heatmap-desc" },
+      "Darker = busier month overall. Click a cell to filter."));
 
     const table = el("div", { class: "heatmap-table" });
 
@@ -2982,19 +3015,14 @@ function renderStats() {
 
     // Data rows
     heatYears.forEach(y => {
-      const yearMax = heatMaxByYear[y] || 1;
       const row = el("div", { class: "heatmap-row" },
         el("div", { class: "heatmap-year-label" }, y)
       );
       for (let m = 1; m <= 12; m++) {
         const count = (heatData[y] && heatData[y][m]) || 0;
-        // Scale per the active mode
-        const denominator = heatScale === "year" ? yearMax : heatMaxAll;
-        // Floor at 0.15 in "all" mode so a single show is still visible against
-        // the much-larger global max; floor at 0.25 in "year" mode where the
-        // dynamic range is tighter.
-        const floor = heatScale === "year" ? 0.25 : 0.15;
-        const intensity = count === 0 ? 0 : Math.max(floor, count / denominator);
+        // Single global scale (across all years). Floor at 0.15 so a single
+        // show is still visible against the much-larger max from busy months.
+        const intensity = count === 0 ? 0 : Math.max(0.15, count / heatMaxAll);
         const cellTitle = count === 0
           ? `${MONTH_ABBR[m - 1]} ${y}: no shows`
           : `${MONTH_ABBR[m - 1]} ${y}: ${count} show${count === 1 ? "" : "s"}`;
@@ -3652,6 +3680,161 @@ function closeLightbox() {
 /* ============================================================
    CONCERT MODAL
    ============================================================ */
+/* ============================================================
+   ARTIST INSIGHTS MODAL
+   Opened from the "Most-seen artists" leaderboard. Shows when the
+   user saw a given artist: a year-strip mini-heatmap (one cell per
+   year you saw them), a list of shows, and a link to filter the
+   Timeline to that artist.
+   ============================================================ */
+
+/**
+ * Find every concert that featured a given artist (by normalized key match).
+ * Includes both headliner appearances and opener appearances.
+ */
+function concertsFeaturingArtist(artistName) {
+  const targetKey = normalizeArtistKey(artistName);
+  if (!targetKey) return [];
+  return STATE.concerts.filter(c => {
+    return allArtistsAtConcert(c)
+      .some(name => normalizeArtistKey(name) === targetKey);
+  }).sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+}
+
+/**
+ * Open a modal showing insights for a given artist. The modal is decorated
+ * with an "artist insights" eyebrow so it's visually distinct from concert
+ * and poster modals.
+ */
+function openArtistInsightsModal(artistName) {
+  const shows = concertsFeaturingArtist(artistName);
+  if (shows.length === 0) return;
+
+  // Mark modal state but DON'T set deep-link nav — this modal isn't part of
+  // the concert/poster nav lists, and arrow keys here don't have a defined
+  // "next" item.
+  MODAL_STATE.kind = "artist";
+  MODAL_STATE.id = artistName;
+  MODAL_STATE.list = null;
+  MODAL_STATE.index = -1;
+
+  modalBody.innerHTML = "";
+
+  // Eyebrow distinguishes from concert/poster modals
+  modalBody.appendChild(el("div", { class: "modal-eyebrow artist-eyebrow" }, "ARTIST INSIGHTS"));
+  modalBody.appendChild(el("h2", { class: "modal-title" }, artistName));
+
+  // Subtitle: total count + year span
+  const yearSet = new Set(shows.map(c => c.year).filter(Boolean));
+  const earliestYear = Math.min(...yearSet);
+  const latestYear = Math.max(...yearSet);
+  const headlinerCount = shows.filter(c => {
+    const targetKey = normalizeArtistKey(artistName);
+    return normalizeArtistKey(c.artist) === targetKey && !c.festivalKey;
+  }).length;
+  const openerCount = shows.length - headlinerCount;
+
+  const subtitleParts = [
+    `${shows.length} show${shows.length === 1 ? "" : "s"}`,
+    yearSet.size === 1
+      ? `in ${earliestYear}`
+      : `from ${earliestYear} to ${latestYear}`,
+  ];
+  modalBody.appendChild(el("div", { class: "modal-meta" }, subtitleParts.join(" ")));
+
+  // Role breakdown line
+  const roleParts = [];
+  if (headlinerCount > 0) roleParts.push(`${headlinerCount} as headliner`);
+  if (openerCount > 0) roleParts.push(`${openerCount} as opener / festival lineup`);
+  if (roleParts.length > 0) {
+    modalBody.appendChild(el("div", { class: "artist-role-breakdown" }, roleParts.join(" · ")));
+  }
+
+  // Year strip: one cell per year, intensity = show count that year.
+  // Compact horizontal layout, only showing years that actually had shows.
+  // For sparse data this reads cleaner than a full grid.
+  const yearCounts = {};
+  shows.forEach(c => {
+    if (c.year) yearCounts[c.year] = (yearCounts[c.year] || 0) + 1;
+  });
+  const allUserYears = (() => {
+    if (STATE.concerts.length === 0) return [];
+    const years = STATE.concerts.map(c => c.year).filter(Boolean);
+    return [...new Set(years)].sort();
+  })();
+  const maxArtistYearCount = Math.max(...Object.values(yearCounts));
+
+  modalBody.appendChild(el("h4", { class: "artist-section-h" }, "Years you saw them"));
+  const stripDesc = el("p", { class: "artist-strip-desc" },
+    "Each cell is one year of your concert history. Filled cells = you saw them that year.");
+  modalBody.appendChild(stripDesc);
+
+  const strip = el("div", { class: "artist-year-strip" });
+  allUserYears.forEach(y => {
+    const count = yearCounts[y] || 0;
+    const intensity = count === 0 ? 0 : Math.max(0.35, count / maxArtistYearCount);
+    const cell = el("div", {
+      class: "artist-year-cell" + (count > 0 ? " has-shows" : ""),
+      style: count > 0 ? `--intensity:${intensity};` : "",
+      title: count > 0
+        ? `${y}: ${count} show${count === 1 ? "" : "s"}`
+        : `${y}: did not see them`,
+    },
+      el("span", { class: "artist-year-cell-year" }, String(y)),
+      count > 0 ? el("span", { class: "artist-year-cell-count" }, String(count)) : null
+    );
+    strip.appendChild(cell);
+  });
+  modalBody.appendChild(strip);
+
+  // Show list
+  modalBody.appendChild(el("h4", { class: "artist-section-h" }, "The shows"));
+  const list = el("div", { class: "artist-show-list" });
+  shows.forEach(c => {
+    const role = (() => {
+      const targetKey = normalizeArtistKey(artistName);
+      if (normalizeArtistKey(c.artist) === targetKey && !c.festivalKey) {
+        return "headliner";
+      }
+      if (c.festivalKey) return "festival";
+      return "opener";
+    })();
+    const venueText = [c.venue, c.city, c.state].filter(Boolean).join(", ");
+    const item = el("div", {
+      class: "artist-show-item",
+      on: { click: () => {
+        // Open the underlying concert modal. Closing the artist modal first
+        // and then opening the concert modal keeps the modal-state pointer clean.
+        closeModal();
+        // Defer slightly so the previous modal's cleanup completes
+        setTimeout(() => openConcertModal(c), 50);
+      }}
+    },
+      el("div", { class: "artist-show-date" }, formatDate(c.date)),
+      el("div", { class: "artist-show-meta" },
+        el("span", { class: "artist-show-venue" }, venueText || "Unknown venue"),
+        role === "headliner"
+          ? null
+          : el("span", { class: "artist-show-role" + (role === "festival" ? " festival" : "") },
+              role === "festival" ? c.artist || "festival" : `opening for ${c.artist || "unknown"}`)
+      )
+    );
+    list.appendChild(item);
+  });
+  modalBody.appendChild(list);
+
+  // Link to Timeline filter
+  const links = el("div", { class: "modal-links" });
+  links.appendChild(el("a", {
+    class: "m-link",
+    href: "#/timeline?artist=" + encodeURIComponent(artistName),
+    on: { click: () => closeModal() }  // close modal so navigation feels clean
+  }, "View on Timeline"));
+  modalBody.appendChild(links);
+
+  openModal();
+}
+
 /**
  * Open the modal for a concert. Optional `navContext` wires arrow-key
  * navigation through a list of sibling concerts.
