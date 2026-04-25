@@ -2583,3 +2583,113 @@ main {
   font-weight: 700;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
+
+/* ============================================================
+   KEYBOARD SHORTCUTS OVERLAY
+   Triggered by the '?' key. A simple modal-style centered card
+   with grouped sections of key bindings.
+   ============================================================ */
+.shortcuts-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 250;  /* above modal (100), below screensaver (300) */
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 150ms ease-out;
+}
+.shortcuts-overlay[hidden] { display: none; }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.shortcuts-card {
+  position: relative;
+  background: var(--ink);
+  border: 2px solid var(--paper);
+  padding: 28px 32px 24px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+}
+.shortcuts-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+}
+.shortcuts-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: transparent;
+  border: 2px solid var(--muted);
+  color: var(--paper);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 120ms;
+}
+.shortcuts-close:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+.shortcuts-section { margin-bottom: 18px; }
+.shortcuts-section:last-of-type { margin-bottom: 0; }
+.shortcuts-section-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--muted);
+  padding-bottom: 4px;
+}
+.shortcuts-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 4px 16px;
+}
+.shortcuts-keys {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--paper);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.shortcuts-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--paper-dim);
+  margin: 0;
+  line-height: 1.4;
+}
+.shortcuts-footer {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--muted);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .shortcuts-card { padding: 20px 18px 18px; }
+  .shortcuts-list { grid-template-columns: 110px 1fr; gap: 3px 10px; }
+  .shortcuts-keys { font-size: 11px; }
+  .shortcuts-desc { font-size: 12px; }
+}

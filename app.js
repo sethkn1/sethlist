@@ -512,34 +512,64 @@ function splitActs(s) {
 
 /**
  * Build a compact "On this day" block: any concerts whose month+day match
- * today's date from previous years. Returns null if no matches (so Timeline
- * can skip the section entirely on most days).
+ * the given date (or today's, by default) from previous years. Returns null
+ * if no matches — Timeline calls this and only renders if non-null.
+ *
+ * @param {string} [overrideMonthDay] - "MM-DD" format. If provided, shows
+ *        matches for that calendar date instead of today's. Used when a
+ *        URL has ?date=MM-DD for shareable links to a historical day.
  *
  * Shows up to 4 matches — beyond that, space gets cramped. If more exist,
  * a small "+N more" hint is shown. Each entry is clickable → concert modal.
  */
-function buildOnThisDayBlock() {
+function buildOnThisDayBlock(overrideMonthDay) {
   const today = new Date();
-  const monthDay = String(today.getMonth() + 1).padStart(2, "0") + "-" +
-                   String(today.getDate()).padStart(2, "0");
+  // Honor override but validate format strictly. Accepts "MM-DD" with
+  // 2-digit months 01-12 and days 01-31. Anything else falls back to today.
+  let monthDay = overrideMonthDay && /^\d{2}-\d{2}$/.test(overrideMonthDay)
+    ? overrideMonthDay
+    : null;
+  if (monthDay) {
+    const [mm, dd] = monthDay.split("-").map(Number);
+    if (mm < 1 || mm > 12 || dd < 1 || dd > 31) monthDay = null;
+  }
+  if (!monthDay) {
+    monthDay = String(today.getMonth() + 1).padStart(2, "0") + "-" +
+               String(today.getDate()).padStart(2, "0");
+  }
+  const isToday = monthDay === (
+    String(today.getMonth() + 1).padStart(2, "0") + "-" +
+    String(today.getDate()).padStart(2, "0")
+  );
   const currentYear = today.getFullYear();
 
-  // Filter: non-future concerts whose date's MM-DD matches today's, excluding
-  // the current year (if the user already saw a show today, that's not "on this day").
+  // Filter: non-future concerts whose date's MM-DD matches the target date.
+  // If we're showing "today" specifically, exclude the current year (since
+  // that show would already be visible in the year block below). For
+  // explicitly-requested dates via URL, include the current year too — the
+  // user is asking to see all years.
   const matches = STATE.concerts.filter(c => {
-    if (!c.date || c.year === currentYear) return false;
+    if (!c.date) return false;
+    if (isToday && c.year === currentYear) return false;
     return c.date.slice(5) === monthDay;
   }).sort((a, b) => b.date.localeCompare(a.date));  // newest first
 
   if (matches.length === 0) return null;
 
+  // Build a Date object for label formatting (use a non-leap year so 02-29
+  // formats correctly as "February 29")
+  const [mm, dd] = monthDay.split("-").map(Number);
+  const labelDate = new Date(2024, mm - 1, dd);
+  const monthName = labelDate.toLocaleDateString("en-US", { month: "long" });
+  const dayNum = dd;
+
   const block = el("div", { class: "on-this-day" });
-  const monthName = today.toLocaleDateString("en-US", { month: "long" });
-  const dayNum = today.getDate();
   block.appendChild(el("div", { class: "otd-header" },
-    el("span", { class: "otd-label" }, "On this day · " + monthName + " " + dayNum),
+    el("span", { class: "otd-label" },
+      (isToday ? "On this day · " : "On ") + monthName + " " + dayNum),
     el("span", { class: "otd-count" },
-      matches.length + " show" + (matches.length === 1 ? "" : "s") + " in previous years")
+      matches.length + " show" + (matches.length === 1 ? "" : "s") +
+      (isToday ? " in previous years" : " across the years"))
   ));
 
   const displayed = matches.slice(0, 4);
@@ -550,7 +580,11 @@ function buildOnThisDayBlock() {
       class: "otd-card",
       on: { click: () => openConcertModal(c) }
     },
-      el("div", { class: "otd-years" }, yearsAgo + " year" + (yearsAgo === 1 ? "" : "s") + " ago"),
+      el("div", { class: "otd-years" },
+        isToday
+          ? yearsAgo + " year" + (yearsAgo === 1 ? "" : "s") + " ago"
+          : String(c.year)
+      ),
       el("div", { class: "otd-year" }, String(c.year)),
       el("div", { class: "otd-artist" }, c.artist || "Unknown"),
       el("div", { class: "otd-venue" },
@@ -562,7 +596,7 @@ function buildOnThisDayBlock() {
 
   if (matches.length > displayed.length) {
     block.appendChild(el("div", { class: "otd-more" },
-      "+" + (matches.length - displayed.length) + " more from " + monthName + " " + dayNum));
+      "+" + (matches.length - displayed.length) + " more on " + monthName + " " + dayNum));
   }
 
   return block;
@@ -755,6 +789,10 @@ function renderTimeline() {
   const venue = params.get("venue") || "";  // deep-link target for "More at [Venue]"
   const posterOnly = params.get("posterOnly") === "1";
   const festival = params.get("festival") || ""; // festivalKey to focus on
+  // Optional MM-DD param: when present, show the "On this day" block scoped
+  // to that calendar date instead of today's. Used for shareable historical-
+  // date links like /#/timeline?date=07-14
+  const overrideDate = params.get("date") || "";
   // Attended-with filter: comma-separated list of canonical names
   const attendedWithFilter = (params.get("withPerson") || "")
     .split(",")
@@ -770,18 +808,20 @@ function renderTimeline() {
     el("p", { class: "view-sub" }, "Chronological. Newest on top.")
   ));
 
-  // "On this day" — shows that match today's month+day from prior years.
-  // Only renders when there's at least one match AND no filters are active
-  // (wouldn't make sense to show this while user is exploring a subset).
+  // "On this day" — shows that match today's (or specified) month+day across
+  // years. Behavior depends on URL state:
+  //   - No ?date param + no other filters → show today's matches if any exist
+  //   - No ?date param + filters active → suppress (would clash with filter focus)
+  //   - ?date=MM-DD set → ALWAYS show, regardless of filters (user explicitly
+  //     asked for this date, so we honor it)
   const hasAnyFilter = q || state || artist || venue || posterOnly || festival ||
     attendedWithFilter.length > 0;
-  if (!hasAnyFilter) {
-    const otdBlock = buildOnThisDayBlock();
+  if (overrideDate || !hasAnyFilter) {
+    const otdBlock = buildOnThisDayBlock(overrideDate || undefined);
     if (otdBlock) app.appendChild(otdBlock);
   }
 
   // Build filters
-  const allStates = [...new Set(STATE.concerts.map(c => c.state).filter(Boolean))].sort();
   const allArtists = [...new Set(STATE.concerts.map(c => c.artist).filter(Boolean))].sort();
   // All unique attended-with names with counts (sorted by frequency)
   const nameCounts = {};
@@ -800,16 +840,32 @@ function renderTimeline() {
     on: { input: e => updateParamDebounced("q", e.target.value) }
   }));
 
-  const stateSelect = el("select", {
-    on: { change: e => updateParam("state", e.target.value) }
+  // Build the unique list of festivals from concert data, preserving each
+  // festival's most-readable display name (we strip "- Day N" suffixes since
+  // the filter selects the whole festival, not a specific day).
+  const festivalsMap = new Map();  // festivalKey -> displayName
+  STATE.concerts.forEach(c => {
+    if (!c.festivalKey || festivalsMap.has(c.festivalKey)) return;
+    // Reconstruct name from key: rock_on_the_range_2018 → "Rock on the Range 2018"
+    const name = c.festivalKey
+      .split("_")
+      .map(w => /^\d{4}$/.test(w) ? w : w[0].toUpperCase() + w.slice(1))
+      .join(" ");
+    festivalsMap.set(c.festivalKey, name);
   });
-  stateSelect.appendChild(el("option", { value: "" }, "All states"));
-  allStates.forEach(s => {
-    const opt = el("option", { value: s }, STATE.stateNames[s] || s);
-    if (s === state) opt.selected = true;
-    stateSelect.appendChild(opt);
+  const allFestivals = [...festivalsMap.entries()].sort((a, b) =>
+    a[1].localeCompare(b[1]));
+
+  const festivalSelect = el("select", {
+    on: { change: e => updateParam("festival", e.target.value) }
   });
-  filterBar.appendChild(stateSelect);
+  festivalSelect.appendChild(el("option", { value: "" }, "All festivals"));
+  allFestivals.forEach(([key, name]) => {
+    const opt = el("option", { value: key }, name);
+    if (key === festival) opt.selected = true;
+    festivalSelect.appendChild(opt);
+  });
+  filterBar.appendChild(festivalSelect);
 
   const artistSelect = el("select", {
     on: { change: e => updateParam("artist", e.target.value) }
@@ -840,6 +896,7 @@ function renderTimeline() {
     if (state && c.state !== state) return false;
     if (artist && c.artist !== artist) return false;
     if (venue && c.venue !== venue) return false;
+    if (festival && c.festivalKey !== festival) return false;
     if (posterOnly && !c.hasPoster) return false;
     if (attendedWithFilter.length > 0) {
       const attendees = splitAttendedWith(c.attendedWith);
@@ -2648,26 +2705,32 @@ function renderStats() {
 
   // ========================================================================
   // Monthly heatmap: rows = years, cols = months (Jan-Dec).
-  // Cell darkness = show count. Hover shows counts; click jumps Timeline.
+  // Cell darkness = show count, scaled per-year: a year's busiest month is
+  // 100% intensity within that row, regardless of how that count compares to
+  // other years. This means sparse early years still show clearly visible
+  // contrast within their own row, instead of being uniformly faint vs. heavy
+  // recent years.
   // ========================================================================
   const heatData = {};  // year -> month (1-12) -> count
-  let heatMax = 0;
+  const heatMaxByYear = {};  // year -> max count across that year's months
   past.forEach(c => {
     if (!c.date || !c.year) return;
     const m = Number(c.date.slice(5, 7));
     if (!heatData[c.year]) heatData[c.year] = {};
     heatData[c.year][m] = (heatData[c.year][m] || 0) + 1;
-    if (heatData[c.year][m] > heatMax) heatMax = heatData[c.year][m];
+    if (!heatMaxByYear[c.year] || heatData[c.year][m] > heatMaxByYear[c.year]) {
+      heatMaxByYear[c.year] = heatData[c.year][m];
+    }
   });
   const heatYears = Object.keys(heatData).sort();
-  if (heatYears.length > 0 && heatMax > 0) {
+  if (heatYears.length > 0) {
     const MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const heatCard = el("div", { class: "top-list heatmap-card" },
       el("h3", {}, "Concert heatmap")
     );
     const heatDesc = el("p", { class: "heatmap-desc" },
-      "Darker = more shows that month. Click a cell to filter.");
+      "Darker = busier month within that year. Click a cell to filter.");
     heatCard.appendChild(heatDesc);
 
     const table = el("div", { class: "heatmap-table" });
@@ -2683,13 +2746,14 @@ function renderStats() {
 
     // Data rows
     heatYears.forEach(y => {
+      const yearMax = heatMaxByYear[y] || 1;
       const row = el("div", { class: "heatmap-row" },
         el("div", { class: "heatmap-year-label" }, y)
       );
       for (let m = 1; m <= 12; m++) {
         const count = (heatData[y] && heatData[y][m]) || 0;
-        // Scale 0..heatMax → 0..1
-        const intensity = count === 0 ? 0 : Math.max(0.15, count / heatMax);
+        // Scale 0..yearMax → 0..1 (relative to this year's busiest month)
+        const intensity = count === 0 ? 0 : Math.max(0.25, count / yearMax);
         const cellTitle = count === 0
           ? `${MONTH_ABBR[m - 1]} ${y}: no shows`
           : `${MONTH_ABBR[m - 1]} ${y}: ${count} show${count === 1 ? "" : "s"}`;
@@ -2975,6 +3039,123 @@ document.addEventListener("keydown", e => {
   }
 });
 
+/* ============================================================
+   KEYBOARD SHORTCUTS OVERLAY
+   Press '?' anywhere to bring up a list of available shortcuts.
+   Press '?' or Esc to dismiss. Available globally on every view.
+   ============================================================ */
+
+let _shortcutsEl = null;
+
+function buildShortcutsOverlay() {
+  // Sections of shortcuts grouped by context. Each row is [keys, description].
+  const sections = [
+    {
+      title: "Anywhere",
+      rows: [
+        ["?", "Show / hide this overlay"],
+        ["Esc", "Close overlay, modal, or lightbox"],
+      ]
+    },
+    {
+      title: "When a poster or concert modal is open",
+      rows: [
+        ["←  /  →", "Walk to previous / next item in the current filter"],
+        ["Esc", "Close modal"],
+      ]
+    },
+    {
+      title: "Posters view",
+      rows: [
+        ["🎲 Random button", "Open a random poster from the current filter"],
+        ["🖼 Screensaver button", "Full-screen rotating poster display"],
+      ]
+    },
+    {
+      title: "When the screensaver is running",
+      rows: [
+        ["Space  /  →", "Advance to next poster"],
+        ["←", "Go back to previous poster"],
+        ["Any other key", "Exit the screensaver"],
+      ]
+    },
+  ];
+
+  const overlay = el("div", {
+    class: "shortcuts-overlay",
+    hidden: true,
+    on: {
+      click: e => {
+        // Click on backdrop closes; click on inner card doesn't
+        if (e.target === overlay) closeShortcutsOverlay();
+      }
+    }
+  });
+  const card = el("div", { class: "shortcuts-card" });
+  card.appendChild(el("button", {
+    class: "shortcuts-close",
+    "aria-label": "Close",
+    on: { click: () => closeShortcutsOverlay() }
+  }, "✕"));
+  card.appendChild(el("h3", { class: "shortcuts-title" }, "Keyboard shortcuts"));
+
+  sections.forEach(section => {
+    const sec = el("div", { class: "shortcuts-section" });
+    sec.appendChild(el("div", { class: "shortcuts-section-title" }, section.title));
+    const list = el("dl", { class: "shortcuts-list" });
+    section.rows.forEach(([keys, desc]) => {
+      list.appendChild(el("dt", { class: "shortcuts-keys" }, keys));
+      list.appendChild(el("dd", { class: "shortcuts-desc" }, desc));
+    });
+    sec.appendChild(list);
+    card.appendChild(sec);
+  });
+
+  card.appendChild(el("div", { class: "shortcuts-footer" },
+    "Press ? again or Esc to close"));
+  overlay.appendChild(card);
+  document.body.appendChild(overlay);
+  return overlay;
+}
+
+function openShortcutsOverlay() {
+  if (!_shortcutsEl) _shortcutsEl = buildShortcutsOverlay();
+  _shortcutsEl.hidden = false;
+}
+function closeShortcutsOverlay() {
+  if (_shortcutsEl) _shortcutsEl.hidden = true;
+}
+
+// Global '?' key toggles the overlay; Esc dismisses it. We listen at capture
+// phase so this runs before any view-specific handlers. Suppress when the
+// user is typing in an input field — '?' belongs in their query, not as a
+// shortcut.
+document.addEventListener("keydown", e => {
+  const t = e.target;
+  const inField = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable);
+  // Don't trigger when modal/lightbox/screensaver is open — those have their
+  // own key handling, and adding the overlay on top would be visually noisy.
+  const otherModalOpen = (modal && !modal.hidden) ||
+    (_lightboxEl && !_lightboxEl.hidden) ||
+    (_screensaverEl && !_screensaverEl.hidden);
+
+  if (e.key === "?" && !inField && !otherModalOpen) {
+    e.preventDefault();
+    if (_shortcutsEl && !_shortcutsEl.hidden) {
+      closeShortcutsOverlay();
+    } else {
+      openShortcutsOverlay();
+    }
+    return;
+  }
+  // Esc closes the overlay (also handled by document-level Escape elsewhere,
+  // but adding here ensures it works even before other handlers attach)
+  if (e.key === "Escape" && _shortcutsEl && !_shortcutsEl.hidden) {
+    e.preventDefault();
+    closeShortcutsOverlay();
+  }
+});
+
 /**
  * Helper: open a concert modal with navigation context pulled from whatever
  * list is currently on STATE (the Timeline's filtered list). Falls back to
@@ -3077,7 +3258,22 @@ function openConcertModal(c, navContext) {
   }
   setModalDeepLink("concert", c.id);
 
-  // Fuzzy match posters to this concert
+  // Match posters to this concert.
+  //
+  // The previous logic used artist name fuzzy-matching, which fails for two
+  // important real-world cases:
+  //   1. Tour-named concerts: a "Sessanta" show actually featured Maynard's
+  //      three projects (Tool, Puscifer, APC) — there's a Puscifer-branded
+  //      poster from that show that doesn't share the artist name.
+  //   2. Festival days: festival concert rows are named "Sonic Temple
+  //      Festival" but the day's lineup includes Tool, Slipknot, etc., each
+  //      of which may have its own band-specific poster.
+  //
+  // Per user direction, we now match by DATE primarily — any poster from the
+  // same date as the concert is shown in that concert's modal. We keep a
+  // small fuzzy-date window (±4 days) for non-festival concerts only, to
+  // catch posters dated slightly off from the show date (rare, but real:
+  // some posters carry the printing/release date rather than the show date).
   const normalizeArtist = s => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "").replace(/and/g, "");
   const dateDiffDays = (a, b) => Math.abs(
     (new Date(a + "T00:00:00") - new Date(b + "T00:00:00")) / 86400000
@@ -3098,7 +3294,13 @@ function openConcertModal(c, navContext) {
   };
   const cArtist = normalizeArtist(c.artist);
   const shows = STATE.posters.filter(p => {
+    // Exact date match always counts (most common case)
+    if (p.date === c.date) return true;
+    // Fuzzy date match (±4 days) requires artist also match — otherwise
+    // a poster from a different show on a nearby day would match wrongly.
     if (dateDiffDays(p.date, c.date) > 4) return false;
+    // For festival rows, don't fuzzy-date-match — keep festival days isolated.
+    if (c.festivalKey) return false;
     const pArtist = normalizeArtist(p.artist);
     if (!pArtist || !cArtist) return false;
     return pArtist.includes(cArtist) || cArtist.includes(pArtist)
