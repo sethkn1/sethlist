@@ -3557,39 +3557,62 @@ function renderAbout() {
 
   const wrap = el("div", { class: "about-page" });
 
-  // Helper: build the photo gallery. Called once and inserted between
-  // "Why I keep going" and "What this site is" — gives the reader visual
-  // pacing after the emotional context, before the practical site info.
+  // Helper: build the horizontal photo strip. Sits at the very top of the
+  // About page, before the lead paragraph. Compact tiles preserve natural
+  // aspect ratios; click any tile to open the photo at full size in the
+  // existing lightbox component.
+  //
+  // Captions show on hover (desktop, where hover exists) and always on
+  // touch devices via a CSS media query that flips the rules.
+  //
+  // Fade gradients on the left/right edges signal scrollable content
+  // without adding clutter (no arrow buttons, no auto-scroll).
   const buildGallery = () => {
     if (ABOUT_PHOTOS.length === 0) return null;
-    const section = el("section", { class: "about-gallery-section" });
-    section.appendChild(el("h3", { class: "about-section about-gallery-heading" },
-      "Snapshots from the journey"));
-    section.appendChild(el("p", { class: "about-gallery-desc" },
-      "A chronological look at concerts, festivals, and shows along the way."));
-    const gallery = el("div", { class: "about-gallery" });
+    const section = el("section", { class: "about-strip-section" });
+    // Visual wrapper wraps the scrolling track + the fade overlays. The
+    // track itself is the only thing that scrolls.
+    const stripWrap = el("div", { class: "about-strip-wrap" });
+    const track = el("div", { class: "about-strip-track" });
+
     ABOUT_PHOTOS.forEach(photo => {
-      const fig = el("figure", { class: "about-photo" });
+      const fig = el("figure", { class: "about-strip-tile" });
       const caption = photo.caption || aboutPhotoAutoCaption(photo.src);
-      const altText = photo.alt || caption || "About Seth";
+      const altText = photo.alt || caption || "About Seth photo";
       const img = el("img", {
         src: photo.src,
         alt: altText,
         loading: "lazy",
         on: {
-          // If the image fails to load, hide the figure rather than show a broken icon
+          // Hide the tile if the image fails to load (e.g. file missing)
           error: function() { fig.style.display = "none"; }
         }
       });
       fig.appendChild(img);
       if (caption) {
-        fig.appendChild(el("figcaption", {}, caption));
+        fig.appendChild(el("figcaption", { class: "about-strip-caption" }, caption));
       }
-      gallery.appendChild(fig);
+      // Click the tile (anywhere on it) opens the full-size photo in lightbox.
+      // Use the figure as the click target so the caption is also clickable.
+      fig.addEventListener("click", () => openLightbox(photo.src, altText));
+      fig.style.cursor = "zoom-in";
+      track.appendChild(fig);
     });
-    section.appendChild(gallery);
+
+    stripWrap.appendChild(track);
+    // Fade overlays — purely decorative, pointer-events: none in CSS so
+    // they don't block scroll/click on the track underneath.
+    stripWrap.appendChild(el("div", { class: "about-strip-fade about-strip-fade-left" }));
+    stripWrap.appendChild(el("div", { class: "about-strip-fade about-strip-fade-right" }));
+
+    section.appendChild(stripWrap);
     return section;
   };
+
+  // Photo strip sits at the very top of the About page, above the bio.
+  // Sets a visual tone before the words start.
+  const galleryEl = buildGallery();
+  if (galleryEl) wrap.appendChild(galleryEl);
 
   // Lead paragraph
   wrap.appendChild(el("p", { class: "about-lead" },
@@ -3649,11 +3672,6 @@ function renderAbout() {
     "The list of who I haven't seen yet is longer than the list of who I have, and ",
     "that's the whole point."
   ));
-
-  // Gallery sits between "Why I keep going" and "What this site is" —
-  // breaks up the wall of text and gives the bio visual texture.
-  const galleryEl = buildGallery();
-  if (galleryEl) wrap.appendChild(galleryEl);
 
   // Section: What this site is — with live counts
   wrap.appendChild(el("h3", { class: "about-section" }, "What this site is"));

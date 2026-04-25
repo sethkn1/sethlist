@@ -2866,83 +2866,145 @@ main {
   border-bottom-color: var(--paper);
 }
 
-/* Photo gallery section — heading + descriptive paragraph + masonry layout.
-   Sits between "Why I keep going" and "What this site is" in the bio. */
-.about-gallery-section {
-  margin: 40px 0;
-  /* Allow the gallery to extend wider than the main reading column so
-     21 photos have room to breathe without squashing into 2 narrow columns. */
-  margin-left: -40px;
-  margin-right: -40px;
-}
-.about-gallery-heading {
-  /* Override default about-section spacing inside the gallery wrapper */
-  margin-top: 0 !important;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-.about-gallery-desc {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin: -8px 40px 24px 40px;
-}
+/* ============================================================
+   ABOUT PAGE — HORIZONTAL PHOTO STRIP
+   Sits at the top of the About page. A scrollable row of
+   compact tiles (~140px tall) preserving each photo's natural
+   aspect ratio. Click a tile to open the photo at full size in
+   the lightbox.
+   ============================================================ */
 
-/* Masonry-style layout via CSS columns. Each photo retains its natural
-   aspect ratio (no crop), and the layout flows top-to-bottom within each
-   column. Reads as a real photo wall vs. a uniform grid. */
-.about-gallery {
-  column-count: 4;
-  column-gap: 14px;
-  padding: 0 40px;
-  margin-bottom: 0;
-}
-@media (max-width: 1100px) {
-  .about-gallery { column-count: 3; }
+/* Section bleeds into the page edges so 21 photos have horizontal room.
+   On mobile the bleed is more aggressive since the .about-page padding
+   is larger relative to viewport width. */
+.about-strip-section {
+  margin: 0 -40px 32px -40px;
 }
 @media (max-width: 720px) {
-  .about-gallery {
-    column-count: 2;
-    padding: 0 20px;
-  }
-  .about-gallery-section { margin-left: -20px; margin-right: -20px; }
-  .about-gallery-heading,
-  .about-gallery-desc { margin-left: 20px; margin-right: 20px; }
-}
-@media (max-width: 460px) {
-  .about-gallery { column-count: 1; }
+  .about-strip-section { margin-left: -20px; margin-right: -20px; margin-bottom: 24px; }
 }
 
-.about-photo {
-  /* Keep each figure intact within its column (don't break across columns) */
-  break-inside: avoid;
-  page-break-inside: avoid;  /* legacy fallback */
-  margin: 0 0 14px 0;
+/* Wrapper holds the scrolling track and the fade overlays. The wrapper
+   itself is `position: relative` so the absolutely-positioned fades
+   anchor correctly to its left/right edges. */
+.about-strip-wrap {
+  position: relative;
+  /* Prevent the fades from extending beyond the section's box */
+  overflow: hidden;
+}
+
+/* The actual scrolling container. Tiles flow horizontally; trackpad
+   swipe and shift+scroll-wheel both work natively. */
+.about-strip-track {
+  display: flex;
+  gap: 8px;
+  padding: 8px 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  /* Hide scrollbar visually but keep functionality. (Some users miss
+     scrollbars entirely; the fade gradients communicate "scrollable"
+     better than a scrollbar would in this dense black UI.) */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+.about-strip-track::-webkit-scrollbar {
+  height: 6px;
+}
+.about-strip-track::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+.about-strip-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+@media (max-width: 720px) {
+  .about-strip-track {
+    padding: 8px 20px;
+  }
+}
+
+/* Each tile keeps its natural aspect ratio. Fixed height = visual
+   uniformity; width auto-adjusts so portraits are narrow and landscapes
+   are wide. The mix is the texture. */
+.about-strip-tile {
+  flex: 0 0 auto;
+  margin: 0;
+  height: 140px;
+  position: relative;  /* anchor for caption overlay */
   border: 1px solid var(--muted);
   background: var(--ink);
-  /* Subtle inertia on hover for the "I want to look closer" instinct */
+  overflow: hidden;
   transition: border-color 120ms, transform 200ms;
 }
-.about-photo:hover {
+.about-strip-tile:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
 }
-.about-photo img {
-  width: 100%;
-  height: auto;
+.about-strip-tile img {
+  height: 100%;
+  width: auto;
   display: block;
-  /* No aspect-ratio override — let each image keep its natural shape so
-     portrait + landscape mix gracefully in the masonry. */
+  /* If the image hasn't loaded yet, browser may default to 0 width;
+     min-width keeps a visible placeholder slot until load completes. */
+  min-width: 100px;
 }
-.about-photo figcaption {
+
+/* Caption overlay: slides up from the bottom on hover (desktop).
+   On touch/mobile it's always visible (see media query below). */
+.about-strip-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 6px 10px;
   font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--muted);
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 8px 10px;
+  letter-spacing: 0.12em;
+  color: var(--paper);
+  background: linear-gradient(to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0) 100%);
+  /* Hidden by default on desktop; revealed on hover */
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 150ms, transform 150ms;
+  pointer-events: none;
+}
+.about-strip-tile:hover .about-strip-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Touch devices: hover is unreliable, so always show captions */
+@media (hover: none), (max-width: 720px) {
+  .about-strip-caption {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Fade gradients on the strip's left and right edges. Pure visual
+   signal that the strip continues — purposely thin so they don't
+   obscure photo content. pointer-events:none so they don't block
+   click/swipe on the track underneath. */
+.about-strip-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+.about-strip-fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--ink) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.about-strip-fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--ink) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 @media (max-width: 640px) {
