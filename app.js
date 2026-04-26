@@ -977,6 +977,63 @@ function renderTimeline() {
   filterBar.appendChild(countEl);
   app.appendChild(filterBar);
 
+  // ====================================================================
+  // Year strip — horizontal scrolling tabs that let the user jump to any
+  // year in the timeline. Persists at the top of the Timeline view (sticky)
+  // so it's always available as you scroll.
+  //
+  // Years are computed from ALL concerts, not the filtered set, so the strip
+  // shape stays stable when filters change. Years with no shows under the
+  // current filter render as "disabled" (greyed out, unclickable).
+  //
+  // Active year is detected via IntersectionObserver on the year-block
+  // anchors after render, so the active tab tracks scroll position.
+  // ====================================================================
+  const allYears = Array.from(new Set(STATE.concerts.map(c => c.year))).sort((a, b) => b - a);
+  const yearStrip = el("div", { class: "year-strip-wrap" });
+  const yearStripTrack = el("div", { class: "year-strip-track" });
+
+  // [All] tab — scrolls back to the very top of the timeline
+  yearStripTrack.appendChild(el("button", {
+    class: "year-strip-tab year-strip-tab-all",
+    "data-year": "all",
+    on: { click: () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }}
+  }, "All"));
+
+  // Per-year tabs. We compute "has shows under current filter" later, after
+  // the filter pipeline runs; for now build them in their natural state and
+  // mark disabled in a second pass.
+  allYears.forEach(y => {
+    yearStripTrack.appendChild(el("button", {
+      class: "year-strip-tab",
+      "data-year": String(y),
+      on: { click: () => {
+        const target = document.getElementById(`year-${y}`);
+        if (target) {
+          // Offset the smooth-scroll by the height of the sticky strip
+          // and the site header so the year label isn't hidden under them.
+          const stripEl = document.querySelector(".year-strip-wrap");
+          const stripH = stripEl ? stripEl.getBoundingClientRect().height : 0;
+          const headerEl = document.querySelector("header");
+          const headerH = headerEl ? headerEl.getBoundingClientRect().height : 0;
+          const targetTop = target.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: targetTop - stripH - headerH - 8,
+            behavior: "smooth"
+          });
+        }
+      }}
+    }, String(y)));
+  });
+
+  // Fade overlays — same pattern as the About photo strip. Pure visual.
+  yearStrip.appendChild(yearStripTrack);
+  yearStrip.appendChild(el("div", { class: "year-strip-fade year-strip-fade-left" }));
+  yearStrip.appendChild(el("div", { class: "year-strip-fade year-strip-fade-right" }));
+  app.appendChild(yearStrip);
+
   // Filter
   const qLower = q.toLowerCase();
   let filtered = STATE.concerts.filter(c => {
@@ -1097,6 +1154,81 @@ function renderTimeline() {
     timeline.appendChild(block);
   });
   app.appendChild(timeline);
+
+  // ===== Year strip post-render setup =====
+  // Determine which years actually have shows under the current filter.
+  // `years` (computed earlier in this function) is the years that survived
+  // filtering; tabs for any year NOT in this set get disabled state.
+  const visibleYearSet = new Set(years.map(y => String(y)));
+  document.querySelectorAll(".year-strip-tab").forEach(tab => {
+    const yr = tab.getAttribute("data-year");
+    if (yr === "all") return;  // ALL tab is always enabled
+    if (!visibleYearSet.has(yr)) {
+      tab.classList.add("disabled");
+      tab.disabled = true;
+      tab.title = "No shows in this year match the current filters";
+    }
+  });
+
+  // Highlight the year currently in view as the user scrolls. Uses
+  // IntersectionObserver — fires when any year-block crosses the strip's
+  // bottom edge. The first observed year wins (we sort by topmost-visible).
+  const activeYearTab = (yr) => {
+    document.querySelectorAll(".year-strip-tab").forEach(t => t.classList.remove("active"));
+    const tab = document.querySelector(`.year-strip-tab[data-year="${yr}"]`);
+    if (tab) {
+      tab.classList.add("active");
+      // Auto-scroll the strip to keep the active tab visible
+      const track = document.querySelector(".year-strip-track");
+      if (track) {
+        const tabLeft = tab.offsetLeft;
+        const tabRight = tabLeft + tab.offsetWidth;
+        const trackScroll = track.scrollLeft;
+        const trackRight = trackScroll + track.clientWidth;
+        if (tabLeft < trackScroll + 60) {
+          track.scrollTo({ left: Math.max(0, tabLeft - 60), behavior: "smooth" });
+        } else if (tabRight > trackRight - 60) {
+          track.scrollTo({ left: tabRight - track.clientWidth + 60, behavior: "smooth" });
+        }
+      }
+    }
+  };
+
+  // Track which year-blocks are currently intersecting; the topmost visible
+  // one is the "active" year. Recompute on every intersection event.
+  const visible = new Map();
+  const yearObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const yr = entry.target.id.replace("year-", "");
+      if (entry.isIntersecting) {
+        visible.set(yr, entry.target.getBoundingClientRect().top);
+      } else {
+        visible.delete(yr);
+      }
+    });
+    if (visible.size === 0) return;
+    // Pick the year-block whose top is closest to the strip's bottom
+    // (i.e., the one most recently scrolled past or currently in view).
+    const stripEl = document.querySelector(".year-strip-wrap");
+    const stripBottom = stripEl ? stripEl.getBoundingClientRect().bottom : 0;
+    let bestYear = null, bestDistance = Infinity;
+    for (const [yr, top] of visible) {
+      const dist = Math.abs(top - stripBottom);
+      if (dist < bestDistance) { bestDistance = dist; bestYear = yr; }
+    }
+    if (bestYear) activeYearTab(bestYear);
+  }, {
+    // Trigger when a year-block crosses through a horizontal band that
+    // sits just below the strip. The strip is roughly 50px; 100px gives
+    // a small buffer.
+    rootMargin: "-100px 0px -50% 0px",
+    threshold: 0
+  });
+  document.querySelectorAll(".year-block").forEach(b => yearObserver.observe(b));
+
+  // If the strip is scrolled later, save the observer for cleanup on next render
+  if (STATE._yearObserver) STATE._yearObserver.disconnect();
+  STATE._yearObserver = yearObserver;
 }
 
 

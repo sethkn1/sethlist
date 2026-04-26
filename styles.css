@@ -1420,7 +1420,7 @@ main {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.92);
-  z-index: 200;  /* above everything including the year-jump rail */
+  z-index: 200;  /* above the sticky year strip and other UI chrome */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3327,4 +3327,115 @@ main {
   padding-top: 6px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   /* Slightly indented from the main unit to read as supplementary */
+}
+
+/* ============================================================
+   YEAR STRIP — Timeline view
+   Sticky horizontal scrolling tabs that let users jump to any year.
+   Persists below the site header as you scroll the Timeline.
+   Same horizontal-scroll + fade-gradient pattern as the About photo strip.
+   ============================================================ */
+.year-strip-wrap {
+  position: sticky;
+  /* Sit just under the sticky site header. Header is ~115px on desktop,
+     wraps and grows taller on narrow screens — handled in media query below. */
+  top: 115px;
+  z-index: 30;  /* above timeline content, below site header (z-index 50) */
+  /* Bleed to the page edges so the strip uses full width and the
+     fade overlays sit at the visible edges, not at content padding. */
+  margin: 0 -32px 24px -32px;
+  background: var(--ink);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;  /* contains the fades */
+}
+
+.year-strip-track {
+  display: flex;
+  gap: 4px;
+  padding: 8px 32px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+.year-strip-track::-webkit-scrollbar {
+  height: 4px;
+}
+.year-strip-track::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+.year-strip-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.year-strip-tab {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--paper-dim);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background-color 120ms, border-color 120ms, color 120ms;
+}
+.year-strip-tab:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--paper);
+}
+.year-strip-tab.active {
+  background: var(--accent);
+  color: var(--paper);
+  border-color: var(--accent);
+}
+.year-strip-tab.disabled,
+.year-strip-tab:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  /* No hover feedback when disabled */
+}
+.year-strip-tab.year-strip-tab-all {
+  /* "All" tab gets a subtle visual marker so it doesn't blend in with years */
+  font-weight: 700;
+  color: var(--paper);
+}
+
+.year-strip-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  pointer-events: none;
+  z-index: 2;
+}
+.year-strip-fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--ink) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.year-strip-fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--ink) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* On narrower screens the site header wraps and gets taller; year strip
+   needs to sit lower to stay below it. Roughly: at <720px the header
+   wraps once (~140px); at <500px it wraps more aggressively. */
+@media (max-width: 720px) {
+  .year-strip-wrap {
+    top: 145px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .year-strip-track { padding: 6px 16px; }
+  .year-strip-tab {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 500px) {
+  .year-strip-wrap { top: 175px; }
 }
