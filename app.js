@@ -1806,6 +1806,66 @@ function renderPosters() {
   filterBar.appendChild(countEl);
   app.appendChild(filterBar);
 
+  // ====================================================================
+  // Year strip — same pattern as the Timeline view. Sticky horizontal
+  // scrolling tabs that let users jump to any year of posters. Persists
+  // below the site header as you scroll.
+  //
+  // Years are computed from ALL posters (not the filtered set) so the
+  // strip shape stays stable when filters change. Years that have no
+  // posters under the current filter render as disabled.
+  //
+  // We exclude posters with no year (year=null/undefined) from the strip
+  // since there's nowhere to anchor-jump to. The "Unknown" group, if any,
+  // still appears in the page body — just not in the strip.
+  // ====================================================================
+  const allPosterYears = Array.from(new Set(
+    STATE.posters
+      .map(p => p.year || (p.date ? new Date(p.date + "T00:00:00").getFullYear() : null))
+      .filter(y => y && !isNaN(y))
+  )).sort((a, b) => b - a);
+
+  if (allPosterYears.length > 0) {
+    const yearStrip = el("div", { class: "year-strip-wrap" });
+    const yearStripTrack = el("div", { class: "year-strip-track" });
+
+    // [↑ Top] tab
+    yearStripTrack.appendChild(el("button", {
+      class: "year-strip-tab year-strip-tab-top",
+      "data-year": "all",
+      title: "Scroll to top of page",
+      on: { click: () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+    }, "↑ Top"));
+
+    allPosterYears.forEach(y => {
+      yearStripTrack.appendChild(el("button", {
+        class: "year-strip-tab",
+        "data-year": String(y),
+        on: { click: () => {
+          const target = document.getElementById(`year-${y}`);
+          if (target) {
+            const stripEl = document.querySelector(".year-strip-wrap");
+            const stripH = stripEl ? stripEl.getBoundingClientRect().height : 0;
+            const headerEl = document.querySelector("header");
+            const headerH = headerEl ? headerEl.getBoundingClientRect().height : 0;
+            const targetTop = target.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+              top: targetTop - stripH - headerH - 8,
+              behavior: "smooth"
+            });
+          }
+        }}
+      }, String(y)));
+    });
+
+    yearStrip.appendChild(yearStripTrack);
+    yearStrip.appendChild(el("div", { class: "year-strip-fade year-strip-fade-left" }));
+    yearStrip.appendChild(el("div", { class: "year-strip-fade year-strip-fade-right" }));
+    app.appendChild(yearStrip);
+  }
+
   const qLower = q.toLowerCase();
   const filtered = groupList
     .map(g => {
@@ -1938,6 +1998,73 @@ function renderPosters() {
     wrap.appendChild(block);
   });
   app.appendChild(wrap);
+
+  // ===== Year strip post-render setup =====
+  // Same pattern as Timeline: mark disabled years, wire up IntersectionObserver
+  // for active-year tracking, and auto-scroll the strip to keep the active
+  // tab visible.
+  if (allPosterYears.length > 0) {
+    const visibleYearSet = new Set(years.map(y => String(y)));
+    document.querySelectorAll(".year-strip-tab").forEach(tab => {
+      const yr = tab.getAttribute("data-year");
+      if (yr === "all") return;
+      if (!visibleYearSet.has(yr)) {
+        tab.classList.add("disabled");
+        tab.disabled = true;
+        tab.title = "No posters in this year match the current filters";
+      }
+    });
+
+    const activeYearTab = (yr) => {
+      document.querySelectorAll(".year-strip-tab").forEach(t => t.classList.remove("active"));
+      const tab = document.querySelector(`.year-strip-tab[data-year="${yr}"]`);
+      if (tab) {
+        tab.classList.add("active");
+        const track = document.querySelector(".year-strip-track");
+        if (track) {
+          const tabLeft = tab.offsetLeft;
+          const tabRight = tabLeft + tab.offsetWidth;
+          const trackScroll = track.scrollLeft;
+          const trackRight = trackScroll + track.clientWidth;
+          if (tabLeft < trackScroll + 60) {
+            track.scrollTo({ left: Math.max(0, tabLeft - 60), behavior: "smooth" });
+          } else if (tabRight > trackRight - 60) {
+            track.scrollTo({ left: tabRight - track.clientWidth + 60, behavior: "smooth" });
+          }
+        }
+      }
+    };
+
+    const visible = new Map();
+    const yearObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const yr = entry.target.id.replace("year-", "");
+        if (entry.isIntersecting) {
+          visible.set(yr, entry.target.getBoundingClientRect().top);
+        } else {
+          visible.delete(yr);
+        }
+      });
+      if (visible.size === 0) return;
+      const stripEl = document.querySelector(".year-strip-wrap");
+      const stripBottom = stripEl ? stripEl.getBoundingClientRect().bottom : 0;
+      let bestYear = null, bestDistance = Infinity;
+      for (const [yr, top] of visible) {
+        const dist = Math.abs(top - stripBottom);
+        if (dist < bestDistance) { bestDistance = dist; bestYear = yr; }
+      }
+      if (bestYear) activeYearTab(bestYear);
+    }, {
+      rootMargin: "-100px 0px -50% 0px",
+      threshold: 0
+    });
+    document.querySelectorAll(".year-block").forEach(b => yearObserver.observe(b));
+
+    // Replace any previous observer (e.g., from Timeline) so it doesn't
+    // continue firing after we navigate away.
+    if (STATE._yearObserver) STATE._yearObserver.disconnect();
+    STATE._yearObserver = yearObserver;
+  }
 }
 
 /**
@@ -3913,6 +4040,11 @@ function renderAbout() {
     "I go. When a festival announces a lineup that hits, I'm going to try to get there. ",
     "The list of who I haven't seen yet is longer than the list of who I have, and ",
     "that's the whole point."
+  ));
+  wrap.appendChild(el("p", {},
+    "Concerts are shared experiences. They're how I make real human connections ",
+    "with the people I love. Time off screens, in the moment, surrounded by sound ",
+    "and friends. That's what makes me feel alive."
   ));
 
   // Section: What this site is — with live counts
