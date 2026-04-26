@@ -3398,10 +3398,13 @@ main {
   cursor: not-allowed;
   /* No hover feedback when disabled */
 }
-.year-strip-tab.year-strip-tab-all {
-  /* "All" tab gets a subtle visual marker so it doesn't blend in with years */
+.year-strip-tab.year-strip-tab-top {
+  /* "↑ Top" tab gets a subtle visual marker — slight accent border on the
+     right side acts as a divider between the action tab and the year tabs. */
   font-weight: 700;
   color: var(--paper);
+  border-color: rgba(217, 59, 43, 0.3);  /* hint of accent */
+  margin-right: 4px;  /* small gap before year tabs begin */
 }
 
 .year-strip-fade {

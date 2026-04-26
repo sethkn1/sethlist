@@ -993,14 +993,17 @@ function renderTimeline() {
   const yearStrip = el("div", { class: "year-strip-wrap" });
   const yearStripTrack = el("div", { class: "year-strip-track" });
 
-  // [All] tab — scrolls back to the very top of the timeline
+  // [↑ Top] tab — scrolls back to the very top of the timeline (above the
+  // filter bar). The arrow icon makes the affordance unambiguous; "All" was
+  // confusing since it read as a filter rather than a navigation action.
   yearStripTrack.appendChild(el("button", {
-    class: "year-strip-tab year-strip-tab-all",
+    class: "year-strip-tab year-strip-tab-top",
     "data-year": "all",
+    title: "Scroll to top of page",
     on: { click: () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }}
-  }, "All"));
+  }, "↑ Top"));
 
   // Per-year tabs. We compute "has shows under current filter" later, after
   // the filter pipeline runs; for now build them in their natural state and
