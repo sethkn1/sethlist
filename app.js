@@ -3853,13 +3853,20 @@ const ABOUT_PHOTOS = [
 
 /**
  * Auto-derive a caption from a photo filename's embedded timestamp.
- * Handles formats:
+ *
+ * Three-tier logic, highest priority first:
+ *   1. If the photo's date matches a concert in STATE.concerts, return an
+ *      enriched caption like "Tool — PNC Arena" or "Rock on the Range, 2018"
+ *      for festival days. (Manual `caption` field overrides this; handled
+ *      by the caller before this function is invoked.)
+ *   2. Otherwise, fall back to the month/year derived from the filename.
+ *   3. If the filename has no parseable date, return an empty string.
+ *
+ * Handles filename formats:
  *   - "20240520_013741498.jpg" (Samsung native)
  *   - "PXL_20240520_013741498.jpg" (Pixel native)
  *   - "IMG_20150731_220108620.jpg" (Android camera)
  *   - "FB_IMG_1684762803609.jpg" (Facebook saves — Unix epoch in milliseconds)
- * Returns "May 2024" or similar. Falls back to empty string if no
- * recognizable date is found.
  */
 function aboutPhotoAutoCaption(src) {
   const months = ["January", "February", "March", "April", "May", "June",
@@ -3867,24 +3874,103 @@ function aboutPhotoAutoCaption(src) {
 
   const filename = src.split("/").pop() || src;
 
-  // Facebook saves use Unix epoch in milliseconds (13 digits). Decode that
-  // separately so we don't mistakenly read "1684" as a year.
+  // ===== Step 1: extract a calendar date AND time from the filename =====
+  let year = null, monthIdx = null, day = null, hour = null;
+
   const fb = filename.match(/^FB_IMG_(\d{13})/);
   if (fb) {
     const ms = parseInt(fb[1], 10);
     const date = new Date(ms);
     if (!isNaN(date.getTime())) {
-      return `${months[date.getMonth()]} ${date.getFullYear()}`;
+      year = date.getFullYear();
+      monthIdx = date.getMonth();
+      day = date.getDate();
+      hour = date.getHours();
+    }
+  } else {
+    // Standard YYYYMMDD_HHMMSS pattern in filenames. Capture the time too
+    // so we can detect post-midnight rollover from a previous-night concert.
+    const mFull = src.match(/(\d{4})(\d{2})(\d{2})_(\d{2})/);
+    if (mFull) {
+      year = parseInt(mFull[1], 10);
+      monthIdx = parseInt(mFull[2], 10) - 1;
+      day = parseInt(mFull[3], 10);
+      hour = parseInt(mFull[4], 10);
+    } else {
+      // Date-only fallback (no time component)
+      const m = src.match(/(\d{4})(\d{2})(\d{2})/);
+      if (m) {
+        year = parseInt(m[1], 10);
+        monthIdx = parseInt(m[2], 10) - 1;
+        day = parseInt(m[3], 10);
+      }
     }
   }
 
-  // Standard YYYYMMDD pattern in filenames like 20240520_*, PXL_20240520_*, etc.
-  const m = src.match(/(\d{4})(\d{2})\d{2}/);
-  if (!m) return "";
-  const year = m[1];
-  const monthIdx = parseInt(m[2], 10) - 1;
-  if (monthIdx < 0 || monthIdx > 11) return year;
+  if (year === null) return "";
+
+  // ===== Step 2: try to match a concert on this date =====
+  const isoDate = `${year}-${String(monthIdx + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+  let enriched = enrichedCaptionForDate(isoDate);
+
+  // Post-show rollover check: if the photo was taken in the early-morning
+  // hours (before 6am) and there's no show on the photo's date, check the
+  // previous day. Phone photos taken after midnight at a show would otherwise
+  // miss the concert match. We don't apply this rule outside that window
+  // because daytime photos shouldn't pull in random previous-day shows.
+  if (!enriched && hour !== null && hour < 6) {
+    // Use Date arithmetic to safely roll back across month/year boundaries
+    const prev = new Date(Date.UTC(year, monthIdx, day - 1));
+    const prevIso = prev.toISOString().slice(0, 10);
+    enriched = enrichedCaptionForDate(prevIso);
+  }
+
+  if (enriched) return enriched;
+
+  // ===== Step 3: fall back to month/year =====
+  if (monthIdx < 0 || monthIdx > 11) return String(year);
   return `${months[monthIdx]} ${year}`;
+}
+
+/**
+ * Look up concerts on a given date and produce a short caption from them.
+ * Returns null if nothing matches (caller falls back to date-only caption).
+ *
+ * Caption rules:
+ *   - Festival day → use the festival name only (e.g., "Rock on the Range, 2018")
+ *   - Single concert → "Artist — Venue"
+ *   - Multiple non-festival concerts on same date (rare) → use the first
+ *     (which is generally the headliner per the data ordering)
+ *
+ * Returns null if STATE.concerts isn't loaded yet or no match exists.
+ */
+function enrichedCaptionForDate(isoDate) {
+  if (!STATE || !STATE.concerts || STATE.concerts.length === 0) return null;
+  const matches = STATE.concerts.filter(c => c.date === isoDate);
+  if (matches.length === 0) return null;
+
+  // Festival day check: if any match has a festivalKey, treat it as a
+  // festival caption. The festival name often already contains the year
+  // (e.g., "Sonic Temple 2024", "Welcome to Rockville 2021"), so we only
+  // append the year if it's not already in the name. This avoids the
+  // redundant "Sonic Temple 2024, 2024" pattern.
+  const fest = matches.find(c => c.festivalKey);
+  if (fest && fest.festivalName) {
+    const yr = fest.date ? fest.date.slice(0, 4) : "";
+    if (yr && !fest.festivalName.includes(yr)) {
+      return `${fest.festivalName}, ${yr}`;
+    }
+    return fest.festivalName;
+  }
+
+  // Single concert: "Artist — Venue"
+  const c = matches[0];
+  const artist = c.artist || "";
+  const venue = c.venue || "";
+  if (artist && venue) return `${artist} — ${venue}`;
+  if (artist) return artist;
+  if (venue) return venue;
+  return null;
 }
 
 function renderAbout() {
