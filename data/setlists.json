@@ -16044,5 +16044,565 @@
   },
   "opener:puddles-pity-party:2026-04-01": {
     "_error": "no match"
+  },
+  "33b4780d": {
+    "id": "33b4780d",
+    "artist": "Run\u2010D.M.C.",
+    "tour": "Crown Royal Tour",
+    "eventDate": "13-04-2000",
+    "url": "https://www.setlist.fm/setlist/rundmc/2000/roberts-auditorium-rhode-island-college-providence-ri-33b4780d.html",
+    "sets": [],
+    "info": null,
+    "role": "headliner"
+  },
+  "13da95bd": {
+    "id": "13da95bd",
+    "artist": "Tenacious D",
+    "tour": null,
+    "eventDate": "20-10-2000",
+    "url": "https://www.setlist.fm/setlist/tenacious-d/2000/irving-plaza-new-york-ny-13da95bd.html",
+    "sets": [],
+    "info": null,
+    "role": "headliner"
+  },
+  "53d6df61": {
+    "id": "53d6df61",
+    "artist": "Guns N\u2019 Roses",
+    "tour": "Chinese Democracy Tour 01/02",
+    "eventDate": "02-12-2002",
+    "url": "https://www.setlist.fm/setlist/guns-n-roses/2002/fleet-center-boston-ma-53d6df61.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Welcome to the Jungle"
+          },
+          {
+            "name": "It's So Easy"
+          },
+          {
+            "name": "Mr. Brownstone"
+          },
+          {
+            "name": "Live and Let Die",
+            "cover": "Wings"
+          },
+          {
+            "name": "Knockin' on Heaven's Door",
+            "cover": "Bob Dylan"
+          },
+          {
+            "name": "Think About You"
+          },
+          {
+            "name": "You Could Be Mine"
+          },
+          {
+            "name": "Sweet Child o' Mine"
+          },
+          {
+            "name": "Out ta Get Me"
+          },
+          {
+            "name": "Madagascar"
+          },
+          {
+            "name": "November Rain"
+          },
+          {
+            "name": "Buckethead Guitar Solo"
+          },
+          {
+            "name": "Rocket Queen"
+          },
+          {
+            "name": "Street of Dreams",
+            "info": "a.k.a. The Blues"
+          },
+          {
+            "name": "Chinese Democracy"
+          },
+          {
+            "name": "Patience"
+          },
+          {
+            "name": "My Michelle"
+          },
+          {
+            "name": "Nightrain"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "Paradise City"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "headliner"
+  },
+  "43dbbfff": {
+    "id": "43dbbfff",
+    "artist": "Ben Folds",
+    "tour": "Rockin' the Suburbs",
+    "eventDate": "11-01-2003",
+    "url": "https://www.setlist.fm/setlist/ben-folds/2003/lupos-heartbreak-hotel-providence-ri-43dbbfff.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Best Imitation of Myself",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Zak and Sara"
+          },
+          {
+            "name": "Silver Street"
+          },
+          {
+            "name": "Emaline",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Philosophy / Chopsticks"
+          },
+          {
+            "name": "Careless Whisper",
+            "cover": "George Michael"
+          },
+          {
+            "name": "Where's Summer B.?",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Say Yes",
+            "cover": "Elliott Smith"
+          },
+          {
+            "name": "The Last Polka",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Mess",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Your Redneck Past",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Fred Jones Part 2"
+          },
+          {
+            "name": "Annie Waits"
+          },
+          {
+            "name": "Kate",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Army",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Short Bus Benny"
+          },
+          {
+            "name": "One Angry Dwarf and 200 Solemn Faces",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Narcolepsy",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Don't Change Your Plans",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Steven's Last Night in Town",
+            "cover": "Ben Folds Five",
+            "info": "into Drum Solo"
+          },
+          {
+            "name": "Not the Same"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "Hava Nagila",
+            "cover": "[traditional]"
+          },
+          {
+            "name": "Tiny Dancer",
+            "cover": "Elton John"
+          },
+          {
+            "name": "Rockin' the Suburbs"
+          },
+          {
+            "name": "Jackson Cannery",
+            "cover": "Ben Folds Five"
+          },
+          {
+            "name": "Song for the Dumped",
+            "cover": "Ben Folds Five",
+            "info": "Minor key"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "headliner"
+  },
+  "6bc99aca": {
+    "id": "6bc99aca",
+    "artist": "Brit Floyd",
+    "tour": "Space and Time World Tour 2015",
+    "eventDate": "30-05-2015",
+    "url": "https://www.setlist.fm/setlist/brit-floyd/2015/durham-performing-arts-center-durham-nc-6bc99aca.html",
+    "sets": [
+      {
+        "name": "1st Set",
+        "encore": null,
+        "songs": [
+          {
+            "name": "Speak to Me",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Breathe (In the Air)",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "On the Run",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Time",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "The Great Gig in the Sky",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Shine On You Crazy Diamond (Parts I-V)",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "See Emily Play",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "The Happiest Days of Our Lives",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Another Brick in the Wall, Part 2",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Keep Talking",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "On the Turning Away",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Sheep",
+            "cover": "Pink Floyd"
+          }
+        ]
+      },
+      {
+        "name": "2nd Set",
+        "encore": null,
+        "songs": [
+          {
+            "name": "One of These Days",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Louder Than Words",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Money",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Set the Controls for the Heart of the Sun",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Have a Cigar",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Wish You Were Here",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "The Final Cut",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Comfortably Numb",
+            "cover": "Pink Floyd"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "The Show Must Go On",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "In the Flesh",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Run Like Hell",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Waiting for the Worms",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Stop",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "The Trial",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Outside the Wall",
+            "cover": "Pink Floyd"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "headliner"
+  },
+  "2341207b": {
+    "id": "2341207b",
+    "artist": "Brit Floyd",
+    "tour": "The Moon, The Wall, and Beyond Tour",
+    "eventDate": "26-03-2026",
+    "url": "https://www.setlist.fm/setlist/brit-floyd/2026/durham-performing-arts-center-durham-nc-2341207b.html",
+    "sets": [
+      {
+        "name": "Set 1: The Wall and Beyond",
+        "encore": null,
+        "songs": [
+          {
+            "name": "In the Flesh?",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "The Thin Ice",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Another Brick in the Wall, Part 1",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "The Happiest Days of Our Lives",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Another Brick in the Wall, Part 2",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Yet Another Movie",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Round and Around",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Empty Spaces",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Young Lust",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "One of My Turns",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Shine On You Crazy Diamond (Parts I-V)",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Hey You",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Is There Anybody Out There?",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Nobody Home",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Sorrow",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "One of These Days",
+            "cover": "Pink Floyd"
+          }
+        ]
+      },
+      {
+        "name": "Set 2: Dark Side of the Moon",
+        "encore": null,
+        "songs": [
+          {
+            "name": "Speak to Me",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Breathe (In the Air)",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "On the Run",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Time",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Breathe (Reprise)",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "The Great Gig in the Sky",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Money",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Us and Them",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Any Colour You Like",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Brain Damage",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Eclipse",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Wish You Were Here",
+            "cover": "Pink Floyd"
+          },
+          {
+            "name": "Comfortably Numb",
+            "cover": "Pink Floyd"
+          }
+        ]
+      },
+      {
+        "name": "Encore",
+        "encore": null,
+        "songs": [
+          {
+            "name": "Run Like Hell",
+            "cover": "Pink Floyd"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "headliner"
+  },
+  "opener:greg-humphrys:1998-04-10": {
+    "_error": "no match"
+  },
+  "opener:imani:2000-04-13": {
+    "_error": "no match"
+  },
+  "opener:cky:2002-12-02": {
+    "id": "73fcce2d",
+    "artist": "CKY",
+    "tour": null,
+    "eventDate": "02-12-2002",
+    "url": "https://www.setlist.fm/setlist/cky/2002/fleet-center-boston-ma-73fcce2d.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Rio Bravo"
+          },
+          {
+            "name": "My Promiscuous Daughter"
+          },
+          {
+            "name": "The Human Drive in Hi-Fi"
+          },
+          {
+            "name": "96 Quite Bitter Beings"
+          },
+          {
+            "name": "Knee Deep"
+          },
+          {
+            "name": "Flesh Into Gear"
+          },
+          {
+            "name": "Sporadic Movement"
+          },
+          {
+            "name": "Disengage the Simulator"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:mix-master-mike:2002-12-02": {
+    "_error": "empty setlist"
   }
 }

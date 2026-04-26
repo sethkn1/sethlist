@@ -1,6 +1,26 @@
 [
   {
     "id": 0,
+    "date": "1998-04-10",
+    "year": 1998,
+    "dayOfWeek": "Friday",
+    "artist": "Squirrel Nut Zippers",
+    "city": "Waterville",
+    "state": "ME",
+    "venue": "Colby College",
+    "attendedWith": "Eric S.",
+    "hasPoster": false,
+    "setlistLink": null,
+    "tourName": "College and University Independant Tour",
+    "openingActs": "Greg Humphrys",
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 1,
     "date": "1999-11-07",
     "year": 1999,
     "dayOfWeek": "Sunday",
@@ -20,7 +40,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 1,
+    "id": 2,
     "date": "2000-02-15",
     "year": 2000,
     "dayOfWeek": "Tuesday",
@@ -40,7 +60,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 2,
+    "id": 3,
     "date": "2000-02-22",
     "year": 2000,
     "dayOfWeek": "Tuesday",
@@ -60,7 +80,87 @@
     "festivalTotalDays": null
   },
   {
-    "id": 3,
+    "id": 4,
+    "date": "2000-04-13",
+    "year": 2000,
+    "dayOfWeek": "Thursday",
+    "artist": "Run DMC",
+    "city": "North Providence",
+    "state": "RI",
+    "venue": "Rhode Island College",
+    "attendedWith": null,
+    "hasPoster": false,
+    "setlistLink": "https://www.setlist.fm/setlist/rundmc/2000/roberts-auditorium-rhode-island-college-providence-ri-33b4780d.html",
+    "tourName": "Crown Royal Tour",
+    "openingActs": "Imani",
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 5,
+    "date": "2000-10-20",
+    "year": 2000,
+    "dayOfWeek": "Friday",
+    "artist": "Tenacious D",
+    "city": "New York",
+    "state": "NY",
+    "venue": "Irving Plaza",
+    "attendedWith": null,
+    "hasPoster": false,
+    "setlistLink": "https://www.setlist.fm/setlist/tenacious-d/2000/irving-plaza-new-york-ny-13da95bd.html",
+    "tourName": "CMJ Fest 2000",
+    "openingActs": null,
+    "notes": "Met Tenacious D!",
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 6,
+    "date": "2002-12-02",
+    "year": 2002,
+    "dayOfWeek": "Monday",
+    "artist": "Guns N' Roses",
+    "city": "Boston",
+    "state": "MA",
+    "venue": "Fleet Center",
+    "attendedWith": "Jason C.",
+    "hasPoster": false,
+    "setlistLink": "https://www.setlist.fm/setlist/guns-n-roses/2002/fleet-center-boston-ma-53d6df61.html",
+    "tourName": "Chinese Democracy Tour 01/02",
+    "openingActs": "CKY, Mix Master Mike",
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 7,
+    "date": "2003-01-11",
+    "year": 2003,
+    "dayOfWeek": "Saturday",
+    "artist": "Ben Folds",
+    "city": "Providence",
+    "state": "RI",
+    "venue": "Lupos",
+    "attendedWith": null,
+    "hasPoster": false,
+    "setlistLink": "https://www.setlist.fm/setlist/ben-folds/2003/lupos-heartbreak-hotel-providence-ri-43dbbfff.html",
+    "tourName": "Rockin' the Suburbs",
+    "openingActs": null,
+    "notes": "Can't remember who I went to this show with!",
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 8,
     "date": "2004-04-30",
     "year": 2004,
     "dayOfWeek": "Friday",
@@ -80,7 +180,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 4,
+    "id": 9,
     "date": "2008-07-29",
     "year": 2008,
     "dayOfWeek": "Tuesday",
@@ -100,7 +200,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 5,
+    "id": 10,
     "date": "2010-07-05",
     "year": 2010,
     "dayOfWeek": "Monday",
@@ -120,7 +220,27 @@
     "festivalTotalDays": null
   },
   {
-    "id": 6,
+    "id": 11,
+    "date": "2012-02-08",
+    "year": 2012,
+    "dayOfWeek": "Wednesday",
+    "artist": "Hurt",
+    "city": "Raleigh",
+    "state": "NC",
+    "venue": "The Lincoln Theatre",
+    "attendedWith": "Sean B.",
+    "hasPoster": false,
+    "setlistLink": null,
+    "tourName": "Acoustic Tour",
+    "openingActs": null,
+    "notes": "RIP Sean",
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 12,
     "date": "2012-07-01",
     "year": 2012,
     "dayOfWeek": "Sunday",
@@ -140,7 +260,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 7,
+    "id": 13,
     "date": "2013-03-03",
     "year": 2013,
     "dayOfWeek": "Sunday",
@@ -160,7 +280,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 8,
+    "id": 14,
     "date": "2013-10-21",
     "year": 2013,
     "dayOfWeek": "Monday",
@@ -180,7 +300,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 9,
+    "id": 15,
     "date": "2014-01-30",
     "year": 2014,
     "dayOfWeek": "Thursday",
@@ -200,7 +320,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 10,
+    "id": 16,
     "date": "2014-07-14",
     "year": 2014,
     "dayOfWeek": "Monday",
@@ -220,7 +340,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 11,
+    "id": 17,
     "date": "2014-08-11",
     "year": 2014,
     "dayOfWeek": "Monday",
@@ -240,7 +360,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 12,
+    "id": 18,
     "date": "2014-09-17",
     "year": 2014,
     "dayOfWeek": "Wednesday",
@@ -260,7 +380,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 13,
+    "id": 19,
     "date": "2015-05-11",
     "year": 2015,
     "dayOfWeek": "Monday",
@@ -280,7 +400,27 @@
     "festivalTotalDays": null
   },
   {
-    "id": 14,
+    "id": 20,
+    "date": "2015-05-30",
+    "year": 2015,
+    "dayOfWeek": "Saturday",
+    "artist": "Britt Floyd",
+    "city": "Durham",
+    "state": "NC",
+    "venue": "DPAC",
+    "attendedWith": "Dana K., Jim A., Heather A.",
+    "hasPoster": false,
+    "setlistLink": "https://www.setlist.fm/setlist/brit-floyd/2015/durham-performing-arts-center-durham-nc-6bc99aca.html",
+    "tourName": "Space and Time World Tour 2015",
+    "openingActs": null,
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 21,
     "date": "2015-07-19",
     "year": 2015,
     "dayOfWeek": "Sunday",
@@ -300,7 +440,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 15,
+    "id": 22,
     "date": "2015-07-31",
     "year": 2015,
     "dayOfWeek": "Friday",
@@ -320,7 +460,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 16,
+    "id": 23,
     "date": "2015-11-10",
     "year": 2015,
     "dayOfWeek": "Tuesday",
@@ -340,7 +480,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 17,
+    "id": 24,
     "date": "2016-01-26",
     "year": 2016,
     "dayOfWeek": "Tuesday",
@@ -360,7 +500,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 18,
+    "id": 25,
     "date": "2016-04-07",
     "year": 2016,
     "dayOfWeek": "Thursday",
@@ -380,7 +520,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 19,
+    "id": 26,
     "date": "2016-04-19",
     "year": 2016,
     "dayOfWeek": "Tuesday",
@@ -400,7 +540,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 20,
+    "id": 27,
     "date": "2016-07-18",
     "year": 2016,
     "dayOfWeek": null,
@@ -420,7 +560,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 21,
+    "id": 28,
     "date": "2016-08-27",
     "year": 2016,
     "dayOfWeek": "Saturday",
@@ -440,7 +580,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 22,
+    "id": 29,
     "date": "2016-09-07",
     "year": 2016,
     "dayOfWeek": "Friday",
@@ -460,7 +600,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 23,
+    "id": 30,
     "date": "2016-09-20",
     "year": 2016,
     "dayOfWeek": "Tuesday",
@@ -480,7 +620,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 24,
+    "id": 31,
     "date": "2016-10-04",
     "year": 2016,
     "dayOfWeek": "Tuesday",
@@ -500,7 +640,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 25,
+    "id": 32,
     "date": "2017-04-15",
     "year": 2017,
     "dayOfWeek": "Saturday",
@@ -520,7 +660,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 26,
+    "id": 33,
     "date": "2017-05-19",
     "year": 2017,
     "dayOfWeek": "Friday",
@@ -540,7 +680,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 27,
+    "id": 34,
     "date": "2017-05-24",
     "year": 2017,
     "dayOfWeek": "Wednesday",
@@ -560,7 +700,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 28,
+    "id": 35,
     "date": "2017-07-16",
     "year": 2017,
     "dayOfWeek": "Sunday",
@@ -580,7 +720,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 29,
+    "id": 36,
     "date": "2017-07-18",
     "year": 2017,
     "dayOfWeek": "Tuesday",
@@ -600,7 +740,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 30,
+    "id": 37,
     "date": "2017-08-11",
     "year": 2017,
     "dayOfWeek": "Friday",
@@ -620,7 +760,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 31,
+    "id": 38,
     "date": "2017-09-27",
     "year": 2017,
     "dayOfWeek": "Wednesday",
@@ -640,7 +780,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 32,
+    "id": 39,
     "date": "2017-10-10",
     "year": 2017,
     "dayOfWeek": "Tuesday",
@@ -660,7 +800,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 33,
+    "id": 40,
     "date": "2018-04-24",
     "year": 2018,
     "dayOfWeek": "Tuesday",
@@ -680,7 +820,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 34,
+    "id": 41,
     "date": "2018-05-18",
     "year": 2018,
     "dayOfWeek": "Friday",
@@ -700,7 +840,7 @@
     "festivalTotalDays": 3
   },
   {
-    "id": 35,
+    "id": 42,
     "date": "2018-05-19",
     "year": 2018,
     "dayOfWeek": "Saturday",
@@ -720,7 +860,7 @@
     "festivalTotalDays": 3
   },
   {
-    "id": 36,
+    "id": 43,
     "date": "2018-05-20",
     "year": 2018,
     "dayOfWeek": "Sunday",
@@ -740,7 +880,7 @@
     "festivalTotalDays": 3
   },
   {
-    "id": 37,
+    "id": 44,
     "date": "2018-06-05",
     "year": 2018,
     "dayOfWeek": "Tuesday",
@@ -760,7 +900,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 38,
+    "id": 45,
     "date": "2018-06-29",
     "year": 2018,
     "dayOfWeek": "Friday",
@@ -780,7 +920,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 39,
+    "id": 46,
     "date": "2018-09-04",
     "year": 2018,
     "dayOfWeek": "Tuesday",
@@ -800,7 +940,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 40,
+    "id": 47,
     "date": "2018-11-01",
     "year": 2018,
     "dayOfWeek": "Thursday",
@@ -820,7 +960,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 41,
+    "id": 48,
     "date": "2019-01-06",
     "year": 2019,
     "dayOfWeek": "Sunday",
@@ -840,7 +980,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 42,
+    "id": 49,
     "date": "2019-01-28",
     "year": 2019,
     "dayOfWeek": "Monday",
@@ -860,7 +1000,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 43,
+    "id": 50,
     "date": "2019-03-12",
     "year": 2019,
     "dayOfWeek": "Tuesday",
@@ -880,7 +1020,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 44,
+    "id": 51,
     "date": "2019-04-06",
     "year": 2019,
     "dayOfWeek": "Saturday",
@@ -900,7 +1040,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 45,
+    "id": 52,
     "date": "2019-05-10",
     "year": 2019,
     "dayOfWeek": "Friday",
@@ -920,7 +1060,7 @@
     "festivalTotalDays": 3
   },
   {
-    "id": 46,
+    "id": 53,
     "date": "2019-05-11",
     "year": 2019,
     "dayOfWeek": "Saturday",
@@ -940,7 +1080,7 @@
     "festivalTotalDays": 3
   },
   {
-    "id": 47,
+    "id": 54,
     "date": "2019-05-12",
     "year": 2019,
     "dayOfWeek": "Sunday",
@@ -960,7 +1100,7 @@
     "festivalTotalDays": 3
   },
   {
-    "id": 48,
+    "id": 55,
     "date": "2019-05-16",
     "year": 2019,
     "dayOfWeek": "Thursday",
@@ -980,7 +1120,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 49,
+    "id": 56,
     "date": "2019-05-28",
     "year": 2019,
     "dayOfWeek": "Tuesday",
@@ -1000,7 +1140,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 50,
+    "id": 57,
     "date": "2019-08-18",
     "year": 2019,
     "dayOfWeek": "Sunday",
@@ -1020,7 +1160,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 51,
+    "id": 58,
     "date": "2019-09-19",
     "year": 2019,
     "dayOfWeek": "Thursday",
@@ -1040,7 +1180,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 52,
+    "id": 59,
     "date": "2019-09-25",
     "year": 2019,
     "dayOfWeek": "Wednesday",
@@ -1060,7 +1200,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 53,
+    "id": 60,
     "date": "2019-11-19",
     "year": 2019,
     "dayOfWeek": "Tuesday",
@@ -1080,7 +1220,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 54,
+    "id": 61,
     "date": "2019-11-24",
     "year": 2019,
     "dayOfWeek": "Sunday",
@@ -1100,7 +1240,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 55,
+    "id": 62,
     "date": "2020-01-17",
     "year": 2020,
     "dayOfWeek": "Friday",
@@ -1120,7 +1260,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 56,
+    "id": 63,
     "date": "2020-02-08",
     "year": 2020,
     "dayOfWeek": "Saturday",
@@ -1140,7 +1280,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 57,
+    "id": 64,
     "date": "2021-09-11",
     "year": 2021,
     "dayOfWeek": "Saturday",
@@ -1160,7 +1300,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 58,
+    "id": 65,
     "date": "2021-09-29",
     "year": 2021,
     "dayOfWeek": "Wednesday",
@@ -1180,7 +1320,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 59,
+    "id": 66,
     "date": "2021-11-11",
     "year": 2021,
     "dayOfWeek": "Thursday",
@@ -1200,7 +1340,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 60,
+    "id": 67,
     "date": "2021-11-12",
     "year": 2021,
     "dayOfWeek": "Friday",
@@ -1220,7 +1360,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 61,
+    "id": 68,
     "date": "2021-11-13",
     "year": 2021,
     "dayOfWeek": "Saturday",
@@ -1240,7 +1380,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 62,
+    "id": 69,
     "date": "2021-11-14",
     "year": 2021,
     "dayOfWeek": "Sunday",
@@ -1260,7 +1400,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 63,
+    "id": 70,
     "date": "2021-11-19",
     "year": 2021,
     "dayOfWeek": "Friday",
@@ -1280,7 +1420,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 64,
+    "id": 71,
     "date": "2022-02-22",
     "year": 2022,
     "dayOfWeek": "Tuesday",
@@ -1300,7 +1440,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 65,
+    "id": 72,
     "date": "2022-03-11",
     "year": 2022,
     "dayOfWeek": "Friday",
@@ -1320,7 +1460,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 66,
+    "id": 73,
     "date": "2022-03-20",
     "year": 2022,
     "dayOfWeek": "Sunday",
@@ -1340,7 +1480,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 67,
+    "id": 74,
     "date": "2022-04-28",
     "year": 2022,
     "dayOfWeek": "Thursday",
@@ -1360,7 +1500,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 68,
+    "id": 75,
     "date": "2022-05-20",
     "year": 2022,
     "dayOfWeek": "Friday",
@@ -1380,7 +1520,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 69,
+    "id": 76,
     "date": "2022-06-22",
     "year": 2022,
     "dayOfWeek": "Wednesday",
@@ -1400,7 +1540,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 70,
+    "id": 77,
     "date": "2022-07-31",
     "year": 2022,
     "dayOfWeek": "Sunday",
@@ -1420,7 +1560,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 71,
+    "id": 78,
     "date": "2022-08-18",
     "year": 2022,
     "dayOfWeek": "Thursday",
@@ -1440,7 +1580,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 72,
+    "id": 79,
     "date": "2022-08-31",
     "year": 2022,
     "dayOfWeek": "Sunday",
@@ -1460,7 +1600,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 73,
+    "id": 80,
     "date": "2022-09-27",
     "year": 2022,
     "dayOfWeek": "Tuesday",
@@ -1480,7 +1620,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 74,
+    "id": 81,
     "date": "2022-11-01",
     "year": 2022,
     "dayOfWeek": "Tuesday",
@@ -1500,7 +1640,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 75,
+    "id": 82,
     "date": "2023-05-21",
     "year": 2023,
     "dayOfWeek": "Sunday",
@@ -1520,7 +1660,7 @@
     "festivalTotalDays": 1
   },
   {
-    "id": 76,
+    "id": 83,
     "date": "2023-08-04",
     "year": 2023,
     "dayOfWeek": "Friday",
@@ -1540,7 +1680,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 77,
+    "id": 84,
     "date": "2023-09-07",
     "year": 2023,
     "dayOfWeek": "Thursday",
@@ -1560,7 +1700,7 @@
     "festivalTotalDays": 1
   },
   {
-    "id": 78,
+    "id": 85,
     "date": "2023-10-14",
     "year": 2023,
     "dayOfWeek": "Saturday",
@@ -1580,7 +1720,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 79,
+    "id": 86,
     "date": "2023-10-29",
     "year": 2023,
     "dayOfWeek": "Sunday",
@@ -1600,7 +1740,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 80,
+    "id": 87,
     "date": "2023-11-09",
     "year": 2023,
     "dayOfWeek": "Thursday",
@@ -1620,7 +1760,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 81,
+    "id": 88,
     "date": "2023-11-17",
     "year": 2023,
     "dayOfWeek": "Friday",
@@ -1640,7 +1780,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 82,
+    "id": 89,
     "date": "2024-01-21",
     "year": 2024,
     "dayOfWeek": "Sunday",
@@ -1660,7 +1800,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 83,
+    "id": 90,
     "date": "2024-02-18",
     "year": 2024,
     "dayOfWeek": "Sunday",
@@ -1680,7 +1820,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 84,
+    "id": 91,
     "date": "2024-03-29",
     "year": 2024,
     "dayOfWeek": "Friday",
@@ -1700,7 +1840,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 85,
+    "id": 92,
     "date": "2024-04-07",
     "year": 2024,
     "dayOfWeek": "Sunday",
@@ -1720,7 +1860,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 86,
+    "id": 93,
     "date": "2024-05-16",
     "year": 2024,
     "dayOfWeek": "Thursday",
@@ -1740,7 +1880,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 87,
+    "id": 94,
     "date": "2024-05-17",
     "year": 2024,
     "dayOfWeek": "Friday",
@@ -1760,7 +1900,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 88,
+    "id": 95,
     "date": "2024-05-18",
     "year": 2024,
     "dayOfWeek": "Saturday",
@@ -1780,7 +1920,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 89,
+    "id": 96,
     "date": "2024-05-19",
     "year": 2024,
     "dayOfWeek": "Sunday",
@@ -1800,7 +1940,7 @@
     "festivalTotalDays": 4
   },
   {
-    "id": 90,
+    "id": 97,
     "date": "2024-06-26",
     "year": 2024,
     "dayOfWeek": "Wednesday",
@@ -1820,7 +1960,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 91,
+    "id": 98,
     "date": "2024-08-27",
     "year": 2024,
     "dayOfWeek": "Tuesday",
@@ -1840,7 +1980,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 92,
+    "id": 99,
     "date": "2024-09-02",
     "year": 2024,
     "dayOfWeek": "Monday",
@@ -1860,7 +2000,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 93,
+    "id": 100,
     "date": "2024-09-18",
     "year": 2024,
     "dayOfWeek": "Wednesday",
@@ -1880,7 +2020,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 94,
+    "id": 101,
     "date": "2025-03-24",
     "year": 2025,
     "dayOfWeek": "Monday",
@@ -1900,7 +2040,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 95,
+    "id": 102,
     "date": "2025-05-06",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -1920,7 +2060,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 96,
+    "id": 103,
     "date": "2025-05-13",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -1940,7 +2080,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 97,
+    "id": 104,
     "date": "2025-05-31",
     "year": 2025,
     "dayOfWeek": "Saturday",
@@ -1960,7 +2100,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 98,
+    "id": 105,
     "date": "2025-07-15",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -1980,7 +2120,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 99,
+    "id": 106,
     "date": "2025-07-29",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -2000,7 +2140,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 100,
+    "id": 107,
     "date": "2025-08-21",
     "year": 2025,
     "dayOfWeek": "Thursday",
@@ -2020,7 +2160,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 101,
+    "id": 108,
     "date": "2025-08-27",
     "year": 2025,
     "dayOfWeek": "Wednesday",
@@ -2040,7 +2180,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 102,
+    "id": 109,
     "date": "2025-09-05",
     "year": 2025,
     "dayOfWeek": "Friday",
@@ -2060,7 +2200,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 103,
+    "id": 110,
     "date": "2025-09-11",
     "year": 2025,
     "dayOfWeek": "Thursday",
@@ -2080,7 +2220,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 104,
+    "id": 111,
     "date": "2025-10-25",
     "year": 2025,
     "dayOfWeek": "Saturday",
@@ -2100,7 +2240,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 105,
+    "id": 112,
     "date": "2025-11-04",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -2120,7 +2260,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 106,
+    "id": 113,
     "date": "2026-02-10",
     "year": 2026,
     "dayOfWeek": "Tuesday",
@@ -2140,7 +2280,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 107,
+    "id": 114,
     "date": "2026-03-07",
     "year": 2026,
     "dayOfWeek": "Saturday",
@@ -2160,7 +2300,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 108,
+    "id": 115,
     "date": "2026-03-16",
     "year": 2026,
     "dayOfWeek": "Monday",
@@ -2180,7 +2320,27 @@
     "festivalTotalDays": null
   },
   {
-    "id": 109,
+    "id": 116,
+    "date": "2026-03-26",
+    "year": 2026,
+    "dayOfWeek": "Thursday",
+    "artist": "Britt Floyd",
+    "city": "Durham",
+    "state": "NC",
+    "venue": "DPAC",
+    "attendedWith": "Bill B.",
+    "hasPoster": false,
+    "setlistLink": "https://www.setlist.fm/setlist/brit-floyd/2026/durham-performing-arts-center-durham-nc-2341207b.html",
+    "tourName": "The Moon, The Wall, and Beyond Tour",
+    "openingActs": null,
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 117,
     "date": "2026-04-01",
     "year": 2026,
     "dayOfWeek": "Wednesday",
@@ -2200,7 +2360,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 110,
+    "id": 118,
     "date": "2026-04-17",
     "year": 2026,
     "dayOfWeek": "Friday",
