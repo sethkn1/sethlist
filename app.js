@@ -3491,42 +3491,95 @@ function renderStats() {
 // don't have to rename files manually. The layout sorts chronologically by
 // the embedded timestamp.
 const ABOUT_PHOTOS = [
+  { src: "images/about/20140130_221927.jpg" },
   { src: "images/about/20140130_223458.jpg" },
+  { src: "images/about/20140714_204754.jpg" },
+  { src: "images/about/20140714_210257.jpg" },
   { src: "images/about/20140811_195752.jpg" },
+  { src: "images/about/20140811_221342.jpg" },
   { src: "images/about/20140917_194606.jpg" },
+  { src: "images/about/IMG_20150731_215723696.jpg" },
   { src: "images/about/IMG_20150731_220108620.jpg" },
+  { src: "images/about/20170811_202621.jpg" },
   { src: "images/about/20171010_220039.jpg" },
   { src: "images/about/20171010_223416.jpg" },
   { src: "images/about/20180424_213621.jpg" },
+  { src: "images/about/20180424_222310.jpg" },
+  { src: "images/about/20181101_232705.jpg" },
+  { src: "images/about/20190106_211242.jpg" },
   { src: "images/about/20190312_214748.jpg" },
+  { src: "images/about/20200208_202735.jpg" },
   { src: "images/about/20200208_213414.jpg" },
+  { src: "images/about/20211114_181138.jpg" },
+  { src: "images/about/20211114_181157.jpg" },
   { src: "images/about/20220222_225814.jpg" },
-  { src: "images/about/20220622_221750.jpg" },
+  { src: "images/about/20220222_225833.jpg" },
+  { src: "images/about/20220311_215443.jpg" },
+  { src: "images/about/20220428_204031.jpg" },
+  { src: "images/about/20220831_213546.jpg" },
+  { src: "images/about/20220927_195855.jpg" },
   { src: "images/about/20220927_223449.jpg" },
+  { src: "images/about/FB_IMG_1684762803609.jpg" },
+  { src: "images/about/FB_IMG_1708360435420.jpg" },
+  { src: "images/about/PXL_20230805_002332540.jpg" },
   { src: "images/about/PXL_20230909_000133262.jpg" },
+  { src: "images/about/PXL_20230922_180440567.jpg" },
   { src: "images/about/PXL_20231015_052313979.jpg" },
   { src: "images/about/PXL_20240122_033607454.jpg" },
   { src: "images/about/PXL_20240218_205053163.jpg" },
-  { src: "images/about/PXL_20240408_022234697.MP.jpg" },
+  { src: "images/about/PXL_20240219_043416162.MP.jpg" },
+  { src: "images/about/PXL_20240408_022544359.jpg" },
+  { src: "images/about/PXL_20240518_220949377.jpg" },
+  { src: "images/about/PXL_20240519_232158727.jpg" },
   { src: "images/about/PXL_20240520_013741498.jpg" },
+  { src: "images/about/PXL_20240627_004624213.jpg" },
+  { src: "images/about/PXL_20250325_013710209.MP.jpg" },
+  { src: "images/about/PXL_20250507_012621227.MP.jpg" },
+  { src: "images/about/PXL_20250507_013317036.jpg" },
+  { src: "images/about/PXL_20250514_010849054.jpg" },
+  { src: "images/about/PXL_20250601_002753096.jpg" },
   { src: "images/about/PXL_20250601_023753531.jpg" },
-  { src: "images/about/PXL_20250822_001543892.jpg" },
-  { src: "images/about/PXL_20250906_014050081.MP.jpg" },
+  { src: "images/about/PXL_20250715_224354591.jpg" },
+  { src: "images/about/PXL_20250822_001600949.jpg" },
+  { src: "images/about/PXL_20250822_003822343.MP.jpg" },
+  { src: "images/about/PXL_20250829_022258322.MP.jpg" },
+  { src: "images/about/PXL_20250829_024727670.MP.jpg" },
+  { src: "images/about/PXL_20250906_014042438.jpg" },
+  { src: "images/about/PXL_20251105_002735740.jpg" },
 ];
 
 /**
  * Auto-derive a caption from a photo filename's embedded timestamp.
- * Handles formats: "20240520_013741498.jpg", "PXL_20240520_013741498.jpg",
- * "IMG_20150731_220108620.jpg". Returns "May 2024" or similar.
- * Falls back to empty string if no recognizable date is found.
+ * Handles formats:
+ *   - "20240520_013741498.jpg" (Samsung native)
+ *   - "PXL_20240520_013741498.jpg" (Pixel native)
+ *   - "IMG_20150731_220108620.jpg" (Android camera)
+ *   - "FB_IMG_1684762803609.jpg" (Facebook saves — Unix epoch in milliseconds)
+ * Returns "May 2024" or similar. Falls back to empty string if no
+ * recognizable date is found.
  */
 function aboutPhotoAutoCaption(src) {
+  const months = ["January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"];
+
+  const filename = src.split("/").pop() || src;
+
+  // Facebook saves use Unix epoch in milliseconds (13 digits). Decode that
+  // separately so we don't mistakenly read "1684" as a year.
+  const fb = filename.match(/^FB_IMG_(\d{13})/);
+  if (fb) {
+    const ms = parseInt(fb[1], 10);
+    const date = new Date(ms);
+    if (!isNaN(date.getTime())) {
+      return `${months[date.getMonth()]} ${date.getFullYear()}`;
+    }
+  }
+
+  // Standard YYYYMMDD pattern in filenames like 20240520_*, PXL_20240520_*, etc.
   const m = src.match(/(\d{4})(\d{2})\d{2}/);
   if (!m) return "";
   const year = m[1];
   const monthIdx = parseInt(m[2], 10) - 1;
-  const months = ["January", "February", "March", "April", "May", "June",
-                  "July", "August", "September", "October", "November", "December"];
   if (monthIdx < 0 || monthIdx > 11) return year;
   return `${months[monthIdx]} ${year}`;
 }
