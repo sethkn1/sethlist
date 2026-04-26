@@ -16604,5 +16604,62 @@
   },
   "opener:mix-master-mike:2002-12-02": {
     "_error": "empty setlist"
+  },
+  "bd26d5a": {
+    "id": "bd26d5a",
+    "artist": "Disturbed",
+    "tour": "The Sickness",
+    "eventDate": "19-10-2000",
+    "url": "https://www.setlist.fm/setlist/disturbed/2000/wwf-new-york-new-york-ny-bd26d5a.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Down With the Sickness"
+          },
+          {
+            "name": "Voices"
+          },
+          {
+            "name": "Want"
+          },
+          {
+            "name": "Conflict"
+          },
+          {
+            "name": "The Game"
+          },
+          {
+            "name": "Fear"
+          },
+          {
+            "name": "Shout",
+            "cover": "Tears for Fears"
+          },
+          {
+            "name": "Numb"
+          },
+          {
+            "name": "Stupify"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "headliner"
+  },
+  "opener:glassjaw:2000-10-19": {
+    "_error": "empty setlist"
+  },
+  "opener:nonpoint:2000-10-19": {
+    "_error": "empty setlist"
+  },
+  "opener:from-zero:2000-10-19": {
+    "_error": "empty setlist"
+  },
+  "opener:6-gig:2000-10-19": {
+    "_error": "empty setlist"
   }
 }
