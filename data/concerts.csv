@@ -4,7 +4,7 @@ id,date,dayOfWeek,artist,city,state,venue,attendedWith,hasPoster,setlistLink,tou
 2,2000-02-15,Tuesday,System of a Down,Providence,RI,Lupos,,No,https://www.setlist.fm/setlist/system-of-a-down/2000/lupos-heartbreak-hotel-providence-ri-7bd63e94.html,Snocore 99 Tour,"Mr Bungle, Incubus",Co-headline tour with Mr. Bungle
 3,2000-02-22,Tuesday,Chris Cornell,Providence,RI,Lupos,Justin L.,No,https://www.setlist.fm/setlist/chris-cornell/2000/lupos-heartbreak-hotel-providence-ri-4bc2ab8a.html,Euphoria Morning Tour,,
 4,2000-04-13,Thursday,Run DMC,North Providence,RI,Rhode Island College,,No,https://www.setlist.fm/setlist/rundmc/2000/roberts-auditorium-rhode-island-college-providence-ri-33b4780d.html,Crown Royal Tour,Imani,
-5,2000-10-19,Thursday,Distrubed,New York,NY,WWF New York,,No,https://www.setlist.fm/setlist/disturbed/2000/wwf-new-york-new-york-ny-bd26d5a.html,The Sickness,"Glassjaw, Nonpoint, From Zero, 6 Gig",CMJ Fest
+5,2000-10-19,Thursday,Disturbed,New York,NY,WWF New York,,No,https://www.setlist.fm/setlist/disturbed/2000/wwf-new-york-new-york-ny-bd26d5a.html,The Sickness,"Glassjaw, Nonpoint, From Zero, 6 Gig",CMJ Fest
 6,2000-10-20,Friday,Tenacious D,New York,NY,Irving Plaza,,No,https://www.setlist.fm/setlist/tenacious-d/2000/irving-plaza-new-york-ny-13da95bd.html,CMJ Fest 2000,,Met Tenacious D!
 7,2002-12-02,Monday,Guns N' Roses,Boston,MA,Fleet Center,Jason C.,No,https://www.setlist.fm/setlist/guns-n-roses/2002/fleet-center-boston-ma-53d6df61.html,Chinese Democracy Tour 01/02,"CKY, Mix Master Mike",
 8,2003-01-11,Saturday,Ben Folds,Providence,RI,Lupos,,No,https://www.setlist.fm/setlist/ben-folds/2003/lupos-heartbreak-hotel-providence-ri-43dbbfff.html,Rockin' the Suburbs,,Can't remember who I went to this show with!
@@ -20,7 +20,7 @@ id,date,dayOfWeek,artist,city,state,venue,attendedWith,hasPoster,setlistLink,tou
 18,2014-08-11,Monday,Nine Inch Nails,Tampa,FL,MidFlorida Credit Union Amphitheatre,Joe P.,Yes,https://www.setlist.fm/setlist/nine-inch-nails/2014/midflorida-credit-union-amphitheatre-tampa-fl-63ceea7f.html,NIN + Soundgarden Tour,Soundgarden,Co-headline with Soundgarden.
 19,2014-09-17,Wednesday,Jack White,Boston,MA,Fenway Park,Justin L.,Yes,https://www.setlist.fm/setlist/jack-white/2014/fenway-park-boston-ma-13cfcd31.html,Lazaretto World Tour,Olivia Jean,
 20,2015-05-11,Monday,Faith No More,Boston,MA,Orpheum Theatre,Justin L.,Yes,https://www.setlist.fm/setlist/faith-no-more/2015/orpheum-theatre-boston-ma-43c80b7f.html,Sol Invictus Tour,Le Butcherettes,
-21,2015-05-30,Saturday,Britt Floyd,Durham,NC,DPAC,"Dana K., Jim A., Heather A.",No,https://www.setlist.fm/setlist/brit-floyd/2015/durham-performing-arts-center-durham-nc-6bc99aca.html,Space and Time World Tour 2015,,
+21,2015-05-30,Saturday,Brit Floyd,Durham,NC,DPAC,"Dana K., Jim A., Heather A.",No,https://www.setlist.fm/setlist/brit-floyd/2015/durham-performing-arts-center-durham-nc-6bc99aca.html,Space and Time World Tour 2015,,
 22,2015-07-19,Sunday,Foo Fighters,Boston,MA,Fenway Park,Dana K.,Yes,https://www.setlist.fm/setlist/foo-fighters/2015/fenway-park-boston-ma-4bf6c74e.html,Sonic Highways World Tour,"Royal Blood, Dropkick Murphys",
 23,2015-07-31,Friday,Faith No More,Raleigh,NC,Red Hat Amphitheater,Jason C.,Yes,https://www.setlist.fm/setlist/faith-no-more/2015/red-hat-amphitheater-raleigh-nc-13f66935.html,Sol Invictus Tour,Refused,
 24,2015-11-10,Tuesday,Puscifer,Charlotte,NC,Ovens Auditorium,,Yes,https://www.setlist.fm/setlist/puscifer/2015/ovens-auditorium-charlotte-nc-3bf51804.html,Money Shot Tour,Luchafer (pre-show comedy),
@@ -116,6 +116,6 @@ id,date,dayOfWeek,artist,city,state,venue,attendedWith,hasPoster,setlistLink,tou
 114,2026-02-10,Tuesday,Nine Inch Nails,Charlotte,NC,Spectrum Center,Bill B.,No,https://www.setlist.fm/setlist/nine-inch-nails/2026/spectrum-center-charlotte-nc-34109bf.html,Peel It Back Tour,Boys Noize,
 115,2026-03-07,Saturday,Candlebox,Danville,VA,The Pantheon at Caesars Virginia,Bill B.,No,https://www.setlist.fm/setlist/candlebox/2026/the-pantheon-at-caesars-virginia-danville-va-43482fbb.html,Can't Quit You Tour 2026,Nick Brown,
 116,2026-03-16,Monday,Bad Omens,Raleigh,NC,Lenovo Center,Josh R.,No,https://www.setlist.fm/setlist/bad-omens/2026/lenovo-center-raleigh-nc-1b4e5524.html,Do You Feel Love Tour,"Beartooth, President",
-117,2026-03-26,Thursday,Britt Floyd,Durham,NC,DPAC,Bill B.,No,https://www.setlist.fm/setlist/brit-floyd/2026/durham-performing-arts-center-durham-nc-2341207b.html,"The Moon, The Wall, and Beyond Tour",,
+117,2026-03-26,Thursday,Brit Floyd,Durham,NC,DPAC,Bill B.,No,https://www.setlist.fm/setlist/brit-floyd/2026/durham-performing-arts-center-durham-nc-2341207b.html,"The Moon, The Wall, and Beyond Tour",,
 118,2026-04-01,Wednesday,Puscifer,Durham,NC,DPAC,Josh R.,Yes,https://www.setlist.fm/setlist/puscifer/2026/durham-performing-arts-center-durham-nc-634e2ab7.html,Normal Isn't Tour,"Dave Hill, Puddles Pity Party (guest appearance)",
 119,2026-04-17,Friday,AVTT/PTTN,Greensboro,NC,Steven Tanger Center for the Performing Arts,Bill B.,Yes,https://www.setlist.fm/setlist/avttpttn/2026/steven-tanger-center-for-the-performing-arts-greensboro-nc-34f0193.html,AVVT/PTTN Tour,,
