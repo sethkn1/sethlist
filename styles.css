@@ -1009,6 +1009,17 @@ main {
   cursor: pointer;
 }
 .year-bar:hover { background: var(--accent-2); }
+/* Empty year (no shows) — thin transparent slot that holds the year label
+   in line. Not clickable, no count number, no hover effect. Communicates
+   "this year had no shows" without breaking the timeline's continuity. */
+.year-bar.year-bar-empty {
+  background: rgba(255, 255, 255, 0.06);
+  cursor: default;
+  min-height: 1px;
+}
+.year-bar.year-bar-empty:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
 .year-bar .bar-year {
   position: absolute;
   bottom: -24px;

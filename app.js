@@ -3577,11 +3577,27 @@ function renderStats() {
   }
 
   // Year chart
+  // Shows per year chart. Builds a continuous bar from the first year you
+  // saw a show to the most recent one — including empty years so the timeline
+  // reads accurately. Empty years render as a tiny "0" bar (visually a gap).
+  // Click any bar → filter Timeline to that year.
   const yearCount = {};
   STATE.concerts.forEach(c => {
     if (c.year) yearCount[c.year] = (yearCount[c.year] || 0) + 1;
   });
-  const years = Object.keys(yearCount).sort();
+  const presentYears = Object.keys(yearCount).map(Number);
+  if (presentYears.length === 0) return;
+
+  // Fill in missing years between the earliest and latest with count=0.
+  // Without this, the chart misleadingly compresses gaps (e.g., 2001-2003)
+  // making it appear that bars are next to each other when they aren't.
+  const minYear = Math.min(...presentYears);
+  const maxYear = Math.max(...presentYears);
+  const years = [];
+  for (let y = minYear; y <= maxYear; y++) {
+    years.push(y);
+    if (!(y in yearCount)) yearCount[y] = 0;
+  }
   const maxCount = Math.max(...Object.values(yearCount));
 
   const yearChart = el("div", { class: "year-chart" },
@@ -3592,12 +3608,37 @@ function renderStats() {
     const count = yearCount[y];
     const pct = (count / maxCount) * 100;
     const bar = el("div", {
-      class: "year-bar",
+      class: count === 0 ? "year-bar year-bar-empty" : "year-bar",
       style: `height:${pct}%;`,
-      title: `${y}: ${count} shows`,
+      title: `${y}: ${count} show${count === 1 ? "" : "s"}`,
+      // Click → navigate to Timeline with this year filtered. Skip on
+      // empty years (no shows to filter to). Use a year query param —
+      // Timeline filtering by date range would need new code, but search
+      // by year string works against existing search behavior.
+      on: count > 0 ? {
+        click: () => {
+          location.hash = "#/timeline";
+          // After Timeline renders, scroll to the matching year section
+          setTimeout(() => {
+            const target = document.getElementById(`year-${y}`);
+            if (target) {
+              const stripEl = document.querySelector(".year-strip-wrap");
+              const stripH = stripEl ? stripEl.getBoundingClientRect().height : 0;
+              const headerEl = document.querySelector("header");
+              const headerH = headerEl ? headerEl.getBoundingClientRect().height : 0;
+              const targetTop = target.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({
+                top: targetTop - stripH - headerH - 8,
+                behavior: "smooth"
+              });
+            }
+          }, 200);
+        }
+      } : {}
     },
-      el("span", { class: "bar-count" }, String(count)),
-      el("span", { class: "bar-year" }, y)
+      // Only show count above bar if non-zero (less visual noise)
+      count > 0 ? el("span", { class: "bar-count" }, String(count)) : null,
+      el("span", { class: "bar-year" }, String(y))
     );
     bars.appendChild(bar);
   });
