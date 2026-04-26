@@ -38,7 +38,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
   min-height: 100vh;
-  overflow-x: hidden;
+  /* NOTE: We intentionally do NOT set overflow-x:hidden on body or html.
+     Doing so breaks `position: sticky` on mobile webkit (the year strip
+     and other sticky elements scroll away with the page instead of
+     pinning). Horizontal-overflow elements (year strip, about-strip,
+     poster marquee) contain their own overflow inside their wrappers. */
 }
 
 /* Noise / paper texture overlay */
@@ -153,6 +157,12 @@ main {
   margin: 0 auto;
   padding: 40px 32px 80px;
   min-height: calc(100vh - 200px);
+  /* `overflow-x: clip` contains horizontal-bleed elements (year strip,
+     photo strip, marquee) without establishing a scroll container, which
+     means it does NOT break `position: sticky` in any descendant. This
+     is the modern replacement for `overflow-x: hidden`, which used to
+     be on body but broke sticky positioning on mobile webkit. */
+  overflow-x: clip;
 }
 .loading {
   font-family: var(--font-mono);

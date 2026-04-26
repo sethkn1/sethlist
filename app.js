@@ -4046,6 +4046,10 @@ function renderAbout() {
     "with the people I love. Time off screens, in the moment, surrounded by sound ",
     "and friends. That's what makes me feel alive."
   ));
+  wrap.appendChild(el("p", {},
+    "Plus, the production value of shows today is quite frankly over the top ",
+    "and I can't wait to see how it gets better."
+  ));
 
   // Section: What this site is — with live counts
   wrap.appendChild(el("h3", { class: "about-section" }, "What this site is"));
