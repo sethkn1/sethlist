@@ -875,13 +875,57 @@ function attendedWithPopover(allNames, counts, selected, availableNames) {
 /* ============================================================
    BAND IMAGE RENDERING
    ============================================================ */
-function bandThumb(artist, size = 64) {
-  const info = bandLookup(artist);
-  const wrap = el("div", { class: "band-thumb", style: `--thumb-size: ${size}px;` });
+/**
+ * Build a thumbnail element for a concert row.
+ *
+ * Signature flexibility (backward compatible):
+ *   bandThumb("Tool")                  — old-style: artist string only
+ *   bandThumb("Tool", 72)              — old-style with size
+ *   bandThumb(concertObj)              — new-style: pass the concert; we'll
+ *                                        check festivalKey + bandLookup
+ *   bandThumb(concertObj, 72)          — new-style with size
+ *
+ * For festival rows (concertObj.festivalKey set), we look up the festival
+ * image first and use it with `object-fit: contain` styling so wide-aspect
+ * wordmark logos render fully instead of being center-cropped. Falls back to
+ * bandLookup → initials placeholder otherwise.
+ */
+function bandThumb(artistOrConcert, size = 64) {
+  // Support both calling conventions
+  let artist, concert;
+  if (typeof artistOrConcert === "string" || artistOrConcert == null) {
+    artist = artistOrConcert || "";
+    concert = null;
+  } else {
+    concert = artistOrConcert;
+    artist = concert.artist || "";
+  }
+
+  // Determine which info source to use, and whether contain-fit is needed
+  let info = null;
+  let isFestival = false;
+  if (concert && concert.festivalKey) {
+    const fInfo = festivalLookup(concert.festivalKey);
+    if (fInfo && fInfo.image_url) {
+      info = fInfo;
+      isFestival = true;
+    }
+  }
+  if (!info) {
+    info = bandLookup(artist);
+  }
+
+  const wrapClasses = ["band-thumb"];
+  if (isFestival) wrapClasses.push("festival-thumb");
+  const wrap = el("div", {
+    class: wrapClasses.join(" "),
+    style: `--thumb-size: ${size}px;`,
+  });
+
   if (info && info.image_url) {
     const img = el("img", {
       src: info.image_url,
-      alt: artist,
+      alt: isFestival ? (info.festival_name || artist) : artist,
       loading: "lazy",
       on: {
         error: function() {
@@ -1580,14 +1624,12 @@ function concertCard(c) {
   // Inner wrapper for band thumb + text content
   const inner = el("div", { class: "cc-inner" });
 
-  // Band thumbnail on the left (when we have an image)
-  const bandInfo = bandLookup(c.artist);
-  if (bandInfo && bandInfo.image_url) {
-    inner.appendChild(bandThumb(c.artist, 72));
-  } else {
-    // For consistency, still show the initials placeholder
-    inner.appendChild(bandThumb(c.artist, 72));
-  }
+  // Band thumbnail on the left.
+  // For festival rows we pass the full concert so bandThumb can prefer the
+  // festival's image (looked up by festivalKey) over the synthetic festival
+  // artist string. For regular shows, behavior is unchanged: lookup by artist
+  // name, fall back to initials.
+  inner.appendChild(bandThumb(c, 72));
 
   const textCol = el("div", { class: "cc-text" },
     el("div", { class: "cc-date" }, formatDate(c.date), c.dayOfWeek ? " · " + c.dayOfWeek : ""),

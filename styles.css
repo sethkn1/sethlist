@@ -1345,6 +1345,16 @@ main {
   color: var(--paper);
 }
 
+/* Festival thumb variant — wide-aspect wordmark logos need contain-fit so
+   the whole logo is visible inside the square (rather than center-cropped
+   like a band photo would be). The dark background frames the logo when
+   the logo's letterforms are smaller than the square. Slight inner padding
+   prevents the logo from kissing the border. */
+.band-thumb.festival-thumb img {
+  object-fit: contain;
+  padding: 6%;
+}
+
 /* Band banner (in modal) */
 .band-banner {
   margin-bottom: 18px;
