@@ -16755,5 +16755,70 @@
     ],
     "info": null,
     "role": "opener"
+  },
+  "opener:disturbed:2022-05-20": {
+    "id": "7bb70ad0",
+    "artist": "Disturbed",
+    "tour": null,
+    "eventDate": "20-05-2022",
+    "url": "https://www.setlist.fm/setlist/disturbed/2022/veterans-united-home-loans-amphitheater-at-virginia-beach-virginia-beach-va-7bb70ad0.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Highway Star",
+            "cover": "Deep Purple",
+            "tape": true
+          },
+          {
+            "name": "Ten Thousand Fists"
+          },
+          {
+            "name": "Inside the Fire"
+          },
+          {
+            "name": "Stupify"
+          },
+          {
+            "name": "Are You Ready"
+          },
+          {
+            "name": "The Vengeful One"
+          },
+          {
+            "name": "Stricken"
+          },
+          {
+            "name": "Prayer"
+          },
+          {
+            "name": "The Game"
+          },
+          {
+            "name": "The Sound of Silence",
+            "cover": "Simon & Garfunkel"
+          },
+          {
+            "name": "Indestructible"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "The Light"
+          },
+          {
+            "name": "Down With the Sickness"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
   }
 }
