@@ -5619,9 +5619,48 @@ function promptForImageUrl(p, which, onSuccess) {
     window.addEventListener("hashchange", router);
     if (!window.location.hash) window.location.hash = "#/timeline";
     router();
+    setupHeaderHeightTracking();
   } catch (e) {
     console.error(e);
     document.getElementById("app").innerHTML =
       `<div class="loading">Failed to load data. ${e.message}</div>`;
   }
 })();
+
+/**
+ * Continuously sync the rendered height of `.site-header` to a CSS
+ * variable `--header-h` on :root. Sticky elements that sit below the
+ * header (the year strip on Timeline / Posters) use this variable for
+ * their `top` value, so they always pin flush against the actual header
+ * regardless of whether nav wrapped, accent bar grew, viewport rotated,
+ * font scaled, etc.
+ *
+ * Without this: hardcoded breakpoint values like `top: 145px` mismatch
+ * the real header height on devices that don't fit those buckets,
+ * leaving either an obvious gap or (worse) the strip hidden behind the
+ * header.
+ */
+function setupHeaderHeightTracking() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  const update = () => {
+    const h = Math.ceil(header.getBoundingClientRect().height);
+    document.documentElement.style.setProperty("--header-h", h + "px");
+  };
+
+  update();
+
+  // ResizeObserver catches header height changes from nav wrapping,
+  // brand-sub text changing, accent border resizing, etc.
+  if (typeof ResizeObserver !== "undefined") {
+    const ro = new ResizeObserver(update);
+    ro.observe(header);
+  }
+
+  // Belt-and-suspenders: also re-measure on viewport changes since some
+  // size changes (orientation flip, address-bar collapse on iOS) don't
+  // always fire a ResizeObserver entry on the header itself.
+  window.addEventListener("resize", update);
+  window.addEventListener("orientationchange", update);
+}

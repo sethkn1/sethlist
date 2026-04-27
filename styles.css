@@ -3356,16 +3356,16 @@ main {
    ============================================================ */
 .year-strip-wrap {
   position: sticky;
-  /* Sit just under the sticky site header. Header is ~115px on desktop,
-     wraps and grows taller on narrow screens — handled in media query below. */
-  top: 115px;
+  /* Pin just below the site header. Top value is set dynamically via the
+     --header-h CSS variable (updated by a ResizeObserver in app.js) so
+     the strip always sits flush below the header at its actual rendered
+     height. Falls back to 115px if the variable isn't set yet (matches
+     desktop header height, sane initial value). */
+  top: var(--header-h, 115px);
   z-index: 30;  /* above timeline content, below site header (z-index 50) */
-  /* No negative-margin bleed — earlier versions extended this to the page
-     edges with margin: 0 -32px, but that requires overflow-x containment
-     somewhere up the tree, which interacts badly with `position: sticky`
-     on mobile webkit. Keeping the strip inside the parent's content box
-     means sticky works reliably on every browser without needing any
-     overflow tricks. */
+  /* No bleed-margin so we don't depend on overflow containment up the tree
+     (which can break sticky on mobile webkit). The strip sits inside the
+     parent's content box. */
   margin: 0 0 24px 0;
   background: var(--ink);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -3447,19 +3447,15 @@ main {
   background: linear-gradient(to left, var(--ink) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* On narrower screens the site header wraps and gets taller; year strip
-   needs to sit lower to stay below it. Roughly: at <720px the header
-   wraps once (~140px); at <500px it wraps more aggressively. */
+/* Strip's `top` value is set dynamically via --header-h CSS variable
+   (see app.js setupHeaderHeightTracking). No need for breakpoint-specific
+   overrides since the variable always reflects the real rendered header
+   height for whatever device/orientation. We do still adjust internal
+   padding and font size on narrow viewports for readability. */
 @media (max-width: 720px) {
-  .year-strip-wrap {
-    top: 145px;
-  }
   .year-strip-track { padding: 6px 16px; }
   .year-strip-tab {
     padding: 5px 10px;
     font-size: 11px;
   }
-}
-@media (max-width: 500px) {
-  .year-strip-wrap { top: 175px; }
 }
