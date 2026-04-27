@@ -5866,12 +5866,14 @@ function openConcertModal(c, navContext) {
   // the timeline to all shows by that artist. Festival rows aren't linked
   // because the title is the festival day name (e.g. "Rock on the Range
   // Festival - Day 3"), and filtering on that returns just that single day,
-  // which isn't useful.
+  // which isn't useful. Clicking the link closes the modal so the user
+  // lands on the filtered timeline cleanly without an interstitial dismiss.
   if (c.artist && !c.festivalKey) {
     modalBody.appendChild(el("h2", { class: "modal-title" },
       el("a", {
         class: "modal-title-link",
         href: "#/timeline?artist=" + encodeURIComponent(c.artist),
+        on: { click: () => closeModal() },
       }, c.artist)
     ));
   } else {
@@ -5879,6 +5881,8 @@ function openConcertModal(c, navContext) {
   }
 
   // Modal meta — venue · city, state. Each clickable to filter timeline.
+  // Clicking any of these closes the modal so the user lands directly on
+  // the filtered view, no extra dismiss step needed.
   // Build the row as a sequence of inline pieces so we can wrap the
   // venue / city / state spans in <a> tags individually while keeping
   // the existing visual format ("Venue · City, State").
@@ -5891,6 +5895,7 @@ function openConcertModal(c, navContext) {
     metaPieces.push(el("a", {
       class: "modal-meta-link",
       href: "#/timeline?venue=" + encodeURIComponent(c.venue),
+      on: { click: () => closeModal() },
     }, c.venue));
   } else if (c.venue) {
     metaPieces.push(document.createTextNode(c.venue));
@@ -5903,12 +5908,14 @@ function openConcertModal(c, navContext) {
       class: "modal-meta-link",
       href: "#/timeline?city=" + encodeURIComponent(c.city) +
         (c.state ? "&state=" + encodeURIComponent(c.state) : ""),
+      on: { click: () => closeModal() },
     }, c.city));
   }
   if (c.state) {
     locPieces.push(el("a", {
       class: "modal-meta-link",
       href: "#/timeline?state=" + encodeURIComponent(c.state),
+      on: { click: () => closeModal() },
     }, c.state));
   }
   if (locPieces.length) {
@@ -5960,11 +5967,13 @@ function openConcertModal(c, navContext) {
   factList.forEach(([label, val, kind]) => {
     let valueNode;
     if (kind === "tour") {
-      // Clickable tour name → filter timeline
+      // Clickable tour name → filter timeline. Closes the modal so the
+      // user lands on the filtered view directly.
       valueNode = el("a", {
         class: "fact-value tour-link",
         href: "#/timeline?tour=" + encodeURIComponent(val),
         title: `See all shows on the "${val}" tour`,
+        on: { click: () => closeModal() },
       }, val);
     } else {
       valueNode = el("div", { class: "fact-value" }, val);
@@ -6021,14 +6030,7 @@ function openConcertModal(c, navContext) {
   if (shows.length) {
     modalBody.appendChild(el("div", { class: "poster-variants" },
       el("h4", {}, shows.length > 1 ? `${shows.length} posters from this show` : "Poster from this show"),
-      // Pass showPosterDetailsLink so each variant gets its own inline
-      // "View poster details" link (reciprocal of the poster modal's
-      // "View show details"). The link sits alongside Expressobeans in
-      // the variant footer — one per poster, with no labeling ambiguity
-      // since each link is visually attached to the specific poster it
-      // navigates to.
-      el("div", { class: "variant-list" },
-         ...shows.map(p => variantBlock(p, { showPosterDetailsLink: true })))
+      el("div", { class: "variant-list" }, ...shows.map(variantBlock))
     ));
   }
 
@@ -6094,54 +6096,6 @@ function openConcertModal(c, navContext) {
   openModal();
 }
 
-/* ============================================================
-   POSTER GROUPING HELPERS
-   ============================================================ */
-// These build the same "group" keys as renderPosters() so other code paths
-// (e.g., the concert modal's "View poster details" reciprocal links) can
-// look up which posters belong together as one print run / variant.
-//
-// A group represents one printable edition: same date/artist/location plus
-// matching type, variant, and denominator. Two posters with the same
-// edition number but different copy numbers (192/780 and 193/780) belong to
-// the same group; two posters with different denominators (192/780 and
-// 50/100) do not.
-function _denominatorKey(p) {
-  const num = (p.number || "").toString().trim();
-  if (!num) return "_blank";
-  if (/^unknown$/i.test(num)) return "_unknown";
-  if (/^unnumbered$/i.test(num)) return "_unnumbered";
-  const m = num.match(/\/(\d+)/);
-  if (m) return "denom:" + m[1];
-  return "raw:" + num.toLowerCase();
-}
-function posterGroupKey(p) {
-  const dateArtLoc = `${p.date}||${(p.artist || "").toLowerCase()}||${(p.location || "").toLowerCase()}`;
-  const type = (p.type || "").toLowerCase();
-  const variant = (p.variant || "").toLowerCase();
-  return `${dateArtLoc}||${type}||${variant}||${_denominatorKey(p)}`;
-}
-
-/**
- * Given a single poster, build a minimal group object compatible with
- * openPosterModal(). Includes any sibling posters in STATE.posters that
- * share this poster's groupKey (typically just the poster itself).
- */
-function buildPosterGroupFor(p) {
-  const k = posterGroupKey(p);
-  const siblings = STATE.posters.filter(x => posterGroupKey(x) === k);
-  const order = { SE: 0, AP: 1, VIP: 2, Foil: 3 };
-  return {
-    date: p.date,
-    year: p.year,
-    artist: p.artist,
-    location: p.location,
-    attended: p.attended,
-    posters: siblings.sort((a, b) =>
-      (order[classifyType(a.type)] || 9) - (order[classifyType(b.type)] || 9)),
-  };
-}
-
 
 /**
  * Open the poster modal for a group (all poster variants for a given show).
@@ -6203,12 +6157,7 @@ function openPosterModal(group, navContext) {
   openModal();
 }
 
-function variantBlock(p, opts) {
-  // opts.showPosterDetailsLink — when true, renders a "View poster details"
-  // link alongside other in-variant links (e.g., Expressobeans). Used by the
-  // concert modal so each poster has an inline link to its own poster modal.
-  // The poster modal itself doesn't pass this flag (would link to itself).
-  opts = opts || {};
+function variantBlock(p) {
   const typeClass = classifyType(p.type);
   const wrap = el("div", { class: "variant has-dual-images" });
 
@@ -6321,20 +6270,6 @@ function variantBlock(p, opts) {
     vlinks.appendChild(el("a", {
       class: "v-link", href: p.expressobeansLink, target: "_blank", rel: "noopener"
     }, "Expressobeans ↗"));
-  }
-  // "View poster details" — only rendered in contexts where we're NOT
-  // already in the poster modal (i.e., the concert modal calls this with
-  // showPosterDetailsLink=true; the poster modal itself does not, since
-  // clicking it would navigate to the same modal).
-  if (opts.showPosterDetailsLink) {
-    vlinks.appendChild(el("a", {
-      class: "v-link",
-      href: "#",
-      on: { click: e => {
-        e.preventDefault();
-        openPosterModal(buildPosterGroupFor(p));
-      }},
-    }, "View poster details"));
   }
   if (vlinks.children.length) info.appendChild(vlinks);
 
