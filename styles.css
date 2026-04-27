@@ -3667,3 +3667,83 @@ main {
     grid-row: 2;
   }
 }
+
+/* ============================================================
+   MODAL SCROLL CAPS
+   Long lists inside modals get a scrollable cap so the modal's
+   structure is visible at a glance instead of disappearing under
+   a 30-song setlist or a 70-song bucket list.
+
+   Target ~360px = roughly 10 dense single-line rows or 6-7
+   stacked rows. The modal itself stays scrollable for navigation
+   between sections — these caps only constrain individual lists.
+   ============================================================ */
+
+/* Concert-modal setlists. Each setlist (headliner + each opener)
+   is its own scrollable card. Title/tour stay visible at the top
+   because the .setlist-block is the scroll container. */
+.modal-card .setlist-block {
+  max-height: 420px;
+  overflow-y: auto;
+  /* Subtle inner scrollbar treatment — paper-on-ink palette */
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+.modal-card .setlist-block::-webkit-scrollbar { width: 8px; }
+.modal-card .setlist-block::-webkit-scrollbar-track { background: transparent; }
+.modal-card .setlist-block::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+.modal-card .setlist-block::-webkit-scrollbar-thumb:hover {
+  background: var(--paper-dim);
+}
+
+/* Shows lists in artist insights and song insights modals */
+.modal-card .artist-show-list {
+  max-height: 360px;
+  overflow-y: auto;
+  /* Border helps signal "this is a scrollable region" */
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 4px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+.modal-card .artist-show-list::-webkit-scrollbar { width: 8px; }
+.modal-card .artist-show-list::-webkit-scrollbar-track { background: transparent; }
+.modal-card .artist-show-list::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+.modal-card .artist-show-list::-webkit-scrollbar-thumb:hover {
+  background: var(--paper-dim);
+}
+
+/* Bucket-list song lists in the artist modal (both unheard and the
+   collapsed "heard" details) */
+.modal-card .bucket-song-list {
+  max-height: 360px;
+  overflow-y: auto;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 4px 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+.modal-card .bucket-song-list::-webkit-scrollbar { width: 8px; }
+.modal-card .bucket-song-list::-webkit-scrollbar-track { background: transparent; }
+.modal-card .bucket-song-list::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+.modal-card .bucket-song-list::-webkit-scrollbar-thumb:hover {
+  background: var(--paper-dim);
+}
+
+/* Mobile: shorten the cap so modals don't dominate the small screen */
+@media (max-width: 600px) {
+  .modal-card .setlist-block { max-height: 300px; }
+  .modal-card .artist-show-list,
+  .modal-card .bucket-song-list { max-height: 260px; }
+}
