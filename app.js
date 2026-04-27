@@ -5943,7 +5943,14 @@ function openConcertModal(c, navContext) {
   if (shows.length) {
     modalBody.appendChild(el("div", { class: "poster-variants" },
       el("h4", {}, shows.length > 1 ? `${shows.length} posters from this show` : "Poster from this show"),
-      el("div", { class: "variant-list" }, ...shows.map(variantBlock))
+      // Pass showPosterDetailsLink so each variant gets its own inline
+      // "View poster details" link (reciprocal of the poster modal's
+      // "View show details"). The link sits alongside Expressobeans in
+      // the variant footer — one per poster, with no labeling ambiguity
+      // since each link is visually attached to the specific poster it
+      // navigates to.
+      el("div", { class: "variant-list" },
+         ...shows.map(p => variantBlock(p, { showPosterDetailsLink: true })))
     ));
   }
 
@@ -5971,44 +5978,6 @@ function openConcertModal(c, navContext) {
   const links = el("div", { class: "modal-links" });
   if (c.setlistLink && c.setlistLink.startsWith("http")) {
     links.appendChild(el("a", { class: "m-link accent-link", href: c.setlistLink, target: "_blank", rel: "noopener" }, "Setlist.fm ↗"));
-  }
-  // "View poster details" — reciprocal of the poster modal's "View show
-  // details" link. One link per distinct poster group matched for this
-  // show (deduped by groupKey, since multiple copies of the same edition
-  // would otherwise produce duplicate links).
-  // For festival days with both a festival poster and a band-day poster
-  // (e.g., Rock on the Range Day 3 has the festival poster + Tool's
-  // poster), we emit two separately-labeled links.
-  if (shows.length) {
-    const seenGroups = new Set();
-    const groupLinks = [];
-    shows.forEach(p => {
-      const k = posterGroupKey(p);
-      if (seenGroups.has(k)) return;
-      seenGroups.add(k);
-      groupLinks.push(p);
-    });
-    groupLinks.forEach(p => {
-      // Label disambiguates when there are multiple posters from this show.
-      // Single poster: bare "View poster details" matches the poster modal's
-      // bare "View show details" reciprocal. Multiple: prefix the artist
-      // so the user knows which one they're navigating to. We keep the
-      // word "poster" so the label parses cleanly:
-      //   "View poster details"           (single)
-      //   "View Tool poster details"      (multi, band-specific)
-      //   "View Rock on the Range poster details"  (multi, festival-wide)
-      const label = groupLinks.length === 1
-        ? "View poster details"
-        : `View ${p.artist || "this"} poster details`;
-      links.appendChild(el("a", {
-        class: "m-link",
-        href: "#",
-        on: { click: e => {
-          e.preventDefault();
-          openPosterModal(buildPosterGroupFor(p));
-        }},
-      }, label));
-    });
   }
   // Bucket list link: shown only when this band has bucket-list data
   // (i.e., it's a headliner you've seen 2+ times). For festival rows we
@@ -6159,7 +6128,12 @@ function openPosterModal(group, navContext) {
   openModal();
 }
 
-function variantBlock(p) {
+function variantBlock(p, opts) {
+  // opts.showPosterDetailsLink — when true, renders a "View poster details"
+  // link alongside other in-variant links (e.g., Expressobeans). Used by the
+  // concert modal so each poster has an inline link to its own poster modal.
+  // The poster modal itself doesn't pass this flag (would link to itself).
+  opts = opts || {};
   const typeClass = classifyType(p.type);
   const wrap = el("div", { class: "variant has-dual-images" });
 
@@ -6272,6 +6246,20 @@ function variantBlock(p) {
     vlinks.appendChild(el("a", {
       class: "v-link", href: p.expressobeansLink, target: "_blank", rel: "noopener"
     }, "Expressobeans ↗"));
+  }
+  // "View poster details" — only rendered in contexts where we're NOT
+  // already in the poster modal (i.e., the concert modal calls this with
+  // showPosterDetailsLink=true; the poster modal itself does not, since
+  // clicking it would navigate to the same modal).
+  if (opts.showPosterDetailsLink) {
+    vlinks.appendChild(el("a", {
+      class: "v-link",
+      href: "#",
+      on: { click: e => {
+        e.preventDefault();
+        openPosterModal(buildPosterGroupFor(p));
+      }},
+    }, "View poster details"));
   }
   if (vlinks.children.length) info.appendChild(vlinks);
 
