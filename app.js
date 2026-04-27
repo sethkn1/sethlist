@@ -878,7 +878,21 @@ function renderTimeline() {
   }
 
   // Build filters
-  const allArtists = [...new Set(STATE.concerts.map(c => c.artist).filter(Boolean))].sort();
+  // The artist dropdown includes EVERY band that appears at any show — headliners,
+  // openers, and festival lineup acts. Filtering by an opener-only band (e.g.
+  // Hellyeah) will surface the shows where they opened (e.g. the In This Moment
+  // 2016 show) in addition to any shows where they headlined.
+  // Dedup case-insensitively but keep the most-common original spelling so
+  // "Tool" and "tool" don't appear twice.
+  const artistDisplayByKey = new Map();  // normKey -> display name
+  STATE.concerts.forEach(c => {
+    allArtistsAtConcert(c).forEach(name => {
+      const key = normalizeArtistKey(name);
+      if (!artistDisplayByKey.has(key)) artistDisplayByKey.set(key, name);
+    });
+  });
+  const allArtists = [...artistDisplayByKey.values()].sort((a, b) =>
+    a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
   // All unique attended-with names with counts (sorted by frequency)
   const nameCounts = {};
   STATE.concerts.forEach(c => {
@@ -1054,10 +1068,18 @@ function renderTimeline() {
   app.appendChild(yearStrip);
 
   // Filter
+  // For artist filter: match if the artist appears in ANY role at the show
+  // (headliner, opener, or festival lineup). Use normalized keys so spellings
+  // and capitalization differences don't break the match.
+  const filterArtistKey = artist ? normalizeArtistKey(artist) : null;
   const qLower = q.toLowerCase();
   let filtered = STATE.concerts.filter(c => {
     if (state && c.state !== state) return false;
-    if (artist && c.artist !== artist) return false;
+    if (filterArtistKey) {
+      const hit = allArtistsAtConcert(c).some(a =>
+        normalizeArtistKey(a) === filterArtistKey);
+      if (!hit) return false;
+    }
     if (venue && c.venue !== venue) return false;
     if (tour && c.tourName !== tour) return false;
     if (festival && c.festivalKey !== festival) return false;
