@@ -2678,6 +2678,43 @@ function renderSongs() {
     if (coverage.withoutData.length > 0 || coverage.withData.length > 0) {
       app.appendChild(renderCoverageBlock(filterArtistDisplay, coverage));
     }
+
+    // Bucket list — songs this band plays live that you have NOT heard.
+    // Only renders when bucket_list.json has data for this band (i.e., a
+    // headliner you've seen 2+ times). Lives below the coverage block so
+    // the page still leads with what you HAVE heard.
+    const bucketBand = getBucketListBand(filterArtistDisplay);
+    if (bucketBand && bucketBand.unheard && bucketBand.unheard.length > 0) {
+      const wrap = el("section", { class: "songs-unheard-block" });
+      wrap.appendChild(el("h3", { class: "view-title", style: "font-size:24px;margin-top:32px;" },
+        "Songs ", el("span", { class: "accent" }, "you haven't heard")
+      ));
+      const coveragePct = Math.round(bucketBand.coverage * 100);
+      wrap.appendChild(el("p", { class: "view-sub" },
+        `${filterArtistDisplay} has played ${bucketBand.totalLiveSongs} different songs live. ` +
+        `You've heard ${bucketBand.heardCount} (${coveragePct}%). ` +
+        `These ${bucketBand.unheard.length} you haven't — sorted by how often they play them.`
+      ));
+
+      // Match the existing songs-table layout: songs-row with col-rank/col-song/col-count
+      const table = el("div", { class: "songs-table" });
+      bucketBand.unheard.forEach((s, i) => {
+        const row = el("div", { class: "songs-row" },
+          el("span", { class: "col-rank" }, String(i + 1).padStart(3, "0")),
+          el("span", { class: "col-song" }, el("strong", {}, s.name)),
+          el("span", { class: "col-count" },
+            el("span", {
+              class: "play-count-btn",
+              style: "cursor:default;",
+              title: `Played ${s.count} time${s.count === 1 ? "" : "s"} live by ${filterArtistDisplay}`,
+            }, `${s.count}×`)
+          )
+        );
+        table.appendChild(row);
+      });
+      wrap.appendChild(table);
+      app.appendChild(wrap);
+    }
   }
 }
 
@@ -5616,6 +5653,29 @@ function openConcertModal(c, navContext) {
   const links = el("div", { class: "modal-links" });
   if (c.setlistLink && c.setlistLink.startsWith("http")) {
     links.appendChild(el("a", { class: "m-link accent-link", href: c.setlistLink, target: "_blank", rel: "noopener" }, "Setlist.fm ↗"));
+  }
+  // Bucket list link: shown only when this band has bucket-list data
+  // (i.e., it's a headliner you've seen 2+ times). For festival rows we
+  // skip — they don't have a single artist context. The link drops the
+  // user on /songs?artist=X and scrolls to the unheard block.
+  if (c.artist && !c.festivalKey) {
+    const bucketBand = getBucketListBand(c.artist);
+    if (bucketBand && bucketBand.unheard && bucketBand.unheard.length > 0) {
+      links.appendChild(el("a", {
+        class: "m-link",
+        href: "#/songs?artist=" + encodeURIComponent(c.artist),
+        on: { click: () => {
+          closeModal();
+          // After the songs route renders, scroll the unheard block into view.
+          // Two requestAnimationFrame calls give the renderer enough time:
+          // one for the hashchange to dispatch + render, one for layout.
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            const block = document.querySelector(".songs-unheard-block");
+            if (block) block.scrollIntoView({ behavior: "smooth", block: "start" });
+          }));
+        }},
+      }, c.artist + " bucket list"));
+    }
   }
   if (c.venue && !c.festivalKey) {
     links.appendChild(el("a", { class: "m-link", href: "#/timeline?venue=" + encodeURIComponent(c.venue) },
