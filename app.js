@@ -171,6 +171,16 @@ function router() {
   }
   withPreservedFocus(fn);
 
+  // Debug overlay for sticky positioning issues. Activate by appending
+  // ?debug=sticky to the URL. Shows the ancestor chain of .year-strip-wrap
+  // with overflow/transform/contain values, plus runtime position info,
+  // updated on every scroll. Tap the panel to dismiss. Kept dormant otherwise.
+  // Reads from the FULL hash query, not just the per-route param.
+  const fullQuery = (window.location.hash.split("?")[1] || "");
+  if (new URLSearchParams(fullQuery).get("debug") === "sticky") {
+    setTimeout(() => initStickyDebugOverlay(), 300);
+  }
+
   // Deep-link: if the URL contains ?modal=<id>, open the appropriate modal
   // after the view renders. Uses a small delay so the render completes first.
   const params = new URLSearchParams(queryStr || "");
@@ -1415,6 +1425,101 @@ function withPreservedFocus(renderFn) {
       } catch { /* ignore; some input types don't support selection */ }
     }
   }
+}
+
+/* ============================================================
+   STICKY DEBUG OVERLAY
+   Activated by adding ?debug=sticky to the URL hash, e.g.
+     https://sethlist.live/#/timeline?debug=sticky
+   Shows runtime info about why the year strip's sticky positioning
+   may not be working. Renders a small panel pinned to the bottom of
+   the viewport with the ancestor chain and key CSS values.
+
+   Tap the panel to dismiss.
+
+   This is intentionally a heavy-handed diagnostic — print everything
+   so we can read it on a phone screen without USB debugging.
+   ============================================================ */
+function initStickyDebugOverlay() {
+  // Avoid duplicates if router fires multiple times
+  document.querySelectorAll("#sticky-debug-overlay").forEach(n => n.remove());
+
+  const stripSelectors = [".year-strip-wrap", ".site-header"];
+  const overlay = document.createElement("div");
+  overlay.id = "sticky-debug-overlay";
+  Object.assign(overlay.style, {
+    position: "fixed",
+    bottom: "0",
+    left: "0",
+    right: "0",
+    maxHeight: "55vh",
+    overflowY: "auto",
+    background: "rgba(0,0,0,0.92)",
+    color: "#fff",
+    fontFamily: "monospace",
+    fontSize: "10px",
+    lineHeight: "1.35",
+    padding: "8px 10px",
+    zIndex: "99999",
+    borderTop: "2px solid #d93b2b",
+    whiteSpace: "pre-wrap",
+    wordBreak: "break-all",
+  });
+  overlay.addEventListener("click", () => overlay.remove());
+  document.body.appendChild(overlay);
+
+  function describe(el) {
+    if (!el) return "(none)";
+    const cs = getComputedStyle(el);
+    const id = el.id ? "#" + el.id : "";
+    const cls = el.className && typeof el.className === "string"
+      ? "." + el.className.split(" ").filter(Boolean).slice(0, 2).join(".")
+      : "";
+    const rect = el.getBoundingClientRect();
+    return [
+      `${el.tagName.toLowerCase()}${id}${cls}`,
+      `  pos=${cs.position} top=${cs.top} z=${cs.zIndex}`,
+      `  ovx=${cs.overflowX} ovy=${cs.overflowY}`,
+      `  trans=${cs.transform === "none" ? "none" : "SET"}`,
+      `  filter=${cs.filter === "none" ? "none" : "SET"}`,
+      `  contain=${cs.contain || "none"}`,
+      `  willChange=${cs.willChange || "none"}`,
+      `  rect: y=${Math.round(rect.y)} h=${Math.round(rect.height)}`,
+    ].join("\n");
+  }
+
+  function render() {
+    const lines = [];
+    lines.push(`scrollY=${Math.round(window.scrollY)} vh=${window.innerHeight} vw=${window.innerWidth}`);
+    lines.push("");
+
+    stripSelectors.forEach(sel => {
+      const target = document.querySelector(sel);
+      if (!target) {
+        lines.push(`${sel}: NOT FOUND`);
+        lines.push("");
+        return;
+      }
+      lines.push(`=== ${sel} ===`);
+      lines.push(describe(target));
+      lines.push("--- ancestors ---");
+      let parent = target.parentElement;
+      let depth = 0;
+      while (parent && parent !== document.body && depth < 8) {
+        lines.push(describe(parent));
+        parent = parent.parentElement;
+        depth++;
+      }
+      if (parent === document.body) lines.push(describe(parent));
+      lines.push("");
+    });
+
+    overlay.textContent = lines.join("\n");
+  }
+
+  render();
+  window.addEventListener("scroll", render, { passive: true });
+  window.addEventListener("resize", render);
 }
 
 /* ============================================================
