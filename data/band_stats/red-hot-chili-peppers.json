@@ -1,0 +1,2729 @@
+{
+  "artist": "Red Hot Chili Peppers",
+  "slug": "red-hot-chili-peppers",
+  "stats_id": "13d68969",
+  "mbid": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+  "fetched_at": "2026-04-27T12:32:08.659408Z",
+  "songs": [
+    {
+      "name": "Give It Away",
+      "songid": "1bd6c90c",
+      "count": 1079
+    },
+    {
+      "name": "Californication",
+      "songid": "3bd68458",
+      "count": 809
+    },
+    {
+      "name": "Under the Bridge",
+      "songid": "bd789f6",
+      "count": 808
+    },
+    {
+      "name": "By the Way",
+      "songid": "bd68572",
+      "count": 789
+    },
+    {
+      "name": "Can't Stop",
+      "songid": "5bd68748",
+      "count": 669
+    },
+    {
+      "name": "Scar Tissue",
+      "songid": "7bd64e00",
+      "count": 654
+    },
+    {
+      "name": "Me & My Friends",
+      "songid": "73d606e1",
+      "count": 616
+    },
+    {
+      "name": "Right on Time",
+      "songid": "bd2dd2e",
+      "count": 606
+    },
+    {
+      "name": "Intro Jam",
+      "songid": "23d62487",
+      "count": 605
+    },
+    {
+      "name": "Otherside",
+      "songid": "5bd66b74",
+      "count": 526
+    },
+    {
+      "name": "Around the World",
+      "songid": "33d69ccd",
+      "count": 522
+    },
+    {
+      "name": "Suck My Kiss",
+      "songid": "3bd7b034",
+      "count": 481
+    },
+    {
+      "name": "Dani California",
+      "songid": "4bd6f776",
+      "count": 459
+    },
+    {
+      "name": "Soul to Squeeze",
+      "songid": "2bd7b852",
+      "count": 409
+    },
+    {
+      "name": "Snow ((Hey Oh))",
+      "songid": "1bd7bdb4",
+      "count": 390
+    },
+    {
+      "name": "I Could Have Lied",
+      "songid": "43d637a7",
+      "count": 370
+    },
+    {
+      "name": "Higher Ground",
+      "songid": "63d63ec3",
+      "count": 368
+    },
+    {
+      "name": "Parallel Universe",
+      "songid": "2bd66456",
+      "count": 334
+    },
+    {
+      "name": "Don't Forget Me",
+      "songid": "2bd6e86a",
+      "count": 328
+    },
+    {
+      "name": "If You Have to Ask",
+      "songid": "73d62ea9",
+      "count": 295
+    },
+    {
+      "name": "Throw Away Your Television",
+      "songid": "33d79491",
+      "count": 287
+    },
+    {
+      "name": "Final Jam",
+      "songid": "1bd6d5f0",
+      "count": 276
+    },
+    {
+      "name": "Blood Sugar Sex Magik",
+      "songid": "13d68d4d",
+      "count": 256
+    },
+    {
+      "name": "The Adventures of Rain Dance Maggie",
+      "songid": "6bde9262",
+      "count": 233
+    },
+    {
+      "name": "The Zephyr Song",
+      "songid": "5bd79b08",
+      "count": 224
+    },
+    {
+      "name": "I Like Dirt",
+      "songid": "3d6319f",
+      "count": 223
+    },
+    {
+      "name": "Nobody Weird Like Me",
+      "songid": "3bd670b8",
+      "count": 219
+    },
+    {
+      "name": "Tell Me Baby",
+      "songid": "bd7a98e",
+      "count": 212
+    },
+    {
+      "name": "Universally Speaking",
+      "songid": "2bd78836",
+      "count": 205
+    },
+    {
+      "name": "Charlie",
+      "songid": "2bd680d2",
+      "count": 201
+    },
+    {
+      "name": "Look Around",
+      "songid": "5bde93c0",
+      "count": 180
+    },
+    {
+      "name": "Dark Necessities",
+      "songid": "73cd9a9d",
+      "count": 177
+    },
+    {
+      "name": "Pea",
+      "songid": "4bd6671e",
+      "count": 172
+    },
+    {
+      "name": "Sir Psycho Sexy",
+      "songid": "33d640c9",
+      "count": 167
+    },
+    {
+      "name": "Out in L.A.",
+      "songid": "5bd66b20",
+      "count": 162
+    },
+    {
+      "name": "Go Robot",
+      "songid": "53cd8fa5",
+      "count": 158
+    },
+    {
+      "name": "The Power of Equality",
+      "songid": "3bd33474",
+      "count": 158
+    },
+    {
+      "name": "Stone Cold Bush",
+      "songid": "53d7b7a1",
+      "count": 155
+    },
+    {
+      "name": "Monarchy of Roses",
+      "songid": "5bde93b0",
+      "count": 153
+    },
+    {
+      "name": "Organic Anti-Beat Box Band",
+      "songid": "23d668b3",
+      "count": 153
+    },
+    {
+      "name": "Backwoods",
+      "songid": "2bd6988a",
+      "count": 152
+    },
+    {
+      "name": "Fire",
+      "songid": "bd6d59e",
+      "count": 147
+    },
+    {
+      "name": "My Lovely Man",
+      "songid": "5bd67b74",
+      "count": 145
+    },
+    {
+      "name": "Jam",
+      "songid": "53d62325",
+      "count": 144
+    },
+    {
+      "name": "Goodbye Angels",
+      "songid": "2bcd08da",
+      "count": 138
+    },
+    {
+      "name": "Nevermind",
+      "songid": "2bd674d2",
+      "count": 137
+    },
+    {
+      "name": "Funky Crime",
+      "songid": "bd6cd6e",
+      "count": 135
+    },
+    {
+      "name": "What Is Soul",
+      "songid": "bda5192",
+      "count": 133
+    },
+    {
+      "name": "Skinny Sweaty Man",
+      "songid": "53d643e9",
+      "count": 132
+    },
+    {
+      "name": "They're Red Hot",
+      "songid": "63d79a0b",
+      "count": 132
+    },
+    {
+      "name": "Blackeyed Blonde",
+      "songid": "43d693bb",
+      "count": 129
+    },
+    {
+      "name": "Black Summer",
+      "songid": "3be5541c",
+      "count": 124
+    },
+    {
+      "name": "Mommy, Where's Daddy?",
+      "songid": "23d67c73",
+      "count": 124
+    },
+    {
+      "name": "Magic Johnson",
+      "songid": "7bd60aac",
+      "count": 116
+    },
+    {
+      "name": "Party on Your Pussy",
+      "songid": "3d88117",
+      "count": 115
+    },
+    {
+      "name": "Search and Destroy",
+      "songid": "3bd64868",
+      "count": 111
+    },
+    {
+      "name": "Aeroplane",
+      "songid": "73d6aab9",
+      "count": 109
+    },
+    {
+      "name": "Havana Affair",
+      "songid": "43d6c363",
+      "count": 108
+    },
+    {
+      "name": "Subterranean Homesick Blues",
+      "songid": "3bd7b054",
+      "count": 108
+    },
+    {
+      "name": "Chad & Mauro & Josh Jam",
+      "songid": "13dfdd41",
+      "count": 102
+    },
+    {
+      "name": "Crosstown Traffic",
+      "songid": "4bd6fb9e",
+      "count": 101
+    },
+    {
+      "name": "Police Helicopter",
+      "songid": "53d66389",
+      "count": 100
+    },
+    {
+      "name": "Easily",
+      "songid": "6bd6e602",
+      "count": 99
+    },
+    {
+      "name": "Get Up and Jump",
+      "songid": "53d6cfcd",
+      "count": 97
+    },
+    {
+      "name": "Ethiopia",
+      "songid": "53de93c1",
+      "count": 92
+    },
+    {
+      "name": "Factory of Faith",
+      "songid": "43de93c7",
+      "count": 92
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "23d6e40f",
+      "count": 91
+    },
+    {
+      "name": "Wet Sand",
+      "songid": "bd7fdee",
+      "count": 89
+    },
+    {
+      "name": "Fortune Faded",
+      "songid": "1bd6d194",
+      "count": 85
+    },
+    {
+      "name": "Green Heaven",
+      "songid": "23d6c423",
+      "count": 83
+    },
+    {
+      "name": "Your Pussy's Glued to a Building on Fire",
+      "songid": "7bd4aa14",
+      "count": 80
+    },
+    {
+      "name": "She's Only 18",
+      "songid": "33d64481",
+      "count": 78
+    },
+    {
+      "name": "Yertle Trilogy",
+      "songid": "73d7f6c9",
+      "count": 78
+    },
+    {
+      "name": "Sick Love",
+      "songid": "43cd8fa7",
+      "count": 75
+    },
+    {
+      "name": "Subway to Venus",
+      "songid": "43dce70f",
+      "count": 75
+    },
+    {
+      "name": "Venice Queen",
+      "songid": "63d78ab7",
+      "count": 74
+    },
+    {
+      "name": "Bullet Proof",
+      "songid": "4bd68bfa",
+      "count": 71
+    },
+    {
+      "name": "Eddie",
+      "songid": "3e0614f",
+      "count": 70
+    },
+    {
+      "name": "Hard to Concentrate",
+      "songid": "3d581af",
+      "count": 69
+    },
+    {
+      "name": "Hollywood (Africa)",
+      "songid": "33d50445",
+      "count": 68
+    },
+    {
+      "name": "Maybe",
+      "songid": "73d7d6fd",
+      "count": 68
+    },
+    {
+      "name": "Cold Sweat",
+      "songid": "3fcbd27",
+      "count": 66
+    },
+    {
+      "name": "Aquatic Mouth Dance",
+      "songid": "2be55482",
+      "count": 65
+    },
+    {
+      "name": "The Getaway",
+      "songid": "6bcd8606",
+      "count": 65
+    },
+    {
+      "name": "Hey",
+      "songid": "5bd63f00",
+      "count": 64
+    },
+    {
+      "name": "Love Trilogy",
+      "songid": "3d6098f",
+      "count": 64
+    },
+    {
+      "name": "Pretty Little Ditty",
+      "songid": "2bd65c7a",
+      "count": 58
+    },
+    {
+      "name": "Warped",
+      "songid": "13d781ed",
+      "count": 58
+    },
+    {
+      "name": "Here Ever After",
+      "songid": "23e55483",
+      "count": 57
+    },
+    {
+      "name": "Freaky Styley",
+      "songid": "23d6d0d7",
+      "count": 56
+    },
+    {
+      "name": "Knock Me Down",
+      "songid": "23d618bb",
+      "count": 56
+    },
+    {
+      "name": "Walkabout",
+      "songid": "7bd7e634",
+      "count": 56
+    },
+    {
+      "name": "21st Century",
+      "songid": "23d6b0ff",
+      "count": 55
+    },
+    {
+      "name": "Tiny Dancer",
+      "songid": "73d7960d",
+      "count": 54
+    },
+    {
+      "name": "Fopp / Party on Your Pussy / Red Hot Mama",
+      "songid": "4bdc5742",
+      "count": 53
+    },
+    {
+      "name": "Readymade",
+      "songid": "53d65bb5",
+      "count": 53
+    },
+    {
+      "name": "These Are the Ways",
+      "songid": "2be5548e",
+      "count": 53
+    },
+    {
+      "name": "True Men Don't Kill Coyotes",
+      "songid": "3d78db7",
+      "count": 52
+    },
+    {
+      "name": "C'mon Girl",
+      "songid": "3d685db",
+      "count": 51
+    },
+    {
+      "name": "One Big Mob",
+      "songid": "6bd7e62e",
+      "count": 51
+    },
+    {
+      "name": "Dr. Funkenstein",
+      "songid": "3d40d4f",
+      "count": 50
+    },
+    {
+      "name": "I Wanna Be Your Dog",
+      "songid": "4bd7efb2",
+      "count": 50
+    },
+    {
+      "name": "The Heavy Wing",
+      "songid": "be5519a",
+      "count": 50
+    },
+    {
+      "name": "Coffee Shop",
+      "songid": "6bd5ae0e",
+      "count": 49
+    },
+    {
+      "name": "Deep Kick",
+      "songid": "73d7e62d",
+      "count": 49
+    },
+    {
+      "name": "Fight Like a Brave",
+      "songid": "7bdfe200",
+      "count": 48
+    },
+    {
+      "name": "Castles Made of Sand",
+      "songid": "53dc574d",
+      "count": 47
+    },
+    {
+      "name": "Emit Remmus",
+      "songid": "4bd6e356",
+      "count": 47
+    },
+    {
+      "name": "Boyz-n-the-Hood",
+      "songid": "3bdf1428",
+      "count": 46
+    },
+    {
+      "name": "Anarchy in the U.K.",
+      "songid": "33d7c81d",
+      "count": 45
+    },
+    {
+      "name": "Buckle Down",
+      "songid": "5bd68b48",
+      "count": 45
+    },
+    {
+      "name": "The Needle and the Damage Done",
+      "songid": "1bd289fc",
+      "count": 45
+    },
+    {
+      "name": "Baby Appeal",
+      "songid": "1bd699c4",
+      "count": 44
+    },
+    {
+      "name": "I Feel Love",
+      "songid": "6bd636de",
+      "count": 42
+    },
+    {
+      "name": "My Friends",
+      "songid": "73d7e629",
+      "count": 42
+    },
+    {
+      "name": "Dreams of a Samurai",
+      "songid": "3cdc90f",
+      "count": 41
+    },
+    {
+      "name": "Hump de Bump",
+      "songid": "3bd310d8",
+      "count": 41
+    },
+    {
+      "name": "Purple Stain",
+      "songid": "63d65e5b",
+      "count": 41
+    },
+    {
+      "name": "Chad & Mauro Jam",
+      "songid": "13de7965",
+      "count": 40
+    },
+    {
+      "name": "Get on Top",
+      "songid": "5bd6cff8",
+      "count": 40
+    },
+    {
+      "name": "Meet Me at the Corner",
+      "songid": "63de8adb",
+      "count": 37
+    },
+    {
+      "name": "Tippa My Tongue",
+      "songid": "6be30a4a",
+      "count": 36
+    },
+    {
+      "name": "You Always Sing the Same",
+      "songid": "4bdc572a",
+      "count": 36
+    },
+    {
+      "name": "Did I Let You Know",
+      "songid": "73dedeb1",
+      "count": 35
+    },
+    {
+      "name": "Whatchu Thinkin'",
+      "songid": "5be2a700",
+      "count": 35
+    },
+    {
+      "name": "Catholic School Girls Rule",
+      "songid": "13d68139",
+      "count": 34
+    },
+    {
+      "name": "Strip My Mind",
+      "songid": "1bd7b1fc",
+      "count": 34
+    },
+    {
+      "name": "Jungle Man",
+      "songid": "2bd61c5a",
+      "count": 33
+    },
+    {
+      "name": "My Automobile",
+      "songid": "3bd5043c",
+      "count": 33
+    },
+    {
+      "name": "Red Hot Mama",
+      "songid": "63d65adf",
+      "count": 33
+    },
+    {
+      "name": "American Ghost Dance",
+      "songid": "33d6a071",
+      "count": 31
+    },
+    {
+      "name": "Stadium Arcadium",
+      "songid": "6bd7baa6",
+      "count": 31
+    },
+    {
+      "name": "Warlocks",
+      "songid": "13d781f9",
+      "count": 31
+    },
+    {
+      "name": "Everybody Knows This Is Nowhere",
+      "songid": "53d6df75",
+      "count": 30
+    },
+    {
+      "name": "Standing on the Verge of Getting It On",
+      "songid": "3bd50460",
+      "count": 30
+    },
+    {
+      "name": "Good Time Boys",
+      "songid": "7bd6cad4",
+      "count": 29
+    },
+    {
+      "name": "Goodbye Hooray",
+      "songid": "53de8fcd",
+      "count": 29
+    },
+    {
+      "name": "For Emily, Whenever I May Find Her",
+      "songid": "3bd7e8e4",
+      "count": 28
+    },
+    {
+      "name": "Grand Pappy Du Plenty",
+      "songid": "1bd6c5c0",
+      "count": 28
+    },
+    {
+      "name": "Warm Tape",
+      "songid": "bd781f2",
+      "count": 28
+    },
+    {
+      "name": "This Is the Place",
+      "songid": "1bd79500",
+      "count": 27
+    },
+    {
+      "name": "Brandy (You're a Fine Girl)",
+      "songid": "43de438f",
+      "count": 25
+    },
+    {
+      "name": "Jean-Pierre",
+      "songid": "3bda3c2c",
+      "count": 24
+    },
+    {
+      "name": "No Chump Love Sucker",
+      "songid": "3d6716f",
+      "count": 24
+    },
+    {
+      "name": "Sex Rap",
+      "songid": "7bd64a88",
+      "count": 24
+    },
+    {
+      "name": "Thirty Dirty Birds",
+      "songid": "6bd79aa6",
+      "count": 24
+    },
+    {
+      "name": "Detroit",
+      "songid": "13cd25d1",
+      "count": 23
+    },
+    {
+      "name": "Breaking the Girl",
+      "songid": "5bdf3394",
+      "count": 22
+    },
+    {
+      "name": "Danny's Song",
+      "songid": "4b977726",
+      "count": 22
+    },
+    {
+      "name": "Inca Roads",
+      "songid": "73d62a79",
+      "count": 22
+    },
+    {
+      "name": "Nervous Breakdown",
+      "songid": "13d6759d",
+      "count": 22
+    },
+    {
+      "name": "No Head No Backstage Pass",
+      "songid": "6bdce6a6",
+      "count": 22
+    },
+    {
+      "name": "Reach Out",
+      "songid": "43eeeb8f",
+      "count": 22
+    },
+    {
+      "name": "Sexy Mexican Maid",
+      "songid": "3d6456f",
+      "count": 22
+    },
+    {
+      "name": "Carry Me Home",
+      "songid": "3e04de7",
+      "count": 21
+    },
+    {
+      "name": "Your Song",
+      "songid": "73d7f2cd",
+      "count": 21
+    },
+    {
+      "name": "Chad & Josh Jam",
+      "songid": "1bcd1d34",
+      "count": 20
+    },
+    {
+      "name": "Drum Solo / Flea on Trumpet",
+      "songid": "bd89d52",
+      "count": 20
+    },
+    {
+      "name": "How Deep Is Your Love?",
+      "songid": "63d63aff",
+      "count": 20
+    },
+    {
+      "name": "Sound and Vision",
+      "songid": "33d7b821",
+      "count": 20
+    },
+    {
+      "name": "Battle Ship",
+      "songid": "1bd6955c",
+      "count": 19
+    },
+    {
+      "name": "Why Don't You Love Me",
+      "songid": "33e1002d",
+      "count": 19
+    },
+    {
+      "name": "Yertle the Turtle",
+      "songid": "43dc572b",
+      "count": 19
+    },
+    {
+      "name": "If You Got Funk, You Got Style",
+      "songid": "3bd50450",
+      "count": 17
+    },
+    {
+      "name": "Pot Sharing Tots",
+      "songid": "3def15b",
+      "count": 17
+    },
+    {
+      "name": "Black Cross",
+      "songid": "1bd40d48",
+      "count": 16
+    },
+    {
+      "name": "Forming",
+      "songid": "73d5f6c5",
+      "count": 16
+    },
+    {
+      "name": "Songbird",
+      "songid": "3d7b90b",
+      "count": 16
+    },
+    {
+      "name": "Stranded",
+      "songid": "73d7b6c9",
+      "count": 16
+    },
+    {
+      "name": "This Velvet Glove",
+      "songid": "33d79461",
+      "count": 16
+    },
+    {
+      "name": "Fox on the Run",
+      "songid": "33d37001",
+      "count": 15
+    },
+    {
+      "name": "Whole Lotta Love / What Is Soul? / Back in Black",
+      "songid": "33fe30b5",
+      "count": 15
+    },
+    {
+      "name": "Will You Love Me Tomorrow?",
+      "songid": "bdee902",
+      "count": 15
+    },
+    {
+      "name": "Desecration Smile",
+      "songid": "73d6f255",
+      "count": 14
+    },
+    {
+      "name": "Fela's Cock",
+      "songid": "1bd18950",
+      "count": 14
+    },
+    {
+      "name": "Suffragette City",
+      "songid": "3bd7b0e8",
+      "count": 13
+    },
+    {
+      "name": "Transcending",
+      "songid": "63d7e62f",
+      "count": 13
+    },
+    {
+      "name": "Waiting Room",
+      "songid": "63d4b6af",
+      "count": 13
+    },
+    {
+      "name": "Heroin",
+      "songid": "4bd71b6e",
+      "count": 12
+    },
+    {
+      "name": "Manic Depression",
+      "songid": "6bd53a52",
+      "count": 12
+    },
+    {
+      "name": "The Longest Wave",
+      "songid": "5bcdd328",
+      "count": 12
+    },
+    {
+      "name": "Bemsha Swing",
+      "songid": "2bdd8412",
+      "count": 11
+    },
+    {
+      "name": "Lovin' and Touchin'",
+      "songid": "4bdc5746",
+      "count": 11
+    },
+    {
+      "name": "Punk Rock Classic",
+      "songid": "53d65fa1",
+      "count": 11
+    },
+    {
+      "name": "Flea on Trumpet",
+      "songid": "53d6d741",
+      "count": 10
+    },
+    {
+      "name": "Orange Claw Hammer",
+      "songid": "5bde37e0",
+      "count": 10
+    },
+    {
+      "name": "Savior",
+      "songid": "5bd64f90",
+      "count": 10
+    },
+    {
+      "name": "So Much I",
+      "songid": "33d7bcf9",
+      "count": 10
+    },
+    {
+      "name": "The Drummer",
+      "songid": "23e1903b",
+      "count": 10
+    },
+    {
+      "name": "Foxy Lady",
+      "songid": "3d75d2f",
+      "count": 9
+    },
+    {
+      "name": "How Can I Tell You",
+      "songid": "33cac8a5",
+      "count": 9
+    },
+    {
+      "name": "Bunker Hill",
+      "songid": "3def10f",
+      "count": 8
+    },
+    {
+      "name": "I Could Die for You",
+      "songid": "2bd184de",
+      "count": 8
+    },
+    {
+      "name": "Untitled #11",
+      "songid": "23d59cf7",
+      "count": 8
+    },
+    {
+      "name": "Untitled #3",
+      "songid": "3bde0488",
+      "count": 8
+    },
+    {
+      "name": "We Turn Red",
+      "songid": "23cddcdb",
+      "count": 8
+    },
+    {
+      "name": "Dreamboy/Dreamgirl",
+      "songid": "3bec00b4",
+      "count": 7
+    },
+    {
+      "name": "Feasting on the Flowers",
+      "songid": "63caee1f",
+      "count": 7
+    },
+    {
+      "name": "I Want You Back",
+      "songid": "be91512",
+      "count": 7
+    },
+    {
+      "name": "Love Gun",
+      "songid": "7bd60e94",
+      "count": 7
+    },
+    {
+      "name": "Shallow Be Thy Game",
+      "songid": "6bd7e62a",
+      "count": 7
+    },
+    {
+      "name": "Sunny",
+      "songid": "43d057d7",
+      "count": 7
+    },
+    {
+      "name": "Terrapin",
+      "songid": "23d7a8d7",
+      "count": 7
+    },
+    {
+      "name": "We Got the Neutron Bomb",
+      "songid": "5bdc5734",
+      "count": 7
+    },
+    {
+      "name": "What in the World",
+      "songid": "53d37389",
+      "count": 7
+    },
+    {
+      "name": "Beverly Hills",
+      "songid": "73d696e1",
+      "count": 6
+    },
+    {
+      "name": "Dance, Dance, Dance",
+      "songid": "3ded577",
+      "count": 6
+    },
+    {
+      "name": "Dum Chucka Willie",
+      "songid": "1bd58d48",
+      "count": 6
+    },
+    {
+      "name": "Encore",
+      "songid": "5bc74b2c",
+      "count": 6
+    },
+    {
+      "name": "Fake as Fu@k",
+      "songid": "3bee887c",
+      "count": 6
+    },
+    {
+      "name": "I Just Want Some Skank",
+      "songid": "1bd631f8",
+      "count": 6
+    },
+    {
+      "name": "I Remember You",
+      "songid": "3bd630dc",
+      "count": 6
+    },
+    {
+      "name": "Leverage of Space",
+      "songid": "bd61192",
+      "count": 6
+    },
+    {
+      "name": "Mini-Epic (Kill for Your Country)",
+      "songid": "13d89d51",
+      "count": 6
+    },
+    {
+      "name": "Minor Thing",
+      "songid": "6bd602fa",
+      "count": 6
+    },
+    {
+      "name": "Rapper's Delight",
+      "songid": "2bd65886",
+      "count": 6
+    },
+    {
+      "name": "Religion II",
+      "songid": "bd249ba",
+      "count": 6
+    },
+    {
+      "name": "Rolling Sly Stone",
+      "songid": "2bd650ae",
+      "count": 6
+    },
+    {
+      "name": "She's a Lover",
+      "songid": "2be3b8c2",
+      "count": 6
+    },
+    {
+      "name": "SOS",
+      "songid": "73d3ce61",
+      "count": 6
+    },
+    {
+      "name": "Taste the Pain",
+      "songid": "43dc5737",
+      "count": 6
+    },
+    {
+      "name": "Gimmie Gimmie Gimmie",
+      "songid": "53d4c3b1",
+      "count": 5
+    },
+    {
+      "name": "Happiness Loves Company",
+      "songid": "7bdecee0",
+      "count": 5
+    },
+    {
+      "name": "See Emily Play",
+      "songid": "3d40d37",
+      "count": 5
+    },
+    {
+      "name": "Them Changes",
+      "songid": "63d5567f",
+      "count": 5
+    },
+    {
+      "name": "Torture Me",
+      "songid": "1bd40d64",
+      "count": 5
+    },
+    {
+      "name": "After Hours",
+      "songid": "63d6aa83",
+      "count": 4
+    },
+    {
+      "name": "Atomic Dog",
+      "songid": "6bd69e6a",
+      "count": 4
+    },
+    {
+      "name": "Bass Jam",
+      "songid": "6bd69ace",
+      "count": 4
+    },
+    {
+      "name": "Brendan's Death Song",
+      "songid": "63decee3",
+      "count": 4
+    },
+    {
+      "name": "Cabron",
+      "songid": "2bd3dcce",
+      "count": 4
+    },
+    {
+      "name": "Christine",
+      "songid": "73d68225",
+      "count": 4
+    },
+    {
+      "name": "Heard It on the X",
+      "songid": "1bc0a1d8",
+      "count": 4
+    },
+    {
+      "name": "Jugband Blues",
+      "songid": "3d61dd3",
+      "count": 4
+    },
+    {
+      "name": "Night of the Thumpasorus Peoples",
+      "songid": "33dc00bd",
+      "count": 4
+    },
+    {
+      "name": "Police Station",
+      "songid": "63decee7",
+      "count": 4
+    },
+    {
+      "name": "Remember (Walking in the Sand)",
+      "songid": "23d5043f",
+      "count": 4
+    },
+    {
+      "name": "Road Trippin'",
+      "songid": "1bd5bd44",
+      "count": 4
+    },
+    {
+      "name": "Spiritual",
+      "songid": "3d50597",
+      "count": 4
+    },
+    {
+      "name": "Sunday Bloody Sunday",
+      "songid": "53d7b3d5",
+      "count": 4
+    },
+    {
+      "name": "Sweet Home Alabama",
+      "songid": "bd7ad06",
+      "count": 4
+    },
+    {
+      "name": "Sweet Jane",
+      "songid": "1bd7adfc",
+      "count": 4
+    },
+    {
+      "name": "The Metro",
+      "songid": "73d7a2c9",
+      "count": 4
+    },
+    {
+      "name": "Venus in Furs",
+      "songid": "3d7d9ef",
+      "count": 4
+    },
+    {
+      "name": "1970",
+      "songid": "13d7050d",
+      "count": 3
+    },
+    {
+      "name": "Annie Wants a Baby",
+      "songid": "73decee1",
+      "count": 3
+    },
+    {
+      "name": "Been Insane",
+      "songid": "2bd59cfe",
+      "count": 3
+    },
+    {
+      "name": "\u00c7a plane pour moi",
+      "songid": "13d521a9",
+      "count": 3
+    },
+    {
+      "name": "Close My Eyes",
+      "songid": "13cd2185",
+      "count": 3
+    },
+    {
+      "name": "Cosmic Slop",
+      "songid": "3d6f98b",
+      "count": 3
+    },
+    {
+      "name": "Dosed",
+      "songid": "43d6ebbf",
+      "count": 3
+    },
+    {
+      "name": "Flea Solo",
+      "songid": "5bd6d740",
+      "count": 3
+    },
+    {
+      "name": "Funky Monks",
+      "songid": "13d6cd6d",
+      "count": 3
+    },
+    {
+      "name": "Good to Your Earhole",
+      "songid": "4bdf07d2",
+      "count": 3
+    },
+    {
+      "name": "Hard Headed Woman",
+      "songid": "23c8cc77",
+      "count": 3
+    },
+    {
+      "name": "Heemi Lheemy",
+      "songid": "beced06",
+      "count": 3
+    },
+    {
+      "name": "Hello! Hello! I'm Back Again",
+      "songid": "3bfde040",
+      "count": 3
+    },
+    {
+      "name": "I'm Eighteen",
+      "songid": "13d62db9",
+      "count": 3
+    },
+    {
+      "name": "If",
+      "songid": "6bd5128e",
+      "count": 3
+    },
+    {
+      "name": "Io sono quel che sono",
+      "songid": "23dfd013",
+      "count": 3
+    },
+    {
+      "name": "It's Only Natural",
+      "songid": "4be3ab32",
+      "count": 3
+    },
+    {
+      "name": "Just What I Needed",
+      "songid": "43d5ab83",
+      "count": 3
+    },
+    {
+      "name": "Kooks",
+      "songid": "3d43daf",
+      "count": 3
+    },
+    {
+      "name": "Nuthin' but a \"G\" Thang",
+      "songid": "1bd1e524",
+      "count": 3
+    },
+    {
+      "name": "Purple Rain",
+      "songid": "6bd65e66",
+      "count": 3
+    },
+    {
+      "name": "Shadow Dancing",
+      "songid": "23defc5f",
+      "count": 3
+    },
+    {
+      "name": "The Brothers Cup",
+      "songid": "53d1a7a1",
+      "count": 3
+    },
+    {
+      "name": "The Fat Man",
+      "songid": "23d0206b",
+      "count": 3
+    },
+    {
+      "name": "This Is Where I Belong",
+      "songid": "6bd57e16",
+      "count": 3
+    },
+    {
+      "name": "This Ticonderoga",
+      "songid": "4bcd8fa6",
+      "count": 3
+    },
+    {
+      "name": "Trumpet Jam",
+      "songid": "2bd184da",
+      "count": 3
+    },
+    {
+      "name": "A Face in the Crowd",
+      "songid": "53c7079d",
+      "count": 2
+    },
+    {
+      "name": "Apache Rose Peacock",
+      "songid": "13d69de9",
+      "count": 2
+    },
+    {
+      "name": "Behind the Sun",
+      "songid": "53d0cfed",
+      "count": 2
+    },
+    {
+      "name": "Blitzkrieg Bop",
+      "songid": "7bd692c4",
+      "count": 2
+    },
+    {
+      "name": "Blue Sunday",
+      "songid": "2bd504aa",
+      "count": 2
+    },
+    {
+      "name": "Bone",
+      "songid": "43c507eb",
+      "count": 2
+    },
+    {
+      "name": "Chad & Mauro & Josh & Flea Jam",
+      "songid": "4bdb1fba",
+      "count": 2
+    },
+    {
+      "name": "City of New Orleans",
+      "songid": "3bdc7470",
+      "count": 2
+    },
+    {
+      "name": "Cosmic Dancer",
+      "songid": "bd6f992",
+      "count": 2
+    },
+    {
+      "name": "Detroit Rock City",
+      "songid": "7bd6f2c4",
+      "count": 2
+    },
+    {
+      "name": "Don't Dream It's Over",
+      "songid": "1bd6e994",
+      "count": 2
+    },
+    {
+      "name": "Flea Fly",
+      "songid": "3d58d4f",
+      "count": 2
+    },
+    {
+      "name": "Get Up (I Feel Like Being a) Sex Machine",
+      "songid": "1bd285a0",
+      "count": 2
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 2
+    },
+    {
+      "name": "Hey Joe",
+      "songid": "5bd743a0",
+      "count": 2
+    },
+    {
+      "name": "I Just Want to Have Something to Do",
+      "songid": "63df721b",
+      "count": 2
+    },
+    {
+      "name": "I Wanna Be Sedated",
+      "songid": "4bd633fa",
+      "count": 2
+    },
+    {
+      "name": "I'm So Tired",
+      "songid": "63d45277",
+      "count": 2
+    },
+    {
+      "name": "In Love, Dying",
+      "songid": "23c440af",
+      "count": 2
+    },
+    {
+      "name": "Je suis venu te dire que je m'en vais",
+      "songid": "2bdc0c9a",
+      "count": 2
+    },
+    {
+      "name": "La cumparsita",
+      "songid": "4bfcab9a",
+      "count": 2
+    },
+    {
+      "name": "Lotta Love",
+      "songid": "3d74d53",
+      "count": 2
+    },
+    {
+      "name": "Master and Servant",
+      "songid": "5bd607b8",
+      "count": 2
+    },
+    {
+      "name": "Naked in the Rain",
+      "songid": "4bddcfa2",
+      "count": 2
+    },
+    {
+      "name": "Neighborhood Threat",
+      "songid": "bd3edca",
+      "count": 2
+    },
+    {
+      "name": "Not Great Men",
+      "songid": "3d7dd93",
+      "count": 2
+    },
+    {
+      "name": "On Broadway",
+      "songid": "33c53885",
+      "count": 2
+    },
+    {
+      "name": "One Way Traffic",
+      "songid": "6be246ce",
+      "count": 2
+    },
+    {
+      "name": "Pinhead",
+      "songid": "33d6605d",
+      "count": 2
+    },
+    {
+      "name": "Poptones",
+      "songid": "53d45fd9",
+      "count": 2
+    },
+    {
+      "name": "Ride Into the Sun",
+      "songid": "33d7147d",
+      "count": 2
+    },
+    {
+      "name": "Runaway",
+      "songid": "63d652ff",
+      "count": 2
+    },
+    {
+      "name": "Sammy Hagar Weekend",
+      "songid": "3d5e193",
+      "count": 2
+    },
+    {
+      "name": "She'll Be Coming Round the Mountain",
+      "songid": "43c55f4b",
+      "count": 2
+    },
+    {
+      "name": "Show Me Your Soul",
+      "songid": "3db79c3",
+      "count": 2
+    },
+    {
+      "name": "Smells Like Teen Spirit",
+      "songid": "3d7bd4f",
+      "count": 2
+    },
+    {
+      "name": "Strangers",
+      "songid": "1bd53900",
+      "count": 2
+    },
+    {
+      "name": "Super Stupid",
+      "songid": "53d7ef61",
+      "count": 2
+    },
+    {
+      "name": "That Joke Isn't Funny Anymore",
+      "songid": "5bd4cb20",
+      "count": 2
+    },
+    {
+      "name": "The Greeting Song",
+      "songid": "13d7a1a9",
+      "count": 2
+    },
+    {
+      "name": "The Guns of Brixton",
+      "songid": "bd7a192",
+      "count": 2
+    },
+    {
+      "name": "Third Stone From the Sun",
+      "songid": "43d0bb5b",
+      "count": 2
+    },
+    {
+      "name": "Trouble",
+      "songid": "23cac8af",
+      "count": 2
+    },
+    {
+      "name": "Warszawa",
+      "songid": "13d781d1",
+      "count": 2
+    },
+    {
+      "name": "We Will Rock You",
+      "songid": "53d78381",
+      "count": 2
+    },
+    {
+      "name": "\"Heroes\"",
+      "songid": "23d6bc37",
+      "count": 1
+    },
+    {
+      "name": "(Don't Fear) The Reaper",
+      "songid": "4bd6bf26",
+      "count": 1
+    },
+    {
+      "name": "(We Don't Need This) Fascist Groove Thang",
+      "songid": "73d32eb9",
+      "count": 1
+    },
+    {
+      "name": "A Man Needs a Maid",
+      "songid": "3dfb57b",
+      "count": 1
+    },
+    {
+      "name": "ABC Song",
+      "songid": "bc2e19e",
+      "count": 1
+    },
+    {
+      "name": "Across the Universe",
+      "songid": "63d6aa57",
+      "count": 1
+    },
+    {
+      "name": "Add It Up",
+      "songid": "53d74f6d",
+      "count": 1
+    },
+    {
+      "name": "Africa",
+      "songid": "73d6aaa1",
+      "count": 1
+    },
+    {
+      "name": "Alice in My Fantasies",
+      "songid": "7bd892d8",
+      "count": 1
+    },
+    {
+      "name": "All Along the Watchtower",
+      "songid": "23d6a4cf",
+      "count": 1
+    },
+    {
+      "name": "All Day and All of the Night",
+      "songid": "33d42015",
+      "count": 1
+    },
+    {
+      "name": "All Night Thing",
+      "songid": "4bd6a7f6",
+      "count": 1
+    },
+    {
+      "name": "All That Meat and No Potatoes",
+      "songid": "13defd65",
+      "count": 1
+    },
+    {
+      "name": "All the Young Dudes",
+      "songid": "6bd742aa",
+      "count": 1
+    },
+    {
+      "name": "An Opening",
+      "songid": "bf6e9ae",
+      "count": 1
+    },
+    {
+      "name": "Andy Warhol",
+      "songid": "5bd6a334",
+      "count": 1
+    },
+    {
+      "name": "Angel",
+      "songid": "43d6a313",
+      "count": 1
+    },
+    {
+      "name": "Angeles",
+      "songid": "3d599bf",
+      "count": 1
+    },
+    {
+      "name": "Answering Machine",
+      "songid": "63d4d6af",
+      "count": 1
+    },
+    {
+      "name": "Anthem",
+      "songid": "6bd6a2a6",
+      "count": 1
+    },
+    {
+      "name": "Anymore",
+      "songid": "3d5e19f",
+      "count": 1
+    },
+    {
+      "name": "Auld Lang Syne",
+      "songid": "73d02285",
+      "count": 1
+    },
+    {
+      "name": "Back in Black",
+      "songid": "2bd69812",
+      "count": 1
+    },
+    {
+      "name": "Bass and Conga Solo",
+      "songid": "63d69acb",
+      "count": 1
+    },
+    {
+      "name": "Being Boiled",
+      "songid": "5bd69738",
+      "count": 1
+    },
+    {
+      "name": "Big Rock Candy Mountain",
+      "songid": "5bd937bc",
+      "count": 1
+    },
+    {
+      "name": "Blackbird",
+      "songid": "43d693d7",
+      "count": 1
+    },
+    {
+      "name": "Both Sides, Now",
+      "songid": "bc0b54e",
+      "count": 1
+    },
+    {
+      "name": "Burn On",
+      "songid": "33d010d5",
+      "count": 1
+    },
+    {
+      "name": "Cat Scratch Fever",
+      "songid": "3d68177",
+      "count": 1
+    },
+    {
+      "name": "Changes / Third Stone From the Sun / Cosmic Slop / What Is Soul?",
+      "songid": "7be172d4",
+      "count": 1
+    },
+    {
+      "name": "Cholly (Funk Getting Ready to Roll)",
+      "songid": "2bdb109a",
+      "count": 1
+    },
+    {
+      "name": "Christchurch Fireworks Music",
+      "songid": "6bf6e68a",
+      "count": 1
+    },
+    {
+      "name": "Come Together",
+      "songid": "5bd6ff90",
+      "count": 1
+    },
+    {
+      "name": "Communication Breakdown",
+      "songid": "63d6fe07",
+      "count": 1
+    },
+    {
+      "name": "Cornucopia",
+      "songid": "5bd4e770",
+      "count": 1
+    },
+    {
+      "name": "Cracked Actor",
+      "songid": "63d742b7",
+      "count": 1
+    },
+    {
+      "name": "Cry Baby Cry",
+      "songid": "63d45263",
+      "count": 1
+    },
+    {
+      "name": "Cyanide Breath Mint",
+      "songid": "2bd770b6",
+      "count": 1
+    },
+    {
+      "name": "Dazed and Confused",
+      "songid": "53d853a9",
+      "count": 1
+    },
+    {
+      "name": "Debaser",
+      "songid": "23d6f057",
+      "count": 1
+    },
+    {
+      "name": "Dirty Old Town",
+      "songid": "73d2cab1",
+      "count": 1
+    },
+    {
+      "name": "Don't Call Me Nigger, Whitey",
+      "songid": "1bd6e9b0",
+      "count": 1
+    },
+    {
+      "name": "Duke of Earl",
+      "songid": "5bdc574c",
+      "count": 1
+    },
+    {
+      "name": "End of Show Brisbane",
+      "songid": "13f6e9b5",
+      "count": 1
+    },
+    {
+      "name": "End of Show State College",
+      "songid": "1bf6e9b0",
+      "count": 1
+    },
+    {
+      "name": "Epic Problem",
+      "songid": "43d0b393",
+      "count": 1
+    },
+    {
+      "name": "Especially in Michigan",
+      "songid": "73c5aa21",
+      "count": 1
+    },
+    {
+      "name": "Even You Brutus?",
+      "songid": "43dfd3db",
+      "count": 1
+    },
+    {
+      "name": "Eye of the Tiger",
+      "songid": "73d6deb1",
+      "count": 1
+    },
+    {
+      "name": "Family Affair",
+      "songid": "3bd57460",
+      "count": 1
+    },
+    {
+      "name": "Fear Is a Man's Best Friend",
+      "songid": "43d5bf0b",
+      "count": 1
+    },
+    {
+      "name": "Feed the Birds (Tuppence a Bag)",
+      "songid": "bffcd1e",
+      "count": 1
+    },
+    {
+      "name": "Field Commander Cohen",
+      "songid": "7bda1aa4",
+      "count": 1
+    },
+    {
+      "name": "Five Years",
+      "songid": "2bd6d4a2",
+      "count": 1
+    },
+    {
+      "name": "Flea's Ocean Song",
+      "songid": "2bc9a8b6",
+      "count": 1
+    },
+    {
+      "name": "Flea's Trumpet Treated by John",
+      "songid": "23dd24cf",
+      "count": 1
+    },
+    {
+      "name": "For Your Love",
+      "songid": "3db09ef",
+      "count": 1
+    },
+    {
+      "name": "Freddie's Dead",
+      "songid": "3bd6d0cc",
+      "count": 1
+    },
+    {
+      "name": "Funky Woman",
+      "songid": "1bc91da4",
+      "count": 1
+    },
+    {
+      "name": "Galveston",
+      "songid": "53d89b99",
+      "count": 1
+    },
+    {
+      "name": "Get Up, Stand Up",
+      "songid": "53d1d7e1",
+      "count": 1
+    },
+    {
+      "name": "Give Up the Funk (Tear the Roof Off the Sucker)",
+      "songid": "4bc9af92",
+      "count": 1
+    },
+    {
+      "name": "Golden Hair",
+      "songid": "2bde98ee",
+      "count": 1
+    },
+    {
+      "name": "Gong Li",
+      "songid": "23defccb",
+      "count": 1
+    },
+    {
+      "name": "Great Expectations",
+      "songid": "2bd6c452",
+      "count": 1
+    },
+    {
+      "name": "Groupie (Superstar)",
+      "songid": "63ce1ee7",
+      "count": 1
+    },
+    {
+      "name": "Hand Clapping Song",
+      "songid": "2bc9a49e",
+      "count": 1
+    },
+    {
+      "name": "Hands on the Wheel",
+      "songid": "53fb0f11",
+      "count": 1
+    },
+    {
+      "name": "Happy #12 & #35",
+      "songid": "33d50465",
+      "count": 1
+    },
+    {
+      "name": "Hardcore Jollies",
+      "songid": "43c1070b",
+      "count": 1
+    },
+    {
+      "name": "Heartbreaker",
+      "songid": "7bd6c2c8",
+      "count": 1
+    },
+    {
+      "name": "Heaven",
+      "songid": "13d4cd11",
+      "count": 1
+    },
+    {
+      "name": "Heaven on Their Minds",
+      "songid": "5bd18bd8",
+      "count": 1
+    },
+    {
+      "name": "Higgs Boson Blues",
+      "songid": "43db0783",
+      "count": 1
+    },
+    {
+      "name": "History Lesson - Part II",
+      "songid": "63f10eef",
+      "count": 1
+    },
+    {
+      "name": "Honeysuckle Rose",
+      "songid": "bc0b1d6",
+      "count": 1
+    },
+    {
+      "name": "How Could I Love Myself",
+      "songid": "63d9c6c7",
+      "count": 1
+    },
+    {
+      "name": "How Many More Times",
+      "songid": "63d63abf",
+      "count": 1
+    },
+    {
+      "name": "Hybrid Moments",
+      "songid": "53d4ab81",
+      "count": 1
+    },
+    {
+      "name": "I Don't Live Today",
+      "songid": "63d53a5f",
+      "count": 1
+    },
+    {
+      "name": "I Don't Wanna Grow Up",
+      "songid": "3d4a563",
+      "count": 1
+    },
+    {
+      "name": "I Don't Want to Play in Your Yard",
+      "songid": "1bc3e148",
+      "count": 1
+    },
+    {
+      "name": "I Feel You",
+      "songid": "73d636d1",
+      "count": 1
+    },
+    {
+      "name": "I Get Around",
+      "songid": "1bd479c4",
+      "count": 1
+    },
+    {
+      "name": "I Got You",
+      "songid": "bd6317a",
+      "count": 1
+    },
+    {
+      "name": "I Know It's Gonna Happen Someday",
+      "songid": "13d631c9",
+      "count": 1
+    },
+    {
+      "name": "I Love Livin' in the City",
+      "songid": "2bd5045a",
+      "count": 1
+    },
+    {
+      "name": "I Touch Myself",
+      "songid": "7bd4aee0",
+      "count": 1
+    },
+    {
+      "name": "I Wanna Be Well",
+      "songid": "5bd633f8",
+      "count": 1
+    },
+    {
+      "name": "I Want to Hold Your Hand",
+      "songid": "1bd701c4",
+      "count": 1
+    },
+    {
+      "name": "I Would for You",
+      "songid": "7bc6be30",
+      "count": 1
+    },
+    {
+      "name": "I'll Be Back",
+      "songid": "3d3a5df",
+      "count": 1
+    },
+    {
+      "name": "I'm Against It",
+      "songid": "53d4975d",
+      "count": 1
+    },
+    {
+      "name": "I'm on Fire",
+      "songid": "23d62c2f",
+      "count": 1
+    },
+    {
+      "name": "I'm Set Free",
+      "songid": "23d71883",
+      "count": 1
+    },
+    {
+      "name": "I've Just Seen a Face",
+      "songid": "6bd73282",
+      "count": 1
+    },
+    {
+      "name": "If 6 Was 9",
+      "songid": "5bd0bbe0",
+      "count": 1
+    },
+    {
+      "name": "If It Be Your Will",
+      "songid": "63d62e17",
+      "count": 1
+    },
+    {
+      "name": "If You Want Me to Stay",
+      "songid": "13d40d4d",
+      "count": 1
+    },
+    {
+      "name": "Improvisation",
+      "songid": "1bf1311c",
+      "count": 1
+    },
+    {
+      "name": "In the Light",
+      "songid": "43dfb763",
+      "count": 1
+    },
+    {
+      "name": "Iron Man",
+      "songid": "5bd627c0",
+      "count": 1
+    },
+    {
+      "name": "It Could Have Been",
+      "songid": "73d9c6c5",
+      "count": 1
+    },
+    {
+      "name": "It's My Life",
+      "songid": "3d71967",
+      "count": 1
+    },
+    {
+      "name": "It's So Hard to Say Goodbye to Yesterday",
+      "songid": "5bc27b98",
+      "count": 1
+    },
+    {
+      "name": "It\u2019s a Long Way Back",
+      "songid": "1bda51d8",
+      "count": 1
+    },
+    {
+      "name": "Jack the Ripper",
+      "songid": "33d62085",
+      "count": 1
+    },
+    {
+      "name": "Johnny B. Goode",
+      "songid": "13d61d69",
+      "count": 1
+    },
+    {
+      "name": "Johnny, Kick a Hole in the Sky",
+      "songid": "7bf88a4c",
+      "count": 1
+    },
+    {
+      "name": "Josh Solo",
+      "songid": "5bcb3bf8",
+      "count": 1
+    },
+    {
+      "name": "Just Like U Said It Would B",
+      "songid": "4bdfdb3a",
+      "count": 1
+    },
+    {
+      "name": "Kip Winger",
+      "songid": "13db79b9",
+      "count": 1
+    },
+    {
+      "name": "Lady Grinning Soul",
+      "songid": "3bc700fc",
+      "count": 1
+    },
+    {
+      "name": "Lament",
+      "songid": "4bd46742",
+      "count": 1
+    },
+    {
+      "name": "Let Me Roll It",
+      "songid": "7bd43ae8",
+      "count": 1
+    },
+    {
+      "name": "Living Without You",
+      "songid": "73d4eec9",
+      "count": 1
+    },
+    {
+      "name": "Long Division",
+      "songid": "53d473f1",
+      "count": 1
+    },
+    {
+      "name": "Long Gone",
+      "songid": "bde3906",
+      "count": 1
+    },
+    {
+      "name": "Loose",
+      "songid": "1bd76d88",
+      "count": 1
+    },
+    {
+      "name": "Louie Louie",
+      "songid": "7396fa09",
+      "count": 1
+    },
+    {
+      "name": "Love Them So",
+      "songid": "6bd9c6c6",
+      "count": 1
+    },
+    {
+      "name": "Lover, You Should've Come Over",
+      "songid": "63d4367b",
+      "count": 1
+    },
+    {
+      "name": "Lust for Life",
+      "songid": "5bd60b04",
+      "count": 1
+    },
+    {
+      "name": "Lyon 6.6.06",
+      "songid": "bf6e9aa",
+      "count": 1
+    },
+    {
+      "name": "Maggie's Farm",
+      "songid": "6bd60aba",
+      "count": 1
+    },
+    {
+      "name": "Making Our Dreams Come True",
+      "songid": "23da4cd3",
+      "count": 1
+    },
+    {
+      "name": "Mauro Marimba",
+      "songid": "23c4e077",
+      "count": 1
+    },
+    {
+      "name": "Me and My Teddy Bear",
+      "songid": "5bdb4bc0",
+      "count": 1
+    },
+    {
+      "name": "Menina mulher da pele preta",
+      "songid": "1bc3754c",
+      "count": 1
+    },
+    {
+      "name": "Michigan Fight Song",
+      "songid": "53c997ed",
+      "count": 1
+    },
+    {
+      "name": "Millionaires Against Hunger",
+      "songid": "73d18a19",
+      "count": 1
+    },
+    {
+      "name": "Moby Dick",
+      "songid": "1bd67de4",
+      "count": 1
+    },
+    {
+      "name": "My Boy, My Girl",
+      "songid": "7bc57ec0",
+      "count": 1
+    },
+    {
+      "name": "My Death",
+      "songid": "73d742a9",
+      "count": 1
+    },
+    {
+      "name": "New Age",
+      "songid": "33d71891",
+      "count": 1
+    },
+    {
+      "name": "Not the One",
+      "songid": "33e55481",
+      "count": 1
+    },
+    {
+      "name": "Nothing to Lose",
+      "songid": "bda51f6",
+      "count": 1
+    },
+    {
+      "name": "Now I Hear the Laughter",
+      "songid": "53dd53cd",
+      "count": 1
+    },
+    {
+      "name": "O.D.'d in Denver",
+      "songid": "23cc7c4b",
+      "count": 1
+    },
+    {
+      "name": "Oh Lord, Why Lord/Prayer",
+      "songid": "1bfe9144",
+      "count": 1
+    },
+    {
+      "name": "One Day at a Time",
+      "songid": "1bc84d38",
+      "count": 1
+    },
+    {
+      "name": "One Hot Minute",
+      "songid": "4bd3af7a",
+      "count": 1
+    },
+    {
+      "name": "Only Happy When It Rains",
+      "songid": "1bd669b4",
+      "count": 1
+    },
+    {
+      "name": "Ooh La La",
+      "songid": "6bd0e27e",
+      "count": 1
+    },
+    {
+      "name": "Opportunity to Cry",
+      "songid": "33c7f849",
+      "count": 1
+    },
+    {
+      "name": "Owner of a Lonely Heart",
+      "songid": "7bd66adc",
+      "count": 1
+    },
+    {
+      "name": "P. Funk (Wants to Get Funked Up)",
+      "songid": "23dc00c3",
+      "count": 1
+    },
+    {
+      "name": "Peon",
+      "songid": "53dfbb65",
+      "count": 1
+    },
+    {
+      "name": "People Have the Power",
+      "songid": "7bd66670",
+      "count": 1
+    },
+    {
+      "name": "Permutation",
+      "songid": "7bd666e8",
+      "count": 1
+    },
+    {
+      "name": "Purple Haze",
+      "songid": "3bd59cc4",
+      "count": 1
+    },
+    {
+      "name": "Push the Sky Away",
+      "songid": "4bdb0782",
+      "count": 1
+    },
+    {
+      "name": "Pyramid Song",
+      "songid": "7bd65ee0",
+      "count": 1
+    },
+    {
+      "name": "Quotes",
+      "songid": "5be31bdc",
+      "count": 1
+    },
+    {
+      "name": "Rain",
+      "songid": "33d65841",
+      "count": 1
+    },
+    {
+      "name": "Ramble On",
+      "songid": "23d658bb",
+      "count": 1
+    },
+    {
+      "name": "Ramblin' Man",
+      "songid": "13d71d11",
+      "count": 1
+    },
+    {
+      "name": "Red Pony",
+      "songid": "4bc45b1e",
+      "count": 1
+    },
+    {
+      "name": "Red Tape",
+      "songid": "63d65aa7",
+      "count": 1
+    },
+    {
+      "name": "Rocky",
+      "songid": "2bd4e456",
+      "count": 1
+    },
+    {
+      "name": "Sabbath Bloody Sabbath",
+      "songid": "3d64d0f",
+      "count": 1
+    },
+    {
+      "name": "Save the Population",
+      "songid": "3bd3a804",
+      "count": 1
+    },
+    {
+      "name": "School's Out",
+      "songid": "13d64969",
+      "count": 1
+    },
+    {
+      "name": "Seasons",
+      "songid": "2bd6484a",
+      "count": 1
+    },
+    {
+      "name": "See That My Grave Is Kept Clean",
+      "songid": "5bd433e0",
+      "count": 1
+    },
+    {
+      "name": "She's Lost Control",
+      "songid": "73d49e21",
+      "count": 1
+    },
+    {
+      "name": "She's the One",
+      "songid": "53d70bb5",
+      "count": 1
+    },
+    {
+      "name": "Sikamikanico",
+      "songid": "4bdce70a",
+      "count": 1
+    },
+    {
+      "name": "Sir Duke",
+      "songid": "2bd640ca",
+      "count": 1
+    },
+    {
+      "name": "Sleep's Dark and Silent Gate",
+      "songid": "73d296d9",
+      "count": 1
+    },
+    {
+      "name": "So What If I Did",
+      "songid": "1bd5e1a8",
+      "count": 1
+    },
+    {
+      "name": "Sometimes",
+      "songid": "3bc5f45c",
+      "count": 1
+    },
+    {
+      "name": "Song for Toni",
+      "songid": "53dc5731",
+      "count": 1
+    },
+    {
+      "name": "Soul Love",
+      "songid": "bd7b986",
+      "count": 1
+    },
+    {
+      "name": "Southern Man",
+      "songid": "2bd7b8da",
+      "count": 1
+    },
+    {
+      "name": "Southern Nights",
+      "songid": "13d09559",
+      "count": 1
+    },
+    {
+      "name": "Sparks",
+      "songid": "5bd7bb58",
+      "count": 1
+    },
+    {
+      "name": "Spectre",
+      "songid": "4bca17fa",
+      "count": 1
+    },
+    {
+      "name": "Spooky Scary Skeletons",
+      "songid": "73f02e91",
+      "count": 1
+    },
+    {
+      "name": "Spoonful",
+      "songid": "7bd762f4",
+      "count": 1
+    },
+    {
+      "name": "Starman",
+      "songid": "3d7b5a3",
+      "count": 1
+    },
+    {
+      "name": "Stone Free",
+      "songid": "73d53a6d",
+      "count": 1
+    },
+    {
+      "name": "Strange Days",
+      "songid": "13d5a1f9",
+      "count": 1
+    },
+    {
+      "name": "Swan Song",
+      "songid": "7bde82bc",
+      "count": 1
+    },
+    {
+      "name": "Sway",
+      "songid": "bd7ad56",
+      "count": 1
+    },
+    {
+      "name": "Sycamore Trees",
+      "songid": "63c9ee43",
+      "count": 1
+    },
+    {
+      "name": "Take It as It Comes",
+      "songid": "53dc5351",
+      "count": 1
+    },
+    {
+      "name": "Take My Hand, Precious Lord",
+      "songid": "6bc0b246",
+      "count": 1
+    },
+    {
+      "name": "Ten to Butter Blood Voodoo",
+      "songid": "13dce9d5",
+      "count": 1
+    },
+    {
+      "name": "Thank You (Falettinme Be Mice Elf Agin)",
+      "songid": "53d7ab31",
+      "count": 1
+    },
+    {
+      "name": "That's When I Reach for My Revolver",
+      "songid": "4bd7ab9e",
+      "count": 1
+    },
+    {
+      "name": "The Ballad of El Goodo",
+      "songid": "33d1c461",
+      "count": 1
+    },
+    {
+      "name": "The Bewlay Brothers",
+      "songid": "23d470d7",
+      "count": 1
+    },
+    {
+      "name": "The Crunge",
+      "songid": "3bd7a4f0",
+      "count": 1
+    },
+    {
+      "name": "The Harder They Come",
+      "songid": "53d49bd5",
+      "count": 1
+    },
+    {
+      "name": "The Last Day of Our Acquaintance",
+      "songid": "33d160b1",
+      "count": 1
+    },
+    {
+      "name": "The Mercy Seat",
+      "songid": "7bd7a2d8",
+      "count": 1
+    },
+    {
+      "name": "The Only Living Boy in New York",
+      "songid": "13d79da9",
+      "count": 1
+    },
+    {
+      "name": "The Spirit of Radio",
+      "songid": "73d79ea5",
+      "count": 1
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "songid": "bfea57e",
+      "count": 1
+    },
+    {
+      "name": "This Ain't No Picnic",
+      "songid": "5bdacb38",
+      "count": 1
+    },
+    {
+      "name": "This Is a Low",
+      "songid": "2bdf7c62",
+      "count": 1
+    },
+    {
+      "name": "Time",
+      "songid": "23de803b",
+      "count": 1
+    },
+    {
+      "name": "Tonight",
+      "songid": "3bd0e8e8",
+      "count": 1
+    },
+    {
+      "name": "Trumpet and FX Jam",
+      "songid": "bd78da6",
+      "count": 1
+    },
+    {
+      "name": "Try Again",
+      "songid": "13d989bd",
+      "count": 1
+    },
+    {
+      "name": "Tuesday Night in Berlin",
+      "songid": "2bc71472",
+      "count": 1
+    },
+    {
+      "name": "Twilight",
+      "songid": "63d7d2ff",
+      "count": 1
+    },
+    {
+      "name": "Until the Ocean",
+      "songid": "63c8ce5f",
+      "count": 1
+    },
+    {
+      "name": "Until Then",
+      "songid": "bd5ad7e",
+      "count": 1
+    },
+    {
+      "name": "Up From the Skies",
+      "songid": "7bd53a48",
+      "count": 1
+    },
+    {
+      "name": "Walkin' on Down the Road",
+      "songid": "53ea6395",
+      "count": 1
+    },
+    {
+      "name": "Watching the Detectives",
+      "songid": "6bd72266",
+      "count": 1
+    },
+    {
+      "name": "Watching the Wheels",
+      "songid": "39e458b",
+      "count": 1
+    },
+    {
+      "name": "Waterloo Sunset",
+      "songid": "2bd774fa",
+      "count": 1
+    },
+    {
+      "name": "Watts Jam",
+      "songid": "7bdddaec",
+      "count": 1
+    },
+    {
+      "name": "What It Is",
+      "songid": "53fb7745",
+      "count": 1
+    },
+    {
+      "name": "Where Everybody Knows Your Name",
+      "songid": "3bdf3c2c",
+      "count": 1
+    },
+    {
+      "name": "White Braids & Pillow Chair",
+      "songid": "3be3b890",
+      "count": 1
+    },
+    {
+      "name": "Whole Lotta Love",
+      "songid": "23d7f80b",
+      "count": 1
+    },
+    {
+      "name": "Wichita Lineman",
+      "songid": "2bd7ccaa",
+      "count": 1
+    },
+    {
+      "name": "Wicked Game",
+      "songid": "43d7fb43",
+      "count": 1
+    },
+    {
+      "name": "Wild World",
+      "songid": "23cac893",
+      "count": 1
+    },
+    {
+      "name": "Wilderness",
+      "songid": "6bd05276",
+      "count": 1
+    },
+    {
+      "name": "Working the Midnight Shift",
+      "songid": "53d92f4d",
+      "count": 1
+    },
+    {
+      "name": "World Full of Nothing",
+      "songid": "13d751e5",
+      "count": 1
+    },
+    {
+      "name": "You're a Big Girl Now",
+      "songid": "73d356dd",
+      "count": 1
+    }
+  ]
+}

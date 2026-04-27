@@ -1,0 +1,849 @@
+{
+  "artist": "Queens of the Stone Age",
+  "slug": "queens-of-the-stone-age",
+  "stats_id": "1bd689ec",
+  "mbid": "7dc8f5bd-9d0b-4087-9f73-dc164950bbd8",
+  "fetched_at": "2026-04-27T12:32:01.078676Z",
+  "songs": [
+    {
+      "name": "Go With the Flow",
+      "songid": "23d6c8bb",
+      "count": 987
+    },
+    {
+      "name": "No One Knows",
+      "songid": "bd671b2",
+      "count": 969
+    },
+    {
+      "name": "A Song for the Dead",
+      "songid": "2bd6a8de",
+      "count": 957
+    },
+    {
+      "name": "Little Sister",
+      "songid": "3d60d73",
+      "count": 834
+    },
+    {
+      "name": "Feel Good Hit of the Summer",
+      "songid": "73d6da51",
+      "count": 667
+    },
+    {
+      "name": "You Think I Ain't Worth a Dollar, but I Feel Like a Millionaire",
+      "songid": "5bd48bdc",
+      "count": 667
+    },
+    {
+      "name": "The Lost Art of Keeping a Secret",
+      "songid": "63d7a25b",
+      "count": 614
+    },
+    {
+      "name": "Make It Wit Chu",
+      "songid": "3d60543",
+      "count": 582
+    },
+    {
+      "name": "Burn the Witch",
+      "songid": "7bd68a50",
+      "count": 557
+    },
+    {
+      "name": "Regular John",
+      "songid": "3d6551b",
+      "count": 545
+    },
+    {
+      "name": "Monsters in the Parasol",
+      "songid": "33d67cd1",
+      "count": 534
+    },
+    {
+      "name": "Sick, Sick, Sick",
+      "songid": "3d64153",
+      "count": 490
+    },
+    {
+      "name": "Avon",
+      "songid": "7bd69ea4",
+      "count": 485
+    },
+    {
+      "name": "My God Is the Sun",
+      "songid": "43d88b43",
+      "count": 475
+    },
+    {
+      "name": "Smooth Sailing",
+      "songid": "1bd81dd0",
+      "count": 401
+    },
+    {
+      "name": "If I Had a Tail",
+      "songid": "1bd8216c",
+      "count": 390
+    },
+    {
+      "name": "Mexicola",
+      "songid": "43d6036f",
+      "count": 375
+    },
+    {
+      "name": "I Sat by the Ocean",
+      "songid": "13d8216d",
+      "count": 360
+    },
+    {
+      "name": "You Can't Quit Me Baby",
+      "songid": "13d7f1b1",
+      "count": 320
+    },
+    {
+      "name": "Hangin' Tree",
+      "songid": "bd6c1f6",
+      "count": 306
+    },
+    {
+      "name": "Better Living Through Chemistry",
+      "songid": "7bd69638",
+      "count": 297
+    },
+    {
+      "name": "If Only",
+      "songid": "7bd62efc",
+      "count": 297
+    },
+    {
+      "name": "Do It Again",
+      "songid": "7bd6ee0c",
+      "count": 296
+    },
+    {
+      "name": "Quick and to the Pointless",
+      "songid": "1bd65938",
+      "count": 296
+    },
+    {
+      "name": "Tension Head",
+      "songid": "2bd7a8f2",
+      "count": 279
+    },
+    {
+      "name": "A Song for the Deaf",
+      "songid": "33d6a8dd",
+      "count": 274
+    },
+    {
+      "name": "3's & 7's",
+      "songid": "43d6b3fb",
+      "count": 267
+    },
+    {
+      "name": "Misfit Love",
+      "songid": "63d60297",
+      "count": 265
+    },
+    {
+      "name": "You Would Know",
+      "songid": "43d7f323",
+      "count": 259
+    },
+    {
+      "name": "I Think I Lost My Headache",
+      "songid": "5bd6335c",
+      "count": 255
+    },
+    {
+      "name": "In the Fade",
+      "songid": "4bd62bda",
+      "count": 242
+    },
+    {
+      "name": "Leg of Lamb",
+      "songid": "6bd61676",
+      "count": 242
+    },
+    {
+      "name": "The Way You Used to Do",
+      "songid": "7bc92650",
+      "count": 227
+    },
+    {
+      "name": "In My Head",
+      "songid": "2bd628be",
+      "count": 219
+    },
+    {
+      "name": "The Sky Is Fallin'",
+      "songid": "73d79ef5",
+      "count": 209
+    },
+    {
+      "name": "The Vampyre of Time and Memory",
+      "songid": "bd82162",
+      "count": 190
+    },
+    {
+      "name": "Turnin' on the Screw",
+      "songid": "3bd78c94",
+      "count": 189
+    },
+    {
+      "name": "Walkin' on the Sidewalks",
+      "songid": "13d4e9c1",
+      "count": 189
+    },
+    {
+      "name": "Auto Pilot",
+      "songid": "73d69eed",
+      "count": 188
+    },
+    {
+      "name": "Gonna Leave You",
+      "songid": "6bd6ca42",
+      "count": 186
+    },
+    {
+      "name": "How to Handle a Rope",
+      "songid": "53d48bdd",
+      "count": 170
+    },
+    {
+      "name": "Ode to Clarissa",
+      "songid": "2bd66c2a",
+      "count": 169
+    },
+    {
+      "name": "First It Giveth",
+      "songid": "3bd6d408",
+      "count": 168
+    },
+    {
+      "name": "I Appear Missing",
+      "songid": "13d82161",
+      "count": 168
+    },
+    {
+      "name": "Long Slow Goodbye",
+      "songid": "2bd60c96",
+      "count": 166
+    },
+    {
+      "name": "The Bronze",
+      "songid": "3d7a5d7",
+      "count": 165
+    },
+    {
+      "name": "The Evil Has Landed",
+      "songid": "43c927b7",
+      "count": 156
+    },
+    {
+      "name": "Carnavoyeur",
+      "songid": "73eccaed",
+      "count": 145
+    },
+    {
+      "name": "Tangled Up in Plaid",
+      "songid": "7bd7aee4",
+      "count": 141
+    },
+    {
+      "name": "Another Love Song",
+      "songid": "63d6a2ff",
+      "count": 138
+    },
+    {
+      "name": "Emotion Sickness",
+      "songid": "33ecf835",
+      "count": 136
+    },
+    {
+      "name": "Domesticated Animals",
+      "songid": "3f6fdaf",
+      "count": 131
+    },
+    {
+      "name": "Into the Hollow",
+      "songid": "1bd6259c",
+      "count": 131
+    },
+    {
+      "name": "God Is in the Radio",
+      "songid": "4bd6cb7e",
+      "count": 130
+    },
+    {
+      "name": "\u2026Like Clockwork",
+      "songid": "33d81889",
+      "count": 128
+    },
+    {
+      "name": "Feet Don't Fail Me",
+      "songid": "bf63da2",
+      "count": 125
+    },
+    {
+      "name": "Kalopsia",
+      "songid": "13d81dd1",
+      "count": 117
+    },
+    {
+      "name": "Villains of Circumstance",
+      "songid": "63c93a6f",
+      "count": 116
+    },
+    {
+      "name": "I Never Came",
+      "songid": "3bd6301c",
+      "count": 113
+    },
+    {
+      "name": "Paper Machete",
+      "songid": "5bec1b74",
+      "count": 107
+    },
+    {
+      "name": "Hispanic Impressions",
+      "songid": "3d63943",
+      "count": 104
+    },
+    {
+      "name": "Battery Acid",
+      "songid": "13d69579",
+      "count": 98
+    },
+    {
+      "name": "Give the Mule What He Wants",
+      "songid": "3d05197",
+      "count": 96
+    },
+    {
+      "name": "Someone's in the Wolf",
+      "songid": "73d7be51",
+      "count": 82
+    },
+    {
+      "name": "Fairweather Friends",
+      "songid": "33d848c1",
+      "count": 81
+    },
+    {
+      "name": "The Fun Machine Took a Shit and Died",
+      "songid": "3bd414d8",
+      "count": 80
+    },
+    {
+      "name": "Time & Place",
+      "songid": "13ec0dd9",
+      "count": 80
+    },
+    {
+      "name": "Born to Hula",
+      "songid": "4bd88b4e",
+      "count": 78
+    },
+    {
+      "name": "Infinity",
+      "songid": "6bd62a0e",
+      "count": 76
+    },
+    {
+      "name": "Keep Your Eyes Peeled",
+      "songid": "1bd82164",
+      "count": 68
+    },
+    {
+      "name": "Medication",
+      "songid": "13d60151",
+      "count": 67
+    },
+    {
+      "name": "Broken Box",
+      "songid": "3bd68804",
+      "count": 66
+    },
+    {
+      "name": "Suture Up Your Future",
+      "songid": "6bd7b29e",
+      "count": 62
+    },
+    {
+      "name": "Head Like a Haunted House",
+      "songid": "1bf6d190",
+      "count": 58
+    },
+    {
+      "name": "Negative Space",
+      "songid": "3eceddf",
+      "count": 58
+    },
+    {
+      "name": "I Was a Teenage Hand Model",
+      "songid": "6bd45a76",
+      "count": 55
+    },
+    {
+      "name": "Made to Parade",
+      "songid": "33ec04d1",
+      "count": 50
+    },
+    {
+      "name": "Eccentric Man",
+      "songid": "bd29502",
+      "count": 44
+    },
+    {
+      "name": "Everybody Knows That You Are Insane",
+      "songid": "43d6df77",
+      "count": 43
+    },
+    {
+      "name": "I'm Designer",
+      "songid": "1bd62dcc",
+      "count": 43
+    },
+    {
+      "name": "The Blood Is Love",
+      "songid": "3d7a527",
+      "count": 39
+    },
+    {
+      "name": "Fortress",
+      "songid": "13f6fda1",
+      "count": 38
+    },
+    {
+      "name": "River in the Road",
+      "songid": "63d656bf",
+      "count": 34
+    },
+    {
+      "name": "Covered in Punk's Blood",
+      "songid": "43c6a333",
+      "count": 32
+    },
+    {
+      "name": "Precious and Grace",
+      "songid": "bdc2d52",
+      "count": 31
+    },
+    {
+      "name": "\"You Got a Killer Scene There, Man\u2026\"",
+      "songid": "3c0c163",
+      "count": 29
+    },
+    {
+      "name": "Straight Jacket Fitting",
+      "songid": "73ec0ea9",
+      "count": 29
+    },
+    {
+      "name": "Mosquito Song",
+      "songid": "73d4fe49",
+      "count": 27
+    },
+    {
+      "name": "Era Vulgaris",
+      "songid": "1bd6dd08",
+      "count": 26
+    },
+    {
+      "name": "Running Joke / Paper Machete",
+      "songid": "239168e7",
+      "count": 23
+    },
+    {
+      "name": "Hideaway",
+      "songid": "13f209e5",
+      "count": 22
+    },
+    {
+      "name": "Simple Exploding Man",
+      "songid": "33d40c21",
+      "count": 22
+    },
+    {
+      "name": "Easy Street",
+      "songid": "639c8eef",
+      "count": 21
+    },
+    {
+      "name": "Someone's in the Wolf / A Song for the Deaf / Straight Jacket Fitting",
+      "songid": "739c8e4d",
+      "count": 21
+    },
+    {
+      "name": "Spinning in Daffodils",
+      "songid": "13d40591",
+      "count": 21
+    },
+    {
+      "name": "Un-Reborn Again",
+      "songid": "43f6d70f",
+      "count": 19
+    },
+    {
+      "name": "Rickshaw",
+      "songid": "23d47cdf",
+      "count": 18
+    },
+    {
+      "name": "You're So Vague",
+      "songid": "53d7f3b9",
+      "count": 18
+    },
+    {
+      "name": "Run, Pig, Run",
+      "songid": "73d65209",
+      "count": 15
+    },
+    {
+      "name": "Six Shooter",
+      "songid": "7bd4fe28",
+      "count": 12
+    },
+    {
+      "name": "Wake Up Screaming",
+      "songid": "6bd7e23a",
+      "count": 10
+    },
+    {
+      "name": "Obscenery",
+      "songid": "4beda362",
+      "count": 8
+    },
+    {
+      "name": "Sicily",
+      "songid": "3bebf8e8",
+      "count": 8
+    },
+    {
+      "name": "A#1",
+      "songid": "3c3ddc7",
+      "count": 7
+    },
+    {
+      "name": "Cake (Who Shit on The?)",
+      "songid": "33d47cb5",
+      "count": 7
+    },
+    {
+      "name": "Supa Scoopa and Mighty Scoop",
+      "songid": "2bd47cd2",
+      "count": 6
+    },
+    {
+      "name": "These Aren't the Droids You're Looking For",
+      "songid": "3bd47cd4",
+      "count": 5
+    },
+    {
+      "name": "Allen's Wrench",
+      "songid": "63d44a37",
+      "count": 4
+    },
+    {
+      "name": "Don't Talk to Me",
+      "songid": "63da069f",
+      "count": 4
+    },
+    {
+      "name": "Improv Jam",
+      "songid": "2bce0842",
+      "count": 4
+    },
+    {
+      "name": "Skin on Skin",
+      "songid": "3d4f9b7",
+      "count": 4
+    },
+    {
+      "name": "Like a Drug",
+      "songid": "6bd4fe36",
+      "count": 3
+    },
+    {
+      "name": "Anthem (I Promise)",
+      "songid": "63d4fe2b",
+      "count": 2
+    },
+    {
+      "name": "At the Helm of Hell's Ships",
+      "songid": "63c452b3",
+      "count": 2
+    },
+    {
+      "name": "Bad Boy",
+      "songid": "13db11d1",
+      "count": 2
+    },
+    {
+      "name": "Christian Brothers",
+      "songid": "7bd25e34",
+      "count": 2
+    },
+    {
+      "name": "I'm Dead",
+      "songid": "7bd266bc",
+      "count": 2
+    },
+    {
+      "name": "In My Time of Dying",
+      "songid": "53c61311",
+      "count": 2
+    },
+    {
+      "name": "She",
+      "songid": "2bd6445a",
+      "count": 2
+    },
+    {
+      "name": "Thumb",
+      "songid": "4bd7976a",
+      "count": 2
+    },
+    {
+      "name": "White Wedding",
+      "songid": "3d7f9bb",
+      "count": 2
+    },
+    {
+      "name": "Who'll Be the Next in Line",
+      "songid": "7bd406f4",
+      "count": 2
+    },
+    {
+      "name": "18 A.D.",
+      "songid": "23eb38e7",
+      "count": 1
+    },
+    {
+      "name": "All I've Got",
+      "songid": "7bd25650",
+      "count": 1
+    },
+    {
+      "name": "Anderson Anderson",
+      "songid": "33d47cd1",
+      "count": 1
+    },
+    {
+      "name": "Back to Dungaree High",
+      "songid": "2bdd0c86",
+      "count": 1
+    },
+    {
+      "name": "Bloody Hammer",
+      "songid": "3bffc040",
+      "count": 1
+    },
+    {
+      "name": "Blurred Lines",
+      "songid": "3d84197",
+      "count": 1
+    },
+    {
+      "name": "Crawl Home",
+      "songid": "5bd5cb48",
+      "count": 1
+    },
+    {
+      "name": "Dancing With Myself",
+      "songid": "2bd6f492",
+      "count": 1
+    },
+    {
+      "name": "Dark as a Dungeon",
+      "songid": "63d5cea7",
+      "count": 1
+    },
+    {
+      "name": "Detroit",
+      "songid": "33d40c19",
+      "count": 1
+    },
+    {
+      "name": "Don't Drink Poison",
+      "songid": "53d5cb4d",
+      "count": 1
+    },
+    {
+      "name": "Driving Song",
+      "songid": "33d49c79",
+      "count": 1
+    },
+    {
+      "name": "Endless Eyes",
+      "songid": "73d25ed5",
+      "count": 1
+    },
+    {
+      "name": "Four Corners",
+      "songid": "7bd51af0",
+      "count": 1
+    },
+    {
+      "name": "Freedom Run",
+      "songid": "63d44a33",
+      "count": 1
+    },
+    {
+      "name": "Goin' Out West",
+      "songid": "5bd6cb04",
+      "count": 1
+    },
+    {
+      "name": "Goodbye Yellow Brick Road",
+      "songid": "6bd6ca86",
+      "count": 1
+    },
+    {
+      "name": "Green Machine",
+      "songid": "33d6c419",
+      "count": 1
+    },
+    {
+      "name": "Hurricane",
+      "songid": "23d47cd3",
+      "count": 1
+    },
+    {
+      "name": "I Feel Free",
+      "songid": "4bd5cb4e",
+      "count": 1
+    },
+    {
+      "name": "I Want You to Die",
+      "songid": "2bd40c1a",
+      "count": 1
+    },
+    {
+      "name": "I'm Here for Your Daughter",
+      "songid": "3bd47cd8",
+      "count": 1
+    },
+    {
+      "name": "Jr. High Love",
+      "songid": "bd2f102",
+      "count": 1
+    },
+    {
+      "name": "Making a Cross",
+      "songid": "43d5cb4f",
+      "count": 1
+    },
+    {
+      "name": "Mama Got the Blues",
+      "songid": "4bc37f96",
+      "count": 1
+    },
+    {
+      "name": "Memories Are Made of This",
+      "songid": "5bc66b4c",
+      "count": 1
+    },
+    {
+      "name": "Minnie the Moocher",
+      "songid": "6bffc6ae",
+      "count": 1
+    },
+    {
+      "name": "Molten Universe",
+      "songid": "33d47cc1",
+      "count": 1
+    },
+    {
+      "name": "Not to Touch the Earth",
+      "songid": "bd7755a",
+      "count": 1
+    },
+    {
+      "name": "Nova",
+      "songid": "6bd382ca",
+      "count": 1
+    },
+    {
+      "name": "On Jesus' Program",
+      "songid": "33d3a869",
+      "count": 1
+    },
+    {
+      "name": "One Hundred Days",
+      "songid": "7bd41638",
+      "count": 1
+    },
+    {
+      "name": "Paranoid",
+      "songid": "3bd66444",
+      "count": 1
+    },
+    {
+      "name": "Powdered Wig Machine",
+      "songid": "53d5cb49",
+      "count": 1
+    },
+    {
+      "name": "Punk Rock Caveman Living in a Prehistoric Age",
+      "songid": "63d3bebb",
+      "count": 1
+    },
+    {
+      "name": "Running Joke",
+      "songid": "43d2134f",
+      "count": 1
+    },
+    {
+      "name": "San Quentin",
+      "songid": "4bd4bf86",
+      "count": 1
+    },
+    {
+      "name": "Speaking in Tongues",
+      "songid": "5bd7bb30",
+      "count": 1
+    },
+    {
+      "name": "Takin' Care of Business",
+      "songid": "73d7ae61",
+      "count": 1
+    },
+    {
+      "name": "Teen Lambchop",
+      "songid": "5bd26334",
+      "count": 1
+    },
+    {
+      "name": "The Christmas Song (Chestnuts Roasting on an Open Fire)",
+      "songid": "53cb3701",
+      "count": 1
+    },
+    {
+      "name": "The Desperate Kingdom of Love",
+      "songid": "bd1f12a",
+      "count": 1
+    },
+    {
+      "name": "There Will Never Be a Better Time",
+      "songid": "4bd5cb4a",
+      "count": 1
+    },
+    {
+      "name": "This Lullaby",
+      "songid": "43f7730f",
+      "count": 1
+    },
+    {
+      "name": "Why'd You Only Call Me When You're High?",
+      "songid": "3bd958b0",
+      "count": 1
+    },
+    {
+      "name": "You Can't Put Your Arms Round a Memory",
+      "songid": "3ec252f",
+      "count": 1
+    }
+  ]
+}

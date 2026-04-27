@@ -1,0 +1,534 @@
+{
+  "artist": "System of a Down",
+  "slug": "system-of-a-down",
+  "stats_id": "23d69cd7",
+  "mbid": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+  "fetched_at": "2026-04-27T12:31:46.699101Z",
+  "songs": [
+    {
+      "name": "Sugar",
+      "songid": "2bd7b0e6",
+      "count": 525
+    },
+    {
+      "name": "Suite-Pee",
+      "songid": "23d7b08f",
+      "count": 482
+    },
+    {
+      "name": "Suggestions",
+      "songid": "33d7b0b1",
+      "count": 474
+    },
+    {
+      "name": "War?",
+      "songid": "13d78115",
+      "count": 425
+    },
+    {
+      "name": "Chop Suey!",
+      "songid": "7bd68254",
+      "count": 363
+    },
+    {
+      "name": "Aerials",
+      "songid": "7bd6aac0",
+      "count": 358
+    },
+    {
+      "name": "Toxicity",
+      "songid": "4bd79312",
+      "count": 357
+    },
+    {
+      "name": "Psycho",
+      "songid": "5bd65f30",
+      "count": 354
+    },
+    {
+      "name": "Needles",
+      "songid": "1bd675f0",
+      "count": 348
+    },
+    {
+      "name": "Deer Dance",
+      "songid": "23d6f0e7",
+      "count": 345
+    },
+    {
+      "name": "Prison Song",
+      "songid": "33d65c01",
+      "count": 332
+    },
+    {
+      "name": "Bounce",
+      "songid": "6bd68e72",
+      "count": 291
+    },
+    {
+      "name": "Know",
+      "songid": "2bd6189a",
+      "count": 249
+    },
+    {
+      "name": "B.Y.O.B.",
+      "songid": "1bd699e8",
+      "count": 242
+    },
+    {
+      "name": "Lost in Hollywood",
+      "songid": "63d60e3f",
+      "count": 223
+    },
+    {
+      "name": "Soldier Side - Intro",
+      "songid": "5bd7bf3c",
+      "count": 223
+    },
+    {
+      "name": "X",
+      "songid": "63d7f667",
+      "count": 216
+    },
+    {
+      "name": "Cigaro",
+      "songid": "7bd682b0",
+      "count": 211
+    },
+    {
+      "name": "Spiders",
+      "songid": "4bd7bbd2",
+      "count": 209
+    },
+    {
+      "name": "Question!",
+      "songid": "1bd6594c",
+      "count": 196
+    },
+    {
+      "name": "Forest",
+      "songid": "3d6d12f",
+      "count": 180
+    },
+    {
+      "name": "Kill Rock 'n Roll",
+      "songid": "1bd61978",
+      "count": 180
+    },
+    {
+      "name": "ATWA",
+      "songid": "4bd69fc6",
+      "count": 176
+    },
+    {
+      "name": "DDevil",
+      "songid": "6bd6f6ce",
+      "count": 176
+    },
+    {
+      "name": "Hypnotize",
+      "songid": "2bd6344e",
+      "count": 173
+    },
+    {
+      "name": "Science",
+      "songid": "3d6491b",
+      "count": 171
+    },
+    {
+      "name": "Mind",
+      "songid": "73d60251",
+      "count": 167
+    },
+    {
+      "name": "Lonely Day",
+      "songid": "23d60cff",
+      "count": 163
+    },
+    {
+      "name": "Radio/Video",
+      "songid": "23d6586b",
+      "count": 161
+    },
+    {
+      "name": "Darts",
+      "songid": "5bd6f7d8",
+      "count": 149
+    },
+    {
+      "name": "Mr. Jack",
+      "songid": "63d67ebb",
+      "count": 130
+    },
+    {
+      "name": "Soil",
+      "songid": "4bd7bf6e",
+      "count": 121
+    },
+    {
+      "name": "P.L.U.C.K.",
+      "songid": "6bd66a92",
+      "count": 115
+    },
+    {
+      "name": "Peephole",
+      "songid": "53d667cd",
+      "count": 115
+    },
+    {
+      "name": "Jet Pilot",
+      "songid": "7bd62204",
+      "count": 113
+    },
+    {
+      "name": "Revenga",
+      "songid": "2bd654a6",
+      "count": 106
+    },
+    {
+      "name": "Violent Pornography",
+      "songid": "1bd78590",
+      "count": 106
+    },
+    {
+      "name": "Holy Mountains",
+      "songid": "33d63809",
+      "count": 101
+    },
+    {
+      "name": "I-E-A-I-A-I-O",
+      "songid": "3bd62c84",
+      "count": 76
+    },
+    {
+      "name": "Marmalade",
+      "songid": "5bd6074c",
+      "count": 62
+    },
+    {
+      "name": "DAM",
+      "songid": "1bd6f5b4",
+      "count": 61
+    },
+    {
+      "name": "Dreaming",
+      "songid": "53d597d1",
+      "count": 59
+    },
+    {
+      "name": "Roulette",
+      "songid": "53d653e5",
+      "count": 58
+    },
+    {
+      "name": "This Cocaine Makes Me Feel Like I'm on This Song",
+      "songid": "bdc0d6e",
+      "count": 56
+    },
+    {
+      "name": "Tentative",
+      "songid": "2bd7a8f6",
+      "count": 53
+    },
+    {
+      "name": "Attack",
+      "songid": "63d69e67",
+      "count": 51
+    },
+    {
+      "name": "Chic 'N' Stu",
+      "songid": "4bd6830a",
+      "count": 50
+    },
+    {
+      "name": "Sad Statue",
+      "songid": "3d64dbb",
+      "count": 50
+    },
+    {
+      "name": "Sultans of Swing",
+      "songid": "53d7b37d",
+      "count": 47
+    },
+    {
+      "name": "Snowblind",
+      "songid": "1bd7bd98",
+      "count": 45
+    },
+    {
+      "name": "Honey",
+      "songid": "53d63b79",
+      "count": 42
+    },
+    {
+      "name": "CUBErt",
+      "songid": "73d6fae1",
+      "count": 40
+    },
+    {
+      "name": "Enemy",
+      "songid": "7bd6e2bc",
+      "count": 40
+    },
+    {
+      "name": "Goodbye Blue Sky",
+      "songid": "7bd6caa0",
+      "count": 35
+    },
+    {
+      "name": "Highway Song",
+      "songid": "6bd63e9e",
+      "count": 35
+    },
+    {
+      "name": "Innervision",
+      "songid": "6bd62ad2",
+      "count": 30
+    },
+    {
+      "name": "Sartarabad",
+      "songid": "4bc087b6",
+      "count": 30
+    },
+    {
+      "name": "Hezze",
+      "songid": "1bdd6118",
+      "count": 28
+    },
+    {
+      "name": "Old School Hollywood",
+      "songid": "43d66f13",
+      "count": 28
+    },
+    {
+      "name": "Temper",
+      "songid": "33d7a859",
+      "count": 27
+    },
+    {
+      "name": "Pictures",
+      "songid": "4bd74bf2",
+      "count": 26
+    },
+    {
+      "name": "Soldier Side",
+      "songid": "53d7bf3d",
+      "count": 26
+    },
+    {
+      "name": "A.D.D.",
+      "songid": "1bd0a5c4",
+      "count": 25
+    },
+    {
+      "name": "Arto",
+      "songid": "33d69c9d",
+      "count": 25
+    },
+    {
+      "name": "La Isla Bonita",
+      "songid": "73d61a11",
+      "count": 19
+    },
+    {
+      "name": "Streamline",
+      "songid": "3d7b143",
+      "count": 18
+    },
+    {
+      "name": "36",
+      "songid": "63d6b263",
+      "count": 17
+    },
+    {
+      "name": "Bubbles",
+      "songid": "53d68b59",
+      "count": 17
+    },
+    {
+      "name": "Genocidal Humanoidz",
+      "songid": "7be49648",
+      "count": 16
+    },
+    {
+      "name": "U-Fig",
+      "songid": "4bd1cb6a",
+      "count": 16
+    },
+    {
+      "name": "Everything She Wants",
+      "songid": "13d489f5",
+      "count": 15
+    },
+    {
+      "name": "The Metro",
+      "songid": "73d7a2c9",
+      "count": 15
+    },
+    {
+      "name": "Vicinity of Obscenity",
+      "songid": "6bd176f2",
+      "count": 14
+    },
+    {
+      "name": "My My, Hey Hey (Out of the Blue)",
+      "songid": "1bd74d68",
+      "count": 12
+    },
+    {
+      "name": "Protect the Land",
+      "songid": "7be49630",
+      "count": 10
+    },
+    {
+      "name": "China Girl",
+      "songid": "53d3f35d",
+      "count": 8
+    },
+    {
+      "name": "Fuck the System",
+      "songid": "73d6d20d",
+      "count": 8
+    },
+    {
+      "name": "Shimmy",
+      "songid": "4bd74bf6",
+      "count": 7
+    },
+    {
+      "name": "St\u00f6rag\u00e9d",
+      "songid": "73d7b6fd",
+      "count": 7
+    },
+    {
+      "name": "Johnny",
+      "songid": "13d61d7d",
+      "count": 6
+    },
+    {
+      "name": "Hollow Hills",
+      "songid": "33d63841",
+      "count": 5
+    },
+    {
+      "name": "Shame on a Nigga",
+      "songid": "bd4f57a",
+      "count": 4
+    },
+    {
+      "name": "Coming Home",
+      "songid": "73d6fe31",
+      "count": 3
+    },
+    {
+      "name": "Jam",
+      "songid": "539e57bd",
+      "count": 3
+    },
+    {
+      "name": "Blue",
+      "songid": "63d28ec7",
+      "count": 2
+    },
+    {
+      "name": "Children of the Sea",
+      "songid": "53d683a1",
+      "count": 2
+    },
+    {
+      "name": "Friik",
+      "songid": "1bd0f9d0",
+      "count": 2
+    },
+    {
+      "name": "Julietta",
+      "songid": "6bed2692",
+      "count": 2
+    },
+    {
+      "name": "Lookout Weekend",
+      "songid": "4bd60f1e",
+      "count": 2
+    },
+    {
+      "name": "Marian",
+      "songid": "43d60777",
+      "count": 2
+    },
+    {
+      "name": "When the Smoke Is Going Down",
+      "songid": "5bdaa798",
+      "count": 2
+    },
+    {
+      "name": "Angel Baby",
+      "songid": "13d925d1",
+      "count": 1
+    },
+    {
+      "name": "Boom!",
+      "songid": "4bd68f5e",
+      "count": 1
+    },
+    {
+      "name": "Delphine",
+      "songid": "43d8c7df",
+      "count": 1
+    },
+    {
+      "name": "Do What You Do",
+      "songid": "4bddf7ca",
+      "count": 1
+    },
+    {
+      "name": "Gardenia",
+      "songid": "7bd45aa8",
+      "count": 1
+    },
+    {
+      "name": "I Love the Nightlife (Disco Round)",
+      "songid": "3bc9188c",
+      "count": 1
+    },
+    {
+      "name": "Karma Police",
+      "songid": "5bd61f00",
+      "count": 1
+    },
+    {
+      "name": "Kez Yem Hishoum",
+      "songid": "23cee41b",
+      "count": 1
+    },
+    {
+      "name": "Nations",
+      "songid": "6bd67a8e",
+      "count": 1
+    },
+    {
+      "name": "Paranoid Android",
+      "songid": "33d66439",
+      "count": 1
+    },
+    {
+      "name": "Southern Man",
+      "songid": "2bd7b8da",
+      "count": 1
+    },
+    {
+      "name": "Stairway to Heaven",
+      "songid": "6bd7ba8e",
+      "count": 1
+    },
+    {
+      "name": "War That No One Won",
+      "songid": "2bce90da",
+      "count": 1
+    },
+    {
+      "name": "Zepuri Nman",
+      "songid": "3c7450b",
+      "count": 1
+    }
+  ]
+}

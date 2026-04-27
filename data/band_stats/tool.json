@@ -1,0 +1,354 @@
+{
+  "artist": "Tool",
+  "slug": "tool",
+  "stats_id": "2bd6d836",
+  "mbid": "66fc5bf8-daa4-4241-b378-9bc9077939d2",
+  "fetched_at": "2026-04-27T12:32:05.809755Z",
+  "songs": [
+    {
+      "name": "Stinkfist",
+      "songid": "5bd7b7dc",
+      "count": 839
+    },
+    {
+      "name": "Forty Six & 2",
+      "songid": "bd6d18e",
+      "count": 674
+    },
+    {
+      "name": "Schism",
+      "songid": "6bd64e9a",
+      "count": 660
+    },
+    {
+      "name": "\u00c6nema",
+      "songid": "3d699fb",
+      "count": 639
+    },
+    {
+      "name": "Sober",
+      "songid": "3bd7bc98",
+      "count": 566
+    },
+    {
+      "name": "Lateralus",
+      "songid": "2bd614ea",
+      "count": 516
+    },
+    {
+      "name": "Jambi",
+      "songid": "43d62307",
+      "count": 506
+    },
+    {
+      "name": "Opiate",
+      "songid": "2bd668f6",
+      "count": 430
+    },
+    {
+      "name": "The Grudge",
+      "songid": "3d7a19b",
+      "count": 415
+    },
+    {
+      "name": "Vicarious",
+      "songid": "1bd78528",
+      "count": 374
+    },
+    {
+      "name": "Parabola",
+      "songid": "1bd6658c",
+      "count": 340
+    },
+    {
+      "name": "Rosetta Stoned",
+      "songid": "43d65307",
+      "count": 306
+    },
+    {
+      "name": "Pushit",
+      "songid": "73d65e21",
+      "count": 279
+    },
+    {
+      "name": "Parabol",
+      "songid": "13d6658d",
+      "count": 250
+    },
+    {
+      "name": "Flood",
+      "songid": "4bd6d702",
+      "count": 249
+    },
+    {
+      "name": "Prison Sex",
+      "songid": "2bd65c02",
+      "count": 240
+    },
+    {
+      "name": "The Pot",
+      "songid": "3bd79ce4",
+      "count": 239
+    },
+    {
+      "name": "Intolerance",
+      "songid": "bd62586",
+      "count": 233
+    },
+    {
+      "name": "Descending",
+      "songid": "2bce5c76",
+      "count": 220
+    },
+    {
+      "name": "Chocolate Chip Trip",
+      "songid": "53fcc7e5",
+      "count": 217
+    },
+    {
+      "name": "Invincible",
+      "songid": "2bff9c86",
+      "count": 217
+    },
+    {
+      "name": "Disposition",
+      "songid": "53d6ef95",
+      "count": 206
+    },
+    {
+      "name": "Fear Inoculum",
+      "songid": "3bfc74b8",
+      "count": 199
+    },
+    {
+      "name": "Pneuma",
+      "songid": "43fc7fbf",
+      "count": 199
+    },
+    {
+      "name": "Reflection",
+      "songid": "bd6555a",
+      "count": 199
+    },
+    {
+      "name": "Eulogy",
+      "songid": "2bd6dc2a",
+      "count": 180
+    },
+    {
+      "name": "Third Eye",
+      "songid": "63d79aab",
+      "count": 164
+    },
+    {
+      "name": "Lost Keys (Blame Hofmann)",
+      "songid": "7bd60e28",
+      "count": 161
+    },
+    {
+      "name": "Swamp Song",
+      "songid": "13d7ad6d",
+      "count": 157
+    },
+    {
+      "name": "The Patient",
+      "songid": "2bd79c3e",
+      "count": 151
+    },
+    {
+      "name": "Triad",
+      "songid": "6bd7929e",
+      "count": 150
+    },
+    {
+      "name": "Eon Blue Apocalypse",
+      "songid": "13d6dd31",
+      "count": 144
+    },
+    {
+      "name": "Wings for Marie (Pt 1)",
+      "songid": "63d7fa0f",
+      "count": 144
+    },
+    {
+      "name": "Hooker With a Penis",
+      "songid": "43d63b33",
+      "count": 143
+    },
+    {
+      "name": "Undertow",
+      "songid": "bd789a2",
+      "count": 143
+    },
+    {
+      "name": "H.",
+      "songid": "7bd6c65c",
+      "count": 137
+    },
+    {
+      "name": "10,000 Days (Wings, Pt 2)",
+      "songid": "53d6bbd5",
+      "count": 120
+    },
+    {
+      "name": "Sweat",
+      "songid": "13d7ad49",
+      "count": 117
+    },
+    {
+      "name": "Cold and Ugly",
+      "songid": "23d6fcd7",
+      "count": 116
+    },
+    {
+      "name": "Merkaba",
+      "songid": "33d6001d",
+      "count": 105
+    },
+    {
+      "name": "4\u00b0",
+      "songid": "63d6b28b",
+      "count": 99
+    },
+    {
+      "name": "Right in Two",
+      "songid": "6bd6567a",
+      "count": 97
+    },
+    {
+      "name": "Jerk-Off",
+      "songid": "73d62261",
+      "count": 88
+    },
+    {
+      "name": "Culling Voices",
+      "songid": "43fd1337",
+      "count": 87
+    },
+    {
+      "name": "Bottom",
+      "songid": "5bd68f80",
+      "count": 85
+    },
+    {
+      "name": "Part of Me",
+      "songid": "3bd664f0",
+      "count": 74
+    },
+    {
+      "name": "Crawl Away",
+      "songid": "43d6fb7b",
+      "count": 62
+    },
+    {
+      "name": "Hush",
+      "songid": "1bd63594",
+      "count": 51
+    },
+    {
+      "name": "Intension",
+      "songid": "bd62526",
+      "count": 47
+    },
+    {
+      "name": "Jimmy",
+      "songid": "63d7469b",
+      "count": 43
+    },
+    {
+      "name": "No Quarter",
+      "songid": "23d67073",
+      "count": 42
+    },
+    {
+      "name": "Ticks & Leeches",
+      "songid": "33d7e449",
+      "count": 27
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "73d8265d",
+      "count": 25
+    },
+    {
+      "name": "You Lied",
+      "songid": "3bd7f0d8",
+      "count": 25
+    },
+    {
+      "name": "B'Boom",
+      "songid": "4bd4676e",
+      "count": 15
+    },
+    {
+      "name": "Disgustipated",
+      "songid": "bd4955a",
+      "count": 14
+    },
+    {
+      "name": "7empest",
+      "songid": "3bfde0a0",
+      "count": 12
+    },
+    {
+      "name": "Hand of Doom",
+      "songid": "3d77d27",
+      "count": 10
+    },
+    {
+      "name": "Soundscapes",
+      "songid": "33d1600d",
+      "count": 10
+    },
+    {
+      "name": "Stranglehold",
+      "songid": "bd7b176",
+      "count": 6
+    },
+    {
+      "name": "Commando",
+      "songid": "7bd6fe18",
+      "count": 5
+    },
+    {
+      "name": "Demon Cleaner",
+      "songid": "bd55dde",
+      "count": 2
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 2
+    },
+    {
+      "name": "Maynard's Dick",
+      "songid": "3bd318d0",
+      "count": 2
+    },
+    {
+      "name": "Some Days It's Dark",
+      "songid": "13d74dd5",
+      "count": 2
+    },
+    {
+      "name": "A Passage to Bangkok",
+      "songid": "33d6a86d",
+      "count": 1
+    },
+    {
+      "name": "Die Eier von Satan",
+      "songid": "6bd2768a",
+      "count": 1
+    },
+    {
+      "name": "Holiday in Cambodia",
+      "songid": "23d63853",
+      "count": 1
+    },
+    {
+      "name": "Spasm",
+      "songid": "4bd7bb56",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "Mr. Bungle": {
+    "mbid": "277e21a9-2d64-452d-96c4-2d23a7af5891",
+    "stats_id": "23d6b0d7",
+    "slug": "mr-bungle",
+    "artist_url": "https://www.setlist.fm/setlists/mr-bungle-23d6b0d7.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (mr-bungle)"
+  },
+  "System of a Down": {
+    "mbid": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+    "stats_id": "23d69cd7",
+    "slug": "system-of-a-down",
+    "artist_url": "https://www.setlist.fm/setlists/system-of-a-down-23d69cd7.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (system-of-a-down)"
+  },
+  "Chris Cornell": {
+    "mbid": "cbf9738d-8f81-4a92-bc64-ede09341652d",
+    "stats_id": "1bd689d4",
+    "slug": "chris-cornell",
+    "artist_url": "https://www.setlist.fm/setlists/chris-cornell-1bd689d4.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (chris-cornell)"
+  },
+  "A Perfect Circle": {
+    "mbid": "078a9376-3c04-4280-b7d7-b20e158f345d",
+    "stats_id": "13d689cd",
+    "slug": "a-perfect-circle",
+    "artist_url": "https://www.setlist.fm/setlists/a-perfect-circle-13d689cd.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, slug matches existing setlist URLs (a-perfect-circle)"
+  },
+  "Maroon 5": {
+    "mbid": "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+    "stats_id": "4bd6bfea",
+    "slug": "maroon-5",
+    "artist_url": "https://www.setlist.fm/setlists/maroon-5-4bd6bfea.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (maroon-5)"
+  },
+  "Faith No More": {
+    "mbid": "b15ebd71-a252-417d-9e1c-3e6863da68f8",
+    "stats_id": "2bd6b0de",
+    "slug": "faith-no-more",
+    "artist_url": "https://www.setlist.fm/setlists/faith-no-more-2bd6b0de.html",
+    "shows_attended": 3,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (faith-no-more)"
+  },
+  "Roger Waters": {
+    "mbid": "0f50beab-d77d-4f0f-ac26-0b87d3e9b11b",
+    "stats_id": "6bd6ba16",
+    "slug": "roger-waters",
+    "artist_url": "https://www.setlist.fm/setlists/roger-waters-6bd6ba16.html",
+    "shows_attended": 3,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, slug matches existing setlist URLs (roger-waters)"
+  },
+  "Tenacious D": {
+    "mbid": "148ddea2-6839-4354-8e2c-5dfadf136b7f",
+    "stats_id": "2bd6d4ae",
+    "slug": "tenacious-d",
+    "artist_url": "https://www.setlist.fm/setlists/tenacious-d-2bd6d4ae.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (tenacious-d)"
+  },
+  "Nine Inch Nails": {
+    "mbid": "b7ffd2af-418f-4be2-bdd1-22f8b48613da",
+    "stats_id": "1bd6a5bc",
+    "slug": "nine-inch-nails",
+    "artist_url": "https://www.setlist.fm/setlists/nine-inch-nails-1bd6a5bc.html",
+    "shows_attended": 5,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (nine-inch-nails)"
+  },
+  "Queens of the Stone Age": {
+    "mbid": "7dc8f5bd-9d0b-4087-9f73-dc164950bbd8",
+    "stats_id": "1bd689ec",
+    "slug": "queens-of-the-stone-age",
+    "artist_url": "https://www.setlist.fm/setlists/queens-of-the-stone-age-1bd689ec.html",
+    "shows_attended": 3,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (queens-of-the-stone-age)"
+  },
+  "Jack White": {
+    "_error": "conflict \u2014 see overrides file"
+  },
+  "Foo Fighters": {
+    "mbid": "67f66c07-6e61-4026-ade5-7e782fad3a5d",
+    "stats_id": "bd6893a",
+    "slug": "foo-fighters",
+    "artist_url": "https://www.setlist.fm/setlists/foo-fighters-bd6893a.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (foo-fighters)"
+  },
+  "Puscifer": {
+    "mbid": "6e4277d8-7b64-44a3-b823-13bd15114e22",
+    "stats_id": "3d6f5af",
+    "slug": "puscifer",
+    "artist_url": "https://www.setlist.fm/setlists/puscifer-3d6f5af.html",
+    "shows_attended": 5,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (puscifer)"
+  },
+  "Tool": {
+    "mbid": "66fc5bf8-daa4-4241-b378-9bc9077939d2",
+    "stats_id": "2bd6d836",
+    "slug": "tool",
+    "artist_url": "https://www.setlist.fm/setlists/tool-2bd6d836.html",
+    "shows_attended": 9,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (tool)"
+  },
+  "Halestorm": {
+    "mbid": "eaed2193-e026-493b-ac57-113360407b06",
+    "stats_id": "2bd4d4aa",
+    "slug": "halestorm",
+    "artist_url": "https://www.setlist.fm/setlists/halestorm-2bd4d4aa.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (halestorm)"
+  },
+  "Flight of the Conchords": {
+    "mbid": "1f574ab1-a46d-4586-9331-f0ded23e0411",
+    "stats_id": "7bd6a2e8",
+    "slug": "flight-of-the-conchords",
+    "artist_url": "https://www.setlist.fm/setlists/flight-of-the-conchords-7bd6a2e8.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (flight-of-the-conchords)"
+  },
+  "AC/DC": {
+    "mbid": "66c662b6-6e2f-4930-8610-912e24c63ed1",
+    "stats_id": "23d6807b",
+    "slug": "acdc",
+    "artist_url": "https://www.setlist.fm/setlists/acdc-23d6807b.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (acdc)"
+  },
+  "\u201cWeird Al\u201d Yankovic": {
+    "mbid": "7746d775-9550-4360-b8d5-c37bd448ce01",
+    "stats_id": "2bd6ccaa",
+    "slug": "weird-al-yankovic",
+    "artist_url": "https://www.setlist.fm/setlists/weird-al-yankovic-2bd6ccaa.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (weird-al-yankovic)"
+  },
+  "Hellyeah": {
+    "mbid": "680d9f43-3287-4f16-a9ab-b5904746f745",
+    "stats_id": "73d6768d",
+    "slug": "hellyeah",
+    "artist_url": "https://www.setlist.fm/setlists/hellyeah-73d6768d.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (hellyeah)"
+  },
+  "Disturbed": {
+    "_error": "conflict \u2014 see overrides file"
+  },
+  "Red Hot Chili Peppers": {
+    "mbid": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+    "stats_id": "13d68969",
+    "slug": "red-hot-chili-peppers",
+    "artist_url": "https://www.setlist.fm/setlists/red-hot-chili-peppers-13d68969.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (red-hot-chili-peppers)"
+  },
+  "Metallica": {
+    "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+    "stats_id": "3bd680c8",
+    "slug": "metallica",
+    "artist_url": "https://www.setlist.fm/setlists/metallica-3bd680c8.html",
+    "shows_attended": 4,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (metallica)"
+  },
+  "In This Moment": {
+    "mbid": "29266b3d-b5ae-4d09-b721-326246adf68f",
+    "stats_id": "63d64e1f",
+    "slug": "in-this-moment",
+    "artist_url": "https://www.setlist.fm/setlists/in-this-moment-63d64e1f.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (in-this-moment)"
+  },
+  "Primus": {
+    "mbid": "84dc4f23-c0b8-4fe1-bbca-a3993ddc8fc2",
+    "stats_id": "6bd69e5e",
+    "slug": "primus",
+    "artist_url": "https://www.setlist.fm/setlists/primus-6bd69e5e.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (primus)"
+  },
+  "Guns N\u2019 Roses": {
+    "mbid": "eeb1195b-f213-4ce1-b28c-8565211f8e43",
+    "stats_id": "7bd69e24",
+    "slug": "guns-n-roses",
+    "artist_url": "https://www.setlist.fm/setlists/guns-n-roses-7bd69e24.html",
+    "shows_attended": 4,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (guns-n-roses)"
+  },
+  "Bon Jovi": {
+    "mbid": "5dcdb5eb-cb72-4e6e-9e63-b7bace604965",
+    "stats_id": "33d6b851",
+    "slug": "bon-jovi",
+    "artist_url": "https://www.setlist.fm/setlists/bon-jovi-33d6b851.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (bon-jovi)"
+  },
+  "Def Leppard": {
+    "mbid": "7249b899-8db8-43e7-9e6e-22f1e736024e",
+    "stats_id": "7bd6eac4",
+    "slug": "def-leppard",
+    "artist_url": "https://www.setlist.fm/setlists/def-leppard-7bd6eac4.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (def-leppard)"
+  },
+  "Lynyrd Skynyrd": {
+    "mbid": "c544ed4d-2390-4442-a83e-1ea2883b09c8",
+    "stats_id": "1bd6ad50",
+    "slug": "lynyrd-skynyrd",
+    "artist_url": "https://www.setlist.fm/setlists/lynyrd-skynyrd-1bd6ad50.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (lynyrd-skynyrd)"
+  },
+  "Pearl Jam": {
+    "mbid": "83b9cbe7-9857-49e2-ab8e-b57b01038103",
+    "stats_id": "23d6b80b",
+    "slug": "pearl-jam",
+    "artist_url": "https://www.setlist.fm/setlists/pearl-jam-23d6b80b.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (pearl-jam)"
+  },
+  "Justin Timberlake": {
+    "mbid": "596ffa74-3d08-44ef-b113-765d43d12738",
+    "stats_id": "13d6e9b9",
+    "slug": "justin-timberlake",
+    "artist_url": "https://www.setlist.fm/setlists/justin-timberlake-13d6e9b9.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (justin-timberlake)"
+  },
+  "Elton John": {
+    "mbid": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+    "stats_id": "63d6be6f",
+    "slug": "elton-john",
+    "artist_url": "https://www.setlist.fm/setlists/elton-john-63d6be6f.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (elton-john)"
+  },
+  "KISS": {
+    "mbid": "e1f1e33e-2e4c-4d43-b91b-7064068d3283",
+    "stats_id": "6bd69ec6",
+    "slug": "kiss",
+    "artist_url": "https://www.setlist.fm/setlists/kiss-6bd69ec6.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (kiss)"
+  },
+  "Greta Van Fleet": {
+    "mbid": "0be22557-d8c7-4706-a531-625c4c570162",
+    "stats_id": "3bcc8850",
+    "slug": "greta-van-fleet",
+    "artist_url": "https://www.setlist.fm/setlists/greta-van-fleet-3bcc8850.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (greta-van-fleet)"
+  },
+  "Stone Temple Pilots": {
+    "mbid": "8c32bb01-58a3-453b-8050-8c0620edb0e5",
+    "stats_id": "bd6b9ee",
+    "slug": "stone-temple-pilots",
+    "artist_url": "https://www.setlist.fm/setlists/stone-temple-pilots-bd6b9ee.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (stone-temple-pilots)"
+  },
+  "Breaking Benjamin": {
+    "mbid": "854a1807-025b-42a8-ba8c-2a39717f1d25",
+    "stats_id": "5bd6bfc0",
+    "slug": "breaking-benjamin",
+    "artist_url": "https://www.setlist.fm/setlists/breaking-benjamin-5bd6bfc0.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (breaking-benjamin)"
+  },
+  "Ghost": {
+    "mbid": "2bcf2e02-5bc3-4c76-bf76-41126cb11444",
+    "stats_id": "3bd2a4a8",
+    "slug": "ghost",
+    "artist_url": "https://www.setlist.fm/setlists/ghost-3bd2a4a8.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (ghost)"
+  },
+  "The Black Crowes": {
+    "mbid": "02ceff75-7363-493e-a78d-912dc86c7460",
+    "stats_id": "3d69da7",
+    "slug": "the-black-crowes",
+    "artist_url": "https://www.setlist.fm/setlists/the-black-crowes-3d69da7.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (the-black-crowes)"
+  },
+  "Genesis": {
+    "_error": "conflict \u2014 see overrides file"
+  },
+  "Korn": {
+    "mbid": "ac865b2e-bba8-4f5a-8756-dd40d5e39f46",
+    "stats_id": "4bd6d3fe",
+    "slug": "korn",
+    "artist_url": "https://www.setlist.fm/setlists/korn-4bd6d3fe.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (korn)"
+  },
+  "Rage Against the Machine": {
+    "mbid": "3798b104-01cb-484c-a3b0-56adc6399b80",
+    "stats_id": "bd68946",
+    "slug": "rage-against-the-machine",
+    "artist_url": "https://www.setlist.fm/setlists/rage-against-the-machine-bd68946.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (rage-against-the-machine)"
+  },
+  "Rammstein": {
+    "mbid": "b2d122f9-eadb-4930-a196-8f221eeb0c66",
+    "stats_id": "3bd43cd0",
+    "slug": "rammstein",
+    "artist_url": "https://www.setlist.fm/setlists/rammstein-3bd43cd0.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (rammstein)"
+  },
+  "Alice in Chains": {
+    "mbid": "4bd95eea-b9f6-4d70-a36c-cfea77431553",
+    "stats_id": "53d68b9d",
+    "slug": "alice-in-chains",
+    "artist_url": "https://www.setlist.fm/setlists/alice-in-chains-53d68b9d.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (alice-in-chains)"
+  },
+  "U2": {
+    "mbid": "a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432",
+    "stats_id": "23d6b80f",
+    "slug": "u2",
+    "artist_url": "https://www.setlist.fm/setlists/u2-23d6b80f.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (u2)"
+  },
+  "Polyphia": {
+    "mbid": "344bfb00-27f0-4ff2-b96b-048ed1c6a968",
+    "stats_id": "63ddc2d3",
+    "slug": "polyphia",
+    "artist_url": "https://www.setlist.fm/setlists/polyphia-63ddc2d3.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (polyphia)"
+  },
+  "Eagles": {
+    "mbid": "f46bd570-5768-462e-b84c-c7c993bbf47e",
+    "stats_id": "6bd6bede",
+    "slug": "eagles",
+    "artist_url": "https://www.setlist.fm/setlists/eagles-6bd6bede.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (eagles)"
+  },
+  "Bush": {
+    "mbid": "93ccd76c-3790-4435-a8bf-02bc26294b93",
+    "stats_id": "1bd6b9ec",
+    "slug": "bush",
+    "artist_url": "https://www.setlist.fm/setlists/bush-1bd6b9ec.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (bush)"
+  },
+  "Avenged Sevenfold": {
+    "mbid": "24e1b53c-3085-4581-8472-0b0088d2508c",
+    "stats_id": "3d6d1a3",
+    "slug": "avenged-sevenfold",
+    "artist_url": "https://www.setlist.fm/setlists/avenged-sevenfold-3d6d1a3.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (avenged-sevenfold)"
+  },
+  "A Perfect Circle, Puscifer & Primus": {
+    "mbid": "7bddf8aa-3e0b-4527-b28e-c5ea077fcb15",
+    "stats_id": "43e43b6b",
+    "slug": "a-perfect-circle-puscifer-and-primus",
+    "artist_url": "https://www.setlist.fm/setlists/a-perfect-circle-puscifer-and-primus-43e43b6b.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (a-perfect-circle-puscifer-and-primus)"
+  },
+  "Creed": {
+    "_error": "conflict \u2014 see overrides file"
+  },
+  "Deftones": {
+    "mbid": "7527f6c2-d762-4b88-b5e2-9244f1e34c46",
+    "stats_id": "1bd689cc",
+    "slug": "deftones",
+    "artist_url": "https://www.setlist.fm/setlists/deftones-1bd689cc.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (deftones)"
+  },
+  "Linkin Park": {
+    "mbid": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+    "stats_id": "bd6bdae",
+    "slug": "linkin-park",
+    "artist_url": "https://www.setlist.fm/setlists/linkin-park-bd6bdae.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (linkin-park)"
+  },
+  "Foreigner": {
+    "mbid": "160629ab-ec18-4931-8c95-02cb92d06186",
+    "stats_id": "73d6be39",
+    "slug": "foreigner",
+    "artist_url": "https://www.setlist.fm/setlists/foreigner-73d6be39.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (foreigner)"
+  },
+  "Shinedown": {
+    "mbid": "adc0f033-95c2-4e0b-87bc-c23ed3f26ce6",
+    "stats_id": "13d6b925",
+    "slug": "shinedown",
+    "artist_url": "https://www.setlist.fm/setlists/shinedown-13d6b925.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (shinedown)"
+  },
+  "Adam Sandler": {
+    "mbid": "dfc6d0b8-3d0b-4b33-9b3f-dff972e25594",
+    "stats_id": "7bd632c8",
+    "slug": "adam-sandler",
+    "artist_url": "https://www.setlist.fm/setlists/adam-sandler-7bd632c8.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (adam-sandler)"
+  },
+  "Pierce the Veil": {
+    "mbid": "8ed919fb-eaee-45a1-ba99-b3ede9ca5f1d",
+    "stats_id": "63d6f637",
+    "slug": "pierce-the-veil",
+    "artist_url": "https://www.setlist.fm/setlists/pierce-the-veil-63d6f637.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (pierce-the-veil)"
+  },
+  "The Mars Volta": {
+    "mbid": "20883363-1ea4-4d72-ad72-c0e767038f3e",
+    "stats_id": "1bd69584",
+    "slug": "the-mars-volta",
+    "artist_url": "https://www.setlist.fm/setlists/the-mars-volta-1bd69584.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (the-mars-volta)"
+  },
+  "Candlebox": {
+    "mbid": "8e9516ba-f417-47dd-a8a5-8998b94553f8",
+    "stats_id": "33d694cd",
+    "slug": "candlebox",
+    "artist_url": "https://www.setlist.fm/setlists/candlebox-33d694cd.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (candlebox)"
+  },
+  "Bad Omens": {
+    "mbid": "eecada09-acfc-472d-ae55-e9e5a43f12d8",
+    "stats_id": "53c0ab3d",
+    "slug": "bad-omens",
+    "artist_url": "https://www.setlist.fm/setlists/bad-omens-53c0ab3d.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (bad-omens)"
+  },
+  "AVTT/PTTN": {
+    "mbid": "4de0984b-26aa-4d43-9611-fd6316dd6c91",
+    "stats_id": "b9fb122",
+    "slug": "avttpttn",
+    "artist_url": "https://www.setlist.fm/setlists/avttpttn-b9fb122.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (avttpttn)"
+  },
+  "Run\u2010D.M.C.": {
+    "mbid": "5ecc3f72-20a6-47a0-8dc5-fb0b3dadeea0",
+    "stats_id": "63d68607",
+    "slug": "rundmc",
+    "artist_url": "https://www.setlist.fm/setlists/rundmc-63d68607.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (rundmc)"
+  },
+  "Ben Folds": {
+    "mbid": "51b7f46f-6c0f-46f2-9496-08c9ec2624d4",
+    "stats_id": "73d6d6e1",
+    "slug": "ben-folds",
+    "artist_url": "https://www.setlist.fm/setlists/ben-folds-73d6d6e1.html",
+    "shows_attended": 1,
+    "qualifies_for_bucket_list": false,
+    "resolution": "exact name match, slug matches existing setlist URLs (ben-folds)"
+  },
+  "Brit Floyd": {
+    "mbid": "e9e93250-b122-4d4c-b48c-4d4f67a19ba2",
+    "stats_id": "73dffaa9",
+    "slug": "brit-floyd",
+    "artist_url": "https://www.setlist.fm/setlists/brit-floyd-73dffaa9.html",
+    "shows_attended": 2,
+    "qualifies_for_bucket_list": true,
+    "resolution": "exact name match, sortName match, slug matches existing setlist URLs (brit-floyd)"
+  }
+}

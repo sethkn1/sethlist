@@ -1,0 +1,794 @@
+{
+  "artist": "Faith No More",
+  "slug": "faith-no-more",
+  "stats_id": "2bd6b0de",
+  "mbid": "b15ebd71-a252-417d-9e1c-3e6863da68f8",
+  "fetched_at": "2026-04-27T12:31:51.326872Z",
+  "songs": [
+    {
+      "name": "Epic",
+      "songid": "3d6dd2b",
+      "count": 649
+    },
+    {
+      "name": "We Care a Lot",
+      "songid": "53d7832d",
+      "count": 551
+    },
+    {
+      "name": "Easy",
+      "songid": "63d6e6f7",
+      "count": 499
+    },
+    {
+      "name": "Midlife Crisis",
+      "songid": "43d60307",
+      "count": 479
+    },
+    {
+      "name": "Surprise! You're Dead!",
+      "songid": "73d7b2d5",
+      "count": 410
+    },
+    {
+      "name": "Introduce Yourself",
+      "songid": "5bd62748",
+      "count": 407
+    },
+    {
+      "name": "Caffeine",
+      "songid": "bd685a6",
+      "count": 367
+    },
+    {
+      "name": "Be Aggressive",
+      "songid": "1bd69534",
+      "count": 309
+    },
+    {
+      "name": "Evidence",
+      "songid": "43d6df97",
+      "count": 308
+    },
+    {
+      "name": "The Gentle Art of Making Enemies",
+      "songid": "3d7a157",
+      "count": 303
+    },
+    {
+      "name": "Land of Sunshine",
+      "songid": "bd61502",
+      "count": 287
+    },
+    {
+      "name": "From Out of Nowhere",
+      "songid": "4bd6d392",
+      "count": 283
+    },
+    {
+      "name": "King for a Day",
+      "songid": "13d619d1",
+      "count": 266
+    },
+    {
+      "name": "Chinese Arithmetic",
+      "songid": "4bd68382",
+      "count": 257
+    },
+    {
+      "name": "Ashes to Ashes",
+      "songid": "4bd69f2e",
+      "count": 256
+    },
+    {
+      "name": "Just a Man",
+      "songid": "2bd61c1a",
+      "count": 247
+    },
+    {
+      "name": "The Real Thing",
+      "songid": "4bd79f2a",
+      "count": 242
+    },
+    {
+      "name": "Woodpecker From Mars",
+      "songid": "2bd7f402",
+      "count": 235
+    },
+    {
+      "name": "Last Cup of Sorrow",
+      "songid": "13d61589",
+      "count": 209
+    },
+    {
+      "name": "As the Worm Turns",
+      "songid": "4bd69f52",
+      "count": 203
+    },
+    {
+      "name": "The Crab Song",
+      "songid": "33d7a409",
+      "count": 195
+    },
+    {
+      "name": "Falling to Pieces",
+      "songid": "63d7d607",
+      "count": 191
+    },
+    {
+      "name": "Edge of the World",
+      "songid": "bd6e152",
+      "count": 184
+    },
+    {
+      "name": "Zombie Eaters",
+      "songid": "1bd7edec",
+      "count": 171
+    },
+    {
+      "name": "War Pigs",
+      "songid": "bd7811a",
+      "count": 170
+    },
+    {
+      "name": "RV",
+      "songid": "3d64d73",
+      "count": 169
+    },
+    {
+      "name": "I Started a Joke",
+      "songid": "33d7e8cd",
+      "count": 153
+    },
+    {
+      "name": "Death March",
+      "songid": "13d6f19d",
+      "count": 144
+    },
+    {
+      "name": "Digging the Grave",
+      "songid": "23d6ecb7",
+      "count": 140
+    },
+    {
+      "name": "Stripsearch",
+      "songid": "1bd7b1ec",
+      "count": 136
+    },
+    {
+      "name": "Jizzlobber",
+      "songid": "63d622b7",
+      "count": 134
+    },
+    {
+      "name": "Get Out",
+      "songid": "43d6cf0f",
+      "count": 133
+    },
+    {
+      "name": "Underwater Love",
+      "songid": "bd7899a",
+      "count": 131
+    },
+    {
+      "name": "Sweet Dreams",
+      "songid": "1bf77150",
+      "count": 124
+    },
+    {
+      "name": "Ricochet",
+      "songid": "5bd657e8",
+      "count": 108
+    },
+    {
+      "name": "A Small Victory",
+      "songid": "3bd6a8ec",
+      "count": 90
+    },
+    {
+      "name": "Collision",
+      "songid": "53d6ff7d",
+      "count": 90
+    },
+    {
+      "name": "What a Day",
+      "songid": "bd7fdb6",
+      "count": 90
+    },
+    {
+      "name": "Naked in Front of the Computer",
+      "songid": "73d67ad9",
+      "count": 88
+    },
+    {
+      "name": "Cuckoo for Caca",
+      "songid": "63d6fad3",
+      "count": 84
+    },
+    {
+      "name": "Let's Lynch the Landlord",
+      "songid": "4bd72be2",
+      "count": 84
+    },
+    {
+      "name": "Midnight Cowboy",
+      "songid": "2bd73c0a",
+      "count": 79
+    },
+    {
+      "name": "Pristina",
+      "songid": "3bd65cf0",
+      "count": 77
+    },
+    {
+      "name": "This Guy's in Love With You",
+      "songid": "5bdce7a0",
+      "count": 76
+    },
+    {
+      "name": "Everything's Ruined",
+      "songid": "13d5e929",
+      "count": 72
+    },
+    {
+      "name": "Superhero",
+      "songid": "13c5f59d",
+      "count": 72
+    },
+    {
+      "name": "Motherfucker",
+      "songid": "53c587f9",
+      "count": 66
+    },
+    {
+      "name": "Mark Bowen",
+      "songid": "43d6075f",
+      "count": 65
+    },
+    {
+      "name": "Home Sick Home",
+      "songid": "33d638bd",
+      "count": 59
+    },
+    {
+      "name": "Crack Hitler",
+      "songid": "3bd6f8d0",
+      "count": 58
+    },
+    {
+      "name": "Why Do You Bother",
+      "songid": "73d7d605",
+      "count": 56
+    },
+    {
+      "name": "Caralho Voador",
+      "songid": "73d68665",
+      "count": 53
+    },
+    {
+      "name": "Reunited",
+      "songid": "23d7ecc3",
+      "count": 52
+    },
+    {
+      "name": "Matador",
+      "songid": "5bddef40",
+      "count": 51
+    },
+    {
+      "name": "Spirit",
+      "songid": "4bd7bb92",
+      "count": 49
+    },
+    {
+      "name": "Kindergarten",
+      "songid": "bd619ea",
+      "count": 47
+    },
+    {
+      "name": "Separation Anxiety",
+      "songid": "53c0e7e1",
+      "count": 47
+    },
+    {
+      "name": "The Morning After",
+      "songid": "63d7a287",
+      "count": 47
+    },
+    {
+      "name": "Take This Bottle",
+      "songid": "4bd7af96",
+      "count": 43
+    },
+    {
+      "name": "Black Friday",
+      "songid": "53c0db81",
+      "count": 37
+    },
+    {
+      "name": "Highway Star",
+      "songid": "7bd63e9c",
+      "count": 35
+    },
+    {
+      "name": "Ugly in the Morning",
+      "songid": "73d346d1",
+      "count": 31
+    },
+    {
+      "name": "Got That Feeling",
+      "songid": "3d6c53b",
+      "count": 30
+    },
+    {
+      "name": "Sunny Side Up",
+      "songid": "1bc0e988",
+      "count": 28
+    },
+    {
+      "name": "R n'R",
+      "songid": "bd041ba",
+      "count": 27
+    },
+    {
+      "name": "Glory Box",
+      "songid": "33d6c84d",
+      "count": 22
+    },
+    {
+      "name": "Sol Invictus",
+      "songid": "bc0e98e",
+      "count": 22
+    },
+    {
+      "name": "Blood",
+      "songid": "73d692a5",
+      "count": 20
+    },
+    {
+      "name": "Anne's Song",
+      "songid": "53d593b9",
+      "count": 19
+    },
+    {
+      "name": "Cone of Shame",
+      "songid": "73c02a45",
+      "count": 19
+    },
+    {
+      "name": "Jim",
+      "songid": "6bd622d6",
+      "count": 18
+    },
+    {
+      "name": "Mouth to Mouth",
+      "songid": "23d73c0b",
+      "count": 18
+    },
+    {
+      "name": "The Jungle",
+      "songid": "23d7e4bf",
+      "count": 18
+    },
+    {
+      "name": "The Last to Know",
+      "songid": "53d7a3d9",
+      "count": 18
+    },
+    {
+      "name": "Faster Disco",
+      "songid": "43d6db0f",
+      "count": 17
+    },
+    {
+      "name": "This Town Ain't Big Enough for Both of Us",
+      "songid": "23d79477",
+      "count": 17
+    },
+    {
+      "name": "Ben",
+      "songid": "4bd697de",
+      "count": 15
+    },
+    {
+      "name": "Pills for Breakfast",
+      "songid": "33d7e4b9",
+      "count": 13
+    },
+    {
+      "name": "Arabian Disco",
+      "songid": "13d041b9",
+      "count": 12
+    },
+    {
+      "name": "From the Dead",
+      "songid": "3c0e98f",
+      "count": 12
+    },
+    {
+      "name": "Malpractice",
+      "songid": "3d605d7",
+      "count": 11
+    },
+    {
+      "name": "Zombie",
+      "songid": "bd7edea",
+      "count": 11
+    },
+    {
+      "name": "Carnaval in Rio",
+      "songid": "2b9280ba",
+      "count": 9
+    },
+    {
+      "name": "New Beginnings",
+      "songid": "1bd041c4",
+      "count": 9
+    },
+    {
+      "name": "Stairway to Heaven",
+      "songid": "6bd7ba8e",
+      "count": 9
+    },
+    {
+      "name": "The World Is Yours",
+      "songid": "43d79b57",
+      "count": 8
+    },
+    {
+      "name": "911 Is a Joke",
+      "songid": "bd43d62",
+      "count": 7
+    },
+    {
+      "name": "Greed",
+      "songid": "3bd7e4b8",
+      "count": 7
+    },
+    {
+      "name": "Helpless",
+      "songid": "6bd35242",
+      "count": 7
+    },
+    {
+      "name": "Pump Up the Jam",
+      "songid": "13d5e92d",
+      "count": 6
+    },
+    {
+      "name": "Ajde Jano",
+      "songid": "7bcd9acc",
+      "count": 5
+    },
+    {
+      "name": "Fever",
+      "songid": "3bf344c0",
+      "count": 5
+    },
+    {
+      "name": "Main Title (From The Motion Picture \"Scarface\")",
+      "songid": "43978bcf",
+      "count": 5
+    },
+    {
+      "name": "Don't Dream It's Over",
+      "songid": "1bd6e994",
+      "count": 4
+    },
+    {
+      "name": "Paths of Glory",
+      "songid": "5bd66760",
+      "count": 4
+    },
+    {
+      "name": "Rise of the Fall",
+      "songid": "bc1996e",
+      "count": 4
+    },
+    {
+      "name": "Twin Peaks Theme",
+      "songid": "73d1ba3d",
+      "count": 4
+    },
+    {
+      "name": "Jump",
+      "songid": "bd61da2",
+      "count": 3
+    },
+    {
+      "name": "Life's a Gas",
+      "songid": "bd041b2",
+      "count": 3
+    },
+    {
+      "name": "Paranoid",
+      "songid": "3bd66444",
+      "count": 3
+    },
+    {
+      "name": "Smaller and Smaller",
+      "songid": "33d4c03d",
+      "count": 3
+    },
+    {
+      "name": "The Grade",
+      "songid": "1bd04194",
+      "count": 3
+    },
+    {
+      "name": "(Girl) I'm Gonna Miss You",
+      "songid": "5bf31764",
+      "count": 2
+    },
+    {
+      "name": "Back for Good",
+      "songid": "2bd69836",
+      "count": 2
+    },
+    {
+      "name": "I Believe I Can Fly",
+      "songid": "3d7cdeb",
+      "count": 2
+    },
+    {
+      "name": "I Want to Fuck Myself",
+      "songid": "bfb3dee",
+      "count": 2
+    },
+    {
+      "name": "Kiss and Say Goodbye",
+      "songid": "53d34f11",
+      "count": 2
+    },
+    {
+      "name": "Luka",
+      "songid": "2bd71416",
+      "count": 2
+    },
+    {
+      "name": "Paradise",
+      "songid": "1bd41574",
+      "count": 2
+    },
+    {
+      "name": "Strawberry Letter 23",
+      "songid": "43dbabb3",
+      "count": 2
+    },
+    {
+      "name": "We Will Rock You",
+      "songid": "53d78381",
+      "count": 2
+    },
+    {
+      "name": "With or Without You",
+      "songid": "bd7f512",
+      "count": 2
+    },
+    {
+      "name": "A Little Tale of Abuse",
+      "songid": "4beeeb1e",
+      "count": 1
+    },
+    {
+      "name": "Absolute Zero",
+      "songid": "13df99d5",
+      "count": 1
+    },
+    {
+      "name": "Ain't Talkin' 'bout Dub",
+      "songid": "6bdf8ede",
+      "count": 1
+    },
+    {
+      "name": "All I Wanna Do",
+      "songid": "4bd6a75e",
+      "count": 1
+    },
+    {
+      "name": "Bad",
+      "songid": "3bd6988c",
+      "count": 1
+    },
+    {
+      "name": "Banjo Man",
+      "songid": "73e65a59",
+      "count": 1
+    },
+    {
+      "name": "Bass Solo",
+      "songid": "7beb1224",
+      "count": 1
+    },
+    {
+      "name": "Black Night",
+      "songid": "43d69343",
+      "count": 1
+    },
+    {
+      "name": "Bobby Brown",
+      "songid": "6bd2f21a",
+      "count": 1
+    },
+    {
+      "name": "Bring Me Edelweiss",
+      "songid": "3390cce5",
+      "count": 1
+    },
+    {
+      "name": "Bust a Move",
+      "songid": "43df87a3",
+      "count": 1
+    },
+    {
+      "name": "Don't Let the Sun Go Down on Me",
+      "songid": "33d6e811",
+      "count": 1
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "5bdce7ac",
+      "count": 1
+    },
+    {
+      "name": "Fat",
+      "songid": "53d6db01",
+      "count": 1
+    },
+    {
+      "name": "Free Your Mind",
+      "songid": "3d73d0f",
+      "count": 1
+    },
+    {
+      "name": "Ha Ha Ha",
+      "songid": "5bdc9b10",
+      "count": 1
+    },
+    {
+      "name": "Here Comes the Hotstepper",
+      "songid": "63dfb6df",
+      "count": 1
+    },
+    {
+      "name": "Here\u2019s to Good Friends",
+      "songid": "43960b4f",
+      "count": 1
+    },
+    {
+      "name": "Ice Ice Baby",
+      "songid": "4bd62f56",
+      "count": 1
+    },
+    {
+      "name": "If You Don't Know Me by Now",
+      "songid": "33f124ad",
+      "count": 1
+    },
+    {
+      "name": "Iron Man",
+      "songid": "5bd627c0",
+      "count": 1
+    },
+    {
+      "name": "Jingle Bells",
+      "songid": "6bdc9206",
+      "count": 1
+    },
+    {
+      "name": "Live Forever",
+      "songid": "13d60d39",
+      "count": 1
+    },
+    {
+      "name": "Mini Mini Mini / Et moi, et moi, et moi",
+      "songid": "63e78e4f",
+      "count": 1
+    },
+    {
+      "name": "My Generation",
+      "songid": "3bd678f8",
+      "count": 1
+    },
+    {
+      "name": "Need You Tonight",
+      "songid": "1bd67504",
+      "count": 1
+    },
+    {
+      "name": "Poop's Principles",
+      "songid": "13d07dd1",
+      "count": 1
+    },
+    {
+      "name": "Qu\u00e9 he sacado con quererte",
+      "songid": "1bca9174",
+      "count": 1
+    },
+    {
+      "name": "Sad Disco Guy",
+      "songid": "4be20b9a",
+      "count": 1
+    },
+    {
+      "name": "Sakura Sakura",
+      "songid": "2bcee41a",
+      "count": 1
+    },
+    {
+      "name": "Saturday Night",
+      "songid": "53d64ffd",
+      "count": 1
+    },
+    {
+      "name": "Seven Nation Army",
+      "songid": "63d64aef",
+      "count": 1
+    },
+    {
+      "name": "Sex Bomb",
+      "songid": "7bdc9200",
+      "count": 1
+    },
+    {
+      "name": "Star A.D.",
+      "songid": "3df99d7",
+      "count": 1
+    },
+    {
+      "name": "Street Tough",
+      "songid": "5bf9b74c",
+      "count": 1
+    },
+    {
+      "name": "Sunday Bloody Sunday",
+      "songid": "53d7b3d5",
+      "count": 1
+    },
+    {
+      "name": "Switch",
+      "songid": "23d76803",
+      "count": 1
+    },
+    {
+      "name": "The 500 Club",
+      "songid": "63dafa73",
+      "count": 1
+    },
+    {
+      "name": "The Final Countdown",
+      "songid": "6bd7a6fe",
+      "count": 1
+    },
+    {
+      "name": "The Perfect Crime",
+      "songid": "3d115c3",
+      "count": 1
+    },
+    {
+      "name": "The Words of Jamal",
+      "songid": "63f28697",
+      "count": 1
+    },
+    {
+      "name": "Turned Out",
+      "songid": "4bd42fde",
+      "count": 1
+    },
+    {
+      "name": "Vogue",
+      "songid": "23d7840f",
+      "count": 1
+    },
+    {
+      "name": "Walk This Way",
+      "songid": "6bd7861a",
+      "count": 1
+    },
+    {
+      "name": "We Got the Beat",
+      "songid": "5bd783f8",
+      "count": 1
+    }
+  ]
+}

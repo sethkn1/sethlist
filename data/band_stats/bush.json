@@ -1,0 +1,659 @@
+{
+  "artist": "Bush",
+  "slug": "bush",
+  "stats_id": "1bd6b9ec",
+  "mbid": "93ccd76c-3790-4435-a8bf-02bc26294b93",
+  "fetched_at": "2026-04-27T12:32:25.999321Z",
+  "songs": [
+    {
+      "name": "Everything Zen",
+      "songid": "5bd6dfb0",
+      "count": 1043
+    },
+    {
+      "name": "Machinehead",
+      "songid": "7bd60a3c",
+      "count": 1038
+    },
+    {
+      "name": "Comedown",
+      "songid": "6bd6fe72",
+      "count": 1012
+    },
+    {
+      "name": "Glycerine",
+      "songid": "3bd6c824",
+      "count": 987
+    },
+    {
+      "name": "Little Things",
+      "songid": "1bd60d6c",
+      "count": 877
+    },
+    {
+      "name": "Swallowed",
+      "songid": "bd7ad76",
+      "count": 674
+    },
+    {
+      "name": "The Chemicals Between Us",
+      "songid": "3bd7a458",
+      "count": 643
+    },
+    {
+      "name": "The Sound of Winter",
+      "songid": "4bde9f2e",
+      "count": 577
+    },
+    {
+      "name": "Greedy Fly",
+      "songid": "23d6c43f",
+      "count": 564
+    },
+    {
+      "name": "Come Together",
+      "songid": "5bd6ff90",
+      "count": 291
+    },
+    {
+      "name": "Flowers on a Grave",
+      "songid": "23f818ff",
+      "count": 270
+    },
+    {
+      "name": "The People That We Love",
+      "songid": "33d244a9",
+      "count": 248
+    },
+    {
+      "name": "More Than Machines",
+      "songid": "23e3204b",
+      "count": 247
+    },
+    {
+      "name": "Bullet Holes",
+      "songid": "63fff6c3",
+      "count": 235
+    },
+    {
+      "name": "Alien",
+      "songid": "7bd552cc",
+      "count": 181
+    },
+    {
+      "name": "Insect Kin",
+      "songid": "7bd62aac",
+      "count": 166
+    },
+    {
+      "name": "The One I Love",
+      "songid": "bd79dc2",
+      "count": 160
+    },
+    {
+      "name": "Quicksand",
+      "songid": "3bf818fc",
+      "count": 154
+    },
+    {
+      "name": "Heavy Is the Ocean",
+      "songid": "3eeddc7",
+      "count": 143
+    },
+    {
+      "name": "This Is War",
+      "songid": "1bf5cd0c",
+      "count": 141
+    },
+    {
+      "name": "The Disease of the Dancing Cats",
+      "songid": "43d7a73b",
+      "count": 134
+    },
+    {
+      "name": "The Afterlife",
+      "songid": "23de28a7",
+      "count": 133
+    },
+    {
+      "name": "Mouth",
+      "songid": "1bd3d584",
+      "count": 132
+    },
+    {
+      "name": "Letting the Cables Sleep",
+      "songid": "23d3d47b",
+      "count": 125
+    },
+    {
+      "name": "Prizefighter",
+      "songid": "23d3dc8f",
+      "count": 120
+    },
+    {
+      "name": "All My Life",
+      "songid": "53de9f2d",
+      "count": 119
+    },
+    {
+      "name": "Body",
+      "songid": "73d552c9",
+      "count": 118
+    },
+    {
+      "name": "X-Girlfriend",
+      "songid": "63d552cf",
+      "count": 112
+    },
+    {
+      "name": "Identity",
+      "songid": "13eeddc1",
+      "count": 109
+    },
+    {
+      "name": "Personal Holloway",
+      "songid": "7bd666d0",
+      "count": 107
+    },
+    {
+      "name": "Testosterone",
+      "songid": "3bd1a844",
+      "count": 107
+    },
+    {
+      "name": "Blood River",
+      "songid": "23f818f7",
+      "count": 103
+    },
+    {
+      "name": "The Kingdom",
+      "songid": "33f818fd",
+      "count": 99
+    },
+    {
+      "name": "The Gift",
+      "songid": "6bc24646",
+      "count": 97
+    },
+    {
+      "name": "The Only Way Out",
+      "songid": "43c2b76f",
+      "count": 95
+    },
+    {
+      "name": "Cold Contagious",
+      "songid": "23d6fcc3",
+      "count": 93
+    },
+    {
+      "name": "Monkey",
+      "songid": "6bd552ca",
+      "count": 93
+    },
+    {
+      "name": "Warm Machine",
+      "songid": "1bd781fc",
+      "count": 93
+    },
+    {
+      "name": "Bomb",
+      "songid": "6bd552c2",
+      "count": 90
+    },
+    {
+      "name": "All Things Must Change",
+      "songid": "bef7d4e",
+      "count": 86
+    },
+    {
+      "name": "A Tendency to Start Fires",
+      "songid": "3bdab0e0",
+      "count": 85
+    },
+    {
+      "name": "Nurse",
+      "songid": "13c9b9b5",
+      "count": 84
+    },
+    {
+      "name": "The Land of Milk and Honey",
+      "songid": "5b9e1fdc",
+      "count": 77
+    },
+    {
+      "name": "This House Is on Fire",
+      "songid": "13c3750d",
+      "count": 77
+    },
+    {
+      "name": "I Beat Loneliness",
+      "songid": "39e19bb",
+      "count": 75
+    },
+    {
+      "name": "The Heart of the Matter",
+      "songid": "bde1992",
+      "count": 73
+    },
+    {
+      "name": "History",
+      "songid": "33d1a835",
+      "count": 62
+    },
+    {
+      "name": "Swim",
+      "songid": "73d552cd",
+      "count": 61
+    },
+    {
+      "name": "Bonedriven",
+      "songid": "33d0b0d5",
+      "count": 59
+    },
+    {
+      "name": "Just Like My Other Sins",
+      "songid": "63c24647",
+      "count": 53
+    },
+    {
+      "name": "I Believe in You",
+      "songid": "33dab0e1",
+      "count": 49
+    },
+    {
+      "name": "Inflatable",
+      "songid": "63d62a03",
+      "count": 47
+    },
+    {
+      "name": "Solutions",
+      "songid": "53d7bfe9",
+      "count": 47
+    },
+    {
+      "name": "Headful of Ghosts",
+      "songid": "23d1a847",
+      "count": 46
+    },
+    {
+      "name": "Land of the Living",
+      "songid": "2bd1a872",
+      "count": 46
+    },
+    {
+      "name": "60 Ways to Forget People",
+      "songid": "2b9aa8de",
+      "count": 44
+    },
+    {
+      "name": "Mad Love",
+      "songid": "2bc8d45e",
+      "count": 44
+    },
+    {
+      "name": "Peace-S",
+      "songid": "bc9b9b6",
+      "count": 43
+    },
+    {
+      "name": "Once in a Lifetime",
+      "songid": "bd7e5ae",
+      "count": 42
+    },
+    {
+      "name": "Scars",
+      "songid": "539e0799",
+      "count": 42
+    },
+    {
+      "name": "Float",
+      "songid": "43dfff13",
+      "count": 40
+    },
+    {
+      "name": "Old",
+      "songid": "63d552c3",
+      "count": 39
+    },
+    {
+      "name": "Let Yourself Go",
+      "songid": "33f62c89",
+      "count": 38
+    },
+    {
+      "name": "Fugitive",
+      "songid": "7bd6d2c4",
+      "count": 37
+    },
+    {
+      "name": "Bodies in Motion",
+      "songid": "bc339fa",
+      "count": 34
+    },
+    {
+      "name": "Breathe (In the Air)",
+      "songid": "4bf05bfa",
+      "count": 34
+    },
+    {
+      "name": "All Night Doctors",
+      "songid": "33de2419",
+      "count": 33
+    },
+    {
+      "name": "Superman",
+      "songid": "13d3d585",
+      "count": 32
+    },
+    {
+      "name": "Broken TV",
+      "songid": "33d1a845",
+      "count": 31
+    },
+    {
+      "name": "I Am Here to Save Your Life",
+      "songid": "339fbc05",
+      "count": 31
+    },
+    {
+      "name": "Out of This World",
+      "songid": "33d1a871",
+      "count": 29
+    },
+    {
+      "name": "Bubbles",
+      "songid": "6bd552ce",
+      "count": 28
+    },
+    {
+      "name": "Hurricane",
+      "songid": "3d635bb",
+      "count": 28
+    },
+    {
+      "name": "Just What I Needed",
+      "songid": "43d5ab83",
+      "count": 27
+    },
+    {
+      "name": "Straight No Chaser",
+      "songid": "2bd1a846",
+      "count": 27
+    },
+    {
+      "name": "Loneliness Is a Killer",
+      "songid": "73d81a91",
+      "count": 25
+    },
+    {
+      "name": "Lost in You",
+      "songid": "3ca515b",
+      "count": 25
+    },
+    {
+      "name": "Reasons",
+      "songid": "53d1a799",
+      "count": 25
+    },
+    {
+      "name": "The Beat of Your Heart",
+      "songid": "1bc9b9b4",
+      "count": 23
+    },
+    {
+      "name": "Break On Through (to the Other Side)",
+      "songid": "bd31112",
+      "count": 22
+    },
+    {
+      "name": "Ghosts in the Machine",
+      "songid": "73f92ae9",
+      "count": 21
+    },
+    {
+      "name": "Nowhere to Go but Everywhere",
+      "songid": "5be8b3b8",
+      "count": 21
+    },
+    {
+      "name": "Sky Turns Day Glo",
+      "songid": "33c8d45d",
+      "count": 20
+    },
+    {
+      "name": "Spacetravel",
+      "songid": "63d1a673",
+      "count": 20
+    },
+    {
+      "name": "The Mirror of the Signs",
+      "songid": "1bde09dc",
+      "count": 20
+    },
+    {
+      "name": "1000 Years",
+      "songid": "beeddc6",
+      "count": 19
+    },
+    {
+      "name": "Baby Come Home",
+      "songid": "7bdf8a1c",
+      "count": 18
+    },
+    {
+      "name": "Pretty Vacant",
+      "songid": "2bd65c6e",
+      "count": 17
+    },
+    {
+      "name": "40 Miles From the Sun",
+      "songid": "63d6b2bb",
+      "count": 16
+    },
+    {
+      "name": "Eye of the Storm",
+      "songid": "63c32ef7",
+      "count": 16
+    },
+    {
+      "name": "Jesus Online",
+      "songid": "13d3154d",
+      "count": 16
+    },
+    {
+      "name": "Synapse",
+      "songid": "23d1a82b",
+      "count": 15
+    },
+    {
+      "name": "Broken in Paradise",
+      "songid": "73c332fd",
+      "count": 14
+    },
+    {
+      "name": "English Fire",
+      "songid": "33dab0e5",
+      "count": 14
+    },
+    {
+      "name": "Dead Meat",
+      "songid": "6bd1a672",
+      "count": 13
+    },
+    {
+      "name": "Janie Jones",
+      "songid": "43d623e7",
+      "count": 11
+    },
+    {
+      "name": "Wild Horses",
+      "songid": "53d7fbdd",
+      "count": 11
+    },
+    {
+      "name": "Be Still My Love",
+      "songid": "63df9227",
+      "count": 10
+    },
+    {
+      "name": "Distant Voices",
+      "songid": "7bd552c8",
+      "count": 10
+    },
+    {
+      "name": "Landslide",
+      "songid": "3d615f3",
+      "count": 10
+    },
+    {
+      "name": "Revolution Blues",
+      "songid": "3bd45878",
+      "count": 10
+    },
+    {
+      "name": "Human Sand",
+      "songid": "b9b7d3a",
+      "count": 9
+    },
+    {
+      "name": "Love Remains the Same",
+      "songid": "1bd609c0",
+      "count": 9
+    },
+    {
+      "name": "Stand Up",
+      "songid": "13dabd99",
+      "count": 9
+    },
+    {
+      "name": "Man on the Run",
+      "songid": "1bc31950",
+      "count": 8
+    },
+    {
+      "name": "We Found Love",
+      "songid": "73de4a61",
+      "count": 8
+    },
+    {
+      "name": "We\u2019re All the Same on the Inside",
+      "songid": "7b9b7a80",
+      "count": 8
+    },
+    {
+      "name": "My Engine Is With You",
+      "songid": "5bd1a798",
+      "count": 7
+    },
+    {
+      "name": "Surrender",
+      "songid": "13c339f9",
+      "count": 7
+    },
+    {
+      "name": "The Cross",
+      "songid": "3d2894b",
+      "count": 7
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 6
+    },
+    {
+      "name": "Love Me Till the Pain Fades",
+      "songid": "5b9b63ac",
+      "count": 6
+    },
+    {
+      "name": "All the Worlds Within You",
+      "songid": "3bc99488",
+      "count": 5
+    },
+    {
+      "name": "Altered States",
+      "songid": "73d1a671",
+      "count": 5
+    },
+    {
+      "name": "Communicator",
+      "songid": "33c554d9",
+      "count": 5
+    },
+    {
+      "name": "Hotel California",
+      "songid": "63d63a7b",
+      "count": 4
+    },
+    {
+      "name": "May Your Love Be Pure",
+      "songid": "1beeddc0",
+      "count": 4
+    },
+    {
+      "name": "Mindchanger",
+      "songid": "7bd1a670",
+      "count": 4
+    },
+    {
+      "name": "Fuckin' Up",
+      "songid": "73d6d2e5",
+      "count": 3
+    },
+    {
+      "name": "The Guns of Brixton",
+      "songid": "bd7a192",
+      "count": 3
+    },
+    {
+      "name": "Into the Mystic",
+      "songid": "6bd3365e",
+      "count": 2
+    },
+    {
+      "name": "Forever May You Run",
+      "songid": "13d6d1fd",
+      "count": 1
+    },
+    {
+      "name": "People at War",
+      "songid": "bcd65ee",
+      "count": 1
+    },
+    {
+      "name": "Red Light",
+      "songid": "2bddbcaa",
+      "count": 1
+    },
+    {
+      "name": "Shark Bite",
+      "songid": "3ef7d4f",
+      "count": 1
+    },
+    {
+      "name": "Slow Me",
+      "songid": "739e8221",
+      "count": 1
+    },
+    {
+      "name": "The \"Fuck\" Cheer",
+      "songid": "63da4afb",
+      "count": 1
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "songid": "bfea57e",
+      "count": 1
+    },
+    {
+      "name": "Time After Time",
+      "songid": "5bd797b8",
+      "count": 1
+    },
+    {
+      "name": "When the Saints Go Marching In",
+      "songid": "6bc6be72",
+      "count": 1
+    }
+  ]
+}

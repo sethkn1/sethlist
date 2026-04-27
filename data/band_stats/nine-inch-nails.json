@@ -1,0 +1,894 @@
+{
+  "artist": "Nine Inch Nails",
+  "slug": "nine-inch-nails",
+  "stats_id": "1bd6a5bc",
+  "mbid": "b7ffd2af-418f-4be2-bdd1-22f8b48613da",
+  "fetched_at": "2026-04-27T12:31:58.489465Z",
+  "songs": [
+    {
+      "name": "Head Like a Hole",
+      "songid": "53d6c3a9",
+      "count": 1027
+    },
+    {
+      "name": "Wish",
+      "songid": "73d7fa8d",
+      "count": 928
+    },
+    {
+      "name": "March of the Pigs",
+      "songid": "33d6049d",
+      "count": 887
+    },
+    {
+      "name": "Hurt",
+      "songid": "3d635a3",
+      "count": 791
+    },
+    {
+      "name": "Gave Up",
+      "songid": "3bd6cc2c",
+      "count": 761
+    },
+    {
+      "name": "Terrible Lie",
+      "songid": "23d7a8cb",
+      "count": 734
+    },
+    {
+      "name": "Closer",
+      "songid": "13d6fd91",
+      "count": 696
+    },
+    {
+      "name": "The Hand That Feeds",
+      "songid": "3bd7a07c",
+      "count": 612
+    },
+    {
+      "name": "Sin",
+      "songid": "33d64049",
+      "count": 523
+    },
+    {
+      "name": "Suck",
+      "songid": "43d73fc7",
+      "count": 483
+    },
+    {
+      "name": "Piggy",
+      "songid": "13d661ad",
+      "count": 465
+    },
+    {
+      "name": "Reptile",
+      "songid": "2bd65462",
+      "count": 464
+    },
+    {
+      "name": "Burn",
+      "songid": "53d68b8d",
+      "count": 422
+    },
+    {
+      "name": "Down in It",
+      "songid": "6bd6ea3a",
+      "count": 419
+    },
+    {
+      "name": "The Frail",
+      "songid": "6bd7a6b2",
+      "count": 410
+    },
+    {
+      "name": "Something I Can Never Have",
+      "songid": "6bd7be1e",
+      "count": 353
+    },
+    {
+      "name": "The Wretched",
+      "songid": "43d79b33",
+      "count": 340
+    },
+    {
+      "name": "Survivalism",
+      "songid": "73d7b2b9",
+      "count": 323
+    },
+    {
+      "name": "Eraser",
+      "songid": "1bd6dd00",
+      "count": 303
+    },
+    {
+      "name": "Only",
+      "songid": "13d669c5",
+      "count": 297
+    },
+    {
+      "name": "Sanctified",
+      "songid": "23d64cb3",
+      "count": 286
+    },
+    {
+      "name": "Get Down, Make Love",
+      "songid": "4bd6cf42",
+      "count": 242
+    },
+    {
+      "name": "Copy of A",
+      "songid": "7bd93648",
+      "count": 234
+    },
+    {
+      "name": "Mr. Self Destruct",
+      "songid": "73d67ea5",
+      "count": 225
+    },
+    {
+      "name": "1,000,000",
+      "songid": "23d6b88b",
+      "count": 218
+    },
+    {
+      "name": "Dead Souls",
+      "songid": "13d6f119",
+      "count": 212
+    },
+    {
+      "name": "The Day the World Went Away",
+      "songid": "33d7a4a5",
+      "count": 211
+    },
+    {
+      "name": "Somewhat Damaged",
+      "songid": "7bd7beb8",
+      "count": 209
+    },
+    {
+      "name": "The Only Time",
+      "songid": "13d79d9d",
+      "count": 182
+    },
+    {
+      "name": "La Mer",
+      "songid": "63d61afb",
+      "count": 177
+    },
+    {
+      "name": "The Big Come Down",
+      "songid": "3d7a56b",
+      "count": 174
+    },
+    {
+      "name": "The Line Begins to Blur",
+      "songid": "43d7a393",
+      "count": 154
+    },
+    {
+      "name": "Help Me I Am in Hell",
+      "songid": "23d63c37",
+      "count": 153
+    },
+    {
+      "name": "Starfuckers, Inc.",
+      "songid": "13d7b5cd",
+      "count": 153
+    },
+    {
+      "name": "Ringfinger",
+      "songid": "73d65641",
+      "count": 149
+    },
+    {
+      "name": "You Know What You Are?",
+      "songid": "23d7f0e3",
+      "count": 148
+    },
+    {
+      "name": "Happiness in Slavery",
+      "songid": "73d50ac5",
+      "count": 146
+    },
+    {
+      "name": "Even Deeper",
+      "songid": "23d6dc07",
+      "count": 142
+    },
+    {
+      "name": "The Great Destroyer",
+      "songid": "3d7a1e7",
+      "count": 142
+    },
+    {
+      "name": "Heresy",
+      "songid": "43d63f6b",
+      "count": 140
+    },
+    {
+      "name": "That's What I Get",
+      "songid": "5bd7aba4",
+      "count": 139
+    },
+    {
+      "name": "Came Back Haunted",
+      "songid": "5bd9afac",
+      "count": 131
+    },
+    {
+      "name": "I'm Afraid of Americans",
+      "songid": "13d62d0d",
+      "count": 124
+    },
+    {
+      "name": "Me, I'm Not",
+      "songid": "6bd6069a",
+      "count": 123
+    },
+    {
+      "name": "Ruiner",
+      "songid": "63d65273",
+      "count": 123
+    },
+    {
+      "name": "Find My Way",
+      "songid": "63d93643",
+      "count": 120
+    },
+    {
+      "name": "Less Than",
+      "songid": "3bc95810",
+      "count": 120
+    },
+    {
+      "name": "The Downward Spiral",
+      "songid": "4bd7a712",
+      "count": 120
+    },
+    {
+      "name": "Letting You",
+      "songid": "bd611b2",
+      "count": 119
+    },
+    {
+      "name": "The Beginning of the End",
+      "songid": "63d7aa93",
+      "count": 112
+    },
+    {
+      "name": "Discipline",
+      "songid": "43d6efeb",
+      "count": 107
+    },
+    {
+      "name": "Echoplex",
+      "songid": "7bd6e688",
+      "count": 102
+    },
+    {
+      "name": "Right Where It Belongs",
+      "songid": "63d65663",
+      "count": 101
+    },
+    {
+      "name": "The Good Soldier",
+      "songid": "bd7a102",
+      "count": 97
+    },
+    {
+      "name": "Disappointed",
+      "songid": "33d92cb1",
+      "count": 96
+    },
+    {
+      "name": "Piggy (Nothing Can Stop Me Now)",
+      "songid": "13d661a1",
+      "count": 96
+    },
+    {
+      "name": "The Perfect Drug",
+      "songid": "33d79c2d",
+      "count": 96
+    },
+    {
+      "name": "The Becoming",
+      "songid": "73d7aaad",
+      "count": 93
+    },
+    {
+      "name": "Love Is Not Enough",
+      "songid": "1bd60950",
+      "count": 91
+    },
+    {
+      "name": "No, You Don't",
+      "songid": "3bd670e8",
+      "count": 90
+    },
+    {
+      "name": "The Warning",
+      "songid": "3bd798f8",
+      "count": 84
+    },
+    {
+      "name": "Non-Entity",
+      "songid": "43d6736f",
+      "count": 83
+    },
+    {
+      "name": "Vessel",
+      "songid": "1bd7854c",
+      "count": 82
+    },
+    {
+      "name": "Into the Void",
+      "songid": "bd6258e",
+      "count": 81
+    },
+    {
+      "name": "Head Down",
+      "songid": "5bd6c3bc",
+      "count": 80
+    },
+    {
+      "name": "I Do Not Want This",
+      "songid": "6bd63676",
+      "count": 79
+    },
+    {
+      "name": "Beside You in Time",
+      "songid": "1bd3c97c",
+      "count": 77
+    },
+    {
+      "name": "The Lovers",
+      "songid": "23c9580b",
+      "count": 74
+    },
+    {
+      "name": "In This Twilight",
+      "songid": "43d62b03",
+      "count": 73
+    },
+    {
+      "name": "Home",
+      "songid": "3bd638e0",
+      "count": 68
+    },
+    {
+      "name": "The Fragile",
+      "songid": "63d7a6b3",
+      "count": 63
+    },
+    {
+      "name": "Last",
+      "songid": "3d615ab",
+      "count": 62
+    },
+    {
+      "name": "The Great Below",
+      "songid": "13d7a1f5",
+      "count": 60
+    },
+    {
+      "name": "31 Ghosts IV",
+      "songid": "7bd6b27c",
+      "count": 59
+    },
+    {
+      "name": "Physical (You're So)",
+      "songid": "63df1e37",
+      "count": 58
+    },
+    {
+      "name": "The Way Out Is Through",
+      "songid": "33d798dd",
+      "count": 58
+    },
+    {
+      "name": "19 Ghosts III",
+      "songid": "7bd6b6a0",
+      "count": 57
+    },
+    {
+      "name": "The Greater Good",
+      "songid": "3d7a1c7",
+      "count": 56
+    },
+    {
+      "name": "God Break Down the Door",
+      "songid": "23f220bf",
+      "count": 54
+    },
+    {
+      "name": "Shit Mirror",
+      "songid": "4bf20316",
+      "count": 52
+    },
+    {
+      "name": "All Time Low",
+      "songid": "63c6a2cb",
+      "count": 51
+    },
+    {
+      "name": "With Teeth",
+      "songid": "13d7f515",
+      "count": 49
+    },
+    {
+      "name": "Every Day Is Exactly the Same",
+      "songid": "13d3c97d",
+      "count": 48
+    },
+    {
+      "name": "As Alive as You Need Me to Be",
+      "songid": "39fa1eb",
+      "count": 47
+    },
+    {
+      "name": "Ahead of Ourselves",
+      "songid": "53f21b85",
+      "count": 46
+    },
+    {
+      "name": "Metal",
+      "songid": "2bd600de",
+      "count": 46
+    },
+    {
+      "name": "Now I'm Nothing",
+      "songid": "7bd672d0",
+      "count": 45
+    },
+    {
+      "name": "Complication",
+      "songid": "7bd6fed8",
+      "count": 44
+    },
+    {
+      "name": "Intro",
+      "songid": "4be6cfce",
+      "count": 44
+    },
+    {
+      "name": "The Mark Has Been Made",
+      "songid": "63d7a2fb",
+      "count": 44
+    },
+    {
+      "name": "A Warm Place",
+      "songid": "6bd4b27e",
+      "count": 42
+    },
+    {
+      "name": "God Given",
+      "songid": "3bd6c88c",
+      "count": 42
+    },
+    {
+      "name": "Big Man With a Gun",
+      "songid": "7bd50ac4",
+      "count": 41
+    },
+    {
+      "name": "The Collector",
+      "songid": "2bd7a42a",
+      "count": 37
+    },
+    {
+      "name": "HYPERPOWER!",
+      "songid": "23d63473",
+      "count": 36
+    },
+    {
+      "name": "Black Noise",
+      "songid": "63c69687",
+      "count": 34
+    },
+    {
+      "name": "While I'm Still Here",
+      "songid": "5bc69b30",
+      "count": 34
+    },
+    {
+      "name": "Gone, Still",
+      "songid": "73d6ca55",
+      "count": 32
+    },
+    {
+      "name": "Running",
+      "songid": "6bc69682",
+      "count": 31
+    },
+    {
+      "name": "5 Ghosts I",
+      "songid": "63d6b287",
+      "count": 29
+    },
+    {
+      "name": "Parasite",
+      "songid": "6bda6696",
+      "count": 27
+    },
+    {
+      "name": "Branches/Bones",
+      "songid": "43c95bfb",
+      "count": 26
+    },
+    {
+      "name": "Deep",
+      "songid": "23d6f00b",
+      "count": 26
+    },
+    {
+      "name": "Burning Bright (Field on Fire)",
+      "songid": "2bc9580e",
+      "count": 25
+    },
+    {
+      "name": "This Isn't the Place",
+      "songid": "6bf362ae",
+      "count": 23
+    },
+    {
+      "name": "Just Like You Imagined",
+      "songid": "2bd61cce",
+      "count": 22
+    },
+    {
+      "name": "All the Love in the World",
+      "songid": "73c61a49",
+      "count": 21
+    },
+    {
+      "name": "Various Methods of Escape",
+      "songid": "6bc6a2ca",
+      "count": 20
+    },
+    {
+      "name": "Getting Smaller",
+      "songid": "43d6cf83",
+      "count": 19
+    },
+    {
+      "name": "21 Ghosts III",
+      "songid": "33d6b031",
+      "count": 17
+    },
+    {
+      "name": "Closer to God",
+      "songid": "6bdf5e72",
+      "count": 17
+    },
+    {
+      "name": "17 Ghosts II",
+      "songid": "73d6b67d",
+      "count": 16
+    },
+    {
+      "name": "Hand Covers Bruise",
+      "songid": "1bc77948",
+      "count": 16
+    },
+    {
+      "name": "Over and Out",
+      "songid": "63f362b7",
+      "count": 16
+    },
+    {
+      "name": "Please",
+      "songid": "43d66357",
+      "count": 15
+    },
+    {
+      "name": "Satellite",
+      "songid": "7bc6a2d4",
+      "count": 15
+    },
+    {
+      "name": "And All That Could Have Been",
+      "songid": "43d6a37b",
+      "count": 14
+    },
+    {
+      "name": "I Can't Give Everything Away",
+      "songid": "73cc9269",
+      "count": 14
+    },
+    {
+      "name": "(You Made It Feel Like) Home",
+      "songid": "7b942e08",
+      "count": 13
+    },
+    {
+      "name": "25 Ghosts III",
+      "songid": "3bd6b080",
+      "count": 13
+    },
+    {
+      "name": "1 Ghosts I",
+      "songid": "3bd6b8a8",
+      "count": 12
+    },
+    {
+      "name": "In Two",
+      "songid": "7bc69680",
+      "count": 12
+    },
+    {
+      "name": "She's Gone Away",
+      "songid": "7bf6bee4",
+      "count": 12
+    },
+    {
+      "name": "The Background World",
+      "songid": "13f63dfd",
+      "count": 12
+    },
+    {
+      "name": "28 Ghosts IV",
+      "songid": "53d6b34d",
+      "count": 11
+    },
+    {
+      "name": "Capital G",
+      "songid": "43d687af",
+      "count": 10
+    },
+    {
+      "name": "Lights in the Sky",
+      "songid": "4bd61306",
+      "count": 9
+    },
+    {
+      "name": "Meet Your Master",
+      "songid": "13d601fd",
+      "count": 9
+    },
+    {
+      "name": "Banged and Blown Through",
+      "songid": "6bd69a52",
+      "count": 8
+    },
+    {
+      "name": "Final Solution",
+      "songid": "1bd6d5f4",
+      "count": 8
+    },
+    {
+      "name": "14 Ghosts II",
+      "songid": "2bd6b402",
+      "count": 7
+    },
+    {
+      "name": "6 Ghosts I",
+      "songid": "3d6add7",
+      "count": 7
+    },
+    {
+      "name": "Maybe Just Once",
+      "songid": "63d60623",
+      "count": 7
+    },
+    {
+      "name": "Subterraneans",
+      "songid": "33d7b049",
+      "count": 7
+    },
+    {
+      "name": "What If We Could?",
+      "songid": "33d92cad",
+      "count": 7
+    },
+    {
+      "name": "Digital",
+      "songid": "3bd6ecb4",
+      "count": 6
+    },
+    {
+      "name": "Fashion",
+      "songid": "4bd6db22",
+      "count": 6
+    },
+    {
+      "name": "I Would for You",
+      "songid": "73c69681",
+      "count": 6
+    },
+    {
+      "name": "Ice Age",
+      "songid": "7bda6688",
+      "count": 6
+    },
+    {
+      "name": "Kinda I Want To",
+      "songid": "bd619f6",
+      "count": 6
+    },
+    {
+      "name": "BBB",
+      "songid": "7bda6694",
+      "count": 5
+    },
+    {
+      "name": "Everything",
+      "songid": "53c69b31",
+      "count": 5
+    },
+    {
+      "name": "We're in This Together",
+      "songid": "13d49d4d",
+      "count": 5
+    },
+    {
+      "name": "A Minute to Breathe",
+      "songid": "5b9eafac",
+      "count": 4
+    },
+    {
+      "name": "Atmosphere",
+      "songid": "6bd4aa6a",
+      "count": 4
+    },
+    {
+      "name": "Dear World,",
+      "songid": "53f0b385",
+      "count": 4
+    },
+    {
+      "name": "Down in the Park",
+      "songid": "23d2ec9b",
+      "count": 4
+    },
+    {
+      "name": "Not So Pretty Now",
+      "songid": "5bd673b0",
+      "count": 4
+    },
+    {
+      "name": "Animal",
+      "songid": "2bd4941a",
+      "count": 3
+    },
+    {
+      "name": "Cars",
+      "songid": "73d686bd",
+      "count": 3
+    },
+    {
+      "name": "Corona Radiata",
+      "songid": "bd6f9b2",
+      "count": 3
+    },
+    {
+      "name": "R.S.V.P.",
+      "songid": "bd659fa",
+      "count": 3
+    },
+    {
+      "name": "Sunspots",
+      "songid": "33d740bd",
+      "count": 3
+    },
+    {
+      "name": "Tough",
+      "songid": "23d4884f",
+      "count": 3
+    },
+    {
+      "name": "Wise Up! Sucker",
+      "songid": "73d7fa89",
+      "count": 3
+    },
+    {
+      "name": "32 Ghosts IV",
+      "songid": "63d6b26b",
+      "count": 2
+    },
+    {
+      "name": "8 Ghosts I",
+      "songid": "33d6acb1",
+      "count": 2
+    },
+    {
+      "name": "A Strange Kind of Love",
+      "songid": "1bd4a958",
+      "count": 2
+    },
+    {
+      "name": "African Student Movement",
+      "songid": "6bd6aa9a",
+      "count": 2
+    },
+    {
+      "name": "Beat My Guest",
+      "songid": "63dadebb",
+      "count": 2
+    },
+    {
+      "name": "I Die: You Die",
+      "songid": "3bd49804",
+      "count": 2
+    },
+    {
+      "name": "Kick in the Eye",
+      "songid": "1bd741e0",
+      "count": 2
+    },
+    {
+      "name": "List of Demands (Reparations)",
+      "songid": "63d61213",
+      "count": 2
+    },
+    {
+      "name": "On the Wing",
+      "songid": "63da668f",
+      "count": 2
+    },
+    {
+      "name": "Red Scab",
+      "songid": "63d65ab7",
+      "count": 2
+    },
+    {
+      "name": "We Take Mystery (to Bed)",
+      "songid": "33d5f411",
+      "count": 2
+    },
+    {
+      "name": "Welcome Oblivion",
+      "songid": "33d8ec19",
+      "count": 2
+    },
+    {
+      "name": "10 Ghosts II",
+      "songid": "53d6bbf5",
+      "count": 1
+    },
+    {
+      "name": "A Drowning",
+      "songid": "6bda668a",
+      "count": 1
+    },
+    {
+      "name": "Anthrax",
+      "songid": "bd7dd96",
+      "count": 1
+    },
+    {
+      "name": "Forked Reality",
+      "songid": "239cf08b",
+      "count": 1
+    },
+    {
+      "name": "Greensleeves",
+      "songid": "5bde5b88",
+      "count": 1
+    },
+    {
+      "name": "Hey Man Nice Shot",
+      "songid": "5bd63fb4",
+      "count": 1
+    },
+    {
+      "name": "ISN'T EVERYONE",
+      "songid": "23e388fb",
+      "count": 1
+    },
+    {
+      "name": "Shadow Over Me",
+      "songid": "339cf019",
+      "count": 1
+    },
+    {
+      "name": "The Beautiful People",
+      "songid": "7bd7aab4",
+      "count": 1
+    },
+    {
+      "name": "The Loop Closes",
+      "songid": "73da668d",
+      "count": 1
+    }
+  ]
+}

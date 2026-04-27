@@ -1,0 +1,364 @@
+{
+  "artist": "A Perfect Circle",
+  "slug": "a-perfect-circle",
+  "stats_id": "13d689cd",
+  "mbid": "078a9376-3c04-4280-b7d7-b20e158f345d",
+  "fetched_at": "2026-04-27T12:31:48.968486Z",
+  "songs": [
+    {
+      "name": "The Hollow",
+      "songid": "3bd7a004",
+      "count": 431
+    },
+    {
+      "name": "Rose",
+      "songid": "53d65321",
+      "count": 344
+    },
+    {
+      "name": "Magdalena",
+      "songid": "63d60ac3",
+      "count": 338
+    },
+    {
+      "name": "Thomas",
+      "songid": "23d7944f",
+      "count": 329
+    },
+    {
+      "name": "Judith",
+      "songid": "3d61de3",
+      "count": 324
+    },
+    {
+      "name": "Weak and Powerless",
+      "songid": "73d78219",
+      "count": 318
+    },
+    {
+      "name": "The Package",
+      "songid": "3bd79c64",
+      "count": 289
+    },
+    {
+      "name": "3 Libras",
+      "songid": "4bd6b30a",
+      "count": 288
+    },
+    {
+      "name": "The Outsider",
+      "songid": "3bd79c74",
+      "count": 280
+    },
+    {
+      "name": "Thinking of You",
+      "songid": "63d79ab3",
+      "count": 280
+    },
+    {
+      "name": "Orestes",
+      "songid": "23d668c7",
+      "count": 259
+    },
+    {
+      "name": "The Noose",
+      "songid": "bd79dfa",
+      "count": 253
+    },
+    {
+      "name": "Vanishing",
+      "songid": "7bd78a10",
+      "count": 200
+    },
+    {
+      "name": "Blue",
+      "songid": "1bd68de4",
+      "count": 180
+    },
+    {
+      "name": "Bre\u00f1a",
+      "songid": "13d689d5",
+      "count": 173
+    },
+    {
+      "name": "3 Libras (All Main Courses Mix)",
+      "songid": "3bd14c28",
+      "count": 170
+    },
+    {
+      "name": "Counting Bodies Like Sheep to the Rhythm of the War Drums",
+      "songid": "43d31f73",
+      "count": 166
+    },
+    {
+      "name": "Pet",
+      "songid": "7bd666b8",
+      "count": 154
+    },
+    {
+      "name": "The Nurse Who Loved Me",
+      "songid": "1bd4a1ec",
+      "count": 142
+    },
+    {
+      "name": "Gravity",
+      "songid": "3d6c587",
+      "count": 118
+    },
+    {
+      "name": "Hourglass",
+      "songid": "33c8783d",
+      "count": 110
+    },
+    {
+      "name": "Imagine",
+      "songid": "1bd629e4",
+      "count": 103
+    },
+    {
+      "name": "Sleeping Beauty",
+      "songid": "7bd6423c",
+      "count": 101
+    },
+    {
+      "name": "The Doomed",
+      "songid": "3bf7bcbc",
+      "count": 97
+    },
+    {
+      "name": "People Are People",
+      "songid": "4bd66782",
+      "count": 88
+    },
+    {
+      "name": "By and Down",
+      "songid": "3d14157",
+      "count": 86
+    },
+    {
+      "name": "(What's So Funny 'Bout) Peace, Love and Understanding",
+      "songid": "23db24e3",
+      "count": 79
+    },
+    {
+      "name": "A Stranger",
+      "songid": "3d4a1f7",
+      "count": 77
+    },
+    {
+      "name": "Disillusioned",
+      "songid": "7bf5025c",
+      "count": 70
+    },
+    {
+      "name": "TalkTalk",
+      "songid": "73f50209",
+      "count": 67
+    },
+    {
+      "name": "So Long, and Thanks for All the Fish",
+      "songid": "63f502f3",
+      "count": 66
+    },
+    {
+      "name": "The Contrarian",
+      "songid": "7bf50208",
+      "count": 66
+    },
+    {
+      "name": "Over",
+      "songid": "4bd7eb6e",
+      "count": 62
+    },
+    {
+      "name": "Diary of a Lovesong",
+      "songid": "bd6edd2",
+      "count": 59
+    },
+    {
+      "name": "Feathers",
+      "songid": "7bc812e8",
+      "count": 59
+    },
+    {
+      "name": "Renhold\u00ebr",
+      "songid": "1bd65588",
+      "count": 58
+    },
+    {
+      "name": "Eat the Elephant",
+      "songid": "3bf57c14",
+      "count": 54
+    },
+    {
+      "name": "Passive",
+      "songid": "bd26d2a",
+      "count": 50
+    },
+    {
+      "name": "Annihilation",
+      "songid": "4bd31f7e",
+      "count": 43
+    },
+    {
+      "name": "Ashes to Ashes",
+      "songid": "43d69f23",
+      "count": 43
+    },
+    {
+      "name": "Fred's Got Slacks",
+      "songid": "5bdc8fa8",
+      "count": 42
+    },
+    {
+      "name": "When the Levee Breaks",
+      "songid": "7bdeb6dc",
+      "count": 39
+    },
+    {
+      "name": "Vacant",
+      "songid": "3d3650f",
+      "count": 38
+    },
+    {
+      "name": "Delicious",
+      "songid": "7bf0d6b0",
+      "count": 33
+    },
+    {
+      "name": "Gimmie Gimmie Gimmie",
+      "songid": "53d4c3b1",
+      "count": 29
+    },
+    {
+      "name": "Lullaby",
+      "songid": "53d7eb5d",
+      "count": 28
+    },
+    {
+      "name": "The Fiddle and the Drum",
+      "songid": "4bd31f72",
+      "count": 27
+    },
+    {
+      "name": "What's Going On",
+      "songid": "3bd7fca8",
+      "count": 27
+    },
+    {
+      "name": "Dog Eat Dog",
+      "songid": "bd6e942",
+      "count": 20
+    },
+    {
+      "name": "After Hours",
+      "songid": "63d6aa83",
+      "count": 11
+    },
+    {
+      "name": "Master of Puppets",
+      "songid": "4bd607a2",
+      "count": 7
+    },
+    {
+      "name": "Looks That Kill",
+      "songid": "53d60f15",
+      "count": 6
+    },
+    {
+      "name": "Crimes",
+      "songid": "53d32381",
+      "count": 5
+    },
+    {
+      "name": "I Want It That Way",
+      "songid": "4bd633ce",
+      "count": 5
+    },
+    {
+      "name": "Freedom of Choice",
+      "songid": "5bd6d360",
+      "count": 4
+    },
+    {
+      "name": "Let's Have a War",
+      "songid": "5bd31f7c",
+      "count": 4
+    },
+    {
+      "name": "Zero",
+      "songid": "3d7ed27",
+      "count": 3
+    },
+    {
+      "name": "Champagne Supernova",
+      "songid": "33d68051",
+      "count": 2
+    },
+    {
+      "name": "Don't Stop Believin'",
+      "songid": "3bd6e8bc",
+      "count": 2
+    },
+    {
+      "name": "Barracuda",
+      "songid": "7bd69afc",
+      "count": 1
+    },
+    {
+      "name": "Heart-Shaped Box",
+      "songid": "7bd6c2e8",
+      "count": 1
+    },
+    {
+      "name": "I Promise You",
+      "songid": "33c7444d",
+      "count": 1
+    },
+    {
+      "name": "Judy is a Punk",
+      "songid": "7b9d3aa0",
+      "count": 1
+    },
+    {
+      "name": "Kindred",
+      "songid": "5be9732c",
+      "count": 1
+    },
+    {
+      "name": "Seven Nation Army",
+      "songid": "63d64aef",
+      "count": 1
+    },
+    {
+      "name": "Stars",
+      "songid": "73e24ae1",
+      "count": 1
+    },
+    {
+      "name": "Supersonic",
+      "songid": "63d7b22f",
+      "count": 1
+    },
+    {
+      "name": "The Beautiful People",
+      "songid": "7bd7aab4",
+      "count": 1
+    },
+    {
+      "name": "Today",
+      "songid": "3d7912b",
+      "count": 1
+    },
+    {
+      "name": "Welcome to the Jungle",
+      "songid": "3d7fd6b",
+      "count": 1
+    },
+    {
+      "name": "You Really Got Me",
+      "songid": "2bd7f096",
+      "count": 1
+    }
+  ]
+}

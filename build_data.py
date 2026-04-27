@@ -604,6 +604,191 @@ def enrich_bands(artists, csv_path, skip_wiki=False, verbose=False):
 
 
 # =========================================================================
+# Bucket list (songs heard vs. songs played live by each band)
+# =========================================================================
+
+def build_bucket_list(out_dir, setlists_path, mbids_path, band_stats_dir):
+    """
+    Compute the bucket-list data from existing scraped band stats and your
+    cached setlists. Writes data/bucket_list.json with both per-band detail
+    and a flat cross-band ranking of unheard songs.
+
+    Inputs (all optional — missing inputs just produce an empty result):
+      - data/setlists.json       (from prefetch_setlists.py)
+      - data/band_mbids.json     (from prefetch_band_mbids.py)
+      - data/band_stats/<slug>.json  (from prefetch_band_stats.py)
+
+    Output shape:
+      {
+        "generated_at": "2026-04-27T...",
+        "bands": {
+          "Puscifer": {
+            "slug": "puscifer", "stats_id": "3d6f5af",
+            "showsAttended": 5,
+            "totalLiveSongs": 71,
+            "heardCount": 48,
+            "coverage": 0.676,
+            "unheard": [{"name": "Dozo", "count": 111, "songid": "..."}, ...],
+            "heard":   [{"name": "Vagina Mine", "count": 224, "songid": "..."}, ...]
+          }, ...
+        },
+        "flatUnheard": [
+          {"song": "Dozo", "songid": "...", "band": "Puscifer",
+           "bandSlug": "puscifer", "playCount": 111, "showsSeen": 5}, ...
+        ]
+      }
+
+    Coverage filtering is data-driven: a song "heard" only counts toward
+    coverage if it appears on the band's stats page. This naturally drops
+    video interludes, intermissions, and other non-song setlist entries.
+    """
+    import datetime as _dt
+
+    # All inputs optional — if any are missing, we just skip silently.
+    if not os.path.exists(setlists_path):
+        print(f"  (skip bucket list: {setlists_path} not found)")
+        return None
+    if not os.path.exists(mbids_path):
+        print(f"  (skip bucket list: {mbids_path} not found — run prefetch_band_mbids.py)")
+        return None
+    if not os.path.isdir(band_stats_dir):
+        print(f"  (skip bucket list: {band_stats_dir}/ not found — run prefetch_band_stats.py)")
+        return None
+
+    with open(setlists_path) as f:
+        setlists = json.load(f)
+    with open(mbids_path) as f:
+        mbids = json.load(f)
+
+    # 1. Build "songs you heard" sets per artist (binary set, not counts —
+    #    per design: heard or didn't, no playcount weighting on your side).
+    #    Normalize for matching: lowercase + strip whitespace. Keep originals
+    #    too so we can show pretty names if we ever surface them.
+    heard_by_artist = {}  # artist -> {"heard_norm": set, "heard_originals": dict(norm->original)}
+    for k, v in setlists.items():
+        if not isinstance(v, dict): continue
+        if v.get("role") != "headliner": continue
+        if v.get("_error"): continue
+        artist = v.get("artist")
+        if not artist: continue
+        bucket = heard_by_artist.setdefault(artist, {"heard_norm": set(), "heard_originals": {}})
+        for s in v.get("sets", []) or []:
+            for song in s.get("songs", []) or []:
+                n = (song.get("name") or "").strip()
+                if not n: continue
+                norm = n.lower()
+                bucket["heard_norm"].add(norm)
+                bucket["heard_originals"].setdefault(norm, n)
+
+    # 2. Walk the band_stats directory. Each file is one band's universe.
+    bands_out = {}
+    flat_unheard = []
+    files_seen = 0
+    files_skipped_no_match = []
+
+    for fname in sorted(os.listdir(band_stats_dir)):
+        if not fname.endswith(".json"):
+            continue
+        path = os.path.join(band_stats_dir, fname)
+        with open(path) as f:
+            try:
+                stats = json.load(f)
+            except json.JSONDecodeError:
+                print(f"  (warn: {fname} is malformed; skipping)")
+                continue
+        files_seen += 1
+
+        artist = stats.get("artist")
+        if not artist:
+            continue
+
+        # Reconcile: the artist name in band_stats *should* match a key in
+        # mbids and in heard_by_artist. If not, it's a data inconsistency
+        # (rename, capitalization mismatch). Log it.
+        mbid_entry = mbids.get(artist)
+        if not mbid_entry:
+            files_skipped_no_match.append(f"{artist} (no entry in band_mbids)")
+            continue
+
+        heard_bucket = heard_by_artist.get(artist, {"heard_norm": set(), "heard_originals": {}})
+        heard_norm = heard_bucket["heard_norm"]
+        shows = mbid_entry.get("shows_attended", 0)
+
+        # 3. Diff: each song on the stats page is either heard or unheard.
+        all_songs = stats.get("songs", []) or []
+        heard = []
+        unheard = []
+        for song in all_songs:
+            song_name = song.get("name", "").strip()
+            if not song_name: continue
+            entry = {
+                "name": song_name,
+                "count": song.get("count", 0),
+                "songid": song.get("songid"),
+            }
+            if song_name.lower() in heard_norm:
+                heard.append(entry)
+            else:
+                unheard.append(entry)
+
+        total = len(all_songs)
+        coverage = (len(heard) / total) if total > 0 else 0.0
+
+        bands_out[artist] = {
+            "slug": stats.get("slug"),
+            "stats_id": stats.get("stats_id"),
+            "showsAttended": shows,
+            "totalLiveSongs": total,
+            "heardCount": len(heard),
+            "coverage": round(coverage, 4),
+            "unheard": unheard,    # already sorted desc by count from scraper
+            "heard": heard,
+        }
+
+        # 4. Add to flat list (one row per unheard song)
+        for u in unheard:
+            flat_unheard.append({
+                "song": u["name"],
+                "songid": u["songid"],
+                "band": artist,
+                "bandSlug": stats.get("slug"),
+                "playCount": u["count"],
+                "showsSeen": shows,
+            })
+
+    # Flat list is sorted by play count descending (the band's frequency).
+    # Tiebreak by band name then song name for deterministic output.
+    flat_unheard.sort(key=lambda x: (-x["playCount"], x["band"], x["song"]))
+
+    payload = {
+        "generated_at": _dt.datetime.now(_dt.timezone.utc).isoformat().replace("+00:00", "Z"),
+        "bands": bands_out,
+        "flatUnheard": flat_unheard,
+    }
+
+    out_path = f"{out_dir}/bucket_list.json"
+    with open(out_path, "w") as f:
+        json.dump(payload, f, indent=2)
+
+    # Summary
+    total_unheard = len(flat_unheard)
+    total_bands = len(bands_out)
+    if total_bands == 0:
+        print(f"✓ bucket_list.json: 0 bands processed (run prefetch scripts)")
+    else:
+        avg_cov = sum(b["coverage"] for b in bands_out.values()) / total_bands
+        print(f"✓ bucket_list.json: {total_bands} bands, "
+              f"{total_unheard} unheard songs total, "
+              f"avg coverage {avg_cov*100:.0f}%")
+    if files_skipped_no_match:
+        print(f"  ⚠ {len(files_skipped_no_match)} band_stats file(s) had no match in band_mbids:")
+        for msg in files_skipped_no_match[:5]:
+            print(f"    - {msg}")
+
+    return payload
+
+
+# =========================================================================
 # Main
 # =========================================================================
 
@@ -660,6 +845,15 @@ def build(concerts_src, posters_src, out_dir="data", skip_wiki=False, verbose=Fa
             extra = f" (+ {len(failed)-5} more)" if len(failed) > 5 else ""
             print(f"  Missed: {preview}{extra}")
             print(f"  → Edit data/band_images.csv to add image_url manually for these.")
+
+    print()
+    print("Bucket list (songs you've heard live vs. songs the band plays):")
+    build_bucket_list(
+        out_dir=out_dir,
+        setlists_path=f"{out_dir}/setlists.json",
+        mbids_path=f"{out_dir}/band_mbids.json",
+        band_stats_dir=f"{out_dir}/band_stats",
+    )
 
     print()
     print("You can edit these CSVs directly, then re-run this script:")

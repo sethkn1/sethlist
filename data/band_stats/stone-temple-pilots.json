@@ -1,0 +1,659 @@
+{
+  "artist": "Stone Temple Pilots",
+  "slug": "stone-temple-pilots",
+  "stats_id": "bd6b9ee",
+  "mbid": "8c32bb01-58a3-453b-8050-8c0620edb0e5",
+  "fetched_at": "2026-04-27T12:32:21.190931Z",
+  "songs": [
+    {
+      "name": "Sex Type Thing",
+      "songid": "73d64a8d",
+      "count": 915
+    },
+    {
+      "name": "Plush",
+      "songid": "43d663f7",
+      "count": 902
+    },
+    {
+      "name": "Vasoline",
+      "songid": "6bd78afa",
+      "count": 875
+    },
+    {
+      "name": "Interstate Love Song",
+      "songid": "3d625f7",
+      "count": 867
+    },
+    {
+      "name": "Big Empty",
+      "songid": "bd69162",
+      "count": 843
+    },
+    {
+      "name": "Dead & Bloated",
+      "songid": "7bd6f6a4",
+      "count": 808
+    },
+    {
+      "name": "Trippin' on a Hole in a Paper Heart",
+      "songid": "13d78d4d",
+      "count": 772
+    },
+    {
+      "name": "Crackerman",
+      "songid": "33d6f8c5",
+      "count": 764
+    },
+    {
+      "name": "Wicked Garden",
+      "songid": "53d7fb41",
+      "count": 750
+    },
+    {
+      "name": "Down",
+      "songid": "5bd6eb8c",
+      "count": 618
+    },
+    {
+      "name": "Big Bang Baby",
+      "songid": "63d6968b",
+      "count": 521
+    },
+    {
+      "name": "Silvergun Superman",
+      "songid": "23d6407b",
+      "count": 450
+    },
+    {
+      "name": "Creep",
+      "songid": "43d6fb1f",
+      "count": 382
+    },
+    {
+      "name": "Lounge Fly",
+      "songid": "63d60ef3",
+      "count": 328
+    },
+    {
+      "name": "Piece of Pie",
+      "songid": "4bd73f86",
+      "count": 327
+    },
+    {
+      "name": "Still Remains",
+      "songid": "3bd73480",
+      "count": 279
+    },
+    {
+      "name": "Sour Girl",
+      "songid": "23d7b8ff",
+      "count": 254
+    },
+    {
+      "name": "Sin",
+      "songid": "2bd6404a",
+      "count": 241
+    },
+    {
+      "name": "Meatplow",
+      "songid": "33d73485",
+      "count": 217
+    },
+    {
+      "name": "Unglued",
+      "songid": "43d73f87",
+      "count": 215
+    },
+    {
+      "name": "Meadow",
+      "songid": "43f723a7",
+      "count": 211
+    },
+    {
+      "name": "Roll Me Under",
+      "songid": "4bf59fd6",
+      "count": 167
+    },
+    {
+      "name": "Between the Lines",
+      "songid": "63d53ec3",
+      "count": 158
+    },
+    {
+      "name": "Hickory Dichotomy",
+      "songid": "6bd53ec6",
+      "count": 156
+    },
+    {
+      "name": "Pretty Penny",
+      "songid": "23d73487",
+      "count": 143
+    },
+    {
+      "name": "Heaven and Hot Rods",
+      "songid": "13d20d3d",
+      "count": 137
+    },
+    {
+      "name": "Dancing Days",
+      "songid": "2bd6f4c6",
+      "count": 129
+    },
+    {
+      "name": "Hollywood Bitch",
+      "songid": "73d4a265",
+      "count": 116
+    },
+    {
+      "name": "Tumble in the Rough",
+      "songid": "7bd4a260",
+      "count": 115
+    },
+    {
+      "name": "Coma",
+      "songid": "5bd6ff54",
+      "count": 107
+    },
+    {
+      "name": "Sex & Violence",
+      "songid": "53d5fb21",
+      "count": 102
+    },
+    {
+      "name": "Army Ants",
+      "songid": "53d73f81",
+      "count": 98
+    },
+    {
+      "name": "Huckleberry Crumble",
+      "songid": "6bd53ec2",
+      "count": 97
+    },
+    {
+      "name": "Lady Picture Show",
+      "songid": "3d61557",
+      "count": 97
+    },
+    {
+      "name": "Seven Caged Tigers",
+      "songid": "5bd73f80",
+      "count": 74
+    },
+    {
+      "name": "Out of Time",
+      "songid": "bd8059a",
+      "count": 64
+    },
+    {
+      "name": "Glide",
+      "songid": "33cac025",
+      "count": 62
+    },
+    {
+      "name": "Kitchenware & Candybars",
+      "songid": "73dfea41",
+      "count": 61
+    },
+    {
+      "name": "Too Cool Queenie",
+      "songid": "33d79055",
+      "count": 54
+    },
+    {
+      "name": "Pop's Love Suicide",
+      "songid": "13d419cd",
+      "count": 52
+    },
+    {
+      "name": "Pruno",
+      "songid": "53de37a5",
+      "count": 47
+    },
+    {
+      "name": "Atlanta",
+      "songid": "6bd1cefa",
+      "count": 44
+    },
+    {
+      "name": "Cinnamon",
+      "songid": "3d20523",
+      "count": 41
+    },
+    {
+      "name": "Daisy",
+      "songid": "1bd419cc",
+      "count": 41
+    },
+    {
+      "name": "Naked Sunday",
+      "songid": "13d2b1d5",
+      "count": 41
+    },
+    {
+      "name": "No Memory",
+      "songid": "6bd4d2be",
+      "count": 41
+    },
+    {
+      "name": "No Way Out",
+      "songid": "4bd5fb22",
+      "count": 36
+    },
+    {
+      "name": "Where the River Goes",
+      "songid": "3d5dd87",
+      "count": 36
+    },
+    {
+      "name": "Andy Warhol",
+      "songid": "5bd6a334",
+      "count": 35
+    },
+    {
+      "name": "Wet My Bed",
+      "songid": "1bd50d18",
+      "count": 33
+    },
+    {
+      "name": "Black Heart",
+      "songid": "33c6a8f5",
+      "count": 26
+    },
+    {
+      "name": "Days of the Week",
+      "songid": "43d5fb43",
+      "count": 24
+    },
+    {
+      "name": "Black Again",
+      "songid": "bdffdda",
+      "count": 22
+    },
+    {
+      "name": "Church on Tuesday",
+      "songid": "73fef6c5",
+      "count": 21
+    },
+    {
+      "name": "Shine On You Crazy Diamond (Parts I-V)",
+      "songid": "43d647ff",
+      "count": 19
+    },
+    {
+      "name": "Gypsy Davy",
+      "songid": "3b9e804c",
+      "count": 17
+    },
+    {
+      "name": "Bagman",
+      "songid": "63d53ebb",
+      "count": 16
+    },
+    {
+      "name": "Middle of Nowhere",
+      "songid": "63f2beb7",
+      "count": 16
+    },
+    {
+      "name": "Revolution",
+      "songid": "bd7e196",
+      "count": 15
+    },
+    {
+      "name": "Adhesive",
+      "songid": "33c080ad",
+      "count": 14
+    },
+    {
+      "name": "Regeneration",
+      "songid": "1bdffdd8",
+      "count": 14
+    },
+    {
+      "name": "Moby Dick",
+      "songid": "1bd67de4",
+      "count": 12
+    },
+    {
+      "name": "All in the Suit That You Wear",
+      "songid": "43d6a72f",
+      "count": 11
+    },
+    {
+      "name": "Six Eight",
+      "songid": "3f2b913",
+      "count": 10
+    },
+    {
+      "name": "Bi-Polar Bear",
+      "songid": "7bd0225c",
+      "count": 9
+    },
+    {
+      "name": "Day Tripper",
+      "songid": "7bd6f614",
+      "count": 9
+    },
+    {
+      "name": "Wonderful",
+      "songid": "73d426ad",
+      "count": 8
+    },
+    {
+      "name": "And So I Know",
+      "songid": "43d2b30f",
+      "count": 7
+    },
+    {
+      "name": "Redemption Song",
+      "songid": "1bd3bd54",
+      "count": 7
+    },
+    {
+      "name": "Finest Hour",
+      "songid": "1bf2b91c",
+      "count": 6
+    },
+    {
+      "name": "Ten Years Gone",
+      "songid": "33d7a811",
+      "count": 6
+    },
+    {
+      "name": "We Will Rock You",
+      "songid": "53d78381",
+      "count": 6
+    },
+    {
+      "name": "In My Time of Dying",
+      "songid": "53c61311",
+      "count": 5
+    },
+    {
+      "name": "N.W.O.",
+      "songid": "73d67a35",
+      "count": 5
+    },
+    {
+      "name": "Roadhouse Blues",
+      "songid": "bd6517a",
+      "count": 5
+    },
+    {
+      "name": "Dare If You Dare",
+      "songid": "bd20522",
+      "count": 4
+    },
+    {
+      "name": "Guitar Solo",
+      "songid": "6bedda5a",
+      "count": 4
+    },
+    {
+      "name": "Christmas Time Is Here",
+      "songid": "5bd9dbe4",
+      "count": 3
+    },
+    {
+      "name": "Five to One",
+      "songid": "6bd7eafa",
+      "count": 3
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 3
+    },
+    {
+      "name": "Long Way Home",
+      "songid": "33c6a875",
+      "count": 3
+    },
+    {
+      "name": "No Memory / Sin",
+      "songid": "33e21c1d",
+      "count": 3
+    },
+    {
+      "name": "Smoke on the Water",
+      "songid": "13d7bd01",
+      "count": 3
+    },
+    {
+      "name": "The Jean Genie",
+      "songid": "33d7a081",
+      "count": 3
+    },
+    {
+      "name": "Get It On",
+      "songid": "43d1f797",
+      "count": 2
+    },
+    {
+      "name": "Guitar and Bass Solo",
+      "songid": "63edda5b",
+      "count": 2
+    },
+    {
+      "name": "Heartbreaker",
+      "songid": "7bd6c2c8",
+      "count": 2
+    },
+    {
+      "name": "Hey Man Nice Shot",
+      "songid": "5bd63fb4",
+      "count": 2
+    },
+    {
+      "name": "I Got You",
+      "songid": "73d1cee1",
+      "count": 2
+    },
+    {
+      "name": "Jumpin' Jack Flash",
+      "songid": "bd61d86",
+      "count": 2
+    },
+    {
+      "name": "Kick Out the Jams",
+      "songid": "73d61edd",
+      "count": 2
+    },
+    {
+      "name": "No Quarter",
+      "songid": "23d67073",
+      "count": 2
+    },
+    {
+      "name": "Nobody's Fault but Mine",
+      "songid": "3bd05428",
+      "count": 2
+    },
+    {
+      "name": "Over the Hills and Far Away",
+      "songid": "63d66a37",
+      "count": 2
+    },
+    {
+      "name": "Surrender",
+      "songid": "7bd7b2c8",
+      "count": 2
+    },
+    {
+      "name": "The Ocean",
+      "songid": "13d79de1",
+      "count": 2
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "songid": "bfea57e",
+      "count": 2
+    },
+    {
+      "name": "Ticket to Ride",
+      "songid": "3bd4bc44",
+      "count": 2
+    },
+    {
+      "name": "All the Young Dudes",
+      "songid": "6bd742aa",
+      "count": 1
+    },
+    {
+      "name": "Badge",
+      "songid": "53d69b0d",
+      "count": 1
+    },
+    {
+      "name": "Bodies",
+      "songid": "4bd7efaa",
+      "count": 1
+    },
+    {
+      "name": "County Fair",
+      "songid": "3bc3bc20",
+      "count": 1
+    },
+    {
+      "name": "Dance to the Music",
+      "songid": "33d07895",
+      "count": 1
+    },
+    {
+      "name": "Dean/Robert DeLeo solo",
+      "songid": "639a8e4f",
+      "count": 1
+    },
+    {
+      "name": "Detroit Rock City",
+      "songid": "7bd6f2c4",
+      "count": 1
+    },
+    {
+      "name": "Fly Me to the Moon",
+      "songid": "73dd5249",
+      "count": 1
+    },
+    {
+      "name": "For the Love of Money",
+      "songid": "5bd7ef38",
+      "count": 1
+    },
+    {
+      "name": "Garota de Ipanema",
+      "songid": "1bc7a9f4",
+      "count": 1
+    },
+    {
+      "name": "Get Up Offa That Thing",
+      "songid": "4bd4cb5a",
+      "count": 1
+    },
+    {
+      "name": "Got Me Wrong",
+      "songid": "3d6c543",
+      "count": 1
+    },
+    {
+      "name": "How Many More Times",
+      "songid": "63d63abf",
+      "count": 1
+    },
+    {
+      "name": "Improv",
+      "songid": "7bd2223c",
+      "count": 1
+    },
+    {
+      "name": "Jam",
+      "songid": "1bd2b1d4",
+      "count": 1
+    },
+    {
+      "name": "Lick and a Promise",
+      "songid": "2bddace6",
+      "count": 1
+    },
+    {
+      "name": "London Homesick Blues",
+      "songid": "73c00a51",
+      "count": 1
+    },
+    {
+      "name": "My Sharona",
+      "songid": "53d67bf5",
+      "count": 1
+    },
+    {
+      "name": "Only Dying",
+      "songid": "2b9c585e",
+      "count": 1
+    },
+    {
+      "name": "Only Happy When It Rains",
+      "songid": "1bd669b4",
+      "count": 1
+    },
+    {
+      "name": "People Get Ready",
+      "songid": "7bd66678",
+      "count": 1
+    },
+    {
+      "name": "Press Play",
+      "songid": "bd419ce",
+      "count": 1
+    },
+    {
+      "name": "Red Wings",
+      "songid": "13d83df9",
+      "count": 1
+    },
+    {
+      "name": "Sex Type Thing (Swing Version)",
+      "songid": "1bd2b1cc",
+      "count": 1
+    },
+    {
+      "name": "Sweet Emotion",
+      "songid": "bd7ad0e",
+      "count": 1
+    },
+    {
+      "name": "The Girl From Ipanema",
+      "songid": "3bdaec58",
+      "count": 1
+    },
+    {
+      "name": "The Pink Panther Theme",
+      "songid": "2bc5bcd6",
+      "count": 1
+    },
+    {
+      "name": "The Train Kept A-Rollin'",
+      "songid": "2bc53c9a",
+      "count": 1
+    },
+    {
+      "name": "Toys in the Attic",
+      "songid": "4bd7930a",
+      "count": 1
+    },
+    {
+      "name": "Walk on the Wild Side",
+      "songid": "63d78627",
+      "count": 1
+    },
+    {
+      "name": "We Are the Champions",
+      "songid": "4bd78372",
+      "count": 1
+    },
+    {
+      "name": "You Can't Drive Me Away",
+      "songid": "33c41c41",
+      "count": 1
+    }
+  ]
+}

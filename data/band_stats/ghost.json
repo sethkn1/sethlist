@@ -1,0 +1,314 @@
+{
+  "artist": "Ghost",
+  "slug": "ghost",
+  "stats_id": "3bd2a4a8",
+  "mbid": "2bcf2e02-5bc3-4c76-bf76-41126cb11444",
+  "fetched_at": "2026-04-27T12:32:23.515713Z",
+  "songs": [
+    {
+      "name": "Ritual",
+      "songid": "63d32e4b",
+      "count": 886
+    },
+    {
+      "name": "Year Zero",
+      "songid": "43d8ab6b",
+      "count": 818
+    },
+    {
+      "name": "Cirice",
+      "songid": "13c05105",
+      "count": 644
+    },
+    {
+      "name": "Con Clavi Con Dio",
+      "songid": "63d006d3",
+      "count": 637
+    },
+    {
+      "name": "Mummy Dust",
+      "songid": "bcef5c6",
+      "count": 614
+    },
+    {
+      "name": "Monstrance Clock",
+      "songid": "5bd8aba8",
+      "count": 577
+    },
+    {
+      "name": "From the Pinnacle to the Pit",
+      "songid": "3c051ff",
+      "count": 535
+    },
+    {
+      "name": "He Is",
+      "songid": "bcef5f2",
+      "count": 504
+    },
+    {
+      "name": "Square Hammer",
+      "songid": "33cad471",
+      "count": 483
+    },
+    {
+      "name": "Absolution",
+      "songid": "1bc05104",
+      "count": 470
+    },
+    {
+      "name": "Devil Church",
+      "songid": "1bcef5fc",
+      "count": 470
+    },
+    {
+      "name": "Per Aspera ad Inferi",
+      "songid": "43d8abaf",
+      "count": 466
+    },
+    {
+      "name": "Stand by Him",
+      "songid": "6bd006d2",
+      "count": 380
+    },
+    {
+      "name": "Rats",
+      "songid": "4bf51f6e",
+      "count": 372
+    },
+    {
+      "name": "Dance Macabre",
+      "songid": "5bf2b314",
+      "count": 369
+    },
+    {
+      "name": "Prime Mover",
+      "songid": "7bd32e54",
+      "count": 356
+    },
+    {
+      "name": "Ghuleh/Zombie Queen",
+      "songid": "13d805d5",
+      "count": 344
+    },
+    {
+      "name": "Faith",
+      "songid": "4bf2b31a",
+      "count": 308
+    },
+    {
+      "name": "Spirit",
+      "songid": "13cef5fd",
+      "count": 307
+    },
+    {
+      "name": "Satan Prayer",
+      "songid": "13d011b9",
+      "count": 300
+    },
+    {
+      "name": "If You Have Ghosts",
+      "songid": "33fb7015",
+      "count": 290
+    },
+    {
+      "name": "Body and Blood",
+      "songid": "4bd8c30e",
+      "count": 264
+    },
+    {
+      "name": "Miasma",
+      "songid": "5bf2af34",
+      "count": 262
+    },
+    {
+      "name": "Mary on a Cross",
+      "songid": "1bfc5d30",
+      "count": 250
+    },
+    {
+      "name": "Elizabeth",
+      "songid": "6bd32e56",
+      "count": 244
+    },
+    {
+      "name": "Death Knell",
+      "songid": "73d32e55",
+      "count": 233
+    },
+    {
+      "name": "Kiss the Go-Goat",
+      "songid": "3fc5d37",
+      "count": 204
+    },
+    {
+      "name": "Jigolo Har Megiddo",
+      "songid": "33c6f4a1",
+      "count": 179
+    },
+    {
+      "name": "Infestissumam",
+      "songid": "5bd8ab74",
+      "count": 169
+    },
+    {
+      "name": "Ashes",
+      "songid": "53f2b31d",
+      "count": 168
+    },
+    {
+      "name": "Genesis",
+      "songid": "2bd1b456",
+      "count": 166
+    },
+    {
+      "name": "Secular Haze",
+      "songid": "33dbfc61",
+      "count": 156
+    },
+    {
+      "name": "Majesty",
+      "songid": "bc05106",
+      "count": 134
+    },
+    {
+      "name": "Call Me Little Sunshine",
+      "songid": "33e51c41",
+      "count": 131
+    },
+    {
+      "name": "Kaisarion",
+      "songid": "1be585a8",
+      "count": 130
+    },
+    {
+      "name": "Spillways",
+      "songid": "3be51c40",
+      "count": 104
+    },
+    {
+      "name": "Here Comes the Sun",
+      "songid": "3bd71860",
+      "count": 102
+    },
+    {
+      "name": "Helvetesf\u00f6nster",
+      "songid": "bfc5d36",
+      "count": 101
+    },
+    {
+      "name": "Hunter's Moon",
+      "songid": "1be4e1c4",
+      "count": 96
+    },
+    {
+      "name": "Watcher in the Sky",
+      "songid": "5be2bb20",
+      "count": 80
+    },
+    {
+      "name": "Lachryma",
+      "songid": "4b9077ce",
+      "count": 72
+    },
+    {
+      "name": "Darkness at the Heart of My Love",
+      "songid": "53ee670d",
+      "count": 70
+    },
+    {
+      "name": "Peacefield",
+      "songid": "439077cf",
+      "count": 70
+    },
+    {
+      "name": "Satanized",
+      "songid": "23902867",
+      "count": 70
+    },
+    {
+      "name": "The Future Is a Foreign Land",
+      "songid": "73947ac1",
+      "count": 70
+    },
+    {
+      "name": "Umbra",
+      "songid": "539077cd",
+      "count": 70
+    },
+    {
+      "name": "Pro Memoria",
+      "songid": "7bf2ae48",
+      "count": 67
+    },
+    {
+      "name": "Respite on the Spitalfields",
+      "songid": "5be2bb24",
+      "count": 54
+    },
+    {
+      "name": "Life Eternal",
+      "songid": "4bf2af2a",
+      "count": 50
+    },
+    {
+      "name": "Enter Sandman",
+      "songid": "bd6dd5a",
+      "count": 49
+    },
+    {
+      "name": "Witch Image",
+      "songid": "23f03c4b",
+      "count": 48
+    },
+    {
+      "name": "Idolatrine",
+      "songid": "2bf03c56",
+      "count": 37
+    },
+    {
+      "name": "Depth of Satan's Eyes",
+      "songid": "73d8e2f5",
+      "count": 33
+    },
+    {
+      "name": "Deus in Absentia",
+      "songid": "1bce1580",
+      "count": 21
+    },
+    {
+      "name": "Jesus He Knows Me",
+      "songid": "3d779db",
+      "count": 12
+    },
+    {
+      "name": "Griftwood",
+      "songid": "43e2bb27",
+      "count": 8
+    },
+    {
+      "name": "Twenties",
+      "songid": "4be2bb26",
+      "count": 2
+    },
+    {
+      "name": "Bibel",
+      "songid": "2bd3b84a",
+      "count": 1
+    },
+    {
+      "name": "Bohemian Rhapsody",
+      "songid": "2bd68cda",
+      "count": 1
+    },
+    {
+      "name": "I'm a Marionette",
+      "songid": "43d42f3b",
+      "count": 1
+    },
+    {
+      "name": "Sympathy for the Devil",
+      "songid": "2bd7ac5a",
+      "count": 1
+    }
+  ]
+}

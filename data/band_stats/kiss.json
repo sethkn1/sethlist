@@ -1,0 +1,1184 @@
+{
+  "artist": "KISS",
+  "slug": "kiss",
+  "stats_id": "6bd69ec6",
+  "mbid": "e1f1e33e-2e4c-4d43-b91b-7064068d3283",
+  "fetched_at": "2026-04-27T12:32:18.791102Z",
+  "songs": [
+    {
+      "name": "Rock and Roll All Nite",
+      "songid": "1bd6510c",
+      "count": 2246
+    },
+    {
+      "name": "Detroit Rock City",
+      "songid": "7bd6f2c4",
+      "count": 2155
+    },
+    {
+      "name": "Love Gun",
+      "songid": "7bd60e94",
+      "count": 2048
+    },
+    {
+      "name": "Black Diamond",
+      "songid": "3bd690c0",
+      "count": 1966
+    },
+    {
+      "name": "Bass Solo",
+      "songid": "63d69ac7",
+      "count": 1872
+    },
+    {
+      "name": "Shout It Out Loud",
+      "songid": "6bd6460e",
+      "count": 1822
+    },
+    {
+      "name": "Cold Gin",
+      "songid": "23d6fcb3",
+      "count": 1713
+    },
+    {
+      "name": "I Love It Loud",
+      "songid": "33d63079",
+      "count": 1667
+    },
+    {
+      "name": "Guitar Solo",
+      "songid": "5bd7efd4",
+      "count": 1626
+    },
+    {
+      "name": "Lick It Up",
+      "songid": "33d61055",
+      "count": 1604
+    },
+    {
+      "name": "Deuce",
+      "songid": "6bd6f2be",
+      "count": 1582
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "2bd6e412",
+      "count": 1418
+    },
+    {
+      "name": "God of Thunder",
+      "songid": "4bd4a3ce",
+      "count": 1412
+    },
+    {
+      "name": "Calling Dr. Love",
+      "songid": "23d68413",
+      "count": 1342
+    },
+    {
+      "name": "Firehouse",
+      "songid": "3bd6d444",
+      "count": 1228
+    },
+    {
+      "name": "100,000 Years",
+      "songid": "7bd6ba20",
+      "count": 1091
+    },
+    {
+      "name": "War Machine",
+      "songid": "1bd78130",
+      "count": 1058
+    },
+    {
+      "name": "Beth",
+      "songid": "63d6965f",
+      "count": 1043
+    },
+    {
+      "name": "Let Me Go, Rock 'n' Roll",
+      "songid": "13d4dde9",
+      "count": 1028
+    },
+    {
+      "name": "Heaven's on Fire",
+      "songid": "3d4a1a3",
+      "count": 993
+    },
+    {
+      "name": "I Was Made for Lovin' You",
+      "songid": "73d63269",
+      "count": 987
+    },
+    {
+      "name": "Do You Love Me",
+      "songid": "6bd6eebe",
+      "count": 801
+    },
+    {
+      "name": "Shock Me",
+      "songid": "5bd647a8",
+      "count": 768
+    },
+    {
+      "name": "Psycho Circus",
+      "songid": "4bd65f36",
+      "count": 725
+    },
+    {
+      "name": "Strutter",
+      "songid": "3d7b1c7",
+      "count": 672
+    },
+    {
+      "name": "Fits Like a Glove",
+      "songid": "23d6d4c7",
+      "count": 494
+    },
+    {
+      "name": "I Want You",
+      "songid": "4bd6339a",
+      "count": 479
+    },
+    {
+      "name": "King of the Night Time World",
+      "songid": "2bd4cc3e",
+      "count": 455
+    },
+    {
+      "name": "Say Yeah",
+      "songid": "4bd4e3a2",
+      "count": 448
+    },
+    {
+      "name": "Tears Are Falling",
+      "songid": "13d7a911",
+      "count": 444
+    },
+    {
+      "name": "Creatures of the Night",
+      "songid": "13d4a1a9",
+      "count": 409
+    },
+    {
+      "name": "Crazy Crazy Nights",
+      "songid": "43d6fb53",
+      "count": 382
+    },
+    {
+      "name": "Hotter Than Hell",
+      "songid": "63d63a6b",
+      "count": 380
+    },
+    {
+      "name": "I Still Love You",
+      "songid": "43d6337b",
+      "count": 365
+    },
+    {
+      "name": "I Stole Your Love",
+      "songid": "53d63379",
+      "count": 343
+    },
+    {
+      "name": "Watchin' You",
+      "songid": "33d78041",
+      "count": 338
+    },
+    {
+      "name": "Parasite",
+      "songid": "23d66437",
+      "count": 325
+    },
+    {
+      "name": "Christine Sixteen",
+      "songid": "63d6821b",
+      "count": 297
+    },
+    {
+      "name": "Got to Choose",
+      "songid": "13d6c535",
+      "count": 296
+    },
+    {
+      "name": "New York Groove",
+      "songid": "6bc4ce4a",
+      "count": 272
+    },
+    {
+      "name": "Makin' Love",
+      "songid": "3d6050f",
+      "count": 268
+    },
+    {
+      "name": "C'mon and Love Me",
+      "songid": "3d685e3",
+      "count": 259
+    },
+    {
+      "name": "Nothin' to Lose",
+      "songid": "43d67387",
+      "count": 253
+    },
+    {
+      "name": "2000 Man",
+      "songid": "bd42162",
+      "count": 238
+    },
+    {
+      "name": "Guitar and Drum Solos",
+      "songid": "43d9ef83",
+      "count": 237
+    },
+    {
+      "name": "God Gave Rock and Roll to You",
+      "songid": "6bd42a82",
+      "count": 231
+    },
+    {
+      "name": "Hide Your Heart",
+      "songid": "6bd63e46",
+      "count": 231
+    },
+    {
+      "name": "Forever",
+      "songid": "bd6d126",
+      "count": 222
+    },
+    {
+      "name": "She",
+      "songid": "23d6445b",
+      "count": 217
+    },
+    {
+      "name": "Young and Wasted",
+      "songid": "63d7f26b",
+      "count": 190
+    },
+    {
+      "name": "Under the Gun",
+      "songid": "13d789e9",
+      "count": 186
+    },
+    {
+      "name": "Hell or Hallelujah",
+      "songid": "33dde8d5",
+      "count": 167
+    },
+    {
+      "name": "Unholy",
+      "songid": "3bd78864",
+      "count": 155
+    },
+    {
+      "name": "Modern Day Delilah",
+      "songid": "43d4ffdf",
+      "count": 145
+    },
+    {
+      "name": "Plaster Caster",
+      "songid": "6bd76a9a",
+      "count": 124
+    },
+    {
+      "name": "Rise to It",
+      "songid": "5bd4a3dc",
+      "count": 122
+    },
+    {
+      "name": "Goin' Blind",
+      "songid": "7bd76aa8",
+      "count": 118
+    },
+    {
+      "name": "Hard Luck Woman",
+      "songid": "73d76aa5",
+      "count": 116
+    },
+    {
+      "name": "Domino",
+      "songid": "13d6e9f1",
+      "count": 115
+    },
+    {
+      "name": "Take Me",
+      "songid": "63d76acb",
+      "count": 113
+    },
+    {
+      "name": "Flaming Youth",
+      "songid": "bd4998e",
+      "count": 103
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "songid": "bfea57e",
+      "count": 96
+    },
+    {
+      "name": "Ladies Room",
+      "songid": "6bd76aca",
+      "count": 94
+    },
+    {
+      "name": "Bang Bang You",
+      "songid": "6bd76a9e",
+      "count": 90
+    },
+    {
+      "name": "Comin' Home",
+      "songid": "73d76aa9",
+      "count": 90
+    },
+    {
+      "name": "Reason to Live",
+      "songid": "7bd76a9c",
+      "count": 90
+    },
+    {
+      "name": "Uh! All Night",
+      "songid": "6bd76a96",
+      "count": 89
+    },
+    {
+      "name": "Shandi",
+      "songid": "13d64595",
+      "count": 88
+    },
+    {
+      "name": "Rock Bottom",
+      "songid": "1bd651fc",
+      "count": 85
+    },
+    {
+      "name": "Take It Off",
+      "songid": "4bd7af02",
+      "count": 85
+    },
+    {
+      "name": "I'm an Animal",
+      "songid": "5bd4e39c",
+      "count": 73
+    },
+    {
+      "name": "Gimme More",
+      "songid": "63d6ced3",
+      "count": 71
+    },
+    {
+      "name": "Love Her All I Can",
+      "songid": "63d76aa3",
+      "count": 71
+    },
+    {
+      "name": "Into the Void",
+      "songid": "13d6258d",
+      "count": 67
+    },
+    {
+      "name": "Within",
+      "songid": "13d7f505",
+      "count": 61
+    },
+    {
+      "name": "Talk to Me",
+      "songid": "43dcdbeb",
+      "count": 56
+    },
+    {
+      "name": "I Just Wanna",
+      "songid": "1bd6310c",
+      "count": 55
+    },
+    {
+      "name": "Move On",
+      "songid": "23d76493",
+      "count": 51
+    },
+    {
+      "name": "No No No",
+      "songid": "73d76a9d",
+      "count": 49
+    },
+    {
+      "name": "A World Without Heroes",
+      "songid": "7bd76aac",
+      "count": 43
+    },
+    {
+      "name": "Is That You?",
+      "songid": "6bd6267e",
+      "count": 43
+    },
+    {
+      "name": "Shock Me / Outta This World",
+      "songid": "4bd847b2",
+      "count": 43
+    },
+    {
+      "name": "Exciter",
+      "songid": "63d6de33",
+      "count": 42
+    },
+    {
+      "name": "Won't Get Fooled Again",
+      "songid": "23d7f457",
+      "count": 42
+    },
+    {
+      "name": "All Hell's Breakin' Loose",
+      "songid": "3d4a1ab",
+      "count": 41
+    },
+    {
+      "name": "Sure Know Something",
+      "songid": "6bd76aae",
+      "count": 41
+    },
+    {
+      "name": "See\u00a0You\u00a0Tonite",
+      "songid": "7bd06aa0",
+      "count": 37
+    },
+    {
+      "name": "I've Had Enough (Into the Fire)",
+      "songid": "3bd62c90",
+      "count": 31
+    },
+    {
+      "name": "All the Way",
+      "songid": "7bd76a98",
+      "count": 27
+    },
+    {
+      "name": "Every Time I Look at You",
+      "songid": "6bd44a46",
+      "count": 26
+    },
+    {
+      "name": "Let Me Know",
+      "songid": "33d4cc41",
+      "count": 26
+    },
+    {
+      "name": "Mr. Speed",
+      "songid": "63d76a9f",
+      "count": 20
+    },
+    {
+      "name": "Hooligan",
+      "songid": "73d76ac9",
+      "count": 19
+    },
+    {
+      "name": "Whole Lotta Love",
+      "songid": "23d7f80b",
+      "count": 19
+    },
+    {
+      "name": "Outta This World",
+      "songid": "4bda7b16",
+      "count": 18
+    },
+    {
+      "name": "Radioactive",
+      "songid": "73d06aa1",
+      "count": 18
+    },
+    {
+      "name": "Room Service",
+      "songid": "73d38e19",
+      "count": 16
+    },
+    {
+      "name": "Ue wo muite arukou",
+      "songid": "53fde3f9",
+      "count": 16
+    },
+    {
+      "name": "Two Timer",
+      "songid": "bd23d22",
+      "count": 15
+    },
+    {
+      "name": "Wall of Sound",
+      "songid": "5bda7b10",
+      "count": 15
+    },
+    {
+      "name": "Love 'Em and Leave 'Em",
+      "songid": "53dcdbf1",
+      "count": 13
+    },
+    {
+      "name": "Tossin' and Turnin'",
+      "songid": "1bdd194c",
+      "count": 13
+    },
+    {
+      "name": "Mainline",
+      "songid": "63d0b647",
+      "count": 12
+    },
+    {
+      "name": "Spit",
+      "songid": "73d76aad",
+      "count": 12
+    },
+    {
+      "name": "Let's Put the X in Sex",
+      "songid": "63d76a9b",
+      "count": 11
+    },
+    {
+      "name": "Goodbye",
+      "songid": "33d7648d",
+      "count": 10
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 10
+    },
+    {
+      "name": "I",
+      "songid": "7bd76aa4",
+      "count": 10
+    },
+    {
+      "name": "Kissin' Time",
+      "songid": "63d06ac7",
+      "count": 9
+    },
+    {
+      "name": "The Oath",
+      "songid": "63d0b66b",
+      "count": 9
+    },
+    {
+      "name": "You're All That I Want",
+      "songid": "53d7f305",
+      "count": 9
+    },
+    {
+      "name": "Acrobat",
+      "songid": "2bd4c8ba",
+      "count": 8
+    },
+    {
+      "name": "Ladies in Waiting",
+      "songid": "33d258f1",
+      "count": 8
+    },
+    {
+      "name": "Samurai Son",
+      "songid": "53c37bf9",
+      "count": 8
+    },
+    {
+      "name": "Want You Beside Me (Life in the Woods)",
+      "songid": "5bd9dbb4",
+      "count": 8
+    },
+    {
+      "name": "Almost Human",
+      "songid": "13d23d2d",
+      "count": 7
+    },
+    {
+      "name": "Hell or High Water",
+      "songid": "1bd74108",
+      "count": 7
+    },
+    {
+      "name": "Simple Type",
+      "songid": "63d06aa7",
+      "count": 7
+    },
+    {
+      "name": "Tonight You Belong to Me",
+      "songid": "33d76491",
+      "count": 7
+    },
+    {
+      "name": "Magic Touch",
+      "songid": "63d76aa7",
+      "count": 6
+    },
+    {
+      "name": "Rock and Roll Hell",
+      "songid": "43dcdbf7",
+      "count": 6
+    },
+    {
+      "name": "All for the Love of Rock & Roll",
+      "songid": "43da7b17",
+      "count": 5
+    },
+    {
+      "name": "Keep Me Comin'",
+      "songid": "63d3a6df",
+      "count": 5
+    },
+    {
+      "name": "Long Way Down",
+      "songid": "53da7b15",
+      "count": 5
+    },
+    {
+      "name": "Love Theme From KISS",
+      "songid": "3c6218f",
+      "count": 5
+    },
+    {
+      "name": "Strange Ways",
+      "songid": "73d76aa1",
+      "count": 5
+    },
+    {
+      "name": "Sweet Pain",
+      "songid": "1bd23d2c",
+      "count": 5
+    },
+    {
+      "name": "White Christmas",
+      "songid": "3d4e93b",
+      "count": 5
+    },
+    {
+      "name": "You've Got to Hide Your Love Away",
+      "songid": "6bd4be26",
+      "count": 5
+    },
+    {
+      "name": "A Million to One",
+      "songid": "6bd0b632",
+      "count": 4
+    },
+    {
+      "name": "Charisma",
+      "songid": "63d38e1b",
+      "count": 4
+    },
+    {
+      "name": "Just a Boy",
+      "songid": "73d76a99",
+      "count": 4
+    },
+    {
+      "name": "Keep Me Waiting",
+      "songid": "3bc530b4",
+      "count": 4
+    },
+    {
+      "name": "King of the Mountain",
+      "songid": "13d4a1ad",
+      "count": 4
+    },
+    {
+      "name": "La bamba",
+      "songid": "23cd8cf3",
+      "count": 4
+    },
+    {
+      "name": "Larger Than Life",
+      "songid": "13d23d25",
+      "count": 4
+    },
+    {
+      "name": "Thrills in the Night",
+      "songid": "23d794c7",
+      "count": 4
+    },
+    {
+      "name": "When Your Walls Come Down",
+      "songid": "13d74109",
+      "count": 4
+    },
+    {
+      "name": "Anything for My Baby",
+      "songid": "bd23d26",
+      "count": 3
+    },
+    {
+      "name": "Go Now",
+      "songid": "43dae317",
+      "count": 3
+    },
+    {
+      "name": "Great Expectations",
+      "songid": "2bd6c452",
+      "count": 3
+    },
+    {
+      "name": "I Pledge Allegiance to the State of Rock & Roll",
+      "songid": "6bd06ac6",
+      "count": 3
+    },
+    {
+      "name": "I Still Love You / Hard Luck Woman / Shandi",
+      "songid": "4bd3dffe",
+      "count": 3
+    },
+    {
+      "name": "If I Fell",
+      "songid": "63d7e273",
+      "count": 3
+    },
+    {
+      "name": "\u00d4 Canada",
+      "songid": "53f59bc9",
+      "count": 3
+    },
+    {
+      "name": "Wouldn't You Like to Know Me",
+      "songid": "23d76497",
+      "count": 3
+    },
+    {
+      "name": "All American Man",
+      "songid": "2bd45cba",
+      "count": 2
+    },
+    {
+      "name": "Any Way You Slice It",
+      "songid": "1bd4a1ac",
+      "count": 2
+    },
+    {
+      "name": "Anyway You Want It",
+      "songid": "73d97e65",
+      "count": 2
+    },
+    {
+      "name": "Betrayed",
+      "songid": "3bd5e410",
+      "count": 2
+    },
+    {
+      "name": "Getaway",
+      "songid": "7bd0b640",
+      "count": 2
+    },
+    {
+      "name": "Got to Choose / Parasite / She / Makin' Love",
+      "songid": "4bdcdbf2",
+      "count": 2
+    },
+    {
+      "name": "Honky Tonk Women",
+      "songid": "43d63b53",
+      "count": 2
+    },
+    {
+      "name": "Hot and Cold",
+      "songid": "4bd4e3a6",
+      "count": 2
+    },
+    {
+      "name": "I'll Be Back",
+      "songid": "3d3a5df",
+      "count": 2
+    },
+    {
+      "name": "It Don't Come Easy",
+      "songid": "13d219bd",
+      "count": 2
+    },
+    {
+      "name": "It's My Life",
+      "songid": "73fd7eed",
+      "count": 2
+    },
+    {
+      "name": "Mr. Blackwell",
+      "songid": "53de6f95",
+      "count": 2
+    },
+    {
+      "name": "My Girl",
+      "songid": "73d48615",
+      "count": 2
+    },
+    {
+      "name": "Nowhere to Run",
+      "songid": "63d76aaf",
+      "count": 2
+    },
+    {
+      "name": "Oh! Susanna",
+      "songid": "53d7efc9",
+      "count": 2
+    },
+    {
+      "name": "She's So European",
+      "songid": "6bdb5e8e",
+      "count": 2
+    },
+    {
+      "name": "Smoke on the Water",
+      "songid": "13d7bd01",
+      "count": 2
+    },
+    {
+      "name": "Tomorrow and Tonight",
+      "songid": "13daa10d",
+      "count": 2
+    },
+    {
+      "name": "2,000 Man / New York Groove / Parasite / Makin' Love / She",
+      "songid": "43d3d707",
+      "count": 1
+    },
+    {
+      "name": "Birthday",
+      "songid": "1bd69190",
+      "count": 1
+    },
+    {
+      "name": "Blues Jam",
+      "songid": "4b9d9792",
+      "count": 1
+    },
+    {
+      "name": "Burn Bitch Burn",
+      "songid": "63d68a73",
+      "count": 1
+    },
+    {
+      "name": "Cat Scratch Fever / Calling Dr. Love / La bamba / Wipeout / Stairway to Heaven",
+      "songid": "2be7c472",
+      "count": 1
+    },
+    {
+      "name": "Come and Get Your Love",
+      "songid": "23def093",
+      "count": 1
+    },
+    {
+      "name": "Country Man / Winchester Cathedral",
+      "songid": "63e7d6a7",
+      "count": 1
+    },
+    {
+      "name": "Detroit Rock City / Oh! Susanna",
+      "songid": "39b7567",
+      "count": 1
+    },
+    {
+      "name": "Detroit Rock City / Rock and Roll All Nite",
+      "songid": "1bc47d2c",
+      "count": 1
+    },
+    {
+      "name": "Down on the Corner",
+      "songid": "53d1f39d",
+      "count": 1
+    },
+    {
+      "name": "Forever / I Still Love You",
+      "songid": "5bd3dffc",
+      "count": 1
+    },
+    {
+      "name": "Free Ride",
+      "songid": "2bd6d092",
+      "count": 1
+    },
+    {
+      "name": "Get All You Can Take",
+      "songid": "53d6cf61",
+      "count": 1
+    },
+    {
+      "name": "Guitar & Drum Solo",
+      "songid": "13d539dd",
+      "count": 1
+    },
+    {
+      "name": "Happy Trails",
+      "songid": "bd079ee",
+      "count": 1
+    },
+    {
+      "name": "Hard Luck Woman / Shandi",
+      "songid": "73d0b6fd",
+      "count": 1
+    },
+    {
+      "name": "Heart of Chrome",
+      "songid": "23d1dc33",
+      "count": 1
+    },
+    {
+      "name": "Here Comes the Sun",
+      "songid": "3bd71860",
+      "count": 1
+    },
+    {
+      "name": "Hey Joe",
+      "songid": "5bd743a0",
+      "count": 1
+    },
+    {
+      "name": "I Should Have Known Better",
+      "songid": "bd7c146",
+      "count": 1
+    },
+    {
+      "name": "I Still Love You / Forever / Hard Luck Woman / Shandi",
+      "songid": "4bd3d702",
+      "count": 1
+    },
+    {
+      "name": "I Still Love You / I Want You  / Forever",
+      "songid": "5be74750",
+      "count": 1
+    },
+    {
+      "name": "I Still Love You / Shandi",
+      "songid": "7bd0b6f8",
+      "count": 1
+    },
+    {
+      "name": "I Want You / I Still Love You / Shandi",
+      "songid": "5bd9db18",
+      "count": 1
+    },
+    {
+      "name": "I've Just Seen a Face",
+      "songid": "6bd73282",
+      "count": 1
+    },
+    {
+      "name": "It's Only Love",
+      "songid": "63d1a2b3",
+      "count": 1
+    },
+    {
+      "name": "Jumpin' Jack Flash",
+      "songid": "bd61d86",
+      "count": 1
+    },
+    {
+      "name": "La Bamba / Oh! Susanna / Firehouse / Almost Human",
+      "songid": "53e7d771",
+      "count": 1
+    },
+    {
+      "name": "La Bamba / Sunshine of Your Love / Dazed and Confused / Oh! Susannah",
+      "songid": "3e7c5db",
+      "count": 1
+    },
+    {
+      "name": "La Marseillaise",
+      "songid": "53c6d315",
+      "count": 1
+    },
+    {
+      "name": "Last Train to Clarksville",
+      "songid": "73d0265d",
+      "count": 1
+    },
+    {
+      "name": "Little Caesar",
+      "songid": "23d5e417",
+      "count": 1
+    },
+    {
+      "name": "Live to Win",
+      "songid": "23d7649f",
+      "count": 1
+    },
+    {
+      "name": "Louie Louie",
+      "songid": "7396fa09",
+      "count": 1
+    },
+    {
+      "name": "Love Gun / Shout It Out Loud",
+      "songid": "3c47d23",
+      "count": 1
+    },
+    {
+      "name": "Love Her All I Can / Parasite / She / Shock Me / Hotter Than Hell",
+      "songid": "4bd0bbb6",
+      "count": 1
+    },
+    {
+      "name": "Lucy in the Sky With Diamonds",
+      "songid": "bd7e192",
+      "count": 1
+    },
+    {
+      "name": "Mississippi Queen",
+      "songid": "3d67d47",
+      "count": 1
+    },
+    {
+      "name": "New York Groove / Goin' Blind / Parasite / New York Groove / Strutter / She / Rocket Ride / Mr. Speed",
+      "songid": "53d3d701",
+      "count": 1
+    },
+    {
+      "name": "New York Groove / Parasite / She / Makin' Love",
+      "songid": "53d3dffd",
+      "count": 1
+    },
+    {
+      "name": "New York Groove / She / Makin' Love / Parasite",
+      "songid": "7bd0b6fc",
+      "count": 1
+    },
+    {
+      "name": "Oh! Susanna / Get It On / Hey Joe / La Bamba",
+      "songid": "13e7c5f9",
+      "count": 1
+    },
+    {
+      "name": "Oh! Susanna / Honky Tonk Women / Start Me Up / Communication Breakdown",
+      "songid": "13e7cd41",
+      "count": 1
+    },
+    {
+      "name": "Oh! Susanna / La Bamba / Mississippi Queen",
+      "songid": "5bdcdbf0",
+      "count": 1
+    },
+    {
+      "name": "Oh! Susanna / La bamba / You Shook Me All Night Long / Good Times Bad Times",
+      "songid": "3e7cd43",
+      "count": 1
+    },
+    {
+      "name": "Oh! Susanna / Shout It Out Loud / Firehouse",
+      "songid": "be7c5da",
+      "count": 1
+    },
+    {
+      "name": "Oh! Susanna / Strutter",
+      "songid": "13e7c5d9",
+      "count": 1
+    },
+    {
+      "name": "Oh! Susanna / Sunshine of Your Love / Communication Breakdown",
+      "songid": "1be7cd48",
+      "count": 1
+    },
+    {
+      "name": "Oh! Susanna / Sunshine of Your Love / Hey Joe / La Bamba",
+      "songid": "be7c5f2",
+      "count": 1
+    },
+    {
+      "name": "Only You",
+      "songid": "73d4eea1",
+      "count": 1
+    },
+    {
+      "name": "Parasite / Makin' Love / New York Groove / She / Got to Choose",
+      "songid": "23fe40fb",
+      "count": 1
+    },
+    {
+      "name": "Parasite / New York Groove / She / Makin' Love / Strutter",
+      "songid": "73d0b6f1",
+      "count": 1
+    },
+    {
+      "name": "Parasite / She / Makin' Love",
+      "songid": "53d9cbad",
+      "count": 1
+    },
+    {
+      "name": "Pinball Wizard",
+      "songid": "2bd66062",
+      "count": 1
+    },
+    {
+      "name": "Rockin' in the USA",
+      "songid": "3d23d27",
+      "count": 1
+    },
+    {
+      "name": "Say Yeah / I Was Made for Lovin' You",
+      "songid": "13c47d2d",
+      "count": 1
+    },
+    {
+      "name": "Shandi / Hard Luck Woman",
+      "songid": "6bd0b6f2",
+      "count": 1
+    },
+    {
+      "name": "Take It Easy",
+      "songid": "4bd7af16",
+      "count": 1
+    },
+    {
+      "name": "Take Me Down Below",
+      "songid": "1bd8b9f8",
+      "count": 1
+    },
+    {
+      "name": "The Ocean",
+      "songid": "13d79de1",
+      "count": 1
+    },
+    {
+      "name": "Then He Kissed Me",
+      "songid": "7bc69ad4",
+      "count": 1
+    },
+    {
+      "name": "Too Many Mondays",
+      "songid": "5bdae330",
+      "count": 1
+    },
+    {
+      "name": "Watchin' You / Hotter Than Hell / She / Watchin' You / Got to Choose / Parasite / Sunshine of Your Love",
+      "songid": "39f0137",
+      "count": 1
+    },
+    {
+      "name": "We Are One",
+      "songid": "13d9990d",
+      "count": 1
+    },
+    {
+      "name": "Who Wants to Be Lonely",
+      "songid": "73dfb2c5",
+      "count": 1
+    },
+    {
+      "name": "Winchester Cathedral",
+      "songid": "53c593b1",
+      "count": 1
+    },
+    {
+      "name": "Y.M.C.A.",
+      "songid": "5bd4fb9c",
+      "count": 1
+    },
+    {
+      "name": "You Shook Me",
+      "songid": "3d52d83",
+      "count": 1
+    },
+    {
+      "name": "You Shook Me / Ramble On / Good Times Bad Times / Whole Lotta Love / Heartbreaker",
+      "songid": "5396dbb1",
+      "count": 1
+    },
+    {
+      "name": "Yume no Ukiyo ni Saitemina",
+      "songid": "23c040c3",
+      "count": 1
+    },
+    {
+      "name": "Yume no Ukiyo ni Saitemina / Rock and Roll All Nite",
+      "songid": "73c36639",
+      "count": 1
+    }
+  ]
+}

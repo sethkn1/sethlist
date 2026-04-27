@@ -1,0 +1,364 @@
+{
+  "artist": "Puscifer",
+  "slug": "puscifer",
+  "stats_id": "3d6f5af",
+  "mbid": "6e4277d8-7b64-44a3-b823-13bd15114e22",
+  "fetched_at": "2026-04-27T12:32:03.452290Z",
+  "songs": [
+    {
+      "name": "Vagina Mine",
+      "songid": "33d7d825",
+      "count": 224
+    },
+    {
+      "name": "Conditions of My Parole",
+      "songid": "1bdfb900",
+      "count": 208
+    },
+    {
+      "name": "The Humbling River",
+      "songid": "6bd4360a",
+      "count": 186
+    },
+    {
+      "name": "Man Overboard",
+      "songid": "2bdfa43a",
+      "count": 185
+    },
+    {
+      "name": "Horizons",
+      "songid": "23dfa43b",
+      "count": 181
+    },
+    {
+      "name": "The Remedy",
+      "songid": "13ce5949",
+      "count": 178
+    },
+    {
+      "name": "Rev 22:20",
+      "songid": "2bd7d822",
+      "count": 166
+    },
+    {
+      "name": "Toma",
+      "songid": "33dfa441",
+      "count": 144
+    },
+    {
+      "name": "Telling Ghosts",
+      "songid": "33dfa439",
+      "count": 140
+    },
+    {
+      "name": "Momma Sed",
+      "songid": "3bd7d824",
+      "count": 138
+    },
+    {
+      "name": "The Undertaker",
+      "songid": "2bd7d826",
+      "count": 126
+    },
+    {
+      "name": "Dozo",
+      "songid": "33d7d821",
+      "count": 111
+    },
+    {
+      "name": "Flippant",
+      "songid": "7bcce2e0",
+      "count": 110
+    },
+    {
+      "name": "Grand Canyon",
+      "songid": "3ce594b",
+      "count": 102
+    },
+    {
+      "name": "The Rapture (Fear Is a Mind Killa Mix)",
+      "songid": "5bf75b18",
+      "count": 101
+    },
+    {
+      "name": "Bullet Train to Iowa",
+      "songid": "23f9cc1b",
+      "count": 97
+    },
+    {
+      "name": "The Arsonist",
+      "songid": "53ce57b9",
+      "count": 91
+    },
+    {
+      "name": "Polar Bear",
+      "songid": "2bd7d81a",
+      "count": 90
+    },
+    {
+      "name": "Breathe",
+      "songid": "6bdb6e92",
+      "count": 89
+    },
+    {
+      "name": "The Underwhelming",
+      "songid": "23f9cc27",
+      "count": 84
+    },
+    {
+      "name": "Galileo",
+      "songid": "43ce57bb",
+      "count": 81
+    },
+    {
+      "name": "Money Shot",
+      "songid": "bce594a",
+      "count": 78
+    },
+    {
+      "name": "Fake Affront",
+      "songid": "23f9cc1f",
+      "count": 75
+    },
+    {
+      "name": "Indigo Children",
+      "songid": "3bd7d818",
+      "count": 75
+    },
+    {
+      "name": "Postulous",
+      "songid": "3bf9cc18",
+      "count": 75
+    },
+    {
+      "name": "UPGrade",
+      "songid": "3bf9cc24",
+      "count": 75
+    },
+    {
+      "name": "Simultaneous",
+      "songid": "5bce57c4",
+      "count": 72
+    },
+    {
+      "name": "Agostina",
+      "songid": "4bce57ba",
+      "count": 71
+    },
+    {
+      "name": "Autumn",
+      "songid": "4bce57be",
+      "count": 71
+    },
+    {
+      "name": "Life of Brian (Apparently You Haven't Seen)",
+      "songid": "63cfaa7b",
+      "count": 71
+    },
+    {
+      "name": "Apocalyptical",
+      "songid": "3bf9cc20",
+      "count": 69
+    },
+    {
+      "name": "Potions",
+      "songid": "63d4360b",
+      "count": 69
+    },
+    {
+      "name": "Theorem",
+      "songid": "33f9cc25",
+      "count": 68
+    },
+    {
+      "name": "Bread and Circus",
+      "songid": "33f9cc21",
+      "count": 65
+    },
+    {
+      "name": "Grey Area",
+      "songid": "2bf9cc26",
+      "count": 65
+    },
+    {
+      "name": "Bedlamite",
+      "songid": "2bf9cc1e",
+      "count": 64
+    },
+    {
+      "name": "Personal Prometheus",
+      "songid": "2bf9cc1a",
+      "count": 62
+    },
+    {
+      "name": "The Weaver",
+      "songid": "23dfa447",
+      "count": 53
+    },
+    {
+      "name": "Tiny Monsters",
+      "songid": "2bdfa442",
+      "count": 53
+    },
+    {
+      "name": "The Green Valley",
+      "songid": "23dfa43f",
+      "count": 50
+    },
+    {
+      "name": "Monsoons",
+      "songid": "3bdfa444",
+      "count": 49
+    },
+    {
+      "name": "Oceans",
+      "songid": "33dfa445",
+      "count": 49
+    },
+    {
+      "name": "Queen B",
+      "songid": "2bd7d812",
+      "count": 49
+    },
+    {
+      "name": "Tumbleweed",
+      "songid": "3bdfa438",
+      "count": 49
+    },
+    {
+      "name": "Sour Grapes",
+      "songid": "23d7d823",
+      "count": 41
+    },
+    {
+      "name": "The Mission",
+      "songid": "23d7d81f",
+      "count": 41
+    },
+    {
+      "name": "Trekka",
+      "songid": "33d7d819",
+      "count": 41
+    },
+    {
+      "name": "A Singularity",
+      "songid": "33f9cc19",
+      "count": 39
+    },
+    {
+      "name": "Drunk With Power",
+      "songid": "23d7d827",
+      "count": 39
+    },
+    {
+      "name": "Maynard Monologue",
+      "songid": "3bdfa44c",
+      "count": 39
+    },
+    {
+      "name": "Smoke and Mirrors",
+      "songid": "43ce57bf",
+      "count": 29
+    },
+    {
+      "name": "A Public Stoning",
+      "songid": "539be3d5",
+      "count": 24
+    },
+    {
+      "name": "Bad Wolf",
+      "songid": "139f8599",
+      "count": 24
+    },
+    {
+      "name": "ImpetuoUs",
+      "songid": "439be3cb",
+      "count": 24
+    },
+    {
+      "name": "Mantastic",
+      "songid": "139f859d",
+      "count": 24
+    },
+    {
+      "name": "Normal Isn't",
+      "songid": "b9f859a",
+      "count": 24
+    },
+    {
+      "name": "Pendulum",
+      "songid": "1b9f859c",
+      "count": 24
+    },
+    {
+      "name": "Self Evident",
+      "songid": "1b9f8598",
+      "count": 24
+    },
+    {
+      "name": "Seven One",
+      "songid": "b9f8592",
+      "count": 24
+    },
+    {
+      "name": "The Algorithm",
+      "songid": "739046d5",
+      "count": 24
+    },
+    {
+      "name": "The Quiet Parts",
+      "songid": "5b9be3d4",
+      "count": 24
+    },
+    {
+      "name": "Thrust",
+      "songid": "39f859b",
+      "count": 24
+    },
+    {
+      "name": "The Chain",
+      "songid": "23d7a47f",
+      "count": 17
+    },
+    {
+      "name": "Balls to the Wall",
+      "songid": "23d210f3",
+      "count": 16
+    },
+    {
+      "name": "Cuntry Boner",
+      "songid": "2bdcb426",
+      "count": 14
+    },
+    {
+      "name": "World Up My Ass",
+      "songid": "4bd7f772",
+      "count": 12
+    },
+    {
+      "name": "Dear Brother",
+      "songid": "63db6e93",
+      "count": 10
+    },
+    {
+      "name": "Conditions of My Parole / Ain't Talkin' 'Bout Love  / Conditions of My Parole",
+      "songid": "2b9b2c7e",
+      "count": 3
+    },
+    {
+      "name": "Three Little Pigs",
+      "songid": "23d2e83f",
+      "count": 2
+    },
+    {
+      "name": "Rocket Man (I Think It's Going to Be a Long, Long Time)",
+      "songid": "6bd5b6e2",
+      "count": 1
+    },
+    {
+      "name": "Sober",
+      "songid": "3bd7bc98",
+      "count": 1
+    }
+  ]
+}

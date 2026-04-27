@@ -3459,3 +3459,211 @@ main {
     font-size: 11px;
   }
 }
+
+/* ============================================================
+   BUCKET LIST — per-band section in artist insights modal
+   + the dedicated #/bucket-list page
+   + Stats songs picker "Unheard live" rows
+   ============================================================ */
+
+/* The three small KPI tiles at the top of the band's bucket-list section
+   inside the artist insights modal. Echoes the existing top-of-stats KPI
+   look but smaller & inline. */
+.bucket-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 4px 0 16px 0;
+}
+.bucket-kpi {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 10px 8px;
+  text-align: center;
+}
+.bucket-kpi-num {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--paper);
+  line-height: 1.1;
+}
+.bucket-kpi-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Section sub-headers inside the modal. Lighter than artist-section-h. */
+.bucket-list-h {
+  font-family: var(--font-display-alt);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--paper);
+  margin: 16px 0 6px 0;
+  font-weight: normal;
+}
+
+/* Song lists (both heard and unheard inside the modal) */
+.bucket-song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bucket-song-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 4px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+}
+.bucket-song-row:last-child { border-bottom: none; }
+.bucket-song-name {
+  flex: 1;
+  color: var(--paper);
+}
+.bucket-song-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+/* Heard rows are visually de-emphasized (reference material, not the point) */
+.bucket-song-heard .bucket-song-name { color: var(--muted); }
+
+/* Collapsible "songs you've heard" section */
+.bucket-heard-details {
+  margin-top: 16px;
+  border-top: 1px solid var(--muted);
+  padding-top: 12px;
+}
+.bucket-heard-summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  padding: 4px 0;
+  list-style: none;
+}
+.bucket-heard-summary::-webkit-details-marker { display: none; }
+.bucket-heard-summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.15s;
+}
+.bucket-heard-details[open] .bucket-heard-summary::before {
+  transform: rotate(90deg);
+}
+.bucket-heard-summary:hover { color: var(--paper); }
+
+/* ---- The dedicated #/bucket-list page ---- */
+.bucket-list-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.bucket-list-intro {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 720px;
+}
+.bucket-empty {
+  color: var(--muted);
+  font-size: 14px;
+  padding: 24px 0;
+}
+.bucket-empty code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: var(--paper);
+}
+
+/* Filter bar atop the page */
+.bucket-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.bucket-filter-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.bucket-filter-select { min-width: 220px; }
+
+/* Flat unheard list — one row per song */
+.bucket-flat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bucket-flat-row {
+  display: grid;
+  grid-template-columns: 50px 1fr auto auto;
+  align-items: baseline;
+  gap: 14px;
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 14px;
+}
+.bucket-flat-row .rank {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+.bucket-flat-song {
+  color: var(--paper);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bucket-flat-band {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+.bucket-flat-band:hover { color: var(--paper); }
+.bucket-flat-count {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  /* Stack band/count under song on narrow viewports */
+  .bucket-flat-row {
+    grid-template-columns: 40px 1fr auto;
+    grid-template-rows: auto auto;
+  }
+  .bucket-flat-song { grid-column: 2 / span 2; }
+  .bucket-flat-band {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 11px;
+  }
+  .bucket-flat-count {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}

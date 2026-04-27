@@ -1,0 +1,809 @@
+{
+  "artist": "Guns N\u2019 Roses",
+  "slug": "guns-n-roses",
+  "stats_id": "7bd69e24",
+  "mbid": "eeb1195b-f213-4ce1-b28c-8565211f8e43",
+  "fetched_at": "2026-04-27T12:32:13.666942Z",
+  "songs": [
+    {
+      "name": "Welcome to the Jungle",
+      "songid": "3d7fd6b",
+      "count": 1045
+    },
+    {
+      "name": "Mr. Brownstone",
+      "songid": "6bd67ed6",
+      "count": 1002
+    },
+    {
+      "name": "Paradise City",
+      "songid": "3bd66468",
+      "count": 990
+    },
+    {
+      "name": "Knockin' on Heaven's Door",
+      "songid": "3bd618b4",
+      "count": 989
+    },
+    {
+      "name": "Sweet Child o' Mine",
+      "songid": "1bd4f908",
+      "count": 988
+    },
+    {
+      "name": "It's So Easy",
+      "songid": "13d621b9",
+      "count": 949
+    },
+    {
+      "name": "Live and Let Die",
+      "songid": "1bd5a978",
+      "count": 871
+    },
+    {
+      "name": "Nightrain",
+      "songid": "6bd676ee",
+      "count": 865
+    },
+    {
+      "name": "November Rain",
+      "songid": "73d672fd",
+      "count": 862
+    },
+    {
+      "name": "You Could Be Mine",
+      "songid": "13d7f199",
+      "count": 842
+    },
+    {
+      "name": "Patience",
+      "songid": "43d66767",
+      "count": 787
+    },
+    {
+      "name": "Rocket Queen",
+      "songid": "3bd65054",
+      "count": 739
+    },
+    {
+      "name": "Chinese Democracy",
+      "songid": "43d68387",
+      "count": 629
+    },
+    {
+      "name": "Estranged",
+      "songid": "3bd6dc58",
+      "count": 579
+    },
+    {
+      "name": "Civil War",
+      "songid": "3d6fd33",
+      "count": 574
+    },
+    {
+      "name": "Better",
+      "songid": "7bd69654",
+      "count": 571
+    },
+    {
+      "name": "Don't Cry",
+      "songid": "bd6e9a6",
+      "count": 531
+    },
+    {
+      "name": "Double Talkin' Jive",
+      "songid": "43d6ebaf",
+      "count": 529
+    },
+    {
+      "name": "Slash Guitar Solo",
+      "songid": "4bd643ae",
+      "count": 514
+    },
+    {
+      "name": "This I Love",
+      "songid": "33d46495",
+      "count": 395
+    },
+    {
+      "name": "My Michelle",
+      "songid": "43d67b5f",
+      "count": 322
+    },
+    {
+      "name": "Out ta Get Me",
+      "songid": "43d66bab",
+      "count": 322
+    },
+    {
+      "name": "Street of Dreams",
+      "songid": "13d7b135",
+      "count": 317
+    },
+    {
+      "name": "Madagascar",
+      "songid": "73d60a15",
+      "count": 311
+    },
+    {
+      "name": "Love Theme from The Godfather",
+      "songid": "6bea5ed6",
+      "count": 290
+    },
+    {
+      "name": "Used to Love Her",
+      "songid": "53d78ba5",
+      "count": 286
+    },
+    {
+      "name": "Coma",
+      "songid": "43d6ff4b",
+      "count": 271
+    },
+    {
+      "name": "Attitude",
+      "songid": "43d7c3db",
+      "count": 267
+    },
+    {
+      "name": "The Seeker",
+      "songid": "7bd79e44",
+      "count": 236
+    },
+    {
+      "name": "Sorry",
+      "songid": "5bd4637c",
+      "count": 231
+    },
+    {
+      "name": "Bad Obsession",
+      "songid": "4bd69b2e",
+      "count": 223
+    },
+    {
+      "name": "Slither",
+      "songid": "63d642db",
+      "count": 218
+    },
+    {
+      "name": "Wichita Lineman",
+      "songid": "2bd7ccaa",
+      "count": 207
+    },
+    {
+      "name": "You're Crazy",
+      "songid": "5bd7f3f8",
+      "count": 195
+    },
+    {
+      "name": "Yesterdays",
+      "songid": "73d7f6a1",
+      "count": 171
+    },
+    {
+      "name": "Absurd",
+      "songid": "63e7e663",
+      "count": 168
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "23d6e413",
+      "count": 165
+    },
+    {
+      "name": "Wish You Were Here",
+      "songid": "1bd7f574",
+      "count": 162
+    },
+    {
+      "name": "Whole Lotta Rosie",
+      "songid": "23d7f8ff",
+      "count": 160
+    },
+    {
+      "name": "Another Brick in the Wall, Part 2",
+      "songid": "2bd24cfa",
+      "count": 153
+    },
+    {
+      "name": "Hard Skool",
+      "songid": "3e71577",
+      "count": 143
+    },
+    {
+      "name": "Shadow of Your Love",
+      "songid": "63f23e57",
+      "count": 125
+    },
+    {
+      "name": "Reckless Life",
+      "songid": "6bd65a1a",
+      "count": 123
+    },
+    {
+      "name": "Move to the City",
+      "songid": "3bdf7c24",
+      "count": 119
+    },
+    {
+      "name": "The Pink Panther Theme",
+      "songid": "2bc5bcd6",
+      "count": 111
+    },
+    {
+      "name": "James Bond Theme",
+      "songid": "1bd1b140",
+      "count": 107
+    },
+    {
+      "name": "Bumblefoot Guitar Solo",
+      "songid": "5bd68bd4",
+      "count": 106
+    },
+    {
+      "name": "Shackler's Revenge",
+      "songid": "bd64546",
+      "count": 106
+    },
+    {
+      "name": "Pretty Tied Up",
+      "songid": "33d65c69",
+      "count": 103
+    },
+    {
+      "name": "Black Hole Sun",
+      "songid": "23d69083",
+      "count": 101
+    },
+    {
+      "name": "The Ballad of Death",
+      "songid": "bd3a1b2",
+      "count": 100
+    },
+    {
+      "name": "I.R.S.",
+      "songid": "4bd62f72",
+      "count": 98
+    },
+    {
+      "name": "The Blacklight Jesus of Transylvania",
+      "songid": "3391044d",
+      "count": 91
+    },
+    {
+      "name": "Anything Goes",
+      "songid": "3d69d13",
+      "count": 89
+    },
+    {
+      "name": "Baba O'Riley",
+      "songid": "13d699d9",
+      "count": 87
+    },
+    {
+      "name": "Richard Fortus Guitar Solo",
+      "songid": "43d65707",
+      "count": 87
+    },
+    {
+      "name": "Dizzy Reed Piano Solo",
+      "songid": "6bd6ee32",
+      "count": 84
+    },
+    {
+      "name": "Catcher in the Rye",
+      "songid": "43d45f7b",
+      "count": 83
+    },
+    {
+      "name": "New Rose",
+      "songid": "6bd7def6",
+      "count": 80
+    },
+    {
+      "name": "Think About You",
+      "songid": "6bd79ad2",
+      "count": 80
+    },
+    {
+      "name": "Down on the Farm",
+      "songid": "63deaa3b",
+      "count": 78
+    },
+    {
+      "name": "Motivation",
+      "songid": "1bded550",
+      "count": 78
+    },
+    {
+      "name": "Dead Horse",
+      "songid": "1bd6f158",
+      "count": 65
+    },
+    {
+      "name": "Mama Kin",
+      "songid": "1bd605c0",
+      "count": 65
+    },
+    {
+      "name": "Mi amor",
+      "songid": "7b914a84",
+      "count": 62
+    },
+    {
+      "name": "Beautiful",
+      "songid": "73d7ca55",
+      "count": 61
+    },
+    {
+      "name": "Nice Boys",
+      "songid": "53d677a1",
+      "count": 61
+    },
+    {
+      "name": "I Wanna Be Your Dog",
+      "songid": "4bd7efb2",
+      "count": 59
+    },
+    {
+      "name": "You Ain't the First",
+      "songid": "53dab385",
+      "count": 54
+    },
+    {
+      "name": "Perhaps",
+      "songid": "5be7bf00",
+      "count": 53
+    },
+    {
+      "name": "Ziggy Stardust",
+      "songid": "3d7ed0b",
+      "count": 50
+    },
+    {
+      "name": "So Fine",
+      "songid": "23d7bc47",
+      "count": 49
+    },
+    {
+      "name": "T.V. Eye",
+      "songid": "73d26e05",
+      "count": 49
+    },
+    {
+      "name": "Riff Raff",
+      "songid": "5bd65794",
+      "count": 47
+    },
+    {
+      "name": "Robin Finck Guitar Solo",
+      "songid": "bd65162",
+      "count": 47
+    },
+    {
+      "name": "Dust n' Bones",
+      "songid": "63e4be93",
+      "count": 42
+    },
+    {
+      "name": "Glad to Be Here",
+      "songid": "6bdc667e",
+      "count": 40
+    },
+    {
+      "name": "Perfect Crime",
+      "songid": "6bd66636",
+      "count": 39
+    },
+    {
+      "name": "No Quarter",
+      "songid": "23d67073",
+      "count": 35
+    },
+    {
+      "name": "14 Years",
+      "songid": "33d6b4f9",
+      "count": 34
+    },
+    {
+      "name": "There Was a Time",
+      "songid": "13d06905",
+      "count": 33
+    },
+    {
+      "name": "Prostitute",
+      "songid": "23d45c87",
+      "count": 29
+    },
+    {
+      "name": "Angie",
+      "songid": "4bd6a3a2",
+      "count": 28
+    },
+    {
+      "name": "Dead Flowers",
+      "songid": "bd6f176",
+      "count": 28
+    },
+    {
+      "name": "If the World",
+      "songid": "2bd4649a",
+      "count": 28
+    },
+    {
+      "name": "Buckethead Guitar Solo",
+      "songid": "43d68b4b",
+      "count": 27
+    },
+    {
+      "name": "Objectify",
+      "songid": "53da530d",
+      "count": 27
+    },
+    {
+      "name": "Sabbath Bloody Sabbath",
+      "songid": "3d64d0f",
+      "count": 27
+    },
+    {
+      "name": "DJ Ashba Guitar Solo",
+      "songid": "23d4649f",
+      "count": 24
+    },
+    {
+      "name": "Abnormal",
+      "songid": "bd919ee",
+      "count": 23
+    },
+    {
+      "name": "Heartbreak Hotel",
+      "songid": "7bd6c2d0",
+      "count": 23
+    },
+    {
+      "name": "Jumpin' Jack Flash",
+      "songid": "bd61d86",
+      "count": 23
+    },
+    {
+      "name": "La Bella Vita",
+      "songid": "2bc7186a",
+      "count": 23
+    },
+    {
+      "name": "Back Off Bitch",
+      "songid": "23d69807",
+      "count": 21
+    },
+    {
+      "name": "The Garden",
+      "songid": "3bd7dcbc",
+      "count": 21
+    },
+    {
+      "name": "Locomotive",
+      "songid": "3bd60c38",
+      "count": 20
+    },
+    {
+      "name": "Don't Let It Bring You Down",
+      "songid": "2bd6e822",
+      "count": 19
+    },
+    {
+      "name": "My Generation",
+      "songid": "3bd678f8",
+      "count": 19
+    },
+    {
+      "name": "The General",
+      "songid": "7bde02fc",
+      "count": 19
+    },
+    {
+      "name": "Liquor & Whores",
+      "songid": "43d05b03",
+      "count": 16
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 15
+    },
+    {
+      "name": "Holidays in the Sun",
+      "songid": "23d7d427",
+      "count": 14
+    },
+    {
+      "name": "Raw Power",
+      "songid": "bd771fe",
+      "count": 13
+    },
+    {
+      "name": "Thunder and Lightning",
+      "songid": "3bd17c1c",
+      "count": 13
+    },
+    {
+      "name": "Human Being",
+      "songid": "4bd4bb7a",
+      "count": 12
+    },
+    {
+      "name": "Mi amor 2.0",
+      "songid": "1391457d",
+      "count": 12
+    },
+    {
+      "name": "People Get Ready",
+      "songid": "7bd66678",
+      "count": 12
+    },
+    {
+      "name": "Scraped",
+      "songid": "33d45c85",
+      "count": 12
+    },
+    {
+      "name": "Silver, Blue & Gold",
+      "songid": "43d21787",
+      "count": 11
+    },
+    {
+      "name": "Sonic Reducer",
+      "songid": "13d7b905",
+      "count": 11
+    },
+    {
+      "name": "Never Say Die",
+      "songid": "7bd4aed4",
+      "count": 10
+    },
+    {
+      "name": "Nothin'",
+      "songid": "339b3415",
+      "count": 10
+    },
+    {
+      "name": "Atlas",
+      "songid": "3b911470",
+      "count": 9
+    },
+    {
+      "name": "Right Next Door to Hell",
+      "songid": "6bd6567e",
+      "count": 9
+    },
+    {
+      "name": "Back in Black",
+      "songid": "2bd69812",
+      "count": 8
+    },
+    {
+      "name": "It's Alright",
+      "songid": "1bddf134",
+      "count": 8
+    },
+    {
+      "name": "Walk All Over You",
+      "songid": "7bd78660",
+      "count": 8
+    },
+    {
+      "name": "Angel",
+      "songid": "43d6a313",
+      "count": 6
+    },
+    {
+      "name": "I Got You (I Feel Good)",
+      "songid": "63d28633",
+      "count": 6
+    },
+    {
+      "name": "Riad n' the Bedouins",
+      "songid": "7be26e2c",
+      "count": 6
+    },
+    {
+      "name": "Bad Apples",
+      "songid": "23d69887",
+      "count": 5
+    },
+    {
+      "name": "Junior's Eyes",
+      "songid": "6bdaf24a",
+      "count": 5
+    },
+    {
+      "name": "You Gotta Move",
+      "songid": "23f8ac3f",
+      "count": 5
+    },
+    {
+      "name": "Oh My God",
+      "songid": "23d66cbb",
+      "count": 4
+    },
+    {
+      "name": "Hair of the Dog",
+      "songid": "7bd6c618",
+      "count": 3
+    },
+    {
+      "name": "It Tastes Good, Don't It?",
+      "songid": "63d626b3",
+      "count": 3
+    },
+    {
+      "name": "Marseilles",
+      "songid": "33dafc39",
+      "count": 3
+    },
+    {
+      "name": "Black Leather",
+      "songid": "7bcffe28",
+      "count": 2
+    },
+    {
+      "name": "Breakdown",
+      "songid": "13d68965",
+      "count": 2
+    },
+    {
+      "name": "Communication Breakdown",
+      "songid": "63d6fe07",
+      "count": 2
+    },
+    {
+      "name": "Don't Never Leave Me",
+      "songid": "43d4b78f",
+      "count": 2
+    },
+    {
+      "name": "Garden of Eden",
+      "songid": "3bd6cc50",
+      "count": 2
+    },
+    {
+      "name": "Honky Tonk Women",
+      "songid": "43d63b53",
+      "count": 2
+    },
+    {
+      "name": "Like a Hurricane",
+      "songid": "5bd18f44",
+      "count": 2
+    },
+    {
+      "name": "One in a Million",
+      "songid": "73d66e91",
+      "count": 2
+    },
+    {
+      "name": "Roland the Headless Thompson Gunner",
+      "songid": "5bd733a0",
+      "count": 2
+    },
+    {
+      "name": "Sailing",
+      "songid": "63fafeab",
+      "count": 2
+    },
+    {
+      "name": "Something",
+      "songid": "3bd448a0",
+      "count": 2
+    },
+    {
+      "name": "Sway",
+      "songid": "bd7ad56",
+      "count": 2
+    },
+    {
+      "name": "Teenage Kicks",
+      "songid": "13d7a9c9",
+      "count": 2
+    },
+    {
+      "name": "Ain't Goin' Down No More",
+      "songid": "23e1c467",
+      "count": 1
+    },
+    {
+      "name": "Always on the Run",
+      "songid": "3d6a117",
+      "count": 1
+    },
+    {
+      "name": "Back in the U.S.S.R.",
+      "songid": "33d3043d",
+      "count": 1
+    },
+    {
+      "name": "Chatterbox",
+      "songid": "7bd0a638",
+      "count": 1
+    },
+    {
+      "name": "Cornshucker",
+      "songid": "bd6f9be",
+      "count": 1
+    },
+    {
+      "name": "Don't Dream It's Over",
+      "songid": "1bd6e994",
+      "count": 1
+    },
+    {
+      "name": "Drift Away",
+      "songid": "bf24d32",
+      "count": 1
+    },
+    {
+      "name": "Goodnight Tonight",
+      "songid": "13d6c56d",
+      "count": 1
+    },
+    {
+      "name": "Indiana Ain't My Kinda Town",
+      "songid": "13f215e5",
+      "count": 1
+    },
+    {
+      "name": "Never Tear Us Apart",
+      "songid": "23d674fb",
+      "count": 1
+    },
+    {
+      "name": "Rock and Roll",
+      "songid": "1bd65108",
+      "count": 1
+    },
+    {
+      "name": "SOS",
+      "songid": "73d3ce61",
+      "count": 1
+    },
+    {
+      "name": "Take Me Home, Country Roads",
+      "songid": "5bd58ba8",
+      "count": 1
+    },
+    {
+      "name": "Tavaszi sz\u00e9l vizet \u00e1raszt",
+      "songid": "63c33217",
+      "count": 1
+    },
+    {
+      "name": "The Train Kept A-Rollin'",
+      "songid": "2bc53c9a",
+      "count": 1
+    },
+    {
+      "name": "Tie Your Mother Down",
+      "songid": "53d79719",
+      "count": 1
+    },
+    {
+      "name": "We Will Rock You",
+      "songid": "53d78381",
+      "count": 1
+    },
+    {
+      "name": "We're an American Band",
+      "songid": "63d7825f",
+      "count": 1
+    },
+    {
+      "name": "Welcome to the Jungle / Madagascar / Paradise City",
+      "songid": "4be3c3c2",
+      "count": 1
+    },
+    {
+      "name": "You Shook Me",
+      "songid": "3d52d83",
+      "count": 1
+    }
+  ]
+}

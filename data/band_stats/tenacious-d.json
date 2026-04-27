@@ -1,0 +1,859 @@
+{
+  "artist": "Tenacious D",
+  "slug": "tenacious-d",
+  "stats_id": "2bd6d4ae",
+  "mbid": "148ddea2-6839-4354-8e2c-5dfadf136b7f",
+  "fetched_at": "2026-04-27T12:31:56.070432Z",
+  "songs": [
+    {
+      "name": "Tribute",
+      "songid": "63d79287",
+      "count": 403
+    },
+    {
+      "name": "Fuck Her Gently",
+      "songid": "73d6d221",
+      "count": 372
+    },
+    {
+      "name": "Double Team",
+      "songid": "5bd6ebac",
+      "count": 354
+    },
+    {
+      "name": "Kickapoo",
+      "songid": "7bd61ed4",
+      "count": 294
+    },
+    {
+      "name": "Kielbasa",
+      "songid": "7bd61e98",
+      "count": 293
+    },
+    {
+      "name": "Sax-a-Boom",
+      "songid": "33f1dc19",
+      "count": 276
+    },
+    {
+      "name": "Dude (I Totally Miss You)",
+      "songid": "5bd6e748",
+      "count": 266
+    },
+    {
+      "name": "Wonderboy",
+      "songid": "23d7f43f",
+      "count": 264
+    },
+    {
+      "name": "Rize of the Fenix",
+      "songid": "3bdf68a0",
+      "count": 255
+    },
+    {
+      "name": "Low Hangin' Fruit",
+      "songid": "53dc5fad",
+      "count": 252
+    },
+    {
+      "name": "Roadie",
+      "songid": "4bd29f0a",
+      "count": 243
+    },
+    {
+      "name": "Beelzeboss (The Final Showdown)",
+      "songid": "23d694ef",
+      "count": 233
+    },
+    {
+      "name": "The Metal",
+      "songid": "1bd7c974",
+      "count": 230
+    },
+    {
+      "name": "Kyle Quit the Band",
+      "songid": "3bd7e06c",
+      "count": 206
+    },
+    {
+      "name": "Friendship",
+      "songid": "5bd6d3c8",
+      "count": 196
+    },
+    {
+      "name": "Dio",
+      "songid": "4bd6ef7e",
+      "count": 189
+    },
+    {
+      "name": "History",
+      "songid": "53d7c769",
+      "count": 135
+    },
+    {
+      "name": "The Road",
+      "songid": "4bd79fbe",
+      "count": 132
+    },
+    {
+      "name": "Throw Down",
+      "songid": "5bdc5b14",
+      "count": 118
+    },
+    {
+      "name": "Baby",
+      "songid": "7bd5be00",
+      "count": 104
+    },
+    {
+      "name": "Cosmic Shame",
+      "songid": "4bd27b7a",
+      "count": 104
+    },
+    {
+      "name": "Se\u00f1orita",
+      "songid": "5bdc5b10",
+      "count": 100
+    },
+    {
+      "name": "Pinball Wizard",
+      "songid": "2bd66062",
+      "count": 99
+    },
+    {
+      "name": "There's a Doctor",
+      "songid": "43d79b8f",
+      "count": 94
+    },
+    {
+      "name": "Flash",
+      "songid": "53d6d761",
+      "count": 86
+    },
+    {
+      "name": "The End",
+      "songid": "43d7a7b3",
+      "count": 86
+    },
+    {
+      "name": "You Never Give Me Your Money",
+      "songid": "23d5242f",
+      "count": 86
+    },
+    {
+      "name": "WOMAN TIME",
+      "songid": "5bf02768",
+      "count": 85
+    },
+    {
+      "name": "JB JR RAP",
+      "songid": "33f01c81",
+      "count": 84
+    },
+    {
+      "name": "POST-APOCALYPTO THEME (REPRISE)",
+      "songid": "63f02613",
+      "count": 84
+    },
+    {
+      "name": "SAVE THE WORLD",
+      "songid": "3bf01c80",
+      "count": 84
+    },
+    {
+      "name": "Sasquatch",
+      "songid": "73d44269",
+      "count": 81
+    },
+    {
+      "name": "Jesus Ranch",
+      "songid": "3bd27884",
+      "count": 78
+    },
+    {
+      "name": "Karate",
+      "songid": "43d61f17",
+      "count": 78
+    },
+    {
+      "name": "Deth Starr",
+      "songid": "bdfd522",
+      "count": 73
+    },
+    {
+      "name": "Lee",
+      "songid": "4bd6179a",
+      "count": 71
+    },
+    {
+      "name": "Warning",
+      "songid": "33d324ad",
+      "count": 68
+    },
+    {
+      "name": "To Be the Best",
+      "songid": "5bddbb78",
+      "count": 64
+    },
+    {
+      "name": "Rock Your Socks",
+      "songid": "3bd75060",
+      "count": 61
+    },
+    {
+      "name": "Blackbird",
+      "songid": "43d693d7",
+      "count": 59
+    },
+    {
+      "name": "Explosivo",
+      "songid": "6bd6def6",
+      "count": 59
+    },
+    {
+      "name": "Rock and Roll",
+      "songid": "1bd65108",
+      "count": 56
+    },
+    {
+      "name": "COLORS",
+      "songid": "33f024ed",
+      "count": 54
+    },
+    {
+      "name": "Rock is Dead",
+      "songid": "bdb5d0a",
+      "count": 53
+    },
+    {
+      "name": "DADDY DING DONG",
+      "songid": "3bf01c18",
+      "count": 52
+    },
+    {
+      "name": "FUCK YO-YO MA",
+      "songid": "2bf01c1a",
+      "count": 52
+    },
+    {
+      "name": "HOPE",
+      "songid": "43f01f67",
+      "count": 52
+    },
+    {
+      "name": "MAKING LOVE",
+      "songid": "23f01c2b",
+      "count": 52
+    },
+    {
+      "name": "ROBOT",
+      "songid": "23f01c1f",
+      "count": 52
+    },
+    {
+      "name": "TAKE US INTO SPACE",
+      "songid": "23f01c2f",
+      "count": 52
+    },
+    {
+      "name": "We Beat the Devil",
+      "songid": "6bc6d2b2",
+      "count": 52
+    },
+    {
+      "name": "The Ballad of Hollywood Jack and the Rage Kage",
+      "songid": "2bda1cb2",
+      "count": 51
+    },
+    {
+      "name": "POD",
+      "songid": "4bdad3f2",
+      "count": 47
+    },
+    {
+      "name": "Simply Jazz",
+      "songid": "bdd0d36",
+      "count": 46
+    },
+    {
+      "name": "I'm Roasted",
+      "songid": "43d0ff4b",
+      "count": 43
+    },
+    {
+      "name": "City Hall",
+      "songid": "2bd75066",
+      "count": 42
+    },
+    {
+      "name": "Master Exploder",
+      "songid": "5bd607bc",
+      "count": 41
+    },
+    {
+      "name": "Special Things",
+      "songid": "53d7bb2d",
+      "count": 41
+    },
+    {
+      "name": "Video Games",
+      "songid": "3bef5098",
+      "count": 39
+    },
+    {
+      "name": "Wicked Game",
+      "songid": "43d7fb43",
+      "count": 39
+    },
+    {
+      "name": "Good Times Bad Times",
+      "songid": "6bd6cac2",
+      "count": 38
+    },
+    {
+      "name": "The Spicy Meatball Song",
+      "songid": "63ef5297",
+      "count": 35
+    },
+    {
+      "name": "Fat Albert Theme",
+      "songid": "4bc23f0a",
+      "count": 33
+    },
+    {
+      "name": "Kyle Took a Bullet",
+      "songid": "2bcd20ca",
+      "count": 33
+    },
+    {
+      "name": "Spider-Man",
+      "songid": "73d91699",
+      "count": 29
+    },
+    {
+      "name": "Theme From Star Trek",
+      "songid": "1bf82930",
+      "count": 28
+    },
+    {
+      "name": "Land of the Lost Theme",
+      "songid": "43c23f0b",
+      "count": 27
+    },
+    {
+      "name": "Classico",
+      "songid": "73d5be01",
+      "count": 24
+    },
+    {
+      "name": "Papagenu (He's My Sassafrass)",
+      "songid": "3bd594ec",
+      "count": 24
+    },
+    {
+      "name": "5 Needs",
+      "songid": "4bdc5b16",
+      "count": 22
+    },
+    {
+      "name": "Car Chase City",
+      "songid": "7bd68674",
+      "count": 21
+    },
+    {
+      "name": "Chop Suey!",
+      "songid": "7bd68254",
+      "count": 21
+    },
+    {
+      "name": "Break In-City (Storm the Gate!)",
+      "songid": "7bd68e94",
+      "count": 20
+    },
+    {
+      "name": "Mr. Brownstone",
+      "songid": "6bd67ed6",
+      "count": 20
+    },
+    {
+      "name": "Summer of '69",
+      "songid": "5bd7b34c",
+      "count": 19
+    },
+    {
+      "name": "Jailbreak",
+      "songid": "5bd62344",
+      "count": 18
+    },
+    {
+      "name": "Hare Krishna",
+      "songid": "63e74a8f",
+      "count": 17
+    },
+    {
+      "name": "Holy Diver",
+      "songid": "33d6381d",
+      "count": 16
+    },
+    {
+      "name": "They Fucked Our Asses",
+      "songid": "5bd27b78",
+      "count": 16
+    },
+    {
+      "name": "The Government Totally Sucks",
+      "songid": "33d594ed",
+      "count": 15
+    },
+    {
+      "name": "Crazy Train",
+      "songid": "4bd6fb32",
+      "count": 14
+    },
+    {
+      "name": "(Don't Fear) The Reaper",
+      "songid": "4bd6bf26",
+      "count": 13
+    },
+    {
+      "name": "Hornet's Nest",
+      "songid": "53d0ff55",
+      "count": 13
+    },
+    {
+      "name": "Inward Singing",
+      "songid": "43d27b7f",
+      "count": 13
+    },
+    {
+      "name": "Paranoid Android",
+      "songid": "33d66439",
+      "count": 12
+    },
+    {
+      "name": "Kyle Flute Solo",
+      "songid": "1bc32978",
+      "count": 11
+    },
+    {
+      "name": "Pat Riley",
+      "songid": "1bdd1550",
+      "count": 10
+    },
+    {
+      "name": "Keep On Loving You",
+      "songid": "43d61f9f",
+      "count": 9
+    },
+    {
+      "name": "39",
+      "songid": "6bdd263e",
+      "count": 8
+    },
+    {
+      "name": "And Your Bird Can Sing",
+      "songid": "4bd6a342",
+      "count": 8
+    },
+    {
+      "name": "Heaven and Hell",
+      "songid": "3d63d67",
+      "count": 8
+    },
+    {
+      "name": "Malibu Nights",
+      "songid": "5bd27b7c",
+      "count": 8
+    },
+    {
+      "name": "New Zealand Nights",
+      "songid": "4bd80316",
+      "count": 8
+    },
+    {
+      "name": "The Wind",
+      "songid": "1bca296c",
+      "count": 8
+    },
+    {
+      "name": "Bowie",
+      "songid": "6bdd269e",
+      "count": 7
+    },
+    {
+      "name": "Butt Baby Boy",
+      "songid": "7bece654",
+      "count": 7
+    },
+    {
+      "name": "Sunshine of Your Love",
+      "songid": "63d7b27f",
+      "count": 7
+    },
+    {
+      "name": "The Osbournes (Rage Kage Remix)",
+      "songid": "63ece64b",
+      "count": 6
+    },
+    {
+      "name": "Jewish Demon",
+      "songid": "6bdc5246",
+      "count": 5
+    },
+    {
+      "name": "Lose Yourself",
+      "songid": "5bd60fa0",
+      "count": 5
+    },
+    {
+      "name": "Ohio",
+      "songid": "3bd66c84",
+      "count": 5
+    },
+    {
+      "name": "The Mob Rules",
+      "songid": "7bd7a2ac",
+      "count": 5
+    },
+    {
+      "name": "Airbag",
+      "songid": "1bd6a59c",
+      "count": 4
+    },
+    {
+      "name": "Find the Cost of Freedom",
+      "songid": "3d6d5d3",
+      "count": 4
+    },
+    {
+      "name": "Off the Wall",
+      "songid": "2bd1ac2e",
+      "count": 4
+    },
+    {
+      "name": "Sweet Child o' Mine",
+      "songid": "1bd4f908",
+      "count": 4
+    },
+    {
+      "name": "Cross Road Blues",
+      "songid": "43d51be7",
+      "count": 3
+    },
+    {
+      "name": "Don't You (Forget About Me)",
+      "songid": "5bd6eb68",
+      "count": 3
+    },
+    {
+      "name": "Don\u2019t Blow It, Kage",
+      "songid": "13e03555",
+      "count": 3
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 3
+    },
+    {
+      "name": "Heaven on Their Minds",
+      "songid": "5bd18bd8",
+      "count": 3
+    },
+    {
+      "name": "It's Late",
+      "songid": "13dd1551",
+      "count": 3
+    },
+    {
+      "name": "Moondance",
+      "songid": "33d67c99",
+      "count": 3
+    },
+    {
+      "name": "On Broadway",
+      "songid": "33c53885",
+      "count": 3
+    },
+    {
+      "name": "Viva Las Vegas",
+      "songid": "3bd7843c",
+      "count": 3
+    },
+    {
+      "name": "...Baby One More Time",
+      "songid": "bd6b92e",
+      "count": 2
+    },
+    {
+      "name": "America, Fuck Yeah",
+      "songid": "7bd4aa88",
+      "count": 2
+    },
+    {
+      "name": "Auld Lang Syne",
+      "songid": "73d02285",
+      "count": 2
+    },
+    {
+      "name": "Barracuda",
+      "songid": "7bd69afc",
+      "count": 2
+    },
+    {
+      "name": "Highway to Hell",
+      "songid": "6bd63e8a",
+      "count": 2
+    },
+    {
+      "name": "Kong",
+      "songid": "7bdc5244",
+      "count": 2
+    },
+    {
+      "name": "Quantum Leap",
+      "songid": "33dd005d",
+      "count": 2
+    },
+    {
+      "name": "Shred-a-Boom",
+      "songid": "13fadd1d",
+      "count": 2
+    },
+    {
+      "name": "Sunday Bloody Sunday",
+      "songid": "53d7b3d5",
+      "count": 2
+    },
+    {
+      "name": "Taxman",
+      "songid": "73d47211",
+      "count": 2
+    },
+    {
+      "name": "The Candy Man",
+      "songid": "7bc0aa78",
+      "count": 2
+    },
+    {
+      "name": "Thriller",
+      "songid": "33d794cd",
+      "count": 2
+    },
+    {
+      "name": "Time Has Come Today",
+      "songid": "7bd2ae5c",
+      "count": 2
+    },
+    {
+      "name": "UFO",
+      "songid": "43dbbb5b",
+      "count": 2
+    },
+    {
+      "name": "[Unknown] / Crazy Train / (Don't Fear) The Reaper / Mr. Brownstone  / The Wind / Saturday Night / I Love It Loud",
+      "songid": "4b96270a",
+      "count": 1
+    },
+    {
+      "name": "After Midnight",
+      "songid": "23d72827",
+      "count": 1
+    },
+    {
+      "name": "Bad",
+      "songid": "3bd6988c",
+      "count": 1
+    },
+    {
+      "name": "Big Bottom",
+      "songid": "53df7fb1",
+      "count": 1
+    },
+    {
+      "name": "Black Dog",
+      "songid": "23d690bb",
+      "count": 1
+    },
+    {
+      "name": "City of Orlando",
+      "songid": "13db0955",
+      "count": 1
+    },
+    {
+      "name": "Dream On",
+      "songid": "1bd6e540",
+      "count": 1
+    },
+    {
+      "name": "Dust in the Wind",
+      "songid": "5bd6e7f0",
+      "count": 1
+    },
+    {
+      "name": "Feel Like Makin' Love",
+      "songid": "63d6da4f",
+      "count": 1
+    },
+    {
+      "name": "Friendship (2006)",
+      "songid": "23edb4df",
+      "count": 1
+    },
+    {
+      "name": "Fuck the Bullshit",
+      "songid": "1bdb0954",
+      "count": 1
+    },
+    {
+      "name": "Gangnam Style",
+      "songid": "2bdb5492",
+      "count": 1
+    },
+    {
+      "name": "Go to the Mirror!",
+      "songid": "23d6c8c7",
+      "count": 1
+    },
+    {
+      "name": "Gotta Be... Movin' on Up",
+      "songid": "73f19221",
+      "count": 1
+    },
+    {
+      "name": "Hot Blooded",
+      "songid": "5bd63bb8",
+      "count": 1
+    },
+    {
+      "name": "I Want You Back",
+      "songid": "be91512",
+      "count": 1
+    },
+    {
+      "name": "It's Not Unusual",
+      "songid": "13f9c1dd",
+      "count": 1
+    },
+    {
+      "name": "Just What I Needed",
+      "songid": "43d5ab83",
+      "count": 1
+    },
+    {
+      "name": "Mary Jane's Last Dance",
+      "songid": "43d60707",
+      "count": 1
+    },
+    {
+      "name": "Monster",
+      "songid": "b9a55d2",
+      "count": 1
+    },
+    {
+      "name": "More Than a Feeling",
+      "songid": "53d76755",
+      "count": 1
+    },
+    {
+      "name": "Moving On Up",
+      "songid": "bd92d0e",
+      "count": 1
+    },
+    {
+      "name": "Oh My Golly!",
+      "songid": "23db5897",
+      "count": 1
+    },
+    {
+      "name": "One Note Song",
+      "songid": "3dd15eb",
+      "count": 1
+    },
+    {
+      "name": "Peaceful Easy Feeling",
+      "songid": "13db41ed",
+      "count": 1
+    },
+    {
+      "name": "Pinball Wizard / There's a Doctor / Go to the Mirror!",
+      "songid": "53ddbb61",
+      "count": 1
+    },
+    {
+      "name": "Polly",
+      "songid": "6bd6626e",
+      "count": 1
+    },
+    {
+      "name": "Rivers of Brown",
+      "songid": "2bdd005e",
+      "count": 1
+    },
+    {
+      "name": "Smells Like Teen Spirit",
+      "songid": "3d7bd4f",
+      "count": 1
+    },
+    {
+      "name": "So You Want to Be a Rock 'n' Roll Star",
+      "songid": "2bd7bcb6",
+      "count": 1
+    },
+    {
+      "name": "Spelling Bee",
+      "songid": "3bdac880",
+      "count": 1
+    },
+    {
+      "name": "Squeeze Box",
+      "songid": "63d7baf7",
+      "count": 1
+    },
+    {
+      "name": "Stop Your Sobbing",
+      "songid": "63dff26f",
+      "count": 1
+    },
+    {
+      "name": "Sweet Home Alabama",
+      "songid": "bd7ad06",
+      "count": 1
+    },
+    {
+      "name": "The Heart of Rock & Roll",
+      "songid": "53d74795",
+      "count": 1
+    },
+    {
+      "name": "Till There Was You",
+      "songid": "1bcfbdc0",
+      "count": 1
+    },
+    {
+      "name": "We Found Love",
+      "songid": "73de4a61",
+      "count": 1
+    },
+    {
+      "name": "Whip It",
+      "songid": "13d7f951",
+      "count": 1
+    },
+    {
+      "name": "Who Said We're Wack? / Diaper Money / Jack Sparrow / I'm on a Boat / Like a Boss / Motherlover / The Creep / Lazy Sunday",
+      "songid": "53f1c711",
+      "count": 1
+    },
+    {
+      "name": "Working for the Weekend",
+      "songid": "23d4d87f",
+      "count": 1
+    },
+    {
+      "name": "You're the One That I Want",
+      "songid": "33c978a1",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,1039 @@
+{
+  "artist": "Metallica",
+  "slug": "metallica",
+  "stats_id": "3bd680c8",
+  "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+  "fetched_at": "2026-04-27T12:32:11.259765Z",
+  "songs": [
+    {
+      "name": "Master of Puppets",
+      "songid": "4bd607a2",
+      "count": 1790
+    },
+    {
+      "name": "Creeping Death",
+      "songid": "5bd6fb14",
+      "count": 1669
+    },
+    {
+      "name": "Seek & Destroy",
+      "songid": "33d64895",
+      "count": 1640
+    },
+    {
+      "name": "For Whom the Bell Tolls",
+      "songid": "3d6d167",
+      "count": 1637
+    },
+    {
+      "name": "One",
+      "songid": "7bd66e08",
+      "count": 1631
+    },
+    {
+      "name": "Enter Sandman",
+      "songid": "bd6dd5a",
+      "count": 1450
+    },
+    {
+      "name": "Sad but True",
+      "songid": "1bd64ddc",
+      "count": 1429
+    },
+    {
+      "name": "Nothing Else Matters",
+      "songid": "73d67269",
+      "count": 1324
+    },
+    {
+      "name": "Fade to Black",
+      "songid": "bd6d9da",
+      "count": 1279
+    },
+    {
+      "name": "Welcome Home (Sanitarium)",
+      "songid": "73d782ad",
+      "count": 1042
+    },
+    {
+      "name": "Battery",
+      "songid": "3d6957b",
+      "count": 1012
+    },
+    {
+      "name": "Whiplash",
+      "songid": "bd7f956",
+      "count": 993
+    },
+    {
+      "name": "Wherever I May Roam",
+      "songid": "3d7f97f",
+      "count": 870
+    },
+    {
+      "name": "Harvester of Sorrow",
+      "songid": "23d6c0c7",
+      "count": 866
+    },
+    {
+      "name": "Last Caress",
+      "songid": "13d615a5",
+      "count": 833
+    },
+    {
+      "name": "Am I Evil?",
+      "songid": "bd6a1ee",
+      "count": 796
+    },
+    {
+      "name": "Guitar Solo",
+      "songid": "5bd6c730",
+      "count": 664
+    },
+    {
+      "name": "Fuel",
+      "songid": "6bd6d2d6",
+      "count": 581
+    },
+    {
+      "name": "The Four Horsemen",
+      "songid": "63d7a6bf",
+      "count": 580
+    },
+    {
+      "name": "Bass Solo",
+      "songid": "6bd69aba",
+      "count": 569
+    },
+    {
+      "name": "The Unforgiven",
+      "songid": "2bd79862",
+      "count": 557
+    },
+    {
+      "name": "Blackened",
+      "songid": "4bd693c2",
+      "count": 553
+    },
+    {
+      "name": "Ride the Lightning",
+      "songid": "53d657b9",
+      "count": 432
+    },
+    {
+      "name": "King Nothing",
+      "songid": "3d619cf",
+      "count": 392
+    },
+    {
+      "name": "Fight Fire With Fire",
+      "songid": "3d6d567",
+      "count": 364
+    },
+    {
+      "name": "Breadfan",
+      "songid": "73d68e9d",
+      "count": 344
+    },
+    {
+      "name": "Motorbreath",
+      "songid": "53d67f8d",
+      "count": 331
+    },
+    {
+      "name": "The Memory Remains",
+      "songid": "6bd7a2e6",
+      "count": 330
+    },
+    {
+      "name": "So What",
+      "songid": "3bd7bccc",
+      "count": 315
+    },
+    {
+      "name": "Damage, Inc.",
+      "songid": "2bd6f452",
+      "count": 312
+    },
+    {
+      "name": "...And Justice for All",
+      "songid": "13d6b929",
+      "count": 288
+    },
+    {
+      "name": "The Thing That Should Not Be",
+      "songid": "bd799da",
+      "count": 278
+    },
+    {
+      "name": "Of Wolf and Man",
+      "songid": "2bd66cfa",
+      "count": 266
+    },
+    {
+      "name": "Until It Sleeps",
+      "songid": "3bd788a8",
+      "count": 256
+    },
+    {
+      "name": "Through the Never",
+      "songid": "2bd7949e",
+      "count": 249
+    },
+    {
+      "name": "No Remorse",
+      "songid": "23d67063",
+      "count": 246
+    },
+    {
+      "name": "Hit the Lights",
+      "songid": "3d63913",
+      "count": 235
+    },
+    {
+      "name": "Bass/Guitar Solos",
+      "songid": "6bd69ab6",
+      "count": 234
+    },
+    {
+      "name": "Moth Into Flame",
+      "songid": "2bca388a",
+      "count": 224
+    },
+    {
+      "name": "The Day That Never Comes",
+      "songid": "2bd7a4a2",
+      "count": 222
+    },
+    {
+      "name": "Eye of the Beholder / Blackened / The Frayed Ends of Sanity / ...And Justice for All",
+      "songid": "1bfbdda4",
+      "count": 210
+    },
+    {
+      "name": "Cyanide",
+      "songid": "1bd6f548",
+      "count": 203
+    },
+    {
+      "name": "Kirk and Rob Doodle",
+      "songid": "3b97fc90",
+      "count": 202
+    },
+    {
+      "name": "Frantic",
+      "songid": "2bd6d006",
+      "count": 197
+    },
+    {
+      "name": "St. Anger",
+      "songid": "7bd7bad4",
+      "count": 184
+    },
+    {
+      "name": "Hardwired",
+      "songid": "4bcaa38a",
+      "count": 179
+    },
+    {
+      "name": "Ain't My Bitch",
+      "songid": "1bd6a5e4",
+      "count": 175
+    },
+    {
+      "name": "Phantom Lord",
+      "songid": "73d66689",
+      "count": 171
+    },
+    {
+      "name": "That Was Just Your Life",
+      "songid": "43d7abdb",
+      "count": 170
+    },
+    {
+      "name": "Stone Cold Crazy",
+      "songid": "43d7b7a7",
+      "count": 165
+    },
+    {
+      "name": "Bleeding Me",
+      "songid": "73d69231",
+      "count": 164
+    },
+    {
+      "name": "Disposable Heroes",
+      "songid": "4bd6ef92",
+      "count": 160
+    },
+    {
+      "name": "Broken, Beat & Scarred",
+      "songid": "33d688c9",
+      "count": 156
+    },
+    {
+      "name": "The End of the Line",
+      "songid": "43d7a78f",
+      "count": 150
+    },
+    {
+      "name": "No Leaf Clover",
+      "songid": "3d67117",
+      "count": 149
+    },
+    {
+      "name": "Leper Messiah",
+      "songid": "63d6162b",
+      "count": 139
+    },
+    {
+      "name": "(Anesthesia) Pulling Teeth",
+      "songid": "5bdfdfe0",
+      "count": 138
+    },
+    {
+      "name": "Eye of the Beholder",
+      "songid": "73d6debd",
+      "count": 137
+    },
+    {
+      "name": "Now That We're Dead",
+      "songid": "43ca3763",
+      "count": 130
+    },
+    {
+      "name": "Atlas, Rise!",
+      "songid": "5bca376c",
+      "count": 129
+    },
+    {
+      "name": "The Call of Ktulu",
+      "songid": "13d7a59d",
+      "count": 122
+    },
+    {
+      "name": "Die, Die My Darling",
+      "songid": "23d6ecf3",
+      "count": 121
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "23d6e407",
+      "count": 117
+    },
+    {
+      "name": "Orion",
+      "songid": "2bd6689e",
+      "count": 115
+    },
+    {
+      "name": "Holier Than Thou",
+      "songid": "2bd6384a",
+      "count": 110
+    },
+    {
+      "name": "Whiskey in the Jar",
+      "songid": "3d10107",
+      "count": 106
+    },
+    {
+      "name": "The God That Failed",
+      "songid": "1bd7a124",
+      "count": 104
+    },
+    {
+      "name": "All Nightmare Long",
+      "songid": "5bd6a7f4",
+      "count": 103
+    },
+    {
+      "name": "Wasting My Hate",
+      "songid": "23d7806f",
+      "count": 101
+    },
+    {
+      "name": "The Shortest Straw",
+      "songid": "6bd79e12",
+      "count": 99
+    },
+    {
+      "name": "Jump in the Fire",
+      "songid": "bd61d9e",
+      "count": 97
+    },
+    {
+      "name": "I Disappear",
+      "songid": "63d63673",
+      "count": 94
+    },
+    {
+      "name": "Metal Militia",
+      "songid": "33d600bd",
+      "count": 94
+    },
+    {
+      "name": "Turn the Page",
+      "songid": "2bd78cae",
+      "count": 94
+    },
+    {
+      "name": "Blitzkrieg",
+      "songid": "73d692c1",
+      "count": 91
+    },
+    {
+      "name": "Halo on Fire",
+      "songid": "53ca3761",
+      "count": 90
+    },
+    {
+      "name": "Seek & Destroy / Fight Fire With Fire",
+      "songid": "23d6488b",
+      "count": 81
+    },
+    {
+      "name": "Hero of the Day",
+      "songid": "43d63f57",
+      "count": 74
+    },
+    {
+      "name": "Ride the Lightning / No Remorse / Hit the Lights / The Four Horsemen / Seek & Destroy / Fight Fire With Fire",
+      "songid": "53f82fc5",
+      "count": 71
+    },
+    {
+      "name": "Low Man's Lyric",
+      "songid": "3bd608bc",
+      "count": 66
+    },
+    {
+      "name": "Helpless",
+      "songid": "23d63c1b",
+      "count": 65
+    },
+    {
+      "name": "Overkill",
+      "songid": "7bd66a14",
+      "count": 64
+    },
+    {
+      "name": "Spit Out the Bone",
+      "songid": "43ca375b",
+      "count": 61
+    },
+    {
+      "name": "Lux \u00c6terna",
+      "songid": "3e15507",
+      "count": 56
+    },
+    {
+      "name": "Dirty Window",
+      "songid": "43d6ef1b",
+      "count": 51
+    },
+    {
+      "name": "Ride the Lightning / No Remorse / The Four Horsemen / Phantom Lord / Fight Fire With Fire",
+      "songid": "43fb2f93",
+      "count": 50
+    },
+    {
+      "name": "Devil's Dance",
+      "songid": "1bd6ed7c",
+      "count": 44
+    },
+    {
+      "name": "Lords of Summer",
+      "songid": "3c4b907",
+      "count": 41
+    },
+    {
+      "name": "If Darkness Had a Son",
+      "songid": "3ee4d7f",
+      "count": 40
+    },
+    {
+      "name": "My Apocalypse",
+      "songid": "1bd67988",
+      "count": 37
+    },
+    {
+      "name": "72 Seasons",
+      "songid": "5beed764",
+      "count": 36
+    },
+    {
+      "name": "Dyers Eve",
+      "songid": "4bd6e7da",
+      "count": 35
+    },
+    {
+      "name": "Mechanix",
+      "songid": "3d60167",
+      "count": 33
+    },
+    {
+      "name": "The Prince",
+      "songid": "23d79cb7",
+      "count": 33
+    },
+    {
+      "name": "Confusion",
+      "songid": "5bca3760",
+      "count": 31
+    },
+    {
+      "name": "The Judas Kiss",
+      "songid": "5bd7a37c",
+      "count": 30
+    },
+    {
+      "name": "Mastertarium",
+      "songid": "4bd60782",
+      "count": 29
+    },
+    {
+      "name": "Trapped Under Ice",
+      "songid": "73d79201",
+      "count": 29
+    },
+    {
+      "name": "The Wait",
+      "songid": "33d79821",
+      "count": 28
+    },
+    {
+      "name": "Shadows Follow",
+      "songid": "3bef0050",
+      "count": 26
+    },
+    {
+      "name": "Here Comes Revenge",
+      "songid": "4bca3766",
+      "count": 22
+    },
+    {
+      "name": "Orion / To Live Is to Die / The Call of Ktulu",
+      "songid": "43c9eb6f",
+      "count": 22
+    },
+    {
+      "name": "Dream No More",
+      "songid": "4bca3762",
+      "count": 21
+    },
+    {
+      "name": "My Friend of Misery",
+      "songid": "13d4e995",
+      "count": 21
+    },
+    {
+      "name": "Don't Tread on Me",
+      "songid": "3d7311f",
+      "count": 20
+    },
+    {
+      "name": "Screaming Suicide",
+      "songid": "43eed767",
+      "count": 20
+    },
+    {
+      "name": "The Struggle Within",
+      "songid": "2bd7c41e",
+      "count": 20
+    },
+    {
+      "name": "Too Far Gone?",
+      "songid": "3bef0054",
+      "count": 19
+    },
+    {
+      "name": "Killing Time",
+      "songid": "1bd61908",
+      "count": 18
+    },
+    {
+      "name": "The Unnamed Feeling",
+      "songid": "2bd7985e",
+      "count": 17
+    },
+    {
+      "name": "Hell and Back",
+      "songid": "2bdfd4ca",
+      "count": 16
+    },
+    {
+      "name": "The Outlaw Torn",
+      "songid": "2bd79c76",
+      "count": 16
+    },
+    {
+      "name": "Inamorata",
+      "songid": "63ef020f",
+      "count": 13
+    },
+    {
+      "name": "You Must Burn!",
+      "songid": "bef714e",
+      "count": 13
+    },
+    {
+      "name": "Green Hell",
+      "songid": "3bd6c420",
+      "count": 12
+    },
+    {
+      "name": "The Frayed Ends of Sanity",
+      "songid": "bd7d902",
+      "count": 12
+    },
+    {
+      "name": "2 X 4",
+      "songid": "13dfc1b9",
+      "count": 10
+    },
+    {
+      "name": "The Unforgiven III",
+      "songid": "73d74e2d",
+      "count": 10
+    },
+    {
+      "name": "All Within My Hands",
+      "songid": "63d6a633",
+      "count": 8
+    },
+    {
+      "name": "Satan's Fall / Curse of the Pharaohs / A Corpse Without Soul / Into the Coven / Evil",
+      "songid": "43d9eb97",
+      "count": 8
+    },
+    {
+      "name": "The Ecstasy of Gold",
+      "songid": "7bd75e40",
+      "count": 7
+    },
+    {
+      "name": "The Small Hours",
+      "songid": "73d79ee5",
+      "count": 7
+    },
+    {
+      "name": "The Unforgiven II",
+      "songid": "33d79861",
+      "count": 7
+    },
+    {
+      "name": "Too Late Too Late",
+      "songid": "33cf1ccd",
+      "count": 7
+    },
+    {
+      "name": "Let It Loose",
+      "songid": "2bd7ec32",
+      "count": 6
+    },
+    {
+      "name": "Sabbra Cadabra",
+      "songid": "3d64d03",
+      "count": 6
+    },
+    {
+      "name": "Commando",
+      "songid": "7bd6fe18",
+      "count": 5
+    },
+    {
+      "name": "Sleepwalk My Life Away",
+      "songid": "4beed766",
+      "count": 5
+    },
+    {
+      "name": "Tuesday's Gone",
+      "songid": "33d78c25",
+      "count": 5
+    },
+    {
+      "name": "When a Blind Man Cries",
+      "songid": "43d29f93",
+      "count": 5
+    },
+    {
+      "name": "- Human",
+      "songid": "73d6bec5",
+      "count": 4
+    },
+    {
+      "name": "Carpe Diem Baby",
+      "songid": "2bd7c42a",
+      "count": 4
+    },
+    {
+      "name": "Please Don't Judas Me",
+      "songid": "43d66347",
+      "count": 4
+    },
+    {
+      "name": "Poor Twisted Me",
+      "songid": "63d66233",
+      "count": 4
+    },
+    {
+      "name": "Sucking My Love",
+      "songid": "23d7b027",
+      "count": 4
+    },
+    {
+      "name": "The New Song",
+      "songid": "13d79d29",
+      "count": 4
+    },
+    {
+      "name": "The Other New Song",
+      "songid": "3d79d83",
+      "count": 4
+    },
+    {
+      "name": "American Bad Ass",
+      "songid": "3d6a18b",
+      "count": 3
+    },
+    {
+      "name": "Damage Case",
+      "songid": "23d6f467",
+      "count": 3
+    },
+    {
+      "name": "Earache My Eye",
+      "songid": "63d442ff",
+      "count": 3
+    },
+    {
+      "name": "Hole in the Sky",
+      "songid": "23d6386b",
+      "count": 3
+    },
+    {
+      "name": "I Just Want to Celebrate",
+      "songid": "bd0bd12",
+      "count": 3
+    },
+    {
+      "name": "Iron Man",
+      "songid": "5bd627c0",
+      "count": 3
+    },
+    {
+      "name": "London Dungeon",
+      "songid": "33d60c09",
+      "count": 3
+    },
+    {
+      "name": "Rapid Fire",
+      "songid": "33d65881",
+      "count": 3
+    },
+    {
+      "name": "Ride the Lightning / No Remorse / Hit the Lights / The Four Horsemen / Phantom Lord / Fight Fire With Fire",
+      "songid": "4bfb2f96",
+      "count": 3
+    },
+    {
+      "name": "Some Kind of Monster",
+      "songid": "4bd7bfca",
+      "count": 3
+    },
+    {
+      "name": "53rd & 3rd",
+      "songid": "1bd7494c",
+      "count": 2
+    },
+    {
+      "name": "Blind",
+      "songid": "73d69211",
+      "count": 2
+    },
+    {
+      "name": "Brothers in Arms",
+      "songid": "7bd28290",
+      "count": 2
+    },
+    {
+      "name": "Clampdown",
+      "songid": "bd7e536",
+      "count": 2
+    },
+    {
+      "name": "Clown",
+      "songid": "3bd6fc58",
+      "count": 2
+    },
+    {
+      "name": "Dead Kennedy Rolls",
+      "songid": "13d6f151",
+      "count": 2
+    },
+    {
+      "name": "Fortunate Son",
+      "songid": "1bd6d19c",
+      "count": 2
+    },
+    {
+      "name": "Head Injury",
+      "songid": "63dea6db",
+      "count": 2
+    },
+    {
+      "name": "Iron Foundry",
+      "songid": "2bfc7436",
+      "count": 2
+    },
+    {
+      "name": "ManUNkind",
+      "songid": "43ca3767",
+      "count": 2
+    },
+    {
+      "name": "Motorcycle Man",
+      "songid": "63d67e7b",
+      "count": 2
+    },
+    {
+      "name": "Mr. Soul",
+      "songid": "1bd71910",
+      "count": 2
+    },
+    {
+      "name": "Orion / To Live Is to Die",
+      "songid": "73c96ee1",
+      "count": 2
+    },
+    {
+      "name": "Paranoid",
+      "songid": "3bd66444",
+      "count": 2
+    },
+    {
+      "name": "Ride the Lightning / No Remorse / Hit the Lights / The Four Horsemen / Seek & Destroy / Phantom Lord / Fight Fire With Fire",
+      "songid": "5bf82fc4",
+      "count": 2
+    },
+    {
+      "name": "Scythian Suite, op. 20: II. The Enemy God and the Dance of the Black Spirits",
+      "songid": "3bf9a8b4",
+      "count": 2
+    },
+    {
+      "name": "Stone Dead Forever",
+      "songid": "4bd7b79a",
+      "count": 2
+    },
+    {
+      "name": "Suicide & Redemption",
+      "songid": "2bd7b0aa",
+      "count": 2
+    },
+    {
+      "name": "The Money Will Roll Right In",
+      "songid": "4bd2b726",
+      "count": 2
+    },
+    {
+      "name": "Veteran of the Psychic Wars",
+      "songid": "3bd39c10",
+      "count": 2
+    },
+    {
+      "name": "White Light/White Heat",
+      "songid": "33d71889",
+      "count": 2
+    },
+    {
+      "name": "(We Are) The Road Crew",
+      "songid": "6bd6be42",
+      "count": 1
+    },
+    {
+      "name": "All Day and All of the Night",
+      "songid": "33d42015",
+      "count": 1
+    },
+    {
+      "name": "All Your Lies",
+      "songid": "33d150b1",
+      "count": 1
+    },
+    {
+      "name": "Are You Gonna Go My Way? / Smells Like Teen Spirit / Seven Nation Army / Beat It",
+      "songid": "4bd13716",
+      "count": 1
+    },
+    {
+      "name": "Away From Home",
+      "songid": "5bf8a3d0",
+      "count": 1
+    },
+    {
+      "name": "Borderline",
+      "songid": "4bc38f76",
+      "count": 1
+    },
+    {
+      "name": "Counting",
+      "songid": "3bd6f848",
+      "count": 1
+    },
+    {
+      "name": "Crash Course in Brain Surgery",
+      "songid": "33d6f899",
+      "count": 1
+    },
+    {
+      "name": "Detroit Rock City",
+      "songid": "7bd6f2c4",
+      "count": 1
+    },
+    {
+      "name": "Diary of a Madman",
+      "songid": "1bd6edd0",
+      "count": 1
+    },
+    {
+      "name": "Escape",
+      "songid": "1bd6dda4",
+      "count": 1
+    },
+    {
+      "name": "Fixxxer",
+      "songid": "33d6d48d",
+      "count": 1
+    },
+    {
+      "name": "Funeral for a Friend/Love Lies Bleeding",
+      "songid": "7bd6d28c",
+      "count": 1
+    },
+    {
+      "name": "Hate Train",
+      "songid": "53dfdf09",
+      "count": 1
+    },
+    {
+      "name": "Hit the Lights / Enter Sandman / Blackened / Creeping Death / Battery",
+      "songid": "13d0bd15",
+      "count": 1
+    },
+    {
+      "name": "Iced Honey",
+      "songid": "73dfa6ad",
+      "count": 1
+    },
+    {
+      "name": "In My Life",
+      "songid": "43d7634f",
+      "count": 1
+    },
+    {
+      "name": "It's Electric",
+      "songid": "bd6213a",
+      "count": 1
+    },
+    {
+      "name": "It's Killing Me",
+      "songid": "73e156f1",
+      "count": 1
+    },
+    {
+      "name": "Johnny Blade",
+      "songid": "33ca44d5",
+      "count": 1
+    },
+    {
+      "name": "Jumpin' Jack Flash",
+      "songid": "bd61d86",
+      "count": 1
+    },
+    {
+      "name": "Just a Bullet Away",
+      "songid": "33dfd8d1",
+      "count": 1
+    },
+    {
+      "name": "Mama Said",
+      "songid": "3d605bf",
+      "count": 1
+    },
+    {
+      "name": "Now I Wanna Sniff Some Glue",
+      "songid": "6bd672da",
+      "count": 1
+    },
+    {
+      "name": "Only Happy When It Rains",
+      "songid": "1bd669b4",
+      "count": 1
+    },
+    {
+      "name": "Rebel of Babylon",
+      "songid": "1bdfd1c0",
+      "count": 1
+    },
+    {
+      "name": "Somebody's Gotta Feel This / Fist of Rage",
+      "songid": "4bd4c33e",
+      "count": 1
+    },
+    {
+      "name": "South of Heaven",
+      "songid": "33d7b8e9",
+      "count": 1
+    },
+    {
+      "name": "Sweet Amber",
+      "songid": "1bd7ad44",
+      "count": 1
+    },
+    {
+      "name": "Sweet Jane",
+      "songid": "1bd7adfc",
+      "count": 1
+    },
+    {
+      "name": "T.V. Eye",
+      "songid": "73d26e05",
+      "count": 1
+    },
+    {
+      "name": "The Chase Is Better Than the Catch",
+      "songid": "3bd3b810",
+      "count": 1
+    },
+    {
+      "name": "The House of the Rising Sun",
+      "songid": "5bc01fc0",
+      "count": 1
+    },
+    {
+      "name": "The Train Kept A-Rollin'",
+      "songid": "2bc53c9a",
+      "count": 1
+    },
+    {
+      "name": "The View",
+      "songid": "1bdfa16c",
+      "count": 1
+    },
+    {
+      "name": "To Live Is to Die",
+      "songid": "3d7d903",
+      "count": 1
+    },
+    {
+      "name": "Today Your Love, Tomorrow the World",
+      "songid": "3dd712f",
+      "count": 1
+    },
+    {
+      "name": "You Really Got Me",
+      "songid": "2bd7f096",
+      "count": 1
+    }
+  ]
+}

@@ -44,12 +44,16 @@ function saveOverrides() {
    DATA LOADING
    ============================================================ */
 async function loadData() {
-  const [c, p, imagesCsv, bandsCsv, setlists] = await Promise.all([
+  const [c, p, imagesCsv, bandsCsv, setlists, bucketList] = await Promise.all([
     fetch("data/concerts.json").then(r => r.json()),
     fetch("data/posters.json").then(r => r.json()),
     fetch("data/poster_images.csv").then(r => r.ok ? r.text() : "").catch(() => ""),
     fetch("data/band_images.csv").then(r => r.ok ? r.text() : "").catch(() => ""),
     fetch("data/setlists.json").then(r => r.ok ? r.json() : {}).catch(() => ({})),
+    // bucket_list.json is optional — if missing, the bucket-list features
+    // simply don't render. This lets the app work on a fresh clone that
+    // hasn't run the prefetch_band_*.py scripts yet.
+    fetch("data/bucket_list.json").then(r => r.ok ? r.json() : null).catch(() => null),
   ]);
   // This app is backward-looking only — filter out any future-dated shows
   const today = new Date();
@@ -58,6 +62,7 @@ async function loadData() {
   STATE.posterImages = parsePosterImagesCSV(imagesCsv);
   STATE.bandImages = parseBandImagesCSV(bandsCsv);
   STATE.setlists = setlists || {};
+  STATE.bucketList = bucketList;  // null if not generated; check before use
 
   Object.entries(STATE.stateNames).forEach(([code, name]) => {
     STATE.stateCodes[name.toLowerCase()] = code;
@@ -152,6 +157,7 @@ const ROUTES = {
   "#/posters": renderPosters,
   "#/songs": renderSongs,
   "#/stats": renderStats,
+  "#/bucket-list": renderBucketList,
   "#/about": renderAbout,
 };
 
@@ -3386,14 +3392,16 @@ function renderStats() {
 
     const songsView = (() => {
       const v = (statsParams.get("songsView") || "").toLowerCase();
-      return v === "topPerBand".toLowerCase() ? "topPerBand" : "heard";
+      if (v === "topperband") return "topPerBand";
+      if (v === "unheardlive") return "unheardLive";
+      return "heard";
     })();
 
     if (topSongs.length === 0 && artistSongLeaders.length === 0) return;
 
     const songsPicker = el("select", {
       class: "leaderboard-role-toggle",
-      title: "Switch between most-heard songs and top song per band",
+      title: "Switch between most-heard songs, top song per band, and unheard live",
       on: { change: e => {
         const next = e.target.value;
         const [route, queryStr] = (location.hash || "#/stats").split("?");
@@ -3407,7 +3415,8 @@ function renderStats() {
     });
     [
       ["heard", "Most-heard songs"],
-      ["topPerBand", "Top song per band"]
+      ["topPerBand", "Top song per band"],
+      ["unheardLive", "Unheard live"]
     ].forEach(([val, label]) => {
       const o = el("option", { value: val }, label);
       if (val === songsView) o.selected = true;
@@ -3424,6 +3433,8 @@ function renderStats() {
     // Most-heard view: rows click → Song Insights modal showing every play.
     // Top-per-band view: rows click → Songs page filtered to that artist
     // (preserves existing behavior; the song is just informational here).
+    // Unheard-live view: rows click → Artist Insights modal (which now
+    // includes the per-band bucket-list section). Song name is informational.
     if (songsView === "heard" && topSongs.length > 0) {
       songsCard.appendChild(el("ol", {}, ...topSongs.map((s, i) =>
         el("li", {
@@ -3455,6 +3466,35 @@ function renderStats() {
           el("span", { class: "count" }, `${e.count}×`)
         )
       )));
+    } else if (songsView === "unheardLive") {
+      const bucketData = STATE.bucketList;
+      const flat = bucketData && bucketData.flatUnheard ? bucketData.flatUnheard : [];
+      const top = flat.slice(0, 15);
+      if (top.length === 0) {
+        songsCard.appendChild(el("p", { class: "song-stats-note", style: "padding:12px 0;" },
+          "No bucket-list data yet — run the prefetch scripts and rebuild to populate this list."
+        ));
+      } else {
+        // Mini-blurb above the list, plus a link to the full bucket-list page.
+        songsCard.appendChild(el("p", { class: "song-stats-note", style: "padding:8px 0 0;" },
+          "Songs the bands you've seen 2+ times play live, that you've never heard. ",
+          el("a", { href: "#/bucket-list" }, "See the full list →")
+        ));
+        songsCard.appendChild(el("ol", {}, ...top.map((r, i) =>
+          el("li", {
+            on: { click: () => openArtistInsightsModal(r.band) },
+            style: "cursor:pointer;",
+            title: `Click for ${r.band} band insights`
+          },
+            el("span", { class: "rank" }, String(i + 1).padStart(2, "0")),
+            el("span", { class: "name" },
+              el("strong", {}, r.song),
+              el("span", { class: "song-artist" }, ` — ${r.band}`)
+            ),
+            el("span", { class: "count" }, `${r.playCount}×`)
+          )
+        )));
+      }
     }
     songsCard.style.marginTop = "16px";
     app.appendChild(songsCard);
@@ -4291,6 +4331,108 @@ function renderAbout() {
 }
 
 /* ============================================================
+   BUCKET LIST VIEW
+   ============================================================ */
+function renderBucketList() {
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+
+  const wrap = el("section", { class: "bucket-list-page" });
+
+  // Header / intro
+  wrap.appendChild(el("h2", { style: "margin-bottom:8px;" }, "Bucket List"));
+
+  const data = STATE.bucketList;
+  if (!data || !data.bands || Object.keys(data.bands).length === 0) {
+    wrap.appendChild(el("p", { class: "bucket-empty" },
+      "No bucket-list data yet. Run ",
+      el("code", {}, "prefetch_band_mbids.py"),
+      ", ",
+      el("code", {}, "prefetch_band_stats.py"),
+      ", and ",
+      el("code", {}, "build_data.py"),
+      " to generate it."
+    ));
+    app.appendChild(wrap);
+    return;
+  }
+
+  const bandCount = Object.keys(data.bands).length;
+  const totalUnheard = data.flatUnheard.length;
+
+  wrap.appendChild(el("p", { class: "bucket-list-intro" },
+    `Songs the bands you've seen 2+ times play live, ranked by how often they play them, ` +
+    `that you've never heard. ${totalUnheard.toLocaleString()} songs across ${bandCount} bands. ` +
+    `The top of this list is what you're most likely to hear next time.`
+  ));
+
+  // Filter chip: "All bands" or pick a specific band to filter to
+  const params = new URLSearchParams((location.hash || "#/bucket-list").split("?")[1] || "");
+  const bandFilter = params.get("band") || "";
+
+  const filterBar = el("div", { class: "bucket-filter-bar" });
+  const filterLabel = el("label", { class: "bucket-filter-label" }, "Filter by band: ");
+  const filterSelect = el("select", {
+    class: "leaderboard-role-toggle bucket-filter-select",
+    on: { change: e => {
+      const next = e.target.value;
+      const [route, qs] = (location.hash || "#/bucket-list").split("?");
+      const p = new URLSearchParams(qs || "");
+      if (next) p.set("band", next);
+      else p.delete("band");
+      const newHash = route + (p.toString() ? "?" + p.toString() : "");
+      history.replaceState(null, "", newHash);
+      renderBucketList();
+    }}
+  });
+  filterSelect.appendChild(el("option", { value: "" }, `All bands (${bandCount})`));
+  // Sort band options by show count descending — same order as Stats most-seen.
+  const bandsForFilter = Object.entries(data.bands)
+    .sort((a, b) => b[1].showsAttended - a[1].showsAttended);
+  bandsForFilter.forEach(([name, info]) => {
+    const o = el("option", { value: name },
+      `${name} (${info.unheard.length} unheard / ${info.totalLiveSongs})`);
+    if (name === bandFilter) o.selected = true;
+    filterSelect.appendChild(o);
+  });
+  filterBar.appendChild(filterLabel);
+  filterBar.appendChild(filterSelect);
+  wrap.appendChild(filterBar);
+
+  // Build the list — flat across bands, or filtered to one
+  const rows = bandFilter
+    ? data.flatUnheard.filter(r => r.band === bandFilter)
+    : data.flatUnheard;
+
+  if (rows.length === 0) {
+    wrap.appendChild(el("p", { class: "bucket-empty" },
+      "Nothing here. You've heard everything they play live!"
+    ));
+    app.appendChild(wrap);
+    return;
+  }
+
+  const list = el("ol", { class: "bucket-flat-list" });
+  rows.forEach((r, i) => {
+    list.appendChild(el("li", { class: "bucket-flat-row" },
+      el("span", { class: "rank" }, String(i + 1).padStart(3, "0")),
+      el("span", { class: "bucket-flat-song" }, r.song),
+      el("span", {
+        class: "bucket-flat-band",
+        on: { click: () => openArtistInsightsModal(r.band) },
+        style: "cursor:pointer;",
+        title: `Open band insights for ${r.band}`,
+      }, r.band),
+      el("span", { class: "bucket-flat-count", title: `Played ${r.playCount} times` },
+        `${r.playCount}×`)
+    ));
+  });
+  wrap.appendChild(list);
+
+  app.appendChild(wrap);
+}
+
+/* ============================================================
    MODAL INFRASTRUCTURE
    ============================================================ */
 const modal = document.getElementById("modal");
@@ -4935,6 +5077,28 @@ function openPlacesHeatmapModal(kind, entries) {
 }
 
 /**
+ * Resolve an artist display name to their bucket-list entry, if one exists.
+ * Bucket-list data is keyed by the artist name *as it appears in setlist.fm
+ * search results*, which may differ slightly from the user's spreadsheet
+ * spelling (e.g., curly quotes, "The" prefix). This does an exact match first
+ * then a normalized fallback.
+ *
+ * Returns the band entry (with showsAttended/coverage/heard/unheard) or null.
+ */
+function getBucketListBand(artistName) {
+  if (!STATE.bucketList || !STATE.bucketList.bands) return null;
+  const bands = STATE.bucketList.bands;
+  // Exact match
+  if (bands[artistName]) return bands[artistName];
+  // Normalized match — same logic as normalizeArtistKey for cross-source matching
+  const targetKey = normalizeArtistKey(artistName);
+  for (const [k, v] of Object.entries(bands)) {
+    if (normalizeArtistKey(k) === targetKey) return v;
+  }
+  return null;
+}
+
+/**
  * Open a modal showing every time the user heard a specific song live.
  * Lists each play with date, venue, and the band that played it.
  * Useful for answering "when did I hear Sober?" — the X-ray view.
@@ -5128,6 +5292,69 @@ function openArtistInsightsModal(artistName) {
     list.appendChild(item);
   });
   modalBody.appendChild(list);
+
+  // Bucket list section — songs the band has played live and which you
+  // have / haven't heard. Only renders when bucket_list.json has data for
+  // this band (which means: headliner seen 2+ times in your collection).
+  const bucketBand = getBucketListBand(artistName);
+  if (bucketBand) {
+    modalBody.appendChild(el("h4", { class: "artist-section-h" }, "Songs"));
+    const coveragePct = Math.round(bucketBand.coverage * 100);
+    const subtitle = el("p", { class: "artist-strip-desc" },
+      `Of ${bucketBand.totalLiveSongs} songs this band has ever played live, ` +
+      `you've heard ${bucketBand.heardCount}.`
+    );
+    modalBody.appendChild(subtitle);
+
+    // Three small KPI tiles: heard / coverage / unheard
+    const kpis = el("div", { class: "bucket-kpis" });
+    kpis.appendChild(el("div", { class: "bucket-kpi" },
+      el("div", { class: "bucket-kpi-num" }, `${bucketBand.heardCount} / ${bucketBand.totalLiveSongs}`),
+      el("div", { class: "bucket-kpi-label" }, "heard")
+    ));
+    kpis.appendChild(el("div", { class: "bucket-kpi" },
+      el("div", { class: "bucket-kpi-num" }, `${coveragePct}%`),
+      el("div", { class: "bucket-kpi-label" }, "coverage")
+    ));
+    kpis.appendChild(el("div", { class: "bucket-kpi" },
+      el("div", { class: "bucket-kpi-num" }, String(bucketBand.unheard.length)),
+      el("div", { class: "bucket-kpi-label" }, "unheard")
+    ));
+    modalBody.appendChild(kpis);
+
+    // Unheard list — leads, since this is the actionable info
+    if (bucketBand.unheard.length > 0) {
+      modalBody.appendChild(el("h5", { class: "bucket-list-h" }, "Songs you've never heard live"));
+      const unheardList = el("ol", { class: "bucket-song-list" });
+      bucketBand.unheard.forEach(s => {
+        unheardList.appendChild(el("li", { class: "bucket-song-row" },
+          el("span", { class: "bucket-song-name" }, s.name),
+          el("span", { class: "bucket-song-count", title: `Played ${s.count} times by ${artistName}` },
+            `${s.count}×`)
+        ));
+      });
+      modalBody.appendChild(unheardList);
+    }
+
+    // Heard list — collapsed by default. Reference material.
+    if (bucketBand.heard.length > 0) {
+      const heardSection = el("details", { class: "bucket-heard-details" },
+        el("summary", { class: "bucket-heard-summary" },
+          `Songs you've heard (${bucketBand.heard.length})`
+        )
+      );
+      const heardList = el("ol", { class: "bucket-song-list" });
+      bucketBand.heard.forEach(s => {
+        heardList.appendChild(el("li", { class: "bucket-song-row bucket-song-heard" },
+          el("span", { class: "bucket-song-name" }, s.name),
+          el("span", { class: "bucket-song-count", title: `Played ${s.count} times by ${artistName}` },
+            `${s.count}×`)
+        ));
+      });
+      heardSection.appendChild(heardList);
+      modalBody.appendChild(heardSection);
+    }
+  }
 
   // Link to Timeline filter
   const links = el("div", { class: "modal-links" });
