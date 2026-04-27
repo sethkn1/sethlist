@@ -157,12 +157,6 @@ main {
   margin: 0 auto;
   padding: 40px 32px 80px;
   min-height: calc(100vh - 200px);
-  /* `overflow-x: clip` contains horizontal-bleed elements (year strip,
-     photo strip, marquee) without establishing a scroll container, which
-     means it does NOT break `position: sticky` in any descendant. This
-     is the modern replacement for `overflow-x: hidden`, which used to
-     be on body but broke sticky positioning on mobile webkit. */
-  overflow-x: clip;
 }
 .loading {
   font-family: var(--font-mono);
@@ -2899,10 +2893,14 @@ main {
    On mobile the bleed is more aggressive since the .about-page padding
    is larger relative to viewport width. */
 .about-strip-section {
-  margin: 0 -40px 32px -40px;
+  /* No negative-margin bleed. Earlier versions used margin: 0 -40px to
+     extend to the page edges, but that requires overflow-x containment
+     which conflicts with sticky positioning elsewhere. The strip lives
+     inside the .about-page content box. */
+  margin: 0 0 32px 0;
 }
 @media (max-width: 720px) {
-  .about-strip-section { margin-left: -20px; margin-right: -20px; margin-bottom: 24px; }
+  .about-strip-section { margin: 0 0 24px 0; }
 }
 
 /* Wrapper holds the scrolling track and the fade overlays. The wrapper
@@ -3362,13 +3360,17 @@ main {
      wraps and grows taller on narrow screens — handled in media query below. */
   top: 115px;
   z-index: 30;  /* above timeline content, below site header (z-index 50) */
-  /* Bleed to the page edges so the strip uses full width and the
-     fade overlays sit at the visible edges, not at content padding. */
-  margin: 0 -32px 24px -32px;
+  /* No negative-margin bleed — earlier versions extended this to the page
+     edges with margin: 0 -32px, but that requires overflow-x containment
+     somewhere up the tree, which interacts badly with `position: sticky`
+     on mobile webkit. Keeping the strip inside the parent's content box
+     means sticky works reliably on every browser without needing any
+     overflow tricks. */
+  margin: 0 0 24px 0;
   background: var(--ink);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  overflow: hidden;  /* contains the fades */
+  overflow: hidden;  /* contains the horizontal scroll and fade gradients */
 }
 
 .year-strip-track {
@@ -3451,8 +3453,6 @@ main {
 @media (max-width: 720px) {
   .year-strip-wrap {
     top: 145px;
-    margin-left: -16px;
-    margin-right: -16px;
   }
   .year-strip-track { padding: 6px 16px; }
   .year-strip-tab {
