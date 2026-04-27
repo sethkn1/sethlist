@@ -471,11 +471,29 @@ function* iterAllSongPerformances() {
  * Options:
  *   subtitle — override the "Setlist" title with a custom string (e.g.,
  *              "The Mars Volta · opener" for opener setlists in a show modal).
+ *   setlistUrl — when provided, the title renders as a link to this URL
+ *              (typically the show's setlist.fm page). Used by the concert
+ *              modal so the "Setlist" header doubles as the external link
+ *              that previously sat in the action-link row.
  */
 function renderSetlistBlock(setlist, options = {}) {
   const block = el("div", { class: "setlist-block" });
   const titleText = options.subtitle || "Setlist";
-  block.appendChild(el("h4", { class: "setlist-title" }, titleText));
+  if (options.setlistUrl) {
+    // Title becomes a link to the external setlist (typically setlist.fm).
+    // We add a small ↗ glyph so it reads as an external link.
+    block.appendChild(el("h4", { class: "setlist-title" },
+      el("a", {
+        class: "setlist-title-link",
+        href: options.setlistUrl,
+        target: "_blank",
+        rel: "noopener",
+        title: "Open on setlist.fm",
+      }, titleText + " ↗")
+    ));
+  } else {
+    block.appendChild(el("h4", { class: "setlist-title" }, titleText));
+  }
   if (setlist.tour && !setlist.tour.match(/^[\s\-—]*$/)) {
     block.appendChild(el("div", { class: "setlist-tour" }, setlist.tour));
   }
@@ -995,6 +1013,7 @@ function renderTimeline() {
   const state = params.get("state") || "";
   const artist = params.get("artist") || "";
   const venue = params.get("venue") || "";  // deep-link target for "More at [Venue]"
+  const city = params.get("city") || "";    // deep-link target for clicking the city in modal headers
   const tour = params.get("tour") || "";    // deep-link target for "Tour: ..." link in concert modal
   // Poster filter: 3-state dropdown (all / with poster / without poster).
   // Uses URL param `poster` ("yes"|"no"|""). Backward-compatible with the
@@ -1031,7 +1050,7 @@ function renderTimeline() {
   //   - No ?date param + filters active → suppress (would clash with filter focus)
   //   - ?date=MM-DD set → ALWAYS show, regardless of filters (user explicitly
   //     asked for this date, so we honor it)
-  const hasAnyFilter = q || state || artist || venue || posterFilter || festival ||
+  const hasAnyFilter = q || state || artist || venue || city || posterFilter || festival ||
     attendedWithFilter.length > 0;
   if (overrideDate || !hasAnyFilter) {
     const otdBlock = buildOnThisDayBlock(overrideDate || undefined);
@@ -1097,6 +1116,10 @@ function renderTimeline() {
   };
   const matchesState = (c) => !state || c.state === state;
   const matchesVenue = (c) => !venue || c.venue === venue;
+  // City matches case-insensitively. There's no city dropdown today (the
+  // filter is set only via deep-link from the modal header), so we don't
+  // need cascading availability for it — just a clean predicate.
+  const matchesCity = (c) => !city || (c.city && c.city.toLowerCase() === city.toLowerCase());
   const matchesTour = (c) => !tour || c.tourName === tour;
   const matchesFestival = (c) => !festival || c.festivalKey === festival;
   const matchesPoster = (c) => {
@@ -1117,19 +1140,19 @@ function renderTimeline() {
 
   // Candidate concerts for each dropdown — excluding that dropdown's own filter
   const candidatesForArtist = STATE.concerts.filter(c =>
-    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesTour(c) &&
+    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesCity(c) && matchesTour(c) &&
     matchesFestival(c) && matchesPoster(c) && matchesAttended(c)
   );
   const candidatesForFestival = STATE.concerts.filter(c =>
-    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesTour(c) &&
+    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesCity(c) && matchesTour(c) &&
     matchesArtist(c) && matchesPoster(c) && matchesAttended(c)
   );
   const candidatesForAttendees = STATE.concerts.filter(c =>
-    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesTour(c) &&
+    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesCity(c) && matchesTour(c) &&
     matchesArtist(c) && matchesFestival(c) && matchesPoster(c)
   );
   const candidatesForPoster = STATE.concerts.filter(c =>
-    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesTour(c) &&
+    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesCity(c) && matchesTour(c) &&
     matchesArtist(c) && matchesFestival(c) && matchesAttended(c)
   );
 
@@ -1267,7 +1290,7 @@ function renderTimeline() {
   filterBar.appendChild(posterSelect);
 
   // Reset link: visible whenever any Timeline filter is active.
-  const anyTimelineFilter = q || artist || venue || tour || festival ||
+  const anyTimelineFilter = q || artist || venue || city || tour || festival ||
     posterFilter || attendedWithFilter.length > 0;
   if (anyTimelineFilter) {
     filterBar.appendChild(el("button", {
@@ -1355,6 +1378,9 @@ function renderTimeline() {
       if (!hit) return false;
     }
     if (venue && c.venue !== venue) return false;
+    // City is case-insensitive (deep-link from modal header may have any
+    // case — we want "Columbus" to match a stored "columbus" or vice versa).
+    if (city && (!c.city || c.city.toLowerCase() !== city.toLowerCase())) return false;
     if (tour && c.tourName !== tour) return false;
     if (festival && c.festivalKey !== festival) return false;
     if (posterFilter === "yes" && !c.hasPoster) return false;
@@ -1666,19 +1692,10 @@ function concertCard(c) {
     card.appendChild(el("div", { class: "cc-notes" }, `“${c.notes}”`));
   }
 
-  // Bottom actions: setlist link
-  if (c.setlistLink && c.setlistLink.startsWith("http")) {
-    const actions = el("div", { class: "cc-actions" });
-    actions.appendChild(el("a", {
-      class: "cc-setlist",
-      href: c.setlistLink,
-      target: "_blank",
-      rel: "noopener",
-      title: "Open on setlist.fm",
-      on: { click: e => e.stopPropagation() }
-    }, "Setlist ↗"));
-    card.appendChild(actions);
-  }
+  // (No bottom action row. The setlist link previously rendered here was
+  // removed because the modal now has full setlist details — the external
+  // setlist.fm link is reachable via the modal's clickable "Setlist"
+  // header. Keeping the timeline tile lean.)
 
   return card;
 }
@@ -5844,10 +5861,71 @@ function openConcertModal(c, navContext) {
     formatDate(c.date) + (c.dayOfWeek ? " · " + c.dayOfWeek : "") +
     (c.festivalKey ? ` · FESTIVAL · DAY ${c.festivalDayNumber} OF ${c.festivalTotalDays}` : "")
   ));
-  modalBody.appendChild(el("h2", { class: "modal-title" }, c.artist || "Unknown"));
-  modalBody.appendChild(el("div", { class: "modal-meta" },
-    [c.venue, [c.city, c.state].filter(Boolean).join(", ")].filter(Boolean).join(" · ")
-  ));
+
+  // Modal title — band name. Clickable for non-festival rows so it filters
+  // the timeline to all shows by that artist. Festival rows aren't linked
+  // because the title is the festival day name (e.g. "Rock on the Range
+  // Festival - Day 3"), and filtering on that returns just that single day,
+  // which isn't useful.
+  if (c.artist && !c.festivalKey) {
+    modalBody.appendChild(el("h2", { class: "modal-title" },
+      el("a", {
+        class: "modal-title-link",
+        href: "#/timeline?artist=" + encodeURIComponent(c.artist),
+      }, c.artist)
+    ));
+  } else {
+    modalBody.appendChild(el("h2", { class: "modal-title" }, c.artist || "Unknown"));
+  }
+
+  // Modal meta — venue · city, state. Each clickable to filter timeline.
+  // Build the row as a sequence of inline pieces so we can wrap the
+  // venue / city / state spans in <a> tags individually while keeping
+  // the existing visual format ("Venue · City, State").
+  const metaRow = el("div", { class: "modal-meta" });
+  const metaPieces = [];
+  if (c.venue && !c.festivalKey) {
+    // Festival rows: don't link the venue. The festival group is itself
+    // the unit of interest; venue-filtering inside it would mostly return
+    // the same set.
+    metaPieces.push(el("a", {
+      class: "modal-meta-link",
+      href: "#/timeline?venue=" + encodeURIComponent(c.venue),
+    }, c.venue));
+  } else if (c.venue) {
+    metaPieces.push(document.createTextNode(c.venue));
+  }
+  // City + state: each linked separately, joined by ", " so the
+  // commas and spacing don't get pulled into the link target text.
+  const locPieces = [];
+  if (c.city) {
+    locPieces.push(el("a", {
+      class: "modal-meta-link",
+      href: "#/timeline?city=" + encodeURIComponent(c.city) +
+        (c.state ? "&state=" + encodeURIComponent(c.state) : ""),
+    }, c.city));
+  }
+  if (c.state) {
+    locPieces.push(el("a", {
+      class: "modal-meta-link",
+      href: "#/timeline?state=" + encodeURIComponent(c.state),
+    }, c.state));
+  }
+  if (locPieces.length) {
+    // Combine the location pieces with a separator. We can't just use
+    // .join(", ") because they're DOM nodes; build inline text + nodes.
+    const locFragment = el("span", { class: "modal-meta-loc" });
+    locPieces.forEach((piece, i) => {
+      if (i > 0) locFragment.appendChild(document.createTextNode(", "));
+      locFragment.appendChild(piece);
+    });
+    metaPieces.push(locFragment);
+  }
+  metaPieces.forEach((piece, i) => {
+    if (i > 0) metaRow.appendChild(document.createTextNode(" · "));
+    metaRow.appendChild(piece);
+  });
+  if (metaPieces.length) modalBody.appendChild(metaRow);
 
   // Website / wiki chips. Show band info for non-festival rows; festival
   // info for festival rows. (If a festival has both a website AND a wiki,
@@ -5954,15 +6032,23 @@ function openConcertModal(c, navContext) {
     ));
   }
 
-  // Setlist (from pre-fetched cache)
+  // Setlist (from pre-fetched cache).
+  // Pass the show's external setlist.fm URL when available — the
+  // "Setlist" header inside the block becomes a link, replacing the
+  // standalone "Setlist.fm ↗" action link that used to sit at the bottom
+  // of the modal.
   const setlist = setlistForConcert(c);
   if (setlist && setlist.sets && setlist.sets.length) {
-    modalBody.appendChild(renderSetlistBlock(setlist));
+    const setlistUrl = (c.setlistLink && c.setlistLink.startsWith("http"))
+      ? c.setlistLink : null;
+    modalBody.appendChild(renderSetlistBlock(setlist, { setlistUrl }));
   }
 
   // Opener setlists — pulled by artist+date search during prefetch.
   // For festivals, only the top 5 acts are fetched (per prefetch config).
   // Renders a smaller block per opener with the band name as the header.
+  // (Opener blocks don't get linked titles — we don't have per-opener
+  // setlist.fm URLs in the concert data.)
   const openerActs = splitActs(c.openingActs);
   const actsToCheck = c.festivalKey ? openerActs.slice(0, 5) : openerActs;
   const openerSetlists = [];
@@ -5974,11 +6060,12 @@ function openConcertModal(c, navContext) {
     modalBody.appendChild(renderSetlistBlock(sl, { subtitle: `${name} · opener` }));
   });
 
-  // Action links
+  // Action links — trimmed in v15. The "Setlist.fm", "More at venue",
+  // "More from state", and "More band" links were all removed. Their
+  // destinations are now reachable via clickable elements in the modal
+  // header (artist/venue/city/state) and in the setlist title. The bucket
+  // list link stays — it has no equivalent header surface.
   const links = el("div", { class: "modal-links" });
-  if (c.setlistLink && c.setlistLink.startsWith("http")) {
-    links.appendChild(el("a", { class: "m-link accent-link", href: c.setlistLink, target: "_blank", rel: "noopener" }, "Setlist.fm ↗"));
-  }
   // Bucket list link: shown only when this band has bucket-list data
   // (i.e., it's a headliner you've seen 2+ times). For festival rows we
   // skip — they don't have a single artist context. The link drops the
@@ -6001,18 +6088,6 @@ function openConcertModal(c, navContext) {
         }},
       }, c.artist + " bucket list"));
     }
-  }
-  if (c.venue && !c.festivalKey) {
-    links.appendChild(el("a", { class: "m-link", href: "#/timeline?venue=" + encodeURIComponent(c.venue) },
-      "More at " + c.venue));
-  }
-  if (c.state) {
-    links.appendChild(el("a", { class: "m-link", href: "#/timeline?state=" + encodeURIComponent(c.state) },
-      "More from " + (STATE.stateNames[c.state] || c.state)));
-  }
-  if (c.artist && !c.festivalKey) {
-    links.appendChild(el("a", { class: "m-link", href: "#/timeline?artist=" + encodeURIComponent(c.artist) },
-      "More " + c.artist));
   }
   if (links.children.length) modalBody.appendChild(links);
 

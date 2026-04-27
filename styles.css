@@ -420,30 +420,9 @@ main {
   opacity: 0.8;
   line-height: 1.4;
 }
-.cc-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px dashed var(--muted);
-}
-.cc-setlist {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--ink);
-  background: transparent;
-  border: 1.5px solid var(--ink);
-  padding: 5px 10px;
-  text-decoration: none;
-  transition: all 150ms;
-  display: inline-block;
-}
-.cc-setlist:hover {
-  background: var(--ink);
-  color: var(--paper);
-}
+
+/* (.cc-actions / .cc-setlist removed in v15 — the per-tile setlist link
+   was removed in favor of accessing the setlist via the show modal.) */
 
 /* Festival-specific */
 .festival-badge {
@@ -1098,12 +1077,42 @@ main {
   margin: 0 0 8px 0;
   color: var(--paper);
 }
+/* When the modal title wraps a link (non-festival rows), keep the visual
+   identical to the plain-text title and only show interactivity on hover —
+   subtle underline + accent color shift. The header should still feel like
+   a heading first, link second. */
+.modal-title-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-title-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
 .modal-meta {
   font-family: var(--font-body);
   font-size: 15px;
   font-style: italic;
   color: var(--paper-dim);
   margin-bottom: 20px;
+}
+/* Inline links in the modal meta row (venue, city, state) — same italic
+   small-text style as the surrounding text, with a hover underline so it's
+   clear they're clickable. Color matches the row by default; brightens on
+   hover. */
+.modal-meta-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px dotted transparent;
+  transition: border-color 120ms, color 120ms;
+}
+.modal-meta-link:hover {
+  color: var(--paper);
+  border-bottom-color: var(--accent);
 }
 .modal-facts {
   display: grid;
@@ -1832,6 +1841,21 @@ main {
   color: var(--paper);
   margin: 0 0 4px 0;
   letter-spacing: 0.02em;
+}
+/* Setlist header as a clickable link to the external setlist.fm page.
+   Inherits the existing setlist-title font/size/color, with hover-only
+   underline + accent shift so the header still reads as a section header
+   first, link second. The trailing ↗ glyph is added inline by the JS. */
+.setlist-title-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.setlist-title-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 .setlist-tour {
   font-family: var(--font-body);
