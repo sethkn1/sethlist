@@ -5759,56 +5759,50 @@ function openConcertModal(c, navContext) {
   };
   const cArtist = normalizeArtist(c.artist);
 
-  // For festival concerts, gather all dates the festival covered (across all
-  // its days, regardless of which the user attended). This lets a festival
-  // modal include band-specific posters from any day of the festival, plus
-  // the festival-wide poster which may be dated to the festival's first day.
-  // Example: Rock on the Range 2018 spans May 18-20. A modal for Day 3
-  // (May 20) should include the festival poster (May 18) and the Tool
-  // poster (May 20) — they're all part of the same event.
-  let festivalDateSet = null;
-  if (c.festivalKey) {
-    festivalDateSet = new Set(
-      STATE.concerts
-        .filter(ct => ct.festivalKey === c.festivalKey && ct.date)
-        .map(ct => ct.date)
-    );
-    // Also include any poster dated within ±2 days of the earliest/latest
-    // festival concert. This handles cases where the user only attended one
-    // day of a multi-day festival but owns the festival-wide poster, which
-    // may be dated to a non-attended day. We only extend for posters tagged
-    // tourShowSpecific="Festival" — band-specific posters from non-attended
-    // days don't belong here.
-  }
-
   const shows = STATE.posters.filter(p => {
-    // Exact date match always counts (most common case)
-    if (p.date === c.date) return true;
+    const pScope = (p.tourShowSpecific || "").toLowerCase();
+    const isFestivalScopePoster = pScope === "festival";
 
-    // Festival concert: include posters from any day of the festival,
-    // and festival-tagged posters dated near the festival's range.
-    if (c.festivalKey && festivalDateSet) {
-      // Direct match on a sibling festival day
-      if (festivalDateSet.has(p.date)) return true;
-      // Festival-tagged poster (e.g. festival-wide poster dated to a day the
-      // user didn't attend, like Welcome to Rockville 2023 where the poster
-      // is dated to the festival's opening day but the user attended later).
-      const isFestivalPoster = (p.tourShowSpecific || "").toLowerCase() === "festival";
-      if (isFestivalPoster) {
-        // Check date proximity to the festival's overall range (±3 days
-        // beyond the festival's outermost attended day).
-        const festDates = [...festivalDateSet].sort();
-        const earliest = festDates[0];
-        const latest = festDates[festDates.length - 1];
-        if (dateDiffDays(p.date, earliest) <= 3 || dateDiffDays(p.date, latest) <= 3) {
+    // Festival-day concerts use scope-based matching, not date windows.
+    //
+    // Two things can match:
+    //   1. A poster dated to this exact day. This is how band-specific
+    //      posters appear on the day the band actually played: a Tool
+    //      poster dated May 20 shows on Day 3 of Rock on the Range
+    //      (May 20) and ONLY on that day, not on the other festival days.
+    //      A "Day of Show" or "Tour" tag isn't required — the date is
+    //      what scopes it.
+    //   2. A festival-scoped poster whose artist matches this festival.
+    //      The festival-as-a-whole poster shows on every day of the
+    //      festival regardless of its own date. Match is by name: the
+    //      poster's artist field substring-matches the concert's artist
+    //      (which always contains the festival name, e.g.
+    //      "Welcome To Rockville Festival - Day 4").
+    if (c.festivalKey) {
+      if (p.date === c.date) return true;
+      if (isFestivalScopePoster) {
+        // Match by name AND by year. Many festivals run annually with the
+        // same artist string ("Welcome To Rockville Festival") on every
+        // year's poster — without a year guard, a 2021 poster would also
+        // match the 2023 festival's modal. The year of the poster's date
+        // must match the year of this concert's date.
+        const pYear = (p.date || "").slice(0, 4);
+        const cYear = (c.date || "").slice(0, 4);
+        if (pYear !== cYear || !pYear) return false;
+        const pArtist = normalizeArtist(p.artist);
+        if (pArtist && cArtist &&
+            (cArtist.includes(pArtist) || pArtist.includes(cArtist))) {
           return true;
         }
       }
-      // Otherwise festival concerts don't fuzzy-match on artist
       return false;
     }
 
-    // Non-festival concerts: ±4 day fuzzy match if artist also matches.
+    // Non-festival concerts: exact date always matches; otherwise allow a
+    // ±4 day fuzzy match if the artist also matches. This catches posters
+    // dated slightly off from the show (rare but real — e.g. printing
+    // date vs. show date).
+    if (p.date === c.date) return true;
     if (dateDiffDays(p.date, c.date) > 4) return false;
     const pArtist = normalizeArtist(p.artist);
     if (!pArtist || !cArtist) return false;
