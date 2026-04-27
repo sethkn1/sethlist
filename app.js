@@ -1584,48 +1584,52 @@ function festivalTile(key, days) {
     ? formatDate(firstDay.date)
     : `${formatDate(firstDay.date)} – ${formatDate(lastDay.date)}`;
 
+  // Festival "FESTIVAL" badge sits absolute-positioned in the corner
   header.appendChild(el("div", { class: "fest-badge" }, "FESTIVAL"));
-  header.appendChild(el("div", { class: "fest-date" }, dateRange));
-  header.appendChild(el("h3", { class: "fest-name" }, firstDay.festivalName || firstDay.artist));
-  header.appendChild(el("div", { class: "fest-location" },
+
+  // Festival logo thumb on the left of the header text. Uses the same
+  // bandThumb path as the timeline cards (festival-thumb variant with
+  // contain-fit), so wide wordmark logos render fully. We pass firstDay
+  // (a real concert with festivalKey) so bandThumb's festival-aware lookup
+  // picks up the festival image rather than treating "Sonic Temple Festival"
+  // as a band name.
+  header.appendChild(bandThumb(firstDay, 84));
+
+  // Wrap existing text content in a flex child so layout puts thumb-left,
+  // text-right. This keeps every text style untouched while letting CSS
+  // arrange the new two-column header.
+  const headerText = el("div", { class: "fest-header-text" });
+  headerText.appendChild(el("div", { class: "fest-date" }, dateRange));
+  headerText.appendChild(el("h3", { class: "fest-name" }, firstDay.festivalName || firstDay.artist));
+  headerText.appendChild(el("div", { class: "fest-location" },
     [firstDay.venue, [firstDay.city, firstDay.state].filter(Boolean).join(", ")].filter(Boolean).join(" · ")
   ));
-  header.appendChild(el("div", { class: "fest-attended" },
+  headerText.appendChild(el("div", { class: "fest-attended" },
     `${attended} day${attended === 1 ? "" : "s"} attended`
   ));
   if (allHeadliners.size > 0) {
     const headlinerList = [...allHeadliners].slice(0, 6).join(" · ");
     const more = allHeadliners.size > 6 ? ` +${allHeadliners.size - 6} more` : "";
-    header.appendChild(el("div", { class: "fest-headliners" }, "Featuring: " + headlinerList + more));
+    headerText.appendChild(el("div", { class: "fest-headliners" }, "Featuring: " + headlinerList + more));
   }
-  header.appendChild(el("div", { class: "fest-expand" }, isExpanded ? "▾ Collapse" : "▸ Show days"));
+  headerText.appendChild(el("div", { class: "fest-expand" }, isExpanded ? "▾ Collapse" : "▸ Show days"));
+  header.appendChild(headerText);
 
   tile.appendChild(header);
 
   if (isExpanded) {
+    // Expanded days use the same concertCard component as the rest of the
+    // timeline (and as the filter-by-festival view). This gives each day
+    // the festival logo thumbnail, full venue/location metadata, poster
+    // badge, and a consistent visual language across views.
     const dayList = el("div", { class: "fest-days" });
     days.forEach(d => {
-      dayList.appendChild(festivalDayCard(d));
+      dayList.appendChild(concertCard(d));
     });
     tile.appendChild(dayList);
   }
 
   return tile;
-}
-
-function festivalDayCard(c) {
-  const dayNum = c.festivalDayNumber;
-  const total = c.festivalTotalDays;
-
-  return el("div", {
-    class: "fest-day-card" + (c.hasPoster ? " has-poster" : ""),
-    on: { click: () => openConcertModalWithNav(c) }
-  },
-    el("div", { class: "fest-day-num" }, `Day ${dayNum} of ${total}`),
-    el("div", { class: "fest-day-date" }, formatDate(c.date), c.dayOfWeek ? " · " + c.dayOfWeek : ""),
-    c.openingActs ? el("div", { class: "fest-day-acts" }, c.openingActs) : null,
-    c.hasPoster ? el("div", { class: "fest-day-flag poster" }, "POSTER") : null,
-  );
 }
 
 function concertCard(c) {

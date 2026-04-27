@@ -1984,8 +1984,26 @@ main {
   cursor: pointer;
   position: relative;
   transition: background 150ms;
+  /* Two-column layout: festival logo thumb on the left, all text content
+     on the right (wrapped in .fest-header-text). The "FESTIVAL" badge
+     remains absolute-positioned in the corner regardless. */
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
 }
 .festival-header:hover { background: #231b10; }
+
+/* Thumb stays its rendered size; doesn't shrink under flex pressure. */
+.festival-header .band-thumb {
+  flex-shrink: 0;
+}
+
+/* Text container takes remaining space. min-width:0 lets long headliner
+   strings wrap rather than overflow the flex item. */
+.fest-header-text {
+  flex: 1;
+  min-width: 0;
+}
 
 .fest-badge {
   position: absolute;
@@ -2013,7 +2031,10 @@ main {
   line-height: 1;
   color: var(--accent-2);
   margin: 0 0 8px 0;
-  max-width: calc(100% - 110px);  /* don't overlap with festival badge */
+  /* Reserve room for the absolute-positioned FESTIVAL badge. The flex
+     parent already constrains overall width; we just need to keep the
+     badge from overlapping the festival name. */
+  padding-right: 90px;
 }
 .fest-location {
   font-family: var(--font-body);
@@ -2047,60 +2068,14 @@ main {
   padding-top: 8px;
 }
 
-/* Expanded festival day list */
+/* Expanded festival day list — uses concertCard, same as filter-by-festival
+   view. Single-column stacking matches the rest of the timeline so the
+   visual language is consistent between expanded groups and filtered views. */
 .fest-days {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   padding: 0 24px 24px;
-}
-.fest-day-card {
-  background: var(--paper);
-  color: var(--ink);
-  padding: 14px;
-  border: 2px solid var(--paper);
-  cursor: pointer;
-  position: relative;
-  transition: transform 150ms;
-}
-.fest-day-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 var(--accent-2);
-}
-.fest-day-card.has-poster { border-color: var(--accent); }
-.fest-day-num {
-  font-family: var(--font-display-alt);
-  font-weight: 900;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-.fest-day-date {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 8px;
-}
-.fest-day-acts {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-style: italic;
-  line-height: 1.4;
-  color: var(--ink-2);
-  margin-top: 6px;
-}
-.fest-day-flag.poster {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  background: var(--accent);
-  color: var(--paper);
-  font-family: var(--font-mono);
-  font-size: 8px;
-  padding: 2px 6px;
-  letter-spacing: 0.15em;
 }
 
 /* ============= Poster "not attended" states ============= */
