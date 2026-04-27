@@ -16820,5 +16820,477 @@
     ],
     "info": null,
     "role": "opener"
+  },
+  "opener:local-h:2017-05-19": {
+    "id": "3be7ece8",
+    "artist": "Local H",
+    "tour": "The Welcome Back To America(!?!#*@!#!**?!#@$!)",
+    "eventDate": "19-05-2017",
+    "url": "https://www.setlist.fm/setlist/local-h/2017/gillette-stadium-foxborough-ma-3be7ece8.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "John the Baptist Blues"
+          },
+          {
+            "name": "",
+            "info": "PA shut off for most off the song"
+          },
+          {
+            "name": "The Misanthrope"
+          },
+          {
+            "name": "Bound for the Floor"
+          },
+          {
+            "name": "Hands on the Bible"
+          },
+          {
+            "name": "That's What They All Say"
+          },
+          {
+            "name": "Back in the Day"
+          },
+          {
+            "name": "Fritz's Corner"
+          },
+          {
+            "name": "High-Fiving MF"
+          },
+          {
+            "name": "City of Knives"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:mix-master-mike:2017-05-19": {
+    "_error": "empty setlist"
+  },
+  "opener:diamante:2019-08-18": {
+    "id": "6b9f3afa",
+    "artist": "DIAMANTE",
+    "tour": null,
+    "eventDate": "18-08-2019",
+    "url": "https://www.setlist.fm/setlist/diamante/2019/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-6b9f3afa.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Bite Your Kiss"
+          },
+          {
+            "name": "Haunted"
+          },
+          {
+            "name": "Hear Me Now",
+            "cover": "Bad Wolves"
+          },
+          {
+            "name": "Sleepwalking"
+          },
+          {
+            "name": "When I'm Not Around"
+          },
+          {
+            "name": "War Cry"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for Breaking Benjamin",
+    "role": "opener"
+  },
+  "opener:killing-joke:2019-11-19": {
+    "id": "639a82ef",
+    "artist": "Killing Joke",
+    "tour": null,
+    "eventDate": "19-11-2019",
+    "url": "https://www.setlist.fm/setlist/killing-joke/2019/barclays-center-brooklyn-ny-639a82ef.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Butcher"
+          },
+          {
+            "name": "Tomorrow's World"
+          },
+          {
+            "name": "Eighties"
+          },
+          {
+            "name": "Seeing Red"
+          },
+          {
+            "name": "Complications"
+          },
+          {
+            "name": "S.O.36"
+          },
+          {
+            "name": "Total Invasion"
+          },
+          {
+            "name": "Loose Cannon"
+          },
+          {
+            "name": "The Wait"
+          },
+          {
+            "name": "Pandemonium"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for Tool",
+    "role": "opener"
+  },
+  "opener:killing-joke:2019-11-24": {
+    "id": "339ad015",
+    "artist": "Killing Joke",
+    "tour": null,
+    "eventDate": "24-11-2019",
+    "url": "https://www.setlist.fm/setlist/killing-joke/2019/pnc-arena-raleigh-nc-339ad015.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Butcher"
+          },
+          {
+            "name": "Tomorrow's World"
+          },
+          {
+            "name": "Eighties"
+          },
+          {
+            "name": "Seeing Red"
+          },
+          {
+            "name": "Complications"
+          },
+          {
+            "name": "S.O.36"
+          },
+          {
+            "name": "Total Invasion"
+          },
+          {
+            "name": "Loose Cannon"
+          },
+          {
+            "name": "The Wait"
+          },
+          {
+            "name": "Pandemonium"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:author-punisher:2020-01-17": {
+    "id": "6b9b72a6",
+    "artist": "Author & Punisher",
+    "tour": null,
+    "eventDate": "17-01-2020",
+    "url": "https://www.setlist.fm/setlist/author-and-punisher/2020/t-mobile-arena-las-vegas-nv-6b9b72a6.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Pharmacide"
+          },
+          {
+            "name": "Ode to Bedlam"
+          },
+          {
+            "name": "A Crude Sectioning"
+          },
+          {
+            "name": "The Barge"
+          },
+          {
+            "name": "Nihil Strength"
+          },
+          {
+            "name": "Nazarene"
+          },
+          {
+            "name": "Disparate"
+          },
+          {
+            "name": "Terrorbird"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for Tool",
+    "role": "opener"
+  },
+  "opener:ice-cube:2024-06-26": {
+    "id": "435797bf",
+    "artist": "Ice Cube",
+    "tour": null,
+    "eventDate": "26-06-2024",
+    "url": "https://www.setlist.fm/setlist/ice-cube/2024/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-435797bf.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "I Got 5 on It",
+            "cover": "Luniz",
+            "tape": true
+          },
+          {
+            "name": "Natural Born Killaz",
+            "cover": "Dr. Dre & Ice Cube"
+          },
+          {
+            "name": "Hello"
+          },
+          {
+            "name": "Check Yo' Self"
+          },
+          {
+            "name": "Friday"
+          },
+          {
+            "name": "Bop Gun (One Nation)"
+          },
+          {
+            "name": "That New Funkadelic"
+          },
+          {
+            "name": "You Know How We Do It"
+          },
+          {
+            "name": "Ain't Got No Haters"
+          },
+          {
+            "name": "Straight Outta Compton",
+            "cover": "N.W.A"
+          },
+          {
+            "name": "Gangsta Gangsta",
+            "cover": "N.W.A"
+          },
+          {
+            "name": "No Vaseline"
+          },
+          {
+            "name": "You Can Do It"
+          },
+          {
+            "name": "It Was a Good Day"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:grandson:2025-05-06": {
+    "id": "7b5ef23c",
+    "artist": "grandson",
+    "tour": null,
+    "eventDate": "06-05-2025",
+    "url": "https://www.setlist.fm/setlist/grandson/2025/lenovo-center-raleigh-nc-7b5ef23c.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "BURY YOU"
+          },
+          {
+            "name": "Oh No!!!"
+          },
+          {
+            "name": "SELF IMMOLATION"
+          },
+          {
+            "name": "Masters of War",
+            "cover": "Bob Dylan"
+          },
+          {
+            "name": "Stigmata"
+          },
+          {
+            "name": "6:00"
+          },
+          {
+            "name": "BRAINROT"
+          },
+          {
+            "name": "Drones"
+          },
+          {
+            "name": "We Did It!!!"
+          },
+          {
+            "name": "Blood // Water"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:teen-jesus-and-the-jean-teasers:2025-05-13": {
+    "id": "1b5f1d80",
+    "artist": "Teen Jesus and the Jean Teasers",
+    "tour": null,
+    "eventDate": "13-05-2025",
+    "url": "https://www.setlist.fm/setlist/teen-jesus-and-the-jean-teasers/2025/lenovo-center-raleigh-nc-1b5f1d80.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "I Like That You Like That"
+          },
+          {
+            "name": "Treat Me Better"
+          },
+          {
+            "name": "I Love You"
+          },
+          {
+            "name": "Up To Summit"
+          },
+          {
+            "name": "I Used to Be Fun"
+          },
+          {
+            "name": "Salt"
+          },
+          {
+            "name": "Cayenne Pepper"
+          },
+          {
+            "name": "I Don't Want It"
+          },
+          {
+            "name": "Girl Sports"
+          },
+          {
+            "name": "BALCONY"
+          },
+          {
+            "name": "AHHHH!"
+          },
+          {
+            "name": "Lights Out"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:ecca-vandal:2025-10-25": {
+    "id": "7b596e50",
+    "artist": "Ecca Vandal",
+    "tour": null,
+    "eventDate": "25-10-2025",
+    "url": "https://www.setlist.fm/setlist/ecca-vandal/2025/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-7b596e50.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": ""
+          },
+          {
+            "name": "Truth to Trade"
+          },
+          {
+            "name": "BLEED BUT NEVER DIE"
+          },
+          {
+            "name": "Divided"
+          },
+          {
+            "name": "THEN THERE'S ONE"
+          },
+          {
+            "name": "Exit Sign"
+          },
+          {
+            "name": ""
+          },
+          {
+            "name": "CRUISING TO SELF SOOTHE"
+          },
+          {
+            "name": ""
+          }
+        ]
+      }
+    ],
+    "info": "Setlist incomplete, possible incorrect songs",
+    "role": "opener"
+  },
+  "opener:like-roses:2025-10-25": {
+    "id": "63596e57",
+    "artist": "Like Roses",
+    "tour": null,
+    "eventDate": "25-10-2025",
+    "url": "https://www.setlist.fm/setlist/like-roses/2025/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-63596e57.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Splenetic"
+          },
+          {
+            "name": "Stuck"
+          },
+          {
+            "name": "Broken Things (Lie to Me)"
+          },
+          {
+            "name": "Pretty Things"
+          },
+          {
+            "name": "Dressed"
+          },
+          {
+            "name": "Easy"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:feliz-y-dada:2025-11-04": {
+    "_error": "empty setlist"
+  },
+  "opener:kian\u00ee-medina:2025-11-04": {
+    "_error": "empty setlist"
   }
 }
