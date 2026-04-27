@@ -4795,7 +4795,7 @@ function renderBucketList() {
    ============================================================ */
 const modal = document.getElementById("modal");
 const modalBody = modal.querySelector(".modal-body");
-modal.querySelector(".modal-close").addEventListener("click", closeModal);
+modal.querySelector(".modal-close").addEventListener("click", () => closeModal());
 modal.addEventListener("click", e => {
   if (e.target === modal) closeModal();
 });
@@ -4804,6 +4804,29 @@ document.addEventListener("keydown", e => {
   // Priority: close the topmost thing first. Lightbox > modal > screensaver-is-handled-separately.
   if (closeLightbox()) return;
   closeModal();
+});
+
+// Mobile back-button handling.
+//
+// On mobile, users expect "back" to dismiss the modal/overlay rather than
+// navigate the underlying browser history. We support this by pushing a
+// history entry when a modal opens (see openConcertModal / openPosterModal),
+// and intercepting the popstate that fires when the back button pops it.
+//
+// Two cases at popstate time:
+//   1. Lightbox is open over the modal — close the lightbox first
+//      (matches the Escape-key priority order).
+//   2. Modal is open — close it. We pass fromPopstate=true so closeModal
+//      doesn't try to call history.back() itself (the browser already
+//      popped the entry that triggered this event).
+//
+// If neither is open, we let the popstate fall through to the hashchange
+// handler, which the browser fires alongside it for hash-based URL changes.
+window.addEventListener("popstate", () => {
+  if (closeLightbox()) return;
+  if (!modal.hidden) {
+    closeModal({ fromPopstate: true });
+  }
 });
 
 /**
@@ -4823,28 +4846,75 @@ const MODAL_STATE = {
   id: null,
   list: null,
   index: -1,
+  // Track whether we pushed a history entry when opening this modal.
+  // - true  = user opened the modal in-app (we pushed an entry, so back
+  //           button / X-close can pop it to dismiss).
+  // - false = modal opened via deep-link (URL already has ?modal=...,
+  //           pushing another entry would mean back-button has to be
+  //           pressed twice).
+  pushedHistory: false,
 };
 
 function openModal() {
   modal.hidden = false;
   document.body.style.overflow = "hidden";
+  // Reset scroll to top whenever a modal opens. The #modal container is
+  // reused across all opens (concert modals, poster modals, festival list,
+  // etc.), so without this the inner scrollbar position carries over from
+  // the previous time the modal was open.
+  //
+  // The actually-scrollable element is .modal-card (overflow:auto), not
+  // #modal (overflow:visible) or .modal-body (overflow:visible). We zero
+  // all three for safety in case the layout changes, but .modal-card is
+  // the one that matters today.
+  const card = modal.querySelector(".modal-card");
+  if (card) card.scrollTop = 0;
+  modalBody.scrollTop = 0;
+  modal.scrollTop = 0;
 }
-function closeModal() {
+function closeModal(opts) {
+  // opts.fromPopstate — when true, the browser already popped the
+  // history entry (mobile back button or browser back). We just dismiss
+  // the modal UI; we must NOT call history.back() ourselves or we'd
+  // double-pop.
+  opts = opts || {};
+  if (modal.hidden) return;  // already closed; nothing to do
   modal.hidden = true;
   document.body.style.overflow = "";
-  // Clean up deep-link param from URL without triggering a full re-render
-  const [route, queryStr] = (location.hash || "#/timeline").split("?");
-  const params = new URLSearchParams(queryStr || "");
-  if (params.has("modal")) {
-    params.delete("modal");
-    const newHash = route + (params.toString() ? "?" + params.toString() : "");
-    // Use replaceState to avoid an extra history entry
-    history.replaceState(null, "", newHash);
-  }
+
+  // History cleanup. Three cases:
+  //   1. fromPopstate=true   — browser already popped. Don't touch history.
+  //   2. We pushed an entry  — pop it via history.back() to unwind cleanly.
+  //                            (popstate WILL fire, but we've already set
+  //                            modal.hidden=true so the popstate handler
+  //                            short-circuits — see _onPopState below.)
+  //   3. We didn't push      — clean the modal=… param off the URL with
+  //                            replaceState so the URL stays correct
+  //                            without adding another history entry.
+  const pushed = MODAL_STATE.pushedHistory;
+  // Reset the flag NOW, before history.back(), so the synchronous-ish
+  // popstate that follows sees a clean state.
   MODAL_STATE.kind = null;
   MODAL_STATE.id = null;
   MODAL_STATE.list = null;
   MODAL_STATE.index = -1;
+  MODAL_STATE.pushedHistory = false;
+
+  if (opts.fromPopstate) {
+    // Nothing to do for history — browser already popped.
+  } else if (pushed) {
+    // Pop the entry we pushed when the modal opened.
+    history.back();
+  } else {
+    // No entry to pop; just strip the modal param from the URL.
+    const [route, queryStr] = (location.hash || "#/timeline").split("?");
+    const params = new URLSearchParams(queryStr || "");
+    if (params.has("modal")) {
+      params.delete("modal");
+      const newHash = route + (params.toString() ? "?" + params.toString() : "");
+      history.replaceState(null, "", newHash);
+    }
+  }
 }
 
 /* ============================================================
@@ -4972,15 +5042,26 @@ document.addEventListener("keydown", e => {
 
 /**
  * Update the URL hash to include modal=<id> so the current modal is
- * deep-linkable. Uses replaceState so we don't accumulate history entries
- * as the user arrow-keys through posters.
+ * deep-linkable. Two modes:
+ *   - replace (default): used for arrow-key nav between siblings, where
+ *     we don't want each card to add a history entry.
+ *   - push: used for the FIRST modal-open of a user session — adds one
+ *     history entry so the mobile back button (and the X close) can pop
+ *     it to dismiss the modal naturally.
+ *
+ * This is the single chokepoint — every code path that opens a modal
+ * goes through here.
  */
-function setModalDeepLink(kind, id) {
+function setModalDeepLink(kind, id, mode) {
   const [route, queryStr] = (location.hash || "#/timeline").split("?");
   const params = new URLSearchParams(queryStr || "");
   params.set("modal", String(id));
   const newHash = route + "?" + params.toString();
-  history.replaceState(null, "", newHash);
+  if (mode === "push") {
+    history.pushState(null, "", newHash);
+  } else {
+    history.replaceState(null, "", newHash);
+  }
 }
 
 /**
@@ -5744,7 +5825,15 @@ function openConcertModal(c, navContext) {
     MODAL_STATE.list = null;
     MODAL_STATE.index = -1;
   }
-  setModalDeepLink("concert", c.id);
+  // Update the URL with this concert's id. If the modal was previously
+  // closed, pushState so the browser back button (and our own close
+  // handler) can pop the entry to dismiss the modal. If the modal was
+  // already open (e.g., user is arrow-keying through siblings), use
+  // replaceState — we don't want each navigation step to add a history
+  // entry the user would have to walk back through.
+  const wasHidden = modal.hidden;
+  setModalDeepLink("concert", c.id, wasHidden ? "push" : "replace");
+  MODAL_STATE.pushedHistory = wasHidden;
 
   // Match posters to this concert.
   //
@@ -6122,7 +6211,13 @@ function openPosterModal(group, navContext) {
     MODAL_STATE.list = null;
     MODAL_STATE.index = -1;
   }
-  if (primaryPosterId !== null) setModalDeepLink("poster", primaryPosterId);
+  // Same modal-was-hidden heuristic as openConcertModal — see the
+  // comment there for rationale.
+  if (primaryPosterId !== null) {
+    const wasHidden = modal.hidden;
+    setModalDeepLink("poster", primaryPosterId, wasHidden ? "push" : "replace");
+    MODAL_STATE.pushedHistory = wasHidden;
+  }
 
   modalBody.innerHTML = "";
   modalBody.appendChild(el("div", { class: "modal-eyebrow" },
