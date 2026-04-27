@@ -110,12 +110,12 @@ body {
 /* Lowercase "h" in SETHLIST — renders as a true lowercase letterform.
    Bungee (the display font) is caps-only, so we force the fallback chain
    to skip Bungee and use the next family that has lowercase glyphs.
-   The 50% opacity dims it so SETLIST emerges as the dominant read while
-   the "h" is still legible to anyone who looks for it.  */
+   The #555 color (very dim gray) deemphasizes it so SETLIST emerges as
+   the dominant read while the "h" is still legible to anyone who looks. */
 .brand-h {
   font-family: "Big Shoulders Display", Impact, sans-serif;
   text-transform: lowercase;
-  opacity: 0.5;
+  color: #555;
 }
 .brand-tagline {
   margin: 4px 0 0 0;
@@ -131,17 +131,16 @@ body {
    header. The tagline body is italic serif, but the "Seth" + "Time"
    portion is non-italic bold (see .sethtime-time above). The "h" sits
    between them. To keep the visual rhyme with the header's "h":
-     - same 50% opacity
+     - same #555 dim-gray color
      - true lowercase (the body font already has lowercase, no font swap
-       needed here — this is just a span with opacity)
+       needed here — this is just a span with color)
      - matches surrounding non-italic + bold weight so it visually belongs
        with "SET...TIME" rather than the italic "of live music" trailer. */
 .brand-tagline .brand-h-tagline {
-  color: var(--paper);
+  color: #555;
   font-style: normal;
   font-weight: 600;
   text-transform: lowercase;
-  opacity: 0.5;
 }
 .brand-sub {
   margin: 2px 0 0 0;
@@ -530,16 +529,22 @@ main {
   letter-spacing: 0.02em;
 }
 .brand-tagline .accent { color: var(--accent); }
+/* "Time" portion of the SETHTIME tagline. Previously had an accent
+   underline; that was removed when we added the horizontal divider
+   between the title and the tagline (the divider does the structural
+   separation work the underline used to do — keeping both made the
+   stack visually busy). The class is retained because it still carries
+   semantic meaning (this is the "Time" word in SETHTIME) and other
+   rules elsewhere may target it. */
 .sethtime-time {
   color: var(--paper);
-  /* subtle differentiation — underline */
-  border-bottom: 2px solid var(--accent-2);
 }
 
-/* View title SethTime styling */
+/* View title SethTime styling — orphaned after the timeline hero was
+   restructured to use the brand-h treatment instead of accent coloring.
+   Kept as a no-op selector in case the class is reintroduced elsewhere. */
 .view-title .sethtime-time {
   color: var(--paper);
-  border-bottom: 4px solid var(--accent-2);
 }
 
 /* ----- Poster: multi-variant fanning ----- */
