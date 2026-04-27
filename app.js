@@ -164,10 +164,14 @@ function parseBandImagesCSV(text) {
  * downstream rendering can treat them interchangeably.
  *
  * The `local_image` column (when populated by build_data.py's download
- * step) holds a path relative to the data/ directory, e.g.
- * "festival_images/sonic_temple_2024.png". Frontend rendering should
+ * step) holds a path relative to the REPO ROOT, e.g.
+ * "images/festivals/sonic_temple_2024.png". Frontend rendering should
  * prefer local_image over image_url since local copies don't depend on
  * external hosts that may eventually go dark.
+ *
+ * Note: older builds stored local_image relative to data/ (e.g.
+ * "festival_images/foo.png"). For backward compatibility, we detect that
+ * shape and prepend "data/" so old CSVs still resolve correctly.
  */
 function parseFestivalImagesCSV(text) {
   const out = {};
@@ -191,11 +195,23 @@ function parseFestivalImagesCSV(text) {
     if (!key) continue;
     const localImage = idx.local >= 0 ? ((cols[idx.local] || "").trim() || null) : null;
     const imageUrl = (cols[idx.image] || "").trim() || null;
-    // Effective image: prefer local file (build_data.py downloaded it under
-    // data/festival_images/), fall back to the external URL. Renderers should
-    // use `image_url` directly — we resolve precedence here so callers don't
-    // have to know about both fields.
-    const effectiveImage = localImage ? `data/${localImage}` : imageUrl;
+    // Resolve local_image to a usable URL. New builds store the path repo-
+    // root-relative ("images/festivals/foo.png") which we use as-is.
+    // Legacy builds stored it data-relative ("festival_images/foo.png");
+    // detect that shape and prepend "data/" for backward compatibility.
+    let resolvedLocal = null;
+    if (localImage) {
+      if (localImage.startsWith("images/") || localImage.startsWith("/") ||
+          localImage.startsWith("http")) {
+        resolvedLocal = localImage;
+      } else if (localImage.startsWith("data/")) {
+        resolvedLocal = localImage;
+      } else {
+        // Legacy data-relative path
+        resolvedLocal = "data/" + localImage;
+      }
+    }
+    const effectiveImage = resolvedLocal || imageUrl;
     out[key] = {
       festival_key: key,
       festival_name: (cols[idx.name] || "").trim() || null,

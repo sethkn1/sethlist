@@ -607,7 +607,8 @@ def enrich_bands(artists, csv_path, skip_wiki=False, verbose=False):
 # Festival images — manual-entry CSV
 # =========================================================================
 
-def seed_festival_images(concerts, csv_path, images_dir=None, refresh=False, verbose=False):
+def seed_festival_images(concerts, csv_path, images_dir=None, root_dir=".",
+                         refresh=False, verbose=False):
     """
     Maintain data/festival_images.csv with one row per festival key.
 
@@ -622,9 +623,12 @@ def seed_festival_images(concerts, csv_path, images_dir=None, refresh=False, ver
 
     Image downloading: if images_dir is provided, this function will also
     download any image_url that doesn't already have a local copy, saving to
-    images_dir/{festival_key}.{ext}. The local path (relative to the data
-    directory) is stored in the local_image column. Idempotent — won't re-
-    download unless refresh=True.
+    images_dir/{festival_key}.{ext}. The local_image column stores the path
+    relative to root_dir (defaults to repo root) — so a downloaded file at
+    images/festivals/foo.png becomes "images/festivals/foo.png" in the CSV,
+    which the frontend can fetch directly without prepending anything.
+
+    Idempotent — won't re-download unless refresh=True.
 
     Returns: (total_count, with_image_count, downloaded_count)
     """
@@ -654,6 +658,7 @@ def seed_festival_images(concerts, csv_path, images_dir=None, refresh=False, ver
 
     rows = []
     downloaded = 0
+    root_path = Path(root_dir).resolve()
     for key in sorted(all_keys):
         prev = existing.get(key, {})
         # festival_name: prefer current data (in case the user renamed a
@@ -665,12 +670,45 @@ def seed_festival_images(concerts, csv_path, images_dir=None, refresh=False, ver
         wiki_extract = (prev.get("wiki_extract") or "").strip()
         local_image = (prev.get("local_image") or "").strip()
 
-        # Download image if requested and not already cached locally
+        # Download image if requested and not already cached locally.
+        # local_image is repo-root-relative, so we resolve against root_path
+        # to check existence on disk.
+        #
+        # MIGRATION: builds prior to the move from data/festival_images/ to
+        # images/festivals/ stored local_image as "festival_images/foo.png"
+        # (data-relative). Detect that shape and migrate: move the file from
+        # data/festival_images/ to images/festivals/ and rewrite the CSV
+        # value to repo-root-relative. Idempotent — runs once per legacy row.
+        if image_url and local_image and not local_image.startswith(("images/", "/", "http")):
+            # Looks like a legacy data-relative path. Check if the file exists
+            # at the legacy location and migrate it.
+            legacy_path = root_path / "data" / local_image
+            if legacy_path.exists() and images_dir:
+                new_dir = root_path / images_dir if not Path(images_dir).is_absolute() \
+                          else Path(images_dir)
+                new_dir.mkdir(parents=True, exist_ok=True)
+                new_path = new_dir / legacy_path.name
+                if not new_path.exists():
+                    # Move (preferred — leaves no duplicate). If move fails for
+                    # any reason, fall back to copy.
+                    try:
+                        legacy_path.rename(new_path)
+                        if verbose:
+                            print(f"    ↪ migrated {legacy_path} → {new_path}", flush=True)
+                    except OSError:
+                        import shutil
+                        shutil.copy2(legacy_path, new_path)
+                        if verbose:
+                            print(f"    ↪ copied {legacy_path} → {new_path} (move failed)",
+                                  flush=True)
+                # Rewrite local_image to the new repo-root-relative path
+                try:
+                    local_image = str(new_path.resolve().relative_to(root_path)).replace("\\", "/")
+                except ValueError:
+                    local_image = str(new_path).replace("\\", "/")
+
         if images_dir and image_url:
-            should_download = refresh or not local_image or not (
-                Path(images_dir).parent / local_image).exists() if local_image else True
-            # The above is awkward — split for clarity:
-            existing_local_path = (Path(images_dir).parent / local_image) if local_image else None
+            existing_local_path = (root_path / local_image) if local_image else None
             should_download = (
                 refresh or
                 not local_image or
@@ -680,9 +718,19 @@ def seed_festival_images(concerts, csv_path, images_dir=None, refresh=False, ver
                 downloaded_path = _download_festival_image(
                     image_url, key, images_dir, verbose=verbose)
                 if downloaded_path:
-                    # Store path relative to data/ directory (the parent of images_dir)
-                    # so the frontend can construct URLs like data/festival_images/{key}.{ext}
-                    local_image = str(Path(downloaded_path).relative_to(Path(images_dir).parent))
+                    # Store path relative to repo root so the frontend can use
+                    # it directly without any prefix logic.
+                    try:
+                        local_image = str(
+                            Path(downloaded_path).resolve().relative_to(root_path)
+                        )
+                    except ValueError:
+                        # downloaded_path isn't under root — fall back to
+                        # the absolute path. Shouldn't happen in practice but
+                        # don't crash.
+                        local_image = str(Path(downloaded_path))
+                    # Normalize to forward-slashes for cross-platform CSVs
+                    local_image = local_image.replace("\\", "/")
                     downloaded += 1
 
         rows.append({
@@ -862,12 +910,14 @@ def build(concerts_src, posters_src, out_dir="data", skip_wiki=False,
     # builds we preserve any user edits and only add new rows for
     # newly-discovered festivals.
     # If image_url is populated, we download the image into
-    # data/festival_images/{key}.{ext} so the site doesn't depend on the
+    # images/festivals/{key}.{ext} so the site doesn't depend on the
     # external URL staying alive. The local_image column tracks the saved
-    # path. Pass refresh_festival_images=True to re-download even if cached.
+    # path relative to the repo root. Pass refresh_festival_images=True to
+    # re-download even if cached.
     fest_count, fest_with_img, fest_dl = seed_festival_images(
         concerts, f"{out_dir}/festival_images.csv",
-        images_dir=f"{out_dir}/festival_images",
+        images_dir="images/festivals",
+        root_dir=".",
         refresh=refresh_festival_images,
         verbose=verbose,
     )
