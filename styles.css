@@ -107,6 +107,16 @@ body {
   letter-spacing: 0.02em;
   color: var(--paper);
 }
+/* Lowercase "h" in SETHLIST — renders as a true lowercase letterform.
+   Bungee (the display font) is caps-only, so we force the fallback chain
+   to skip Bungee and use the next family that has lowercase glyphs.
+   The 50% opacity dims it so SETLIST emerges as the dominant read while
+   the "h" is still legible to anyone who looks for it.  */
+.brand-h {
+  font-family: "Big Shoulders Display", Impact, sans-serif;
+  text-transform: lowercase;
+  opacity: 0.5;
+}
 .brand-tagline {
   margin: 4px 0 0 0;
   font-family: var(--font-body);
@@ -117,6 +127,22 @@ body {
 }
 .brand-tagline .accent { color: var(--accent); font-style: normal; font-weight: 600; }
 .brand-tagline .sethtime-time { color: var(--paper); font-style: normal; font-weight: 600; }
+/* Lowercase "h" in the SETHTIME tagline — same dimming treatment as the
+   header. The tagline body is italic serif, but the "Seth" + "Time"
+   portion is non-italic bold (see .sethtime-time above). The "h" sits
+   between them. To keep the visual rhyme with the header's "h":
+     - same 50% opacity
+     - true lowercase (the body font already has lowercase, no font swap
+       needed here — this is just a span with opacity)
+     - matches surrounding non-italic + bold weight so it visually belongs
+       with "SET...TIME" rather than the italic "of live music" trailer. */
+.brand-tagline .brand-h-tagline {
+  color: var(--paper);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: lowercase;
+  opacity: 0.5;
+}
 .brand-sub {
   margin: 2px 0 0 0;
   font-family: var(--font-mono);

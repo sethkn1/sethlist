@@ -1038,7 +1038,13 @@ function renderTimeline() {
   app.appendChild(el("div", { class: "view-header" },
     el("h2", { class: "view-title" },
       "A ",
-      el("span", { class: "accent" }, "SethTime"),
+      // SETHTIME with the "h" rendered as a dimmed true-lowercase letter,
+      // matching the brand-h treatment used in the site header. Three pieces
+      // because Bungee (the display font) is caps-only, so the "h" needs
+      // its own span with a fallback font that has lowercase glyphs.
+      "Set",
+      el("span", { class: "brand-h" }, "h"),
+      "Time",
       " of live music"
     ),
     el("p", { class: "view-sub" }, "Chronological. Newest on top.")
