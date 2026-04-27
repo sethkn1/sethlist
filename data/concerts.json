@@ -561,6 +561,26 @@
   },
   {
     "id": 28,
+    "date": "2016-07-06",
+    "year": 2016,
+    "dayOfWeek": "Sunday",
+    "artist": "In This Moment",
+    "city": "Raleigh",
+    "state": "NC",
+    "venue": "The Ritz",
+    "attendedWith": "Kevin S.",
+    "hasPoster": false,
+    "setlistLink": "https://www.setlist.fm/setlist/in-this-moment/2017/the-ritz-raleigh-nc-4be5bb12.html",
+    "tourName": "The Hellpop Tour 2016",
+    "openingActs": "Hellyeah",
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 29,
     "date": "2016-07-18",
     "year": 2016,
     "dayOfWeek": null,
@@ -580,7 +600,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 29,
+    "id": 30,
     "date": "2016-08-27",
     "year": 2016,
     "dayOfWeek": "Saturday",
@@ -600,7 +620,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 30,
+    "id": 31,
     "date": "2016-09-07",
     "year": 2016,
     "dayOfWeek": "Friday",
@@ -620,7 +640,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 31,
+    "id": 32,
     "date": "2016-09-20",
     "year": 2016,
     "dayOfWeek": "Tuesday",
@@ -640,7 +660,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 32,
+    "id": 33,
     "date": "2016-10-04",
     "year": 2016,
     "dayOfWeek": "Tuesday",
@@ -660,7 +680,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 33,
+    "id": 34,
     "date": "2017-04-15",
     "year": 2017,
     "dayOfWeek": "Saturday",
@@ -680,7 +700,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 34,
+    "id": 35,
     "date": "2017-05-19",
     "year": 2017,
     "dayOfWeek": "Friday",
@@ -700,7 +720,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 35,
+    "id": 36,
     "date": "2017-05-24",
     "year": 2017,
     "dayOfWeek": "Wednesday",
@@ -713,26 +733,6 @@
     "setlistLink": "https://www.setlist.fm/setlist/tool/2017/eaglebank-arena-fairfax-va-23e7cc63.html",
     "tourName": "North American Tour 2017",
     "openingActs": "Once and Future Band",
-    "notes": null,
-    "festivalKey": null,
-    "festivalName": null,
-    "festivalDayNumber": null,
-    "festivalTotalDays": null
-  },
-  {
-    "id": 36,
-    "date": "2017-07-16",
-    "year": 2017,
-    "dayOfWeek": "Sunday",
-    "artist": "In This Moment",
-    "city": "Raleigh",
-    "state": "NC",
-    "venue": "The Ritz",
-    "attendedWith": "Kevin S.",
-    "hasPoster": false,
-    "setlistLink": "https://www.setlist.fm/setlist/in-this-moment/2017/the-ritz-raleigh-nc-4be5bb12.html",
-    "tourName": "Half God, Half Devil Tour",
-    "openingActs": "Motionless In White, Avatar, Gemini Syndrome",
     "notes": null,
     "festivalKey": null,
     "festivalName": null,
