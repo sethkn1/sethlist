@@ -604,195 +604,202 @@ def enrich_bands(artists, csv_path, skip_wiki=False, verbose=False):
 
 
 # =========================================================================
-# Bucket list (songs heard vs. songs played live by each band)
+# Festival images — manual-entry CSV
 # =========================================================================
 
-def build_bucket_list(out_dir, setlists_path, mbids_path, band_stats_dir):
+def seed_festival_images(concerts, csv_path, images_dir=None, refresh=False, verbose=False):
     """
-    Compute the bucket-list data from existing scraped band stats and your
-    cached setlists. Writes data/bucket_list.json with both per-band detail
-    and a flat cross-band ranking of unheard songs.
+    Maintain data/festival_images.csv with one row per festival key.
 
-    Inputs (all optional — missing inputs just produce an empty result):
-      - data/setlists.json       (from prefetch_setlists.py)
-      - data/band_mbids.json     (from prefetch_band_mbids.py)
-      - data/band_stats/<slug>.json  (from prefetch_band_stats.py)
+    On first run: seed the file with festival_key + festival_name pre-filled,
+      image_url/website_url/wiki_url/wiki_extract empty for the user to fill in.
+    On subsequent runs: preserve every existing row and any user-edited values,
+      append new rows for any newly-discovered festival_keys.
 
-    Output shape:
-      {
-        "generated_at": "2026-04-27T...",
-        "bands": {
-          "Puscifer": {
-            "slug": "puscifer", "stats_id": "3d6f5af",
-            "showsAttended": 5,
-            "totalLiveSongs": 71,
-            "heardCount": 48,
-            "coverage": 0.676,
-            "unheard": [{"name": "Dozo", "count": 111, "songid": "..."}, ...],
-            "heard":   [{"name": "Vagina Mine", "count": 224, "songid": "..."}, ...]
-          }, ...
-        },
-        "flatUnheard": [
-          {"song": "Dozo", "songid": "...", "band": "Puscifer",
-           "bandSlug": "puscifer", "playCount": 111, "showsSeen": 5}, ...
-        ]
-      }
+    The CSV is the single source of truth — we never overwrite user-entered
+    image_url, wiki_url, etc. We only update festival_name to track changes
+    in the underlying festival data, since the name is derived from concerts.
 
-    Coverage filtering is data-driven: a song "heard" only counts toward
-    coverage if it appears on the band's stats page. This naturally drops
-    video interludes, intermissions, and other non-song setlist entries.
+    Image downloading: if images_dir is provided, this function will also
+    download any image_url that doesn't already have a local copy, saving to
+    images_dir/{festival_key}.{ext}. The local path (relative to the data
+    directory) is stored in the local_image column. Idempotent — won't re-
+    download unless refresh=True.
+
+    Returns: (total_count, with_image_count, downloaded_count)
     """
-    import datetime as _dt
+    # Find every distinct festival
+    fest_info = {}  # festival_key -> festival_name
+    for c in concerts:
+        if c.get("festivalKey"):
+            fest_info.setdefault(c["festivalKey"], c.get("festivalName") or c["festivalKey"])
 
-    # All inputs optional — if any are missing, we just skip silently.
-    if not os.path.exists(setlists_path):
-        print(f"  (skip bucket list: {setlists_path} not found)")
-        return None
-    if not os.path.exists(mbids_path):
-        print(f"  (skip bucket list: {mbids_path} not found — run prefetch_band_mbids.py)")
-        return None
-    if not os.path.isdir(band_stats_dir):
-        print(f"  (skip bucket list: {band_stats_dir}/ not found — run prefetch_band_stats.py)")
-        return None
+    # Read existing CSV (if present), preserving manual edits
+    existing = {}  # festival_key -> row dict
+    if Path(csv_path).exists():
+        with open(csv_path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                key = (row.get("festival_key") or "").strip()
+                if key:
+                    existing[key] = row
 
-    with open(setlists_path) as f:
-        setlists = json.load(f)
-    with open(mbids_path) as f:
-        mbids = json.load(f)
+    # Build the merged set: every festival_key from concerts, plus any
+    # entries in the CSV that aren't in current concerts (defensive — don't
+    # delete user-entered data just because a concert row was removed).
+    all_keys = set(fest_info.keys()) | set(existing.keys())
 
-    # 1. Build "songs you heard" sets per artist (binary set, not counts —
-    #    per design: heard or didn't, no playcount weighting on your side).
-    #    Normalize for matching: lowercase + strip whitespace. Keep originals
-    #    too so we can show pretty names if we ever surface them.
-    heard_by_artist = {}  # artist -> {"heard_norm": set, "heard_originals": dict(norm->original)}
-    for k, v in setlists.items():
-        if not isinstance(v, dict): continue
-        if v.get("role") != "headliner": continue
-        if v.get("_error"): continue
-        artist = v.get("artist")
-        if not artist: continue
-        bucket = heard_by_artist.setdefault(artist, {"heard_norm": set(), "heard_originals": {}})
-        for s in v.get("sets", []) or []:
-            for song in s.get("songs", []) or []:
-                n = (song.get("name") or "").strip()
-                if not n: continue
-                norm = n.lower()
-                bucket["heard_norm"].add(norm)
-                bucket["heard_originals"].setdefault(norm, n)
+    # Prepare image directory if downloading is enabled
+    if images_dir:
+        Path(images_dir).mkdir(parents=True, exist_ok=True)
 
-    # 2. Walk the band_stats directory. Each file is one band's universe.
-    bands_out = {}
-    flat_unheard = []
-    files_seen = 0
-    files_skipped_no_match = []
+    rows = []
+    downloaded = 0
+    for key in sorted(all_keys):
+        prev = existing.get(key, {})
+        # festival_name: prefer current data (in case the user renamed a
+        # festival in the spreadsheet), fall back to whatever's in the CSV.
+        name = fest_info.get(key) or (prev.get("festival_name") or key)
+        image_url = (prev.get("image_url") or "").strip()
+        website_url = (prev.get("website_url") or "").strip()
+        wiki_url = (prev.get("wiki_url") or "").strip()
+        wiki_extract = (prev.get("wiki_extract") or "").strip()
+        local_image = (prev.get("local_image") or "").strip()
 
-    for fname in sorted(os.listdir(band_stats_dir)):
-        if not fname.endswith(".json"):
-            continue
-        path = os.path.join(band_stats_dir, fname)
-        with open(path) as f:
-            try:
-                stats = json.load(f)
-            except json.JSONDecodeError:
-                print(f"  (warn: {fname} is malformed; skipping)")
-                continue
-        files_seen += 1
+        # Download image if requested and not already cached locally
+        if images_dir and image_url:
+            should_download = refresh or not local_image or not (
+                Path(images_dir).parent / local_image).exists() if local_image else True
+            # The above is awkward — split for clarity:
+            existing_local_path = (Path(images_dir).parent / local_image) if local_image else None
+            should_download = (
+                refresh or
+                not local_image or
+                (existing_local_path is not None and not existing_local_path.exists())
+            )
+            if should_download:
+                downloaded_path = _download_festival_image(
+                    image_url, key, images_dir, verbose=verbose)
+                if downloaded_path:
+                    # Store path relative to data/ directory (the parent of images_dir)
+                    # so the frontend can construct URLs like data/festival_images/{key}.{ext}
+                    local_image = str(Path(downloaded_path).relative_to(Path(images_dir).parent))
+                    downloaded += 1
 
-        artist = stats.get("artist")
-        if not artist:
-            continue
+        rows.append({
+            "festival_key": key,
+            "festival_name": name,
+            "image_url": image_url,
+            "website_url": website_url,
+            "wiki_url": wiki_url,
+            "wiki_extract": wiki_extract,
+            "local_image": local_image,
+        })
 
-        # Reconcile: the artist name in band_stats *should* match a key in
-        # mbids and in heard_by_artist. If not, it's a data inconsistency
-        # (rename, capitalization mismatch). Log it.
-        mbid_entry = mbids.get(artist)
-        if not mbid_entry:
-            files_skipped_no_match.append(f"{artist} (no entry in band_mbids)")
-            continue
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=["festival_key", "festival_name", "image_url",
+                        "website_url", "wiki_url", "wiki_extract", "local_image"]
+        )
+        writer.writeheader()
+        for r in rows:
+            writer.writerow(r)
 
-        heard_bucket = heard_by_artist.get(artist, {"heard_norm": set(), "heard_originals": {}})
-        heard_norm = heard_bucket["heard_norm"]
-        shows = mbid_entry.get("shows_attended", 0)
+    with_image = sum(1 for r in rows if r["image_url"])
+    return len(rows), with_image, downloaded
 
-        # 3. Diff: each song on the stats page is either heard or unheard.
-        all_songs = stats.get("songs", []) or []
-        heard = []
-        unheard = []
-        for song in all_songs:
-            song_name = song.get("name", "").strip()
-            if not song_name: continue
-            entry = {
-                "name": song_name,
-                "count": song.get("count", 0),
-                "songid": song.get("songid"),
-            }
-            if song_name.lower() in heard_norm:
-                heard.append(entry)
-            else:
-                unheard.append(entry)
 
-        total = len(all_songs)
-        coverage = (len(heard) / total) if total > 0 else 0.0
+def _download_festival_image(url, festival_key, images_dir, verbose=False):
+    """
+    Download a festival image to {images_dir}/{festival_key}.{ext}.
 
-        bands_out[artist] = {
-            "slug": stats.get("slug"),
-            "stats_id": stats.get("stats_id"),
-            "showsAttended": shows,
-            "totalLiveSongs": total,
-            "heardCount": len(heard),
-            "coverage": round(coverage, 4),
-            "unheard": unheard,    # already sorted desc by count from scraper
-            "heard": heard,
-        }
+    Detects extension from response Content-Type header (preferred), falling
+    back to the URL path. If neither yields a recognized image extension,
+    skip the download and warn — better to leave the field blank than save
+    a file with a wrong/missing extension.
 
-        # 4. Add to flat list (one row per unheard song)
-        for u in unheard:
-            flat_unheard.append({
-                "song": u["name"],
-                "songid": u["songid"],
-                "band": artist,
-                "bandSlug": stats.get("slug"),
-                "playCount": u["count"],
-                "showsSeen": shows,
-            })
+    Returns the absolute path to the saved file, or None on failure.
+    """
+    import urllib.request
+    import urllib.error
+    import mimetypes
 
-    # Flat list is sorted by play count descending (the band's frequency).
-    # Tiebreak by band name then song name for deterministic output.
-    flat_unheard.sort(key=lambda x: (-x["playCount"], x["band"], x["song"]))
-
-    payload = {
-        "generated_at": _dt.datetime.now(_dt.timezone.utc).isoformat().replace("+00:00", "Z"),
-        "bands": bands_out,
-        "flatUnheard": flat_unheard,
+    EXT_MAP = {
+        "image/jpeg": ".jpg",
+        "image/jpg": ".jpg",
+        "image/png": ".png",
+        "image/webp": ".webp",
+        "image/gif": ".gif",
+        "image/svg+xml": ".svg",
     }
 
-    out_path = f"{out_dir}/bucket_list.json"
-    with open(out_path, "w") as f:
-        json.dump(payload, f, indent=2)
+    if verbose:
+        print(f"    Downloading image for {festival_key}: {url[:80]}", flush=True)
 
-    # Summary
-    total_unheard = len(flat_unheard)
-    total_bands = len(bands_out)
-    if total_bands == 0:
-        print(f"✓ bucket_list.json: 0 bands processed (run prefetch scripts)")
-    else:
-        avg_cov = sum(b["coverage"] for b in bands_out.values()) / total_bands
-        print(f"✓ bucket_list.json: {total_bands} bands, "
-              f"{total_unheard} unheard songs total, "
-              f"avg coverage {avg_cov*100:.0f}%")
-    if files_skipped_no_match:
-        print(f"  ⚠ {len(files_skipped_no_match)} band_stats file(s) had no match in band_mbids:")
-        for msg in files_skipped_no_match[:5]:
-            print(f"    - {msg}")
+    try:
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Sethlist/1.0 (personal concert archive; contact: github.com/sethkn1/sethlist)",
+        })
+        with urllib.request.urlopen(req, timeout=15) as r:
+            content_type = (r.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+            ext = EXT_MAP.get(content_type)
+            if not ext:
+                # Fall back to URL path (strip querystring)
+                from urllib.parse import urlparse
+                path = urlparse(url).path
+                guess = mimetypes.guess_extension(content_type) if content_type else None
+                if guess in (".jpe", ".jpeg"):
+                    ext = ".jpg"
+                elif guess in (".png", ".webp", ".gif", ".svg"):
+                    ext = guess
+                elif path.lower().endswith((".jpg", ".jpeg")):
+                    ext = ".jpg"
+                elif path.lower().endswith(".png"):
+                    ext = ".png"
+                elif path.lower().endswith(".webp"):
+                    ext = ".webp"
+                elif path.lower().endswith(".svg"):
+                    ext = ".svg"
+                elif path.lower().endswith(".gif"):
+                    ext = ".gif"
+            if not ext:
+                print(f"    ✗ Could not detect image type for {festival_key} "
+                      f"(Content-Type: {content_type!r}); skipping.", flush=True)
+                return None
+            data = r.read()
 
-    return payload
+        # Sanity check on size — refuse to write empty or tiny files
+        if len(data) < 100:
+            print(f"    ✗ Suspiciously small response ({len(data)} bytes) for "
+                  f"{festival_key}; skipping.", flush=True)
+            return None
+
+        # Write to disk
+        out_path = Path(images_dir) / f"{festival_key}{ext}"
+        with open(out_path, "wb") as f:
+            f.write(data)
+        if verbose:
+            kb = len(data) / 1024
+            print(f"    ✓ Saved {out_path.name} ({kb:.1f} KB)", flush=True)
+        return str(out_path)
+    except urllib.error.HTTPError as e:
+        print(f"    ✗ HTTP {e.code} for {festival_key}: {url[:80]}", flush=True)
+        return None
+    except (TimeoutError, OSError, urllib.error.URLError) as e:
+        print(f"    ✗ Network error for {festival_key}: {type(e).__name__}", flush=True)
+        return None
+    except Exception as e:
+        print(f"    ✗ Unexpected error for {festival_key}: {type(e).__name__}: {e}",
+              flush=True)
+        return None
 
 
 # =========================================================================
 # Main
 # =========================================================================
 
-def build(concerts_src, posters_src, out_dir="data", skip_wiki=False, verbose=False):
+def build(concerts_src, posters_src, out_dir="data", skip_wiki=False,
+          refresh_festival_images=False, verbose=False):
     Path(out_dir).mkdir(exist_ok=True)
 
     # Load & enrich concerts
@@ -826,7 +833,10 @@ def build(concerts_src, posters_src, out_dir="data", skip_wiki=False, verbose=Fa
 
     # Wikipedia enrichment for band images
     unique_artists = {c["artist"] for c in concerts if c.get("artist")}
-    # Exclude festival umbrella names (they're not bands)
+    # Exclude festival umbrella names (they're not bands).
+    # Festival metadata (image, wiki link, etc.) is managed in
+    # data/festival_images.csv via manual entry — see seed_festival_images()
+    # which is called below.
     unique_artists = {a for a in unique_artists if "festival" not in a.lower()}
 
     if skip_wiki:
@@ -846,14 +856,24 @@ def build(concerts_src, posters_src, out_dir="data", skip_wiki=False, verbose=Fa
             print(f"  Missed: {preview}{extra}")
             print(f"  → Edit data/band_images.csv to add image_url manually for these.")
 
-    print()
-    print("Bucket list (songs you've heard live vs. songs the band plays):")
-    build_bucket_list(
-        out_dir=out_dir,
-        setlists_path=f"{out_dir}/setlists.json",
-        mbids_path=f"{out_dir}/band_mbids.json",
-        band_stats_dir=f"{out_dir}/band_stats",
+    # Festival images / wiki links — manual-entry CSV.
+    # We seed one row per festival_key found in concerts; the user fills in
+    # image_url, website_url, wiki_url, wiki_extract by hand. On subsequent
+    # builds we preserve any user edits and only add new rows for
+    # newly-discovered festivals.
+    # If image_url is populated, we download the image into
+    # data/festival_images/{key}.{ext} so the site doesn't depend on the
+    # external URL staying alive. The local_image column tracks the saved
+    # path. Pass refresh_festival_images=True to re-download even if cached.
+    fest_count, fest_with_img, fest_dl = seed_festival_images(
+        concerts, f"{out_dir}/festival_images.csv",
+        images_dir=f"{out_dir}/festival_images",
+        refresh=refresh_festival_images,
+        verbose=verbose,
     )
+    dl_msg = f", {fest_dl} downloaded" if fest_dl else ""
+    print(f"✓ festival_images.csv: {fest_with_img}/{fest_count} festivals have image URLs"
+          f"{dl_msg}")
 
     print()
     print("You can edit these CSVs directly, then re-run this script:")
@@ -861,15 +881,20 @@ def build(concerts_src, posters_src, out_dir="data", skip_wiki=False, verbose=Fa
     print(f"  - {out_dir}/posters.csv      (add/edit/delete posters)")
     print(f"  - {out_dir}/poster_images.csv (paste official image URLs)")
     print(f"  - {out_dir}/band_images.csv  (override Wikipedia images; add websites)")
+    print(f"  - {out_dir}/festival_images.csv (manual entry — festival images, wiki links, etc.)")
 
 
 if __name__ == "__main__":
     args = sys.argv[1:]
     skip_wiki = False
     verbose = False
+    refresh_festival_images = False
     if "--skip-wiki" in args:
         skip_wiki = True
         args.remove("--skip-wiki")
+    if "--refresh-festival-images" in args:
+        refresh_festival_images = True
+        args.remove("--refresh-festival-images")
     if "--verbose" in args or "-v" in args:
         verbose = True
         for flag in ("--verbose", "-v"):
@@ -878,4 +903,5 @@ if __name__ == "__main__":
     if len(args) != 2:
         print(__doc__)
         sys.exit(1)
-    build(args[0], args[1], skip_wiki=skip_wiki, verbose=verbose)
+    build(args[0], args[1], skip_wiki=skip_wiki,
+          refresh_festival_images=refresh_festival_images, verbose=verbose)

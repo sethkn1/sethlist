@@ -10,6 +10,10 @@ const STATE = {
   posterImages: {},
   // artist name (case-normalized) -> { image_url, website_url, wiki_url, wiki_extract }
   bandImages: {},
+  // festival_key -> { festival_name, image_url, website_url, wiki_url, wiki_extract }
+  // Manually populated via data/festival_images.csv (festivals don't go through
+  // the band-images Wikipedia auto-lookup since their names don't match cleanly).
+  festivalImages: {},
   // setlist_id -> { artist, tour, sets: [{name, encore, songs: [{name, cover, tape, info}]}] }
   setlists: {},
   // state code -> full name
@@ -44,11 +48,15 @@ function saveOverrides() {
    DATA LOADING
    ============================================================ */
 async function loadData() {
-  const [c, p, imagesCsv, bandsCsv, setlists, bucketList] = await Promise.all([
+  const [c, p, imagesCsv, bandsCsv, festivalsCsv, setlists, bucketList] = await Promise.all([
     fetch("data/concerts.json").then(r => r.json()),
     fetch("data/posters.json").then(r => r.json()),
     fetch("data/poster_images.csv").then(r => r.ok ? r.text() : "").catch(() => ""),
     fetch("data/band_images.csv").then(r => r.ok ? r.text() : "").catch(() => ""),
+    // festival_images.csv is optional — if missing or unreadable, festival
+    // rows just won't have wiki links / banner images. Same fail-soft pattern
+    // as bucket_list.json.
+    fetch("data/festival_images.csv").then(r => r.ok ? r.text() : "").catch(() => ""),
     fetch("data/setlists.json").then(r => r.ok ? r.json() : {}).catch(() => ({})),
     // bucket_list.json is optional — if missing, the bucket-list features
     // simply don't render. This lets the app work on a fresh clone that
@@ -61,6 +69,7 @@ async function loadData() {
   STATE.posters = p;
   STATE.posterImages = parsePosterImagesCSV(imagesCsv);
   STATE.bandImages = parseBandImagesCSV(bandsCsv);
+  STATE.festivalImages = parseFestivalImagesCSV(festivalsCsv);
   STATE.setlists = setlists || {};
   STATE.bucketList = bucketList;  // null if not generated; check before use
 
@@ -140,6 +149,59 @@ function parseBandImagesCSV(text) {
     out[name.toLowerCase()] = {
       artist: name,
       image_url: (cols[idx.image] || "").trim() || null,
+      website_url: (cols[idx.website] || "").trim() || null,
+      wiki_url: (cols[idx.wiki] || "").trim() || null,
+      wiki_extract: (cols[idx.extract] || "").trim() || null,
+    };
+  }
+  return out;
+}
+
+/**
+ * Parse data/festival_images.csv into { festival_key -> { ... } }.
+ * Keyed by festivalKey directly (not normalized) so the lookup is just
+ * STATE.festivalImages[c.festivalKey]. Mirrors the band-images shape so
+ * downstream rendering can treat them interchangeably.
+ *
+ * The `local_image` column (when populated by build_data.py's download
+ * step) holds a path relative to the data/ directory, e.g.
+ * "festival_images/sonic_temple_2024.png". Frontend rendering should
+ * prefer local_image over image_url since local copies don't depend on
+ * external hosts that may eventually go dark.
+ */
+function parseFestivalImagesCSV(text) {
+  const out = {};
+  if (!text) return out;
+  const lines = text.split(/\r?\n/).filter(Boolean);
+  if (lines.length < 2) return out;
+  const h = splitCsvLine(lines[0]);
+  const idx = {
+    key: h.indexOf("festival_key"),
+    name: h.indexOf("festival_name"),
+    image: h.indexOf("image_url"),
+    website: h.indexOf("website_url"),
+    wiki: h.indexOf("wiki_url"),
+    extract: h.indexOf("wiki_extract"),
+    local: h.indexOf("local_image"),  // optional column — added by build_data.py download step
+  };
+  if (idx.key < 0) return out;  // malformed
+  for (let i = 1; i < lines.length; i++) {
+    const cols = splitCsvLine(lines[i]);
+    const key = (cols[idx.key] || "").trim();
+    if (!key) continue;
+    const localImage = idx.local >= 0 ? ((cols[idx.local] || "").trim() || null) : null;
+    const imageUrl = (cols[idx.image] || "").trim() || null;
+    // Effective image: prefer local file (build_data.py downloaded it under
+    // data/festival_images/), fall back to the external URL. Renderers should
+    // use `image_url` directly — we resolve precedence here so callers don't
+    // have to know about both fields.
+    const effectiveImage = localImage ? `data/${localImage}` : imageUrl;
+    out[key] = {
+      festival_key: key,
+      festival_name: (cols[idx.name] || "").trim() || null,
+      image_url: effectiveImage,
+      raw_image_url: imageUrl,  // preserved for diagnostics if needed
+      local_image: localImage,
       website_url: (cols[idx.website] || "").trim() || null,
       wiki_url: (cols[idx.wiki] || "").trim() || null,
       wiki_extract: (cols[idx.extract] || "").trim() || null,
@@ -276,6 +338,17 @@ function classifyType(t) {
 function bandLookup(artist) {
   if (!artist) return null;
   return STATE.bandImages[artist.toLowerCase()] || null;
+}
+
+/**
+ * Look up festival metadata (image, wiki link, etc.) by festivalKey.
+ * Returns null if no entry exists or the entry has no usable fields.
+ * Used by the concert modal to render a festival banner / wiki link
+ * for festival-day rows the same way bandLookup() works for bands.
+ */
+function festivalLookup(festivalKey) {
+  if (!festivalKey) return null;
+  return STATE.festivalImages[festivalKey] || null;
 }
 
 /**
@@ -5683,9 +5756,31 @@ function openConcertModal(c, navContext) {
 
   modalBody.innerHTML = "";
 
-  // Band banner at the top
+  // Banner at the top.
+  // For festival rows, prefer a festival-specific image (from
+  // data/festival_images.csv) since the concert's "artist" is something
+  // like "Welcome To Rockville Festival - Day 4" which isn't a band.
   const bandInfo = bandLookup(c.artist);
-  if (bandInfo || true) { // always show, even if it's a placeholder
+  const festInfo = c.festivalKey ? festivalLookup(c.festivalKey) : null;
+  if (festInfo && festInfo.image_url) {
+    // Custom banner with festival image; reuse the band-banner styling
+    const wrap = el("div", { class: "band-banner" });
+    const img = el("img", {
+      src: festInfo.image_url,
+      alt: festInfo.festival_name || c.artist,
+      loading: "lazy",
+      on: {
+        error: function() {
+          this.remove();
+          wrap.classList.add("band-banner-placeholder");
+          wrap.textContent = artistInitials(c.artist);
+        }
+      }
+    });
+    wrap.appendChild(img);
+    modalBody.appendChild(wrap);
+  } else {
+    // Default: bandBanner falls back to initials placeholder if no image
     modalBody.appendChild(bandBanner(c.artist));
   }
 
@@ -5698,17 +5793,21 @@ function openConcertModal(c, navContext) {
     [c.venue, [c.city, c.state].filter(Boolean).join(", ")].filter(Boolean).join(" · ")
   ));
 
-  // Band website/wiki chips
-  if (bandInfo && (bandInfo.website_url || bandInfo.wiki_url)) {
+  // Website / wiki chips. Show band info for non-festival rows; festival
+  // info for festival rows. (If a festival has both a website AND a wiki,
+  // both render — same as for bands.)
+  const linkSource = festInfo || bandInfo;
+  const linkLabel = festInfo ? "Festival site" : "Official site";
+  if (linkSource && (linkSource.website_url || linkSource.wiki_url)) {
     const bandLinks = el("div", { class: "band-links" });
-    if (bandInfo.website_url) {
+    if (linkSource.website_url) {
       bandLinks.appendChild(el("a", {
-        class: "m-link", href: bandInfo.website_url, target: "_blank", rel: "noopener"
-      }, "Official site ↗"));
+        class: "m-link", href: linkSource.website_url, target: "_blank", rel: "noopener"
+      }, linkLabel + " ↗"));
     }
-    if (bandInfo.wiki_url) {
+    if (linkSource.wiki_url) {
       bandLinks.appendChild(el("a", {
-        class: "m-link", href: bandInfo.wiki_url, target: "_blank", rel: "noopener"
+        class: "m-link", href: linkSource.wiki_url, target: "_blank", rel: "noopener"
       }, "Wikipedia ↗"));
     }
     modalBody.appendChild(bandLinks);
