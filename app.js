@@ -5972,6 +5972,44 @@ function openConcertModal(c, navContext) {
   if (c.setlistLink && c.setlistLink.startsWith("http")) {
     links.appendChild(el("a", { class: "m-link accent-link", href: c.setlistLink, target: "_blank", rel: "noopener" }, "Setlist.fm ↗"));
   }
+  // "View poster details" — reciprocal of the poster modal's "View show
+  // details" link. One link per distinct poster group matched for this
+  // show (deduped by groupKey, since multiple copies of the same edition
+  // would otherwise produce duplicate links).
+  // For festival days with both a festival poster and a band-day poster
+  // (e.g., Rock on the Range Day 3 has the festival poster + Tool's
+  // poster), we emit two separately-labeled links.
+  if (shows.length) {
+    const seenGroups = new Set();
+    const groupLinks = [];
+    shows.forEach(p => {
+      const k = posterGroupKey(p);
+      if (seenGroups.has(k)) return;
+      seenGroups.add(k);
+      groupLinks.push(p);
+    });
+    groupLinks.forEach(p => {
+      // Label disambiguates when there are multiple posters from this show.
+      // Single poster: bare "View poster details" matches the poster modal's
+      // bare "View show details" reciprocal. Multiple: prefix the artist
+      // so the user knows which one they're navigating to. We keep the
+      // word "poster" so the label parses cleanly:
+      //   "View poster details"           (single)
+      //   "View Tool poster details"      (multi, band-specific)
+      //   "View Rock on the Range poster details"  (multi, festival-wide)
+      const label = groupLinks.length === 1
+        ? "View poster details"
+        : `View ${p.artist || "this"} poster details`;
+      links.appendChild(el("a", {
+        class: "m-link",
+        href: "#",
+        on: { click: e => {
+          e.preventDefault();
+          openPosterModal(buildPosterGroupFor(p));
+        }},
+      }, label));
+    });
+  }
   // Bucket list link: shown only when this band has bucket-list data
   // (i.e., it's a headliner you've seen 2+ times). For festival rows we
   // skip — they don't have a single artist context. The link drops the
@@ -6013,8 +6051,54 @@ function openConcertModal(c, navContext) {
 }
 
 /* ============================================================
-   POSTER MODAL
+   POSTER GROUPING HELPERS
    ============================================================ */
+// These build the same "group" keys as renderPosters() so other code paths
+// (e.g., the concert modal's "View poster details" reciprocal links) can
+// look up which posters belong together as one print run / variant.
+//
+// A group represents one printable edition: same date/artist/location plus
+// matching type, variant, and denominator. Two posters with the same
+// edition number but different copy numbers (192/780 and 193/780) belong to
+// the same group; two posters with different denominators (192/780 and
+// 50/100) do not.
+function _denominatorKey(p) {
+  const num = (p.number || "").toString().trim();
+  if (!num) return "_blank";
+  if (/^unknown$/i.test(num)) return "_unknown";
+  if (/^unnumbered$/i.test(num)) return "_unnumbered";
+  const m = num.match(/\/(\d+)/);
+  if (m) return "denom:" + m[1];
+  return "raw:" + num.toLowerCase();
+}
+function posterGroupKey(p) {
+  const dateArtLoc = `${p.date}||${(p.artist || "").toLowerCase()}||${(p.location || "").toLowerCase()}`;
+  const type = (p.type || "").toLowerCase();
+  const variant = (p.variant || "").toLowerCase();
+  return `${dateArtLoc}||${type}||${variant}||${_denominatorKey(p)}`;
+}
+
+/**
+ * Given a single poster, build a minimal group object compatible with
+ * openPosterModal(). Includes any sibling posters in STATE.posters that
+ * share this poster's groupKey (typically just the poster itself).
+ */
+function buildPosterGroupFor(p) {
+  const k = posterGroupKey(p);
+  const siblings = STATE.posters.filter(x => posterGroupKey(x) === k);
+  const order = { SE: 0, AP: 1, VIP: 2, Foil: 3 };
+  return {
+    date: p.date,
+    year: p.year,
+    artist: p.artist,
+    location: p.location,
+    attended: p.attended,
+    posters: siblings.sort((a, b) =>
+      (order[classifyType(a.type)] || 9) - (order[classifyType(b.type)] || 9)),
+  };
+}
+
+
 /**
  * Open the poster modal for a group (all poster variants for a given show).
  * Optional `navContext` wires arrow-key navigation through sibling groups.
