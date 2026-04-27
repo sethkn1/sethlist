@@ -16664,5 +16664,96 @@
   },
   "opener:hellyeah:2016-07-06": {
     "_error": "empty setlist"
+  },
+  "opener:nothing-more:2016-10-04": {
+    "id": "53fd2b01",
+    "artist": "Nothing More",
+    "tour": null,
+    "eventDate": "04-10-2016",
+    "url": "https://www.setlist.fm/setlist/nothing-more/2016/red-hat-amphitheater-raleigh-nc-53fd2b01.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Christ Copyright"
+          },
+          {
+            "name": "Mr. MTV"
+          },
+          {
+            "name": "Ripping Me Apart"
+          },
+          {
+            "name": "Bass/Drum Solo"
+          },
+          {
+            "name": "Jenny"
+          },
+          {
+            "name": "Ocean Floor"
+          },
+          {
+            "name": "This Is the Time (Ballast)"
+          },
+          {
+            "name": "Salem (Burn the Witch)"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:chevelle:2016-10-04": {
+    "id": "43fd2b07",
+    "artist": "Chevelle",
+    "tour": "The North Corridor",
+    "eventDate": "04-10-2016",
+    "url": "https://www.setlist.fm/setlist/chevelle/2016/red-hat-amphitheater-raleigh-nc-43fd2b07.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Another Know It All"
+          },
+          {
+            "name": "The Clincher"
+          },
+          {
+            "name": "Hats Off to the Bull"
+          },
+          {
+            "name": "Take Out the Gunman"
+          },
+          {
+            "name": "Door to Door Cannibals"
+          },
+          {
+            "name": "I Get It"
+          },
+          {
+            "name": "Joyride (Omen)"
+          },
+          {
+            "name": "Face to the Floor"
+          },
+          {
+            "name": "The Red"
+          },
+          {
+            "name": "Forfeit"
+          },
+          {
+            "name": "Send the Pain Below"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
   }
 }

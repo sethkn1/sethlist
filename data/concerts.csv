@@ -32,7 +32,7 @@ id,date,dayOfWeek,artist,city,state,venue,attendedWith,hasPoster,setlistLink,tou
 30,2016-08-27,Saturday,AC/DC,Greensboro,NC,Greensboro Coliseum,Bill B.,No,https://www.setlist.fm/setlist/acdc/2016/greensboro-coliseum-greensboro-nc-6bfc26be.html,Rock or Bust World Tour,,Axl Rose Sang
 31,2016-09-07,Friday,Weird Al,Durham,NC,DPAC,Dana K.,No,https://www.setlist.fm/setlist/weird-al-yankovic/2016/durham-performing-arts-center-durham-nc-63fc5693.html,Mandatory World Tour,,
 32,2016-09-20,Tuesday,Hellyeah,Greensboro,NC,Cone Denim Entertainment Center,,No,https://www.setlist.fm/setlist/hellyeah/2016/cone-denim-entertainment-center-greensboro-nc-6bfdfaf2.html,We're All in This Together Tour,,
-33,2016-10-04,Tuesday,Disturbed,Raleigh,NC,Red Hat Amphitheater,Jeff Stark,No,https://www.setlist.fm/setlist/disturbed/2016/red-hat-amphitheater-raleigh-nc-43fd2fbf.html,Immortalized Tour,"Breaking Benjamin, Alter Bridge, Saint Asonia",
+33,2016-10-04,Tuesday,Disturbed,Raleigh,NC,Red Hat Amphitheater,Jeff Stark,No,https://www.setlist.fm/setlist/disturbed/2016/red-hat-amphitheater-raleigh-nc-43fd2fbf.html,Immortalized Tour,"Nothing More, Chevelle",
 34,2017-04-15,Saturday,Red Hot Chili Peppers,Raleigh,NC,PNC Arena,Josh A.,No,https://www.setlist.fm/setlist/red-hot-chili-peppers/2017/pnc-arena-raleigh-nc-23e6cc0f.html,The Getaway World Tour,Babymetal,
 35,2017-05-19,Friday,Metallica,Boston,MA,Gillette Stadium,Jason C.,Yes,https://www.setlist.fm/setlist/metallica/2017/gillette-stadium-foxborough-ma-3be7ec0c.html,WorldWired Tour,"Avenged Sevenfold, Volbeat",
 36,2017-05-24,Wednesday,Tool,Fairfax,VA,EagleBank Arena,"Kevin M., Chris D.",Yes,https://www.setlist.fm/setlist/tool/2017/eaglebank-arena-fairfax-va-23e7cc63.html,North American Tour 2017,Once and Future Band,
