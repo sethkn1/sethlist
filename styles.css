@@ -2211,6 +2211,16 @@ main {
 .popover-option:hover { background: rgba(255,255,255,0.05); }
 .popover-option:last-child { border-bottom: none; }
 .popover-option input { accent-color: var(--accent); cursor: pointer; }
+/* Disabled state — name doesn't match the OTHER filters in mutual cascade.
+   We mute the text but keep the row interactive enough that an already-
+   selected disabled option can still be unchecked. */
+.popover-option.disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.popover-option.disabled:hover { background: transparent; }
+.popover-option.disabled .popover-count { opacity: 0.5; }
 .popover-name { flex: 1; }
 .popover-count {
   font-family: var(--font-mono);

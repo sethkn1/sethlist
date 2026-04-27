@@ -683,7 +683,12 @@ function normalizeArtistKey(s) {
  * with checkboxes. Selected names go into URL param `withPerson` as a
  * comma-separated list.
  */
-function attendedWithPopover(allNames, counts, selected) {
+function attendedWithPopover(allNames, counts, selected, availableNames) {
+  // availableNames is an optional Set of names that match the OTHER active
+  // filters. If provided, names not in the set are styled as disabled and
+  // not clickable (unless they're already selected — in that case the user
+  // should be able to uncheck them).
+  const hasAvailability = availableNames instanceof Set;
   const wrap = el("div", { class: "filter-popover-wrap" });
   const selectedSet = new Set(selected);
   const label = selected.length === 0
@@ -734,12 +739,35 @@ function attendedWithPopover(allNames, counts, selected) {
     }, "Clear all"));
   }
 
+  // Sort: available names first (preserving the input order which is
+  // count-desc), then unavailable names alphabetically. Already-selected
+  // names always sort to the very top regardless of availability.
+  const orderedNames = (() => {
+    if (!hasAvailability) return allNames;
+    const sel = [];
+    const avail = [];
+    const unavail = [];
+    allNames.forEach(n => {
+      if (selectedSet.has(n)) sel.push(n);
+      else if (availableNames.has(n)) avail.push(n);
+      else unavail.push(n);
+    });
+    unavail.sort((a, b) => a.localeCompare(b));
+    return [...sel, ...avail, ...unavail];
+  })();
+
   const list = el("div", { class: "popover-list" });
-  allNames.forEach(name => {
-    const opt = el("label", { class: "popover-option", "data-name": name });
+  orderedNames.forEach(name => {
+    const isAvailable = !hasAvailability || availableNames.has(name) || selectedSet.has(name);
+    const opt = el("label", {
+      class: "popover-option" + (isAvailable ? "" : " disabled"),
+      "data-name": name,
+      title: isAvailable ? null : "No matches with current filters",
+    });
     const cb = el("input", {
       type: "checkbox",
       checked: selectedSet.has(name),
+      disabled: !isAvailable ? "" : null,
       on: {
         change: e => {
           if (e.target.checked) selectedSet.add(name);
@@ -893,7 +921,9 @@ function renderTimeline() {
   });
   const allArtists = [...artistDisplayByKey.values()].sort((a, b) =>
     a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
-  // All unique attended-with names with counts (sorted by frequency)
+  // All unique attended-with names with counts (sorted by frequency).
+  // Note: this is the GLOBAL count for sorting. Cascading availability is
+  // computed below via candidate sets — this counts list reflects ALL shows.
   const nameCounts = {};
   STATE.concerts.forEach(c => {
     splitAttendedWith(c.attendedWith).forEach(n => {
@@ -902,6 +932,94 @@ function renderTimeline() {
   });
   const allNames = Object.keys(nameCounts).sort((a, b) =>
     (nameCounts[b] - nameCounts[a]) || a.localeCompare(b));
+
+  // ====================================================================
+  // CASCADING FILTERS — mutual cascade.
+  // For each filter dropdown, we compute the set of values that would
+  // still yield results if that specific filter were the only thing
+  // changed. Implementation: build candidate concerts using all OTHER
+  // filters (plus the search query), then pull the unique values for
+  // the filter being populated.
+  //
+  // Why we exclude the filter being populated from its own predicate:
+  // if you've already picked "Tool", the artist dropdown should show
+  // every artist (so you can change your mind), with disabled markers
+  // on artists who don't fit the OTHER filters. If we included artist
+  // in the predicate, it would always show only "Tool" — useless.
+  //
+  // Why we still allow the user's currently-selected value even if it
+  // would be disabled: a user can navigate away from a contradictory
+  // selection without us silently dropping it.
+  // ====================================================================
+
+  // Pre-build a per-concert lookup of whether each filter dimension matches.
+  // We use these to compose the predicate fragments.
+  const qLowerForCascade = q.toLowerCase();
+
+  const matchesQuery = (c) => {
+    if (!qLowerForCascade) return true;
+    const hay = [c.artist, c.venue, c.city, c.tourName, c.openingActs, c.notes,
+      c.attendedWith, c.festivalName].filter(Boolean).join(" ").toLowerCase();
+    return hay.includes(qLowerForCascade);
+  };
+  const matchesState = (c) => !state || c.state === state;
+  const matchesVenue = (c) => !venue || c.venue === venue;
+  const matchesTour = (c) => !tour || c.tourName === tour;
+  const matchesFestival = (c) => !festival || c.festivalKey === festival;
+  const matchesPoster = (c) => {
+    if (posterFilter === "yes") return !!c.hasPoster;
+    if (posterFilter === "no") return !c.hasPoster;
+    return true;
+  };
+  const matchesAttended = (c) => {
+    if (attendedWithFilter.length === 0) return true;
+    const attendees = splitAttendedWith(c.attendedWith);
+    return attendedWithFilter.some(sel => attendees.some(a => a === sel));
+  };
+  const matchesArtist = (c) => {
+    if (!artist) return true;
+    const targetKey = normalizeArtistKey(artist);
+    return allArtistsAtConcert(c).some(a => normalizeArtistKey(a) === targetKey);
+  };
+
+  // Candidate concerts for each dropdown — excluding that dropdown's own filter
+  const candidatesForArtist = STATE.concerts.filter(c =>
+    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesTour(c) &&
+    matchesFestival(c) && matchesPoster(c) && matchesAttended(c)
+  );
+  const candidatesForFestival = STATE.concerts.filter(c =>
+    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesTour(c) &&
+    matchesArtist(c) && matchesPoster(c) && matchesAttended(c)
+  );
+  const candidatesForAttendees = STATE.concerts.filter(c =>
+    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesTour(c) &&
+    matchesArtist(c) && matchesFestival(c) && matchesPoster(c)
+  );
+  const candidatesForPoster = STATE.concerts.filter(c =>
+    matchesQuery(c) && matchesState(c) && matchesVenue(c) && matchesTour(c) &&
+    matchesArtist(c) && matchesFestival(c) && matchesAttended(c)
+  );
+
+  // From candidate sets, derive the "available" set per filter.
+  // For artist: any band that appears at a candidate concert (in any role).
+  const availableArtistKeys = new Set();
+  candidatesForArtist.forEach(c => {
+    allArtistsAtConcert(c).forEach(name => {
+      availableArtistKeys.add(normalizeArtistKey(name));
+    });
+  });
+  // For festival: festivalKeys of candidate concerts that have one.
+  const availableFestivalKeys = new Set(
+    candidatesForFestival.filter(c => c.festivalKey).map(c => c.festivalKey)
+  );
+  // For attendees: names that appear in ANY candidate concert's attendedWith
+  const availableAttendeeNames = new Set();
+  candidatesForAttendees.forEach(c => {
+    splitAttendedWith(c.attendedWith).forEach(n => availableAttendeeNames.add(n));
+  });
+  // For poster: which of yes/no would yield any results
+  const posterHasYes = candidatesForPoster.some(c => c.hasPoster);
+  const posterHasNo = candidatesForPoster.some(c => !c.hasPoster);
 
   const filterBar = el("div", { class: "filter-bar" });
 
@@ -948,8 +1066,15 @@ function renderTimeline() {
   });
   festivalSelect.appendChild(el("option", { value: "" }, "All festivals"));
   allFestivals.forEach(([key, info]) => {
+    const isAvailable = availableFestivalKeys.has(key) || key === festival;
     const opt = el("option", { value: key }, info.name);
     if (key === festival) opt.selected = true;
+    if (!isAvailable) {
+      opt.disabled = true;
+      // Browsers don't always render disabled options as visibly muted in
+      // dropdowns. We mark with a leading dash so users see the difference.
+      opt.textContent = "— " + opt.textContent;
+    }
     festivalSelect.appendChild(opt);
   });
   filterBar.appendChild(festivalSelect);
@@ -959,14 +1084,23 @@ function renderTimeline() {
   });
   artistSelect.appendChild(el("option", { value: "" }, "All bands"));
   allArtists.forEach(a => {
+    const aKey = normalizeArtistKey(a);
+    const isAvailable = availableArtistKeys.has(aKey) || a === artist;
     const opt = el("option", { value: a }, a);
     if (a === artist) opt.selected = true;
+    if (!isAvailable) {
+      opt.disabled = true;
+      opt.textContent = "— " + opt.textContent;
+    }
     artistSelect.appendChild(opt);
   });
   filterBar.appendChild(artistSelect);
 
-  // Attended With multi-select popover
-  filterBar.appendChild(attendedWithPopover(allNames, nameCounts, attendedWithFilter));
+  // Attended With multi-select popover. Pass available names so the popover
+  // can disable/style names that don't fit the other filters.
+  filterBar.appendChild(attendedWithPopover(
+    allNames, nameCounts, attendedWithFilter, availableAttendeeNames
+  ));
 
   const posterSelect = el("select", {
     on: { change: e => {
@@ -981,13 +1115,20 @@ function renderTimeline() {
       location.hash = newHash;
     }}
   });
+  // "All" is always available; "yes" and "no" only when those subsets are
+  // non-empty under the other filters. Currently-selected value stays
+  // available so the user can deselect it.
   [
-    ["", "With or Without Poster"],
-    ["yes", "With Poster"],
-    ["no", "Without Poster"]
-  ].forEach(([val, label]) => {
+    ["", "With or Without Poster", true],
+    ["yes", "With Poster", posterHasYes || posterFilter === "yes"],
+    ["no", "Without Poster", posterHasNo || posterFilter === "no"],
+  ].forEach(([val, label, isAvailable]) => {
     const opt = el("option", { value: val }, label);
     if (val === posterFilter) opt.selected = true;
+    if (!isAvailable) {
+      opt.disabled = true;
+      opt.textContent = "— " + opt.textContent;
+    }
     posterSelect.appendChild(opt);
   });
   filterBar.appendChild(posterSelect);
