@@ -2969,7 +2969,20 @@ function renderSongs() {
     return;
   }
 
-  // Render the table
+  // Render the table.
+  //
+  // Long song lists used to render up to 300 rows in a single pass and cap
+  // anything beyond that with a "narrow the filter" hint. That created two
+  // problems: (1) one big render briefly blocks the main thread on weaker
+  // devices, and (2) anything past row 300 was simply unreachable.
+  //
+  // Now we batch with IntersectionObserver: render the first BATCH_SIZE
+  // rows, then drop a sentinel <div> at the bottom that — when it scrolls
+  // into view — triggers the next batch. No scroll listeners, no manual
+  // throttling. Simple and incremental. The browser keeps firing the
+  // observer until the sentinel sits below the viewport or the list runs
+  // out, which means tall monitors auto-fill on first load.
+  const BATCH_SIZE = 50;
   const table = el("div", { class: "songs-table" });
 
   // Header row
@@ -2984,8 +2997,29 @@ function renderSongs() {
   header.appendChild(el("span", { class: "col-last" }, "Last heard"));
   header.appendChild(el("span", { class: "col-count" }, "Plays"));
   table.appendChild(header);
+  app.appendChild(table);
 
-  filtered.slice(0, 300).forEach((s, i) => {  // cap render at 300 for perf on huge data
+  // Status footer — shows "X of Y" while loading, vanishes when done.
+  const status = el("div", {
+    class: "loading songs-loading-status",
+    style: "margin-top:16px;",
+  });
+  app.appendChild(status);
+
+  // Sentinel: an empty element placed after the status footer. When it
+  // intersects the viewport, we render the next batch. We position it
+  // ABOVE the status text in the DOM so that as we append rows, the
+  // sentinel keeps moving down with them. Actually, simpler: we keep
+  // the sentinel AFTER status, and rely on the fact that appending rows
+  // to .songs-table pushes status + sentinel down with it.
+  const sentinel = el("div", { class: "songs-sentinel", "aria-hidden": "true" });
+  app.appendChild(sentinel);
+
+  /**
+   * Render one row for a given song-row index in `filtered`.
+   * Pulled out so renderBatch can call it in a loop without ballooning.
+   */
+  function renderSongRow(s, i) {
     // Derive first/last from play dates
     const datedPlays = s.plays.filter(p => p.date).sort((a, b) => a.date.localeCompare(b.date));
     const first = datedPlays[0];
@@ -3027,14 +3061,65 @@ function renderSongs() {
     );
     row.appendChild(countCell);
 
-    table.appendChild(row);
-  });
-  app.appendChild(table);
+    return row;
+  }
 
-  if (filtered.length > 300) {
-    app.appendChild(el("div", { class: "loading", style: "margin-top:16px;" },
-      `Showing first 300 of ${filtered.length}. Narrow the filter to see more.`
-    ));
+  // Cursor: index of the next song to render. We slice [cursor, cursor+BATCH_SIZE]
+  // each time the observer fires and advance until cursor >= filtered.length.
+  let cursor = 0;
+
+  function renderBatch() {
+    const end = Math.min(cursor + BATCH_SIZE, filtered.length);
+    // Use a DocumentFragment so we get one reflow, not BATCH_SIZE.
+    const frag = document.createDocumentFragment();
+    for (let i = cursor; i < end; i++) {
+      frag.appendChild(renderSongRow(filtered[i], i));
+    }
+    table.appendChild(frag);
+    cursor = end;
+    updateStatus();
+  }
+
+  function updateStatus() {
+    if (cursor >= filtered.length) {
+      // Hide the status entirely once everything is loaded — no value
+      // in showing "X of X" forever; the song count up top already says
+      // the total.
+      status.remove();
+    } else {
+      status.textContent = `Showing ${cursor} of ${filtered.length}`;
+    }
+  }
+
+  // First paint
+  renderBatch();
+
+  // Only attach the observer + keep the sentinel if there's more to load.
+  // For artist drilldowns or filtered views that fit in one batch, the
+  // sentinel is unnecessary clutter and would also interfere with the
+  // coverage/bucket-list sections rendered below the songs table.
+  if (cursor < filtered.length) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting && cursor < filtered.length) {
+          renderBatch();
+          if (cursor >= filtered.length) {
+            observer.disconnect();
+            sentinel.remove();
+          }
+        }
+      }
+    }, {
+      // rootMargin pre-loads slightly before the sentinel actually hits the
+      // viewport — feels smoother than waiting for it to be flush.
+      rootMargin: "200px 0px",
+    });
+    observer.observe(sentinel);
+  } else {
+    // Everything already on screen — drop the sentinel so it doesn't sit
+    // empty in the DOM and so coverage/bucket-list render flush against
+    // the table instead of with a gap.
+    sentinel.remove();
   }
 
   // Missing coverage — only shown on the artist drill-down view.
