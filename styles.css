@@ -107,15 +107,19 @@ body {
   letter-spacing: 0.02em;
   color: var(--paper);
 }
-/* Lowercase "h" in SETHLIST — renders as a true lowercase letterform.
-   Bungee (the display font) is caps-only, so we force the fallback chain
-   to skip Bungee and use the next family that has lowercase glyphs.
-   The #555 color (very dim gray) deemphasizes it so SETLIST emerges as
-   the dominant read while the "h" is still legible to anyone who looks. */
+/* Make the brand-text container shrink-wrap to its widest line (SETHLIST).
+   Without this, the container is block-width and the divider bar below
+   stretches the full available width. With inline-block, the container
+   sizes to the H1 and the bar matches it exactly. The tagline below is
+   shorter so just left-aligns under SETHLIST cleanly. */
+.brand-text {
+  display: inline-block;
+}
+/* "H" in SETHLIST — same capital letter, same font, just dimmed to 75%
+   opacity so it visually recedes. SETLIST reads through as the dominant
+   word; the H is a quiet aside that you notice on second look. */
 .brand-h {
-  font-family: "Big Shoulders Display", Impact, sans-serif;
-  text-transform: lowercase;
-  color: #555;
+  opacity: 0.75;
 }
 .brand-tagline {
   margin: 4px 0 0 0;
@@ -139,21 +143,22 @@ body {
   width: 100%;
 }
 .brand-tagline .accent { color: var(--accent); font-style: normal; font-weight: 600; }
-.brand-tagline .sethtime-time { color: var(--paper); font-style: normal; font-weight: 600; }
-/* Lowercase "h" in the SETHTIME tagline — same dimming treatment as the
-   header. The tagline body is italic serif, but the "Seth" + "Time"
-   portion is non-italic bold (see .sethtime-time above). The "h" sits
-   between them. To keep the visual rhyme with the header's "h":
-     - same #555 dim-gray color
-     - true lowercase (the body font already has lowercase, no font swap
-       needed here — this is just a span with color)
-     - matches surrounding non-italic + bold weight so it visually belongs
-       with "SET...TIME" rather than the italic "of live music" trailer. */
-.brand-tagline .brand-h-tagline {
-  color: #555;
+/* "Seth"/"Time" wrapper in the tagline — kept as serif italic with caps
+   forced via CSS. This makes SETHTIME a visual rhyme with SETHLIST above
+   without requiring a font swap, so the tagline still reads as one
+   coherent italic phrase rather than a wordmark dropped into a sentence. */
+.brand-tagline .sethtime-time {
+  color: var(--paper);
   font-style: normal;
   font-weight: 600;
-  text-transform: lowercase;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+/* "H" in the SETHTIME tagline — same 75% opacity treatment as the
+   header's brand-h. Inherits the surrounding sethtime-time styling
+   (uppercase, bold, paper color); we only override the opacity. */
+.brand-tagline .brand-h-tagline {
+  opacity: 0.75;
 }
 .brand-sub {
   margin: 2px 0 0 0;

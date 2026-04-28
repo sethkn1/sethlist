@@ -1049,12 +1049,12 @@ function renderTimeline() {
   app.appendChild(el("div", { class: "view-header" },
     el("h2", { class: "view-title" },
       "A ",
-      // SETHTIME with the "h" rendered as a dimmed true-lowercase letter,
-      // matching the brand-h treatment used in the site header. Three pieces
-      // because Bungee (the display font) is caps-only, so the "h" needs
-      // its own span with a fallback font that has lowercase glyphs.
+      // SETHTIME with the "H" dimmed to 75% opacity — same brand-h
+      // treatment as the site header. Same letter, same font, just
+      // a quieter tone so SETLIST emerges as the dominant read while
+      // the H remains legible.
       "Set",
-      el("span", { class: "brand-h" }, "h"),
+      el("span", { class: "brand-h" }, "H"),
       "Time",
       " of live music"
     ),
@@ -4632,8 +4632,8 @@ function renderAbout() {
   // Section: Why I keep going
   wrap.appendChild(el("h3", { class: "about-section" }, "Why I keep going"));
   wrap.appendChild(el("p", {},
-    "There are artists I'll never get to see live. Chester Bennington. Tom Petty. ",
-    "Chris Cornell. Kurt Cobain. Vinny Paul. I think about that list a lot."
+    "There are artists I'll never see live again. Chester Bennington. Tom Petty. ",
+    "Chris Cornell. Kurt Cobain. The Abbott brothers. I think about that list a lot."
   ));
   wrap.appendChild(el("p", {},
     "So when an artist I love comes through town or is in a decent travelable location, ",
