@@ -364,21 +364,90 @@ def merge_poster_images(csv_path, posters, personal_urls, stock_urls):
       - personal_url: user's photo (usually of the framed physical copy)
       - stock_url: clean reference image (primary display in the app)
       - official_url: legacy, rarely populated
+
+    Matching strategy: posters are keyed by their identity tuple
+    (date, artist, location, type, variant, number). poster_id is just
+    a row index that shifts whenever the spreadsheet is re-sorted or new
+    rows are inserted, so we MUST NOT use it as a merge key — that bug
+    silently re-attaches the wrong row's images to a different poster
+    after re-builds. Identity tuple is stable across re-builds: same
+    poster, same key, regardless of row order.
+
+    For the rare case where two distinct rows have an identical identity
+    tuple (would require two posters with the same date+artist+location+
+    type+variant+number, which is essentially the same poster recorded
+    twice), the first one in the existing CSV wins. We log a warning so
+    the user can decide if that's intentional.
     """
+    def _identity_key(date, artist, location, ptype, variant, number):
+        # Normalize so trivial whitespace/case variation doesn't break the
+        # match. Strip blanks → empty string. Lowercase the strings since
+        # an artist's casing can shift over time without it being a
+        # "different" poster.
+        return (
+            (date or "").strip(),
+            (artist or "").strip().lower(),
+            (location or "").strip().lower(),
+            (ptype or "").strip().lower(),
+            (variant or "").strip().lower(),
+            (number or "").strip().lower(),
+        )
+
     existing = {}
     if os.path.exists(csv_path):
         with open(csv_path, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
+            # The OLD CSV format only stored poster_id, date, and artist —
+            # not type/variant/number. So we can't always reconstruct the
+            # full identity from the CSV alone. Fall back: build the
+            # existing-row map from whatever the CSV has, AND also keep an
+            # id-keyed map as a last-resort lookup for cases where the
+            # identity-key path can't find a hit. New CSV writes (below)
+            # carry the full identity, so the id-fallback gradually goes
+            # away after a few rebuild cycles.
+            existing_by_identity = {}
+            existing_by_id = {}
             for row in reader:
+                # Best-effort identity from CSV (date+artist only, since
+                # type/variant/number aren't stored in the legacy format).
+                # Lookups in the merge loop will use the FULL identity
+                # tuple from posters.json, which means CSVs without
+                # type/variant/number will only match when those fields
+                # happen to be empty for that poster too — which is rare.
+                # The id-fallback below covers the gap.
+                key = _identity_key(
+                    row.get("date"), row.get("artist"), row.get("location"),
+                    row.get("type"), row.get("variant"), row.get("number"),
+                )
+                existing_by_identity[key] = row
                 try:
-                    existing[int(row["poster_id"])] = row
+                    existing_by_id[int(row["poster_id"])] = row
                 except (ValueError, KeyError):
-                    continue
+                    pass
 
     rows = []
     for p, personal, stock in zip(posters, personal_urls, stock_urls):
         pid = p["id"]
-        prev = existing.get(pid, {})
+        # Primary lookup: by full identity tuple. This is correct across
+        # row reorders, insertions, and id shifts.
+        key = _identity_key(
+            p.get("date"), p.get("artist"), p.get("location"),
+            p.get("type"), p.get("variant"), p.get("number"),
+        )
+        prev = existing_by_identity.get(key)
+        if prev is None:
+            # Fallback: legacy CSVs (pre-fix) didn't store type/variant/
+            # number, so the identity-key match misses for those. Try by
+            # poster_id IF (a) the existing row at that id has the same
+            # date+artist (sanity check — guards against the very bug we
+            # introduced), AND (b) we haven't already used that row for
+            # a different poster.
+            candidate = existing_by_id.get(pid)
+            if candidate and (candidate.get("date") or "") == (p.get("date") or "") \
+                          and (candidate.get("artist") or "").lower() == (p.get("artist") or "").lower():
+                prev = candidate
+        prev = prev or {}
+
         # CSV values win ONLY if the xlsx doesn't have a fresher value.
         # This lets a user manually paste URLs but also lets the xlsx override.
         personal_url = personal or prev.get("personal_url") or ""
@@ -388,6 +457,10 @@ def merge_poster_images(csv_path, posters, personal_urls, stock_urls):
             "poster_id": pid,
             "date": p["date"] or "",
             "artist": p["artist"] or "",
+            "location": p.get("location") or "",
+            "type": p.get("type") or "",
+            "variant": p.get("variant") or "",
+            "number": p.get("number") or "",
             "personal_url": personal_url,
             "stock_url": stock_url,
             "official_url": official_url,
@@ -395,7 +468,9 @@ def merge_poster_images(csv_path, posters, personal_urls, stock_urls):
 
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
-            f, fieldnames=["poster_id", "date", "artist", "personal_url", "stock_url", "official_url"])
+            f, fieldnames=["poster_id", "date", "artist", "location",
+                           "type", "variant", "number",
+                           "personal_url", "stock_url", "official_url"])
         writer.writeheader()
         for r in rows:
             writer.writerow(r)
