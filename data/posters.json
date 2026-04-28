@@ -273,6 +273,23 @@
   },
   {
     "id": 16,
+    "date": "2017-07-18",
+    "year": 2017,
+    "artist": "Primus",
+    "illustrator": "Don Pendleton",
+    "location": "Raleigh",
+    "type": "AP",
+    "variant": "Cream",
+    "number": "15/30",
+    "tourShowSpecific": "Day of Show",
+    "autographed": false,
+    "framed": false,
+    "attended": true,
+    "notes": null,
+    "expressobeansLink": "https://expressobeans.com/public/detail.php/244095"
+  },
+  {
+    "id": 17,
     "date": "2017-08-11",
     "year": 2017,
     "artist": "Guns N' Roses",
@@ -289,7 +306,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/244301"
   },
   {
-    "id": 17,
+    "id": 18,
     "date": "2017-09-27",
     "year": 2017,
     "artist": "Roger Waters",
@@ -306,7 +323,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/253928"
   },
   {
-    "id": 18,
+    "id": 19,
     "date": "2017-10-10",
     "year": 2017,
     "artist": "Queens of the Stone Age",
@@ -323,7 +340,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/247251"
   },
   {
-    "id": 19,
+    "id": 20,
     "date": "2018-05-18",
     "year": 2018,
     "artist": "Rock on the Range",
@@ -340,7 +357,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 20,
+    "id": 21,
     "date": "2018-05-20",
     "year": 2018,
     "artist": "Tool",
@@ -357,7 +374,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/281506"
   },
   {
-    "id": 21,
+    "id": 22,
     "date": "2018-09-04",
     "year": 2018,
     "artist": "Pearl Jam",
@@ -374,7 +391,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/265755"
   },
   {
-    "id": 22,
+    "id": 23,
     "date": "2018-11-01",
     "year": 2018,
     "artist": "A Perfect Circle",
@@ -391,7 +408,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/323469"
   },
   {
-    "id": 23,
+    "id": 24,
     "date": "2018-11-01",
     "year": 2018,
     "artist": "A Perfect Circle",
@@ -408,7 +425,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 24,
+    "id": 25,
     "date": "2019-01-28",
     "year": 2019,
     "artist": "Metallica",
@@ -425,7 +442,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/274618"
   },
   {
-    "id": 25,
+    "id": 26,
     "date": "2019-01-28",
     "year": 2019,
     "artist": "Metallica",
@@ -442,7 +459,24 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/273538"
   },
   {
-    "id": 26,
+    "id": 27,
+    "date": "2019-03-12",
+    "year": 2019,
+    "artist": "Elton John",
+    "illustrator": "David LaChapelle",
+    "location": "Raleigh",
+    "type": "SE",
+    "variant": null,
+    "number": "Unnumbered",
+    "tourShowSpecific": "Tour",
+    "autographed": false,
+    "framed": false,
+    "attended": true,
+    "notes": null,
+    "expressobeansLink": "https://expressobeans.com/public/detail.php/301920"
+  },
+  {
+    "id": 28,
     "date": "2019-04-06",
     "year": 2019,
     "artist": "KISS",
@@ -459,7 +493,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 27,
+    "id": 29,
     "date": "2019-05-10",
     "year": 2019,
     "artist": "Epicenter",
@@ -476,7 +510,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/306265"
   },
   {
-    "id": 28,
+    "id": 30,
     "date": "2019-09-25",
     "year": 2019,
     "artist": "Guns N' Roses",
@@ -493,7 +527,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 29,
+    "id": 31,
     "date": "2019-11-19",
     "year": 2019,
     "artist": "Tool",
@@ -510,7 +544,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/280905"
   },
   {
-    "id": 30,
+    "id": 32,
     "date": "2019-11-24",
     "year": 2019,
     "artist": "Tool",
@@ -527,7 +561,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/280401"
   },
   {
-    "id": 31,
+    "id": 33,
     "date": "2020-01-14",
     "year": 2020,
     "artist": "Tool",
@@ -544,7 +578,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/280931"
   },
   {
-    "id": 32,
+    "id": 34,
     "date": "2020-01-17",
     "year": 2020,
     "artist": "Tool",
@@ -561,7 +595,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/280944"
   },
   {
-    "id": 33,
+    "id": 35,
     "date": "2020-02-08",
     "year": 2020,
     "artist": "KISS",
@@ -578,7 +612,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 34,
+    "id": 36,
     "date": "2021-09-11",
     "year": 2021,
     "artist": "The Black Crowes",
@@ -595,7 +629,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/306381"
   },
   {
-    "id": 35,
+    "id": 37,
     "date": "2021-09-29",
     "year": 2021,
     "artist": "Guns N' Roses",
@@ -612,7 +646,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 36,
+    "id": 38,
     "date": "2021-11-11",
     "year": 2021,
     "artist": "Welcome To Rockville Festival",
@@ -629,7 +663,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 37,
+    "id": 39,
     "date": "2021-11-19",
     "year": 2021,
     "artist": "Genesis",
@@ -646,7 +680,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/302663"
   },
   {
-    "id": 38,
+    "id": 40,
     "date": "2022-02-22",
     "year": 2022,
     "artist": "Tool",
@@ -663,7 +697,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/303923"
   },
   {
-    "id": 39,
+    "id": 41,
     "date": "2022-03-20",
     "year": 2022,
     "artist": "Tool",
@@ -680,7 +714,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/304419"
   },
   {
-    "id": 40,
+    "id": 42,
     "date": "2022-04-28",
     "year": 2022,
     "artist": "Nine Inch Nails",
@@ -697,7 +731,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/319934"
   },
   {
-    "id": 41,
+    "id": 43,
     "date": "2022-04-28",
     "year": 2022,
     "artist": "Nine Inch Nails",
@@ -714,7 +748,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/319934"
   },
   {
-    "id": 42,
+    "id": 44,
     "date": "2022-06-22",
     "year": 2022,
     "artist": "Puscifer",
@@ -731,7 +765,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/306690"
   },
   {
-    "id": 43,
+    "id": 45,
     "date": "2022-07-31",
     "year": 2022,
     "artist": "Rage Against the Machine",
@@ -748,7 +782,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/307864"
   },
   {
-    "id": 44,
+    "id": 46,
     "date": "2022-08-31",
     "year": 2022,
     "artist": "Rammstein",
@@ -765,7 +799,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/309873"
   },
   {
-    "id": 45,
+    "id": 47,
     "date": "2022-11-01",
     "year": 2022,
     "artist": "Puscifer",
@@ -782,7 +816,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/309569"
   },
   {
-    "id": 46,
+    "id": 48,
     "date": "2023-05-18",
     "year": 2023,
     "artist": "Welcome To Rockville Festival",
@@ -799,7 +833,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 47,
+    "id": 49,
     "date": "2023-05-21",
     "year": 2023,
     "artist": "Tool",
@@ -816,7 +850,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/314300"
   },
   {
-    "id": 48,
+    "id": 50,
     "date": "2023-08-04",
     "year": 2023,
     "artist": "Metallica",
@@ -833,7 +867,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/316748"
   },
   {
-    "id": 49,
+    "id": 51,
     "date": "2023-08-06",
     "year": 2023,
     "artist": "Metallica",
@@ -850,7 +884,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/316749"
   },
   {
-    "id": 50,
+    "id": 52,
     "date": "2023-10-14",
     "year": 2023,
     "artist": "U2",
@@ -867,7 +901,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/318464"
   },
   {
-    "id": 51,
+    "id": 53,
     "date": "2023-10-29",
     "year": 2023,
     "artist": "Polyphia",
@@ -884,7 +918,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/318753"
   },
   {
-    "id": 52,
+    "id": 54,
     "date": "2023-10-29",
     "year": 2023,
     "artist": "Polyphia",
@@ -901,7 +935,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/323237"
   },
   {
-    "id": 53,
+    "id": 55,
     "date": "2023-11-09",
     "year": 2023,
     "artist": "Eagles",
@@ -918,7 +952,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/317772"
   },
   {
-    "id": 54,
+    "id": 56,
     "date": "2024-01-21",
     "year": 2024,
     "artist": "Tool",
@@ -935,7 +969,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/321059"
   },
   {
-    "id": 55,
+    "id": 57,
     "date": "2024-01-21",
     "year": 2024,
     "artist": "Tool",
@@ -952,7 +986,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/321059"
   },
   {
-    "id": 56,
+    "id": 58,
     "date": "2024-02-18",
     "year": 2024,
     "artist": "Tool",
@@ -969,7 +1003,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/321675"
   },
   {
-    "id": 57,
+    "id": 59,
     "date": "2024-04-07",
     "year": 2024,
     "artist": "Sessanta",
@@ -986,7 +1020,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/322555"
   },
   {
-    "id": 58,
+    "id": 60,
     "date": "2024-04-07",
     "year": 2024,
     "artist": "Sessanta",
@@ -1003,7 +1037,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/322934"
   },
   {
-    "id": 59,
+    "id": 61,
     "date": "2024-04-07",
     "year": 2024,
     "artist": "Sessanta",
@@ -1020,7 +1054,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/322926"
   },
   {
-    "id": 60,
+    "id": 62,
     "date": "2024-05-16",
     "year": 2024,
     "artist": "Sonic Temple Festival",
@@ -1037,7 +1071,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 61,
+    "id": 63,
     "date": "2024-06-26",
     "year": 2024,
     "artist": "Red Hot Chili Peppers",
@@ -1054,7 +1088,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/324915"
   },
   {
-    "id": 62,
+    "id": 64,
     "date": "2024-06-26",
     "year": 2024,
     "artist": "Red Hot Chili Peppers",
@@ -1071,7 +1105,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/324915"
   },
   {
-    "id": 63,
+    "id": 65,
     "date": "2025-05-06",
     "year": 2025,
     "artist": "Linkin Park",
@@ -1088,7 +1122,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/331952"
   },
   {
-    "id": 64,
+    "id": 66,
     "date": "2025-05-13",
     "year": 2025,
     "artist": "Pearl Jam",
@@ -1105,7 +1139,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/332084"
   },
   {
-    "id": 65,
+    "id": 67,
     "date": "2025-05-31",
     "year": 2025,
     "artist": "Metallica",
@@ -1122,7 +1156,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/332464"
   },
   {
-    "id": 66,
+    "id": 68,
     "date": "2025-05-31",
     "year": 2025,
     "artist": "Metallica",
@@ -1139,7 +1173,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/332529"
   },
   {
-    "id": 67,
+    "id": 69,
     "date": "2025-08-27",
     "year": 2025,
     "artist": "System of a Down",
@@ -1156,7 +1190,7 @@
     "expressobeansLink": null
   },
   {
-    "id": 68,
+    "id": 70,
     "date": "2025-09-05",
     "year": 2025,
     "artist": "Nine Inch Nails",
@@ -1173,7 +1207,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/334688"
   },
   {
-    "id": 69,
+    "id": 71,
     "date": "2026-04-01",
     "year": 2026,
     "artist": "Puscifer",
@@ -1190,7 +1224,7 @@
     "expressobeansLink": "https://expressobeans.com/public/detail.php/339059"
   },
   {
-    "id": 70,
+    "id": 72,
     "date": "2026-04-17",
     "year": 2026,
     "artist": "AVTT/PTTN",

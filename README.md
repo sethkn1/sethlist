@@ -2,6 +2,126 @@
 
 A self-contained web app for exploring a concert history and poster collection.
 
+## How do I…?
+
+Quick recipes for the most common updates. Each one assumes you've already done the [one-time setup](#typical-workflow-from-scratch).
+
+### …add, edit, or remove a concert
+
+1. Edit `Concert History.xlsx` directly (or `data/concerts.csv` if you prefer working in the CSV — both are valid sources for `build_data.py`).
+2. Rebuild:
+   ```
+   python3 build_data.py "Concert History.xlsx" "Poster Collection.xlsx" --skip-wiki
+   ```
+   Use `--skip-wiki` if you didn't add any new artists. Skip the flag if you did — the script will look up Wikipedia images for the new ones.
+3. If you added shows that have setlists on setlist.fm, fetch them:
+   ```
+   export SETLIST_FM_KEY=your-key
+   python3 prefetch_setlists.py
+   ```
+   Already-cached setlists are skipped, so this is fast on re-runs.
+4. Re-run `build_data.py` once more so the new setlist data gets folded into the per-band stats.
+
+### …add, edit, or remove a poster (no images yet)
+
+1. Edit `Poster Collection.xlsx`.
+2. Rebuild:
+   ```
+   python3 build_data.py "Concert History.xlsx" "Poster Collection.xlsx" --skip-wiki
+   ```
+3. Open `data/poster_images.csv` — there's now a row for the new poster with empty `stock_url` and `personal_url`.
+
+### …add an image to a poster
+
+1. Get a sharable link to the image — typically a Google Drive file with **"Anyone with the link can view"** sharing turned on.
+2. Open `data/poster_images.csv` and paste the URL into the right column for that poster:
+   - `stock_url` — the official artwork (used for the gallery tile and most thumbnails)
+   - `personal_url` — your own photo of the framed copy (used in the modal alongside the stock image)
+3. Download the image locally so the live site doesn't depend on Drive:
+   ```
+   python3 download_drive_images.py
+   ```
+   Already-downloaded files are skipped. Use `--force` to re-download everything, or `--kind stock` / `--kind personal` to limit scope.
+4. Commit `images/stock/` and `images/personal/` along with the updated CSV.
+
+### …add a festival
+
+A festival in your concerts spreadsheet is any row whose **Artist** name contains the word "Festival" (case-insensitive). All days sharing the same **Tour Name** are grouped into a single tile in the timeline.
+
+1. Add the festival days to `Concert History.xlsx`. Each day is its own row. Set:
+   - **Artist** = e.g. "Sonic Temple Festival - Day 1"
+   - **Tour Name** = the same string for every day (e.g. "Sonic Temple 2024") — this is what groups them
+2. Rebuild:
+   ```
+   python3 build_data.py "Concert History.xlsx" "Poster Collection.xlsx" --skip-wiki
+   ```
+3. The build script auto-seeds new rows in `data/festival_images.csv` for any new festival keys it discovers. Open the CSV and fill in for the new festival:
+   - **`image_url`** — direct URL to the festival's logo or hero image (the build script downloads it locally to `images/festivals/<key>.<ext>`)
+   - **`website_url`** — the festival's official site (renders as a "Festival site ↗" link in the modal)
+   - **`wiki_url`** — Wikipedia article URL, if there is one (renders as a "Wikipedia ↗" link). Leave blank if none.
+   - `wiki_extract` — auto-populated on the next build from the Wikipedia article's lead paragraph; you can edit or override
+   - `local_image` — auto-populated; don't edit
+4. Re-run the build to download the festival image:
+   ```
+   python3 build_data.py "Concert History.xlsx" "Poster Collection.xlsx" --skip-wiki
+   ```
+   Already-downloaded festival images are skipped. Use `--refresh-festival-images` to force re-download (e.g., if you replaced the URL with a better one).
+5. Commit `images/festivals/` along with the updated CSV.
+
+### …validate the concert and poster spreadsheets
+
+Two scripts run internal-consistency checks (no API calls, fast):
+
+```
+python3 validate_concert_data.py "Concert History.xlsx"
+python3 validate_poster_data.py "Poster Collection.xlsx" "Concert History.xlsx"
+```
+
+What they catch:
+
+- **Spelling / inconsistencies**: "Distrubed" vs "Disturbed", curly vs straight apostrophes, case mismatches ("the Mars Volta" vs "The Mars Volta")
+- **Cross-file mismatches**: a band spelled differently in posters than concerts (e.g., "NIN" in one and "Nine Inch Nails" in the other)
+- **Orphan posters**: posters dated to shows that don't appear in the concerts spreadsheet
+- **Attended-flag mismatches**: a poster marked "Attended: Yes" with no matching concert row
+- **Structural issues**: missing required fields, malformed `Number` field (e.g., "47/" or "/50"), date issues
+
+Each script writes a markdown report (`validation_report.md` / `poster_validation_report.md`) with a section per check. Spelling clusters show the most-frequent variant as the likely-canonical, with rarer variants flagged for your decision.
+
+For a third validation pass that **uses setlist.fm** to cross-check your opening acts (does the API confirm the bands you say played?):
+
+```
+export SETLIST_FM_KEY=your-key
+python3 validate_openers_api.py
+```
+
+This is slower (one API call per non-festival show) and the report is more advisory — bands missing from your sheet vs. setlist.fm aren't always errors (you may have skipped them deliberately).
+
+### …refresh the bucket-list / song-stats data
+
+The "bucket list" feature shows, per artist you've seen 2+ times, which songs from their discography you have heard live and which you haven't. It runs on cached setlist data and per-band stats scraped from setlist.fm.
+
+To refresh after adding shows or after a setlist is added/edited on setlist.fm:
+
+```
+export SETLIST_FM_KEY=your-key
+python3 prefetch_setlists.py             # pulls any new setlists
+python3 prefetch_band_mbids.py           # resolves MusicBrainz IDs for new headliners
+python3 prefetch_band_stats.py           # scrapes setlist.fm stats pages for play counts
+python3 build_data.py "Concert History.xlsx" "Poster Collection.xlsx" --skip-wiki
+```
+
+`prefetch_band_mbids.py` and `prefetch_band_stats.py` only act on bands they don't already have data for, so re-runs are fast. The first time you run them is the slow run.
+
+### …resize new About-page photos
+
+```
+./resize_about_photos.sh
+```
+
+Reads JPGs from `~/Downloads/aboutmepictures/`, resizes each to max 1600px on the longer edge, re-encodes at JPEG quality 82, and writes them to `images/about/`. macOS-only (uses the built-in `sips` tool — no Homebrew required).
+
+---
+
 ## Typical workflow (from scratch)
 
 One-time setup after you extract the zip:
@@ -215,28 +335,40 @@ On re-runs, `poster_images.csv` is **preserved and merged** — manually-added U
 
 ```
 sethlist/
-├── index.html              the app
-├── styles.css              visual design
-├── app.js                  logic (views, routing, modal)
-├── cities.js               city coordinate lookup
-├── build_data.py           data pipeline
-├── download_drive_images.py one-time Drive → local image downloader
-├── prefetch_setlists.py    setlist.fm API fetcher
+├── index.html                  the app
+├── styles.css                  visual design
+├── app.js                      logic (views, routing, modal)
+├── cities.js                   city coordinate lookup
+├── build_data.py               data pipeline
+├── download_drive_images.py    one-time Drive → local image downloader
+├── prefetch_setlists.py        setlist.fm API fetcher
+├── prefetch_band_mbids.py      resolves MusicBrainz IDs for headliners
+├── prefetch_band_stats.py      scrapes per-band play-count stats
+├── validate_concert_data.py    internal-consistency check on concerts xlsx
+├── validate_poster_data.py     internal-consistency check on posters xlsx
+├── validate_openers_api.py     cross-checks openers against setlist.fm
+├── resize_about_photos.sh      macOS-only image resizer for About page
 ├── data/
-│   ├── concerts.json       consumed by the app
-│   ├── posters.json        consumed by the app
-│   ├── setlists.json       consumed by the app (setlist.fm cache)
-│   ├── us-states.json      US map geometry
-│   ├── concerts.csv        editable mirror
-│   ├── posters.csv         editable mirror
-│   ├── poster_images.csv   image URLs (editable)
-│   └── band_images.csv     band images + websites (editable)
+│   ├── concerts.json           consumed by the app
+│   ├── posters.json            consumed by the app
+│   ├── setlists.json           consumed by the app (setlist.fm cache)
+│   ├── us-states.json          US map geometry
+│   ├── concerts.csv            editable mirror
+│   ├── posters.csv             editable mirror
+│   ├── poster_images.csv       image URLs (editable)
+│   ├── band_images.csv         band images + websites (editable)
+│   ├── festival_images.csv     festival logos, websites, wiki links (editable)
+│   ├── band_mbids.json         MusicBrainz IDs per headliner
+│   ├── band_stats/             per-band setlist.fm play-count data
+│   └── bucket_list.json        derived: which songs you've heard live per band
 ├── vendor/
 │   ├── d3.min.js
 │   └── topojson-client.min.js
 ├── images/
-│   ├── personal/           optional local fallback images
-│   └── official/           optional local fallback images
+│   ├── about/                  resized photos for the About page
+│   ├── stock/                  poster stock images (downloaded by script)
+│   ├── personal/               your own photos of framed posters
+│   └── festivals/              festival logos (downloaded by script)
 └── README.md
 ```
 
