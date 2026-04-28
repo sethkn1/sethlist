@@ -2526,6 +2526,30 @@ function renderPosters() {
  * Only a URL is returned; the <img> onerror handler should walk through
  * alternates if the first attempt fails (see displayChainForPoster()).
  */
+/**
+ * Resolve the URL for a poster's image of a given kind.
+ *
+ * Three kinds are supported:
+ *   - "stock":    the clean reference image of the poster (primary display)
+ *   - "personal": user's own photo of the framed physical copy
+ *   - "official": legacy, rarely used (kept for backward compat)
+ *
+ * Resolution order, highest priority first:
+ *   1. Runtime override set via "Paste URL" in the modal (STATE.posterOverrides)
+ *   2. URL in data/poster_images.csv (stock_url / personal_url / official_url)
+ *
+ * Returns null when no URL signal exists. This is deliberate: callers that
+ * want to optimistically check for a downloaded local copy of the URL
+ * (`images/<kind>/poster-<id>.jpg`) must do so via the <img onerror>
+ * fallback chain, and ONLY when the chain was kicked off by a real URL.
+ *
+ * Earlier this function returned a guessed local-file path when the CSV
+ * had no URL. That was a bug: poster row ids shift when new rows are
+ * added to the spreadsheet, so a stale local file from the OLD poster at
+ * id=N would be served as the personal photo of the NEW poster at id=N.
+ * The modal now renders the empty-state placeholder ("No photo yet, add
+ * to poster_images.csv") whenever this returns null.
+ */
 function posterImageSrc(p, which = "stock") {
   const override = STATE.posterOverrides[p.id] || {};
   if (which === "stock" && override.stockImage) return override.stockImage;
@@ -2535,11 +2559,7 @@ function posterImageSrc(p, which = "stock") {
   if (which === "stock" && csv.stock_url) return csv.stock_url;
   if (which === "personal" && csv.personal_url) return csv.personal_url;
   if (which === "official" && csv.official_url) return csv.official_url;
-  const base =
-    which === "stock" ? "images/stock/" :
-    which === "personal" ? "images/personal/" :
-    "images/official/";
-  return base + `poster-${p.id}.jpg`;
+  return null;
 }
 
 /**
@@ -2548,21 +2568,36 @@ function posterImageSrc(p, which = "stock") {
  * personal. Each candidate is a full URL or local path; consumers use them
  * with an <img onerror> chain.
  *
+ * For each kind (stock, personal), we include the local-file fallback ONLY
+ * when the CSV has a URL for that kind. Local files are downloaded copies
+ * of the CSV URLs, so they're only meaningful as a fallback FOR a specific
+ * URL — not as an opportunistic "maybe there's a file at this id" guess.
+ *
+ * Why: poster row ids shift when new rows are inserted in the spreadsheet.
+ * A stale `images/stock/poster-N.jpg` left over from a different poster
+ * that USED to occupy id=N would otherwise get attached to whatever poster
+ * is now at id=N, even though the CSV correctly lists no URL for it.
+ *
  * For a poster with both stock + personal URLs, we attempt (in order):
  *   1. stock CSV/override URL (e.g. Drive thumbnail)
- *   2. images/stock/poster-<id>.jpg  (downloaded local copy)
+ *   2. images/stock/poster-<id>.jpg  (downloaded local copy of #1)
  *   3. personal CSV/override URL
- *   4. images/personal/poster-<id>.jpg  (downloaded local copy)
- * Duplicates are removed.
+ *   4. images/personal/poster-<id>.jpg  (downloaded local copy of #3)
+ * Duplicates and empties are removed.
  */
 function displayChainForPoster(p) {
-  const tries = [
-    posterImageSrc(p, "stock"),
-    `images/stock/poster-${p.id}.jpg`,
-    posterImageSrc(p, "personal"),
-    `images/personal/poster-${p.id}.jpg`,
-  ];
-  // Drop empty strings and dedupe while preserving order
+  const stockSrc = posterImageSrc(p, "stock");
+  const personalSrc = posterImageSrc(p, "personal");
+  const tries = [];
+  if (stockSrc) {
+    tries.push(stockSrc);
+    tries.push(`images/stock/poster-${p.id}.jpg`);
+  }
+  if (personalSrc) {
+    tries.push(personalSrc);
+    tries.push(`images/personal/poster-${p.id}.jpg`);
+  }
+  // Dedupe while preserving order
   const seen = new Set();
   return tries.filter(v => {
     if (!v || seen.has(v)) return false;
@@ -6290,8 +6325,17 @@ function variantBlock(p) {
 
   /**
    * Build a labeled image holder for one "kind" of poster photo.
-   * Tries a short fallback chain (CSV/override URL → local file), and if
-   * every attempt fails, renders the "No photo yet" placeholder.
+   *
+   * If the CSV has a URL for this poster+kind, render the image with a
+   * fallback chain: primary URL → local downloaded copy → empty-state
+   * placeholder.
+   *
+   * If the CSV has NO URL (posterImageSrc returns null), render the
+   * empty-state placeholder directly. We deliberately do NOT optimistically
+   * try the local file in this case — poster row ids shift when new rows
+   * are inserted in the spreadsheet, so a stale `images/<kind>/poster-N.jpg`
+   * left over from a different poster that USED to occupy id=N would get
+   * misattributed. Trust the CSV: empty URL = no image to show.
    */
   function buildImageHolder(which) {
     const holder = el("div", { class: "variant-image-holder" });
@@ -6300,6 +6344,29 @@ function variantBlock(p) {
     const inner = el("div", { class: "variant-image" });
 
     const primarySrc = posterImageSrc(p, which);
+
+    // Empty-state path: no URL in CSV/override. Render placeholder + paste
+    // button directly, skip the <img> + onerror chain entirely.
+    if (!primarySrc) {
+      const hint = which === "stock"
+        ? `No stock image yet.<br>Add to <code>data/poster_images.csv</code>,<br>drop <code>images/stock/poster-${p.id}.jpg</code>,<br>or paste a URL below.`
+        : `No personal photo yet.<br>Add to <code>data/poster_images.csv</code>,<br>drop <code>images/personal/poster-${p.id}.jpg</code>,<br>or paste a URL below.`;
+      inner.appendChild(el("div", { class: "no-img", html: hint }));
+      inner.appendChild(el("button", {
+        class: "v-link",
+        style: "margin-top:8px;background:transparent;cursor:pointer;",
+        on: { click: () => {
+          promptForImageUrl(p, which, () => {
+            holder.replaceWith(buildImageHolder(which));
+          });
+        }}
+      }, "Paste URL"));
+      holder.appendChild(inner);
+      return holder;
+    }
+
+    // Has-URL path: load the image, fall back to local file if URL fails,
+    // fall back to placeholder if local file also fails.
     const fallbackFile = `images/${which}/poster-${p.id}.jpg`;
     const img = el("img", {
       src: primarySrc,
