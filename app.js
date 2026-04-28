@@ -239,6 +239,14 @@ const ROUTES = {
   "#/about": renderAbout,
 };
 
+// One-shot flag set by closeModal() before it triggers a hashchange via
+// history.back(). The router checks this flag and skips its usual
+// scroll-to-top behavior, so closing a modal leaves the user at their
+// current scroll position on the underlying page. Other hashchange
+// triggers (filter clicks, nav, deep-links) still scroll to top as
+// before.
+let _suppressNextScroll = false;
+
 function router() {
   let hash = window.location.hash || "#/timeline";
   const [path, queryStr] = hash.split("?");
@@ -248,11 +256,14 @@ function router() {
   });
   // Don't scroll to top if the user is actively typing in a search box —
   // that would be jarring and would also feel like the page is being reset.
+  // Also skip when closeModal() has flagged this hashchange as a
+  // modal-close pop (so the underlying page stays where it was).
   const isTyping = document.activeElement &&
     (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA");
-  if (!isTyping) {
+  if (!isTyping && !_suppressNextScroll) {
     window.scrollTo({ top: 0, behavior: "instant" });
   }
+  _suppressNextScroll = false;
   withPreservedFocus(fn);
 
   // Debug overlay for sticky positioning issues. Activate by appending
@@ -4901,12 +4912,21 @@ function closeModal(opts) {
   MODAL_STATE.pushedHistory = false;
 
   if (opts.fromPopstate) {
-    // Nothing to do for history — browser already popped.
+    // Nothing to do for history — browser already popped. The router
+    // will run from the popstate that triggered us, and we want it to
+    // leave the page scroll position alone.
+    _suppressNextScroll = true;
   } else if (pushed) {
-    // Pop the entry we pushed when the modal opened.
+    // Pop the entry we pushed when the modal opened. This will fire
+    // hashchange + popstate; suppress the router's scroll-to-top so the
+    // underlying page stays where the user was.
+    _suppressNextScroll = true;
     history.back();
   } else {
     // No entry to pop; just strip the modal param from the URL.
+    // replaceState doesn't fire hashchange so there's no scroll to
+    // suppress here, but we set the flag for symmetry/safety.
+    _suppressNextScroll = true;
     const [route, queryStr] = (location.hash || "#/timeline").split("?");
     const params = new URLSearchParams(queryStr || "");
     if (params.has("modal")) {

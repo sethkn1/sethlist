@@ -125,6 +125,19 @@ body {
   color: var(--paper-dim);
   letter-spacing: 0.01em;
 }
+/* Bold accent-red bar between the SETHLIST header and the tagline.
+   Matches the larger accent bar at the bottom of the site header, giving
+   the brand block a coherent identity. Browser default <hr> rendering is
+   a thin inset gray line which read as visual noise — this style makes
+   it deliberate. The negative margins pull it tight against the H1 and
+   tagline so the rhythm stays compact. */
+.brand-divider {
+  border: none;
+  background: var(--accent);
+  height: 2px;
+  margin: 6px 0 6px 0;
+  width: 100%;
+}
 .brand-tagline .accent { color: var(--accent); font-style: normal; font-weight: 600; }
 .brand-tagline .sethtime-time { color: var(--paper); font-style: normal; font-weight: 600; }
 /* Lowercase "h" in the SETHTIME tagline — same dimming treatment as the
