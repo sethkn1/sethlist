@@ -2889,23 +2889,24 @@ function renderSongs() {
     filterBar.appendChild(bandSelect);
   }
 
-  // Song Title selector — only on global view (no point on drill-down where
-  // the song list is right there in the page).
+  // Song name search — text input replacing the previous "All song titles"
+  // dropdown. The dropdown was unusable on mobile (2,500+ entries) and the
+  // free-text search is a better fit for the actual use case ("I want to see
+  // every Stinkfist plays" is rarely a known-title browse). Only on global
+  // view; on artist drilldowns the song list is already short and the input
+  // would just clutter the small filter bar.
   if (!filterNormArtist) {
-    // Build unique song titles, sorted alphabetically. Each title shown once
-    // even if multiple bands have a song with the same name (selecting it
-    // filters across all of them).
-    const allSongTitles = [...new Set(allSongs.map(s => s.song))].sort();
-    const songSelect = el("select", {
-      on: { change: e => updateParam("song", e.target.value) }
+    const searchInput = el("input", {
+      type: "text",
+      placeholder: "Search song titles…",
+      value: songFilter,
+      class: "songs-search",
+      // Live filter, debounced 250ms — same pattern as Timeline/Posters
+      // searches. updateParam triggers a hash change which re-renders the
+      // view; withPreservedFocus restores cursor to this input by placeholder.
+      on: { input: e => updateParamDebounced("song", e.target.value, 250) }
     });
-    songSelect.appendChild(el("option", { value: "" }, "All song titles"));
-    allSongTitles.forEach(title => {
-      const o = el("option", { value: title }, title);
-      if (title === songFilter) o.selected = true;
-      songSelect.appendChild(o);
-    });
-    filterBar.appendChild(songSelect);
+    filterBar.appendChild(searchInput);
   }
 
   // Heard-N-times dropdown (distinct play-counts present in data)
@@ -2947,8 +2948,11 @@ function renderSongs() {
     filtered = filtered.filter(s => s.normArtist === filterNormArtist);
   }
   if (songFilter) {
+    // Substring match (was exact-match when this was a dropdown). Old
+    // shareable links with full song titles still work since "Stinkfist"
+    // is trivially a substring of "Stinkfist".
     const sf = songFilter.toLowerCase();
-    filtered = filtered.filter(s => s.song.toLowerCase() === sf);
+    filtered = filtered.filter(s => s.song.toLowerCase().includes(sf));
   }
   if (q) {
     filtered = filtered.filter(s =>
