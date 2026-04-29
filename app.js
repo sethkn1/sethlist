@@ -2864,7 +2864,12 @@ function renderSongs() {
   // Order (matching Posters page convention): Band → Song Title → Heard count → Covers.
   // Search box was removed for consistency with the other pages — the
   // dropdowns cover the common filtering needs.
-  const filterBar = el("div", { class: "filter-bar" });
+  //
+  // The 'filter-bar-sticky' modifier pins this bar to the top of the
+  // viewport as the user scrolls down the (potentially very long) song
+  // list. They can re-filter without scrolling all the way back up.
+  // Implemented via CSS position:sticky — see styles.css.
+  const filterBar = el("div", { class: "filter-bar filter-bar-sticky" });
 
   // Band selector (first). On the global view, switching the band navigates
   // to the artist drill-down. On the drill-down view, the band is fixed and
@@ -4753,7 +4758,7 @@ function renderAbout() {
   wrap.appendChild(el("h3", { class: "about-section" }, "Why I keep going"));
   wrap.appendChild(el("p", {},
     "There are artists I'll never see live again. Chester Bennington. Tom Petty. ",
-    "Chris Cornell. Kurt Cobain. The Abbott brothers. I think about that list a lot."
+    "Chris Cornell. Scott Weiland. Kurt Cobain. The Abbott brothers. I think about that list a lot."
   ));
   wrap.appendChild(el("p", {},
     "So when an artist I love comes through town or is in a decent travelable location, ",

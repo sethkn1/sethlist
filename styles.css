@@ -242,6 +242,20 @@ main {
   background: var(--ink-2);
   border: 2px solid var(--paper);
 }
+/* Sticky variant — used on the Songs page so users can re-filter while
+   scrolling through the long song list without bouncing back to the top.
+   - Uses --header-h (set dynamically by app.js to the rendered site-header
+     height) so it pins flush against the bottom of the header, regardless
+     of header reflow on narrow viewports.
+   - z-index sits below the site-header (z:50) so when the user scrolls,
+     the header still draws on top, not covered by the filter bar.
+   - The opaque ink-2 background was already there — important here because
+     song rows scroll underneath the bar; without it they'd show through. */
+.filter-bar-sticky {
+  position: sticky;
+  top: var(--header-h, 115px);
+  z-index: 40;
+}
 .filter-bar input[type="text"],
 .filter-bar select {
   background: var(--ink);
