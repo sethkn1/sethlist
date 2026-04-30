@@ -4872,20 +4872,69 @@ function renderBucketList() {
     return;
   }
 
-  const bandCount = Object.keys(data.bands).length;
-  const totalUnheard = data.flatUnheard.length;
-
-  wrap.appendChild(el("p", { class: "bucket-list-intro" },
-    `Songs the bands you've seen 2+ times play live, ranked by how often they play them, ` +
-    `that you've never heard. ${totalUnheard.toLocaleString()} songs across ${bandCount} bands. ` +
-    `The top of this list is what you're most likely to hear next time.`
-  ));
-
-  // Filter chip: "All bands" or pick a specific band to filter to
+  // URL params: ?band= filters to one band; ?frequent=1 narrows to bands
+  // seen 2+ times (the original "frequent headliners" view; now opt-in).
   const params = new URLSearchParams((location.hash || "#/bucket-list").split("?")[1] || "");
   const bandFilter = params.get("band") || "";
+  const frequentOnly = params.get("frequent") === "1";
 
+  // Apply the frequent-only filter to derive the visible band set.
+  const visibleBandEntries = Object.entries(data.bands)
+    .filter(([_, info]) => !frequentOnly || (info.showsAttended || 0) >= 2);
+  const visibleBandNames = new Set(visibleBandEntries.map(([n]) => n));
+  const visibleBandCount = visibleBandEntries.length;
+
+  // Apply the same filter to the flat list. We also clear any active
+  // ?band= filter that would now point to a hidden band — otherwise the
+  // user gets an empty page with no obvious way to recover.
+  let workingFlat = data.flatUnheard.filter(r => visibleBandNames.has(r.band));
+  const visibleTotalUnheard = workingFlat.length;
+
+  // Intro line — phrasing changes based on which mode is active.
+  if (frequentOnly) {
+    wrap.appendChild(el("p", { class: "bucket-list-intro" },
+      `Bands you've seen 2 or more times: songs they play live that you've never heard, ` +
+      `ranked by how often they play them. ${visibleTotalUnheard.toLocaleString()} songs ` +
+      `across ${visibleBandCount} bands. The top of this list is what you're most likely ` +
+      `to hear next time.`
+    ));
+  } else {
+    wrap.appendChild(el("p", { class: "bucket-list-intro" },
+      `Every headliner you've seen: songs from their live catalog you've never heard, ` +
+      `ranked by how often they play them. ${visibleTotalUnheard.toLocaleString()} songs ` +
+      `across ${visibleBandCount} bands.`
+    ));
+  }
+
+  // Filter bar with two controls:
+  //   - "Frequent headliners" toggle chip (≥2 shows)
+  //   - Band dropdown
   const filterBar = el("div", { class: "bucket-filter-bar" });
+
+  // Frequent-only toggle. Implemented as a chip that flips ?frequent=1 on/off.
+  // Active state visually communicated via the .chip.active style already
+  // used in the filter-bar component on Timeline/Posters.
+  const freqChip = el("button", {
+    class: "chip" + (frequentOnly ? " active" : ""),
+    title: frequentOnly
+      ? "Showing only bands seen 2+ times. Click to show all headliners."
+      : "Click to narrow to bands you've seen 2 or more times.",
+    on: { click: () => {
+      const [route, qs] = (location.hash || "#/bucket-list").split("?");
+      const p = new URLSearchParams(qs || "");
+      if (frequentOnly) p.delete("frequent");
+      else p.set("frequent", "1");
+      // Drop ?band= when toggling — preserving it would often leave the
+      // user filtered to a band that's now hidden.
+      p.delete("band");
+      const newHash = route + (p.toString() ? "?" + p.toString() : "");
+      history.replaceState(null, "", newHash);
+      renderBucketList();
+    }}
+  }, "Frequent headliners (≥2 shows)");
+  filterBar.appendChild(freqChip);
+
+  // Band-picker dropdown.
   const filterLabel = el("label", { class: "bucket-filter-label" }, "Filter by band: ");
   const filterSelect = el("select", {
     class: "leaderboard-role-toggle bucket-filter-select",
@@ -4900,24 +4949,27 @@ function renderBucketList() {
       renderBucketList();
     }}
   });
-  filterSelect.appendChild(el("option", { value: "" }, `All bands (${bandCount})`));
-  // Sort band options by show count descending — same order as Stats most-seen.
-  const bandsForFilter = Object.entries(data.bands)
-    .sort((a, b) => b[1].showsAttended - a[1].showsAttended);
-  bandsForFilter.forEach(([name, info]) => {
-    const o = el("option", { value: name },
-      `${name} (${info.unheard.length} unheard / ${info.totalLiveSongs})`);
-    if (name === bandFilter) o.selected = true;
-    filterSelect.appendChild(o);
-  });
+  filterSelect.appendChild(el("option", { value: "" }, `All bands (${visibleBandCount})`));
+  // Sort options by show count desc, ties broken by name asc.
+  visibleBandEntries
+    .sort((a, b) =>
+      (b[1].showsAttended - a[1].showsAttended) || a[0].localeCompare(b[0]))
+    .forEach(([name, info]) => {
+      const o = el("option", { value: name },
+        `${name} (${info.unheard.length} unheard / ${info.totalLiveSongs})`);
+      if (name === bandFilter) o.selected = true;
+      filterSelect.appendChild(o);
+    });
   filterBar.appendChild(filterLabel);
   filterBar.appendChild(filterSelect);
   wrap.appendChild(filterBar);
 
-  // Build the list — flat across bands, or filtered to one
+  // Build the list — flat across all visible bands, or narrowed to one.
+  // (Filter property is `band`, matching the schema written by
+  // build_bucket_list.py.)
   const rows = bandFilter
-    ? data.flatUnheard.filter(r => r.band === bandFilter)
-    : data.flatUnheard;
+    ? workingFlat.filter(r => r.band === bandFilter)
+    : workingFlat;
 
   if (rows.length === 0) {
     wrap.appendChild(el("p", { class: "bucket-empty" },

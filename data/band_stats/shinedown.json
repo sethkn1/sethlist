@@ -1,0 +1,584 @@
+{
+  "artist": "Shinedown",
+  "slug": "shinedown",
+  "stats_id": "13d6b925",
+  "mbid": "adc0f033-95c2-4e0b-87bc-c23ed3f26ce6",
+  "fetched_at": "2026-04-30T15:31:51.407322Z",
+  "songs": [
+    {
+      "name": "Second Chance",
+      "songid": "33d64835",
+      "count": 1231
+    },
+    {
+      "name": "Sound of Madness",
+      "songid": "33d7b819",
+      "count": 1219
+    },
+    {
+      "name": "Simple Man",
+      "songid": "3bd64058",
+      "count": 1073
+    },
+    {
+      "name": "45",
+      "songid": "73d6b2a9",
+      "count": 1021
+    },
+    {
+      "name": "Diamond Eyes (Boom-Lay Boom-Lay Boom)",
+      "songid": "5bd2cf50",
+      "count": 938
+    },
+    {
+      "name": "Enemies",
+      "songid": "7bdf6ebc",
+      "count": 907
+    },
+    {
+      "name": "Fly From the Inside",
+      "songid": "33d4e8d9",
+      "count": 807
+    },
+    {
+      "name": "If You Only Knew",
+      "songid": "63d62ea7",
+      "count": 748
+    },
+    {
+      "name": "Unity",
+      "songid": "2bdceca6",
+      "count": 738
+    },
+    {
+      "name": "Cut the Cord",
+      "songid": "6bc1e2d6",
+      "count": 700
+    },
+    {
+      "name": "Bully",
+      "songid": "6bdf6eb2",
+      "count": 661
+    },
+    {
+      "name": "I'll Follow You",
+      "songid": "2bddf4e6",
+      "count": 595
+    },
+    {
+      "name": "Devour",
+      "songid": "1bd6ed4c",
+      "count": 588
+    },
+    {
+      "name": "Save Me",
+      "songid": "4bd64fc6",
+      "count": 506
+    },
+    {
+      "name": "The Crow & the Butterfly",
+      "songid": "23d7a4ff",
+      "count": 471
+    },
+    {
+      "name": "Devil",
+      "songid": "63f5d66b",
+      "count": 466
+    },
+    {
+      "name": "State of My Head",
+      "songid": "3bce146c",
+      "count": 447
+    },
+    {
+      "name": "How Did You Love",
+      "songid": "33ce8075",
+      "count": 341
+    },
+    {
+      "name": "Monsters",
+      "songid": "13f2b185",
+      "count": 333
+    },
+    {
+      "name": "Get Up",
+      "songid": "73f5562d",
+      "count": 317
+    },
+    {
+      "name": "Call Me",
+      "songid": "33d68449",
+      "count": 303
+    },
+    {
+      "name": "Heroes",
+      "songid": "4bd63f4e",
+      "count": 290
+    },
+    {
+      "name": "Cyanide Sweet Tooth Suicide",
+      "songid": "bd6f54e",
+      "count": 253
+    },
+    {
+      "name": "Left Out",
+      "songid": "43d61787",
+      "count": 244
+    },
+    {
+      "name": "Amaryllis",
+      "songid": "33dceca5",
+      "count": 236
+    },
+    {
+      "name": "I Dare You",
+      "songid": "5bd63784",
+      "count": 215
+    },
+    {
+      "name": "Planet Zero",
+      "songid": "4be58716",
+      "count": 199
+    },
+    {
+      "name": "Burning Bright",
+      "songid": "73d68a35",
+      "count": 188
+    },
+    {
+      "name": "Adrenaline",
+      "songid": "63df6eb3",
+      "count": 156
+    },
+    {
+      "name": "A Symptom of Being Human",
+      "songid": "2befe08e",
+      "count": 139
+    },
+    {
+      "name": "Brilliant",
+      "songid": "23f2b07b",
+      "count": 134
+    },
+    {
+      "name": "Cry for Help",
+      "songid": "73d6fa31",
+      "count": 123
+    },
+    {
+      "name": "Black Soul",
+      "songid": "23f2cc53",
+      "count": 89
+    },
+    {
+      "name": "Asking for It",
+      "songid": "4bcec7de",
+      "count": 86
+    },
+    {
+      "name": "The Saints of Violence and Innuendo",
+      "songid": "63e55657",
+      "count": 78
+    },
+    {
+      "name": "In Memory",
+      "songid": "23d628cb",
+      "count": 73
+    },
+    {
+      "name": "Dead Don't Die",
+      "songid": "23efe0ab",
+      "count": 72
+    },
+    {
+      "name": "Daylight",
+      "songid": "53e557b1",
+      "count": 71
+    },
+    {
+      "name": "Crying Out",
+      "songid": "63d6fa07",
+      "count": 70
+    },
+    {
+      "name": "Nowhere Kids",
+      "songid": "23dceca7",
+      "count": 58
+    },
+    {
+      "name": "Daylight / Get Up",
+      "songid": "13efd1a1",
+      "count": 56
+    },
+    {
+      "name": "Don't Look Back in Anger",
+      "songid": "33d6e801",
+      "count": 51
+    },
+    {
+      "name": "Stranger Inside",
+      "songid": "63d7b68f",
+      "count": 51
+    },
+    {
+      "name": "Kill Your Conscience",
+      "songid": "73f55649",
+      "count": 49
+    },
+    {
+      "name": "Through the Ghost",
+      "songid": "3c695af",
+      "count": 48
+    },
+    {
+      "name": "Three Six Five",
+      "songid": "6b93825a",
+      "count": 47
+    },
+    {
+      "name": "Better Version",
+      "songid": "63d69613",
+      "count": 43
+    },
+    {
+      "name": "Sin With a Grin",
+      "songid": "3bd64044",
+      "count": 43
+    },
+    {
+      "name": "The Middle",
+      "songid": "63d7a2cf",
+      "count": 42
+    },
+    {
+      "name": "Dance, Kid, Dance",
+      "songid": "73904291",
+      "count": 41
+    },
+    {
+      "name": "Misfits",
+      "songid": "73cfde15",
+      "count": 41
+    },
+    {
+      "name": "No More Love",
+      "songid": "13d671e1",
+      "count": 40
+    },
+    {
+      "name": "Shed Some Light",
+      "songid": "2bd3ac86",
+      "count": 37
+    },
+    {
+      "name": "The Human Radio",
+      "songid": "7bf5d674",
+      "count": 37
+    },
+    {
+      "name": "Begin Again",
+      "songid": "6bd76ad2",
+      "count": 36
+    },
+    {
+      "name": "Her Name Is Alice",
+      "songid": "2bd2284e",
+      "count": 31
+    },
+    {
+      "name": "I'm Not Alright",
+      "songid": "bd90112",
+      "count": 26
+    },
+    {
+      "name": "Wheels",
+      "songid": "73d4e699",
+      "count": 25
+    },
+    {
+      "name": "Yer Majesty",
+      "songid": "1bd40d9c",
+      "count": 25
+    },
+    {
+      "name": "America Burning",
+      "songid": "6be0e63a",
+      "count": 23
+    },
+    {
+      "name": "Creep",
+      "songid": "53d6fb19",
+      "count": 23
+    },
+    {
+      "name": "Attention Attention",
+      "songid": "73f2a685",
+      "count": 20
+    },
+    {
+      "name": "Junkies for Fame",
+      "songid": "3bd61c48",
+      "count": 20
+    },
+    {
+      "name": "Breaking Inside",
+      "songid": "7bd5b268",
+      "count": 19
+    },
+    {
+      "name": "Son of Sam",
+      "songid": "4bd2cf56",
+      "count": 18
+    },
+    {
+      "name": "(Sittin' On) The Dock of the Bay",
+      "songid": "3d19de7",
+      "count": 16
+    },
+    {
+      "name": "What a Shame",
+      "songid": "43d5a747",
+      "count": 15
+    },
+    {
+      "name": "Thick as Thieves",
+      "songid": "53e44ff1",
+      "count": 14
+    },
+    {
+      "name": "Times Like These",
+      "songid": "73d7962d",
+      "count": 14
+    },
+    {
+      "name": "Black Cadillac",
+      "songid": "1bcf654c",
+      "count": 11
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 11
+    },
+    {
+      "name": "Lost in the Crowd",
+      "songid": "63d60e33",
+      "count": 11
+    },
+    {
+      "name": "Atmosphere",
+      "songid": "3d40d93",
+      "count": 10
+    },
+    {
+      "name": "With a Little Help From My Friends",
+      "songid": "1bd365bc",
+      "count": 10
+    },
+    {
+      "name": "Trade Yourself In",
+      "songid": "13d40d9d",
+      "count": 9
+    },
+    {
+      "name": "Black Hole Sun",
+      "songid": "23d69083",
+      "count": 7
+    },
+    {
+      "name": "She Talks to Angels / Over the Hills and Far Away / Smells Like Teen Spirit / Enter Sandman / Stairway to Heaven",
+      "songid": "73e6cebd",
+      "count": 7
+    },
+    {
+      "name": "Atlas Falls",
+      "songid": "73f84241",
+      "count": 6
+    },
+    {
+      "name": "Purple Rain",
+      "songid": "6bd65e66",
+      "count": 6
+    },
+    {
+      "name": "Pyro",
+      "songid": "3f2959f",
+      "count": 6
+    },
+    {
+      "name": "Dysfunctional You",
+      "songid": "13e1193d",
+      "count": 5
+    },
+    {
+      "name": "Lacerated",
+      "songid": "73d61a81",
+      "count": 5
+    },
+    {
+      "name": "Someone Like You",
+      "songid": "63d0f6bb",
+      "count": 5
+    },
+    {
+      "name": "Forever and Ever, Amen",
+      "songid": "5b92ab3c",
+      "count": 3
+    },
+    {
+      "name": "Bloodletting (The Vampire Song)",
+      "songid": "4bd29746",
+      "count": 2
+    },
+    {
+      "name": "I Own You",
+      "songid": "3bd63004",
+      "count": 2
+    },
+    {
+      "name": "Kryptonite",
+      "songid": "5bd61b00",
+      "count": 2
+    },
+    {
+      "name": "Miracle",
+      "songid": "53cde3cd",
+      "count": 2
+    },
+    {
+      "name": "Numb",
+      "songid": "bd66d7e",
+      "count": 2
+    },
+    {
+      "name": "The Energy",
+      "songid": "1bd48108",
+      "count": 2
+    },
+    {
+      "name": "Amazing Grace",
+      "songid": "53d4fb79",
+      "count": 1
+    },
+    {
+      "name": "Breakdown / Little Red Corvette / Learning to Fly / Mary Jane's Last Dance / Take It Easy",
+      "songid": "13ffe1ed",
+      "count": 1
+    },
+    {
+      "name": "Change",
+      "songid": "3bd6803c",
+      "count": 1
+    },
+    {
+      "name": "Dracula's Lament",
+      "songid": "33df1c3d",
+      "count": 1
+    },
+    {
+      "name": "Every Rose Has Its Thorn",
+      "songid": "3bd6dca0",
+      "count": 1
+    },
+    {
+      "name": "Folsom Prison Blues",
+      "songid": "73d6d639",
+      "count": 1
+    },
+    {
+      "name": "Glycerine",
+      "songid": "3bd6c824",
+      "count": 1
+    },
+    {
+      "name": "Head Over Heels",
+      "songid": "5bd6c3a0",
+      "count": 1
+    },
+    {
+      "name": "I Feel the Earth Move",
+      "songid": "5bd7d730",
+      "count": 1
+    },
+    {
+      "name": "Jessie's Girl",
+      "songid": "7bd7d2ac",
+      "count": 1
+    },
+    {
+      "name": "Medley",
+      "songid": "43934337",
+      "count": 1
+    },
+    {
+      "name": "Never Tear Us Apart",
+      "songid": "23d674fb",
+      "count": 1
+    },
+    {
+      "name": "Not an Addict",
+      "songid": "53dd4fb5",
+      "count": 1
+    },
+    {
+      "name": "Nothing Else Matters",
+      "songid": "73d67269",
+      "count": 1
+    },
+    {
+      "name": "Nutshell",
+      "songid": "bd66d32",
+      "count": 1
+    },
+    {
+      "name": "One",
+      "songid": "7bd66e14",
+      "count": 1
+    },
+    {
+      "name": "Raspberry Beret",
+      "songid": "13d7019d",
+      "count": 1
+    },
+    {
+      "name": "Searchlight",
+      "songid": "4b9ce302",
+      "count": 1
+    },
+    {
+      "name": "She Talks to Angels",
+      "songid": "1bd4ddbc",
+      "count": 1
+    },
+    {
+      "name": "She Talks to Angels / Enter Sandman / Blister in the Sun / Wanted Dead or Alive / Misty Mountain Hop",
+      "songid": "13db15ad",
+      "count": 1
+    },
+    {
+      "name": "She Talks to Angels / Smell Like Teen Spirit / Wanted Dead or Alive",
+      "songid": "4bdb0f86",
+      "count": 1
+    },
+    {
+      "name": "The Freshmen",
+      "songid": "5bdfcb40",
+      "count": 1
+    },
+    {
+      "name": "Time After Time",
+      "songid": "5bd797b8",
+      "count": 1
+    },
+    {
+      "name": "Turn the Page / Enter Sandman / Smells Like Teen Spirit / Wanted Dead or Alive",
+      "songid": "3f3a1e7",
+      "count": 1
+    },
+    {
+      "name": "Turn the Page / Smells Like Teen Spirit / Wanted Dead or Alive / Enter Sandman / Stairway to Heaven",
+      "songid": "bf3a1e2",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "artist": "Rammstein",
+  "slug": "rammstein",
+  "stats_id": "3bd43cd0",
+  "mbid": "b2d122f9-eadb-4930-a196-8f221eeb0c66",
+  "fetched_at": "2026-04-30T15:31:25.200359Z",
+  "songs": [
+    {
+      "name": "Du hast",
+      "songid": "bdc794e",
+      "count": 681
+    },
+    {
+      "name": "Links 2 3 4",
+      "songid": "4bd8ffda",
+      "count": 585
+    },
+    {
+      "name": "Sonne",
+      "songid": "1bdc7950",
+      "count": 570
+    },
+    {
+      "name": "Ich will",
+      "songid": "3dc7947",
+      "count": 557
+    },
+    {
+      "name": "Du riechst so gut",
+      "songid": "1bdc7948",
+      "count": 551
+    },
+    {
+      "name": "Sehnsucht",
+      "songid": "13dc7955",
+      "count": 529
+    },
+    {
+      "name": "Engel",
+      "songid": "bdc7946",
+      "count": 484
+    },
+    {
+      "name": "Rammstein",
+      "songid": "3dc792b",
+      "count": 474
+    },
+    {
+      "name": "Feuer frei!",
+      "songid": "3dc794b",
+      "count": 426
+    },
+    {
+      "name": "Asche zu Asche",
+      "songid": "1bdc7954",
+      "count": 375
+    },
+    {
+      "name": "Mein Herz brennt",
+      "songid": "13dc7941",
+      "count": 375
+    },
+    {
+      "name": "Keine Lust",
+      "songid": "bdc7956",
+      "count": 369
+    },
+    {
+      "name": "Pussy",
+      "songid": "13dc7945",
+      "count": 336
+    },
+    {
+      "name": "Mein Teil",
+      "songid": "13dc7949",
+      "count": 328
+    },
+    {
+      "name": "Weisses Fleisch",
+      "songid": "6bdd3efa",
+      "count": 303
+    },
+    {
+      "name": "B\u00fcck dich",
+      "songid": "1bdc794c",
+      "count": 273
+    },
+    {
+      "name": "Wollt ihr das Bett in Flammen sehen?",
+      "songid": "3dc79f3",
+      "count": 242
+    },
+    {
+      "name": "Ohne dich",
+      "songid": "bdc7942",
+      "count": 235
+    },
+    {
+      "name": "Heirate mich",
+      "songid": "bdc7936",
+      "count": 202
+    },
+    {
+      "name": "Amerika",
+      "songid": "1bdc7940",
+      "count": 183
+    },
+    {
+      "name": "Haifisch",
+      "songid": "13dc794d",
+      "count": 181
+    },
+    {
+      "name": "Wiener Blut",
+      "songid": "1bdc7938",
+      "count": 180
+    },
+    {
+      "name": "Stripped",
+      "songid": "3d7b1f7",
+      "count": 179
+    },
+    {
+      "name": "Ich tu dir weh",
+      "songid": "bdc793e",
+      "count": 177
+    },
+    {
+      "name": "Benzin",
+      "songid": "13dc793d",
+      "count": 158
+    },
+    {
+      "name": "Bestrafe mich",
+      "songid": "1bdc7930",
+      "count": 154
+    },
+    {
+      "name": "Seemann",
+      "songid": "13dc7951",
+      "count": 153
+    },
+    {
+      "name": "Rammlied",
+      "songid": "1bdc7944",
+      "count": 148
+    },
+    {
+      "name": "Ausl\u00e4nder",
+      "songid": "4bffdf72",
+      "count": 141
+    },
+    {
+      "name": "Deutschland",
+      "songid": "63fe0aef",
+      "count": 141
+    },
+    {
+      "name": "Puppe",
+      "songid": "5bffdf74",
+      "count": 141
+    },
+    {
+      "name": "Radio",
+      "songid": "53ffdf71",
+      "count": 141
+    },
+    {
+      "name": "Mutter",
+      "songid": "bdc794a",
+      "count": 140
+    },
+    {
+      "name": "Rein raus",
+      "songid": "3dc79eb",
+      "count": 121
+    },
+    {
+      "name": "Waidmanns Heil",
+      "songid": "bdc793a",
+      "count": 117
+    },
+    {
+      "name": "Fr\u00fchling in Paris",
+      "songid": "3dc793f",
+      "count": 116
+    },
+    {
+      "name": "Reise, Reise",
+      "songid": "bdc792e",
+      "count": 116
+    },
+    {
+      "name": "B********",
+      "songid": "3dc793b",
+      "count": 110
+    },
+    {
+      "name": "Adieu",
+      "songid": "2be23c46",
+      "count": 108
+    },
+    {
+      "name": "Tier",
+      "songid": "13dc7931",
+      "count": 108
+    },
+    {
+      "name": "Zeit",
+      "songid": "33e2b435",
+      "count": 108
+    },
+    {
+      "name": "Spiel mit mir",
+      "songid": "3dc7937",
+      "count": 81
+    },
+    {
+      "name": "Zeig dich",
+      "songid": "53ffdfe9",
+      "count": 79
+    },
+    {
+      "name": "Adios",
+      "songid": "bdc79ca",
+      "count": 76
+    },
+    {
+      "name": "Ramm4",
+      "songid": "7bcbde7c",
+      "count": 76
+    },
+    {
+      "name": "Laichzeit",
+      "songid": "1bdc7934",
+      "count": 74
+    },
+    {
+      "name": "Halleluja",
+      "songid": "befadea",
+      "count": 73
+    },
+    {
+      "name": "Mann gegen Mann",
+      "songid": "3dc7943",
+      "count": 71
+    },
+    {
+      "name": "Morgenstern",
+      "songid": "13dc792d",
+      "count": 71
+    },
+    {
+      "name": "Stein um Stein",
+      "songid": "1bdc792c",
+      "count": 71
+    },
+    {
+      "name": "Zwitter",
+      "songid": "1bdc79c8",
+      "count": 69
+    },
+    {
+      "name": "Los",
+      "songid": "3dc7923",
+      "count": 61
+    },
+    {
+      "name": "Moskau",
+      "songid": "13dc79f5",
+      "count": 54
+    },
+    {
+      "name": "Liebe ist f\u00fcr alle da",
+      "songid": "3dc792f",
+      "count": 53
+    },
+    {
+      "name": "Armee der Tristen",
+      "songid": "23e23c47",
+      "count": 46
+    },
+    {
+      "name": "Zick Zack",
+      "songid": "6be282ee",
+      "count": 46
+    },
+    {
+      "name": "Zerst\u00f6ren",
+      "songid": "7bdb1eac",
+      "count": 45
+    },
+    {
+      "name": "Der Meister",
+      "songid": "13dc7935",
+      "count": 43
+    },
+    {
+      "name": "5/4",
+      "songid": "3dc79cb",
+      "count": 40
+    },
+    {
+      "name": "Diamant",
+      "songid": "5bffdfe8",
+      "count": 34
+    },
+    {
+      "name": "Tattoo",
+      "songid": "5bffdf70",
+      "count": 33
+    },
+    {
+      "name": "Was ich liebe",
+      "songid": "4bffdf6a",
+      "count": 33
+    },
+    {
+      "name": "Herzeleid",
+      "songid": "3dc79a3",
+      "count": 32
+    },
+    {
+      "name": "Giftig",
+      "songid": "43e1ef03",
+      "count": 31
+    },
+    {
+      "name": "Pet Sematary",
+      "songid": "73d666bd",
+      "count": 31
+    },
+    {
+      "name": "Angst",
+      "songid": "13e3f94d",
+      "count": 30
+    },
+    {
+      "name": "Spieluhr",
+      "songid": "13dc79c9",
+      "count": 25
+    },
+    {
+      "name": "Das alte Leid",
+      "songid": "3bdc78f0",
+      "count": 23
+    },
+    {
+      "name": "Te quiero puta!",
+      "songid": "1bdc79f0",
+      "count": 21
+    },
+    {
+      "name": "Nebel",
+      "songid": "3dc79cf",
+      "count": 19
+    },
+    {
+      "name": "Klavier",
+      "songid": "13dc79a1",
+      "count": 18
+    },
+    {
+      "name": "Wilder Wein",
+      "songid": "bdc79a2",
+      "count": 17
+    },
+    {
+      "name": "Alter Mann",
+      "songid": "1bdc79ac",
+      "count": 14
+    },
+    {
+      "name": "Feuerr\u00e4der",
+      "songid": "23dc78f7",
+      "count": 14
+    },
+    {
+      "name": "Dalai Lama",
+      "songid": "bdc79f6",
+      "count": 6
+    },
+    {
+      "name": "Schwarzes Glas",
+      "songid": "2bdc78f6",
+      "count": 6
+    },
+    {
+      "name": "Amour",
+      "songid": "1bdc79f4",
+      "count": 5
+    },
+    {
+      "name": "Sex",
+      "songid": "53ffdf75",
+      "count": 5
+    },
+    {
+      "name": "Das Model",
+      "songid": "5bd6f79c",
+      "count": 4
+    },
+    {
+      "name": "Jeder lacht",
+      "songid": "33dc78f1",
+      "count": 4
+    },
+    {
+      "name": "Rosenrot",
+      "songid": "4bddb3a2",
+      "count": 3
+    },
+    {
+      "name": "Bayern",
+      "songid": "4bc4df9e",
+      "count": 2
+    },
+    {
+      "name": "Lied von der unruhevollen Jugend",
+      "songid": "33d1d815",
+      "count": 2
+    },
+    {
+      "name": "Mein Land",
+      "songid": "bddad16",
+      "count": 2
+    },
+    {
+      "name": "Azzurro",
+      "songid": "4bcb0f3a",
+      "count": 1
+    },
+    {
+      "name": "Eifersucht",
+      "songid": "1bdb51e4",
+      "count": 1
+    },
+    {
+      "name": "Give Peace a Chance",
+      "songid": "73d1b2f5",
+      "count": 1
+    },
+    {
+      "name": "Sonne '95",
+      "songid": "4be7239e",
+      "count": 1
+    }
+  ]
+}

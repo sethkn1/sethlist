@@ -1,0 +1,269 @@
+{
+  "artist": "Polyphia",
+  "slug": "polyphia",
+  "stats_id": "63ddc2d3",
+  "mbid": "344bfb00-27f0-4ff2-b96b-048ed1c6a968",
+  "fetched_at": "2026-04-30T15:31:32.336779Z",
+  "songs": [
+    {
+      "name": "Champagne",
+      "songid": "bc0d956",
+      "count": 218
+    },
+    {
+      "name": "Euphoria",
+      "songid": "1bcce588",
+      "count": 183
+    },
+    {
+      "name": "40oz",
+      "songid": "2bf67c62",
+      "count": 169
+    },
+    {
+      "name": "Goose",
+      "songid": "33f628fd",
+      "count": 169
+    },
+    {
+      "name": "G.O.A.T.",
+      "songid": "2bf23c1e",
+      "count": 155
+    },
+    {
+      "name": "Icronic",
+      "songid": "2bf628fe",
+      "count": 147
+    },
+    {
+      "name": "O.D.",
+      "songid": "2bf0f48a",
+      "count": 128
+    },
+    {
+      "name": "Finale",
+      "songid": "bc0d94a",
+      "count": 123
+    },
+    {
+      "name": "The Worst",
+      "songid": "33f16c4d",
+      "count": 120
+    },
+    {
+      "name": "Playing God",
+      "songid": "1be30960",
+      "count": 98
+    },
+    {
+      "name": "Loud",
+      "songid": "3bf628fc",
+      "count": 87
+    },
+    {
+      "name": "Genesis",
+      "songid": "be30962",
+      "count": 85
+    },
+    {
+      "name": "Neurotica",
+      "songid": "13e30961",
+      "count": 79
+    },
+    {
+      "name": "Crush",
+      "songid": "1bcce58c",
+      "count": 68
+    },
+    {
+      "name": "All Falls Apart",
+      "songid": "33e1046d",
+      "count": 63
+    },
+    {
+      "name": "Reverie",
+      "songid": "23ef880f",
+      "count": 55
+    },
+    {
+      "name": "The Audacity",
+      "songid": "2bef880e",
+      "count": 53
+    },
+    {
+      "name": "Drown",
+      "songid": "63fa5673",
+      "count": 51
+    },
+    {
+      "name": "Chimera",
+      "songid": "4beaab46",
+      "count": 49
+    },
+    {
+      "name": "Saucy",
+      "songid": "33f0f489",
+      "count": 44
+    },
+    {
+      "name": "87",
+      "songid": "3c0d94b",
+      "count": 42
+    },
+    {
+      "name": "ABC",
+      "songid": "5beaab44",
+      "count": 42
+    },
+    {
+      "name": "James Franco",
+      "songid": "1bc0d954",
+      "count": 42
+    },
+    {
+      "name": "LIT",
+      "songid": "1bc895a0",
+      "count": 41
+    },
+    {
+      "name": "Look but Don't Touch",
+      "songid": "33ffa8ed",
+      "count": 39
+    },
+    {
+      "name": "So Strange",
+      "songid": "53eaab45",
+      "count": 38
+    },
+    {
+      "name": "Nightmare",
+      "songid": "3c8fd6f",
+      "count": 31
+    },
+    {
+      "name": "Sweet Tea",
+      "songid": "13c0d955",
+      "count": 31
+    },
+    {
+      "name": "96 Quite Bitter Beings",
+      "songid": "23d7303b",
+      "count": 30
+    },
+    {
+      "name": "Impassion",
+      "songid": "73ce964d",
+      "count": 29
+    },
+    {
+      "name": "Culture Shock",
+      "songid": "3cce58f",
+      "count": 25
+    },
+    {
+      "name": "Transcend",
+      "songid": "7bcf82a0",
+      "count": 24
+    },
+    {
+      "name": "Crosty",
+      "songid": "53fe1745",
+      "count": 22
+    },
+    {
+      "name": "Yas",
+      "songid": "3bf0f488",
+      "count": 17
+    },
+    {
+      "name": "Amour",
+      "songid": "13cce58d",
+      "count": 16
+    },
+    {
+      "name": "Crush / Culture Shock",
+      "songid": "13ea4911",
+      "count": 16
+    },
+    {
+      "name": "Liftoff",
+      "songid": "6be35ea2",
+      "count": 13
+    },
+    {
+      "name": "An Evaporation",
+      "songid": "bcad11e",
+      "count": 10
+    },
+    {
+      "name": "Aviator",
+      "songid": "3c8959f",
+      "count": 10
+    },
+    {
+      "name": "Careless Whisper",
+      "songid": "63d68647",
+      "count": 5
+    },
+    {
+      "name": "Storm",
+      "songid": "7bfa567c",
+      "count": 5
+    },
+    {
+      "name": "Domination",
+      "songid": "bd6e9fa",
+      "count": 4
+    },
+    {
+      "name": "Mood Swing",
+      "songid": "6bc13a22",
+      "count": 4
+    },
+    {
+      "name": "Schism",
+      "songid": "6bd64e9a",
+      "count": 3
+    },
+    {
+      "name": "Baditude",
+      "songid": "5bc1cfcc",
+      "count": 2
+    },
+    {
+      "name": "Nasty",
+      "songid": "3fd11c3",
+      "count": 2
+    },
+    {
+      "name": "Resurrect",
+      "songid": "13cad11d",
+      "count": 2
+    },
+    {
+      "name": "Billie Jean",
+      "songid": "bd691ea",
+      "count": 1
+    },
+    {
+      "name": "Bittersweet",
+      "songid": "bcce58e",
+      "count": 1
+    },
+    {
+      "name": "Improv Jam",
+      "songid": "3f1554b",
+      "count": 1
+    },
+    {
+      "name": "Ivory",
+      "songid": "5bfba3b0",
+      "count": 1
+    },
+    {
+      "name": "Light",
+      "songid": "1bc8fd68",
+      "count": 1
+    }
+  ]
+}

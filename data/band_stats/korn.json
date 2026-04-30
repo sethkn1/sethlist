@@ -1,0 +1,824 @@
+{
+  "artist": "Korn",
+  "slug": "korn",
+  "stats_id": "4bd6d3fe",
+  "mbid": "ac865b2e-bba8-4f5a-8756-dd40d5e39f46",
+  "fetched_at": "2026-04-30T15:31:20.516287Z",
+  "songs": [
+    {
+      "name": "Blind",
+      "songid": "73d69211",
+      "count": 1803
+    },
+    {
+      "name": "Freak on a Leash",
+      "songid": "23d6d0e3",
+      "count": 1581
+    },
+    {
+      "name": "Falling Away From Me",
+      "songid": "2bd6d812",
+      "count": 1513
+    },
+    {
+      "name": "Got the Life",
+      "songid": "1bd6c530",
+      "count": 1442
+    },
+    {
+      "name": "Shoots and Ladders",
+      "songid": "63d6466b",
+      "count": 1433
+    },
+    {
+      "name": "Here to Stay",
+      "songid": "23d63c8f",
+      "count": 1412
+    },
+    {
+      "name": "Twist",
+      "songid": "5bd78f20",
+      "count": 1157
+    },
+    {
+      "name": "Coming Undone",
+      "songid": "7bd6fe2c",
+      "count": 842
+    },
+    {
+      "name": "Somebody Someone",
+      "songid": "5bd7bf9c",
+      "count": 803
+    },
+    {
+      "name": "A.D.I.D.A.S.",
+      "songid": "4bd6ab42",
+      "count": 758
+    },
+    {
+      "name": "Clown",
+      "songid": "3bd6fc58",
+      "count": 718
+    },
+    {
+      "name": "Faget",
+      "songid": "13d6d9cd",
+      "count": 701
+    },
+    {
+      "name": "Y'All Want a Single",
+      "songid": "2bd700be",
+      "count": 646
+    },
+    {
+      "name": "Good God",
+      "songid": "73d6ca19",
+      "count": 541
+    },
+    {
+      "name": "Did My Time",
+      "songid": "bd6edb2",
+      "count": 530
+    },
+    {
+      "name": "Right Now",
+      "songid": "6bd65672",
+      "count": 480
+    },
+    {
+      "name": "Dead Bodies Everywhere",
+      "songid": "6bd6f68a",
+      "count": 472
+    },
+    {
+      "name": "Divine",
+      "songid": "73d6ee55",
+      "count": 431
+    },
+    {
+      "name": "Ball Tongue",
+      "songid": "53d69bc1",
+      "count": 418
+    },
+    {
+      "name": "Make Me Bad",
+      "songid": "bd60532",
+      "count": 396
+    },
+    {
+      "name": "Another Brick in the Wall, Part 2",
+      "songid": "2bd24cfa",
+      "count": 333
+    },
+    {
+      "name": "Another Brick in the Wall, Part 3",
+      "songid": "13cb8959",
+      "count": 333
+    },
+    {
+      "name": "Another Brick in the Wall, Part 1",
+      "songid": "6bd6a226",
+      "count": 324
+    },
+    {
+      "name": "Goodbye Cruel World",
+      "songid": "63d6ca9b",
+      "count": 320
+    },
+    {
+      "name": "It's On!",
+      "songid": "bd621e6",
+      "count": 310
+    },
+    {
+      "name": "Helmet in the Bush",
+      "songid": "33d63c41",
+      "count": 302
+    },
+    {
+      "name": "4 U",
+      "songid": "6bd442fe",
+      "count": 296
+    },
+    {
+      "name": "Need To",
+      "songid": "bd67502",
+      "count": 295
+    },
+    {
+      "name": "Kill You",
+      "songid": "bd6195a",
+      "count": 258
+    },
+    {
+      "name": "Twisted Transistor",
+      "songid": "5bd78f0c",
+      "count": 254
+    },
+    {
+      "name": "Trash",
+      "songid": "6bd79206",
+      "count": 253
+    },
+    {
+      "name": "Chi",
+      "songid": "53d68315",
+      "count": 244
+    },
+    {
+      "name": "Get Up!",
+      "songid": "73d1067d",
+      "count": 232
+    },
+    {
+      "name": "Oildale (Leave Me Alone)",
+      "songid": "3bd570b0",
+      "count": 219
+    },
+    {
+      "name": "Rotting in Vain",
+      "songid": "3bcd78c4",
+      "count": 218
+    },
+    {
+      "name": "Narcissistic Cannibal",
+      "songid": "53dfb345",
+      "count": 197
+    },
+    {
+      "name": "No Place to Hide",
+      "songid": "73d4aea5",
+      "count": 180
+    },
+    {
+      "name": "Throw Me Away",
+      "songid": "2bd7948a",
+      "count": 176
+    },
+    {
+      "name": "Lies",
+      "songid": "33d610f9",
+      "count": 174
+    },
+    {
+      "name": "Fake",
+      "songid": "bd6d98e",
+      "count": 171
+    },
+    {
+      "name": "Insane",
+      "songid": "bca8956",
+      "count": 159
+    },
+    {
+      "name": "Thoughtless",
+      "songid": "33d79429",
+      "count": 155
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "53d53381",
+      "count": 153
+    },
+    {
+      "name": "Dirty",
+      "songid": "4bd6ef5a",
+      "count": 149
+    },
+    {
+      "name": "Predictable",
+      "songid": "6bd4d6b6",
+      "count": 140
+    },
+    {
+      "name": "Love & Meth",
+      "songid": "bc6b972",
+      "count": 133
+    },
+    {
+      "name": "Evolution",
+      "songid": "73d6de59",
+      "count": 132
+    },
+    {
+      "name": "Alone I Break",
+      "songid": "73d6a69d",
+      "count": 127
+    },
+    {
+      "name": "Bagpipe Interlude",
+      "songid": "5bd69bf4",
+      "count": 125
+    },
+    {
+      "name": "Love Song",
+      "songid": "1bd609a8",
+      "count": 123
+    },
+    {
+      "name": "Low Rider",
+      "songid": "43d46793",
+      "count": 119
+    },
+    {
+      "name": "Start the Healing",
+      "songid": "1be5f948",
+      "count": 116
+    },
+    {
+      "name": "Pop a Pill",
+      "songid": "6bd29a92",
+      "count": 109
+    },
+    {
+      "name": "Never Never",
+      "songid": "13c6b971",
+      "count": 108
+    },
+    {
+      "name": "Cold",
+      "songid": "bfc5d26",
+      "count": 107
+    },
+    {
+      "name": "Hold On",
+      "songid": "3d639b3",
+      "count": 104
+    },
+    {
+      "name": "Starting Over",
+      "songid": "23d7b46b",
+      "count": 103
+    },
+    {
+      "name": "Ever Be",
+      "songid": "3bd6dce8",
+      "count": 93
+    },
+    {
+      "name": "Hater",
+      "songid": "bc581ae",
+      "count": 92
+    },
+    {
+      "name": "Spike in My Veins",
+      "songid": "43c70b5f",
+      "count": 89
+    },
+    {
+      "name": "You'll Never Find Me",
+      "songid": "bfc895a",
+      "count": 87
+    },
+    {
+      "name": "Bottled Up Inside",
+      "songid": "5bd68f8c",
+      "count": 86
+    },
+    {
+      "name": "No One's There",
+      "songid": "1bd67198",
+      "count": 82
+    },
+    {
+      "name": "Coming Undone / We Will Rock You / Twisted Transistor / Make Me Bad / Thoughtless / Did My Time / Clown",
+      "songid": "33d03c51",
+      "count": 81
+    },
+    {
+      "name": "My Wall",
+      "songid": "43dfb33b",
+      "count": 81
+    },
+    {
+      "name": "Way Too Far",
+      "songid": "53dfb339",
+      "count": 81
+    },
+    {
+      "name": "Ass Itch",
+      "songid": "53d69f05",
+      "count": 79
+    },
+    {
+      "name": "Porno Creep",
+      "songid": "13d4bd7d",
+      "count": 78
+    },
+    {
+      "name": "My Gift to You",
+      "songid": "3bd678f4",
+      "count": 77
+    },
+    {
+      "name": "It's On! / Trash / Did My Time",
+      "songid": "3be7cc84",
+      "count": 76
+    },
+    {
+      "name": "Kill Mercy Within",
+      "songid": "5bdfb344",
+      "count": 76
+    },
+    {
+      "name": "Chaos Lives in Everything",
+      "songid": "3dfd9d7",
+      "count": 75
+    },
+    {
+      "name": "Word Up!",
+      "songid": "73d43e29",
+      "count": 72
+    },
+    {
+      "name": "Hypocrites",
+      "songid": "23d6343b",
+      "count": 68
+    },
+    {
+      "name": "Wicked",
+      "songid": "7bd44200",
+      "count": 61
+    },
+    {
+      "name": "Kiss",
+      "songid": "3bd61858",
+      "count": 59
+    },
+    {
+      "name": "Let the Guilt Go",
+      "songid": "13d2f1b9",
+      "count": 57
+    },
+    {
+      "name": "Can You Hear Me",
+      "songid": "3fc5d27",
+      "count": 56
+    },
+    {
+      "name": "Counting on Me",
+      "songid": "2bd6f842",
+      "count": 55
+    },
+    {
+      "name": "South of Heaven",
+      "songid": "33d7b8e9",
+      "count": 52
+    },
+    {
+      "name": "B.B.K.",
+      "songid": "3d699f7",
+      "count": 49
+    },
+    {
+      "name": "Break Some Off",
+      "songid": "bd6897a",
+      "count": 47
+    },
+    {
+      "name": "Earache My Eye",
+      "songid": "63d442ff",
+      "count": 47
+    },
+    {
+      "name": "Liar",
+      "songid": "33d61071",
+      "count": 47
+    },
+    {
+      "name": "Shoots and Ladders / Need To / Lies / Make Me Bad / Thoughtless / A.D.I.D.A.S.",
+      "songid": "4bd50bea",
+      "count": 46
+    },
+    {
+      "name": "Black Is the Soul",
+      "songid": "43ca5b3f",
+      "count": 45
+    },
+    {
+      "name": "Shoots and Ladders / Justin / Predictable / Ball Tongue / Divine / Kill You",
+      "songid": "53e6ef45",
+      "count": 41
+    },
+    {
+      "name": "Shoots and Ladders / Justin / Engine No. 9 / Ball Tongue / Divine / Proud",
+      "songid": "23f95cbf",
+      "count": 40
+    },
+    {
+      "name": "Worst Is on Its Way",
+      "songid": "4be5f7e2",
+      "count": 40
+    },
+    {
+      "name": "It's Gonna Go Away",
+      "songid": "23d7e427",
+      "count": 37
+    },
+    {
+      "name": "Souvenir",
+      "songid": "33d7b8d1",
+      "count": 37
+    },
+    {
+      "name": "Daddy",
+      "songid": "4bd3bb8a",
+      "count": 35
+    },
+    {
+      "name": "Politics",
+      "songid": "6bd6627e",
+      "count": 33
+    },
+    {
+      "name": "Victimized",
+      "songid": "33c33c61",
+      "count": 32
+    },
+    {
+      "name": "Let's Get This Party Started",
+      "songid": "33d7e425",
+      "count": 28
+    },
+    {
+      "name": "Prey for Me",
+      "songid": "13c0a1c5",
+      "count": 28
+    },
+    {
+      "name": "Tearjerker",
+      "songid": "13d7a919",
+      "count": 27
+    },
+    {
+      "name": "All in the Family",
+      "songid": "6bd442fa",
+      "count": 26
+    },
+    {
+      "name": "Hollow Life",
+      "songid": "3bd63840",
+      "count": 26
+    },
+    {
+      "name": "Swallow",
+      "songid": "63d76eeb",
+      "count": 26
+    },
+    {
+      "name": "Reclaim My Place",
+      "songid": "63d65a13",
+      "count": 24
+    },
+    {
+      "name": "U Mean I'm Not",
+      "songid": "5bd317a0",
+      "count": 23
+    },
+    {
+      "name": "Counting",
+      "songid": "3bd6f848",
+      "count": 22
+    },
+    {
+      "name": "Ball Tongue / Need To / Divine",
+      "songid": "6be346ba",
+      "count": 21
+    },
+    {
+      "name": "Children of the Korn / Wicked",
+      "songid": "63d442fb",
+      "count": 21
+    },
+    {
+      "name": "Let the Dark Do the Rest",
+      "songid": "53e5f7d9",
+      "count": 21
+    },
+    {
+      "name": "Lost in the Grandeur",
+      "songid": "53e5f7f5",
+      "count": 21
+    },
+    {
+      "name": "Idiosyncrasy",
+      "songid": "63e346eb",
+      "count": 20
+    },
+    {
+      "name": "Let's Do This Now",
+      "songid": "13d61131",
+      "count": 19
+    },
+    {
+      "name": "Forgotten",
+      "songid": "63e52e6f",
+      "count": 18
+    },
+    {
+      "name": "A Different World",
+      "songid": "33ca2461",
+      "count": 16
+    },
+    {
+      "name": "Engine No. 9",
+      "songid": "73d6e29d",
+      "count": 16
+    },
+    {
+      "name": "Hey Daddy",
+      "songid": "63d442f3",
+      "count": 16
+    },
+    {
+      "name": "Sean Olson",
+      "songid": "73d76ef9",
+      "count": 15
+    },
+    {
+      "name": "Make Believe",
+      "songid": "bd60552",
+      "count": 14
+    },
+    {
+      "name": "Proud",
+      "songid": "4bdfb346",
+      "count": 14
+    },
+    {
+      "name": "Alive",
+      "songid": "7bd4d6b4",
+      "count": 13
+    },
+    {
+      "name": "Beg for Me",
+      "songid": "3c4ad77",
+      "count": 11
+    },
+    {
+      "name": "Drum & Bass Battle",
+      "songid": "3be380a8",
+      "count": 11
+    },
+    {
+      "name": "Embrace",
+      "songid": "3bd700c8",
+      "count": 11
+    },
+    {
+      "name": "Haze",
+      "songid": "4bd6c302",
+      "count": 8
+    },
+    {
+      "name": "One More Time",
+      "songid": "6bd76ed2",
+      "count": 8
+    },
+    {
+      "name": "Molested",
+      "songid": "63d4d6ab",
+      "count": 5
+    },
+    {
+      "name": "Justin",
+      "songid": "43d61f73",
+      "count": 4
+    },
+    {
+      "name": "Shoots and Ladders / Justin / Predictable / Ball Tongue / Divine / Proud",
+      "songid": "4be6ef1e",
+      "count": 3
+    },
+    {
+      "name": "This Broken Soul",
+      "songid": "73d4d6b5",
+      "count": 3
+    },
+    {
+      "name": "Blame",
+      "songid": "23d700cf",
+      "count": 2
+    },
+    {
+      "name": "Jingle Balls",
+      "songid": "33df4425",
+      "count": 2
+    },
+    {
+      "name": "The Past",
+      "songid": "5bd2df98",
+      "count": 2
+    },
+    {
+      "name": "Uber-Time",
+      "songid": "6bd2de0a",
+      "count": 2
+    },
+    {
+      "name": "Am I Going Crazy",
+      "songid": "7bd442fc",
+      "count": 1
+    },
+    {
+      "name": "Are You Ready to Live?",
+      "songid": "63d2de0b",
+      "count": 1
+    },
+    {
+      "name": "Breathe (Reprise)",
+      "songid": "3d6890f",
+      "count": 1
+    },
+    {
+      "name": "Christmas Song",
+      "songid": "13d00d01",
+      "count": 1
+    },
+    {
+      "name": "Creep",
+      "songid": "53d6fb19",
+      "count": 1
+    },
+    {
+      "name": "Dead",
+      "songid": "33d7e421",
+      "count": 1
+    },
+    {
+      "name": "Finally Free",
+      "songid": "13fc5d25",
+      "count": 1
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 1
+    },
+    {
+      "name": "Here Come the Bastards",
+      "songid": "13d7c92d",
+      "count": 1
+    },
+    {
+      "name": "Hey Man Nice Shot",
+      "songid": "5bd63fb4",
+      "count": 1
+    },
+    {
+      "name": "Hopeless and Beaten",
+      "songid": "5be5f7ec",
+      "count": 1
+    },
+    {
+      "name": "Illuminati",
+      "songid": "1bdfd9d0",
+      "count": 1
+    },
+    {
+      "name": "Instrumental Jam",
+      "songid": "2bd0bc12",
+      "count": 1
+    },
+    {
+      "name": "K@#\u00f8%!",
+      "songid": "43c4a7fb",
+      "count": 1
+    },
+    {
+      "name": "Layla",
+      "songid": "53d317b5",
+      "count": 1
+    },
+    {
+      "name": "Let's Go",
+      "songid": "4bdfb33a",
+      "count": 1
+    },
+    {
+      "name": "Make Me Bad / In Between Days",
+      "songid": "bd191b6",
+      "count": 1
+    },
+    {
+      "name": "Move On",
+      "songid": "53d2df99",
+      "count": 1
+    },
+    {
+      "name": "No Way",
+      "songid": "6bd442f2",
+      "count": 1
+    },
+    {
+      "name": "One",
+      "songid": "7bd66e08",
+      "count": 1
+    },
+    {
+      "name": "Reward the Scars",
+      "songid": "1b989980",
+      "count": 1
+    },
+    {
+      "name": "Rock You Like a Hurricane",
+      "songid": "bd65182",
+      "count": 1
+    },
+    {
+      "name": "Roots Bloody Roots",
+      "songid": "53d6534d",
+      "count": 1
+    },
+    {
+      "name": "Sabotage",
+      "songid": "1bd64d00",
+      "count": 1
+    },
+    {
+      "name": "Shoots and Ladders / Justin / Ball Tongue / Divine / Proud",
+      "songid": "43e78757",
+      "count": 1
+    },
+    {
+      "name": "Shout at the Devil",
+      "songid": "63d6460b",
+      "count": 1
+    },
+    {
+      "name": "System",
+      "songid": "3bd1ece8",
+      "count": 1
+    },
+    {
+      "name": "Take Me",
+      "songid": "3bca68a0",
+      "count": 1
+    },
+    {
+      "name": "Talk Dirty to Me",
+      "songid": "6bd7ae36",
+      "count": 1
+    },
+    {
+      "name": "Wake Up",
+      "songid": "73d442fd",
+      "count": 1
+    },
+    {
+      "name": "Wake Up Hate",
+      "songid": "6bd10e1a",
+      "count": 1
+    },
+    {
+      "name": "We're Not Gonna Take It",
+      "songid": "6bd7823e",
+      "count": 1
+    },
+    {
+      "name": "Wish You Could Be Me",
+      "songid": "73d442f1",
+      "count": 1
+    }
+  ]
+}

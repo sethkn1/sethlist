@@ -1,0 +1,539 @@
+{
+  "artist": "Disturbed",
+  "slug": "disturbed",
+  "stats_id": "1bd69910",
+  "mbid": "4bb4e4e4-5f66-4509-98af-62dbb90c45c5",
+  "fetched_at": "2026-04-30T15:35:26.373470Z",
+  "songs": [
+    {
+      "name": "Down With the Sickness",
+      "songid": "63d6eaf3",
+      "count": 954
+    },
+    {
+      "name": "Stupify",
+      "songid": "33d7b079",
+      "count": 947
+    },
+    {
+      "name": "The Game",
+      "songid": "bd7a17a",
+      "count": 914
+    },
+    {
+      "name": "Prayer",
+      "songid": "13d65d35",
+      "count": 781
+    },
+    {
+      "name": "Inside the Fire",
+      "songid": "13d6257d",
+      "count": 684
+    },
+    {
+      "name": "Indestructible",
+      "songid": "6bd62a56",
+      "count": 677
+    },
+    {
+      "name": "Voices",
+      "songid": "3bd78404",
+      "count": 635
+    },
+    {
+      "name": "Ten Thousand Fists",
+      "songid": "33d7a819",
+      "count": 617
+    },
+    {
+      "name": "Liberate",
+      "songid": "3bd61068",
+      "count": 583
+    },
+    {
+      "name": "Stricken",
+      "songid": "1bd7b10c",
+      "count": 579
+    },
+    {
+      "name": "Land of Confusion",
+      "songid": "1bd61508",
+      "count": 567
+    },
+    {
+      "name": "The Sound of Silence",
+      "songid": "63d79ebf",
+      "count": 399
+    },
+    {
+      "name": "The Light",
+      "songid": "43c16b63",
+      "count": 396
+    },
+    {
+      "name": "The Vengeful One",
+      "songid": "23c16887",
+      "count": 296
+    },
+    {
+      "name": "Fear",
+      "songid": "5bd6dba8",
+      "count": 249
+    },
+    {
+      "name": "The Animal",
+      "songid": "1bd375a4",
+      "count": 224
+    },
+    {
+      "name": "Just Stop",
+      "songid": "3bd61ca0",
+      "count": 216
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "33d6e415",
+      "count": 193
+    },
+    {
+      "name": "Remember",
+      "songid": "1bd655d4",
+      "count": 193
+    },
+    {
+      "name": "Another Way to Die",
+      "songid": "3d26d9f",
+      "count": 171
+    },
+    {
+      "name": "A Reason to Fight",
+      "songid": "6bf0feda",
+      "count": 168
+    },
+    {
+      "name": "Are You Ready",
+      "songid": "63f0fedb",
+      "count": 166
+    },
+    {
+      "name": "Droppin' Plates",
+      "songid": "3bd6e458",
+      "count": 156
+    },
+    {
+      "name": "Shout",
+      "songid": "63d6461f",
+      "count": 150
+    },
+    {
+      "name": "Asylum",
+      "songid": "1bd26d08",
+      "count": 142
+    },
+    {
+      "name": "Remnants",
+      "songid": "6bd26e66",
+      "count": 138
+    },
+    {
+      "name": "Meaning of Life",
+      "songid": "1bd60178",
+      "count": 136
+    },
+    {
+      "name": "Violence Fetish",
+      "songid": "13d78599",
+      "count": 136
+    },
+    {
+      "name": "Conflict",
+      "songid": "63d6fe83",
+      "count": 133
+    },
+    {
+      "name": "Numb",
+      "songid": "bd66d72",
+      "count": 129
+    },
+    {
+      "name": "Bad Man",
+      "songid": "13ef79c5",
+      "count": 128
+    },
+    {
+      "name": "Deify",
+      "songid": "3bd6f0bc",
+      "count": 126
+    },
+    {
+      "name": "Perfect Insanity",
+      "songid": "6bd66626",
+      "count": 102
+    },
+    {
+      "name": "Hey You",
+      "songid": "53e3c341",
+      "count": 95
+    },
+    {
+      "name": "Hold On to Memories",
+      "songid": "1bf1c5ac",
+      "count": 88
+    },
+    {
+      "name": "Want",
+      "songid": "3d7816f",
+      "count": 88
+    },
+    {
+      "name": "Guitar Solo",
+      "songid": "5bd0c34c",
+      "count": 82
+    },
+    {
+      "name": "No More",
+      "songid": "5bf1c3e4",
+      "count": 79
+    },
+    {
+      "name": "Bass Solo",
+      "songid": "1bf125f4",
+      "count": 78
+    },
+    {
+      "name": "Unstoppable",
+      "songid": "63e026c7",
+      "count": 78
+    },
+    {
+      "name": "Haunted",
+      "songid": "53d6c379",
+      "count": 70
+    },
+    {
+      "name": "Bound",
+      "songid": "63d68e6b",
+      "count": 65
+    },
+    {
+      "name": "The Night",
+      "songid": "1bd79d1c",
+      "count": 65
+    },
+    {
+      "name": "Warrior",
+      "songid": "bd0954e",
+      "count": 64
+    },
+    {
+      "name": "Guarded",
+      "songid": "23d6c48f",
+      "count": 63
+    },
+    {
+      "name": "Intoxication",
+      "songid": "13d62585",
+      "count": 62
+    },
+    {
+      "name": "Believe",
+      "songid": "5bd69718",
+      "count": 58
+    },
+    {
+      "name": "Closer / I Still Haven't Found What I'm Looking For / Baba O'Riley / Killing in the Name",
+      "songid": "3cc2d67",
+      "count": 58
+    },
+    {
+      "name": "Divide",
+      "songid": "73d6ee5d",
+      "count": 55
+    },
+    {
+      "name": "Fear / Meaning of Life / Numb / Voices",
+      "songid": "3bd26cfc",
+      "count": 55
+    },
+    {
+      "name": "I Will Not Break",
+      "songid": "3b936824",
+      "count": 50
+    },
+    {
+      "name": "Darkness",
+      "songid": "43dfeb53",
+      "count": 49
+    },
+    {
+      "name": "Immortalized",
+      "songid": "43c16b6b",
+      "count": 48
+    },
+    {
+      "name": "The Eye of the Storm",
+      "songid": "4bc16b6a",
+      "count": 47
+    },
+    {
+      "name": "The Infection",
+      "songid": "63d09ab7",
+      "count": 43
+    },
+    {
+      "name": "Hell / Shout / Criminal / Deify",
+      "songid": "5bee87e0",
+      "count": 42
+    },
+    {
+      "name": "Don't Tell Me",
+      "songid": "23e8c453",
+      "count": 36
+    },
+    {
+      "name": "Overburdened",
+      "songid": "63d66a27",
+      "count": 33
+    },
+    {
+      "name": "Rise",
+      "songid": "73d65615",
+      "count": 30
+    },
+    {
+      "name": "Watch You Burn",
+      "songid": "53f1c3e5",
+      "count": 29
+    },
+    {
+      "name": "Sons of Plunder",
+      "songid": "13d7b9e5",
+      "count": 26
+    },
+    {
+      "name": "Open Your Eyes",
+      "songid": "13cc5595",
+      "count": 25
+    },
+    {
+      "name": "Mistress",
+      "songid": "1bd67d34",
+      "count": 24
+    },
+    {
+      "name": "Devour",
+      "songid": "3d6ed43",
+      "count": 19
+    },
+    {
+      "name": "Walk",
+      "songid": "63d7866f",
+      "count": 19
+    },
+    {
+      "name": "Guarded / Violence Fetish / Criminal / Devour / Meaning of Life",
+      "songid": "4bfe8ff2",
+      "count": 17
+    },
+    {
+      "name": "Pain Redefined / Droppin' Plates / Devour / Intoxication / Meaning of Life",
+      "songid": "43d5b713",
+      "count": 16
+    },
+    {
+      "name": "Torn",
+      "songid": "3bd790b8",
+      "count": 15
+    },
+    {
+      "name": "Decadence",
+      "songid": "23d6f043",
+      "count": 14
+    },
+    {
+      "name": "Criminal",
+      "songid": "53d6fbf5",
+      "count": 12
+    },
+    {
+      "name": "God of the Mind",
+      "songid": "5bd19be8",
+      "count": 10
+    },
+    {
+      "name": "Loading the Weapon",
+      "songid": "7bd5fed4",
+      "count": 10
+    },
+    {
+      "name": "A Welcome Burden",
+      "songid": "1bd179c0",
+      "count": 9
+    },
+    {
+      "name": "Hell",
+      "songid": "2bd4ccae",
+      "count": 9
+    },
+    {
+      "name": "Black",
+      "songid": "33d69011",
+      "count": 8
+    },
+    {
+      "name": "Forgiven",
+      "songid": "1bd5fdb0",
+      "count": 7
+    },
+    {
+      "name": "I'm Alive",
+      "songid": "4bd77372",
+      "count": 6
+    },
+    {
+      "name": "Killing in the Name",
+      "songid": "bd6191e",
+      "count": 6
+    },
+    {
+      "name": "Never Again",
+      "songid": "43dedf9b",
+      "count": 6
+    },
+    {
+      "name": "Baba O'Riley",
+      "songid": "13d699d9",
+      "count": 5
+    },
+    {
+      "name": "Awaken",
+      "songid": "bd08d12",
+      "count": 4
+    },
+    {
+      "name": "Breathe",
+      "songid": "3d5d1d3",
+      "count": 4
+    },
+    {
+      "name": "Crucified",
+      "songid": "5bdedfa4",
+      "count": 4
+    },
+    {
+      "name": "I Still Haven't Found What I'm Looking For",
+      "songid": "2bd63086",
+      "count": 4
+    },
+    {
+      "name": "Who Taught You How to Hate",
+      "songid": "3cc558b",
+      "count": 4
+    },
+    {
+      "name": "Blind",
+      "songid": "73d69211",
+      "count": 3
+    },
+    {
+      "name": "Dehumanized",
+      "songid": "3bd6f0b8",
+      "count": 3
+    },
+    {
+      "name": "Fade to Black",
+      "songid": "bd6d9da",
+      "count": 3
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 3
+    },
+    {
+      "name": "This Moment",
+      "songid": "2bdf3c5e",
+      "count": 3
+    },
+    {
+      "name": "Hatikva",
+      "songid": "53fbe711",
+      "count": 2
+    },
+    {
+      "name": "Midlife Crisis",
+      "songid": "43d60307",
+      "count": 2
+    },
+    {
+      "name": "Shout at the Devil",
+      "songid": "63d6460b",
+      "count": 2
+    },
+    {
+      "name": "Chicago",
+      "songid": "2bf18cde",
+      "count": 1
+    },
+    {
+      "name": "Cold Gin",
+      "songid": "23d6fcb3",
+      "count": 1
+    },
+    {
+      "name": "Deify / Shout / Criminal",
+      "songid": "53ee87e1",
+      "count": 1
+    },
+    {
+      "name": "Enough",
+      "songid": "3d169d3",
+      "count": 1
+    },
+    {
+      "name": "Glass Shatters",
+      "songid": "bd6c986",
+      "count": 1
+    },
+    {
+      "name": "Intro",
+      "songid": "2bd62456",
+      "count": 1
+    },
+    {
+      "name": "Monster",
+      "songid": "33df3c5d",
+      "count": 1
+    },
+    {
+      "name": "Pain",
+      "songid": "3d179c7",
+      "count": 1
+    },
+    {
+      "name": "Paranoid",
+      "songid": "3bd66444",
+      "count": 1
+    },
+    {
+      "name": "Stinkfist",
+      "songid": "5bd7b7dc",
+      "count": 1
+    },
+    {
+      "name": "Sway",
+      "songid": "1bd40dd8",
+      "count": 1
+    },
+    {
+      "name": "What Are You Waiting For",
+      "songid": "53c16b61",
+      "count": 1
+    },
+    {
+      "name": "Working Man",
+      "songid": "23d7f4b7",
+      "count": 1
+    }
+  ]
+}

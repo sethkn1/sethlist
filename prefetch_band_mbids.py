@@ -61,7 +61,12 @@ import urllib.request
 
 
 API_BASE = "https://api.setlist.fm/rest/1.0"
-BUCKET_LIST_THRESHOLD = 2  # Bands seen this many times qualify for cross-band views
+# Threshold for inclusion in the cross-band "bucket list" view. Set to 1
+# so that every headliner you've ever seen contributes to the unheard-songs
+# list — the bucket list shows the full catalog of unheard songs across
+# all of those bands. The renderBucketList() UI in app.js exposes a
+# "≥ 2 shows" filter chip for the narrower "bands I see often" view.
+BUCKET_LIST_THRESHOLD = 1
 
 
 def load_api_key():

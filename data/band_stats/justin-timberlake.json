@@ -1,0 +1,729 @@
+{
+  "artist": "Justin Timberlake",
+  "slug": "justin-timberlake",
+  "stats_id": "13d6e9b9",
+  "mbid": "596ffa74-3d08-44ef-b113-765d43d12738",
+  "fetched_at": "2026-04-30T15:31:05.545120Z",
+  "songs": [
+    {
+      "name": "Cry Me a River",
+      "songid": "6bd06e3e",
+      "count": 640
+    },
+    {
+      "name": "Se\u00f1orita",
+      "songid": "2bd8a4ee",
+      "count": 631
+    },
+    {
+      "name": "Rock Your Body",
+      "songid": "1bd65180",
+      "count": 630
+    },
+    {
+      "name": "Like I Love You",
+      "songid": "43d613bb",
+      "count": 604
+    },
+    {
+      "name": "SexyBack",
+      "songid": "bd05516",
+      "count": 529
+    },
+    {
+      "name": "What Goes Around... Comes Around",
+      "songid": "bd7fd86",
+      "count": 515
+    },
+    {
+      "name": "Summer Love",
+      "songid": "53d7b351",
+      "count": 508
+    },
+    {
+      "name": "Until the End of Time",
+      "songid": "3bdb6c14",
+      "count": 503
+    },
+    {
+      "name": "My Love",
+      "songid": "4bd67b7e",
+      "count": 499
+    },
+    {
+      "name": "LoveStoned",
+      "songid": "2bd608fe",
+      "count": 476
+    },
+    {
+      "name": "Mirrors",
+      "songid": "1bdb6d14",
+      "count": 400
+    },
+    {
+      "name": "Suit & Tie",
+      "songid": "7bdb06c8",
+      "count": 397
+    },
+    {
+      "name": "FutureSex/LoveSound",
+      "songid": "63d01a93",
+      "count": 364
+    },
+    {
+      "name": "CAN'T STOP THE FEELING!",
+      "songid": "3bf5507c",
+      "count": 251
+    },
+    {
+      "name": "Drink You Away",
+      "songid": "53c6171d",
+      "count": 246
+    },
+    {
+      "name": "Pusher Love Girl",
+      "songid": "6bdb06b6",
+      "count": 242
+    },
+    {
+      "name": "Let the Groove Get In",
+      "songid": "23d9e04b",
+      "count": 241
+    },
+    {
+      "name": "Take It from Here",
+      "songid": "3bd8a4ec",
+      "count": 236
+    },
+    {
+      "name": "Last Night",
+      "songid": "23d6145f",
+      "count": 233
+    },
+    {
+      "name": "Gone",
+      "songid": "33d4d899",
+      "count": 231
+    },
+    {
+      "name": "Say Something",
+      "songid": "bf42586",
+      "count": 213
+    },
+    {
+      "name": "Holy Grail",
+      "songid": "bd9d5d2",
+      "count": 165
+    },
+    {
+      "name": "TKO",
+      "songid": "2bc6a00a",
+      "count": 159
+    },
+    {
+      "name": "Sexy Ladies",
+      "songid": "bd6456a",
+      "count": 144
+    },
+    {
+      "name": "Take Back the Night",
+      "songid": "bd9d5c2",
+      "count": 142
+    },
+    {
+      "name": "Not a Bad Thing",
+      "songid": "5bc6171c",
+      "count": 136
+    },
+    {
+      "name": "Don't Hold the Wall",
+      "songid": "63c60ae3",
+      "count": 135
+    },
+    {
+      "name": "Gimme What I Don't Know (I Want)",
+      "songid": "3c60593",
+      "count": 133
+    },
+    {
+      "name": "Only When I Walk Away",
+      "songid": "53c6a3e5",
+      "count": 130
+    },
+    {
+      "name": "Heartbreak Hotel",
+      "songid": "7bd6c2d0",
+      "count": 126
+    },
+    {
+      "name": "Chop Me Up",
+      "songid": "63d68257",
+      "count": 125
+    },
+    {
+      "name": "Human Nature",
+      "songid": "3d6352f",
+      "count": 125
+    },
+    {
+      "name": "Selfish",
+      "songid": "3be8c4f8",
+      "count": 124
+    },
+    {
+      "name": "Tunnel Vision",
+      "songid": "33d9e055",
+      "count": 124
+    },
+    {
+      "name": "(Another Song) All Over Again",
+      "songid": "13d44541",
+      "count": 122
+    },
+    {
+      "name": "Damn Girl",
+      "songid": "23d6f43b",
+      "count": 122
+    },
+    {
+      "name": "Losing My Way",
+      "songid": "5bd60f88",
+      "count": 122
+    },
+    {
+      "name": "Murder",
+      "songid": "4bc61712",
+      "count": 121
+    },
+    {
+      "name": "Poison",
+      "songid": "1bd00540",
+      "count": 121
+    },
+    {
+      "name": "Jungle Boogie",
+      "songid": "53d31755",
+      "count": 120
+    },
+    {
+      "name": "No Angels",
+      "songid": "2be8c016",
+      "count": 120
+    },
+    {
+      "name": "Filthy",
+      "songid": "13f42581",
+      "count": 118
+    },
+    {
+      "name": "Supplies",
+      "songid": "23f4247b",
+      "count": 117
+    },
+    {
+      "name": "Higher Higher",
+      "songid": "23f5f477",
+      "count": 116
+    },
+    {
+      "name": "Man of the Woods",
+      "songid": "1bf42584",
+      "count": 116
+    },
+    {
+      "name": "Midnight Summer Jam",
+      "songid": "23f42473",
+      "count": 116
+    },
+    {
+      "name": "Play",
+      "songid": "396e563",
+      "count": 116
+    },
+    {
+      "name": "Montana",
+      "songid": "33f4247d",
+      "count": 115
+    },
+    {
+      "name": "Morning Light",
+      "songid": "2bf4247a",
+      "count": 115
+    },
+    {
+      "name": "Girlfriend",
+      "songid": "23d4d067",
+      "count": 110
+    },
+    {
+      "name": "Let's Take a Ride",
+      "songid": "3bd8a4e8",
+      "count": 108
+    },
+    {
+      "name": "Nothin' Else",
+      "songid": "7bd4ce44",
+      "count": 108
+    },
+    {
+      "name": "Right for Me",
+      "songid": "23d8a4ef",
+      "count": 108
+    },
+    {
+      "name": "Still on My Brain",
+      "songid": "33d8a4ed",
+      "count": 108
+    },
+    {
+      "name": "Sanctified",
+      "songid": "4be82716",
+      "count": 98
+    },
+    {
+      "name": "Drown",
+      "songid": "b96e56a",
+      "count": 94
+    },
+    {
+      "name": "F**kin' Up the Disco",
+      "songid": "2b96e46a",
+      "count": 94
+    },
+    {
+      "name": "Flame",
+      "songid": "396e567",
+      "count": 94
+    },
+    {
+      "name": "Imagination",
+      "songid": "396e56b",
+      "count": 94
+    },
+    {
+      "name": "Infinity Sex",
+      "songid": "396e573",
+      "count": 94
+    },
+    {
+      "name": "My Favorite Drug",
+      "songid": "43e8175f",
+      "count": 94
+    },
+    {
+      "name": "Technicolor",
+      "songid": "1b96e574",
+      "count": 94
+    },
+    {
+      "name": "Come Together",
+      "songid": "5bd6ff90",
+      "count": 75
+    },
+    {
+      "name": "Dreams",
+      "songid": "13d6e509",
+      "count": 75
+    },
+    {
+      "name": "Ex-Factor",
+      "songid": "13d7c1e1",
+      "count": 75
+    },
+    {
+      "name": "Thank God I'm a Country Boy",
+      "songid": "43d58b8f",
+      "count": 75
+    },
+    {
+      "name": "That Girl",
+      "songid": "63db06cb",
+      "count": 57
+    },
+    {
+      "name": "Flannel",
+      "songid": "23f4247f",
+      "count": 46
+    },
+    {
+      "name": "Cabaret",
+      "songid": "43c61713",
+      "count": 45
+    },
+    {
+      "name": "LoveStoned / I Think She Knows",
+      "songid": "43c4cb9b",
+      "count": 36
+    },
+    {
+      "name": "True Blood",
+      "songid": "4bc6a3e6",
+      "count": 33
+    },
+    {
+      "name": "Strawberry Bubblegum",
+      "songid": "3bd9e054",
+      "count": 31
+    },
+    {
+      "name": "Let Me Talk to You / My Love",
+      "songid": "23961cbb",
+      "count": 27
+    },
+    {
+      "name": "Shake Your Body (Down to the Ground)",
+      "songid": "bc6819e",
+      "count": 22
+    },
+    {
+      "name": "Ayo Technology / Chop Me Up / Give It to Me / 4 Minutes",
+      "songid": "4390e393",
+      "count": 15
+    },
+    {
+      "name": "Like I Love You / She Wants to Move",
+      "songid": "7b90ca78",
+      "count": 11
+    },
+    {
+      "name": "Need You Tonight",
+      "songid": "1bd67504",
+      "count": 9
+    },
+    {
+      "name": "California Love",
+      "songid": "2bd3708a",
+      "count": 8
+    },
+    {
+      "name": "Theme From New York, New York",
+      "songid": "63c0b60f",
+      "count": 8
+    },
+    {
+      "name": "Dick in a Box",
+      "songid": "3bd8a4d4",
+      "count": 7
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 7
+    },
+    {
+      "name": "Where Is the Love?",
+      "songid": "63d7fedf",
+      "count": 6
+    },
+    {
+      "name": "Ayo Technology / Chop Me Up / Give It to Me / 4 Minutes / Let the Groove Get In",
+      "songid": "4b90f79e",
+      "count": 4
+    },
+    {
+      "name": "Tennessee Whiskey",
+      "songid": "63d72273",
+      "count": 4
+    },
+    {
+      "name": "Ain't No Sunshine",
+      "songid": "bd6a5ca",
+      "count": 3
+    },
+    {
+      "name": "Cruisin'",
+      "songid": "23d1c013",
+      "count": 3
+    },
+    {
+      "name": "I Would Die 4 U",
+      "songid": "63d6320f",
+      "count": 3
+    },
+    {
+      "name": "4 Minutes",
+      "songid": "63d6b247",
+      "count": 2
+    },
+    {
+      "name": "A Change Is Gonna Come",
+      "songid": "1bd44568",
+      "count": 2
+    },
+    {
+      "name": "Ayo Technology",
+      "songid": "1bd69968",
+      "count": 2
+    },
+    {
+      "name": "Beatbox",
+      "songid": "6bd4ce3a",
+      "count": 2
+    },
+    {
+      "name": "Bustin' Loose",
+      "songid": "33dd2c35",
+      "count": 2
+    },
+    {
+      "name": "Bye Bye Bye",
+      "songid": "13d7c1c1",
+      "count": 2
+    },
+    {
+      "name": "Friends in Low Places",
+      "songid": "43e64b1b",
+      "count": 2
+    },
+    {
+      "name": "Give It to Me",
+      "songid": "1bd05528",
+      "count": 2
+    },
+    {
+      "name": "Knocks Me Off My Feet",
+      "songid": "3bd618a4",
+      "count": 2
+    },
+    {
+      "name": "Love and Happiness",
+      "songid": "23d440e7",
+      "count": 2
+    },
+    {
+      "name": "My Cherie Amour",
+      "songid": "2bd67856",
+      "count": 2
+    },
+    {
+      "name": "Promiscuous",
+      "songid": "23d65ca3",
+      "count": 2
+    },
+    {
+      "name": "She Wants to Move",
+      "songid": "43d4bf73",
+      "count": 2
+    },
+    {
+      "name": "Singin' in the Rain",
+      "songid": "1bdeb144",
+      "count": 2
+    },
+    {
+      "name": "Smile",
+      "songid": "2bd9508a",
+      "count": 2
+    },
+    {
+      "name": "Sometimes I Cry",
+      "songid": "73c0c211",
+      "count": 2
+    },
+    {
+      "name": "The Roof Is on Fire",
+      "songid": "1bc7d5b4",
+      "count": 2
+    },
+    {
+      "name": "The Way You Look Tonight",
+      "songid": "1bc0b108",
+      "count": 2
+    },
+    {
+      "name": "(And She Said) Take Me Now",
+      "songid": "bf4d51e",
+      "count": 1
+    },
+    {
+      "name": "Ain't Nothing Like the Real Thing",
+      "songid": "b9ce17a",
+      "count": 1
+    },
+    {
+      "name": "Amnesia",
+      "songid": "73c7e675",
+      "count": 1
+    },
+    {
+      "name": "Apache (Jump On It) / White Lines (Don't Do It) / Basketball / Fat Boys / It's Tricky / No Sleep Till Brooklyn / Going Back to Cali / Children's Story / Me So Horny / Scenario / Hand on the Pump / Rump Shaker / Shoop / Gin and Juice / Woo-Hah!! Got You All in Check / Hypnotize / Get Ur Freak On / Izzo (H.O.V.A.) / Ride Wit Me / P.I.M.P. / Ridin' / Black and Yellow / All Gold Everything / Thrift Shop / Lose Yourself",
+      "songid": "3c5cd2f",
+      "count": 1
+    },
+    {
+      "name": "Careless Whisper",
+      "songid": "63d68647",
+      "count": 1
+    },
+    {
+      "name": "Carry Out",
+      "songid": "2bd5b07a",
+      "count": 1
+    },
+    {
+      "name": "Cry Me a River / Rock Your Body / Like I Love You",
+      "songid": "73f60e59",
+      "count": 1
+    },
+    {
+      "name": "Fire Away",
+      "songid": "7bc0c21c",
+      "count": 1
+    },
+    {
+      "name": "Frontin'",
+      "songid": "73d6d25d",
+      "count": 1
+    },
+    {
+      "name": "Got to Give It Up",
+      "songid": "23dc608f",
+      "count": 1
+    },
+    {
+      "name": "Hotline Bling",
+      "songid": "23c114c7",
+      "count": 1
+    },
+    {
+      "name": "I'm Bad / Beats to the Rhyme / Wait for the Beep / Fight for Your Right / Wild Thing / Yo Home to Bel-Air / What a Man / I Got a Man / Big Poppa / Dre Day / Regulate / Straight Outta Compton / Here Comes the Hotstepper / So Fresh, So Clean / Pass the Courvoisier / Jump / I Wish / 99 Problems / Move Bitch / Started From the Bottom / Swimming Pools (Drank) / Good Life / Walk This Way",
+      "songid": "3bea3c7c",
+      "count": 1
+    },
+    {
+      "name": "I'm Lovin' It",
+      "songid": "3bc96ce4",
+      "count": 1
+    },
+    {
+      "name": "ICU",
+      "songid": "2befac4e",
+      "count": 1
+    },
+    {
+      "name": "It's Gonna Be Me",
+      "songid": "73d4de59",
+      "count": 1
+    },
+    {
+      "name": "Jolene",
+      "songid": "3d61d43",
+      "count": 1
+    },
+    {
+      "name": "King of Rock / Mama Said Knock You Out / Parents Just Don't Understand / Me Myself and I / Supersonic / Baby Got Back / Bust a Move / Jump Around / It Was A Good Day / Gangsta's Paradise / Killing Me Softly / Sabotage / I Just Wanna Love U (Give It 2 Me) / Ms. Jackson / Drop It Like It's Hot / Stronger / Super Bass / Hip Hop Hooray",
+      "songid": "1bc5cd28",
+      "count": 1
+    },
+    {
+      "name": "Let Me Clear My Throat",
+      "songid": "7bdee230",
+      "count": 1
+    },
+    {
+      "name": "Let Me Talk to You",
+      "songid": "6bf64efa",
+      "count": 1
+    },
+    {
+      "name": "Let's Stay Together",
+      "songid": "1bd611ec",
+      "count": 1
+    },
+    {
+      "name": "Live Your Life",
+      "songid": "13d60d09",
+      "count": 1
+    },
+    {
+      "name": "Love & War",
+      "songid": "139729b9",
+      "count": 1
+    },
+    {
+      "name": "Lovely Day",
+      "songid": "63d32283",
+      "count": 1
+    },
+    {
+      "name": "Niggas in Paris",
+      "songid": "6bf73a0e",
+      "count": 1
+    },
+    {
+      "name": "Pair of Wings",
+      "songid": "33c790cd",
+      "count": 1
+    },
+    {
+      "name": "Paradise",
+      "songid": "23e9d4bb",
+      "count": 1
+    },
+    {
+      "name": "Rapper's Delight / Peter Piper / Paul Revere / Award Tour / The Humpty Dance / Nuthin' but a 'G' Thang / California Love / Juicy / The Seed (2.0) / My Name Is / Work It / Crank That (Soulja Boy) / Live Your Life / Gold Digger / Empire State of Mind",
+      "songid": "bc5cd2e",
+      "count": 1
+    },
+    {
+      "name": "Rapture",
+      "songid": "53d65b79",
+      "count": 1
+    },
+    {
+      "name": "Rocky Top",
+      "songid": "63c9164b",
+      "count": 1
+    },
+    {
+      "name": "Selfish / No Angels",
+      "songid": "3e97157",
+      "count": 1
+    },
+    {
+      "name": "Selfish / Se\u00f1orita / SexyBack / My Love / Rock Your Body / CAN'T STOP THE FEELING!",
+      "songid": "73e82ee5",
+      "count": 1
+    },
+    {
+      "name": "Sherry",
+      "songid": "5bdadff8",
+      "count": 1
+    },
+    {
+      "name": "Spaceship Coupe",
+      "songid": "4be82766",
+      "count": 1
+    },
+    {
+      "name": "Stronger",
+      "songid": "1bd7b1d4",
+      "count": 1
+    },
+    {
+      "name": "The Breaks / The Message / Express Yourself / Bring the Noise / It Takes Two / Push It / Ice Ice Baby / The Choice Is Yours (Revisited) / Insane in the Brain / Let Me Clear My Throat / Party Up (Up in Here) / Hot in Herre / In da Club / Hey Ya! / A Milli / All I Do Is Win / Teach Me How to Dougie / B.M.F. (Blowin' Money Fast) / Just a Friend",
+      "songid": "1bc5cd30",
+      "count": 1
+    },
+    {
+      "name": "Time to get Slimed",
+      "songid": "5b96d7fc",
+      "count": 1
+    },
+    {
+      "name": "Tom Ford",
+      "songid": "bd9d5d6",
+      "count": 1
+    },
+    {
+      "name": "True Colors",
+      "songid": "13d78dc9",
+      "count": 1
+    },
+    {
+      "name": "Wonderful World",
+      "songid": "63d442cb",
+      "count": 1
+    }
+  ]
+}

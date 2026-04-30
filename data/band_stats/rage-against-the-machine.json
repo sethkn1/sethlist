@@ -1,0 +1,344 @@
+{
+  "artist": "Rage Against the Machine",
+  "slug": "rage-against-the-machine",
+  "stats_id": "bd68946",
+  "mbid": "3798b104-01cb-484c-a3b0-56adc6399b80",
+  "fetched_at": "2026-04-30T15:31:22.807638Z",
+  "songs": [
+    {
+      "name": "Killing in the Name",
+      "songid": "bd6191e",
+      "count": 390
+    },
+    {
+      "name": "Bullet in the Head",
+      "songid": "4bd68b06",
+      "count": 371
+    },
+    {
+      "name": "Freedom",
+      "songid": "5bd6d37c",
+      "count": 334
+    },
+    {
+      "name": "Bombtrack",
+      "songid": "23d68cab",
+      "count": 323
+    },
+    {
+      "name": "Know Your Enemy",
+      "songid": "23d61893",
+      "count": 304
+    },
+    {
+      "name": "People of the Sun",
+      "songid": "6bd66666",
+      "count": 298
+    },
+    {
+      "name": "Bulls on Parade",
+      "songid": "5bd68bd8",
+      "count": 253
+    },
+    {
+      "name": "Vietnow",
+      "songid": "13d785d5",
+      "count": 150
+    },
+    {
+      "name": "Testify",
+      "songid": "2bd7a8a6",
+      "count": 143
+    },
+    {
+      "name": "Fistful of Steel",
+      "songid": "bd0697a",
+      "count": 134
+    },
+    {
+      "name": "Guerrilla Radio",
+      "songid": "43d6c773",
+      "count": 134
+    },
+    {
+      "name": "Sleep Now in the Fire",
+      "songid": "7bd6425c",
+      "count": 130
+    },
+    {
+      "name": "The Ghost of Tom Joad",
+      "songid": "bd7a142",
+      "count": 114
+    },
+    {
+      "name": "Calm Like a Bomb",
+      "songid": "3bd68404",
+      "count": 112
+    },
+    {
+      "name": "Tire Me",
+      "songid": "73d796f1",
+      "count": 107
+    },
+    {
+      "name": "Wake Up",
+      "songid": "5bd787a4",
+      "count": 101
+    },
+    {
+      "name": "Take the Power Back",
+      "songid": "43d7af87",
+      "count": 92
+    },
+    {
+      "name": "Without a Face",
+      "songid": "13d7092d",
+      "count": 89
+    },
+    {
+      "name": "Down Rodeo",
+      "songid": "6bd6ea1a",
+      "count": 88
+    },
+    {
+      "name": "Township Rebellion",
+      "songid": "5bd79324",
+      "count": 88
+    },
+    {
+      "name": "War Within a Breath",
+      "songid": "bd78116",
+      "count": 88
+    },
+    {
+      "name": "Born of a Broken Man",
+      "songid": "43d68ff7",
+      "count": 82
+    },
+    {
+      "name": "Darkness of Greed",
+      "songid": "1bd5dde0",
+      "count": 66
+    },
+    {
+      "name": "Revolver",
+      "songid": "43d65767",
+      "count": 57
+    },
+    {
+      "name": "No Shelter",
+      "songid": "3bd67054",
+      "count": 53
+    },
+    {
+      "name": "Roll Right",
+      "songid": "1bd4a154",
+      "count": 49
+    },
+    {
+      "name": "Settle for Nothing",
+      "songid": "3bd4007c",
+      "count": 30
+    },
+    {
+      "name": "Hadda Be Playing on the Jukebox",
+      "songid": "13d5fd1d",
+      "count": 29
+    },
+    {
+      "name": "Snakecharmer",
+      "songid": "1bd7bdc8",
+      "count": 23
+    },
+    {
+      "name": "Kick Out the Jams",
+      "songid": "73d61edd",
+      "count": 20
+    },
+    {
+      "name": "Renegades of Funk",
+      "songid": "4bc06f8e",
+      "count": 20
+    },
+    {
+      "name": "Year of tha Boomerang",
+      "songid": "13d5fd21",
+      "count": 19
+    },
+    {
+      "name": "Ashes in the Fall",
+      "songid": "53d69f31",
+      "count": 17
+    },
+    {
+      "name": "Sound of da Police",
+      "songid": "bdeb52a",
+      "count": 15
+    },
+    {
+      "name": "Zapata's Blood",
+      "songid": "bd2350a",
+      "count": 14
+    },
+    {
+      "name": "Wind Below",
+      "songid": "73d7fa49",
+      "count": 12
+    },
+    {
+      "name": "Producer",
+      "songid": "1bd5fd20",
+      "count": 11
+    },
+    {
+      "name": "White Riot",
+      "songid": "3d7f9df",
+      "count": 8
+    },
+    {
+      "name": "Close Your Eyes (And Count to Fuck)",
+      "songid": "73c22a5d",
+      "count": 7
+    },
+    {
+      "name": "Fuck tha Police",
+      "songid": "7bd23ae0",
+      "count": 7
+    },
+    {
+      "name": "Clampdown",
+      "songid": "bd7e536",
+      "count": 5
+    },
+    {
+      "name": "Black Steel in the Hour of Chaos",
+      "songid": "43d6930b",
+      "count": 4
+    },
+    {
+      "name": "Clear the Lane",
+      "songid": "13d239fd",
+      "count": 3
+    },
+    {
+      "name": "How I Could Just Kill a Man",
+      "songid": "6bd63ad2",
+      "count": 3
+    },
+    {
+      "name": "Mic Check",
+      "songid": "4bd6033e",
+      "count": 3
+    },
+    {
+      "name": "We Take Their Shelter",
+      "songid": "33d23429",
+      "count": 3
+    },
+    {
+      "name": "Beautiful World",
+      "songid": "7bd75224",
+      "count": 2
+    },
+    {
+      "name": "I'm Housin'",
+      "songid": "13d62d89",
+      "count": 2
+    },
+    {
+      "name": "Maria",
+      "songid": "5bd75b48",
+      "count": 2
+    },
+    {
+      "name": "Microphone Fiend",
+      "songid": "4bd1ab0e",
+      "count": 2
+    },
+    {
+      "name": "Street Fighting Man",
+      "songid": "1bd7b138",
+      "count": 2
+    },
+    {
+      "name": "Wild International",
+      "songid": "43d593bb",
+      "count": 2
+    },
+    {
+      "name": "A to the K",
+      "songid": "6bd2b6b2",
+      "count": 1
+    },
+    {
+      "name": "America (My Country, 'Tis of Thee)",
+      "songid": "13c4e9dd",
+      "count": 1
+    },
+    {
+      "name": "Autologic",
+      "songid": "1bd239f8",
+      "count": 1
+    },
+    {
+      "name": "Born as Ghosts",
+      "songid": "5bd68f1c",
+      "count": 1
+    },
+    {
+      "name": "Canci\u00f3n del minero",
+      "songid": "23d3e4bb",
+      "count": 1
+    },
+    {
+      "name": "End of the Tunnel",
+      "songid": "1bd239e4",
+      "count": 1
+    },
+    {
+      "name": "Freestyle Jam",
+      "songid": "73f2fa05",
+      "count": 1
+    },
+    {
+      "name": "Hit the Deck",
+      "songid": "33c68c89",
+      "count": 1
+    },
+    {
+      "name": "House Gone Up in Flames",
+      "songid": "5bd7c3c4",
+      "count": 1
+    },
+    {
+      "name": "New Millennium Homes",
+      "songid": "53d23305",
+      "count": 1
+    },
+    {
+      "name": "School Yard",
+      "songid": "5bfac734",
+      "count": 1
+    },
+    {
+      "name": "The House of Rage",
+      "songid": "5bc28314",
+      "count": 1
+    },
+    {
+      "name": "This Land Is Your Land",
+      "songid": "13d795d5",
+      "count": 1
+    },
+    {
+      "name": "Union Song",
+      "songid": "5bd7c3c0",
+      "count": 1
+    },
+    {
+      "name": "Voice of the Voiceless",
+      "songid": "53d233d9",
+      "count": 1
+    }
+  ]
+}

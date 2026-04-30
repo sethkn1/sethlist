@@ -1,0 +1,919 @@
+{
+  "artist": "Candlebox",
+  "slug": "candlebox",
+  "stats_id": "33d694cd",
+  "mbid": "8e9516ba-f417-47dd-a8a5-8998b94553f8",
+  "fetched_at": "2026-04-30T15:32:00.905380Z",
+  "songs": [
+    {
+      "name": "Far Behind",
+      "songid": "5bd6db64",
+      "count": 700
+    },
+    {
+      "name": "You",
+      "songid": "13d7f161",
+      "count": 681
+    },
+    {
+      "name": "Change",
+      "songid": "23d6803f",
+      "count": 655
+    },
+    {
+      "name": "Cover Me",
+      "songid": "2bd6f81a",
+      "count": 639
+    },
+    {
+      "name": "Arrow",
+      "songid": "2bd69cbe",
+      "count": 562
+    },
+    {
+      "name": "Blossom",
+      "songid": "bd68d0e",
+      "count": 496
+    },
+    {
+      "name": "Don't You",
+      "songid": "4bd6eb6a",
+      "count": 387
+    },
+    {
+      "name": "Simple Lessons",
+      "songid": "23d64067",
+      "count": 350
+    },
+    {
+      "name": "Sometimes",
+      "songid": "7bd7bed0",
+      "count": 303
+    },
+    {
+      "name": "Stand",
+      "songid": "3d7b56b",
+      "count": 244
+    },
+    {
+      "name": "Bitches Brewin'",
+      "songid": "23d6904b",
+      "count": 238
+    },
+    {
+      "name": "No Sense",
+      "songid": "33d67051",
+      "count": 225
+    },
+    {
+      "name": "Miss You",
+      "songid": "bd67d6a",
+      "count": 221
+    },
+    {
+      "name": "Sweet Summertime",
+      "songid": "13dc3191",
+      "count": 206
+    },
+    {
+      "name": "Rain",
+      "songid": "23d65847",
+      "count": 203
+    },
+    {
+      "name": "Breathe Me In",
+      "songid": "bd689fa",
+      "count": 202
+    },
+    {
+      "name": "He Calls Home",
+      "songid": "53d6c3e1",
+      "count": 166
+    },
+    {
+      "name": "Mothers Dream",
+      "songid": "53d70739",
+      "count": 153
+    },
+    {
+      "name": "Happy Pills",
+      "songid": "33d6c065",
+      "count": 135
+    },
+    {
+      "name": "Underneath It All",
+      "songid": "bd789ba",
+      "count": 114
+    },
+    {
+      "name": "Into the Sun",
+      "songid": "13d62589",
+      "count": 110
+    },
+    {
+      "name": "10,000 Horses",
+      "songid": "53d7e325",
+      "count": 106
+    },
+    {
+      "name": "Vexatious",
+      "songid": "53cce375",
+      "count": 103
+    },
+    {
+      "name": "She Come Over Me",
+      "songid": "1bdc3190",
+      "count": 98
+    },
+    {
+      "name": "Riptide",
+      "songid": "23fb9c3f",
+      "count": 91
+    },
+    {
+      "name": "Surrendering",
+      "songid": "73d7b2c1",
+      "count": 87
+    },
+    {
+      "name": "How Does It Feel",
+      "songid": "7bd63aec",
+      "count": 83
+    },
+    {
+      "name": "Turn Your Heart Around",
+      "songid": "53dcc32d",
+      "count": 74
+    },
+    {
+      "name": "Supernova",
+      "songid": "3bcc14fc",
+      "count": 72
+    },
+    {
+      "name": "Elegante",
+      "songid": "53ec43e1",
+      "count": 71
+    },
+    {
+      "name": "Best Friend",
+      "songid": "5bd7e3f8",
+      "count": 67
+    },
+    {
+      "name": "Crazy",
+      "songid": "3cc0117",
+      "count": 66
+    },
+    {
+      "name": "Alive at Last",
+      "songid": "53c8d31d",
+      "count": 57
+    },
+    {
+      "name": "Punks",
+      "songid": "7bec362c",
+      "count": 55
+    },
+    {
+      "name": "Understanding",
+      "songid": "5bd7e300",
+      "count": 54
+    },
+    {
+      "name": "It's Alright",
+      "songid": "1bdc150c",
+      "count": 53
+    },
+    {
+      "name": "What Do You Need?",
+      "songid": "13ec051d",
+      "count": 52
+    },
+    {
+      "name": "All Down Hill From Here",
+      "songid": "63e4f247",
+      "count": 50
+    },
+    {
+      "name": "Lucy",
+      "songid": "5bd60b64",
+      "count": 46
+    },
+    {
+      "name": "Believe in It",
+      "songid": "4bdcc32e",
+      "count": 43
+    },
+    {
+      "name": "The Bridge",
+      "songid": "5bcfebd8",
+      "count": 42
+    },
+    {
+      "name": "Drowned",
+      "songid": "bd3057a",
+      "count": 39
+    },
+    {
+      "name": "Let Me Down Easy",
+      "songid": "3e7ddf7",
+      "count": 38
+    },
+    {
+      "name": "A Stone's Throw Away",
+      "songid": "2bd6a8ce",
+      "count": 37
+    },
+    {
+      "name": "Vulgar Before Me",
+      "songid": "1bd30578",
+      "count": 34
+    },
+    {
+      "name": "No Lights",
+      "songid": "13dc65dd",
+      "count": 29
+    },
+    {
+      "name": "A Kiss Before",
+      "songid": "53d7e3f9",
+      "count": 28
+    },
+    {
+      "name": "Consider Us",
+      "songid": "13d6f959",
+      "count": 28
+    },
+    {
+      "name": "I Want It Back",
+      "songid": "3cc7193",
+      "count": 27
+    },
+    {
+      "name": "Lover - Come Back to Me",
+      "songid": "43de233b",
+      "count": 27
+    },
+    {
+      "name": "Pull Away",
+      "songid": "43d7073f",
+      "count": 27
+    },
+    {
+      "name": "Spotlights",
+      "songid": "53cfebd5",
+      "count": 26
+    },
+    {
+      "name": "My Weakness",
+      "songid": "13e70119",
+      "count": 23
+    },
+    {
+      "name": "We",
+      "songid": "2be75ce2",
+      "count": 22
+    },
+    {
+      "name": "Nothing Left to Lose",
+      "songid": "33e7082d",
+      "count": 21
+    },
+    {
+      "name": "Alive",
+      "songid": "23d6a4f7",
+      "count": 20
+    },
+    {
+      "name": "It's Amazing",
+      "songid": "13d30579",
+      "count": 20
+    },
+    {
+      "name": "Bothered",
+      "songid": "43d70733",
+      "count": 19
+    },
+    {
+      "name": "Breakaway",
+      "songid": "13c0c1cd",
+      "count": 19
+    },
+    {
+      "name": "Blinders",
+      "songid": "4bd7e306",
+      "count": 18
+    },
+    {
+      "name": "Breathe Me In (intro)",
+      "songid": "1bd1cd54",
+      "count": 18
+    },
+    {
+      "name": "Cellphone Jesus",
+      "songid": "3bedc810",
+      "count": 11
+    },
+    {
+      "name": "Sunshine",
+      "songid": "3bfb9c38",
+      "count": 11
+    },
+    {
+      "name": "Go Your Own Way",
+      "songid": "33d6c8bd",
+      "count": 10
+    },
+    {
+      "name": "Look What You've Done",
+      "songid": "1bd4ed94",
+      "count": 10
+    },
+    {
+      "name": "Crazy Train",
+      "songid": "4bd6fb32",
+      "count": 9
+    },
+    {
+      "name": "Galaxie",
+      "songid": "3d6cd93",
+      "count": 8
+    },
+    {
+      "name": "Highway to Hell",
+      "songid": "6bd63e8a",
+      "count": 8
+    },
+    {
+      "name": "Only Because of You",
+      "songid": "3bcb9080",
+      "count": 8
+    },
+    {
+      "name": "Become (to Tell)",
+      "songid": "33e28c45",
+      "count": 7
+    },
+    {
+      "name": "Breathe (In the Air)",
+      "songid": "4bf05bfa",
+      "count": 7
+    },
+    {
+      "name": "Immigrant Song",
+      "songid": "bd629ba",
+      "count": 7
+    },
+    {
+      "name": "Mountain Song",
+      "songid": "73d67e65",
+      "count": 7
+    },
+    {
+      "name": "Anything",
+      "songid": "2bc4a80e",
+      "count": 6
+    },
+    {
+      "name": "Chloe Dancer",
+      "songid": "7bd68274",
+      "count": 6
+    },
+    {
+      "name": "Come Home",
+      "songid": "73da3a01",
+      "count": 6
+    },
+    {
+      "name": "Crooked Halo",
+      "songid": "3bcb70d8",
+      "count": 6
+    },
+    {
+      "name": "Going to California",
+      "songid": "53d6cbdd",
+      "count": 6
+    },
+    {
+      "name": "Hunger Strike",
+      "songid": "13d63505",
+      "count": 6
+    },
+    {
+      "name": "Hungry Like the Wolf",
+      "songid": "bd635ee",
+      "count": 6
+    },
+    {
+      "name": "Out Here All Night",
+      "songid": "43d7e3ff",
+      "count": 6
+    },
+    {
+      "name": "Step Back",
+      "songid": "7bf88640",
+      "count": 6
+    },
+    {
+      "name": "Them Eyes",
+      "songid": "2bdc1cee",
+      "count": 6
+    },
+    {
+      "name": "Butterfly (Reprise)",
+      "songid": "bcc718a",
+      "count": 5
+    },
+    {
+      "name": "Criminals",
+      "songid": "43e48387",
+      "count": 5
+    },
+    {
+      "name": "Even Flow",
+      "songid": "2bd6dc06",
+      "count": 5
+    },
+    {
+      "name": "I Was Made for Lovin' You",
+      "songid": "73d63269",
+      "count": 5
+    },
+    {
+      "name": "Maze",
+      "songid": "33eb7891",
+      "count": 5
+    },
+    {
+      "name": "Offerings",
+      "songid": "13f2f9fd",
+      "count": 5
+    },
+    {
+      "name": "Roadhouse Blues",
+      "songid": "bd6517a",
+      "count": 5
+    },
+    {
+      "name": "Surrender",
+      "songid": "7bd7b2c8",
+      "count": 5
+    },
+    {
+      "name": "Sweet Emotion",
+      "songid": "bd7ad0e",
+      "count": 5
+    },
+    {
+      "name": "Voodoo Child (Slight Return)",
+      "songid": "3d4b9e3",
+      "count": 5
+    },
+    {
+      "name": "American Girl",
+      "songid": "3bd6a074",
+      "count": 4
+    },
+    {
+      "name": "Do You Love Me",
+      "songid": "6bd6eebe",
+      "count": 4
+    },
+    {
+      "name": "One",
+      "songid": "7bd66e14",
+      "count": 4
+    },
+    {
+      "name": "Remains",
+      "songid": "73c032b1",
+      "count": 4
+    },
+    {
+      "name": "Rooster",
+      "songid": "4bd6535e",
+      "count": 4
+    },
+    {
+      "name": "Another Brick in the Wall, Part 2",
+      "songid": "2bd24cfa",
+      "count": 3
+    },
+    {
+      "name": "Mother",
+      "songid": "4bd67fee",
+      "count": 3
+    },
+    {
+      "name": "Seattle Medley",
+      "songid": "73e57ebd",
+      "count": 3
+    },
+    {
+      "name": "So Real",
+      "songid": "1bf2f9fc",
+      "count": 3
+    },
+    {
+      "name": "Sweet Child o' Mine",
+      "songid": "1bd4f908",
+      "count": 3
+    },
+    {
+      "name": "This Time Tomorrow 14",
+      "songid": "2bedb09e",
+      "count": 3
+    },
+    {
+      "name": "Wish You Were Here",
+      "songid": "1bd7f574",
+      "count": 3
+    },
+    {
+      "name": "Baby Love Me",
+      "songid": "73dc06d1",
+      "count": 2
+    },
+    {
+      "name": "Belmore Place",
+      "songid": "4be647be",
+      "count": 2
+    },
+    {
+      "name": "Bone China",
+      "songid": "33d4ec75",
+      "count": 2
+    },
+    {
+      "name": "Bother Me",
+      "songid": "5bd70738",
+      "count": 2
+    },
+    {
+      "name": "Children of the Grave",
+      "songid": "53d683ad",
+      "count": 2
+    },
+    {
+      "name": "Comfortably Numb",
+      "songid": "7bd6fe5c",
+      "count": 2
+    },
+    {
+      "name": "Coming Down",
+      "songid": "53d7073d",
+      "count": 2
+    },
+    {
+      "name": "Communication Breakdown",
+      "songid": "63d6fe07",
+      "count": 2
+    },
+    {
+      "name": "Crying Time",
+      "songid": "6bd23226",
+      "count": 2
+    },
+    {
+      "name": "Embryo",
+      "songid": "5bd7073c",
+      "count": 2
+    },
+    {
+      "name": "Graceless",
+      "songid": "33d8a04d",
+      "count": 2
+    },
+    {
+      "name": "I Wanna Be Sedated",
+      "songid": "4bd633fa",
+      "count": 2
+    },
+    {
+      "name": "If We Could",
+      "songid": "73c27e7d",
+      "count": 2
+    },
+    {
+      "name": "Lifelike Song",
+      "songid": "43dcc323",
+      "count": 2
+    },
+    {
+      "name": "Racially Motivated",
+      "songid": "4bd7073e",
+      "count": 2
+    },
+    {
+      "name": "River of Deceit",
+      "songid": "1bd4bd2c",
+      "count": 2
+    },
+    {
+      "name": "The Weight",
+      "songid": "33d798b1",
+      "count": 2
+    },
+    {
+      "name": "Trip",
+      "songid": "63e216df",
+      "count": 2
+    },
+    {
+      "name": "War Pigs",
+      "songid": "bd7811a",
+      "count": 2
+    },
+    {
+      "name": "You Can't Always Get What You Want",
+      "songid": "1bd7f1cc",
+      "count": 2
+    },
+    {
+      "name": "Appetite",
+      "songid": "7bd23228",
+      "count": 1
+    },
+    {
+      "name": "Babe, I'm Gonna Leave You",
+      "songid": "13d40179",
+      "count": 1
+    },
+    {
+      "name": "BBC",
+      "songid": "33c64469",
+      "count": 1
+    },
+    {
+      "name": "Blackbird",
+      "songid": "43d693d7",
+      "count": 1
+    },
+    {
+      "name": "Butterfly",
+      "songid": "4bcfebda",
+      "count": 1
+    },
+    {
+      "name": "Can't Give In",
+      "songid": "4be5a772",
+      "count": 1
+    },
+    {
+      "name": "Can't You See",
+      "songid": "53d68725",
+      "count": 1
+    },
+    {
+      "name": "Chloe Dancer/Crown of Thorns",
+      "songid": "53d83375",
+      "count": 1
+    },
+    {
+      "name": "Cinnamon Girl",
+      "songid": "73d682a1",
+      "count": 1
+    },
+    {
+      "name": "Creep",
+      "songid": "43d6fb1f",
+      "count": 1
+    },
+    {
+      "name": "Cumbersome",
+      "songid": "2bd5680a",
+      "count": 1
+    },
+    {
+      "name": "Disarm",
+      "songid": "43d6ef03",
+      "count": 1
+    },
+    {
+      "name": "Don't Change",
+      "songid": "bd6e9ae",
+      "count": 1
+    },
+    {
+      "name": "Driver",
+      "songid": "2bf6a87a",
+      "count": 1
+    },
+    {
+      "name": "Fly by Night",
+      "songid": "2bdf0ce2",
+      "count": 1
+    },
+    {
+      "name": "Folsom Prison Blues",
+      "songid": "73d6d639",
+      "count": 1
+    },
+    {
+      "name": "For What It's Worth",
+      "songid": "3d6d16b",
+      "count": 1
+    },
+    {
+      "name": "Free Bird",
+      "songid": "3bd6d0b0",
+      "count": 1
+    },
+    {
+      "name": "Get Off of My Cloud",
+      "songid": "5bd6cf14",
+      "count": 1
+    },
+    {
+      "name": "Glycerine",
+      "songid": "3bd6c824",
+      "count": 1
+    },
+    {
+      "name": "God's Gift",
+      "songid": "3e20d5f",
+      "count": 1
+    },
+    {
+      "name": "Good Times Bad Times",
+      "songid": "6bd6cac2",
+      "count": 1
+    },
+    {
+      "name": "Honest Man",
+      "songid": "73d2322d",
+      "count": 1
+    },
+    {
+      "name": "Hurricane",
+      "songid": "63cd8aaf",
+      "count": 1
+    },
+    {
+      "name": "If I Was Your Girlfriend",
+      "songid": "53d4effd",
+      "count": 1
+    },
+    {
+      "name": "In the Flesh",
+      "songid": "7bd0aaa4",
+      "count": 1
+    },
+    {
+      "name": "It's Not My Time",
+      "songid": "13d621fd",
+      "count": 1
+    },
+    {
+      "name": "Jane Says",
+      "songid": "43d623e3",
+      "count": 1
+    },
+    {
+      "name": "Jealousy",
+      "songid": "bf5a1da",
+      "count": 1
+    },
+    {
+      "name": "Kashmir",
+      "songid": "43d61fff",
+      "count": 1
+    },
+    {
+      "name": "Learn to Fly",
+      "songid": "5bd61730",
+      "count": 1
+    },
+    {
+      "name": "Lost Angeline",
+      "songid": "43e20b1f",
+      "count": 1
+    },
+    {
+      "name": "Maybe I'm Amazed",
+      "songid": "7bd60634",
+      "count": 1
+    },
+    {
+      "name": "Molly's Lips",
+      "songid": "1bd67d9c",
+      "count": 1
+    },
+    {
+      "name": "My Generation",
+      "songid": "3bd678f8",
+      "count": 1
+    },
+    {
+      "name": "Nearly Lost You",
+      "songid": "bd4b1ce",
+      "count": 1
+    },
+    {
+      "name": "No Woman, No Cry",
+      "songid": "5bc6bf14",
+      "count": 1
+    },
+    {
+      "name": "Nutshell",
+      "songid": "bd66d32",
+      "count": 1
+    },
+    {
+      "name": "Patience",
+      "songid": "43d66767",
+      "count": 1
+    },
+    {
+      "name": "Phoenix",
+      "songid": "33c4a80d",
+      "count": 1
+    },
+    {
+      "name": "Purple Rain",
+      "songid": "6bd65e66",
+      "count": 1
+    },
+    {
+      "name": "Rock and Roll All Nite",
+      "songid": "1bd6510c",
+      "count": 1
+    },
+    {
+      "name": "Say Hello 2 Heaven",
+      "songid": "6bd64e62",
+      "count": 1
+    },
+    {
+      "name": "Seasons",
+      "songid": "2bd6484a",
+      "count": 1
+    },
+    {
+      "name": "Sink or Swim",
+      "songid": "63cc62cb",
+      "count": 1
+    },
+    {
+      "name": "Spider Goes Nuts",
+      "songid": "53e647bd",
+      "count": 1
+    },
+    {
+      "name": "Stairway to Heaven",
+      "songid": "6bd7ba8e",
+      "count": 1
+    },
+    {
+      "name": "The Boys of Summer",
+      "songid": "53d48f09",
+      "count": 1
+    },
+    {
+      "name": "The Crystal Ship / Riders on the Storm",
+      "songid": "be0e106",
+      "count": 1
+    },
+    {
+      "name": "The Spirit of Radio",
+      "songid": "73d79ea5",
+      "count": 1
+    },
+    {
+      "name": "Thoughtless Innuendos",
+      "songid": "1be6412c",
+      "count": 1
+    },
+    {
+      "name": "Tredecim",
+      "songid": "6bd2322e",
+      "count": 1
+    },
+    {
+      "name": "Turn Me Loose",
+      "songid": "3bd4d878",
+      "count": 1
+    },
+    {
+      "name": "Wasted Once Again",
+      "songid": "bfb89ae",
+      "count": 1
+    },
+    {
+      "name": "Whole Lotta Love",
+      "songid": "23d7f80b",
+      "count": 1
+    },
+    {
+      "name": "You Shook Me All Night Long",
+      "songid": "4bd7f37e",
+      "count": 1
+    },
+    {
+      "name": "Youth in Revolt",
+      "songid": "5bdabb20",
+      "count": 1
+    }
+  ]
+}

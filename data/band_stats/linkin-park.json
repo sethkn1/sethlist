@@ -1,0 +1,739 @@
+{
+  "artist": "Linkin Park",
+  "slug": "linkin-park",
+  "stats_id": "bd6bdae",
+  "mbid": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+  "fetched_at": "2026-04-30T15:31:46.607460Z",
+  "songs": [
+    {
+      "name": "In the End",
+      "songid": "4bd62be6",
+      "count": 829
+    },
+    {
+      "name": "One Step Closer",
+      "songid": "13d66915",
+      "count": 827
+    },
+    {
+      "name": "Papercut",
+      "songid": "13d66599",
+      "count": 737
+    },
+    {
+      "name": "Faint",
+      "songid": "bd6d9be",
+      "count": 669
+    },
+    {
+      "name": "Crawling",
+      "songid": "4bd6fb7e",
+      "count": 664
+    },
+    {
+      "name": "Numb",
+      "songid": "bd66d7e",
+      "count": 642
+    },
+    {
+      "name": "Points of Authority",
+      "songid": "53d663bd",
+      "count": 600
+    },
+    {
+      "name": "What I've Done",
+      "songid": "33d7fc55",
+      "count": 524
+    },
+    {
+      "name": "Bleed It Out",
+      "songid": "7bd69248",
+      "count": 513
+    },
+    {
+      "name": "Somewhere I Belong",
+      "songid": "7bd7bea8",
+      "count": 496
+    },
+    {
+      "name": "Breaking the Habit",
+      "songid": "13d6893d",
+      "count": 426
+    },
+    {
+      "name": "Lying From You",
+      "songid": "43d60be3",
+      "count": 425
+    },
+    {
+      "name": "Given Up",
+      "songid": "1bd6c9c0",
+      "count": 407
+    },
+    {
+      "name": "Runaway",
+      "songid": "7bd65200",
+      "count": 400
+    },
+    {
+      "name": "With You",
+      "songid": "bd7f50e",
+      "count": 400
+    },
+    {
+      "name": "A Place for My Head",
+      "songid": "5bd0730c",
+      "count": 397
+    },
+    {
+      "name": "From the Inside",
+      "songid": "6bd6d26e",
+      "count": 357
+    },
+    {
+      "name": "New Divide",
+      "songid": "3bd734a8",
+      "count": 343
+    },
+    {
+      "name": "Waiting for the End",
+      "songid": "73d37acd",
+      "count": 340
+    },
+    {
+      "name": "Burn It Down",
+      "songid": "1bdc69c4",
+      "count": 282
+    },
+    {
+      "name": "Don't Stay",
+      "songid": "3bd6e8c0",
+      "count": 245
+    },
+    {
+      "name": "The Catalyst",
+      "songid": "33d3bc21",
+      "count": 243
+    },
+    {
+      "name": "No More Sorrow",
+      "songid": "3d671df",
+      "count": 240
+    },
+    {
+      "name": "Pushing Me Away",
+      "songid": "73d65e29",
+      "count": 210
+    },
+    {
+      "name": "Shadow of the Day",
+      "songid": "13d64519",
+      "count": 202
+    },
+    {
+      "name": "By Myself",
+      "songid": "7bd68a88",
+      "count": 194
+    },
+    {
+      "name": "Castle of Glass",
+      "songid": "33db90ad",
+      "count": 177
+    },
+    {
+      "name": "Joe Hahn Solo",
+      "songid": "73c476d1",
+      "count": 157
+    },
+    {
+      "name": "Leave Out All the Rest",
+      "songid": "5bd07300",
+      "count": 149
+    },
+    {
+      "name": "Leave Out All the Rest / Shadow of the Day / Iridescent",
+      "songid": "2bddb82e",
+      "count": 141
+    },
+    {
+      "name": "Lost in the Echo",
+      "songid": "bdd7dfa",
+      "count": 136
+    },
+    {
+      "name": "Forgotten",
+      "songid": "3d6d1c7",
+      "count": 115
+    },
+    {
+      "name": "Wastelands",
+      "songid": "bc47922",
+      "count": 109
+    },
+    {
+      "name": "My December",
+      "songid": "33d67845",
+      "count": 101
+    },
+    {
+      "name": "When They Come for Me",
+      "songid": "23d3f8a7",
+      "count": 93
+    },
+    {
+      "name": "The Emptiness Machine",
+      "songid": "4b940b2e",
+      "count": 90
+    },
+    {
+      "name": "The Little Things Give You Away",
+      "songid": "4bd7a38e",
+      "count": 90
+    },
+    {
+      "name": "Blackout",
+      "songid": "5bd3f724",
+      "count": 87
+    },
+    {
+      "name": "Lost",
+      "songid": "73ee0e61",
+      "count": 84
+    },
+    {
+      "name": "Robot Boy",
+      "songid": "53d3fbc1",
+      "count": 83
+    },
+    {
+      "name": "Heavy Is the Crown",
+      "songid": "395b557",
+      "count": 82
+    },
+    {
+      "name": "Iridescent",
+      "songid": "2bd3bc22",
+      "count": 82
+    },
+    {
+      "name": "P5hng Me A*wy",
+      "songid": "6bd66a96",
+      "count": 81
+    },
+    {
+      "name": "Wake",
+      "songid": "43d787b7",
+      "count": 81
+    },
+    {
+      "name": "Jornada del Muerto",
+      "songid": "33d3a801",
+      "count": 80
+    },
+    {
+      "name": "The Requiem",
+      "songid": "33d3a80d",
+      "count": 76
+    },
+    {
+      "name": "Two Faced",
+      "songid": "43929ffb",
+      "count": 75
+    },
+    {
+      "name": "Lies Greed Misery",
+      "songid": "63dc56f7",
+      "count": 73
+    },
+    {
+      "name": "Fallout",
+      "songid": "3bd3a800",
+      "count": 72
+    },
+    {
+      "name": "Figure.09",
+      "songid": "13d6d52d",
+      "count": 72
+    },
+    {
+      "name": "Final Masquerade",
+      "songid": "13c47925",
+      "count": 72
+    },
+    {
+      "name": "Overflow",
+      "songid": "3393dcf5",
+      "count": 72
+    },
+    {
+      "name": "When They Come for Me / Remember the Name",
+      "songid": "4b946f92",
+      "count": 72
+    },
+    {
+      "name": "Up From the Bottom",
+      "songid": "6391ba23",
+      "count": 66
+    },
+    {
+      "name": "Rebellion",
+      "songid": "1bc47920",
+      "count": 65
+    },
+    {
+      "name": "Guilty All the Same",
+      "songid": "53c47b71",
+      "count": 62
+    },
+    {
+      "name": "Wisdom, Justice, and Love",
+      "songid": "43d3f71b",
+      "count": 62
+    },
+    {
+      "name": "Until It's Gone",
+      "songid": "13c47921",
+      "count": 61
+    },
+    {
+      "name": "Where'd You Go",
+      "songid": "7bd4dea4",
+      "count": 61
+    },
+    {
+      "name": "Cure for the Itch",
+      "songid": "43d07303",
+      "count": 54
+    },
+    {
+      "name": "In Pieces",
+      "songid": "23d62897",
+      "count": 54
+    },
+    {
+      "name": "It's Goin' Down",
+      "songid": "5bd053f4",
+      "count": 53
+    },
+    {
+      "name": "Step Up",
+      "songid": "2bd7b48e",
+      "count": 51
+    },
+    {
+      "name": "And One",
+      "songid": "53d6a361",
+      "count": 49
+    },
+    {
+      "name": "Nobody's Listening",
+      "songid": "3bd670a8",
+      "count": 49
+    },
+    {
+      "name": "Mashup Intro #2",
+      "songid": "13c51149",
+      "count": 48
+    },
+    {
+      "name": "Over Each Other",
+      "songid": "39559af",
+      "count": 46
+    },
+    {
+      "name": "Victimized",
+      "songid": "73dd760d",
+      "count": 44
+    },
+    {
+      "name": "Wake 2.0",
+      "songid": "53d787b5",
+      "count": 44
+    },
+    {
+      "name": "Hands Held High",
+      "songid": "3d6c12f",
+      "count": 43
+    },
+    {
+      "name": "Heavy",
+      "songid": "3c8a987",
+      "count": 43
+    },
+    {
+      "name": "Step Up / Nobody's Listening / It's Goin' Down",
+      "songid": "7bd4d2a4",
+      "count": 40
+    },
+    {
+      "name": "Tinfoil",
+      "songid": "bdc6502",
+      "count": 40
+    },
+    {
+      "name": "Wish",
+      "songid": "73d7fa8d",
+      "count": 40
+    },
+    {
+      "name": "Wretches and Kings",
+      "songid": "23d3a803",
+      "count": 38
+    },
+    {
+      "name": "Wretches and Kings / Remember the Name",
+      "songid": "7bc50ef0",
+      "count": 38
+    },
+    {
+      "name": "High Voltage",
+      "songid": "73d63ed9",
+      "count": 37
+    },
+    {
+      "name": "The Messenger",
+      "songid": "2bd3f426",
+      "count": 34
+    },
+    {
+      "name": "Session",
+      "songid": "5bd7c384",
+      "count": 32
+    },
+    {
+      "name": "Stained",
+      "songid": "3b90a818",
+      "count": 32
+    },
+    {
+      "name": "Burning in the Skies",
+      "songid": "2bd3a802",
+      "count": 28
+    },
+    {
+      "name": "In My Remains",
+      "songid": "33dd7481",
+      "count": 28
+    },
+    {
+      "name": "Cut the Bridge",
+      "songid": "3391a845",
+      "count": 26
+    },
+    {
+      "name": "Talking to Myself",
+      "songid": "3c8ed4f",
+      "count": 26
+    },
+    {
+      "name": "A Line in the Sand",
+      "songid": "1bc47924",
+      "count": 25
+    },
+    {
+      "name": "Casualty",
+      "songid": "3b95402c",
+      "count": 24
+    },
+    {
+      "name": "Easier to Run",
+      "songid": "53d7c385",
+      "count": 24
+    },
+    {
+      "name": "Good Goodbye",
+      "songid": "43c9b71f",
+      "count": 24
+    },
+    {
+      "name": "Hit the Floor",
+      "songid": "4bd7c386",
+      "count": 24
+    },
+    {
+      "name": "Valentine's Day",
+      "songid": "73d78a59",
+      "count": 24
+    },
+    {
+      "name": "Dirt Off Your Shoulder / Lying From You",
+      "songid": "63c4a287",
+      "count": 23
+    },
+    {
+      "name": "Invisible",
+      "songid": "43c883e3",
+      "count": 23
+    },
+    {
+      "name": "Darker Than Blood",
+      "songid": "13c0890d",
+      "count": 22
+    },
+    {
+      "name": "Good Things Go",
+      "songid": "3393dcfd",
+      "count": 22
+    },
+    {
+      "name": "One More Light",
+      "songid": "bc8ed4e",
+      "count": 21
+    },
+    {
+      "name": "Remember the Name",
+      "songid": "5bc12fdc",
+      "count": 21
+    },
+    {
+      "name": "Welcome",
+      "songid": "43c19ffb",
+      "count": 21
+    },
+    {
+      "name": "IGYEIH",
+      "songid": "2391fc53",
+      "count": 20
+    },
+    {
+      "name": "My Own Summer (Shove It)",
+      "songid": "53d67b19",
+      "count": 19
+    },
+    {
+      "name": "Battle Symphony",
+      "songid": "4bc82fe2",
+      "count": 18
+    },
+    {
+      "name": "Let You Fade",
+      "songid": "b91c59e",
+      "count": 17
+    },
+    {
+      "name": "Wretches and Kings / Remember the Name / Skin to Bone",
+      "songid": "5bc45bc0",
+      "count": 15
+    },
+    {
+      "name": "A Light That Never Comes",
+      "songid": "1bd9055c",
+      "count": 13
+    },
+    {
+      "name": "In Between",
+      "songid": "33d62831",
+      "count": 13
+    },
+    {
+      "name": "Lying From You / Papercut",
+      "songid": "bdd71fa",
+      "count": 13
+    },
+    {
+      "name": "Mashup Intro #1",
+      "songid": "13c511c5",
+      "count": 12
+    },
+    {
+      "name": "Keys to the Kingdom",
+      "songid": "3c4792f",
+      "count": 10
+    },
+    {
+      "name": "Sweet Child o' Mine",
+      "songid": "1bd4f908",
+      "count": 10
+    },
+    {
+      "name": "QWERTY",
+      "songid": "1bdcc9c4",
+      "count": 9
+    },
+    {
+      "name": "Reading My Eyes",
+      "songid": "5bd65bcc",
+      "count": 9
+    },
+    {
+      "name": "Friendly Fire",
+      "songid": "2b97802e",
+      "count": 7
+    },
+    {
+      "name": "We Made It",
+      "songid": "3f79dc3",
+      "count": 7
+    },
+    {
+      "name": "Wretches and Kings / Remember the Name / When They Come for Me",
+      "songid": "43c45bc7",
+      "count": 7
+    },
+    {
+      "name": "Just Like Heaven",
+      "songid": "3bd61cd8",
+      "count": 6
+    },
+    {
+      "name": "Sharp Edges",
+      "songid": "7bc9c2f8",
+      "count": 6
+    },
+    {
+      "name": "A.06",
+      "songid": "2bd4e466",
+      "count": 5
+    },
+    {
+      "name": "Jane Says",
+      "songid": "43d623e3",
+      "count": 5
+    },
+    {
+      "name": "Nobody Can Save Me",
+      "songid": "63c9c207",
+      "count": 5
+    },
+    {
+      "name": "Unshatter",
+      "songid": "739f6e81",
+      "count": 5
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 4
+    },
+    {
+      "name": "Jigga What / Faint",
+      "songid": "73d622e5",
+      "count": 3
+    },
+    {
+      "name": "Morning After",
+      "songid": "1bd4c9c0",
+      "count": 2
+    },
+    {
+      "name": "Numb / Encore",
+      "songid": "3d66d77",
+      "count": 2
+    },
+    {
+      "name": "Rolling in the Deep",
+      "songid": "73d0f6c5",
+      "count": 2
+    },
+    {
+      "name": "Umbrella",
+      "songid": "7bd78eb8",
+      "count": 2
+    },
+    {
+      "name": "Wretches and Kings / Remember the Name / Hands Held High",
+      "songid": "3bc44ce8",
+      "count": 2
+    },
+    {
+      "name": "All for Nothing",
+      "songid": "bc4792e",
+      "count": 1
+    },
+    {
+      "name": "Are You Gonna Be My Girl",
+      "songid": "2bd69c5a",
+      "count": 1
+    },
+    {
+      "name": "Big Bottom",
+      "songid": "53df7fb1",
+      "count": 1
+    },
+    {
+      "name": "Big Pimpin' / Papercut",
+      "songid": "bd69132",
+      "count": 1
+    },
+    {
+      "name": "Dialate",
+      "songid": "2be7dcde",
+      "count": 1
+    },
+    {
+      "name": "Fan Freestyle",
+      "songid": "73ec6269",
+      "count": 1
+    },
+    {
+      "name": "Frgt/10",
+      "songid": "7bd4d63c",
+      "count": 1
+    },
+    {
+      "name": "I Miss You",
+      "songid": "3bd63044",
+      "count": 1
+    },
+    {
+      "name": "Immigrant Song",
+      "songid": "bd629ba",
+      "count": 1
+    },
+    {
+      "name": "Iridescent / The Messenger",
+      "songid": "4bf78ffa",
+      "count": 1
+    },
+    {
+      "name": "Iron Man",
+      "songid": "5bd627c0",
+      "count": 1
+    },
+    {
+      "name": "Leave Out All the Rest / Shadow of the Day / What I've Done",
+      "songid": "13c4e13d",
+      "count": 1
+    },
+    {
+      "name": "Looking for an Answer",
+      "songid": "63f7a6d3",
+      "count": 1
+    },
+    {
+      "name": "Powerless",
+      "songid": "3c565d3",
+      "count": 1
+    },
+    {
+      "name": "Rest",
+      "songid": "7bf7a6e0",
+      "count": 1
+    },
+    {
+      "name": "Roads Untraveled",
+      "songid": "bc9b1c2",
+      "count": 1
+    },
+    {
+      "name": "When They Come for Me / Remember the Name / Until It Breaks",
+      "songid": "39bfdb7",
+      "count": 1
+    },
+    {
+      "name": "When They Come For Me / Step Up / It's Goin' Down / Lift Off / Until It Breaks / Remember the Name",
+      "songid": "139bf901",
+      "count": 1
+    },
+    {
+      "name": "When They Come for Me / Step Up / Until It Breaks / Lift Off / Remember the Name",
+      "songid": "2b9bf03a",
+      "count": 1
+    },
+    {
+      "name": "Wretches and Kings / Remember the Name / High Voltage",
+      "songid": "6bc26a92",
+      "count": 1
+    }
+  ]
+}

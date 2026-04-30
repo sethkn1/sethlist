@@ -1,0 +1,284 @@
+{
+  "artist": "Flight of the Conchords",
+  "slug": "flight-of-the-conchords",
+  "stats_id": "7bd6a2e8",
+  "mbid": "1f574ab1-a46d-4586-9331-f0ded23e0411",
+  "fetched_at": "2026-04-30T15:30:41.061643Z",
+  "songs": [
+    {
+      "name": "The Most Beautiful Girl (in the Room)",
+      "songid": "7bd7a284",
+      "count": 108
+    },
+    {
+      "name": "Bowie",
+      "songid": "7bd68e58",
+      "count": 99
+    },
+    {
+      "name": "Robots",
+      "songid": "3d65157",
+      "count": 94
+    },
+    {
+      "name": "Business Time",
+      "songid": "73d68ae5",
+      "count": 89
+    },
+    {
+      "name": "Summer of 1353",
+      "songid": "73f5aae5",
+      "count": 85
+    },
+    {
+      "name": "Carol Brown",
+      "songid": "6bd68606",
+      "count": 75
+    },
+    {
+      "name": "Iain and Deanna",
+      "songid": "13feed21",
+      "count": 71
+    },
+    {
+      "name": "Stana",
+      "songid": "bd7b576",
+      "count": 69
+    },
+    {
+      "name": "Think About It",
+      "songid": "73d79add",
+      "count": 69
+    },
+    {
+      "name": "Father and Son",
+      "songid": "33dd9c9d",
+      "count": 67
+    },
+    {
+      "name": "Foux du Fafa",
+      "songid": "23d6d04f",
+      "count": 64
+    },
+    {
+      "name": "Jenny",
+      "songid": "73d62279",
+      "count": 64
+    },
+    {
+      "name": "Hiphopopotamus vs. Rhymenoceros",
+      "songid": "13d63961",
+      "count": 63
+    },
+    {
+      "name": "Bus Driver's Song",
+      "songid": "73d68ae9",
+      "count": 61
+    },
+    {
+      "name": "Hurt Feelings",
+      "songid": "bd6359a",
+      "count": 60
+    },
+    {
+      "name": "Inner City Pressure",
+      "songid": "2bd5586e",
+      "count": 60
+    },
+    {
+      "name": "Too Many Dicks (on the Dance Floor)",
+      "songid": "6bd546c2",
+      "count": 58
+    },
+    {
+      "name": "Seagull",
+      "songid": "3ca49cb",
+      "count": 56
+    },
+    {
+      "name": "Albi",
+      "songid": "3bd6a448",
+      "count": 50
+    },
+    {
+      "name": "We're Both in Love With a Sexy Lady",
+      "songid": "6bd7825e",
+      "count": 49
+    },
+    {
+      "name": "Sugalumps",
+      "songid": "3bd7b0ec",
+      "count": 48
+    },
+    {
+      "name": "Not Crying",
+      "songid": "33c1e415",
+      "count": 47
+    },
+    {
+      "name": "Back on the Road",
+      "songid": "bd84932",
+      "count": 46
+    },
+    {
+      "name": "Mutha'uckas / Hurt Feelings",
+      "songid": "5bcdd770",
+      "count": 45
+    },
+    {
+      "name": "Chips and Dips",
+      "songid": "3bcdf888",
+      "count": 44
+    },
+    {
+      "name": "Demon Woman",
+      "songid": "53d6f339",
+      "count": 40
+    },
+    {
+      "name": "Shady Rachel",
+      "songid": "2bcdf88e",
+      "count": 37
+    },
+    {
+      "name": "Song for Epileptic Dogs",
+      "songid": "3bd2b8f8",
+      "count": 34
+    },
+    {
+      "name": "Mutha'uckas",
+      "songid": "1bd679b8",
+      "count": 31
+    },
+    {
+      "name": "I Told You I Was Freaky",
+      "songid": "5bd63344",
+      "count": 18
+    },
+    {
+      "name": "Boom",
+      "songid": "3d569fb",
+      "count": 14
+    },
+    {
+      "name": "Pencils in the Wind",
+      "songid": "4bd667b2",
+      "count": 14
+    },
+    {
+      "name": "If You're Into It",
+      "songid": "63d62e87",
+      "count": 13
+    },
+    {
+      "name": "Ladies of the World",
+      "songid": "1bd56904",
+      "count": 10
+    },
+    {
+      "name": "The Prince of Parties",
+      "songid": "43cd6747",
+      "count": 9
+    },
+    {
+      "name": "A Kiss Is Not a Contract",
+      "songid": "1bd6a920",
+      "count": 8
+    },
+    {
+      "name": "Angels",
+      "songid": "7bd73af4",
+      "count": 7
+    },
+    {
+      "name": "You Don't Have to Be a Prostitute",
+      "songid": "13cdc981",
+      "count": 7
+    },
+    {
+      "name": "Creep",
+      "songid": "53d6fb19",
+      "count": 6
+    },
+    {
+      "name": "Korean Karaoke (Oh, Dance, Baby)",
+      "songid": "1bd2bdfc",
+      "count": 6
+    },
+    {
+      "name": "Rock the Party",
+      "songid": "5bd49bb0",
+      "count": 6
+    },
+    {
+      "name": "Sally",
+      "songid": "2bd9447e",
+      "count": 6
+    },
+    {
+      "name": "Leggy Blonde",
+      "songid": "1bcdc1fc",
+      "count": 4
+    },
+    {
+      "name": "You Don't Love Me Anymore",
+      "songid": "3d2bdf3",
+      "count": 4
+    },
+    {
+      "name": "Bret, You've Got It Going On",
+      "songid": "6b934a96",
+      "count": 3
+    },
+    {
+      "name": "Free Bird",
+      "songid": "3bd6d0b0",
+      "count": 3
+    },
+    {
+      "name": "Frodo",
+      "songid": "b9b490a",
+      "count": 3
+    },
+    {
+      "name": "Hotties",
+      "songid": "7bdd92b4",
+      "count": 3
+    },
+    {
+      "name": "Down Under",
+      "songid": "43d05767",
+      "count": 2
+    },
+    {
+      "name": "Mermaids",
+      "songid": "13f8a5a9",
+      "count": 2
+    },
+    {
+      "name": "Badass",
+      "songid": "6bd73aea",
+      "count": 1
+    },
+    {
+      "name": "Lazy Eye",
+      "songid": "73d7de79",
+      "count": 1
+    },
+    {
+      "name": "Man or Muppet",
+      "songid": "1be0c9c4",
+      "count": 1
+    },
+    {
+      "name": "Rambling Through the Avenues of Time",
+      "songid": "7bd4722c",
+      "count": 1
+    },
+    {
+      "name": "When Doves Cry",
+      "songid": "5bd7ff18",
+      "count": 1
+    }
+  ]
+}

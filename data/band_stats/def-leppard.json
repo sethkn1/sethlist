@@ -1,0 +1,944 @@
+{
+  "artist": "Def Leppard",
+  "slug": "def-leppard",
+  "stats_id": "7bd6eac4",
+  "mbid": "7249b899-8db8-43e7-9e6e-22f1e736024e",
+  "fetched_at": "2026-04-30T15:31:00.752515Z",
+  "songs": [
+    {
+      "name": "Rock of Ages",
+      "songid": "bd651b6",
+      "count": 2110
+    },
+    {
+      "name": "Photograph",
+      "songid": "13d66155",
+      "count": 2094
+    },
+    {
+      "name": "Pour Some Sugar on Me",
+      "songid": "73d66281",
+      "count": 1961
+    },
+    {
+      "name": "Animal",
+      "songid": "5bd6a384",
+      "count": 1934
+    },
+    {
+      "name": "Foolin'",
+      "songid": "73d6d615",
+      "count": 1897
+    },
+    {
+      "name": "Hysteria",
+      "songid": "3bd6343c",
+      "count": 1895
+    },
+    {
+      "name": "Bringin' On the Heartbreak",
+      "songid": "33d68835",
+      "count": 1770
+    },
+    {
+      "name": "Armageddon It",
+      "songid": "2bd69c0e",
+      "count": 1747
+    },
+    {
+      "name": "Love Bites",
+      "songid": "63d60ebb",
+      "count": 1687
+    },
+    {
+      "name": "Rocket",
+      "songid": "33d65059",
+      "count": 1679
+    },
+    {
+      "name": "Let's Get Rocked",
+      "songid": "bd61126",
+      "count": 1504
+    },
+    {
+      "name": "Switch 625",
+      "songid": "bd7ad8e",
+      "count": 1197
+    },
+    {
+      "name": "Let It Go",
+      "songid": "73d616d9",
+      "count": 1143
+    },
+    {
+      "name": "Rock! Rock! (Till You Drop)",
+      "songid": "2bd6507a",
+      "count": 1031
+    },
+    {
+      "name": "Two Steps Behind",
+      "songid": "4bd78fc2",
+      "count": 999
+    },
+    {
+      "name": "Women",
+      "songid": "2bd7f46e",
+      "count": 946
+    },
+    {
+      "name": "Guitar Solo",
+      "songid": "4bd26b92",
+      "count": 892
+    },
+    {
+      "name": "Another Hit and Run",
+      "songid": "73d6a205",
+      "count": 659
+    },
+    {
+      "name": "Make Love Like a Man",
+      "songid": "3d60533",
+      "count": 657
+    },
+    {
+      "name": "Rock On",
+      "songid": "bd651b2",
+      "count": 656
+    },
+    {
+      "name": "Too Late for Love",
+      "songid": "23d79037",
+      "count": 641
+    },
+    {
+      "name": "Promises",
+      "songid": "23d65c93",
+      "count": 603
+    },
+    {
+      "name": "Gods of War",
+      "songid": "63d36ae7",
+      "count": 579
+    },
+    {
+      "name": "Wasted",
+      "songid": "1bd78180",
+      "count": 497
+    },
+    {
+      "name": "Rock Brigade",
+      "songid": "bd651f2",
+      "count": 456
+    },
+    {
+      "name": "Stagefright",
+      "songid": "23d480a7",
+      "count": 442
+    },
+    {
+      "name": "Slang",
+      "songid": "43d643b7",
+      "count": 402
+    },
+    {
+      "name": "Have You Ever Needed Someone So Bad",
+      "songid": "6bd7caae",
+      "count": 376
+    },
+    {
+      "name": "High \u2019n\u2019 Dry (Saturday Night)",
+      "songid": "7b9262ec",
+      "count": 355
+    },
+    {
+      "name": "Action",
+      "songid": "6bd6aa3a",
+      "count": 332
+    },
+    {
+      "name": "When Love and Hate Collide",
+      "songid": "43d7ffcf",
+      "count": 324
+    },
+    {
+      "name": "Die Hard the Hunter",
+      "songid": "53d22339",
+      "count": 298
+    },
+    {
+      "name": "Bass Solo",
+      "songid": "6bd69abe",
+      "count": 274
+    },
+    {
+      "name": "Tear It Down",
+      "songid": "7bd7caa8",
+      "count": 270
+    },
+    {
+      "name": "It Could Be You",
+      "songid": "4bd5c34a",
+      "count": 255
+    },
+    {
+      "name": "It Don't Matter",
+      "songid": "53d5c349",
+      "count": 255
+    },
+    {
+      "name": "Mirror, Mirror (Look Into My Eyes)",
+      "songid": "63d602b7",
+      "count": 234
+    },
+    {
+      "name": "Getcha Rocks Off",
+      "songid": "7bd26ec4",
+      "count": 232
+    },
+    {
+      "name": "Billy's Got a Gun",
+      "songid": "73d5cee5",
+      "count": 227
+    },
+    {
+      "name": "Travelin' Band",
+      "songid": "7bd792e8",
+      "count": 222
+    },
+    {
+      "name": "White Lightning",
+      "songid": "63d7caaf",
+      "count": 200
+    },
+    {
+      "name": "Lady Strange",
+      "songid": "5bd5c348",
+      "count": 183
+    },
+    {
+      "name": "Paper Sun",
+      "songid": "1bd665ac",
+      "count": 180
+    },
+    {
+      "name": "Answer to the Master",
+      "songid": "6bd6a2b6",
+      "count": 169
+    },
+    {
+      "name": "Excitable",
+      "songid": "6bd6de3e",
+      "count": 165
+    },
+    {
+      "name": "Man Enough",
+      "songid": "4bcd0f2a",
+      "count": 163
+    },
+    {
+      "name": "Now",
+      "songid": "6bd672e2",
+      "count": 155
+    },
+    {
+      "name": "Four Letter Word",
+      "songid": "2bd6d06e",
+      "count": 150
+    },
+    {
+      "name": "Hello America",
+      "songid": "2bd63c72",
+      "count": 144
+    },
+    {
+      "name": "This Guitar",
+      "songid": "1be3a910",
+      "count": 134
+    },
+    {
+      "name": "Let's Go",
+      "songid": "1bce89c0",
+      "count": 133
+    },
+    {
+      "name": "Undefeated",
+      "songid": "73d11681",
+      "count": 132
+    },
+    {
+      "name": "Work It Out",
+      "songid": "7bd482c4",
+      "count": 125
+    },
+    {
+      "name": "Deliver Me",
+      "songid": "63d482bb",
+      "count": 124
+    },
+    {
+      "name": "No Matter What",
+      "songid": "4bd5b33e",
+      "count": 120
+    },
+    {
+      "name": "Dangerous",
+      "songid": "1bcfb578",
+      "count": 118
+    },
+    {
+      "name": "Overture",
+      "songid": "73d66ae9",
+      "count": 106
+    },
+    {
+      "name": "On Through the Night",
+      "songid": "43d5c34b",
+      "count": 104
+    },
+    {
+      "name": "Long Long Way to Go",
+      "songid": "43dad387",
+      "count": 102
+    },
+    {
+      "name": "All I Want Is Everything",
+      "songid": "6bd482ba",
+      "count": 99
+    },
+    {
+      "name": "When the Walls Came Tumbling Down",
+      "songid": "73d7fe69",
+      "count": 99
+    },
+    {
+      "name": "Demolition Man",
+      "songid": "53d6f349",
+      "count": 91
+    },
+    {
+      "name": "Nine Lives",
+      "songid": "63d676bb",
+      "count": 87
+    },
+    {
+      "name": "Satellite",
+      "songid": "4bd64f2e",
+      "count": 86
+    },
+    {
+      "name": "C'mon C'mon",
+      "songid": "3d685e7",
+      "count": 85
+    },
+    {
+      "name": "Kick",
+      "songid": "53e27f51",
+      "count": 84
+    },
+    {
+      "name": "Take What You Want",
+      "songid": "3be27c0c",
+      "count": 84
+    },
+    {
+      "name": "Medicine Man",
+      "songid": "53d31f79",
+      "count": 82
+    },
+    {
+      "name": "Just Like '73",
+      "songid": "5b979324",
+      "count": 75
+    },
+    {
+      "name": "Good Morning Freedom",
+      "songid": "73d26ec5",
+      "count": 74
+    },
+    {
+      "name": "Goodbye",
+      "songid": "7bd6cab4",
+      "count": 73
+    },
+    {
+      "name": "Don't Shoot Shotgun",
+      "songid": "4bd2233e",
+      "count": 70
+    },
+    {
+      "name": "Ride Into the Sun",
+      "songid": "43d657d7",
+      "count": 64
+    },
+    {
+      "name": "Sorrow Is a Woman",
+      "songid": "1bd7b9b0",
+      "count": 63
+    },
+    {
+      "name": "Good Golly, Miss Molly",
+      "songid": "13e67939",
+      "count": 59
+    },
+    {
+      "name": "Love and Affection",
+      "songid": "3d5b507",
+      "count": 53
+    },
+    {
+      "name": "Run Riot",
+      "songid": "bd5b506",
+      "count": 53
+    },
+    {
+      "name": "Tonight",
+      "songid": "3d2190f",
+      "count": 51
+    },
+    {
+      "name": "20th Century Boy",
+      "songid": "3bd76814",
+      "count": 48
+    },
+    {
+      "name": "You're So Beautiful",
+      "songid": "43d7f3c7",
+      "count": 45
+    },
+    {
+      "name": "Bad Actress",
+      "songid": "33d69881",
+      "count": 35
+    },
+    {
+      "name": "From the Inside",
+      "songid": "6bdeee7a",
+      "count": 33
+    },
+    {
+      "name": "Where Does Love Go When It Dies / Now / When Love and Hate Collide / Have You Ever Needed Someone So Bad / Two Steps Behind",
+      "songid": "23ddecf7",
+      "count": 27
+    },
+    {
+      "name": "Gift of Flesh",
+      "songid": "7bdaaa68",
+      "count": 23
+    },
+    {
+      "name": "Breathe a Sigh",
+      "songid": "13d3ed69",
+      "count": 20
+    },
+    {
+      "name": "Rocks Off",
+      "songid": "23d65017",
+      "count": 20
+    },
+    {
+      "name": "S.M.C.",
+      "songid": "4bd05796",
+      "count": 20
+    },
+    {
+      "name": "Comin' Under Fire",
+      "songid": "63def637",
+      "count": 18
+    },
+    {
+      "name": "It's All About Believin'",
+      "songid": "13dd8d3d",
+      "count": 17
+    },
+    {
+      "name": "You Can't Always Get What You Want / Where Does Love Go When It Dies / Now / When Love and Hate Collide / Have You Ever Needed Someone So Bad / Two Steps Behind",
+      "songid": "4bc03b42",
+      "count": 16
+    },
+    {
+      "name": "Hell Raiser",
+      "songid": "23d23897",
+      "count": 15
+    },
+    {
+      "name": "Personal Jesus",
+      "songid": "63d666d7",
+      "count": 15
+    },
+    {
+      "name": "Rejoice",
+      "songid": "4b9ac336",
+      "count": 15
+    },
+    {
+      "name": "Miss You in a Heartbeat",
+      "songid": "2bead406",
+      "count": 14
+    },
+    {
+      "name": "Fire It Up",
+      "songid": "13e3a931",
+      "count": 12
+    },
+    {
+      "name": "Let Me Be the One",
+      "songid": "33fcc039",
+      "count": 12
+    },
+    {
+      "name": "We Belong",
+      "songid": "2bf0349e",
+      "count": 12
+    },
+    {
+      "name": "You Can't Always Get What You Want",
+      "songid": "1bd7f1cc",
+      "count": 12
+    },
+    {
+      "name": "Ziggy Stardust",
+      "songid": "3d7ed0b",
+      "count": 12
+    },
+    {
+      "name": "Heat Street",
+      "songid": "6bd6c28e",
+      "count": 11
+    },
+    {
+      "name": "Ring of Fire",
+      "songid": "13d22171",
+      "count": 9
+    },
+    {
+      "name": "Where Does Love Go When It Dies",
+      "songid": "3d2056b",
+      "count": 9
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "43d26b93",
+      "count": 8
+    },
+    {
+      "name": "Emerald",
+      "songid": "53d6e361",
+      "count": 8
+    },
+    {
+      "name": "Get It On",
+      "songid": "43d1f797",
+      "count": 8
+    },
+    {
+      "name": "Glad I'm Alive",
+      "songid": "6bd26ebe",
+      "count": 8
+    },
+    {
+      "name": "Back in Black",
+      "songid": "2bd69812",
+      "count": 7
+    },
+    {
+      "name": "Can't Keep Away From the Flame",
+      "songid": "7bdaaa7c",
+      "count": 7
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 7
+    },
+    {
+      "name": "Rock and Roll",
+      "songid": "1bd65108",
+      "count": 7
+    },
+    {
+      "name": "Rosalie",
+      "songid": "5bd77748",
+      "count": 7
+    },
+    {
+      "name": "Hanging on the Telephone",
+      "songid": "5bd2971c",
+      "count": 6
+    },
+    {
+      "name": "Little Wing",
+      "songid": "63d53a4f",
+      "count": 6
+    },
+    {
+      "name": "Enter Sandman",
+      "songid": "bd6dd5a",
+      "count": 5
+    },
+    {
+      "name": "Go",
+      "songid": "23d45c47",
+      "count": 5
+    },
+    {
+      "name": "Not Fade Away / My Generation / Radar Love / Come Together / Whole Lotta Love",
+      "songid": "4bdf5fc6",
+      "count": 5
+    },
+    {
+      "name": "All the Young Dudes",
+      "songid": "6bd742aa",
+      "count": 4
+    },
+    {
+      "name": "Can't Get Enough",
+      "songid": "2bd68492",
+      "count": 4
+    },
+    {
+      "name": "Pretty Vacant",
+      "songid": "2bd65c6e",
+      "count": 4
+    },
+    {
+      "name": "Back in Your Face",
+      "songid": "3dac97b",
+      "count": 3
+    },
+    {
+      "name": "Beyond the Temple",
+      "songid": "5bc66b54",
+      "count": 3
+    },
+    {
+      "name": "Come as You Are",
+      "songid": "1bdf6190",
+      "count": 3
+    },
+    {
+      "name": "Elected",
+      "songid": "33d6e001",
+      "count": 3
+    },
+    {
+      "name": "Now I'm Here",
+      "songid": "6bd672d2",
+      "count": 3
+    },
+    {
+      "name": "The Overture",
+      "songid": "3bd79c6c",
+      "count": 3
+    },
+    {
+      "name": "Back in Black / Enter Sandman / You Can't Always Get What You Want",
+      "songid": "3fce19b",
+      "count": 2
+    },
+    {
+      "name": "Better Be Home Soon",
+      "songid": "63d6964f",
+      "count": 2
+    },
+    {
+      "name": "Black Betty",
+      "songid": "6be7ce3e",
+      "count": 2
+    },
+    {
+      "name": "Cleveland Rocks",
+      "songid": "7bd57a24",
+      "count": 2
+    },
+    {
+      "name": "Honky Tonk Women",
+      "songid": "43d63b53",
+      "count": 2
+    },
+    {
+      "name": "Jailbreak",
+      "songid": "5bd62344",
+      "count": 2
+    },
+    {
+      "name": "No No No",
+      "songid": "63ce0a97",
+      "count": 2
+    },
+    {
+      "name": "Over the Hills and Far Away",
+      "songid": "63d66a37",
+      "count": 2
+    },
+    {
+      "name": "Turn to Dust",
+      "songid": "7bdad23c",
+      "count": 2
+    },
+    {
+      "name": "When the Rain Falls",
+      "songid": "2bfb3c26",
+      "count": 2
+    },
+    {
+      "name": "World Beyond the Sky",
+      "songid": "53dad385",
+      "count": 2
+    },
+    {
+      "name": "21st Century Sha La La La Girl",
+      "songid": "1bdac958",
+      "count": 1
+    },
+    {
+      "name": "3,000 Miles From Here",
+      "songid": "4bde5b72",
+      "count": 1
+    },
+    {
+      "name": "Action! Not Words",
+      "songid": "3d291bb",
+      "count": 1
+    },
+    {
+      "name": "All Right Now",
+      "songid": "53d6a7b9",
+      "count": 1
+    },
+    {
+      "name": "American Pie",
+      "songid": "3bd6a058",
+      "count": 1
+    },
+    {
+      "name": "Boston Tea Party",
+      "songid": "4bd5e3ee",
+      "count": 1
+    },
+    {
+      "name": "Brighton Rock",
+      "songid": "13d68995",
+      "count": 1
+    },
+    {
+      "name": "Brown Sugar",
+      "songid": "33d68881",
+      "count": 1
+    },
+    {
+      "name": "Changes",
+      "songid": "53d4e771",
+      "count": 1
+    },
+    {
+      "name": "Day After Day",
+      "songid": "73dac6c1",
+      "count": 1
+    },
+    {
+      "name": "Doctor Doctor",
+      "songid": "1bd6e978",
+      "count": 1
+    },
+    {
+      "name": "Don't Believe a Word",
+      "songid": "33d17495",
+      "count": 1
+    },
+    {
+      "name": "Enter Sandman  / Back in Black / You Can't Always Get What You Want",
+      "songid": "23ee5087",
+      "count": 1
+    },
+    {
+      "name": "Fire",
+      "songid": "3d75577",
+      "count": 1
+    },
+    {
+      "name": "Got to See the Lights",
+      "songid": "139abd75",
+      "count": 1
+    },
+    {
+      "name": "Hallucinate",
+      "songid": "53de8f5d",
+      "count": 1
+    },
+    {
+      "name": "Have You Ever Seen the Rain?",
+      "songid": "3bd7408c",
+      "count": 1
+    },
+    {
+      "name": "Heaven Is",
+      "songid": "63c10e03",
+      "count": 1
+    },
+    {
+      "name": "High 'n' Dry (Saturday Night)",
+      "songid": "bf8858a",
+      "count": 1
+    },
+    {
+      "name": "Hot Blooded",
+      "songid": "5bd63bb8",
+      "count": 1
+    },
+    {
+      "name": "I Wanna Touch U",
+      "songid": "13dfbddd",
+      "count": 1
+    },
+    {
+      "name": "Knockin' on Heaven's Door",
+      "songid": "3bd618b4",
+      "count": 1
+    },
+    {
+      "name": "Life on Mars?",
+      "songid": "33d61095",
+      "count": 1
+    },
+    {
+      "name": "Long Way From Home",
+      "songid": "73dd52b9",
+      "count": 1
+    },
+    {
+      "name": "Make Me Smile (Come Up and See Me)",
+      "songid": "13d28d11",
+      "count": 1
+    },
+    {
+      "name": "Me & My Wine",
+      "songid": "43cb4733",
+      "count": 1
+    },
+    {
+      "name": "Misty Dreamer",
+      "songid": "5bd887ac",
+      "count": 1
+    },
+    {
+      "name": "Move With Me Slowly",
+      "songid": "73dad249",
+      "count": 1
+    },
+    {
+      "name": "My Generation",
+      "songid": "3bd678f8",
+      "count": 1
+    },
+    {
+      "name": "My Hometown",
+      "songid": "3bd678b8",
+      "count": 1
+    },
+    {
+      "name": "Only You Can Rock Me",
+      "songid": "3bd6686c",
+      "count": 1
+    },
+    {
+      "name": "Pinball Wizard",
+      "songid": "2bd66062",
+      "count": 1
+    },
+    {
+      "name": "Pretty Fly (for a White Guy)",
+      "songid": "3d65d97",
+      "count": 1
+    },
+    {
+      "name": "Problem Child",
+      "songid": "3bd65cd0",
+      "count": 1
+    },
+    {
+      "name": "Radar Love",
+      "songid": "1bd659cc",
+      "count": 1
+    },
+    {
+      "name": "Rock and Roll / Black Dog / Whole Lotta Love",
+      "songid": "33d8f8a5",
+      "count": 1
+    },
+    {
+      "name": "Seagull",
+      "songid": "3d7e1eb",
+      "count": 1
+    },
+    {
+      "name": "Smells Like Teen Spirit",
+      "songid": "3d7bd4f",
+      "count": 1
+    },
+    {
+      "name": "Stand by Me",
+      "songid": "3d261bf",
+      "count": 1
+    },
+    {
+      "name": "Suffragette City",
+      "songid": "3bd7b0e8",
+      "count": 1
+    },
+    {
+      "name": "Sweet Home Alabama",
+      "songid": "bd7ad06",
+      "count": 1
+    },
+    {
+      "name": "The Boys Are Back in Town",
+      "songid": "3bd00c30",
+      "count": 1
+    },
+    {
+      "name": "Tie Your Mother Down",
+      "songid": "53d79719",
+      "count": 1
+    },
+    {
+      "name": "Truth?",
+      "songid": "63daaa6f",
+      "count": 1
+    },
+    {
+      "name": "Walk on the Wild Side",
+      "songid": "63d78627",
+      "count": 1
+    },
+    {
+      "name": "Whole Lotta Love",
+      "songid": "23d7f80b",
+      "count": 1
+    },
+    {
+      "name": "Whole Lotta Love / Back in Black / Sweet Home Alabama / Tonight / You Can't Always Get What You Want",
+      "songid": "13e76195",
+      "count": 1
+    },
+    {
+      "name": "Whole Lotta Shakin' Goin' On",
+      "songid": "7bdd2e28",
+      "count": 1
+    },
+    {
+      "name": "Winter Song",
+      "songid": "73c2da75",
+      "count": 1
+    },
+    {
+      "name": "Won't Get Fooled Again",
+      "songid": "23d7f457",
+      "count": 1
+    },
+    {
+      "name": "You Got Me Runnin'",
+      "songid": "13dd6189",
+      "count": 1
+    }
+  ]
+}

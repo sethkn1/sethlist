@@ -1,0 +1,424 @@
+{
+  "artist": "The Mars Volta",
+  "slug": "the-mars-volta",
+  "stats_id": "1bd69584",
+  "mbid": "20883363-1ea4-4d72-ad72-c0e767038f3e",
+  "fetched_at": "2026-04-30T15:31:58.504515Z",
+  "songs": [
+    {
+      "name": "Roulette Dares (The Haunt Of)",
+      "songid": "53d653d9",
+      "count": 435
+    },
+    {
+      "name": "Drunkship of Lanterns",
+      "songid": "23d6e4a7",
+      "count": 380
+    },
+    {
+      "name": "The Widow",
+      "songid": "2bd79892",
+      "count": 278
+    },
+    {
+      "name": "Cygnus....Vismund Cygnus",
+      "songid": "3d6f537",
+      "count": 254
+    },
+    {
+      "name": "Cicatriz ESP",
+      "songid": "7bd682cc",
+      "count": 245
+    },
+    {
+      "name": "Goliath",
+      "songid": "4bd6cb8e",
+      "count": 223
+    },
+    {
+      "name": "Viscera Eyes",
+      "songid": "23d78477",
+      "count": 205
+    },
+    {
+      "name": "Inertiatic ESP",
+      "songid": "6bd62a2e",
+      "count": 182
+    },
+    {
+      "name": "L'Via L'Viaquez",
+      "songid": "4bd61b96",
+      "count": 168
+    },
+    {
+      "name": "Concertina",
+      "songid": "63d6feb3",
+      "count": 154
+    },
+    {
+      "name": "Take the Veil Cerpin Taxt",
+      "songid": "5bd7af84",
+      "count": 152
+    },
+    {
+      "name": "Wax Simulacra",
+      "songid": "3bd780ec",
+      "count": 149
+    },
+    {
+      "name": "Son et lumiere",
+      "songid": "3d181cb",
+      "count": 133
+    },
+    {
+      "name": "Televators",
+      "songid": "23d7d06b",
+      "count": 106
+    },
+    {
+      "name": "Eriatarka",
+      "songid": "3bd7d074",
+      "count": 98
+    },
+    {
+      "name": "Tetragrammaton",
+      "songid": "23d7a893",
+      "count": 92
+    },
+    {
+      "name": "Ilyena",
+      "songid": "1bd62900",
+      "count": 85
+    },
+    {
+      "name": "Eunuch Provocateur",
+      "songid": "33d6dc29",
+      "count": 81
+    },
+    {
+      "name": "Ouroborous",
+      "songid": "5bd66b34",
+      "count": 77
+    },
+    {
+      "name": "Day of the Baphomets",
+      "songid": "63d6f617",
+      "count": 75
+    },
+    {
+      "name": "Graveyard Love",
+      "songid": "43e02f8f",
+      "count": 73
+    },
+    {
+      "name": "Aberinkula",
+      "songid": "4bd6ab1a",
+      "count": 65
+    },
+    {
+      "name": "Cotopaxi",
+      "songid": "23d6f87b",
+      "count": 65
+    },
+    {
+      "name": "Vicarious Atonement",
+      "songid": "53e02f8d",
+      "count": 58
+    },
+    {
+      "name": "Halo of Nembutals",
+      "songid": "bd495e2",
+      "count": 54
+    },
+    {
+      "name": "Agadez",
+      "songid": "1bd6a55c",
+      "count": 48
+    },
+    {
+      "name": "Teflon",
+      "songid": "1bd7a9b0",
+      "count": 48
+    },
+    {
+      "name": "Cut That City",
+      "songid": "bd6f56a",
+      "count": 45
+    },
+    {
+      "name": "Celaje",
+      "songid": "1b936980",
+      "count": 44
+    },
+    {
+      "name": "Cue the Sun",
+      "songid": "1b9369ac",
+      "count": 44
+    },
+    {
+      "name": "Enlazan las tinieblas",
+      "songid": "39369af",
+      "count": 44
+    },
+    {
+      "name": "Reina tormenta",
+      "songid": "1b9369a8",
+      "count": 44
+    },
+    {
+      "name": "Un disparo al vac\u00edo",
+      "songid": "13936985",
+      "count": 44
+    },
+    {
+      "name": "Alba del orate",
+      "songid": "39369a3",
+      "count": 43
+    },
+    {
+      "name": "Cassandra Gemini",
+      "songid": "63d6868b",
+      "count": 43
+    },
+    {
+      "name": "Fin",
+      "songid": "139369a9",
+      "count": 43
+    },
+    {
+      "name": "Lucro sucio",
+      "songid": "5b936b34",
+      "count": 43
+    },
+    {
+      "name": "Maullidos",
+      "songid": "2393687b",
+      "count": 43
+    },
+    {
+      "name": "Mictl\u00e1n",
+      "songid": "b9369ae",
+      "count": 43
+    },
+    {
+      "name": "Morgana",
+      "songid": "2b93687a",
+      "count": 43
+    },
+    {
+      "name": "The Iron Rose",
+      "songid": "3b900c38",
+      "count": 43
+    },
+    {
+      "name": "Voice in My Knives",
+      "songid": "b9369a2",
+      "count": 43
+    },
+    {
+      "name": "Mito de los trece cielos",
+      "songid": "b936986",
+      "count": 42
+    },
+    {
+      "name": "Poseedora de mi sombra",
+      "songid": "13936981",
+      "count": 42
+    },
+    {
+      "name": "Vocifer\u00f3",
+      "songid": "3936987",
+      "count": 42
+    },
+    {
+      "name": "Cue the Sun (Reprise)",
+      "songid": "53936b35",
+      "count": 41
+    },
+    {
+      "name": "Aegis",
+      "songid": "4bd1477e",
+      "count": 39
+    },
+    {
+      "name": "Dyslexicon",
+      "songid": "5bd14ff4",
+      "count": 39
+    },
+    {
+      "name": "The Malkin Jewel",
+      "songid": "6bde92be",
+      "count": 38
+    },
+    {
+      "name": "This Apparatus Must Be Unearthed",
+      "songid": "4bd4cf42",
+      "count": 38
+    },
+    {
+      "name": "Broken English",
+      "songid": "4bd4ef96",
+      "count": 37
+    },
+    {
+      "name": "Shore Story",
+      "songid": "23ef5473",
+      "count": 37
+    },
+    {
+      "name": "The Whip Hand",
+      "songid": "43de9347",
+      "count": 37
+    },
+    {
+      "name": "Asilos Magdalena",
+      "songid": "43d69f1f",
+      "count": 36
+    },
+    {
+      "name": "Luciforms",
+      "songid": "2bd60896",
+      "count": 36
+    },
+    {
+      "name": "Meccamputechture",
+      "songid": "1bd6016c",
+      "count": 35
+    },
+    {
+      "name": "Detr\u00e1s de la puerta dorada",
+      "songid": "1b936984",
+      "count": 33
+    },
+    {
+      "name": "Molochwalker",
+      "songid": "3df0dff",
+      "count": 33
+    },
+    {
+      "name": "Empty Vessels Make the Loudest Sound",
+      "songid": "43dda36f",
+      "count": 32
+    },
+    {
+      "name": "Jacob Van Lennepkade",
+      "songid": "5bd62360",
+      "count": 26
+    },
+    {
+      "name": "Trinkets Pale of Moon",
+      "songid": "bde85b2",
+      "count": 26
+    },
+    {
+      "name": "Miranda That Ghost Just Isn't Holy Anymore",
+      "songid": "73d602c9",
+      "count": 22
+    },
+    {
+      "name": "Blacklight Shine",
+      "songid": "7be02e6c",
+      "count": 18
+    },
+    {
+      "name": "Since We've Been Wrong",
+      "songid": "bd4c5f2",
+      "count": 15
+    },
+    {
+      "name": "Metatron",
+      "songid": "33d60095",
+      "count": 14
+    },
+    {
+      "name": "Conjugal Burns",
+      "songid": "13d6f971",
+      "count": 13
+    },
+    {
+      "name": "Vermicide",
+      "songid": "2bd7007a",
+      "count": 13
+    },
+    {
+      "name": "Tira Me a las Ara\u00f1as",
+      "songid": "13d181c9",
+      "count": 12
+    },
+    {
+      "name": "Desperate Graves",
+      "songid": "73d6f219",
+      "count": 11
+    },
+    {
+      "name": "Frances the Mute",
+      "songid": "33d70079",
+      "count": 10
+    },
+    {
+      "name": "Rapid Fire Tollbooth",
+      "songid": "73dc8699",
+      "count": 10
+    },
+    {
+      "name": "In Absentia",
+      "songid": "23dda013",
+      "count": 8
+    },
+    {
+      "name": "Lapochka",
+      "songid": "5bdd9b64",
+      "count": 8
+    },
+    {
+      "name": "Interstellar Overdrive",
+      "songid": "3d625eb",
+      "count": 5
+    },
+    {
+      "name": "Noctourniquet",
+      "songid": "43dd9b5b",
+      "count": 3
+    },
+    {
+      "name": "A Fistful of Dollars",
+      "songid": "13def1fd",
+      "count": 2
+    },
+    {
+      "name": "Flash Burns From Flashbacks",
+      "songid": "3bef547c",
+      "count": 2
+    },
+    {
+      "name": "A Plague Upon Your Hissing Children",
+      "songid": "1be4b97c",
+      "count": 1
+    },
+    {
+      "name": "Bass Solo",
+      "songid": "43fc3b2b",
+      "count": 1
+    },
+    {
+      "name": "Coded Language",
+      "songid": "33d6fcfd",
+      "count": 1
+    },
+    {
+      "name": "Jacob jam",
+      "songid": "2b963caa",
+      "count": 1
+    },
+    {
+      "name": "Obelisk",
+      "songid": "7be226a0",
+      "count": 1
+    },
+    {
+      "name": "San Francisco (Be Sure to Wear Flowers in Your Hair)",
+      "songid": "63d232db",
+      "count": 1
+    }
+  ]
+}

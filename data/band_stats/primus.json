@@ -1,0 +1,1224 @@
+{
+  "artist": "Primus",
+  "slug": "primus",
+  "stats_id": "6bd69e5e",
+  "mbid": "84dc4f23-c0b8-4fe1-bbca-a3993ddc8fc2",
+  "fetched_at": "2026-04-30T15:30:55.729203Z",
+  "songs": [
+    {
+      "name": "Jerry Was a Race Car Driver",
+      "songid": "5bd23354",
+      "count": 1026
+    },
+    {
+      "name": "My Name Is Mud",
+      "songid": "4bd67b3a",
+      "count": 915
+    },
+    {
+      "name": "Those Damned Blue-Collar Tweekers",
+      "songid": "6bd22636",
+      "count": 898
+    },
+    {
+      "name": "Groundhog's Day",
+      "songid": "3bd6c4b8",
+      "count": 591
+    },
+    {
+      "name": "Too Many Puppies",
+      "songid": "7bd75ebc",
+      "count": 567
+    },
+    {
+      "name": "Here Come the Bastards",
+      "songid": "13d7c92d",
+      "count": 545
+    },
+    {
+      "name": "Southbound Pachyderm",
+      "songid": "6bd75ebe",
+      "count": 491
+    },
+    {
+      "name": "American Life",
+      "songid": "3d7c923",
+      "count": 482
+    },
+    {
+      "name": "Tommy the Cat",
+      "songid": "3bd278d8",
+      "count": 472
+    },
+    {
+      "name": "Harold of the Rocks",
+      "songid": "23d7c4df",
+      "count": 469
+    },
+    {
+      "name": "Wynona's Big Brown Beaver",
+      "songid": "5bd75f00",
+      "count": 447
+    },
+    {
+      "name": "Pudding Time",
+      "songid": "5bd65f0c",
+      "count": 430
+    },
+    {
+      "name": "Over the Falls",
+      "songid": "bd20176",
+      "count": 412
+    },
+    {
+      "name": "Seas of Cheese",
+      "songid": "5bd75f04",
+      "count": 405
+    },
+    {
+      "name": "Frizzle Fry",
+      "songid": "33d7c4d9",
+      "count": 369
+    },
+    {
+      "name": "John the Fisherman",
+      "songid": "3bd7c4dc",
+      "count": 348
+    },
+    {
+      "name": "Jilly's on Smack",
+      "songid": "2bd1383e",
+      "count": 339
+    },
+    {
+      "name": "To Defy the Laws of Tradition",
+      "songid": "3d3f567",
+      "count": 339
+    },
+    {
+      "name": "Sgt. Baker",
+      "songid": "13d6455d",
+      "count": 335
+    },
+    {
+      "name": "Eleven",
+      "songid": "6bd75eb2",
+      "count": 307
+    },
+    {
+      "name": "Over the Electric Grapevine",
+      "songid": "43d75ffb",
+      "count": 305
+    },
+    {
+      "name": "Last Salmon Man",
+      "songid": "23ded0ff",
+      "count": 298
+    },
+    {
+      "name": "Mr. Krinkle",
+      "songid": "63d75eaf",
+      "count": 292
+    },
+    {
+      "name": "Lee Van Cleef",
+      "songid": "3d10d5f",
+      "count": 291
+    },
+    {
+      "name": "The Toys Go Winding Down",
+      "songid": "53d75f05",
+      "count": 251
+    },
+    {
+      "name": "Duchess and the Proverbial Mind Spread",
+      "songid": "5bd6e750",
+      "count": 235
+    },
+    {
+      "name": "Mr. Knowitall",
+      "songid": "1bd7c92c",
+      "count": 209
+    },
+    {
+      "name": "Welcome to This World",
+      "songid": "6bd75eae",
+      "count": 205
+    },
+    {
+      "name": "Moron TV",
+      "songid": "63d12e9f",
+      "count": 197
+    },
+    {
+      "name": "Spegetti Western",
+      "songid": "7bd25a5c",
+      "count": 194
+    },
+    {
+      "name": "Nature Boy",
+      "songid": "7bd75eb0",
+      "count": 189
+    },
+    {
+      "name": "Bob",
+      "songid": "43d75f07",
+      "count": 178
+    },
+    {
+      "name": "The Seven",
+      "songid": "4bf6bf0a",
+      "count": 166
+    },
+    {
+      "name": "Mrs. Blaileen",
+      "songid": "63d75ebb",
+      "count": 160
+    },
+    {
+      "name": "Professor Nutbutter's House of Treats",
+      "songid": "6bd75eba",
+      "count": 151
+    },
+    {
+      "name": "The Heckler",
+      "songid": "73d75ebd",
+      "count": 150
+    },
+    {
+      "name": "Fisticuffs",
+      "songid": "73d222c1",
+      "count": 140
+    },
+    {
+      "name": "Drum and Whamola Jam",
+      "songid": "3d4a1e7",
+      "count": 139
+    },
+    {
+      "name": "Fish On (Fisherman Chronicles, Chapter II)",
+      "songid": "3bd46070",
+      "count": 137
+    },
+    {
+      "name": "Is It Luck?",
+      "songid": "7bd75e98",
+      "count": 129
+    },
+    {
+      "name": "Cygnus X-1",
+      "songid": "3d6f53f",
+      "count": 123
+    },
+    {
+      "name": "Golden Boy",
+      "songid": "13d75935",
+      "count": 121
+    },
+    {
+      "name": "Eyes of the Squirrel",
+      "songid": "3bded0f0",
+      "count": 119
+    },
+    {
+      "name": "The Antipop",
+      "songid": "6bd7aa36",
+      "count": 118
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "63d75e8b",
+      "count": 113
+    },
+    {
+      "name": "The Candy Man",
+      "songid": "7bc0aa78",
+      "count": 113
+    },
+    {
+      "name": "HOINFODAMAN",
+      "songid": "3de154b",
+      "count": 111
+    },
+    {
+      "name": "Lacquer Head",
+      "songid": "13d001d9",
+      "count": 97
+    },
+    {
+      "name": "Tragedy's a' Comin'",
+      "songid": "2bdefce2",
+      "count": 91
+    },
+    {
+      "name": "A Farewell to Kings",
+      "songid": "6bd6ae92",
+      "count": 90
+    },
+    {
+      "name": "Cinderella Man",
+      "songid": "7bd682a8",
+      "count": 90
+    },
+    {
+      "name": "Closer to the Heart",
+      "songid": "1bd6fd8c",
+      "count": 90
+    },
+    {
+      "name": "Madrigal",
+      "songid": "2bd594fe",
+      "count": 90
+    },
+    {
+      "name": "Xanadu",
+      "songid": "63d7f64b",
+      "count": 90
+    },
+    {
+      "name": "The Storm",
+      "songid": "3bf640e4",
+      "count": 89
+    },
+    {
+      "name": "De Anza Jig",
+      "songid": "7bd75eb8",
+      "count": 87
+    },
+    {
+      "name": "Oompa Augustus",
+      "songid": "1bce816c",
+      "count": 82
+    },
+    {
+      "name": "Pork Soda",
+      "songid": "63d75ebf",
+      "count": 81
+    },
+    {
+      "name": "The Pressman",
+      "songid": "63d75e93",
+      "count": 81
+    },
+    {
+      "name": "Eternal Consumption Engine",
+      "songid": "1bde1554",
+      "count": 80
+    },
+    {
+      "name": "Shake Hands With Beef",
+      "songid": "bd645e2",
+      "count": 80
+    },
+    {
+      "name": "The Scheme",
+      "songid": "2bf640e6",
+      "count": 80
+    },
+    {
+      "name": "Semi-Wondrous Boat Ride",
+      "songid": "43c2c30b",
+      "count": 79
+    },
+    {
+      "name": "The Trek",
+      "songid": "23f640e7",
+      "count": 79
+    },
+    {
+      "name": "The Dream",
+      "songid": "33f640e5",
+      "count": 78
+    },
+    {
+      "name": "The Ends?",
+      "songid": "23f640db",
+      "count": 78
+    },
+    {
+      "name": "The Valley",
+      "songid": "3bf640e0",
+      "count": 78
+    },
+    {
+      "name": "(I've Got a) Golden Ticket",
+      "songid": "6bc0aa7e",
+      "count": 77
+    },
+    {
+      "name": "Bob's Party Time Lounge",
+      "songid": "bd75936",
+      "count": 77
+    },
+    {
+      "name": "Prelude to a Crawl",
+      "songid": "3bded0f4",
+      "count": 77
+    },
+    {
+      "name": "Hello Skinny",
+      "songid": "2bdeec0e",
+      "count": 76
+    },
+    {
+      "name": "Oompa TV",
+      "songid": "13ce8161",
+      "count": 76
+    },
+    {
+      "name": "Green Ranger",
+      "songid": "4bd137b6",
+      "count": 75
+    },
+    {
+      "name": "Hello Wonkites",
+      "songid": "53e20395",
+      "count": 75
+    },
+    {
+      "name": "Pure Imagination",
+      "songid": "3bdd70a4",
+      "count": 75
+    },
+    {
+      "name": "Cheer Up, Charlie",
+      "songid": "63c0aa7f",
+      "count": 74
+    },
+    {
+      "name": "Farewell Wonkites",
+      "songid": "43e2038b",
+      "count": 74
+    },
+    {
+      "name": "I Want It Now",
+      "songid": "53c7f3d9",
+      "count": 74
+    },
+    {
+      "name": "Oompa Veruca",
+      "songid": "bce8162",
+      "count": 74
+    },
+    {
+      "name": "Oompa Violet",
+      "songid": "3ce8163",
+      "count": 74
+    },
+    {
+      "name": "Puddin' Taine",
+      "songid": "13d75971",
+      "count": 74
+    },
+    {
+      "name": "The Ol' Diamondback Sturgeon (Fisherman's Chronicles, Part 3)",
+      "songid": "6bcbcef6",
+      "count": 74
+    },
+    {
+      "name": "Wonkamobile, Wonkavision",
+      "songid": "4bc7f3de",
+      "count": 74
+    },
+    {
+      "name": "Lermaninoff",
+      "songid": "5be20394",
+      "count": 73
+    },
+    {
+      "name": "Hennepin Crawler",
+      "songid": "3d121b3",
+      "count": 71
+    },
+    {
+      "name": "Kalamazoo",
+      "songid": "1bd75934",
+      "count": 71
+    },
+    {
+      "name": "Hamburger Train",
+      "songid": "73d75ea1",
+      "count": 68
+    },
+    {
+      "name": "My Friend Fats",
+      "songid": "bd4a1fe",
+      "count": 65
+    },
+    {
+      "name": "Extinction Burst",
+      "songid": "bde154a",
+      "count": 60
+    },
+    {
+      "name": "Dirty Drowning Man",
+      "songid": "3bda3400",
+      "count": 58
+    },
+    {
+      "name": "Del Davis Tree Farm",
+      "songid": "73d75eb9",
+      "count": 57
+    },
+    {
+      "name": "Conspiranoia",
+      "songid": "23e2a05f",
+      "count": 56
+    },
+    {
+      "name": "Sathington Waltz",
+      "songid": "13d4a1f1",
+      "count": 56
+    },
+    {
+      "name": "Grandad's Little Ditty",
+      "songid": "73d75e99",
+      "count": 53
+    },
+    {
+      "name": "In the Flesh",
+      "songid": "7bd0aaa4",
+      "count": 51
+    },
+    {
+      "name": "Follow the Fool",
+      "songid": "3e28173",
+      "count": 50
+    },
+    {
+      "name": "Los Bastardos",
+      "songid": "1bd4a1f0",
+      "count": 49
+    },
+    {
+      "name": "Jellikit",
+      "songid": "73d75eb1",
+      "count": 45
+    },
+    {
+      "name": "Electric Uncle Sam",
+      "songid": "33d6e0e1",
+      "count": 44
+    },
+    {
+      "name": "The Final Voyage of the Liquid Sky",
+      "songid": "33df0cf5",
+      "count": 42
+    },
+    {
+      "name": "Sathington Willoughby",
+      "songid": "63d75e9f",
+      "count": 34
+    },
+    {
+      "name": "Glass Sandwich",
+      "songid": "13d2f5cd",
+      "count": 31
+    },
+    {
+      "name": "On the Tweek Again",
+      "songid": "43d0f30b",
+      "count": 31
+    },
+    {
+      "name": "Greet the Sacred Cow",
+      "songid": "3bd23860",
+      "count": 30
+    },
+    {
+      "name": "DMV",
+      "songid": "13d4a1fd",
+      "count": 29
+    },
+    {
+      "name": "The Last Superpower aka Rapscallion",
+      "songid": "3d4a1e3",
+      "count": 27
+    },
+    {
+      "name": "The Awakening",
+      "songid": "23d93017",
+      "count": 26
+    },
+    {
+      "name": "The Air Is Getting Slippery",
+      "songid": "7bd75ea8",
+      "count": 24
+    },
+    {
+      "name": "Hats Off",
+      "songid": "4bd0f30a",
+      "count": 23
+    },
+    {
+      "name": "Polka Dot Rose",
+      "songid": "73d66269",
+      "count": 23
+    },
+    {
+      "name": "Constantinople",
+      "songid": "33deec0d",
+      "count": 22
+    },
+    {
+      "name": "Eclectic Electric",
+      "songid": "2bda3402",
+      "count": 22
+    },
+    {
+      "name": "Behind My Camel",
+      "songid": "1bd2c9c0",
+      "count": 21
+    },
+    {
+      "name": "Big in Japan",
+      "songid": "1bd471f4",
+      "count": 20
+    },
+    {
+      "name": "Coddingtown",
+      "songid": "13d001f9",
+      "count": 20
+    },
+    {
+      "name": "Restin' Bones",
+      "songid": "23c4301b",
+      "count": 19
+    },
+    {
+      "name": "The Carpenter and the Dainty Bride",
+      "songid": "1bd4a1fc",
+      "count": 19
+    },
+    {
+      "name": "To Defy",
+      "songid": "bd4a1e6",
+      "count": 19
+    },
+    {
+      "name": "Pilcher's Squad",
+      "songid": "13d40151",
+      "count": 18
+    },
+    {
+      "name": "Mary the Ice Cube",
+      "songid": "bd4a1e2",
+      "count": 17
+    },
+    {
+      "name": "Little Lord Fentanyl",
+      "songid": "6b9046d6",
+      "count": 15
+    },
+    {
+      "name": "Intruder",
+      "songid": "43d6273f",
+      "count": 14
+    },
+    {
+      "name": "Whamola",
+      "songid": "5bd20b38",
+      "count": 14
+    },
+    {
+      "name": "Amos Moses",
+      "songid": "53deef55",
+      "count": 13
+    },
+    {
+      "name": "Master of Puppets",
+      "songid": "4bd607a2",
+      "count": 12
+    },
+    {
+      "name": "The Chastising of Renegade",
+      "songid": "1bded5c8",
+      "count": 12
+    },
+    {
+      "name": "Holiday in Cambodia",
+      "songid": "23d63853",
+      "count": 10
+    },
+    {
+      "name": "The Jam",
+      "songid": "7bde9a00",
+      "count": 10
+    },
+    {
+      "name": "Hellbound 17 1/2 (Theme From)",
+      "songid": "53d0f315",
+      "count": 9
+    },
+    {
+      "name": "Holy Diver",
+      "songid": "33d6381d",
+      "count": 8
+    },
+    {
+      "name": "Silly Putty",
+      "songid": "13d429ad",
+      "count": 8
+    },
+    {
+      "name": "Sinister Exaggerator",
+      "songid": "2bdeecc2",
+      "count": 8
+    },
+    {
+      "name": "YYZ",
+      "songid": "bd7ed76",
+      "count": 8
+    },
+    {
+      "name": "Kashmir",
+      "songid": "43d61fff",
+      "count": 7
+    },
+    {
+      "name": "She Watch Channel Zero?!",
+      "songid": "6bdb220e",
+      "count": 7
+    },
+    {
+      "name": "Thela Hun Ginjeet",
+      "songid": "5bd46764",
+      "count": 7
+    },
+    {
+      "name": "Thieves",
+      "songid": "73d79afd",
+      "count": 7
+    },
+    {
+      "name": "Erin on the Side of Caution",
+      "songid": "23e268e7",
+      "count": 6
+    },
+    {
+      "name": "The Return of Sathington Willoughby",
+      "songid": "33da34d5",
+      "count": 6
+    },
+    {
+      "name": "Timebomb",
+      "songid": "53deff4d",
+      "count": 6
+    },
+    {
+      "name": "\u00c6nema",
+      "songid": "3d699fb",
+      "count": 5
+    },
+    {
+      "name": "Big Rock Candy Mountain",
+      "songid": "5bd937bc",
+      "count": 5
+    },
+    {
+      "name": "Electric Funeral",
+      "songid": "23d6e0f7",
+      "count": 5
+    },
+    {
+      "name": "La Villa Strangiato",
+      "songid": "7bd61aa0",
+      "count": 5
+    },
+    {
+      "name": "Temporary Phase",
+      "songid": "5bded3a8",
+      "count": 5
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "songid": "bfea57e",
+      "count": 5
+    },
+    {
+      "name": "A Shot in the Dark",
+      "songid": "7bdeee84",
+      "count": 4
+    },
+    {
+      "name": "Coattails of a Dead Man",
+      "songid": "53d22771",
+      "count": 4
+    },
+    {
+      "name": "In the Flesh?",
+      "songid": "4bd62bde",
+      "count": 4
+    },
+    {
+      "name": "Jam",
+      "songid": "23c654db",
+      "count": 4
+    },
+    {
+      "name": "N.I.B.",
+      "songid": "73d67a31",
+      "count": 4
+    },
+    {
+      "name": "Robot Chicken",
+      "songid": "3d115ff",
+      "count": 4
+    },
+    {
+      "name": "Scissor Man",
+      "songid": "13d71da5",
+      "count": 4
+    },
+    {
+      "name": "Smoke on the Water",
+      "songid": "13d7bd01",
+      "count": 4
+    },
+    {
+      "name": "Bass Solo",
+      "songid": "6bd75e96",
+      "count": 3
+    },
+    {
+      "name": "Disco Jam",
+      "songid": "439003cb",
+      "count": 3
+    },
+    {
+      "name": "Immigrant Song",
+      "songid": "bd629ba",
+      "count": 3
+    },
+    {
+      "name": "Moby Dick",
+      "songid": "1bd67de4",
+      "count": 3
+    },
+    {
+      "name": "Shattering Song",
+      "songid": "bde51b6",
+      "count": 3
+    },
+    {
+      "name": "South Park Theme",
+      "songid": "1bded140",
+      "count": 3
+    },
+    {
+      "name": "The Thing That Should Not Be",
+      "songid": "bd799da",
+      "count": 3
+    },
+    {
+      "name": "Year of the Parrot",
+      "songid": "6bd75eb6",
+      "count": 3
+    },
+    {
+      "name": "Camelback Cinema",
+      "songid": "2bded84e",
+      "count": 2
+    },
+    {
+      "name": "Eruption",
+      "songid": "13d7d941",
+      "count": 2
+    },
+    {
+      "name": "Frankenstein",
+      "songid": "23d6d00f",
+      "count": 2
+    },
+    {
+      "name": "Iowan Gal",
+      "songid": "53d22fc1",
+      "count": 2
+    },
+    {
+      "name": "Little Sadie",
+      "songid": "bc35536",
+      "count": 2
+    },
+    {
+      "name": "Paranoid",
+      "songid": "3bd66444",
+      "count": 2
+    },
+    {
+      "name": "Pork Chop's Little Ditty",
+      "songid": "bd45dce",
+      "count": 2
+    },
+    {
+      "name": "Prelude to Fear",
+      "songid": "63de9a03",
+      "count": 2
+    },
+    {
+      "name": "Run Like Hell",
+      "songid": "63d65233",
+      "count": 2
+    },
+    {
+      "name": "Runnin' With the Devil",
+      "songid": "73d652d9",
+      "count": 2
+    },
+    {
+      "name": "The Ballad of Buckethead",
+      "songid": "73d45a85",
+      "count": 2
+    },
+    {
+      "name": "The Bridge Came Tumblin' Down",
+      "songid": "bda2942",
+      "count": 2
+    },
+    {
+      "name": "The Spirit of Radio",
+      "songid": "73d79ea5",
+      "count": 2
+    },
+    {
+      "name": "The Train Kept A-Rollin'",
+      "songid": "2bc53c9a",
+      "count": 2
+    },
+    {
+      "name": "Tom Sawyer",
+      "songid": "3d791db",
+      "count": 2
+    },
+    {
+      "name": "Tomorrow Never Knows",
+      "songid": "1bd7e188",
+      "count": 2
+    },
+    {
+      "name": "War Pigs",
+      "songid": "bd7811a",
+      "count": 2
+    },
+    {
+      "name": "Whole Lotta Rosie",
+      "songid": "23d7f8ff",
+      "count": 2
+    },
+    {
+      "name": "1999",
+      "songid": "3d6b14f",
+      "count": 1
+    },
+    {
+      "name": "2112 Part I: Overture",
+      "songid": "3bd6b00c",
+      "count": 1
+    },
+    {
+      "name": "A Passage to Bangkok",
+      "songid": "33d6a86d",
+      "count": 1
+    },
+    {
+      "name": "A Whole Lotta Cock",
+      "songid": "539003ed",
+      "count": 1
+    },
+    {
+      "name": "Aqualung",
+      "songid": "13d69d91",
+      "count": 1
+    },
+    {
+      "name": "Arnie",
+      "songid": "5393138d",
+      "count": 1
+    },
+    {
+      "name": "Atomic Punk",
+      "songid": "6bd69e6e",
+      "count": 1
+    },
+    {
+      "name": "Battle of New Orleans",
+      "songid": "53fd3711",
+      "count": 1
+    },
+    {
+      "name": "Beer Town (A Little Ode to Asheville)",
+      "songid": "4bf2c776",
+      "count": 1
+    },
+    {
+      "name": "Bring the Noise",
+      "songid": "1bd5fda0",
+      "count": 1
+    },
+    {
+      "name": "Bust a Move",
+      "songid": "43df87a3",
+      "count": 1
+    },
+    {
+      "name": "Cherry Pie",
+      "songid": "7bd76edc",
+      "count": 1
+    },
+    {
+      "name": "Closing Time",
+      "songid": "23d6fc7b",
+      "count": 1
+    },
+    {
+      "name": "Cocaine Blues",
+      "songid": "53c50751",
+      "count": 1
+    },
+    {
+      "name": "Communication Breakdown",
+      "songid": "63d6fe07",
+      "count": 1
+    },
+    {
+      "name": "Crazy Train",
+      "songid": "4bd6fb32",
+      "count": 1
+    },
+    {
+      "name": "Cygnus X-1 Book I: The Voyage",
+      "songid": "7b93f610",
+      "count": 1
+    },
+    {
+      "name": "Disco Bob",
+      "songid": "5b9003ec",
+      "count": 1
+    },
+    {
+      "name": "Drum and Bass Jam",
+      "songid": "5b935fcc",
+      "count": 1
+    },
+    {
+      "name": "Drum and Guitar Jam",
+      "songid": "33937c81",
+      "count": 1
+    },
+    {
+      "name": "Drum, Banjo and Whamola Jam",
+      "songid": "4392dbcf",
+      "count": 1
+    },
+    {
+      "name": "Dub Jam",
+      "songid": "5b936fc8",
+      "count": 1
+    },
+    {
+      "name": "Dumb All Over",
+      "songid": "2bd428ca",
+      "count": 1
+    },
+    {
+      "name": "Fantastic Voyage",
+      "songid": "23d43c6f",
+      "count": 1
+    },
+    {
+      "name": "Feliz Navidad",
+      "songid": "23d0a433",
+      "count": 1
+    },
+    {
+      "name": "Folsom Prison Blues",
+      "songid": "73d6d639",
+      "count": 1
+    },
+    {
+      "name": "Food for the Masses",
+      "songid": "23ded84f",
+      "count": 1
+    },
+    {
+      "name": "Frosty the Snow Man",
+      "songid": "1bf971ec",
+      "count": 1
+    },
+    {
+      "name": "Gangsta Gangsta",
+      "songid": "2bd24806",
+      "count": 1
+    },
+    {
+      "name": "Gin and Juice",
+      "songid": "13d58575",
+      "count": 1
+    },
+    {
+      "name": "Guitar Solo",
+      "songid": "13de71a1",
+      "count": 1
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 1
+    },
+    {
+      "name": "Have a Cigar",
+      "songid": "43d6c353",
+      "count": 1
+    },
+    {
+      "name": "Hawaii Five-O",
+      "songid": "63fcae4f",
+      "count": 1
+    },
+    {
+      "name": "Hello Skinny / Constantinople",
+      "songid": "53da5bc5",
+      "count": 1
+    },
+    {
+      "name": "Hey Bob",
+      "songid": "4b9003ee",
+      "count": 1
+    },
+    {
+      "name": "Hey Joe",
+      "songid": "5bd743a0",
+      "count": 1
+    },
+    {
+      "name": "Hot for Teacher",
+      "songid": "4bd63bae",
+      "count": 1
+    },
+    {
+      "name": "Love Is Like Oxygen",
+      "songid": "bd6095e",
+      "count": 1
+    },
+    {
+      "name": "Making Plans for Nigel",
+      "songid": "4bdcaff6",
+      "count": 1
+    },
+    {
+      "name": "Man on the Silver Mountain",
+      "songid": "4bd027a2",
+      "count": 1
+    },
+    {
+      "name": "Money",
+      "songid": "2bd67c56",
+      "count": 1
+    },
+    {
+      "name": "Natural Joe",
+      "songid": "43d0f30f",
+      "count": 1
+    },
+    {
+      "name": "O Sole Mio",
+      "songid": "7bd80a48",
+      "count": 1
+    },
+    {
+      "name": "Riddles Are Abound Tonight",
+      "songid": "bde51aa",
+      "count": 1
+    },
+    {
+      "name": "Rock and Roll",
+      "songid": "1bd65108",
+      "count": 1
+    },
+    {
+      "name": "Sartori in Tangier",
+      "songid": "4bd4674e",
+      "count": 1
+    },
+    {
+      "name": "Seas of Cheese / Pork Soda",
+      "songid": "33ebe0e5",
+      "count": 1
+    },
+    {
+      "name": "Shadow of a Man",
+      "songid": "1bd64524",
+      "count": 1
+    },
+    {
+      "name": "Shiny Happy People",
+      "songid": "1bd73d5c",
+      "count": 1
+    },
+    {
+      "name": "Space Farm",
+      "songid": "5bd0f314",
+      "count": 1
+    },
+    {
+      "name": "Strangers in the Night",
+      "songid": "6bc0aed2",
+      "count": 1
+    },
+    {
+      "name": "Super-Charger Heaven",
+      "songid": "6bd7b252",
+      "count": 1
+    },
+    {
+      "name": "Sweet Home Alabama",
+      "songid": "bd7ad06",
+      "count": 1
+    },
+    {
+      "name": "The Ballad of Gilligan's Island",
+      "songid": "23ecac57",
+      "count": 1
+    },
+    {
+      "name": "The Family and the Fishing Net",
+      "songid": "3d429a3",
+      "count": 1
+    },
+    {
+      "name": "The Hukilau Song",
+      "songid": "33ea8cdd",
+      "count": 1
+    },
+    {
+      "name": "The Lone Rhinoceros",
+      "songid": "13d305b1",
+      "count": 1
+    },
+    {
+      "name": "The Other One",
+      "songid": "13d79d81",
+      "count": 1
+    },
+    {
+      "name": "The Sails of Charon",
+      "songid": "4bd51b46",
+      "count": 1
+    },
+    {
+      "name": "Voodoo Child (Slight Return)",
+      "songid": "3d4b9e3",
+      "count": 1
+    },
+    {
+      "name": "Wildwood Weed",
+      "songid": "13ded5c9",
+      "count": 1
+    },
+    {
+      "name": "Wounded Knee",
+      "songid": "5bcf275c",
+      "count": 1
+    }
+  ]
+}

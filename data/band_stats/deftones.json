@@ -1,0 +1,824 @@
+{
+  "artist": "Deftones",
+  "slug": "deftones",
+  "stats_id": "1bd689cc",
+  "mbid": "7527f6c2-d762-4b88-b5e2-9244f1e34c46",
+  "fetched_at": "2026-04-30T15:31:44.228064Z",
+  "songs": [
+    {
+      "name": "My Own Summer (Shove It)",
+      "songid": "53d67b19",
+      "count": 1406
+    },
+    {
+      "name": "Be Quiet and Drive (Far Away)",
+      "songid": "3d69503",
+      "count": 1283
+    },
+    {
+      "name": "Change (In the House of Flies)",
+      "songid": "2bd68036",
+      "count": 1226
+    },
+    {
+      "name": "7 Words",
+      "songid": "23d6ac43",
+      "count": 1150
+    },
+    {
+      "name": "Digital Bath",
+      "songid": "33d6eca9",
+      "count": 923
+    },
+    {
+      "name": "Around the Fur",
+      "songid": "3bd69cc8",
+      "count": 913
+    },
+    {
+      "name": "Engine No. 9",
+      "songid": "73d6e29d",
+      "count": 895
+    },
+    {
+      "name": "Root",
+      "songid": "43d65353",
+      "count": 822
+    },
+    {
+      "name": "Headup",
+      "songid": "63d6c25f",
+      "count": 782
+    },
+    {
+      "name": "Feiticeira",
+      "songid": "73d6daf9",
+      "count": 731
+    },
+    {
+      "name": "Rocket Skates",
+      "songid": "bd4c98e",
+      "count": 682
+    },
+    {
+      "name": "Diamond Eyes",
+      "songid": "6bd57e26",
+      "count": 670
+    },
+    {
+      "name": "Bored",
+      "songid": "53d68f35",
+      "count": 666
+    },
+    {
+      "name": "Nosebleed",
+      "songid": "43d6732f",
+      "count": 562
+    },
+    {
+      "name": "Knife Prty",
+      "songid": "33d618d1",
+      "count": 522
+    },
+    {
+      "name": "Passenger",
+      "songid": "23d664a7",
+      "count": 454
+    },
+    {
+      "name": "Minerva",
+      "songid": "73d60221",
+      "count": 449
+    },
+    {
+      "name": "Bloody Cape",
+      "songid": "3d68d17",
+      "count": 446
+    },
+    {
+      "name": "You've Seen the Butcher",
+      "songid": "6bd5760e",
+      "count": 434
+    },
+    {
+      "name": "Sextape",
+      "songid": "3d5712f",
+      "count": 430
+    },
+    {
+      "name": "Swerve City",
+      "songid": "4bda5332",
+      "count": 425
+    },
+    {
+      "name": "Lotion",
+      "songid": "6bd60e16",
+      "count": 417
+    },
+    {
+      "name": "Korea",
+      "songid": "53d61b4d",
+      "count": 405
+    },
+    {
+      "name": "Rosemary",
+      "songid": "3dd1d2f",
+      "count": 385
+    },
+    {
+      "name": "Birthmark",
+      "songid": "13d6918d",
+      "count": 345
+    },
+    {
+      "name": "Hexagram",
+      "songid": "43d63f0f",
+      "count": 328
+    },
+    {
+      "name": "Tempest",
+      "songid": "13dac171",
+      "count": 321
+    },
+    {
+      "name": "Elite",
+      "songid": "2bd6e0a6",
+      "count": 281
+    },
+    {
+      "name": "Hole in the Earth",
+      "songid": "33d63875",
+      "count": 281
+    },
+    {
+      "name": "Beware",
+      "songid": "63d696e7",
+      "count": 258
+    },
+    {
+      "name": "Mascara",
+      "songid": "43d607ef",
+      "count": 255
+    },
+    {
+      "name": "Back to School (Mini Maggit)",
+      "songid": "33d698c9",
+      "count": 250
+    },
+    {
+      "name": "Minus Blindfold",
+      "songid": "7bd602e8",
+      "count": 211
+    },
+    {
+      "name": "Lhabia",
+      "songid": "1bd6118c",
+      "count": 201
+    },
+    {
+      "name": "MX",
+      "songid": "bd679a2",
+      "count": 189
+    },
+    {
+      "name": "Teething",
+      "songid": "13d7a9b1",
+      "count": 184
+    },
+    {
+      "name": "Prince",
+      "songid": "7bd576ec",
+      "count": 172
+    },
+    {
+      "name": "Cherry Waves",
+      "songid": "4bd68322",
+      "count": 167
+    },
+    {
+      "name": "Genesis",
+      "songid": "33e2a435",
+      "count": 147
+    },
+    {
+      "name": "Lifter",
+      "songid": "4bd61352",
+      "count": 144
+    },
+    {
+      "name": "Poltergeist",
+      "songid": "2bdaf432",
+      "count": 132
+    },
+    {
+      "name": "When Girls Telephone Boys",
+      "songid": "5bd7ff10",
+      "count": 132
+    },
+    {
+      "name": "Kimdracula",
+      "songid": "3d619fb",
+      "count": 130
+    },
+    {
+      "name": "Fireal",
+      "songid": "2bd6d452",
+      "count": 127
+    },
+    {
+      "name": "Beauty School",
+      "songid": "73d576ed",
+      "count": 122
+    },
+    {
+      "name": "Rx Queen",
+      "songid": "1bd64d70",
+      "count": 117
+    },
+    {
+      "name": "Rickets",
+      "songid": "5bd657f4",
+      "count": 108
+    },
+    {
+      "name": "One Weak",
+      "songid": "bd669ee",
+      "count": 101
+    },
+    {
+      "name": "Prayers/Triangles",
+      "songid": "73ccce5d",
+      "count": 99
+    },
+    {
+      "name": "CMND/CTRL",
+      "songid": "1bd57128",
+      "count": 93
+    },
+    {
+      "name": "Xerces",
+      "songid": "63d7f64f",
+      "count": 93
+    },
+    {
+      "name": "Dai the Flu",
+      "songid": "13d6f58d",
+      "count": 83
+    },
+    {
+      "name": "Royal",
+      "songid": "bd569ca",
+      "count": 83
+    },
+    {
+      "name": "To Have and to Hold",
+      "songid": "73d79689",
+      "count": 80
+    },
+    {
+      "name": "Risk",
+      "songid": "13d569c9",
+      "count": 77
+    },
+    {
+      "name": "Rats!Rats!Rats!",
+      "songid": "53d65b4d",
+      "count": 72
+    },
+    {
+      "name": "If Only Tonight We Could Sleep",
+      "songid": "6bd62ef6",
+      "count": 62
+    },
+    {
+      "name": "Needles and Pins",
+      "songid": "1bd4a9f8",
+      "count": 60
+    },
+    {
+      "name": "Teenager",
+      "songid": "3d7a9bb",
+      "count": 58
+    },
+    {
+      "name": "Rivi\u00e8re",
+      "songid": "43d597d7",
+      "count": 57
+    },
+    {
+      "name": "Ohms",
+      "songid": "2bf9bcf6",
+      "count": 56
+    },
+    {
+      "name": "Damone",
+      "songid": "3bd6f428",
+      "count": 51
+    },
+    {
+      "name": "Say It Ain't So",
+      "songid": "7bd64e50",
+      "count": 51
+    },
+    {
+      "name": "Battle-Axe",
+      "songid": "13d69551",
+      "count": 48
+    },
+    {
+      "name": "Entombed",
+      "songid": "4bdb7b7e",
+      "count": 48
+    },
+    {
+      "name": "Gore",
+      "songid": "43cd539b",
+      "count": 48
+    },
+    {
+      "name": "infinite source",
+      "songid": "239fd863",
+      "count": 43
+    },
+    {
+      "name": "milk of the madonna",
+      "songid": "3b9fd86c",
+      "count": 43
+    },
+    {
+      "name": "my mind is a mountain",
+      "songid": "139e2d29",
+      "count": 43
+    },
+    {
+      "name": "Phantom Bride",
+      "songid": "23c9bcef",
+      "count": 35
+    },
+    {
+      "name": "(L)MIRL",
+      "songid": "5bcd53a4",
+      "count": 33
+    },
+    {
+      "name": "Pink Maggit",
+      "songid": "33d6604d",
+      "count": 33
+    },
+    {
+      "name": "Right Brigade",
+      "songid": "43d4b747",
+      "count": 29
+    },
+    {
+      "name": "What Happened to You?",
+      "songid": "23c624fb",
+      "count": 29
+    },
+    {
+      "name": "Rubicon",
+      "songid": "23cc102f",
+      "count": 27
+    },
+    {
+      "name": "Street Carp",
+      "songid": "1bd7b140",
+      "count": 27
+    },
+    {
+      "name": "No Ordinary Love",
+      "songid": "4bd7e342",
+      "count": 25
+    },
+    {
+      "name": "ecdysis",
+      "songid": "5b9fdb44",
+      "count": 24
+    },
+    {
+      "name": "locked club",
+      "songid": "2b9c6c9a",
+      "count": 23
+    },
+    {
+      "name": "Fist",
+      "songid": "6bd7e2ba",
+      "count": 21
+    },
+    {
+      "name": "Acid Hologram",
+      "songid": "5bcd5398",
+      "count": 20
+    },
+    {
+      "name": "Can't Even Breathe",
+      "songid": "23d684a7",
+      "count": 20
+    },
+    {
+      "name": "Geometric Headdress",
+      "songid": "33ca983d",
+      "count": 20
+    },
+    {
+      "name": "Rapture",
+      "songid": "4bd65b7a",
+      "count": 20
+    },
+    {
+      "name": "Mein",
+      "songid": "13d601e5",
+      "count": 19
+    },
+    {
+      "name": "Subliminal",
+      "songid": "2bd7b066",
+      "count": 19
+    },
+    {
+      "name": "cut hands",
+      "songid": "7b9c12b4",
+      "count": 18
+    },
+    {
+      "name": "souvenir",
+      "songid": "239fd41b",
+      "count": 17
+    },
+    {
+      "name": "South of Heaven",
+      "songid": "33d7b8e9",
+      "count": 16
+    },
+    {
+      "name": "The Chauffeur",
+      "songid": "23d7a45b",
+      "count": 14
+    },
+    {
+      "name": "Hearts/Wires",
+      "songid": "33cc0875",
+      "count": 13
+    },
+    {
+      "name": "The Boy's Republic",
+      "songid": "6bd7e24e",
+      "count": 13
+    },
+    {
+      "name": "Good Morning Beautiful",
+      "songid": "5bd52be0",
+      "count": 12
+    },
+    {
+      "name": "Keep On Loving You",
+      "songid": "43d61f9f",
+      "count": 12
+    },
+    {
+      "name": "Tired of Sex",
+      "songid": "73d796e1",
+      "count": 11
+    },
+    {
+      "name": "Lovers",
+      "songid": "3be2a40c",
+      "count": 8
+    },
+    {
+      "name": "Romantic Dreams",
+      "songid": "53db7b7d",
+      "count": 7
+    },
+    {
+      "name": "(Like) Linus",
+      "songid": "7bdb5244",
+      "count": 6
+    },
+    {
+      "name": "Deathblow",
+      "songid": "23d28cc3",
+      "count": 6
+    },
+    {
+      "name": "Doomed User",
+      "songid": "bcc852a",
+      "count": 6
+    },
+    {
+      "name": "Combat",
+      "songid": "2bded856",
+      "count": 5
+    },
+    {
+      "name": "Leathers",
+      "songid": "63dafaf7",
+      "count": 5
+    },
+    {
+      "name": "God's Hands",
+      "songid": "bc41d22",
+      "count": 4
+    },
+    {
+      "name": "Please, Please, Please Let Me Get What I Want",
+      "songid": "33d77c71",
+      "count": 4
+    },
+    {
+      "name": "976-EVIL",
+      "songid": "1bd569c8",
+      "count": 3
+    },
+    {
+      "name": "Error",
+      "songid": "4be1f7e2",
+      "count": 3
+    },
+    {
+      "name": "Some People",
+      "songid": "3c01177",
+      "count": 3
+    },
+    {
+      "name": "Somebody",
+      "songid": "53d7bfa9",
+      "count": 3
+    },
+    {
+      "name": "Answers",
+      "songid": "bc01172",
+      "count": 2
+    },
+    {
+      "name": "Ceremony",
+      "songid": "43e1f7a3",
+      "count": 2
+    },
+    {
+      "name": "El Scorcho",
+      "songid": "33d6e035",
+      "count": 2
+    },
+    {
+      "name": "Hump",
+      "songid": "1bc01170",
+      "count": 2
+    },
+    {
+      "name": "Melanie",
+      "songid": "6bc42a06",
+      "count": 2
+    },
+    {
+      "name": "Moana",
+      "songid": "63dc4acb",
+      "count": 2
+    },
+    {
+      "name": "Never Let Me Down Again",
+      "songid": "3bd6742c",
+      "count": 2
+    },
+    {
+      "name": "Night Boat",
+      "songid": "63d67633",
+      "count": 2
+    },
+    {
+      "name": "Plastic",
+      "songid": "13c41d21",
+      "count": 2
+    },
+    {
+      "name": "Professor Booty",
+      "songid": "73d76219",
+      "count": 2
+    },
+    {
+      "name": "Regulate",
+      "songid": "23d2a8ef",
+      "count": 2
+    },
+    {
+      "name": "Territory",
+      "songid": "33d7a8c1",
+      "count": 2
+    },
+    {
+      "name": "Venison",
+      "songid": "3c01173",
+      "count": 2
+    },
+    {
+      "name": "(Rock) Superstar",
+      "songid": "13d4f575",
+      "count": 1
+    },
+    {
+      "name": "Aerials",
+      "songid": "7bd6aac0",
+      "count": 1
+    },
+    {
+      "name": "Anniversary of an Uninteresting Event",
+      "songid": "23d408c3",
+      "count": 1
+    },
+    {
+      "name": "Battery",
+      "songid": "3d6957b",
+      "count": 1
+    },
+    {
+      "name": "Bumble D",
+      "songid": "5bdf5fac",
+      "count": 1
+    },
+    {
+      "name": "Can You See Me",
+      "songid": "7bd53a68",
+      "count": 1
+    },
+    {
+      "name": "Caress",
+      "songid": "63d21a1f",
+      "count": 1
+    },
+    {
+      "name": "Christmas",
+      "songid": "bc01176",
+      "count": 1
+    },
+    {
+      "name": "Crenshaw Punch / I'll Throw Rocks at You",
+      "songid": "63e0faeb",
+      "count": 1
+    },
+    {
+      "name": "Dead Skin Mask",
+      "songid": "3d6f11b",
+      "count": 1
+    },
+    {
+      "name": "Down Under",
+      "songid": "43d05767",
+      "count": 1
+    },
+    {
+      "name": "Finger of Death",
+      "songid": "53c297f1",
+      "count": 1
+    },
+    {
+      "name": "Freaks",
+      "songid": "13c01171",
+      "count": 1
+    },
+    {
+      "name": "Gauze",
+      "songid": "3bd8b098",
+      "count": 1
+    },
+    {
+      "name": "Ghosts",
+      "songid": "23d1fc3b",
+      "count": 1
+    },
+    {
+      "name": "Gift/Guest",
+      "songid": "7b90d6bc",
+      "count": 1
+    },
+    {
+      "name": "Goon Squad",
+      "songid": "2bc624fa",
+      "count": 1
+    },
+    {
+      "name": "Hogburg Hop",
+      "songid": "2bfc942a",
+      "count": 1
+    },
+    {
+      "name": "Holiday",
+      "songid": "2bd7d4d6",
+      "count": 1
+    },
+    {
+      "name": "i think about you all the time",
+      "songid": "39cedf7",
+      "count": 1
+    },
+    {
+      "name": "In the Garage",
+      "songid": "4bd62bd2",
+      "count": 1
+    },
+    {
+      "name": "Jailbreak",
+      "songid": "5bd62344",
+      "count": 1
+    },
+    {
+      "name": "Keep Fishin'",
+      "songid": "4bd61fbe",
+      "count": 1
+    },
+    {
+      "name": "Kill You",
+      "songid": "6bd4de4a",
+      "count": 1
+    },
+    {
+      "name": "Like Glue",
+      "songid": "3dd8173",
+      "count": 1
+    },
+    {
+      "name": "Purple Rain",
+      "songid": "6bd65e66",
+      "count": 1
+    },
+    {
+      "name": "Run to the Hills",
+      "songid": "63d65227",
+      "count": 1
+    },
+    {
+      "name": "Savory",
+      "songid": "53d64f8d",
+      "count": 1
+    },
+    {
+      "name": "Six Pack",
+      "songid": "4bd7df16",
+      "count": 1
+    },
+    {
+      "name": "Slinky",
+      "songid": "3be6fc80",
+      "count": 1
+    },
+    {
+      "name": "Smile",
+      "songid": "43fd2b9b",
+      "count": 1
+    },
+    {
+      "name": "Space Cowboy",
+      "songid": "23d7b8a3",
+      "count": 1
+    },
+    {
+      "name": "Steppin' Out",
+      "songid": "33d7b485",
+      "count": 1
+    },
+    {
+      "name": "The World Has Turned and Left Me Here",
+      "songid": "3d739f3",
+      "count": 1
+    },
+    {
+      "name": "Then She Did...",
+      "songid": "53d79bd1",
+      "count": 1
+    },
+    {
+      "name": "This Place Is Death",
+      "songid": "3d569cf",
+      "count": 1
+    },
+    {
+      "name": "Toxicity",
+      "songid": "4bd79312",
+      "count": 1
+    },
+    {
+      "name": "Try Again",
+      "songid": "3de159b",
+      "count": 1
+    },
+    {
+      "name": "Undone - The Sweater Song",
+      "songid": "3d7898b",
+      "count": 1
+    },
+    {
+      "name": "Wake Me Up Before You Go-Go",
+      "songid": "1bcc65f8",
+      "count": 1
+    },
+    {
+      "name": "War Inside My Head",
+      "songid": "1bd78144",
+      "count": 1
+    },
+    {
+      "name": "Wind of Change",
+      "songid": "7bd7fa40",
+      "count": 1
+    }
+  ]
+}

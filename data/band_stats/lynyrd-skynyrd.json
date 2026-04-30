@@ -1,0 +1,579 @@
+{
+  "artist": "Lynyrd Skynyrd",
+  "slug": "lynyrd-skynyrd",
+  "stats_id": "1bd6ad50",
+  "mbid": "c544ed4d-2390-4442-a83e-1ea2883b09c8",
+  "fetched_at": "2026-04-30T15:31:03.113899Z",
+  "songs": [
+    {
+      "name": "Free Bird",
+      "songid": "3bd6d0b0",
+      "count": 1289
+    },
+    {
+      "name": "Sweet Home Alabama",
+      "songid": "bd7ad06",
+      "count": 1250
+    },
+    {
+      "name": "Gimme Three Steps",
+      "songid": "6bd6cec6",
+      "count": 1191
+    },
+    {
+      "name": "Call Me the Breeze",
+      "songid": "23d72813",
+      "count": 1107
+    },
+    {
+      "name": "That Smell",
+      "songid": "4bd7abee",
+      "count": 1097
+    },
+    {
+      "name": "What's Your Name",
+      "songid": "53d7ff71",
+      "count": 1092
+    },
+    {
+      "name": "Simple Man",
+      "songid": "3bd64058",
+      "count": 1083
+    },
+    {
+      "name": "Saturday Night Special",
+      "songid": "5bd64ff0",
+      "count": 934
+    },
+    {
+      "name": "Workin' for MCA",
+      "songid": "4bd5b762",
+      "count": 803
+    },
+    {
+      "name": "Tuesday's Gone",
+      "songid": "33d78c25",
+      "count": 766
+    },
+    {
+      "name": "I Know a Little",
+      "songid": "3d4ed73",
+      "count": 738
+    },
+    {
+      "name": "Down South Jukin'",
+      "songid": "7bd6ea18",
+      "count": 578
+    },
+    {
+      "name": "Gimme Back My Bullets",
+      "songid": "6bd6ceda",
+      "count": 541
+    },
+    {
+      "name": "The Needle and the Spoon",
+      "songid": "13d4ed71",
+      "count": 529
+    },
+    {
+      "name": "I Ain't the One",
+      "songid": "43d5b763",
+      "count": 493
+    },
+    {
+      "name": "Skynyrd Nation",
+      "songid": "53d7c3f5",
+      "count": 360
+    },
+    {
+      "name": "You Got That Right",
+      "songid": "2bd7f026",
+      "count": 320
+    },
+    {
+      "name": "Whiskey Rock-a-Roller",
+      "songid": "4bd8ab06",
+      "count": 306
+    },
+    {
+      "name": "The Ballad of Curtis Loew",
+      "songid": "bd21962",
+      "count": 282
+    },
+    {
+      "name": "Mississippi Kid",
+      "songid": "7bdfb664",
+      "count": 207
+    },
+    {
+      "name": "Don't Ask Me No Questions",
+      "songid": "3d6e9df",
+      "count": 156
+    },
+    {
+      "name": "Double Trouble",
+      "songid": "4bd6eba2",
+      "count": 156
+    },
+    {
+      "name": "Red White & Blue (Love It or Leave)",
+      "songid": "2bdafcf6",
+      "count": 148
+    },
+    {
+      "name": "Blue Yodel No. 1 (T for Texas)",
+      "songid": "4bc48f92",
+      "count": 146
+    },
+    {
+      "name": "Swamp Music",
+      "songid": "bd7ad6e",
+      "count": 121
+    },
+    {
+      "name": "Travelin' Man",
+      "songid": "23d5d4a3",
+      "count": 106
+    },
+    {
+      "name": "Last of a Dyin' Breed",
+      "songid": "23dd4c53",
+      "count": 102
+    },
+    {
+      "name": "Still Unbroken",
+      "songid": "43d7c3f7",
+      "count": 85
+    },
+    {
+      "name": "Cry for the Bad Man",
+      "songid": "33dd4c55",
+      "count": 77
+    },
+    {
+      "name": "I Got the Same Old Blues",
+      "songid": "53d14bc9",
+      "count": 62
+    },
+    {
+      "name": "On the Hunt",
+      "songid": "3bdd4c54",
+      "count": 62
+    },
+    {
+      "name": "Good Teacher",
+      "songid": "2bdd287e",
+      "count": 61
+    },
+    {
+      "name": "Things Goin' On",
+      "songid": "23d5d4af",
+      "count": 50
+    },
+    {
+      "name": "Workin'",
+      "songid": "33d5d4ad",
+      "count": 48
+    },
+    {
+      "name": "Comin' Home",
+      "songid": "3bd5d4a8",
+      "count": 45
+    },
+    {
+      "name": "Honky Tonk Night Time Man",
+      "songid": "53d63b5d",
+      "count": 42
+    },
+    {
+      "name": "Smokestack Lightning",
+      "songid": "53d03381",
+      "count": 39
+    },
+    {
+      "name": "Keeping the Faith",
+      "songid": "4bd03382",
+      "count": 38
+    },
+    {
+      "name": "Dixie",
+      "songid": "63cf5a4f",
+      "count": 37
+    },
+    {
+      "name": "God & Guns",
+      "songid": "13d409ad",
+      "count": 37
+    },
+    {
+      "name": "Good Thing",
+      "songid": "5bd03384",
+      "count": 31
+    },
+    {
+      "name": "That's How I Like It",
+      "songid": "5bd7abcc",
+      "count": 30
+    },
+    {
+      "name": "The Last Rebel",
+      "songid": "bd269f2",
+      "count": 30
+    },
+    {
+      "name": "Backstreet Crawler",
+      "songid": "63d0327b",
+      "count": 29
+    },
+    {
+      "name": "Searching",
+      "songid": "2bd5d4ae",
+      "count": 28
+    },
+    {
+      "name": "I Need You",
+      "songid": "43c0b31f",
+      "count": 27
+    },
+    {
+      "name": "Southern Women",
+      "songid": "6bd0327a",
+      "count": 27
+    },
+    {
+      "name": "I've Seen Enough",
+      "songid": "3bdf7c28",
+      "count": 26
+    },
+    {
+      "name": "Cross Road Blues",
+      "songid": "43d51be7",
+      "count": 21
+    },
+    {
+      "name": "Edge of Forever",
+      "songid": "53d253c1",
+      "count": 19
+    },
+    {
+      "name": "Good Lovin's Hard to Find",
+      "songid": "1bd03124",
+      "count": 19
+    },
+    {
+      "name": "Berneice",
+      "songid": "33d1d0e1",
+      "count": 18
+    },
+    {
+      "name": "Pick 'em Up",
+      "songid": "33de6071",
+      "count": 18
+    },
+    {
+      "name": "We Ain't Much Different",
+      "songid": "3bd1d0ec",
+      "count": 18
+    },
+    {
+      "name": "Bring It On",
+      "songid": "2bd1d0e2",
+      "count": 16
+    },
+    {
+      "name": "Preacher Man",
+      "songid": "5bd253c0",
+      "count": 16
+    },
+    {
+      "name": "Ain't No Good Life",
+      "songid": "43dbf733",
+      "count": 15
+    },
+    {
+      "name": "Voodoo Lake",
+      "songid": "23d1d0e3",
+      "count": 14
+    },
+    {
+      "name": "Poison Whiskey",
+      "songid": "6bd9ba16",
+      "count": 13
+    },
+    {
+      "name": "All I Can Do Is Write About It",
+      "songid": "73d2f6bd",
+      "count": 12
+    },
+    {
+      "name": "Heartbreak Hotel",
+      "songid": "7bd6c2d0",
+      "count": 12
+    },
+    {
+      "name": "I'm a Country Boy",
+      "songid": "53df07fd",
+      "count": 12
+    },
+    {
+      "name": "One Day at a Time",
+      "songid": "23dd4c4b",
+      "count": 12
+    },
+    {
+      "name": "Railroad Song",
+      "songid": "5bdf07fc",
+      "count": 12
+    },
+    {
+      "name": "Devil in the Bottle",
+      "songid": "53d8ab01",
+      "count": 10
+    },
+    {
+      "name": "Don't Misunderstand Me",
+      "songid": "33df7c35",
+      "count": 9
+    },
+    {
+      "name": "Outta Hell in My Dodge",
+      "songid": "3d0311b",
+      "count": 8
+    },
+    {
+      "name": "Born to Run",
+      "songid": "2bdf7c36",
+      "count": 7
+    },
+    {
+      "name": "That Ain't My America",
+      "songid": "73d20285",
+      "count": 7
+    },
+    {
+      "name": "The Way",
+      "songid": "13dfa1d9",
+      "count": 7
+    },
+    {
+      "name": "Midnight Rider",
+      "songid": "5bd603e0",
+      "count": 6
+    },
+    {
+      "name": "Down South Jukin' / The Needle and the Spoon / Whiskey Rock-a-Roller / Swamp Music / The Ballad of Curtis Loew",
+      "songid": "4bffe3d6",
+      "count": 4
+    },
+    {
+      "name": "Made in the Shade",
+      "songid": "6bd2faba",
+      "count": 4
+    },
+    {
+      "name": "Simple Life",
+      "songid": "1bd4ed7c",
+      "count": 4
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "songid": "bfea57e",
+      "count": 4
+    },
+    {
+      "name": "Am I Losin'",
+      "songid": "bda95be",
+      "count": 3
+    },
+    {
+      "name": "Call Me the Breeze / Sweet Home Alabama",
+      "songid": "43c627ff",
+      "count": 2
+    },
+    {
+      "name": "Dead Man Walkin\u2019",
+      "songid": "6be63eca",
+      "count": 2
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "63d03edb",
+      "count": 2
+    },
+    {
+      "name": "Ain't Talkin' 'bout Love",
+      "songid": "73dcc691",
+      "count": 1
+    },
+    {
+      "name": "All Funked Up",
+      "songid": "43d1732f",
+      "count": 1
+    },
+    {
+      "name": "All I Have Is a Song",
+      "songid": "3d83907",
+      "count": 1
+    },
+    {
+      "name": "Blue Ryder",
+      "songid": "339dd0c5",
+      "count": 1
+    },
+    {
+      "name": "Born to Boogie",
+      "songid": "53cfcf5d",
+      "count": 1
+    },
+    {
+      "name": "Bottoms Up",
+      "songid": "1bc4cd94",
+      "count": 1
+    },
+    {
+      "name": "Can't Get Enough of Your Love",
+      "songid": "b93f5ee",
+      "count": 1
+    },
+    {
+      "name": "Can't Take That Away",
+      "songid": "63dc127f",
+      "count": 1
+    },
+    {
+      "name": "Cheatin' Woman",
+      "songid": "5bdbf76c",
+      "count": 1
+    },
+    {
+      "name": "Country Must Be Country Wide",
+      "songid": "33de5c31",
+      "count": 1
+    },
+    {
+      "name": "Dixie / Free Bird",
+      "songid": "b988d3a",
+      "count": 1
+    },
+    {
+      "name": "Don't Ask Me No Questions / Gimme Back My Bullets / The Needle and the Spoon / Double Trouble / Tuesday's Gone",
+      "songid": "63e5fe9f",
+      "count": 1
+    },
+    {
+      "name": "Don't Ask Me No Questions / The Needle and the Spoon / Cry for the Bad Man / Double Trouble",
+      "songid": "13db21c1",
+      "count": 1
+    },
+    {
+      "name": "Every Mother's Son",
+      "songid": "33d0d449",
+      "count": 1
+    },
+    {
+      "name": "FLA",
+      "songid": "4bc2d71e",
+      "count": 1
+    },
+    {
+      "name": "God Bless America",
+      "songid": "1bd33550",
+      "count": 1
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 1
+    },
+    {
+      "name": "It's a Killer",
+      "songid": "7bdc127c",
+      "count": 1
+    },
+    {
+      "name": "Kick It in the Sticks",
+      "songid": "3c6e5bf",
+      "count": 1
+    },
+    {
+      "name": "Kiss Your Freedom Goodbye",
+      "songid": "33f4dc55",
+      "count": 1
+    },
+    {
+      "name": "Love Don't Always Come Easy",
+      "songid": "63f5fadb",
+      "count": 1
+    },
+    {
+      "name": "One Hell of an Amen",
+      "songid": "bc6e5be",
+      "count": 1
+    },
+    {
+      "name": "One Step Over the Line",
+      "songid": "3bc114d4",
+      "count": 1
+    },
+    {
+      "name": "Red House",
+      "songid": "6bd53a5e",
+      "count": 1
+    },
+    {
+      "name": "Road Fatigue",
+      "songid": "bda95ba",
+      "count": 1
+    },
+    {
+      "name": "Rockin\u2019 Little Town",
+      "songid": "3bf9e054",
+      "count": 1
+    },
+    {
+      "name": "Roll Gypsy Roll",
+      "songid": "3bdaa494",
+      "count": 1
+    },
+    {
+      "name": "Sweet Mama",
+      "songid": "13d83905",
+      "count": 1
+    },
+    {
+      "name": "Talked Myself Right Into It",
+      "songid": "5be3ef80",
+      "count": 1
+    },
+    {
+      "name": "The South's Gonna Do It",
+      "songid": "7bdd668c",
+      "count": 1
+    },
+    {
+      "name": "When You Got Good Friends",
+      "songid": "3bcd1078",
+      "count": 1
+    },
+    {
+      "name": "Who Do You Love?",
+      "songid": "bd7f986",
+      "count": 1
+    },
+    {
+      "name": "Winning Isn't Everything",
+      "songid": "3b98a8fc",
+      "count": 1
+    },
+    {
+      "name": "Wino",
+      "songid": "43c02beb",
+      "count": 1
+    },
+    {
+      "name": "With These Hands",
+      "songid": "be15522",
+      "count": 1
+    }
+  ]
+}

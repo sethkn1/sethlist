@@ -1,0 +1,779 @@
+{
+  "artist": "Genesis",
+  "slug": "genesis",
+  "stats_id": "1bd6b520",
+  "mbid": "8e3fcd7d-bda1-4ca0-b987-b8528d2ee74e",
+  "fetched_at": "2026-04-30T15:35:28.735795Z",
+  "songs": [
+    {
+      "name": "Drum Duet",
+      "songid": "3bd6e434",
+      "count": 666
+    },
+    {
+      "name": "Los Endos",
+      "songid": "43d60fbf",
+      "count": 655
+    },
+    {
+      "name": "I Know What I Like (In Your Wardrobe)",
+      "songid": "13d631c1",
+      "count": 638
+    },
+    {
+      "name": "In the Cage",
+      "songid": "53d62bf5",
+      "count": 603
+    },
+    {
+      "name": "Afterglow",
+      "songid": "13d6a569",
+      "count": 602
+    },
+    {
+      "name": "Turn It On Again",
+      "songid": "2bd78cde",
+      "count": 594
+    },
+    {
+      "name": "Firth of Fifth",
+      "songid": "23d6d4db",
+      "count": 568
+    },
+    {
+      "name": "The Lamb Lies Down on Broadway",
+      "songid": "43d7a31f",
+      "count": 546
+    },
+    {
+      "name": "Carpet Crawlers",
+      "songid": "73d50299",
+      "count": 512
+    },
+    {
+      "name": "Dance on a Volcano",
+      "songid": "23d6f407",
+      "count": 493
+    },
+    {
+      "name": "Follow You Follow Me",
+      "songid": "63d6d643",
+      "count": 490
+    },
+    {
+      "name": "The Musical Box",
+      "songid": "1bd79d68",
+      "count": 440
+    },
+    {
+      "name": "The Cinema Show",
+      "songid": "2bd7a44e",
+      "count": 439
+    },
+    {
+      "name": "Home by the Sea",
+      "songid": "33d8f819",
+      "count": 395
+    },
+    {
+      "name": "Second Home by the Sea",
+      "songid": "bd779da",
+      "count": 395
+    },
+    {
+      "name": "Supper's Ready",
+      "songid": "73d7b20d",
+      "count": 394
+    },
+    {
+      "name": "Squonk",
+      "songid": "6bd7baea",
+      "count": 347
+    },
+    {
+      "name": "Invisible Touch",
+      "songid": "53d62715",
+      "count": 330
+    },
+    {
+      "name": "Mama",
+      "songid": "1bd605d4",
+      "count": 329
+    },
+    {
+      "name": "Domino",
+      "songid": "3d6e9f3",
+      "count": 324
+    },
+    {
+      "name": "Land of Confusion",
+      "songid": "1bd61508",
+      "count": 313
+    },
+    {
+      "name": "Throwing It All Away",
+      "songid": "43d7977b",
+      "count": 309
+    },
+    {
+      "name": "The Colony of Slippermen",
+      "songid": "6bd71ade",
+      "count": 306
+    },
+    {
+      "name": "Abacab",
+      "songid": "4bd6ab36",
+      "count": 295
+    },
+    {
+      "name": "...In That Quiet Earth",
+      "songid": "2bd090ae",
+      "count": 267
+    },
+    {
+      "name": "Watcher of the Skies",
+      "songid": "53d35385",
+      "count": 267
+    },
+    {
+      "name": "That's All",
+      "songid": "53d7abd1",
+      "count": 261
+    },
+    {
+      "name": "Dancing With the Moonlit Knight",
+      "songid": "2bd7107e",
+      "count": 250
+    },
+    {
+      "name": "Tonight, Tonight, Tonight",
+      "songid": "53d8cba9",
+      "count": 250
+    },
+    {
+      "name": "One for the Vine",
+      "songid": "73d66ea9",
+      "count": 244
+    },
+    {
+      "name": "Eleventh Earl of Mar",
+      "songid": "3bd6e0b4",
+      "count": 241
+    },
+    {
+      "name": "No Son of Mine",
+      "songid": "6bd3ca2e",
+      "count": 223
+    },
+    {
+      "name": "I Can't Dance",
+      "songid": "7bd50298",
+      "count": 215
+    },
+    {
+      "name": "Ripples...",
+      "songid": "3d06523",
+      "count": 205
+    },
+    {
+      "name": "Misunderstanding",
+      "songid": "63d4a65f",
+      "count": 202
+    },
+    {
+      "name": "Behind the Lines",
+      "songid": "13d00935",
+      "count": 196
+    },
+    {
+      "name": "Duchess",
+      "songid": "3d42967",
+      "count": 186
+    },
+    {
+      "name": "Dodo/Lurker",
+      "songid": "5bd5f334",
+      "count": 180
+    },
+    {
+      "name": "Broadway Melody of 1974",
+      "songid": "23d68813",
+      "count": 161
+    },
+    {
+      "name": "Fly on a Windshield",
+      "songid": "43d6d7ab",
+      "count": 161
+    },
+    {
+      "name": "The Lady Lies",
+      "songid": "53d7a325",
+      "count": 160
+    },
+    {
+      "name": "Deep in the Motherlode",
+      "songid": "33d6f0f1",
+      "count": 155
+    },
+    {
+      "name": "Man on the Corner",
+      "songid": "bd42966",
+      "count": 151
+    },
+    {
+      "name": "Robbery, Assault and Battery",
+      "songid": "bd6516a",
+      "count": 150
+    },
+    {
+      "name": "it",
+      "songid": "7bf9be84",
+      "count": 149
+    },
+    {
+      "name": "Who Dunnit?",
+      "songid": "13d42965",
+      "count": 147
+    },
+    {
+      "name": "Say It's Alright Joe",
+      "songid": "7bd4aad0",
+      "count": 127
+    },
+    {
+      "name": "The Knife",
+      "songid": "5bd7a328",
+      "count": 121
+    },
+    {
+      "name": "Hold on My Heart",
+      "songid": "2bd8f81a",
+      "count": 120
+    },
+    {
+      "name": "Fading Lights",
+      "songid": "1bd779e4",
+      "count": 117
+    },
+    {
+      "name": "The Brazilian",
+      "songid": "13d7a5e1",
+      "count": 113
+    },
+    {
+      "name": "Back in N.Y.C.",
+      "songid": "73d71ae1",
+      "count": 111
+    },
+    {
+      "name": "Illegal Alien",
+      "songid": "7bd4a658",
+      "count": 108
+    },
+    {
+      "name": "The Fountain of Salmacis",
+      "songid": "53d8d7f5",
+      "count": 102
+    },
+    {
+      "name": "Lilywhite Lilith",
+      "songid": "7bd71ae4",
+      "count": 101
+    },
+    {
+      "name": "Anyway",
+      "songid": "6bd71ada",
+      "count": 100
+    },
+    {
+      "name": "Counting Out Time",
+      "songid": "63d71ae7",
+      "count": 100
+    },
+    {
+      "name": "Cuckoo Cocoon",
+      "songid": "7bd71aec",
+      "count": 100
+    },
+    {
+      "name": "Hairless Heart",
+      "songid": "7bd71ae0",
+      "count": 100
+    },
+    {
+      "name": "Here Comes the Supernatural Anaesthetist",
+      "songid": "73d71ad9",
+      "count": 100
+    },
+    {
+      "name": "In the Rapids",
+      "songid": "63d71ad3",
+      "count": 100
+    },
+    {
+      "name": "Ravine",
+      "songid": "73d71add",
+      "count": 100
+    },
+    {
+      "name": "Riding the Scree",
+      "songid": "7bd71adc",
+      "count": 100
+    },
+    {
+      "name": "Silent Sorrow in Empty Boats",
+      "songid": "63d71adf",
+      "count": 100
+    },
+    {
+      "name": "The Chamber of 32 Doors",
+      "songid": "6bd71ae6",
+      "count": 100
+    },
+    {
+      "name": "The Grand Parade of Lifeless Packaging",
+      "songid": "63d71ae3",
+      "count": 100
+    },
+    {
+      "name": "The Lamia",
+      "songid": "7bd71ad8",
+      "count": 100
+    },
+    {
+      "name": "The Light Dies Down on Broadway",
+      "songid": "63d1b243",
+      "count": 100
+    },
+    {
+      "name": "The Waiting Room",
+      "songid": "63d71adb",
+      "count": 100
+    },
+    {
+      "name": "Behind the Lines / Duke's End",
+      "songid": "63d3ca2f",
+      "count": 96
+    },
+    {
+      "name": "Burning Rope",
+      "songid": "63d68a13",
+      "count": 84
+    },
+    {
+      "name": "Duke's End",
+      "songid": "7bd00ec0",
+      "count": 76
+    },
+    {
+      "name": "Duke's Travels",
+      "songid": "73d00ec1",
+      "count": 76
+    },
+    {
+      "name": "Guide Vocal",
+      "songid": "6bd00ec2",
+      "count": 76
+    },
+    {
+      "name": "Your Own Special Way",
+      "songid": "73d7f2e5",
+      "count": 75
+    },
+    {
+      "name": "Keep It Dark",
+      "songid": "6bd4a65e",
+      "count": 71
+    },
+    {
+      "name": "It's Gonna Get Better",
+      "songid": "73d4a65d",
+      "count": 70
+    },
+    {
+      "name": "Jesus He Knows Me",
+      "songid": "3d779db",
+      "count": 70
+    },
+    {
+      "name": "The Return of the Giant Hogweed",
+      "songid": "6bd4aae6",
+      "count": 70
+    },
+    {
+      "name": "No Reply at All",
+      "songid": "3d4295b",
+      "count": 67
+    },
+    {
+      "name": "Driving the Last Spike",
+      "songid": "13d779e5",
+      "count": 66
+    },
+    {
+      "name": "White Mountain",
+      "songid": "1bd7f9e8",
+      "count": 64
+    },
+    {
+      "name": "Me and Sarah Jane",
+      "songid": "1bd42964",
+      "count": 60
+    },
+    {
+      "name": "Entangled",
+      "songid": "1bd6dd60",
+      "count": 59
+    },
+    {
+      "name": "In Too Deep",
+      "songid": "53d42b91",
+      "count": 53
+    },
+    {
+      "name": "Calling All Stations",
+      "songid": "13d461e5",
+      "count": 49
+    },
+    {
+      "name": "Congo",
+      "songid": "13d461d9",
+      "count": 49
+    },
+    {
+      "name": "The Cinema Show / Duke's Travels",
+      "songid": "6bd1b66a",
+      "count": 48
+    },
+    {
+      "name": "The Dividing Line",
+      "songid": "3d461df",
+      "count": 47
+    },
+    {
+      "name": "More Fool Me",
+      "songid": "7bd71af0",
+      "count": 44
+    },
+    {
+      "name": "The Battle of Epping Forest",
+      "songid": "33d25015",
+      "count": 44
+    },
+    {
+      "name": "Twilight Alehouse",
+      "songid": "6bd4aaf6",
+      "count": 42
+    },
+    {
+      "name": "Down and Out",
+      "songid": "4bd05f1e",
+      "count": 37
+    },
+    {
+      "name": "Get 'em Out by Friday",
+      "songid": "7bd4aae4",
+      "count": 36
+    },
+    {
+      "name": "There Must Be Some Other Way",
+      "songid": "3d461db",
+      "count": 35
+    },
+    {
+      "name": "Dreaming While You Sleep",
+      "songid": "2bd41cc2",
+      "count": 32
+    },
+    {
+      "name": "Inside and Out",
+      "songid": "63d62a93",
+      "count": 31
+    },
+    {
+      "name": "Not About Us",
+      "songid": "1bd531fc",
+      "count": 31
+    },
+    {
+      "name": "Stagnation",
+      "songid": "7bd4aae8",
+      "count": 27
+    },
+    {
+      "name": "Alien Afternoon",
+      "songid": "1bd461e4",
+      "count": 22
+    },
+    {
+      "name": "Ballad of Big",
+      "songid": "4bd18bb6",
+      "count": 22
+    },
+    {
+      "name": "Happy the Man",
+      "songid": "73d4aae1",
+      "count": 21
+    },
+    {
+      "name": "Horizons",
+      "songid": "13d5d179",
+      "count": 20
+    },
+    {
+      "name": "All in a Mouse's Night",
+      "songid": "6bd4aade",
+      "count": 18
+    },
+    {
+      "name": "Can-Utility and the Coastliners",
+      "songid": "73d4aae5",
+      "count": 17
+    },
+    {
+      "name": "Shipwrecked",
+      "songid": "bd461da",
+      "count": 17
+    },
+    {
+      "name": "Harold the Barrel",
+      "songid": "63d4aadb",
+      "count": 11
+    },
+    {
+      "name": "Going Out to Get You",
+      "songid": "73d4aaed",
+      "count": 8
+    },
+    {
+      "name": "The Light",
+      "songid": "7bd4aae0",
+      "count": 8
+    },
+    {
+      "name": "Like It or Not",
+      "songid": "bd4295a",
+      "count": 7
+    },
+    {
+      "name": "Paperlate",
+      "songid": "43d5b727",
+      "count": 7
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "23d500ff",
+      "count": 6
+    },
+    {
+      "name": "Harlequin",
+      "songid": "33d500f9",
+      "count": 5
+    },
+    {
+      "name": "Looking for Someone",
+      "songid": "63d4aaf7",
+      "count": 5
+    },
+    {
+      "name": "Dusk",
+      "songid": "73d4aae9",
+      "count": 4
+    },
+    {
+      "name": "Let Us Now Make Love",
+      "songid": "6bd4aaea",
+      "count": 4
+    },
+    {
+      "name": "Pacidy",
+      "songid": "7bd4aaf4",
+      "count": 4
+    },
+    {
+      "name": "Solsbury Hill",
+      "songid": "5bd7bff4",
+      "count": 4
+    },
+    {
+      "name": "Key to Love",
+      "songid": "73c56229",
+      "count": 3
+    },
+    {
+      "name": "Little Leaf",
+      "songid": "6bd4aaf2",
+      "count": 3
+    },
+    {
+      "name": "Seven Stones",
+      "songid": "4bdfb782",
+      "count": 3
+    },
+    {
+      "name": "Babies",
+      "songid": "73d4aaf1",
+      "count": 2
+    },
+    {
+      "name": "Black Sheep",
+      "songid": "bdb69ae",
+      "count": 2
+    },
+    {
+      "name": "Build Me a Mountain",
+      "songid": "73d4aafd",
+      "count": 2
+    },
+    {
+      "name": "Digby of the Rambling Lake",
+      "songid": "23d13c6b",
+      "count": 2
+    },
+    {
+      "name": "Grandma",
+      "songid": "63d4aaeb",
+      "count": 2
+    },
+    {
+      "name": "In Limbo",
+      "songid": "7bd4aafc",
+      "count": 2
+    },
+    {
+      "name": "Living Forever",
+      "songid": "53ec5b75",
+      "count": 2
+    },
+    {
+      "name": "Masochistic Man",
+      "songid": "7bd4aaf8",
+      "count": 2
+    },
+    {
+      "name": "Me and Virgil",
+      "songid": "13dd3961",
+      "count": 2
+    },
+    {
+      "name": "Sitting on Top of the World",
+      "songid": "7bd7eec0",
+      "count": 2
+    },
+    {
+      "name": "The Shepherd",
+      "songid": "7bd4aaec",
+      "count": 2
+    },
+    {
+      "name": "The Stumble",
+      "songid": "13d1e5f1",
+      "count": 2
+    },
+    {
+      "name": "Visions of Angels",
+      "songid": "63d4aaef",
+      "count": 2
+    },
+    {
+      "name": "All I Need Is a Miracle",
+      "songid": "6bd1e6ee",
+      "count": 1
+    },
+    {
+      "name": "Chobham Chords",
+      "songid": "3bd13c74",
+      "count": 1
+    },
+    {
+      "name": "I've Been Travelling All Night Long",
+      "songid": "6bd4aaee",
+      "count": 1
+    },
+    {
+      "name": "In the Beginning",
+      "songid": "2bd13c76",
+      "count": 1
+    },
+    {
+      "name": "In the Cage / ...In That Quiet Earth / Afterglow",
+      "songid": "7b9a0e08",
+      "count": 1
+    },
+    {
+      "name": "In the Wilderness",
+      "songid": "73d4aaf9",
+      "count": 1
+    },
+    {
+      "name": "Jamaican Longboat",
+      "songid": "63d4aae3",
+      "count": 1
+    },
+    {
+      "name": "Moss",
+      "songid": "63d4aae7",
+      "count": 1
+    },
+    {
+      "name": "Movement",
+      "songid": "2bd13c6e",
+      "count": 1
+    },
+    {
+      "name": "One Day",
+      "songid": "33d13c6d",
+      "count": 1
+    },
+    {
+      "name": "Scenes From a Night's Dream",
+      "songid": "2bd93476",
+      "count": 1
+    },
+    {
+      "name": "Scottish Improvisation",
+      "songid": "7b9f36b8",
+      "count": 1
+    },
+    {
+      "name": "Short Cut to Somewhere",
+      "songid": "2bd11422",
+      "count": 1
+    },
+    {
+      "name": "Small Talk",
+      "songid": "3bd0c88c",
+      "count": 1
+    },
+    {
+      "name": "Stranger",
+      "songid": "23d13c6f",
+      "count": 1
+    },
+    {
+      "name": "The Conqueror",
+      "songid": "3bd13c6c",
+      "count": 1
+    },
+    {
+      "name": "The Serpent",
+      "songid": "33d13c75",
+      "count": 1
+    },
+    {
+      "name": "Window",
+      "songid": "3bd13c68",
+      "count": 1
+    },
+    {
+      "name": "Wot Gorilla?",
+      "songid": "63d4aadf",
+      "count": 1
+    },
+    {
+      "name": "You Can't Hurry Love",
+      "songid": "63d05e2b",
+      "count": 1
+    }
+  ]
+}

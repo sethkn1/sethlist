@@ -1,0 +1,254 @@
+{
+  "artist": "Creed",
+  "slug": "creed",
+  "stats_id": "3bd6bcc8",
+  "mbid": "4b1a830b-0a1f-42e5-b8d5-1d6743912e99",
+  "fetched_at": "2026-04-30T15:35:31.018665Z",
+  "songs": [
+    {
+      "name": "My Own Prison",
+      "songid": "4bd67b26",
+      "count": 439
+    },
+    {
+      "name": "Torn",
+      "songid": "33d790b9",
+      "count": 425
+    },
+    {
+      "name": "One",
+      "songid": "73d66e15",
+      "count": 397
+    },
+    {
+      "name": "What's This Life For",
+      "songid": "5bd48ba0",
+      "count": 392
+    },
+    {
+      "name": "With Arms Wide Open",
+      "songid": "3d7f52b",
+      "count": 383
+    },
+    {
+      "name": "Higher",
+      "songid": "7bd63ed4",
+      "count": 381
+    },
+    {
+      "name": "Say I",
+      "songid": "63d64e5f",
+      "count": 376
+    },
+    {
+      "name": "What If",
+      "songid": "3bd7fc48",
+      "count": 355
+    },
+    {
+      "name": "My Sacrifice",
+      "songid": "4bd67bf2",
+      "count": 320
+    },
+    {
+      "name": "Bullets",
+      "songid": "53d68be1",
+      "count": 309
+    },
+    {
+      "name": "One Last Breath",
+      "songid": "7bd66e94",
+      "count": 301
+    },
+    {
+      "name": "Faceless Man",
+      "songid": "bd6d906",
+      "count": 269
+    },
+    {
+      "name": "Are You Ready?",
+      "songid": "2bd69c4e",
+      "count": 251
+    },
+    {
+      "name": "Unforgiven",
+      "songid": "2bd7886a",
+      "count": 179
+    },
+    {
+      "name": "Ode",
+      "songid": "33d66c39",
+      "count": 172
+    },
+    {
+      "name": "Never Die",
+      "songid": "1bd74550",
+      "count": 167
+    },
+    {
+      "name": "Freedom Fighter",
+      "songid": "5bd6d368",
+      "count": 109
+    },
+    {
+      "name": "Illusion",
+      "songid": "1bd62908",
+      "count": 109
+    },
+    {
+      "name": "Weathered",
+      "songid": "73d78201",
+      "count": 102
+    },
+    {
+      "name": "Beautiful",
+      "songid": "3d69597",
+      "count": 98
+    },
+    {
+      "name": "Wrong Way",
+      "songid": "4bd7f7ce",
+      "count": 89
+    },
+    {
+      "name": "A Thousand Faces",
+      "songid": "33d4c4f9",
+      "count": 82
+    },
+    {
+      "name": "Overcome",
+      "songid": "1bd4b998",
+      "count": 72
+    },
+    {
+      "name": "Who's Got My Back?",
+      "songid": "3bd7f828",
+      "count": 70
+    },
+    {
+      "name": "In America",
+      "songid": "23d6284f",
+      "count": 68
+    },
+    {
+      "name": "Hide",
+      "songid": "7bd71a88",
+      "count": 67
+    },
+    {
+      "name": "Don't Stop Dancing",
+      "songid": "3bd6e8b0",
+      "count": 53
+    },
+    {
+      "name": "Stand Here With Me",
+      "songid": "13d7b555",
+      "count": 52
+    },
+    {
+      "name": "Pity for a Dime",
+      "songid": "2bd66006",
+      "count": 47
+    },
+    {
+      "name": "Wash Away Those Years",
+      "songid": "53d5fb25",
+      "count": 39
+    },
+    {
+      "name": "Young Grow Old",
+      "songid": "63d7f267",
+      "count": 39
+    },
+    {
+      "name": "Inside Us All",
+      "songid": "6bdcc282",
+      "count": 37
+    },
+    {
+      "name": "Lullaby",
+      "songid": "4bd60b3a",
+      "count": 30
+    },
+    {
+      "name": "Rain",
+      "songid": "53d4e389",
+      "count": 26
+    },
+    {
+      "name": "Sister",
+      "songid": "33d640bd",
+      "count": 24
+    },
+    {
+      "name": "Suddenly",
+      "songid": "5bd23b30",
+      "count": 23
+    },
+    {
+      "name": "Bound and Tied",
+      "songid": "13d4a941",
+      "count": 21
+    },
+    {
+      "name": "Time",
+      "songid": "3dd7117",
+      "count": 18
+    },
+    {
+      "name": "Full Circle",
+      "songid": "4bd4bb72",
+      "count": 7
+    },
+    {
+      "name": "Riders on the Storm",
+      "songid": "13d77565",
+      "count": 5
+    },
+    {
+      "name": "Signs",
+      "songid": "1bd641fc",
+      "count": 3
+    },
+    {
+      "name": "To Whom It May Concern",
+      "songid": "1bda2d90",
+      "count": 3
+    },
+    {
+      "name": "Bread of Shame",
+      "songid": "43d48fa3",
+      "count": 2
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 2
+    },
+    {
+      "name": "Auld Lang Syne",
+      "songid": "73d02285",
+      "count": 1
+    },
+    {
+      "name": "I'm Eighteen",
+      "songid": "13d62db9",
+      "count": 1
+    },
+    {
+      "name": "On My Sleeve",
+      "songid": "1398b575",
+      "count": 1
+    },
+    {
+      "name": "Roadhouse Blues",
+      "songid": "bd6517a",
+      "count": 1
+    },
+    {
+      "name": "Where the Streets Have No Name",
+      "songid": "63d7fea7",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,764 @@
+{
+  "artist": "Breaking Benjamin",
+  "slug": "breaking-benjamin",
+  "stats_id": "5bd6bfc0",
+  "mbid": "854a1807-025b-42a8-ba8c-2a39717f1d25",
+  "fetched_at": "2026-04-30T15:31:13.020553Z",
+  "songs": [
+    {
+      "name": "So Cold",
+      "songid": "3bd7bc60",
+      "count": 942
+    },
+    {
+      "name": "The Diary of Jane",
+      "songid": "5bd7a748",
+      "count": 890
+    },
+    {
+      "name": "Breath",
+      "songid": "bd6892e",
+      "count": 877
+    },
+    {
+      "name": "Polyamorous",
+      "songid": "63d6625b",
+      "count": 866
+    },
+    {
+      "name": "Blow Me Away",
+      "songid": "13d68df9",
+      "count": 813
+    },
+    {
+      "name": "I Will Not Bow",
+      "songid": "3bd47880",
+      "count": 751
+    },
+    {
+      "name": "Until the End",
+      "songid": "33d7889d",
+      "count": 732
+    },
+    {
+      "name": "Sooner or Later",
+      "songid": "3d7b9cf",
+      "count": 707
+    },
+    {
+      "name": "Failure",
+      "songid": "13c0dd59",
+      "count": 652
+    },
+    {
+      "name": "Angels Fall",
+      "songid": "2bc1c8ea",
+      "count": 494
+    },
+    {
+      "name": "Dance With the Devil",
+      "songid": "3bd6f4e8",
+      "count": 375
+    },
+    {
+      "name": "Follow",
+      "songid": "73d6d669",
+      "count": 359
+    },
+    {
+      "name": "Red Cold River",
+      "songid": "2bf41caa",
+      "count": 345
+    },
+    {
+      "name": "Evil Angel",
+      "songid": "5bd6df80",
+      "count": 336
+    },
+    {
+      "name": "Give Me a Sign",
+      "songid": "3bd2bc10",
+      "count": 311
+    },
+    {
+      "name": "Never Again",
+      "songid": "63cf6e17",
+      "count": 230
+    },
+    {
+      "name": "Simple Design",
+      "songid": "23d64063",
+      "count": 230
+    },
+    {
+      "name": "Believe",
+      "songid": "13c63de5",
+      "count": 223
+    },
+    {
+      "name": "Ashes of Eden",
+      "songid": "7bc15afc",
+      "count": 215
+    },
+    {
+      "name": "Shallow Bay",
+      "songid": "13d645a9",
+      "count": 211
+    },
+    {
+      "name": "Had Enough",
+      "songid": "73d6c639",
+      "count": 209
+    },
+    {
+      "name": "Torn in Two",
+      "songid": "7bf55678",
+      "count": 196
+    },
+    {
+      "name": "Breakdown",
+      "songid": "13d68961",
+      "count": 195
+    },
+    {
+      "name": "Intro",
+      "songid": "33d62471",
+      "count": 171
+    },
+    {
+      "name": "Break My Fall",
+      "songid": "7bd68e8c",
+      "count": 155
+    },
+    {
+      "name": "Firefly",
+      "songid": "33d6d44d",
+      "count": 151
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / Walk",
+      "songid": "3bcdd0f0",
+      "count": 151
+    },
+    {
+      "name": "Home",
+      "songid": "3bd638e8",
+      "count": 149
+    },
+    {
+      "name": "Dear Agony",
+      "songid": "73db2671",
+      "count": 145
+    },
+    {
+      "name": "Unknown Soldier",
+      "songid": "13c2a101",
+      "count": 129
+    },
+    {
+      "name": "Away",
+      "songid": "63d69e8f",
+      "count": 120
+    },
+    {
+      "name": "Sugarcoat",
+      "songid": "3bd7b0b8",
+      "count": 112
+    },
+    {
+      "name": "Topless",
+      "songid": "33d790d1",
+      "count": 107
+    },
+    {
+      "name": "Rain",
+      "songid": "3bd6584c",
+      "count": 102
+    },
+    {
+      "name": "Phase",
+      "songid": "1bd66178",
+      "count": 95
+    },
+    {
+      "name": "Without You",
+      "songid": "bce8182",
+      "count": 94
+    },
+    {
+      "name": "Who Wants to Live Forever",
+      "songid": "63d2c25f",
+      "count": 78
+    },
+    {
+      "name": "Water",
+      "songid": "2bd78036",
+      "count": 74
+    },
+    {
+      "name": "\u00c6nema",
+      "songid": "3d699fb",
+      "count": 73
+    },
+    {
+      "name": "Natural Life",
+      "songid": "3d6757f",
+      "count": 65
+    },
+    {
+      "name": "Crawl",
+      "songid": "3bd47884",
+      "count": 59
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "2bd6e422",
+      "count": 59
+    },
+    {
+      "name": "Lights Out",
+      "songid": "23d47887",
+      "count": 59
+    },
+    {
+      "name": "Fade Away",
+      "songid": "33d47885",
+      "count": 55
+    },
+    {
+      "name": "Change (In the House of Flies)",
+      "songid": "2bd68036",
+      "count": 49
+    },
+    {
+      "name": "Tourniquet",
+      "songid": "1bfee148",
+      "count": 49
+    },
+    {
+      "name": "Dream On",
+      "songid": "1bd6e540",
+      "count": 48
+    },
+    {
+      "name": "Medicate",
+      "songid": "bd6015e",
+      "count": 46
+    },
+    {
+      "name": "Psycho",
+      "songid": "7bf2da64",
+      "count": 45
+    },
+    {
+      "name": "Awaken",
+      "songid": "63953e7f",
+      "count": 44
+    },
+    {
+      "name": "Blood",
+      "songid": "33f550fd",
+      "count": 43
+    },
+    {
+      "name": "The Imperial March / Cowboys From Hell / Smells Like Teen Spirit / Bohemian Rhapsody / Enter Sandman / Drum Solo",
+      "songid": "2bf0006e",
+      "count": 37
+    },
+    {
+      "name": "Wish I May",
+      "songid": "bd7f57a",
+      "count": 37
+    },
+    {
+      "name": "You",
+      "songid": "1bd7f16c",
+      "count": 37
+    },
+    {
+      "name": "Hurt",
+      "songid": "3d635a3",
+      "count": 36
+    },
+    {
+      "name": "Into the Nothing",
+      "songid": "63d5b25b",
+      "count": 36
+    },
+    {
+      "name": "The Imperial March / Cowboys From Hell / Smells Like Teen Spirit / Bohemian Rhapsody / Enter Sandman / Bulls on Parade / Drum Solo",
+      "songid": "43e7cb53",
+      "count": 33
+    },
+    {
+      "name": "Skin",
+      "songid": "4bd6431e",
+      "count": 31
+    },
+    {
+      "name": "Breaking the Silence",
+      "songid": "3bce9474",
+      "count": 29
+    },
+    {
+      "name": "Here We Are",
+      "songid": "2bd63c8e",
+      "count": 29
+    },
+    {
+      "name": "Hopeless",
+      "songid": "63c0be87",
+      "count": 29
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / Walk / Sad but True",
+      "songid": "4be7cb52",
+      "count": 28
+    },
+    {
+      "name": "Bury Me Alive",
+      "songid": "bccb176",
+      "count": 26
+    },
+    {
+      "name": "Message in a Bottle",
+      "songid": "2bd600fe",
+      "count": 20
+    },
+    {
+      "name": "The Imperial March / Bulls on Parade / Smells Like Teen Spirit / Walk / Sad but True",
+      "songid": "5be7cb50",
+      "count": 19
+    },
+    {
+      "name": "Down in a Hole",
+      "songid": "7bd6ea44",
+      "count": 18
+    },
+    {
+      "name": "Face in the Light",
+      "songid": "33f610dd",
+      "count": 17
+    },
+    {
+      "name": "One / Back in Black / Mouth for War / Blind / Bulls on Parade",
+      "songid": "43ee57c3",
+      "count": 16
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / Walk / Bulls on Parade / Sad but True",
+      "songid": "43e7cb57",
+      "count": 16
+    },
+    {
+      "name": "The Dark of You",
+      "songid": "4bfecfce",
+      "count": 14
+    },
+    {
+      "name": "Through the Never",
+      "songid": "2bd7949e",
+      "count": 14
+    },
+    {
+      "name": "Anthem of the Angels",
+      "songid": "bd821da",
+      "count": 13
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / Walk / Drum Solo",
+      "songid": "63f41e1f",
+      "count": 13
+    },
+    {
+      "name": "Would?",
+      "songid": "43d7f72f",
+      "count": 13
+    },
+    {
+      "name": "Aerials",
+      "songid": "7bd6aac0",
+      "count": 12
+    },
+    {
+      "name": "Next to Nothing",
+      "songid": "1bd17594",
+      "count": 11
+    },
+    {
+      "name": "All Apologies",
+      "songid": "2bd6a4c2",
+      "count": 10
+    },
+    {
+      "name": "Forget It",
+      "songid": "7bd2c264",
+      "count": 10
+    },
+    {
+      "name": "Prison Sex",
+      "songid": "2bd65c02",
+      "count": 10
+    },
+    {
+      "name": "Them Bones",
+      "songid": "53d79bf9",
+      "count": 10
+    },
+    {
+      "name": "Closure",
+      "songid": "33d6fc7d",
+      "count": 6
+    },
+    {
+      "name": "Enjoy the Silence",
+      "songid": "3d6dd7b",
+      "count": 6
+    },
+    {
+      "name": "No Games",
+      "songid": "33d16c15",
+      "count": 6
+    },
+    {
+      "name": "The Imperial March / For Whom the Bell Tolls / Smells Like Teen Spirit / Walk",
+      "songid": "33cdd0e9",
+      "count": 6
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 5
+    },
+    {
+      "name": "Lithium",
+      "songid": "7bd612f0",
+      "count": 5
+    },
+    {
+      "name": "Smells Like Teen Spirit",
+      "songid": "3d7bd4f",
+      "count": 5
+    },
+    {
+      "name": "The Imperial March / Cowboys From Hell / Smells Like Teen Spirit / Bohemian Rhapsody / Enter Sandman / Bulls on Parade / Pour Some Sugar on Me / Drum Solo",
+      "songid": "4be7cb66",
+      "count": 5
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit",
+      "songid": "2bcdd0ea",
+      "count": 5
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / Sad but True / Walk / Drum Solo",
+      "songid": "5be7cb6c",
+      "count": 5
+    },
+    {
+      "name": "Time After Time",
+      "songid": "5bd797b8",
+      "count": 5
+    },
+    {
+      "name": "Blind",
+      "songid": "73d69211",
+      "count": 4
+    },
+    {
+      "name": "Hunger Strike",
+      "songid": "13d63505",
+      "count": 4
+    },
+    {
+      "name": "Lady Bug",
+      "songid": "23d16c17",
+      "count": 4
+    },
+    {
+      "name": "Polly",
+      "songid": "6bd6626e",
+      "count": 4
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / Walk / Drum Solo / Sad but True",
+      "songid": "53e7cb6d",
+      "count": 4
+    },
+    {
+      "name": "Ball Tongue",
+      "songid": "53d69bc1",
+      "count": 3
+    },
+    {
+      "name": "Bored",
+      "songid": "53d68f35",
+      "count": 3
+    },
+    {
+      "name": "For Whom the Bell Tolls / Schism / Smells Like Teen Spirit / Walk",
+      "songid": "43c31313",
+      "count": 3
+    },
+    {
+      "name": "I Alone",
+      "songid": "33d634d9",
+      "count": 3
+    },
+    {
+      "name": "Take On Me",
+      "songid": "5bd7afac",
+      "count": 3
+    },
+    {
+      "name": "The Imperial March / Schism / Heart-Shaped Box / Walk",
+      "songid": "3bcdd0e8",
+      "count": 3
+    },
+    {
+      "name": "The Imperial March / Schism / Rosetta Stoned / Smells Like Teen Spirit / Walk",
+      "songid": "23cdd0ef",
+      "count": 3
+    },
+    {
+      "name": "Bulls on Parade",
+      "songid": "5bd68bd8",
+      "count": 2
+    },
+    {
+      "name": "For Whom the Bell Tolls / One / Back in Black / Blind / Bulls on Parade",
+      "songid": "4bf8e7fe",
+      "count": 2
+    },
+    {
+      "name": "For Whom the Bell Tolls / One / Back in Black / Mouth for War / Blind / Bulls on Parade",
+      "songid": "5bee57cc",
+      "count": 2
+    },
+    {
+      "name": "Natural Life / Wish I May / Water / Sugarcoat",
+      "songid": "53e05759",
+      "count": 2
+    },
+    {
+      "name": "Release",
+      "songid": "1bd655f4",
+      "count": 2
+    },
+    {
+      "name": "Sad but True",
+      "songid": "1bd64ddc",
+      "count": 2
+    },
+    {
+      "name": "Schism",
+      "songid": "6bd64e9a",
+      "count": 2
+    },
+    {
+      "name": "So I Thought",
+      "songid": "23d7bc2f",
+      "count": 2
+    },
+    {
+      "name": "Stinkfist",
+      "songid": "5bd7b7dc",
+      "count": 2
+    },
+    {
+      "name": "The Hollow",
+      "songid": "3bd7a004",
+      "count": 2
+    },
+    {
+      "name": "The Imperial March / Sad but True / Smells Like Teen Spirit / Walk",
+      "songid": "4be7cb6e",
+      "count": 2
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / For Whom the Bell Tolls / Walk",
+      "songid": "33ca60a9",
+      "count": 2
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / Walk / Sad but True / Drum Solo",
+      "songid": "3bef68a0",
+      "count": 2
+    },
+    {
+      "name": "The Imperial March / Smells Like Teen Spirit",
+      "songid": "2bcdd0ee",
+      "count": 2
+    },
+    {
+      "name": "Thunderstruck",
+      "songid": "43d79743",
+      "count": 2
+    },
+    {
+      "name": "Always",
+      "songid": "3bd16c10",
+      "count": 1
+    },
+    {
+      "name": "Animal I Have Become",
+      "songid": "73d6a271",
+      "count": 1
+    },
+    {
+      "name": "Another Brick in the Wall / One / Bulls on Parade",
+      "songid": "13fb81cd",
+      "count": 1
+    },
+    {
+      "name": "Awake",
+      "songid": "73d69e9d",
+      "count": 1
+    },
+    {
+      "name": "Bother",
+      "songid": "5bd68f9c",
+      "count": 1
+    },
+    {
+      "name": "Clown",
+      "songid": "3bd6fc58",
+      "count": 1
+    },
+    {
+      "name": "Down",
+      "songid": "73f8c2b9",
+      "count": 1
+    },
+    {
+      "name": "Drum Solo / Pour Some Sugar on Me",
+      "songid": "4be7cb76",
+      "count": 1
+    },
+    {
+      "name": "Forever",
+      "songid": "1bc4695c",
+      "count": 1
+    },
+    {
+      "name": "Forfeit",
+      "songid": "bd6d1de",
+      "count": 1
+    },
+    {
+      "name": "Greed",
+      "songid": "33d6c445",
+      "count": 1
+    },
+    {
+      "name": "Hot Blooded",
+      "songid": "5bd63bb8",
+      "count": 1
+    },
+    {
+      "name": "Inertia",
+      "songid": "2bd16c16",
+      "count": 1
+    },
+    {
+      "name": "Iris",
+      "songid": "43d627db",
+      "count": 1
+    },
+    {
+      "name": "Judith",
+      "songid": "3d61de3",
+      "count": 1
+    },
+    {
+      "name": "Just Got Wicked",
+      "songid": "23d61ceb",
+      "count": 1
+    },
+    {
+      "name": "My Own Summer (Shove It)",
+      "songid": "53d67b19",
+      "count": 1
+    },
+    {
+      "name": "No One",
+      "songid": "23d1b897",
+      "count": 1
+    },
+    {
+      "name": "Sober",
+      "songid": "3bd7bc98",
+      "count": 1
+    },
+    {
+      "name": "The Imperial March / Cowboys From Hell / Smells Like Teen Spirit / Bohemian Rhapsody / Enter Sandman",
+      "songid": "4bfc872a",
+      "count": 1
+    },
+    {
+      "name": "The Imperial March / Schism",
+      "songid": "73caaea1",
+      "count": 1
+    },
+    {
+      "name": "The Imperial March / Schism / Bulls on Parade / Smells Like Teen Spirit / Walk / Sad but True",
+      "songid": "53e7cb69",
+      "count": 1
+    },
+    {
+      "name": "The Imperial March / Schism / Smells Like Teen Spirit / Walk / For Whom the Bell Tolls",
+      "songid": "4be7cb6a",
+      "count": 1
+    },
+    {
+      "name": "The Imperial March / Smells Like Teen Spirit / Walk / Sad but True",
+      "songid": "5be7cb74",
+      "count": 1
+    },
+    {
+      "name": "The Red",
+      "songid": "5bd79f24",
+      "count": 1
+    },
+    {
+      "name": "Under Pressure",
+      "songid": "5bd4bf08",
+      "count": 1
+    },
+    {
+      "name": "Undertow",
+      "songid": "bd789a2",
+      "count": 1
+    },
+    {
+      "name": "Walk",
+      "songid": "63d7866f",
+      "count": 1
+    },
+    {
+      "name": "Well Enough Alone",
+      "songid": "bd7fd5a",
+      "count": 1
+    },
+    {
+      "name": "What Lies Beneath",
+      "songid": "43d5179b",
+      "count": 1
+    },
+    {
+      "name": "Whatever",
+      "songid": "43d7ff6f",
+      "count": 1
+    },
+    {
+      "name": "You Fight Me",
+      "songid": "7bcf6eb4",
+      "count": 1
+    },
+    {
+      "name": "You Know You're Right",
+      "songid": "2bd7f0e2",
+      "count": 1
+    }
+  ]
+}

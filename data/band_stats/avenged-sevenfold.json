@@ -1,0 +1,444 @@
+{
+  "artist": "Avenged Sevenfold",
+  "slug": "avenged-sevenfold",
+  "stats_id": "3d6d1a3",
+  "mbid": "24e1b53c-3085-4581-8472-0b0088d2508c",
+  "fetched_at": "2026-04-30T15:31:37.076087Z",
+  "songs": [
+    {
+      "name": "Unholy Confessions",
+      "songid": "33d78859",
+      "count": 933
+    },
+    {
+      "name": "Bat Country",
+      "songid": "6bd69a9e",
+      "count": 864
+    },
+    {
+      "name": "Afterlife",
+      "songid": "13d6a561",
+      "count": 749
+    },
+    {
+      "name": "Beast and the Harlot",
+      "songid": "bd695d6",
+      "count": 569
+    },
+    {
+      "name": "Nightmare",
+      "songid": "33d28405",
+      "count": 558
+    },
+    {
+      "name": "Critical Acclaim",
+      "songid": "5bd6fbdc",
+      "count": 517
+    },
+    {
+      "name": "Buried Alive",
+      "songid": "43d23f3f",
+      "count": 513
+    },
+    {
+      "name": "Almost Easy",
+      "songid": "7bd6a6c4",
+      "count": 484
+    },
+    {
+      "name": "A Little Piece of Heaven",
+      "songid": "13d6a9f5",
+      "count": 398
+    },
+    {
+      "name": "Hail to the King",
+      "songid": "5bd9cfc4",
+      "count": 351
+    },
+    {
+      "name": "So Far Away",
+      "songid": "4bd23f3e",
+      "count": 330
+    },
+    {
+      "name": "Welcome to the Family",
+      "songid": "5bd23f38",
+      "count": 301
+    },
+    {
+      "name": "Chapter Four",
+      "songid": "33d680e9",
+      "count": 267
+    },
+    {
+      "name": "Scream",
+      "songid": "3d649ef",
+      "count": 200
+    },
+    {
+      "name": "Seize the Day",
+      "songid": "53d64b49",
+      "count": 200
+    },
+    {
+      "name": "Eternal Rest",
+      "songid": "2bd6dc46",
+      "count": 194
+    },
+    {
+      "name": "Burn It Down",
+      "songid": "73d68a6d",
+      "count": 190
+    },
+    {
+      "name": "The Stage",
+      "songid": "3bca0030",
+      "count": 181
+    },
+    {
+      "name": "Shepherd of Fire",
+      "songid": "6bd9626e",
+      "count": 179
+    },
+    {
+      "name": "Second Heartbeat",
+      "songid": "3bd6482c",
+      "count": 162
+    },
+    {
+      "name": "God Hates Us",
+      "songid": "53d23f3d",
+      "count": 156
+    },
+    {
+      "name": "Gunslinger",
+      "songid": "5bd6c7c8",
+      "count": 154
+    },
+    {
+      "name": "Guitar Solo",
+      "songid": "4bd6c722",
+      "count": 151
+    },
+    {
+      "name": "Fiction",
+      "songid": "6bd256fa",
+      "count": 130
+    },
+    {
+      "name": "Walk",
+      "songid": "63d7866f",
+      "count": 110
+    },
+    {
+      "name": "This Means War",
+      "songid": "7bd9626c",
+      "count": 109
+    },
+    {
+      "name": "Guitar Solo / Band Jam Session",
+      "songid": "53d7ef41",
+      "count": 105
+    },
+    {
+      "name": "God Damn",
+      "songid": "53ca5375",
+      "count": 99
+    },
+    {
+      "name": "Game Over",
+      "songid": "7becba18",
+      "count": 96
+    },
+    {
+      "name": "Nobody",
+      "songid": "63ecba17",
+      "count": 96
+    },
+    {
+      "name": "Doing Time",
+      "songid": "73d9626d",
+      "count": 87
+    },
+    {
+      "name": "To End the Rapture",
+      "songid": "7bd79690",
+      "count": 85
+    },
+    {
+      "name": "Mattel",
+      "songid": "73ecba01",
+      "count": 81
+    },
+    {
+      "name": "Remenissions",
+      "songid": "1bd655b4",
+      "count": 76
+    },
+    {
+      "name": "Save Me",
+      "songid": "6bd01632",
+      "count": 75
+    },
+    {
+      "name": "I Won't See You Tonight Part 1",
+      "songid": "73d36aa9",
+      "count": 73
+    },
+    {
+      "name": "Acid Rain",
+      "songid": "73c3ee95",
+      "count": 64
+    },
+    {
+      "name": "Dear God",
+      "songid": "13d6f1dd",
+      "count": 61
+    },
+    {
+      "name": "Paradigm",
+      "songid": "43ca5377",
+      "count": 61
+    },
+    {
+      "name": "We Love You",
+      "songid": "7becba10",
+      "count": 61
+    },
+    {
+      "name": "M.I.A.",
+      "songid": "33d44409",
+      "count": 56
+    },
+    {
+      "name": "Cosmic",
+      "songid": "1be9f56c",
+      "count": 55
+    },
+    {
+      "name": "Planets",
+      "songid": "bc41132",
+      "count": 53
+    },
+    {
+      "name": "Requiem",
+      "songid": "63d96263",
+      "count": 42
+    },
+    {
+      "name": "Strength of the World",
+      "songid": "4bd447b2",
+      "count": 42
+    },
+    {
+      "name": "The Wicked End",
+      "songid": "3bd44408",
+      "count": 42
+    },
+    {
+      "name": "Warmness on the Soul",
+      "songid": "1bd45da8",
+      "count": 42
+    },
+    {
+      "name": "Blinded in Chains",
+      "songid": "7bd4ae88",
+      "count": 41
+    },
+    {
+      "name": "(D)eath",
+      "songid": "43ec3be7",
+      "count": 35
+    },
+    {
+      "name": "(O)rdinary",
+      "songid": "4bec3bfe",
+      "count": 35
+    },
+    {
+      "name": "G",
+      "songid": "43ec3bff",
+      "count": 35
+    },
+    {
+      "name": "Trashed and Scattered",
+      "songid": "6bd792fa",
+      "count": 35
+    },
+    {
+      "name": "Wish You Were Here",
+      "songid": "1bd7f574",
+      "count": 27
+    },
+    {
+      "name": "Angels",
+      "songid": "43ca536b",
+      "count": 25
+    },
+    {
+      "name": "Higher",
+      "songid": "53ca5369",
+      "count": 25
+    },
+    {
+      "name": "Exist",
+      "songid": "4bca536e",
+      "count": 23
+    },
+    {
+      "name": "Sunny Disposition",
+      "songid": "4bca5376",
+      "count": 21
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "bd5bd3a",
+      "count": 19
+    },
+    {
+      "name": "Danger Line",
+      "songid": "73d0f2e1",
+      "count": 18
+    },
+    {
+      "name": "Eternal Rest / Chapter Four",
+      "songid": "5bd7ef40",
+      "count": 18
+    },
+    {
+      "name": "Not Ready to Die",
+      "songid": "7bdece84",
+      "count": 18
+    },
+    {
+      "name": "Roman Sky",
+      "songid": "5bca5368",
+      "count": 18
+    },
+    {
+      "name": "Darkness Surrounding",
+      "songid": "3bd2648c",
+      "count": 16
+    },
+    {
+      "name": "Turn the Other Way",
+      "songid": "13d45db5",
+      "count": 14
+    },
+    {
+      "name": "Brompton Cocktail",
+      "songid": "3bd688c0",
+      "count": 11
+    },
+    {
+      "name": "We Come Out at Night",
+      "songid": "3d45dab",
+      "count": 11
+    },
+    {
+      "name": "Desecrate Through Reverence",
+      "songid": "2bf04832",
+      "count": 8
+    },
+    {
+      "name": "I Won't See You Tonight Part 2",
+      "songid": "43d09fff",
+      "count": 8
+    },
+    {
+      "name": "An Epic of Time Wasted",
+      "songid": "23d2ac0f",
+      "count": 7
+    },
+    {
+      "name": "Linoleum",
+      "songid": "73d61249",
+      "count": 7
+    },
+    {
+      "name": "The Art of Subconscious Illusion",
+      "songid": "2bd2ac0e",
+      "count": 4
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 3
+    },
+    {
+      "name": "Lips of Deceit",
+      "songid": "1bd45db4",
+      "count": 3
+    },
+    {
+      "name": "Carry On",
+      "songid": "53d9cfe5",
+      "count": 2
+    },
+    {
+      "name": "Creating God",
+      "songid": "5bca5374",
+      "count": 2
+    },
+    {
+      "name": "Flash of the Blade",
+      "songid": "5bd07b0c",
+      "count": 2
+    },
+    {
+      "name": "It's So Easy",
+      "songid": "13d621b9",
+      "count": 2
+    },
+    {
+      "name": "As Tears Go By",
+      "songid": "43d69f5b",
+      "count": 1
+    },
+    {
+      "name": "Astro Zombies",
+      "songid": "43d69fdb",
+      "count": 1
+    },
+    {
+      "name": "Clairvoyant Disease",
+      "songid": "3d38507",
+      "count": 1
+    },
+    {
+      "name": "Malague\u00f1a Salerosa",
+      "songid": "bf479f2",
+      "count": 1
+    },
+    {
+      "name": "Mouth for War",
+      "songid": "1bdce56c",
+      "count": 1
+    },
+    {
+      "name": "Satan Sandwich",
+      "songid": "3bd36040",
+      "count": 1
+    },
+    {
+      "name": "Thick and Thin",
+      "songid": "3d45db7",
+      "count": 1
+    },
+    {
+      "name": "Whiskey in the Jar",
+      "songid": "3d10107",
+      "count": 1
+    },
+    {
+      "name": "Wynona's Big Brown Beaver",
+      "songid": "5bd75f00",
+      "count": 1
+    },
+    {
+      "name": "Zacky's Song",
+      "songid": "4be90bbe",
+      "count": 1
+    }
+  ]
+}

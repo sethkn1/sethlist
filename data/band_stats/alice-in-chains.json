@@ -1,0 +1,484 @@
+{
+  "artist": "Alice in Chains",
+  "slug": "alice-in-chains",
+  "stats_id": "53d68b9d",
+  "mbid": "4bd95eea-b9f6-4d70-a36c-cfea77431553",
+  "fetched_at": "2026-04-30T15:31:27.515138Z",
+  "songs": [
+    {
+      "name": "Man in the Box",
+      "songid": "1bd60594",
+      "count": 869
+    },
+    {
+      "name": "Would?",
+      "songid": "43d7f72f",
+      "count": 838
+    },
+    {
+      "name": "We Die Young",
+      "songid": "4bd7831e",
+      "count": 751
+    },
+    {
+      "name": "Them Bones",
+      "songid": "53d79bf9",
+      "count": 744
+    },
+    {
+      "name": "Rooster",
+      "songid": "4bd6535e",
+      "count": 728
+    },
+    {
+      "name": "Dam That River",
+      "songid": "3bd6f46c",
+      "count": 651
+    },
+    {
+      "name": "Again",
+      "songid": "13d6a551",
+      "count": 617
+    },
+    {
+      "name": "No Excuses",
+      "songid": "13d67149",
+      "count": 528
+    },
+    {
+      "name": "Check My Brain",
+      "songid": "3d75137",
+      "count": 522
+    },
+    {
+      "name": "It Ain't Like That",
+      "songid": "63d626ff",
+      "count": 520
+    },
+    {
+      "name": "Angry Chair",
+      "songid": "43d6a393",
+      "count": 497
+    },
+    {
+      "name": "Nutshell",
+      "songid": "bd66d32",
+      "count": 456
+    },
+    {
+      "name": "Down in a Hole",
+      "songid": "7bd6ea44",
+      "count": 429
+    },
+    {
+      "name": "Hollow",
+      "songid": "3bd8ec18",
+      "count": 361
+    },
+    {
+      "name": "Got Me Wrong",
+      "songid": "3d6c543",
+      "count": 316
+    },
+    {
+      "name": "Bleed the Freak",
+      "songid": "3bd7d8f8",
+      "count": 313
+    },
+    {
+      "name": "Rain When I Die",
+      "songid": "2bd65822",
+      "count": 294
+    },
+    {
+      "name": "Stone",
+      "songid": "33d8ec2d",
+      "count": 285
+    },
+    {
+      "name": "Your Decision",
+      "songid": "4bd49796",
+      "count": 277
+    },
+    {
+      "name": "Love, Hate, Love",
+      "songid": "33d60841",
+      "count": 230
+    },
+    {
+      "name": "Junkhead",
+      "songid": "2bd61c4a",
+      "count": 223
+    },
+    {
+      "name": "The One You Know",
+      "songid": "1bf2ad5c",
+      "count": 182
+    },
+    {
+      "name": "Put You Down",
+      "songid": "2bd7d8d6",
+      "count": 168
+    },
+    {
+      "name": "Grind",
+      "songid": "33d6c4ed",
+      "count": 163
+    },
+    {
+      "name": "Last of My Kind",
+      "songid": "1bd4fd78",
+      "count": 148
+    },
+    {
+      "name": "Sickman",
+      "songid": "bd64152",
+      "count": 145
+    },
+    {
+      "name": "Acid Bubble",
+      "songid": "73d74a3d",
+      "count": 142
+    },
+    {
+      "name": "Sludge Factory",
+      "songid": "7bd6429c",
+      "count": 141
+    },
+    {
+      "name": "Real Thing",
+      "songid": "23d7d8d7",
+      "count": 119
+    },
+    {
+      "name": "God Smack",
+      "songid": "33d7d8f9",
+      "count": 112
+    },
+    {
+      "name": "Hate to Feel",
+      "songid": "2bd7d8fe",
+      "count": 91
+    },
+    {
+      "name": "Heaven Beside You",
+      "songid": "3d63d5b",
+      "count": 90
+    },
+    {
+      "name": "Dirt",
+      "songid": "53d6ef69",
+      "count": 88
+    },
+    {
+      "name": "A Looking in View",
+      "songid": "13d7c1b5",
+      "count": 84
+    },
+    {
+      "name": "Lesson Learned",
+      "songid": "53d41bd5",
+      "count": 81
+    },
+    {
+      "name": "Never Fade",
+      "songid": "53f32f05",
+      "count": 80
+    },
+    {
+      "name": "Rainier Fog",
+      "songid": "73f0def1",
+      "count": 74
+    },
+    {
+      "name": "Sea of Sorrow",
+      "songid": "33d7d8dd",
+      "count": 55
+    },
+    {
+      "name": "Brother",
+      "songid": "33d688a9",
+      "count": 54
+    },
+    {
+      "name": "Red Giant",
+      "songid": "bf325ea",
+      "count": 53
+    },
+    {
+      "name": "Sunshine",
+      "songid": "3bd7d8dc",
+      "count": 50
+    },
+    {
+      "name": "All Secrets Known",
+      "songid": "73d45ab5",
+      "count": 48
+    },
+    {
+      "name": "A Little Bitter",
+      "songid": "33d7d8fd",
+      "count": 44
+    },
+    {
+      "name": "Killer Is Me",
+      "songid": "1bc6b5a0",
+      "count": 44
+    },
+    {
+      "name": "Don't Follow",
+      "songid": "2bd6e876",
+      "count": 41
+    },
+    {
+      "name": "I Can't Remember",
+      "songid": "5bd637dc",
+      "count": 40
+    },
+    {
+      "name": "Queen of the Rodeo",
+      "songid": "2bd7d8da",
+      "count": 39
+    },
+    {
+      "name": "Voices",
+      "songid": "53d86fb9",
+      "count": 34
+    },
+    {
+      "name": "God Am",
+      "songid": "33d7d8f1",
+      "count": 32
+    },
+    {
+      "name": "Confusion",
+      "songid": "3d7110b",
+      "count": 30
+    },
+    {
+      "name": "Phantom Limb",
+      "songid": "6bd81202",
+      "count": 26
+    },
+    {
+      "name": "Black Gives Way to Blue",
+      "songid": "23d20c5b",
+      "count": 23
+    },
+    {
+      "name": "Rotten Apple",
+      "songid": "5bd71304",
+      "count": 23
+    },
+    {
+      "name": "What the Hell Have I",
+      "songid": "23d7d8ff",
+      "count": 21
+    },
+    {
+      "name": "I Know Somethin' ('Bout You)",
+      "songid": "bd7110a",
+      "count": 18
+    },
+    {
+      "name": "So Far Under",
+      "songid": "5bf32f04",
+      "count": 18
+    },
+    {
+      "name": "Killing Yourself",
+      "songid": "2bd7d8de",
+      "count": 13
+    },
+    {
+      "name": "Squeeze Box",
+      "songid": "63d7baf7",
+      "count": 13
+    },
+    {
+      "name": "Choke",
+      "songid": "3bc4ccd8",
+      "count": 11
+    },
+    {
+      "name": "Social Parasite",
+      "songid": "23d7d8d3",
+      "count": 11
+    },
+    {
+      "name": "Curtains",
+      "songid": "63d6fa8f",
+      "count": 10
+    },
+    {
+      "name": "I Can't Have You Blues",
+      "songid": "33d7d8d1",
+      "count": 9
+    },
+    {
+      "name": "Suffragette City",
+      "songid": "3bd7b0e8",
+      "count": 8
+    },
+    {
+      "name": "Jam",
+      "songid": "6bd746be",
+      "count": 4
+    },
+    {
+      "name": "Taxi Driver",
+      "songid": "3bd7d8d0",
+      "count": 4
+    },
+    {
+      "name": "Whale & Wasp",
+      "songid": "1bd7fddc",
+      "count": 4
+    },
+    {
+      "name": "Am I Inside",
+      "songid": "53d71359",
+      "count": 2
+    },
+    {
+      "name": "Captain Fantastic and the Brown Dirt Cowboy",
+      "songid": "5bd68780",
+      "count": 2
+    },
+    {
+      "name": "Chemical Addiction",
+      "songid": "1bd7111c",
+      "count": 2
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "23d77c8b",
+      "count": 2
+    },
+    {
+      "name": "Fairy Tale Love Story",
+      "songid": "2bd7d8d2",
+      "count": 2
+    },
+    {
+      "name": "Frogs",
+      "songid": "23d7d8f3",
+      "count": 2
+    },
+    {
+      "name": "Hunted Down",
+      "songid": "4bd71366",
+      "count": 2
+    },
+    {
+      "name": "I Stay Away",
+      "songid": "33d63081",
+      "count": 2
+    },
+    {
+      "name": "Kashmir",
+      "songid": "43d61fff",
+      "count": 2
+    },
+    {
+      "name": "Living After Midnight",
+      "songid": "13d60dd9",
+      "count": 2
+    },
+    {
+      "name": "Right Turn",
+      "songid": "53deef5d",
+      "count": 2
+    },
+    {
+      "name": "Sweet Leaf",
+      "songid": "bd7adf6",
+      "count": 2
+    },
+    {
+      "name": "Barracuda",
+      "songid": "7bd69afc",
+      "count": 1
+    },
+    {
+      "name": "Boot Camp",
+      "songid": "4bd68f4a",
+      "count": 1
+    },
+    {
+      "name": "Dead Flowers",
+      "songid": "bd6f176",
+      "count": 1
+    },
+    {
+      "name": "Fairies Wear Boots",
+      "songid": "1bd6d9b0",
+      "count": 1
+    },
+    {
+      "name": "Fly",
+      "songid": "2bf32c4a",
+      "count": 1
+    },
+    {
+      "name": "Fuck You, Where's My Dick?",
+      "songid": "33db3c89",
+      "count": 1
+    },
+    {
+      "name": "Iron Gland",
+      "songid": "43d7135f",
+      "count": 1
+    },
+    {
+      "name": "King of the Kats",
+      "songid": "bf241d6",
+      "count": 1
+    },
+    {
+      "name": "Mountain Song",
+      "songid": "73d67e65",
+      "count": 1
+    },
+    {
+      "name": "Mr. Tambourine Man",
+      "songid": "7bd67e90",
+      "count": 1
+    },
+    {
+      "name": "Over Now",
+      "songid": "2bd7d8f2",
+      "count": 1
+    },
+    {
+      "name": "Proud Mary",
+      "songid": "43d65f63",
+      "count": 1
+    },
+    {
+      "name": "Some Girls",
+      "songid": "13f241d5",
+      "count": 1
+    },
+    {
+      "name": "Sweet Home Alabama",
+      "songid": "bd7ad06",
+      "count": 1
+    },
+    {
+      "name": "The Green Manalishi (With the Two Prong Crown)",
+      "songid": "4bc0b322",
+      "count": 1
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "songid": "bfea57e",
+      "count": 1
+    },
+    {
+      "name": "When the Sun Rose Again",
+      "songid": "3bcaa014",
+      "count": 1
+    }
+  ]
+}

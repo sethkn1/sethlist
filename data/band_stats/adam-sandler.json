@@ -1,0 +1,674 @@
+{
+  "artist": "Adam Sandler",
+  "slug": "adam-sandler",
+  "stats_id": "7bd632c8",
+  "mbid": "dfc6d0b8-3d0b-4b33-9b3f-dff972e25594",
+  "fetched_at": "2026-04-30T15:31:53.741337Z",
+  "songs": [
+    {
+      "name": "Farley",
+      "songid": "6bff3656",
+      "count": 53
+    },
+    {
+      "name": "Grow Old With You",
+      "songid": "33c6f8f1",
+      "count": 38
+    },
+    {
+      "name": "Station 69",
+      "songid": "63ff3657",
+      "count": 23
+    },
+    {
+      "name": "Somebody Kill Me",
+      "songid": "53c94381",
+      "count": 22
+    },
+    {
+      "name": "It's Now or Never",
+      "songid": "13d21965",
+      "count": 20
+    },
+    {
+      "name": "Scary Shit",
+      "songid": "5391cfc5",
+      "count": 15
+    },
+    {
+      "name": "The Funny Man",
+      "songid": "4bee2366",
+      "count": 14
+    },
+    {
+      "name": "The Chanukah Song",
+      "songid": "53d2c725",
+      "count": 13
+    },
+    {
+      "name": "Here Comes The Comedy",
+      "songid": "339f0c2d",
+      "count": 10
+    },
+    {
+      "name": "Red Hooded Sweatshirt",
+      "songid": "53d8dbe9",
+      "count": 10
+    },
+    {
+      "name": "Selfie",
+      "songid": "53ee2365",
+      "count": 10
+    },
+    {
+      "name": "Halloween Song",
+      "songid": "43d8dbef",
+      "count": 9
+    },
+    {
+      "name": "Hot Dog",
+      "songid": "6bebe69e",
+      "count": 9
+    },
+    {
+      "name": "Lunchlady Land",
+      "songid": "4bd2c726",
+      "count": 9
+    },
+    {
+      "name": "Mr. Slo Mo",
+      "songid": "1be1b1cc",
+      "count": 9
+    },
+    {
+      "name": "Pants Song",
+      "songid": "4bee235a",
+      "count": 9
+    },
+    {
+      "name": "Q-Tip",
+      "songid": "6bebe692",
+      "count": 9
+    },
+    {
+      "name": "Zit on the Forehead",
+      "songid": "43ee2367",
+      "count": 9
+    },
+    {
+      "name": "Phone, Wallet, Keys",
+      "songid": "3f1f5ff",
+      "count": 8
+    },
+    {
+      "name": "Short Valet",
+      "songid": "239f0c33",
+      "count": 8
+    },
+    {
+      "name": "So Tired",
+      "songid": "23ea548f",
+      "count": 8
+    },
+    {
+      "name": "Socks are Too Tight",
+      "songid": "2b9f0c3a",
+      "count": 8
+    },
+    {
+      "name": "Dip Doodle",
+      "songid": "63d2c637",
+      "count": 7
+    },
+    {
+      "name": "Ice Cream Lady",
+      "songid": "3b9f0c34",
+      "count": 7
+    },
+    {
+      "name": "Mismatched Nipples",
+      "songid": "2b9f0c36",
+      "count": 7
+    },
+    {
+      "name": "Which Final Two Songs?",
+      "songid": "43ee235b",
+      "count": 7
+    },
+    {
+      "name": "Broccoli Haircut Bitch Boy",
+      "songid": "339c9851",
+      "count": 6
+    },
+    {
+      "name": "Endless Love",
+      "songid": "7bd05e20",
+      "count": 6
+    },
+    {
+      "name": "My Old Chair",
+      "songid": "bc00936",
+      "count": 6
+    },
+    {
+      "name": "Ode to My Car",
+      "songid": "53d8dbed",
+      "count": 6
+    },
+    {
+      "name": "Old Guy with a Kid",
+      "songid": "13ebcd85",
+      "count": 6
+    },
+    {
+      "name": "Red Roof Inn",
+      "songid": "239f0c3b",
+      "count": 6
+    },
+    {
+      "name": "UFC Ears",
+      "songid": "bff394a",
+      "count": 6
+    },
+    {
+      "name": "What Will My Final Words Be?",
+      "songid": "5bee236c",
+      "count": 6
+    },
+    {
+      "name": "As Soon as the Dog's Dead",
+      "songid": "63ebe693",
+      "count": 5
+    },
+    {
+      "name": "At a Medium Pace",
+      "songid": "43d8dbe3",
+      "count": 5
+    },
+    {
+      "name": "Daddy's Beard",
+      "songid": "b9f096e",
+      "count": 5
+    },
+    {
+      "name": "Eggshells",
+      "songid": "3b9f0c28",
+      "count": 5
+    },
+    {
+      "name": "Fingering",
+      "songid": "2b9f0c2e",
+      "count": 5
+    },
+    {
+      "name": "Headphones",
+      "songid": "339f0c39",
+      "count": 5
+    },
+    {
+      "name": "Mutterin'",
+      "songid": "5b91cfc4",
+      "count": 5
+    },
+    {
+      "name": "Poosyfart",
+      "songid": "339f0cbd",
+      "count": 5
+    },
+    {
+      "name": "Scary Shit is Coming",
+      "songid": "4bee2362",
+      "count": 5
+    },
+    {
+      "name": "The Goat (Part 1)",
+      "songid": "43d8dbeb",
+      "count": 5
+    },
+    {
+      "name": "What the Hell Happened to Me?",
+      "songid": "5bd8dbec",
+      "count": 5
+    },
+    {
+      "name": "When the Dog Dies",
+      "songid": "5bee2360",
+      "count": 5
+    },
+    {
+      "name": "Wrong",
+      "songid": "339f0c29",
+      "count": 5
+    },
+    {
+      "name": "Bagel",
+      "songid": "239f0c17",
+      "count": 4
+    },
+    {
+      "name": "Depressed",
+      "songid": "4391cfbb",
+      "count": 4
+    },
+    {
+      "name": "Food Innuendo Guy",
+      "songid": "43d8dbd3",
+      "count": 4
+    },
+    {
+      "name": "I Just Want to Make Love to You",
+      "songid": "6bc09afe",
+      "count": 4
+    },
+    {
+      "name": "Ice Ice Baby",
+      "songid": "4bd62f56",
+      "count": 4
+    },
+    {
+      "name": "Mel Gibson",
+      "songid": "5bd8dbdc",
+      "count": 4
+    },
+    {
+      "name": "My Little Chicken",
+      "songid": "43d2c727",
+      "count": 4
+    },
+    {
+      "name": "Out in the Street",
+      "songid": "43d66b1b",
+      "count": 4
+    },
+    {
+      "name": "Raisins",
+      "songid": "7b9edaa4",
+      "count": 4
+    },
+    {
+      "name": "Sick",
+      "songid": "239f0c37",
+      "count": 4
+    },
+    {
+      "name": "So Much Fun Fucking You",
+      "songid": "3ebcd83",
+      "count": 4
+    },
+    {
+      "name": "Steve Polychronopolous",
+      "songid": "4bd8dbde",
+      "count": 4
+    },
+    {
+      "name": "Teenage Girls",
+      "songid": "53ee2361",
+      "count": 4
+    },
+    {
+      "name": "The Goat (Part 2)",
+      "songid": "5bd8dbe8",
+      "count": 4
+    },
+    {
+      "name": "The Goat (Part 3)",
+      "songid": "4bd8dbee",
+      "count": 4
+    },
+    {
+      "name": "Broccoli",
+      "songid": "339f0c31",
+      "count": 3
+    },
+    {
+      "name": "Daughters' Friends",
+      "songid": "2b9f0c3e",
+      "count": 3
+    },
+    {
+      "name": "Do It For Your Mama (Part 1)",
+      "songid": "53d8dbdd",
+      "count": 3
+    },
+    {
+      "name": "Do It For Your Mama (Part 2)",
+      "songid": "4bd8dbd2",
+      "count": 3
+    },
+    {
+      "name": "Do It For Your Mama (Part 3)",
+      "songid": "5bd8dbd0",
+      "count": 3
+    },
+    {
+      "name": "Get in Shape",
+      "songid": "3b9f0c3c",
+      "count": 3
+    },
+    {
+      "name": "I Don't Want To Take A Selfie",
+      "songid": "5b97efc0",
+      "count": 3
+    },
+    {
+      "name": "Let's Get It On",
+      "songid": "7bd7caec",
+      "count": 3
+    },
+    {
+      "name": "Mr. Bake-O",
+      "songid": "43d8dbd7",
+      "count": 3
+    },
+    {
+      "name": "Public Bathroom",
+      "songid": "bebedda",
+      "count": 3
+    },
+    {
+      "name": "Sister's Boyfriend",
+      "songid": "4b91cfc6",
+      "count": 3
+    },
+    {
+      "name": "The House of the Rising Sun",
+      "songid": "5bc01fc0",
+      "count": 3
+    },
+    {
+      "name": "Uber Driver",
+      "songid": "53fd67cd",
+      "count": 3
+    },
+    {
+      "name": "Books",
+      "songid": "7bff3650",
+      "count": 2
+    },
+    {
+      "name": "Breakdown",
+      "songid": "bd6895a",
+      "count": 2
+    },
+    {
+      "name": "Facetime with Grandma",
+      "songid": "13ebcd8d",
+      "count": 2
+    },
+    {
+      "name": "Funky Song",
+      "songid": "2bebc442",
+      "count": 2
+    },
+    {
+      "name": "Funny Man",
+      "songid": "23eb64a7",
+      "count": 2
+    },
+    {
+      "name": "Intro",
+      "songid": "5bd8dbf4",
+      "count": 2
+    },
+    {
+      "name": "Know a Guy",
+      "songid": "1bff3940",
+      "count": 2
+    },
+    {
+      "name": "Lover",
+      "songid": "4bffffce",
+      "count": 2
+    },
+    {
+      "name": "Oh, Pretty Woman",
+      "songid": "3bd43c98",
+      "count": 2
+    },
+    {
+      "name": "Sea of People...",
+      "songid": "33ebc441",
+      "count": 2
+    },
+    {
+      "name": "The Funny Man (Sea of People)",
+      "songid": "2b9cc4c6",
+      "count": 2
+    },
+    {
+      "name": "The Thanksgiving Song",
+      "songid": "73f7a2b5",
+      "count": 2
+    },
+    {
+      "name": "50 Years",
+      "songid": "2b9314ca",
+      "count": 1
+    },
+    {
+      "name": "7 Foot Man",
+      "songid": "7bd2c630",
+      "count": 1
+    },
+    {
+      "name": "Back to December",
+      "songid": "2bd3c49a",
+      "count": 1
+    },
+    {
+      "name": "Bad Play Date",
+      "songid": "33e16c45",
+      "count": 1
+    },
+    {
+      "name": "Break On Through (to the Other Side)",
+      "songid": "bd31112",
+      "count": 1
+    },
+    {
+      "name": "Clinically Depressed",
+      "songid": "7bebe69c",
+      "count": 1
+    },
+    {
+      "name": "Come Together",
+      "songid": "5bd6ff90",
+      "count": 1
+    },
+    {
+      "name": "Crazy Love",
+      "songid": "53d8dbd1",
+      "count": 1
+    },
+    {
+      "name": "Diabetes",
+      "songid": "239f0c2b",
+      "count": 1
+    },
+    {
+      "name": "Disney Snap",
+      "songid": "4b91cfba",
+      "count": 1
+    },
+    {
+      "name": "Do It for Your Mama",
+      "songid": "4bd8dbea",
+      "count": 1
+    },
+    {
+      "name": "Dream On",
+      "songid": "1bd6e540",
+      "count": 1
+    },
+    {
+      "name": "enough for you",
+      "songid": "3be668ec",
+      "count": 1
+    },
+    {
+      "name": "Even Flow",
+      "songid": "2bd6dc06",
+      "count": 1
+    },
+    {
+      "name": "Grandma's on Ozempic",
+      "songid": "3b9f0c38",
+      "count": 1
+    },
+    {
+      "name": "Hallelujah / Sandy Screw 'Ya",
+      "songid": "239e60bf",
+      "count": 1
+    },
+    {
+      "name": "Hey Hey, My My (Into the Black)",
+      "songid": "4bd63fd2",
+      "count": 1
+    },
+    {
+      "name": "Hey, Hey, What Can I Do",
+      "songid": "3bf58850",
+      "count": 1
+    },
+    {
+      "name": "I Was Fired",
+      "songid": "bffa156",
+      "count": 1
+    },
+    {
+      "name": "It's Like Disneyland Never Happened",
+      "songid": "bebcd82",
+      "count": 1
+    },
+    {
+      "name": "Kid's Play",
+      "songid": "2b9f0cca",
+      "count": 1
+    },
+    {
+      "name": "Kindergarten Teacher",
+      "songid": "339f0c3d",
+      "count": 1
+    },
+    {
+      "name": "Like a Hurricane",
+      "songid": "5bd18f44",
+      "count": 1
+    },
+    {
+      "name": "Limelight",
+      "songid": "6bd6126e",
+      "count": 1
+    },
+    {
+      "name": "Listenin' to the Radio",
+      "songid": "5bd2c720",
+      "count": 1
+    },
+    {
+      "name": "Magic Bus",
+      "songid": "53f76b19",
+      "count": 1
+    },
+    {
+      "name": "Make You A Queen",
+      "songid": "bebcd8e",
+      "count": 1
+    },
+    {
+      "name": "Malague\u00f1a",
+      "songid": "6bc46a6a",
+      "count": 1
+    },
+    {
+      "name": "My Back",
+      "songid": "4b9f4396",
+      "count": 1
+    },
+    {
+      "name": "Operaman",
+      "songid": "2bf944b2",
+      "count": 1
+    },
+    {
+      "name": "Play That Funky Music",
+      "songid": "33d66085",
+      "count": 1
+    },
+    {
+      "name": "Powderfinger",
+      "songid": "3d7d1af",
+      "count": 1
+    },
+    {
+      "name": "Ramble On",
+      "songid": "23d658bb",
+      "count": 1
+    },
+    {
+      "name": "School Nurse",
+      "songid": "239f0c3f",
+      "count": 1
+    },
+    {
+      "name": "School Woodshop Teacher",
+      "songid": "2b9f0c32",
+      "count": 1
+    },
+    {
+      "name": "Shame",
+      "songid": "3ebcd8f",
+      "count": 1
+    },
+    {
+      "name": "Shorts Again",
+      "songid": "63ebe69f",
+      "count": 1
+    },
+    {
+      "name": "Spinning Pool",
+      "songid": "13ebcd89",
+      "count": 1
+    },
+    {
+      "name": "Text Bat Shit",
+      "songid": "13c00935",
+      "count": 1
+    },
+    {
+      "name": "That's What Happens When You Put Cubes In Too Hard",
+      "songid": "1bebcd8c",
+      "count": 1
+    },
+    {
+      "name": "The Blues",
+      "songid": "13ebcd81",
+      "count": 1
+    },
+    {
+      "name": "Werewolves of London",
+      "songid": "13d7fd0d",
+      "count": 1
+    },
+    {
+      "name": "What A Night We Had",
+      "songid": "3ebcd87",
+      "count": 1
+    },
+    {
+      "name": "What a Time",
+      "songid": "73f14229",
+      "count": 1
+    },
+    {
+      "name": "Yer So Bad",
+      "songid": "53dd9fc5",
+      "count": 1
+    },
+    {
+      "name": "You're So Vain",
+      "songid": "3bd2f05c",
+      "count": 1
+    }
+  ]
+}

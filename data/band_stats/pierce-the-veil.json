@@ -1,0 +1,349 @@
+{
+  "artist": "Pierce the Veil",
+  "slug": "pierce-the-veil",
+  "stats_id": "63d6f637",
+  "mbid": "8ed919fb-eaee-45a1-ba99-b3ede9ca5f1d",
+  "fetched_at": "2026-04-30T15:31:56.181046Z",
+  "songs": [
+    {
+      "name": "Caraphernelia",
+      "songid": "7bd2da38",
+      "count": 752
+    },
+    {
+      "name": "King for a Day",
+      "songid": "53daf73d",
+      "count": 712
+    },
+    {
+      "name": "Bulls in the Bronx",
+      "songid": "73da8269",
+      "count": 637
+    },
+    {
+      "name": "Hold On Till May",
+      "songid": "63daeacf",
+      "count": 558
+    },
+    {
+      "name": "Hell Above",
+      "songid": "63da826b",
+      "count": 524
+    },
+    {
+      "name": "Bulletproof Love",
+      "songid": "33d07485",
+      "count": 496
+    },
+    {
+      "name": "May These Noises Startle You in Your Sleep Tonight",
+      "songid": "7bda8274",
+      "count": 470
+    },
+    {
+      "name": "Yeah Boy and Doll Face",
+      "songid": "5bd54ba0",
+      "count": 408
+    },
+    {
+      "name": "A Match Into Water",
+      "songid": "6bda826a",
+      "count": 388
+    },
+    {
+      "name": "Circles",
+      "songid": "3bcc6080",
+      "count": 383
+    },
+    {
+      "name": "Disasterology",
+      "songid": "73df8265",
+      "count": 289
+    },
+    {
+      "name": "Besitos",
+      "songid": "1bd0f55c",
+      "count": 255
+    },
+    {
+      "name": "Pass the Nirvana",
+      "songid": "43e0e7e7",
+      "count": 243
+    },
+    {
+      "name": "I'm Low on Gas and You Need a Jacket",
+      "songid": "13db7975",
+      "count": 227
+    },
+    {
+      "name": "Chemical Kids and Mechanical Brides",
+      "songid": "53d54ba1",
+      "count": 206
+    },
+    {
+      "name": "Emergency Contact",
+      "songid": "1be109fc",
+      "count": 206
+    },
+    {
+      "name": "The Boy Who Could Fly",
+      "songid": "6bd22242",
+      "count": 204
+    },
+    {
+      "name": "Death of an Executioner",
+      "songid": "73ee6231",
+      "count": 186
+    },
+    {
+      "name": "Floral & Fading",
+      "songid": "73cdeed9",
+      "count": 182
+    },
+    {
+      "name": "Texas Is Forever",
+      "songid": "33cc6081",
+      "count": 175
+    },
+    {
+      "name": "The Divine Zero",
+      "songid": "63c1aa2b",
+      "count": 149
+    },
+    {
+      "name": "Dive In",
+      "songid": "6bcdeeda",
+      "count": 144
+    },
+    {
+      "name": "Currents Convulsive",
+      "songid": "53d54ba5",
+      "count": 142
+    },
+    {
+      "name": "Stained Glass Eyes and Colorful Tears",
+      "songid": "3bd978f4",
+      "count": 142
+    },
+    {
+      "name": "Drella",
+      "songid": "4bd54ba6",
+      "count": 137
+    },
+    {
+      "name": "The Cheap Bouquet",
+      "songid": "43d54ba7",
+      "count": 135
+    },
+    {
+      "name": "Beat It",
+      "songid": "3d695bb",
+      "count": 131
+    },
+    {
+      "name": "I'd Rather Die Than Be Famous",
+      "songid": "53d14b8d",
+      "count": 122
+    },
+    {
+      "name": "The Sky Under the Sea",
+      "songid": "3d0cd0b",
+      "count": 90
+    },
+    {
+      "name": "She Makes Dirty Words Sound Pretty",
+      "songid": "6bd2da3e",
+      "count": 85
+    },
+    {
+      "name": "Today I Saw the Whole World",
+      "songid": "6bcdeed2",
+      "count": 84
+    },
+    {
+      "name": "Wonderless",
+      "songid": "5be37fc4",
+      "count": 72
+    },
+    {
+      "name": "Southern Constellations",
+      "songid": "6bda8252",
+      "count": 71
+    },
+    {
+      "name": "Where Is My Mind?",
+      "songid": "7bd7fee0",
+      "count": 65
+    },
+    {
+      "name": "So Far So Fake",
+      "songid": "2bebfc76",
+      "count": 58
+    },
+    {
+      "name": "Kissing in Cars",
+      "songid": "63d2da3f",
+      "count": 56
+    },
+    {
+      "name": "Like a G6",
+      "songid": "63d302d7",
+      "count": 56
+    },
+    {
+      "name": "Props & Mayhem",
+      "songid": "3c3c9e7",
+      "count": 54
+    },
+    {
+      "name": "Karma Police",
+      "songid": "5bd61f00",
+      "count": 49
+    },
+    {
+      "name": "Tangled in the Great Escape",
+      "songid": "3d8b1cb",
+      "count": 49
+    },
+    {
+      "name": "Black and Yellow",
+      "songid": "63d052bf",
+      "count": 43
+    },
+    {
+      "name": "Lollipop",
+      "songid": "3bd60c2c",
+      "count": 43
+    },
+    {
+      "name": "Single Ladies (Put a Ring on It)",
+      "songid": "73dd46e5",
+      "count": 43
+    },
+    {
+      "name": "Resilience",
+      "songid": "13ebfd91",
+      "count": 34
+    },
+    {
+      "name": "Just the Way You Are",
+      "songid": "73d25a75",
+      "count": 32
+    },
+    {
+      "name": "Niggas in Paris",
+      "songid": "6bf73a0e",
+      "count": 32
+    },
+    {
+      "name": "The Jaws of Life",
+      "songid": "2beaec6a",
+      "count": 32
+    },
+    {
+      "name": "Stay Away From My Friends",
+      "songid": "23c8a4ef",
+      "count": 29
+    },
+    {
+      "name": "I Don't Care If You're Contagious",
+      "songid": "1b9d79f0",
+      "count": 23
+    },
+    {
+      "name": "Gold Medal Ribbon",
+      "songid": "6bcdeede",
+      "count": 17
+    },
+    {
+      "name": "Issues",
+      "songid": "2bc864fa",
+      "count": 17
+    },
+    {
+      "name": "Bedless",
+      "songid": "73cdeedd",
+      "count": 16
+    },
+    {
+      "name": "Phantom Power and Ludicrous Speed",
+      "songid": "7bcdeed8",
+      "count": 16
+    },
+    {
+      "name": "Sambuka",
+      "songid": "7bcdeedc",
+      "count": 16
+    },
+    {
+      "name": "Song for Isabelle",
+      "songid": "63cdeed3",
+      "count": 16
+    },
+    {
+      "name": "12 Fractures",
+      "songid": "7bee6230",
+      "count": 9
+    },
+    {
+      "name": "One Hundred Sleepless Nights",
+      "songid": "13e1e965",
+      "count": 6
+    },
+    {
+      "name": "Find Your Love",
+      "songid": "bd2ad52",
+      "count": 5
+    },
+    {
+      "name": "Diamonds and Why Men Buy Them",
+      "songid": "6bcca276",
+      "count": 4
+    },
+    {
+      "name": "Even When I\u2019m Not With You",
+      "songid": "3b92e024",
+      "count": 4
+    },
+    {
+      "name": "The First Punch",
+      "songid": "be1e966",
+      "count": 4
+    },
+    {
+      "name": "Coming Clean",
+      "songid": "7bd6fe44",
+      "count": 2
+    },
+    {
+      "name": "El rey",
+      "songid": "3bf3384c",
+      "count": 2
+    },
+    {
+      "name": "Get Low",
+      "songid": "5bc6eb8c",
+      "count": 2
+    },
+    {
+      "name": "Be Quiet and Drive (Far Away)",
+      "songid": "3d69503",
+      "count": 1
+    },
+    {
+      "name": "Black Hole Sun",
+      "songid": "23d69083",
+      "count": 1
+    },
+    {
+      "name": "Closer",
+      "songid": "3d275ff",
+      "count": 1
+    },
+    {
+      "name": "May These Noises Startle You in Your Sleep Tonight / Hell Above",
+      "songid": "539bcf91",
+      "count": 1
+    }
+  ]
+}

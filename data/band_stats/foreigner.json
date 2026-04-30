@@ -1,0 +1,514 @@
+{
+  "artist": "Foreigner",
+  "slug": "foreigner",
+  "stats_id": "73d6be39",
+  "mbid": "160629ab-ec18-4931-8c95-02cb92d06186",
+  "fetched_at": "2026-04-30T15:31:48.997368Z",
+  "songs": [
+    {
+      "name": "Cold as Ice",
+      "songid": "2bd6fcd6",
+      "count": 1534
+    },
+    {
+      "name": "Feels Like the First Time",
+      "songid": "6bd6da02",
+      "count": 1493
+    },
+    {
+      "name": "Hot Blooded",
+      "songid": "5bd63bb8",
+      "count": 1451
+    },
+    {
+      "name": "Double Vision",
+      "songid": "53d6eba1",
+      "count": 1444
+    },
+    {
+      "name": "Juke Box Hero",
+      "songid": "bd61dca",
+      "count": 1426
+    },
+    {
+      "name": "I Want to Know What Love Is",
+      "songid": "43d633a7",
+      "count": 1401
+    },
+    {
+      "name": "Urgent",
+      "songid": "4bd78bde",
+      "count": 1398
+    },
+    {
+      "name": "Head Games",
+      "songid": "43d6c3b7",
+      "count": 1308
+    },
+    {
+      "name": "Dirty White Boy",
+      "songid": "5bd6ef24",
+      "count": 1258
+    },
+    {
+      "name": "Waiting for a Girl Like You",
+      "songid": "5bd787e0",
+      "count": 1244
+    },
+    {
+      "name": "Long, Long Way From Home",
+      "songid": "23d7c47b",
+      "count": 803
+    },
+    {
+      "name": "Blue Morning, Blue Day",
+      "songid": "43d7ef0f",
+      "count": 585
+    },
+    {
+      "name": "Starrider",
+      "songid": "1bd7b5a0",
+      "count": 490
+    },
+    {
+      "name": "Say You Will",
+      "songid": "63d64e2f",
+      "count": 479
+    },
+    {
+      "name": "Keyboard and Drum Solo",
+      "songid": "6bdb6656",
+      "count": 416
+    },
+    {
+      "name": "That Was Yesterday",
+      "songid": "bd7c586",
+      "count": 259
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "bdd7d9a",
+      "count": 165
+    },
+    {
+      "name": "When It Comes to Love",
+      "songid": "1bd5f584",
+      "count": 136
+    },
+    {
+      "name": "Keyboard Solo",
+      "songid": "7bd1cac0",
+      "count": 127
+    },
+    {
+      "name": "Headknocker",
+      "songid": "33d764a1",
+      "count": 109
+    },
+    {
+      "name": "Fool for You Anyway",
+      "songid": "2bd764a6",
+      "count": 106
+    },
+    {
+      "name": "Can't Slow Down",
+      "songid": "23d4e02f",
+      "count": 97
+    },
+    {
+      "name": "Girl on the Moon",
+      "songid": "1bc4e9cc",
+      "count": 93
+    },
+    {
+      "name": "Luanne",
+      "songid": "23d2d497",
+      "count": 65
+    },
+    {
+      "name": "Too Late",
+      "songid": "33d79031",
+      "count": 56
+    },
+    {
+      "name": "At War With the World",
+      "songid": "1bd26510",
+      "count": 55
+    },
+    {
+      "name": "The Damage Is Done",
+      "songid": "23d764a7",
+      "count": 53
+    },
+    {
+      "name": "I Need You",
+      "songid": "2bdec812",
+      "count": 52
+    },
+    {
+      "name": "Reaction to Action",
+      "songid": "23d2d493",
+      "count": 49
+    },
+    {
+      "name": "Night Life",
+      "songid": "33d274bd",
+      "count": 47
+    },
+    {
+      "name": "The Flame Still Burns",
+      "songid": "13c4e9cd",
+      "count": 44
+    },
+    {
+      "name": "Woman Oh Woman",
+      "songid": "63d036cf",
+      "count": 43
+    },
+    {
+      "name": "Stranger in My Own House",
+      "songid": "33d2d49d",
+      "count": 42
+    },
+    {
+      "name": "Guitar Solo",
+      "songid": "13debd55",
+      "count": 36
+    },
+    {
+      "name": "In Pieces",
+      "songid": "7bd55ef4",
+      "count": 34
+    },
+    {
+      "name": "Break It Up",
+      "songid": "23d764a3",
+      "count": 33
+    },
+    {
+      "name": "Love on the Telephone",
+      "songid": "23d7649b",
+      "count": 31
+    },
+    {
+      "name": "Women",
+      "songid": "3bd764a4",
+      "count": 28
+    },
+    {
+      "name": "That's All Right",
+      "songid": "53dd33fd",
+      "count": 26
+    },
+    {
+      "name": "Tooth and Nail",
+      "songid": "2bd2d492",
+      "count": 26
+    },
+    {
+      "name": "Woman in Black",
+      "songid": "4bd8f32a",
+      "count": 26
+    },
+    {
+      "name": "The Modern Day",
+      "songid": "33d764a5",
+      "count": 24
+    },
+    {
+      "name": "I'm Gonna Win",
+      "songid": "3d065b7",
+      "count": 21
+    },
+    {
+      "name": "White Lie",
+      "songid": "33dec815",
+      "count": 21
+    },
+    {
+      "name": "I'll Get Even With You",
+      "songid": "3bd764a0",
+      "count": 20
+    },
+    {
+      "name": "Rain",
+      "songid": "23dec817",
+      "count": 19
+    },
+    {
+      "name": "Until the End of Time",
+      "songid": "3bdec810",
+      "count": 18
+    },
+    {
+      "name": "Soul Doctor",
+      "songid": "3bd76418",
+      "count": 17
+    },
+    {
+      "name": "Spellbinder",
+      "songid": "1bd065b0",
+      "count": 17
+    },
+    {
+      "name": "Bridge Over Troubled Water",
+      "songid": "13d689b1",
+      "count": 16
+    },
+    {
+      "name": "Midnight Blue",
+      "songid": "5bd603f8",
+      "count": 15
+    },
+    {
+      "name": "Under the Gun",
+      "songid": "2bdec816",
+      "count": 15
+    },
+    {
+      "name": "Don't Let Go",
+      "songid": "439d3f03",
+      "count": 11
+    },
+    {
+      "name": "With Heaven on Our Side",
+      "songid": "63d3e6f3",
+      "count": 11
+    },
+    {
+      "name": "Lowdown and Dirty",
+      "songid": "3d9bdeb",
+      "count": 10
+    },
+    {
+      "name": "Overture",
+      "songid": "3bf2dc08",
+      "count": 10
+    },
+    {
+      "name": "Misty Mountain Hop",
+      "songid": "1bd67d20",
+      "count": 9
+    },
+    {
+      "name": "Only Heaven Knows",
+      "songid": "1bd9bdf0",
+      "count": 9
+    },
+    {
+      "name": "Somebody's Been Sleeping (In My Bed)",
+      "songid": "6bc2fa62",
+      "count": 9
+    },
+    {
+      "name": "Rev on the Red Line",
+      "songid": "3d74d7b",
+      "count": 8
+    },
+    {
+      "name": "Seventeen",
+      "songid": "1bd85d94",
+      "count": 8
+    },
+    {
+      "name": "Tramontane",
+      "songid": "33c32405",
+      "count": 8
+    },
+    {
+      "name": "I Don't Want to Live Without You",
+      "songid": "5bdf577c",
+      "count": 6
+    },
+    {
+      "name": "Kashmir",
+      "songid": "43d61fff",
+      "count": 6
+    },
+    {
+      "name": "Ready for the Rain",
+      "songid": "1bd9bdf4",
+      "count": 6
+    },
+    {
+      "name": "A Love in Vain",
+      "songid": "63c352a3",
+      "count": 5
+    },
+    {
+      "name": "All I Need to Know",
+      "songid": "23c12497",
+      "count": 5
+    },
+    {
+      "name": "Guitar Drums Keyboard Solos",
+      "songid": "43e313d7",
+      "count": 5
+    },
+    {
+      "name": "Heart Turns to Stone",
+      "songid": "23db741b",
+      "count": 5
+    },
+    {
+      "name": "I'll Fight for You",
+      "songid": "7bc0e608",
+      "count": 5
+    },
+    {
+      "name": "Juke Box Hero / Whole Lotta Love",
+      "songid": "13de2101",
+      "count": 5
+    },
+    {
+      "name": "Mountain of Love",
+      "songid": "13d9bdf5",
+      "count": 4
+    },
+    {
+      "name": "Orchestra Solo",
+      "songid": "3f52113",
+      "count": 4
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "songid": "bfea57e",
+      "count": 4
+    },
+    {
+      "name": "Down on Love",
+      "songid": "1bd83d0c",
+      "count": 3
+    },
+    {
+      "name": "Give Me a Sign",
+      "songid": "3d911d3",
+      "count": 3
+    },
+    {
+      "name": "She's Too Tough",
+      "songid": "3bd2d49c",
+      "count": 3
+    },
+    {
+      "name": "The Hits Orchestra",
+      "songid": "339b84e9",
+      "count": 3
+    },
+    {
+      "name": "Cello Solo",
+      "songid": "3b9b84e8",
+      "count": 2
+    },
+    {
+      "name": "Instrumental Jam Session",
+      "songid": "3b97e4c0",
+      "count": 2
+    },
+    {
+      "name": "Intermission",
+      "songid": "2b9bd41e",
+      "count": 2
+    },
+    {
+      "name": "Juke Box Hero / Urgent / Too Late / Cold as Ice / I Want to Know What Love Is",
+      "songid": "13cc6d99",
+      "count": 2
+    },
+    {
+      "name": "Kelly's Blues",
+      "songid": "5bc04bb0",
+      "count": 2
+    },
+    {
+      "name": "Keyboard, Drum & Guitar Solos",
+      "songid": "13ef5d3d",
+      "count": 2
+    },
+    {
+      "name": "Moment of Truth",
+      "songid": "3c509bb",
+      "count": 2
+    },
+    {
+      "name": "Prelude",
+      "songid": "3f0f53f",
+      "count": 2
+    },
+    {
+      "name": "Band Intros",
+      "songid": "23dbc8a7",
+      "count": 1
+    },
+    {
+      "name": "Blues Jam",
+      "songid": "43c003d7",
+      "count": 1
+    },
+    {
+      "name": "Can\u2019t Wait",
+      "songid": "3914507",
+      "count": 1
+    },
+    {
+      "name": "Come Together",
+      "songid": "5bd6ff90",
+      "count": 1
+    },
+    {
+      "name": "Don't Take Me Alive",
+      "songid": "73d7e275",
+      "count": 1
+    },
+    {
+      "name": "Drum and Bass Solo",
+      "songid": "5bf9ebf0",
+      "count": 1
+    },
+    {
+      "name": "Let Me Be Your Lovemaker",
+      "songid": "bf85d82",
+      "count": 1
+    },
+    {
+      "name": "Lucille",
+      "songid": "1bd70960",
+      "count": 1
+    },
+    {
+      "name": "Moby Dick",
+      "songid": "1bd67de4",
+      "count": 1
+    },
+    {
+      "name": "Not Fade Away",
+      "songid": "3de4de3",
+      "count": 1
+    },
+    {
+      "name": "Orchestral Hits Intro",
+      "songid": "6b9b2a6e",
+      "count": 1
+    },
+    {
+      "name": "Orchestral Intro",
+      "songid": "739b2a6d",
+      "count": 1
+    },
+    {
+      "name": "Real World",
+      "songid": "3c001e7",
+      "count": 1
+    },
+    {
+      "name": "Shauna",
+      "songid": "239c6067",
+      "count": 1
+    },
+    {
+      "name": "The Beat of My Heart",
+      "songid": "7bc02e48",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "artist": "Greta Van Fleet",
+  "slug": "greta-van-fleet",
+  "stats_id": "3bcc8850",
+  "mbid": "0be22557-d8c7-4706-a531-625c4c570162",
+  "fetched_at": "2026-04-30T15:31:10.685234Z",
+  "songs": [
+    {
+      "name": "Highway Tune",
+      "songid": "23c9084f",
+      "count": 383
+    },
+    {
+      "name": "Black Smoke Rising",
+      "songid": "2bc9084e",
+      "count": 380
+    },
+    {
+      "name": "Safari Song",
+      "songid": "33c9084d",
+      "count": 320
+    },
+    {
+      "name": "Flower Power",
+      "songid": "3bc9084c",
+      "count": 215
+    },
+    {
+      "name": "Lover, Leaver (Taker, Believer)",
+      "songid": "3bf37840",
+      "count": 186
+    },
+    {
+      "name": "Watching Over",
+      "songid": "4bc90312",
+      "count": 182
+    },
+    {
+      "name": "You're the One",
+      "songid": "73f74625",
+      "count": 178
+    },
+    {
+      "name": "Edge of Darkness",
+      "songid": "4bc90306",
+      "count": 173
+    },
+    {
+      "name": "Heat Above",
+      "songid": "73e7e265",
+      "count": 163
+    },
+    {
+      "name": "Light My Love",
+      "songid": "6be7e25a",
+      "count": 161
+    },
+    {
+      "name": "When the Curtain Falls",
+      "songid": "5bf2577c",
+      "count": 157
+    },
+    {
+      "name": "The Cold Wind",
+      "songid": "33f37421",
+      "count": 133
+    },
+    {
+      "name": "Drum Solo",
+      "songid": "2bf1880e",
+      "count": 128
+    },
+    {
+      "name": "Caravel",
+      "songid": "7be7e264",
+      "count": 111
+    },
+    {
+      "name": "Evil Is Goin' On",
+      "songid": "3bc0e85c",
+      "count": 107
+    },
+    {
+      "name": "Black Flag Exposition",
+      "songid": "43f04367",
+      "count": 95
+    },
+    {
+      "name": "Age of Man",
+      "songid": "5bfe23e0",
+      "count": 94
+    },
+    {
+      "name": "Built by Nations",
+      "songid": "63e7e25f",
+      "count": 94
+    },
+    {
+      "name": "The Weight of Dreams",
+      "songid": "7be7e258",
+      "count": 94
+    },
+    {
+      "name": "Meeting the Master",
+      "songid": "bef85d2",
+      "count": 84
+    },
+    {
+      "name": "The Falling Sky",
+      "songid": "43effb53",
+      "count": 82
+    },
+    {
+      "name": "The Archer",
+      "songid": "53ecaba5",
+      "count": 76
+    },
+    {
+      "name": "Talk on the Street",
+      "songid": "73f44205",
+      "count": 69
+    },
+    {
+      "name": "Sacred the Thread",
+      "songid": "53effb51",
+      "count": 67
+    },
+    {
+      "name": "Mountain of the Sun",
+      "songid": "7bf74620",
+      "count": 65
+    },
+    {
+      "name": "Age of Machine",
+      "songid": "63e7e25b",
+      "count": 62
+    },
+    {
+      "name": "Farewell for Now",
+      "songid": "6beffa2e",
+      "count": 62
+    },
+    {
+      "name": "The Indigo Streak",
+      "songid": "4befc7e6",
+      "count": 59
+    },
+    {
+      "name": "Fate of the Faithful",
+      "songid": "4becaba6",
+      "count": 58
+    },
+    {
+      "name": "The Music Is You",
+      "songid": "53d58b95",
+      "count": 56
+    },
+    {
+      "name": "Broken Bells",
+      "songid": "7be72e14",
+      "count": 55
+    },
+    {
+      "name": "That's All Right",
+      "songid": "53dd33fd",
+      "count": 54
+    },
+    {
+      "name": "Watch Me",
+      "songid": "23f1c05b",
+      "count": 51
+    },
+    {
+      "name": "Waited All Your Life",
+      "songid": "7bedf2a8",
+      "count": 50
+    },
+    {
+      "name": "Unchained Melody",
+      "songid": "3be01c18",
+      "count": 45
+    },
+    {
+      "name": "My Way, Soon",
+      "songid": "6be7e25e",
+      "count": 40
+    },
+    {
+      "name": "Rhapsody in Blue",
+      "songid": "bd751de",
+      "count": 37
+    },
+    {
+      "name": "Runway Blues",
+      "songid": "63eb0233",
+      "count": 32
+    },
+    {
+      "name": "Brave New World",
+      "songid": "73f0fab1",
+      "count": 31
+    },
+    {
+      "name": "Trip the Light Fantastic",
+      "songid": "73e7e259",
+      "count": 23
+    },
+    {
+      "name": "Frozen Light",
+      "songid": "7bedf2b8",
+      "count": 10
+    },
+    {
+      "name": "Roll and Tumble Blues",
+      "songid": "73f95a1d",
+      "count": 9
+    },
+    {
+      "name": "Stardust Chords",
+      "songid": "63e72e0b",
+      "count": 9
+    },
+    {
+      "name": "Fast Train Blues",
+      "songid": "1be51db0",
+      "count": 7
+    },
+    {
+      "name": "I Got Mine",
+      "songid": "6bd6368a",
+      "count": 6
+    },
+    {
+      "name": "The Barbarians",
+      "songid": "33e71451",
+      "count": 6
+    },
+    {
+      "name": "Thunderstomp",
+      "songid": "13f39571",
+      "count": 6
+    },
+    {
+      "name": "Anthem",
+      "songid": "53fe23e1",
+      "count": 5
+    },
+    {
+      "name": "Get You Down",
+      "songid": "53c90305",
+      "count": 5
+    },
+    {
+      "name": "Killing Floor",
+      "songid": "6bd47eaa",
+      "count": 4
+    },
+    {
+      "name": "Tears of Rain",
+      "songid": "1be4ed00",
+      "count": 4
+    },
+    {
+      "name": "Yankee Springs",
+      "songid": "6bee4606",
+      "count": 3
+    },
+    {
+      "name": "I'm the One",
+      "songid": "43f41337",
+      "count": 2
+    },
+    {
+      "name": "Lay Down (Candles in the Rain)",
+      "songid": "3d9fd6f",
+      "count": 2
+    },
+    {
+      "name": "Wild Thing",
+      "songid": "5bd7fbb0",
+      "count": 2
+    },
+    {
+      "name": "Woyaya",
+      "songid": "53e603bd",
+      "count": 2
+    },
+    {
+      "name": "Blueberry Hill",
+      "songid": "1bc48dc4",
+      "count": 1
+    },
+    {
+      "name": "Blues Jam Solo",
+      "songid": "1bfacdf0",
+      "count": 1
+    },
+    {
+      "name": "C'mon Everybody",
+      "songid": "23d7387b",
+      "count": 1
+    },
+    {
+      "name": "Don't Let It Bring You Down",
+      "songid": "2bd6e822",
+      "count": 1
+    },
+    {
+      "name": "Down to the River",
+      "songid": "73961ae9",
+      "count": 1
+    },
+    {
+      "name": "Grand Organ Solo",
+      "songid": "43977f93",
+      "count": 1
+    },
+    {
+      "name": "Hey Jude",
+      "songid": "43d63fc3",
+      "count": 1
+    },
+    {
+      "name": "I Shall Be Released",
+      "songid": "23d630ab",
+      "count": 1
+    },
+    {
+      "name": "Kansas City",
+      "songid": "3db2d03",
+      "count": 1
+    },
+    {
+      "name": "Maggie M'Gill",
+      "songid": "6bd15e1a",
+      "count": 1
+    },
+    {
+      "name": "Open Sea",
+      "songid": "63ee4607",
+      "count": 1
+    },
+    {
+      "name": "Outside Woman Blues",
+      "songid": "73d7eecd",
+      "count": 1
+    },
+    {
+      "name": "Roadhouse Blues",
+      "songid": "bd6517a",
+      "count": 1
+    },
+    {
+      "name": "San Francisco (Be Sure to Wear Flowers in Your Hair)",
+      "songid": "63d232db",
+      "count": 1
+    },
+    {
+      "name": "Saturday Night's Alright for Fighting",
+      "songid": "5bd64fe8",
+      "count": 1
+    },
+    {
+      "name": "Seventh Son",
+      "songid": "4bfe0fde",
+      "count": 1
+    },
+    {
+      "name": "Sing in the Rain",
+      "songid": "7b961ae8",
+      "count": 1
+    },
+    {
+      "name": "Stompin' All Down",
+      "songid": "3f68d37",
+      "count": 1
+    },
+    {
+      "name": "That's All Right / Rockin' Robin",
+      "songid": "7397dab5",
+      "count": 1
+    },
+    {
+      "name": "The Beauty in It",
+      "songid": "4befabbe",
+      "count": 1
+    },
+    {
+      "name": "The New Day",
+      "songid": "53fe23e5",
+      "count": 1
+    },
+    {
+      "name": "The Ocean",
+      "songid": "13d79de1",
+      "count": 1
+    },
+    {
+      "name": "The Seventh Son",
+      "songid": "7bc0b6f8",
+      "count": 1
+    },
+    {
+      "name": "The Weight",
+      "songid": "33d798b1",
+      "count": 1
+    },
+    {
+      "name": "White Room",
+      "songid": "13d7f9dd",
+      "count": 1
+    },
+    {
+      "name": "Written in Gold",
+      "songid": "63961aef",
+      "count": 1
+    }
+  ]
+}

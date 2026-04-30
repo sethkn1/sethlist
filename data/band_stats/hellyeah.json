@@ -1,0 +1,289 @@
+{
+  "artist": "Hellyeah",
+  "slug": "hellyeah",
+  "stats_id": "73d6768d",
+  "mbid": "680d9f43-3287-4f16-a9ab-b5904746f745",
+  "fetched_at": "2026-04-30T15:30:48.465359Z",
+  "songs": [
+    {
+      "name": "Hellyeah!",
+      "songid": "3bd63c4c",
+      "count": 346
+    },
+    {
+      "name": "You Wouldn't Know",
+      "songid": "5bd7f320",
+      "count": 307
+    },
+    {
+      "name": "Matter of Time",
+      "songid": "73d60659",
+      "count": 213
+    },
+    {
+      "name": "War in Me",
+      "songid": "33d9ace1",
+      "count": 209
+    },
+    {
+      "name": "Cowboy Way",
+      "songid": "73d57ea5",
+      "count": 200
+    },
+    {
+      "name": "Sangre por Sangre (Blood for Blood)",
+      "songid": "63c4dae7",
+      "count": 199
+    },
+    {
+      "name": "Demons in the Dirt",
+      "songid": "33c4d81d",
+      "count": 197
+    },
+    {
+      "name": "Moth",
+      "songid": "3bc52058",
+      "count": 185
+    },
+    {
+      "name": "Alcohaulin' Ass",
+      "songid": "2bd6a43a",
+      "count": 174
+    },
+    {
+      "name": "Cross to Bier (Cradle of Bones)",
+      "songid": "2bc4d81e",
+      "count": 161
+    },
+    {
+      "name": "Say When",
+      "songid": "33c5205d",
+      "count": 143
+    },
+    {
+      "name": "Drink Drank Drunk",
+      "songid": "43dd277f",
+      "count": 134
+    },
+    {
+      "name": "Goddamn",
+      "songid": "5bd6cb34",
+      "count": 111
+    },
+    {
+      "name": "Stampede",
+      "songid": "73d5628d",
+      "count": 111
+    },
+    {
+      "name": "X",
+      "songid": "2bcde8ee",
+      "count": 94
+    },
+    {
+      "name": "Human",
+      "songid": "33cc48f1",
+      "count": 82
+    },
+    {
+      "name": "Band of Brothers",
+      "songid": "13dd9101",
+      "count": 76
+    },
+    {
+      "name": "Hell of a Time",
+      "songid": "4bd3c32a",
+      "count": 76
+    },
+    {
+      "name": "Startariot",
+      "songid": "13cafda1",
+      "count": 68
+    },
+    {
+      "name": "I Don't Care Anymore",
+      "songid": "73d63661",
+      "count": 56
+    },
+    {
+      "name": "Nausea",
+      "songid": "1bd6755c",
+      "count": 52
+    },
+    {
+      "name": "Rage/Burn",
+      "songid": "23da7433",
+      "count": 51
+    },
+    {
+      "name": "Rotten to the Core",
+      "songid": "4bd653ea",
+      "count": 42
+    },
+    {
+      "name": "Love Falls",
+      "songid": "73c9daf9",
+      "count": 41
+    },
+    {
+      "name": "Soul Killer",
+      "songid": "23c5205f",
+      "count": 37
+    },
+    {
+      "name": "Stone Cold Crazy",
+      "songid": "43d7b7a7",
+      "count": 33
+    },
+    {
+      "name": "Waging War",
+      "songid": "5bd78740",
+      "count": 30
+    },
+    {
+      "name": "Hush",
+      "songid": "bc03912",
+      "count": 29
+    },
+    {
+      "name": "Be Unden!able",
+      "songid": "33cb8075",
+      "count": 26
+    },
+    {
+      "name": "Walk",
+      "songid": "63d7866f",
+      "count": 25
+    },
+    {
+      "name": "Thank You",
+      "songid": "43d7ab33",
+      "count": 24
+    },
+    {
+      "name": "Dmf",
+      "songid": "13c5918d",
+      "count": 23
+    },
+    {
+      "name": "I'm Broken",
+      "songid": "1bd62dd4",
+      "count": 22
+    },
+    {
+      "name": "Oh My God",
+      "songid": "13fc81cd",
+      "count": 22
+    },
+    {
+      "name": "Welcome Home",
+      "songid": "1bfc81cc",
+      "count": 22
+    },
+    {
+      "name": "333",
+      "songid": "23ff8443",
+      "count": 19
+    },
+    {
+      "name": "Star",
+      "songid": "1bd7b504",
+      "count": 19
+    },
+    {
+      "name": "In the Mood",
+      "songid": "53d62bcd",
+      "count": 18
+    },
+    {
+      "name": "One Thing",
+      "songid": "13d66901",
+      "count": 15
+    },
+    {
+      "name": "Better Man",
+      "songid": "53d0b721",
+      "count": 14
+    },
+    {
+      "name": "Grave",
+      "songid": "1bc979d0",
+      "count": 14
+    },
+    {
+      "name": "Black Flag Army",
+      "songid": "53fd77ed",
+      "count": 12
+    },
+    {
+      "name": "WM Free",
+      "songid": "13db5111",
+      "count": 10
+    },
+    {
+      "name": "Gift",
+      "songid": "bc16daa",
+      "count": 9
+    },
+    {
+      "name": "The Debt That All Men Pay",
+      "songid": "7bd5628c",
+      "count": 7
+    },
+    {
+      "name": "It's On!",
+      "songid": "6bd25e9a",
+      "count": 6
+    },
+    {
+      "name": "Call It Like I See It",
+      "songid": "2bda7432",
+      "count": 5
+    },
+    {
+      "name": "Mouth for War",
+      "songid": "1bdce56c",
+      "count": 5
+    },
+    {
+      "name": "Pole Rider",
+      "songid": "3d0b98b",
+      "count": 3
+    },
+    {
+      "name": "A New Level",
+      "songid": "13d6a981",
+      "count": 2
+    },
+    {
+      "name": "!",
+      "songid": "3cd05ff",
+      "count": 1
+    },
+    {
+      "name": "Bigger God",
+      "songid": "1bdb55bc",
+      "count": 1
+    },
+    {
+      "name": "Fucking Hostile",
+      "songid": "63d6d2db",
+      "count": 1
+    },
+    {
+      "name": "Raining Blood",
+      "songid": "23d658fb",
+      "count": 1
+    },
+    {
+      "name": "Save Me",
+      "songid": "53d64fbd",
+      "count": 1
+    },
+    {
+      "name": "Wish You Were Here",
+      "songid": "1bd7f574",
+      "count": 1
+    }
+  ]
+}

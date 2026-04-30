@@ -1,0 +1,859 @@
+{
+  "artist": "Maroon 5",
+  "slug": "maroon-5",
+  "stats_id": "4bd6bfea",
+  "mbid": "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+  "fetched_at": "2026-04-30T15:30:31.060368Z",
+  "songs": [
+    {
+      "name": "This Love",
+      "songid": "bd795c2",
+      "count": 856
+    },
+    {
+      "name": "She Will Be Loved",
+      "songid": "33d644e5",
+      "count": 831
+    },
+    {
+      "name": "Harder to Breathe",
+      "songid": "2bd6c0fe",
+      "count": 801
+    },
+    {
+      "name": "Sunday Morning",
+      "songid": "4bd7b3ce",
+      "count": 798
+    },
+    {
+      "name": "Makes Me Wonder",
+      "songid": "1bd60510",
+      "count": 693
+    },
+    {
+      "name": "Moves Like Jagger",
+      "songid": "13de9909",
+      "count": 570
+    },
+    {
+      "name": "One More Night",
+      "songid": "3bdc6034",
+      "count": 511
+    },
+    {
+      "name": "Payphone",
+      "songid": "3dc29b7",
+      "count": 498
+    },
+    {
+      "name": "Wake Up Call",
+      "songid": "53d78795",
+      "count": 425
+    },
+    {
+      "name": "Love Somebody",
+      "songid": "bdb798a",
+      "count": 398
+    },
+    {
+      "name": "Sugar",
+      "songid": "2bc3085a",
+      "count": 392
+    },
+    {
+      "name": "Animals",
+      "songid": "23c56c2b",
+      "count": 387
+    },
+    {
+      "name": "Maps",
+      "songid": "bc5a956",
+      "count": 385
+    },
+    {
+      "name": "Stereo Hearts",
+      "songid": "4bde9362",
+      "count": 367
+    },
+    {
+      "name": "Misery",
+      "songid": "43d233bf",
+      "count": 358
+    },
+    {
+      "name": "Lucky Strike",
+      "songid": "6bdd6eea",
+      "count": 356
+    },
+    {
+      "name": "Won't Go Home Without You",
+      "songid": "3bd7f448",
+      "count": 349
+    },
+    {
+      "name": "Don't Wanna Know",
+      "songid": "5bca7fa8",
+      "count": 281
+    },
+    {
+      "name": "The Sun",
+      "songid": "13d79955",
+      "count": 277
+    },
+    {
+      "name": "Daylight",
+      "songid": "7bdd6ed8",
+      "count": 275
+    },
+    {
+      "name": "If I Never See Your Face Again",
+      "songid": "73d62e29",
+      "count": 269
+    },
+    {
+      "name": "What Lovers Do",
+      "songid": "3bf6c0a8",
+      "count": 249
+    },
+    {
+      "name": "Girls Like You",
+      "songid": "3f2d127",
+      "count": 244
+    },
+    {
+      "name": "Shiver",
+      "songid": "5bd647bc",
+      "count": 234
+    },
+    {
+      "name": "Memories",
+      "songid": "2bfd402a",
+      "count": 184
+    },
+    {
+      "name": "Secret",
+      "songid": "23d6480b",
+      "count": 180
+    },
+    {
+      "name": "Tangled",
+      "songid": "7bd7aeec",
+      "count": 152
+    },
+    {
+      "name": "Wait",
+      "songid": "7bf7d21c",
+      "count": 133
+    },
+    {
+      "name": "Cold",
+      "songid": "bc8ad5a",
+      "count": 131
+    },
+    {
+      "name": "I Wanna Be Your Lover",
+      "songid": "53d633f5",
+      "count": 108
+    },
+    {
+      "name": "Stutter",
+      "songid": "5bd21ff0",
+      "count": 105
+    },
+    {
+      "name": "Sweetest Goodbye",
+      "songid": "3d7adb3",
+      "count": 99
+    },
+    {
+      "name": "Hands All Over",
+      "songid": "13d34551",
+      "count": 97
+    },
+    {
+      "name": "Heavy",
+      "songid": "3bfce838",
+      "count": 91
+    },
+    {
+      "name": "Never Gonna Leave This Bed",
+      "songid": "53d0db19",
+      "count": 80
+    },
+    {
+      "name": "Give a Little More",
+      "songid": "7bd3ea8c",
+      "count": 79
+    },
+    {
+      "name": "Lost Stars",
+      "songid": "b94c9e2",
+      "count": 75
+    },
+    {
+      "name": "Can't Stop",
+      "songid": "53d68749",
+      "count": 65
+    },
+    {
+      "name": "Little of Your Time",
+      "songid": "4bd7d772",
+      "count": 63
+    },
+    {
+      "name": "Roxanne",
+      "songid": "4bd653ba",
+      "count": 61
+    },
+    {
+      "name": "Through With You",
+      "songid": "3bd7949c",
+      "count": 61
+    },
+    {
+      "name": "Beautiful Mistakes",
+      "songid": "be6c992",
+      "count": 57
+    },
+    {
+      "name": "Forever Young",
+      "songid": "3d6d1e3",
+      "count": 56
+    },
+    {
+      "name": "Not Coming Home",
+      "songid": "63d22e37",
+      "count": 54
+    },
+    {
+      "name": "Wipe Your Eyes",
+      "songid": "73dd6ee5",
+      "count": 51
+    },
+    {
+      "name": "It Was Always You",
+      "songid": "5bc56b34",
+      "count": 48
+    },
+    {
+      "name": "Wasted Years",
+      "songid": "1bd11548",
+      "count": 47
+    },
+    {
+      "name": "Must Get Out",
+      "songid": "bd679ce",
+      "count": 46
+    },
+    {
+      "name": "Rock With You",
+      "songid": "bd6518a",
+      "count": 45
+    },
+    {
+      "name": "Get Lucky",
+      "songid": "4bd8330e",
+      "count": 43
+    },
+    {
+      "name": "What's Love Got to Do With It",
+      "songid": "73ee96cd",
+      "count": 40
+    },
+    {
+      "name": "Let's Go Crazy",
+      "songid": "bd6111e",
+      "count": 39
+    },
+    {
+      "name": "If I Ain't Got You",
+      "songid": "7bd62e6c",
+      "count": 38
+    },
+    {
+      "name": "Kiwi",
+      "songid": "23d61803",
+      "count": 37
+    },
+    {
+      "name": "Let's Dance",
+      "songid": "1bd61138",
+      "count": 32
+    },
+    {
+      "name": "Highway to Hell",
+      "songid": "6bd63e8a",
+      "count": 29
+    },
+    {
+      "name": "Lost",
+      "songid": "13e64961",
+      "count": 29
+    },
+    {
+      "name": "Wicked Game",
+      "songid": "43d7fb43",
+      "count": 29
+    },
+    {
+      "name": "Stayin' Alive",
+      "songid": "2bd7b4f6",
+      "count": 28
+    },
+    {
+      "name": "Back at Your Door",
+      "songid": "33d69841",
+      "count": 21
+    },
+    {
+      "name": "In the Air Tonight",
+      "songid": "5bd62bf8",
+      "count": 21
+    },
+    {
+      "name": "Closer",
+      "songid": "13d6fd91",
+      "count": 19
+    },
+    {
+      "name": "Don't You Want Me",
+      "songid": "5bd6eb58",
+      "count": 19
+    },
+    {
+      "name": "Locked Away",
+      "songid": "13cee5d1",
+      "count": 19
+    },
+    {
+      "name": "Seven Nation Army",
+      "songid": "63d64aef",
+      "count": 19
+    },
+    {
+      "name": "California",
+      "songid": "739e4239",
+      "count": 17
+    },
+    {
+      "name": "SexyBack",
+      "songid": "bd05516",
+      "count": 17
+    },
+    {
+      "name": "Let's Stay Together",
+      "songid": "1bd611ec",
+      "count": 16
+    },
+    {
+      "name": "Nothing Lasts Forever",
+      "songid": "13d10db5",
+      "count": 14
+    },
+    {
+      "name": "The Bed's Too Big Without You",
+      "songid": "73d7aaa1",
+      "count": 14
+    },
+    {
+      "name": "Don't Stop 'Til You Get Enough",
+      "songid": "6bd1b2be",
+      "count": 13
+    },
+    {
+      "name": "This Summer's Gonna Hurt Like a Motherf****r",
+      "songid": "33c07079",
+      "count": 13
+    },
+    {
+      "name": "Ain't No Sunshine",
+      "songid": "bd6a5ca",
+      "count": 10
+    },
+    {
+      "name": "Trenchtown Rock",
+      "songid": "73c77659",
+      "count": 9
+    },
+    {
+      "name": "Another Brick in the Wall, Part 2",
+      "songid": "2bd24cfa",
+      "count": 8
+    },
+    {
+      "name": "Happy Birthday to You",
+      "songid": "bc10d5a",
+      "count": 8
+    },
+    {
+      "name": "Last Chance",
+      "songid": "43d10f03",
+      "count": 8
+    },
+    {
+      "name": "Love's in Need of Love Today",
+      "songid": "23d60857",
+      "count": 8
+    },
+    {
+      "name": "Billie Jean",
+      "songid": "bd691ea",
+      "count": 7
+    },
+    {
+      "name": "Rockin' in the Free World",
+      "songid": "2bd6502a",
+      "count": 7
+    },
+    {
+      "name": "Cigarettes",
+      "songid": "3b9f1804",
+      "count": 6
+    },
+    {
+      "name": "Woman",
+      "songid": "3bd10c7c",
+      "count": 6
+    },
+    {
+      "name": "All Night",
+      "songid": "6b9e4246",
+      "count": 5
+    },
+    {
+      "name": "Into the Groove",
+      "songid": "13d62599",
+      "count": 5
+    },
+    {
+      "name": "Out of Goodbyes",
+      "songid": "43d3f337",
+      "count": 5
+    },
+    {
+      "name": "The Man Who Never Lied",
+      "songid": "1bdad1b0",
+      "count": 5
+    },
+    {
+      "name": "Goodnight Goodnight",
+      "songid": "2bc08c96",
+      "count": 4
+    },
+    {
+      "name": "Hello",
+      "songid": "1bd63d80",
+      "count": 4
+    },
+    {
+      "name": "Man in the Mirror",
+      "songid": "43d4db77",
+      "count": 4
+    },
+    {
+      "name": "Please Be Good to Me",
+      "songid": "439593cb",
+      "count": 4
+    },
+    {
+      "name": "Purple Rain",
+      "songid": "6bd65e66",
+      "count": 4
+    },
+    {
+      "name": "The Way You Look Tonight",
+      "songid": "1bc0b108",
+      "count": 4
+    },
+    {
+      "name": "Bad Boy for Life",
+      "songid": "53c7d345",
+      "count": 3
+    },
+    {
+      "name": "Be My Baby",
+      "songid": "2bff303e",
+      "count": 3
+    },
+    {
+      "name": "Better That We Break",
+      "songid": "5bc08f00",
+      "count": 3
+    },
+    {
+      "name": "Ex-Factor",
+      "songid": "13d7c1e1",
+      "count": 3
+    },
+    {
+      "name": "Frontin'",
+      "songid": "73d6d25d",
+      "count": 3
+    },
+    {
+      "name": "Gangnam Style",
+      "songid": "2bdb5492",
+      "count": 3
+    },
+    {
+      "name": "Happy Xmas (War Is Over)",
+      "songid": "53d947b1",
+      "count": 3
+    },
+    {
+      "name": "I Want You (She's So Heavy)",
+      "songid": "4bd63392",
+      "count": 3
+    },
+    {
+      "name": "Icky Thump",
+      "songid": "53d62f99",
+      "count": 3
+    },
+    {
+      "name": "If I Fell",
+      "songid": "63d7e273",
+      "count": 3
+    },
+    {
+      "name": "If You Want Me to Stay",
+      "songid": "13d40d4d",
+      "count": 3
+    },
+    {
+      "name": "Leather and Lace",
+      "songid": "2bd05cba",
+      "count": 3
+    },
+    {
+      "name": "Love Is Like",
+      "songid": "739ffa5d",
+      "count": 3
+    },
+    {
+      "name": "My Heart Is Open",
+      "songid": "63c326a3",
+      "count": 3
+    },
+    {
+      "name": "Bang Bang",
+      "songid": "3bd484ec",
+      "count": 2
+    },
+    {
+      "name": "Boogie on Reggae Woman",
+      "songid": "6bd41a6a",
+      "count": 2
+    },
+    {
+      "name": "Brown Sugar",
+      "songid": "6bd442de",
+      "count": 2
+    },
+    {
+      "name": "Crazy Little Thing Called Love",
+      "songid": "4bd6fb42",
+      "count": 2
+    },
+    {
+      "name": "Don't Forget Me",
+      "songid": "2bd6e86a",
+      "count": 2
+    },
+    {
+      "name": "Don't Know Nothing",
+      "songid": "5bde235c",
+      "count": 2
+    },
+    {
+      "name": "Don't Let Me Down",
+      "songid": "2bd6e81a",
+      "count": 2
+    },
+    {
+      "name": "Don't Look Back in Anger",
+      "songid": "33d6e801",
+      "count": 2
+    },
+    {
+      "name": "Don't Matter",
+      "songid": "23d6e8eb",
+      "count": 2
+    },
+    {
+      "name": "Heard 'Em Say",
+      "songid": "6bd6c24e",
+      "count": 2
+    },
+    {
+      "name": "I Just Don't Know What to Do With Myself",
+      "songid": "73d4e245",
+      "count": 2
+    },
+    {
+      "name": "Ignition",
+      "songid": "13d16991",
+      "count": 2
+    },
+    {
+      "name": "Jason Segel Improvisation",
+      "songid": "5bea57b0",
+      "count": 2
+    },
+    {
+      "name": "Love and Happiness",
+      "songid": "23d440e7",
+      "count": 2
+    },
+    {
+      "name": "Middle Ground",
+      "songid": "43ec83cf",
+      "count": 2
+    },
+    {
+      "name": "Not Falling Apart",
+      "songid": "3dc7d3b",
+      "count": 2
+    },
+    {
+      "name": "Patience",
+      "songid": "43d66767",
+      "count": 2
+    },
+    {
+      "name": "Seasons",
+      "songid": "2bd6484a",
+      "count": 2
+    },
+    {
+      "name": "The Girl From Ipanema",
+      "songid": "3bdaec58",
+      "count": 2
+    },
+    {
+      "name": "Winter Wonderland",
+      "songid": "1bd061f8",
+      "count": 2
+    },
+    {
+      "name": "1999",
+      "songid": "3d6b14f",
+      "count": 1
+    },
+    {
+      "name": "50 Ways to Leave Your Lover",
+      "songid": "7bd7d230",
+      "count": 1
+    },
+    {
+      "name": "All My Loving",
+      "songid": "13d7cd9d",
+      "count": 1
+    },
+    {
+      "name": "Bangers, Beans & Mash",
+      "songid": "1beba584",
+      "count": 1
+    },
+    {
+      "name": "Bohemian Rhapsody",
+      "songid": "2bd68cda",
+      "count": 1
+    },
+    {
+      "name": "Darling Nikki",
+      "songid": "53d6f7e5",
+      "count": 1
+    },
+    {
+      "name": "Don't Go Away",
+      "songid": "3bd6e85c",
+      "count": 1
+    },
+    {
+      "name": "Dracula's Lament",
+      "songid": "33df1c3d",
+      "count": 1
+    },
+    {
+      "name": "Garota de Ipanema",
+      "songid": "1bc7a9f4",
+      "count": 1
+    },
+    {
+      "name": "Girl on Fire",
+      "songid": "63daea1f",
+      "count": 1
+    },
+    {
+      "name": "Good Night",
+      "songid": "7be5befc",
+      "count": 1
+    },
+    {
+      "name": "Happy",
+      "songid": "3bc738cc",
+      "count": 1
+    },
+    {
+      "name": "Hey Jude",
+      "songid": "43d63fc3",
+      "count": 1
+    },
+    {
+      "name": "Hideaway",
+      "songid": "39ff12f",
+      "count": 1
+    },
+    {
+      "name": "How",
+      "songid": "23c168f3",
+      "count": 1
+    },
+    {
+      "name": "I Could Not Ask For More",
+      "songid": "1bd40d8c",
+      "count": 1
+    },
+    {
+      "name": "I Love L.A.",
+      "songid": "53d7cbbd",
+      "count": 1
+    },
+    {
+      "name": "Ice Ice Baby",
+      "songid": "4bd62f56",
+      "count": 1
+    },
+    {
+      "name": "If It's Magic",
+      "songid": "5bdfaf78",
+      "count": 1
+    },
+    {
+      "name": "Inside Of You",
+      "songid": "3e0a123",
+      "count": 1
+    },
+    {
+      "name": "Jealous Guy",
+      "songid": "4bd7537a",
+      "count": 1
+    },
+    {
+      "name": "Just Friends (Sunny)",
+      "songid": "6bdee27e",
+      "count": 1
+    },
+    {
+      "name": "Kryptonite (I'm on It)",
+      "songid": "1bda1d10",
+      "count": 1
+    },
+    {
+      "name": "Let It Be",
+      "songid": "7bd616f4",
+      "count": 1
+    },
+    {
+      "name": "Man in the Box",
+      "songid": "1bd60594",
+      "count": 1
+    },
+    {
+      "name": "Message in a Bottle",
+      "songid": "2bd600fe",
+      "count": 1
+    },
+    {
+      "name": "Mine",
+      "songid": "4bd3bb8e",
+      "count": 1
+    },
+    {
+      "name": "Miss You Love You",
+      "songid": "be1c9f2",
+      "count": 1
+    },
+    {
+      "name": "Nobody's Love",
+      "songid": "3f929f3",
+      "count": 1
+    },
+    {
+      "name": "Nothing Compares 2 U",
+      "songid": "73d67275",
+      "count": 1
+    },
+    {
+      "name": "Real Fine Place To Start",
+      "songid": "3d40d97",
+      "count": 1
+    },
+    {
+      "name": "Secret / Ain't No Sunshine",
+      "songid": "3d10ddf",
+      "count": 1
+    },
+    {
+      "name": "Shit, Damn, Motherfucker",
+      "songid": "53df7bdd",
+      "count": 1
+    },
+    {
+      "name": "Should I Stay or Should I Go",
+      "songid": "63d6462f",
+      "count": 1
+    },
+    {
+      "name": "SICKO MODE",
+      "songid": "43f3f7d7",
+      "count": 1
+    },
+    {
+      "name": "So Lonely",
+      "songid": "23d7bc1b",
+      "count": 1
+    },
+    {
+      "name": "Some Things Never Change",
+      "songid": "1bd40d94",
+      "count": 1
+    },
+    {
+      "name": "Stereo Hearts",
+      "songid": "4beacb22",
+      "count": 1
+    },
+    {
+      "name": "Surfer Girl",
+      "songid": "13d479c1",
+      "count": 1
+    },
+    {
+      "name": "Take What You Want",
+      "songid": "bf92916",
+      "count": 1
+    },
+    {
+      "name": "Tell Him",
+      "songid": "23d10c73",
+      "count": 1
+    },
+    {
+      "name": "The Way You Move",
+      "songid": "1bd7c9dc",
+      "count": 1
+    },
+    {
+      "name": "Ticket to Ride",
+      "songid": "3bd4bc44",
+      "count": 1
+    },
+    {
+      "name": "Yesterday",
+      "songid": "6bd7f6b2",
+      "count": 1
+    }
+  ]
+}

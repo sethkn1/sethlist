@@ -1,0 +1,269 @@
+{
+  "artist": "A Perfect Circle, Puscifer & Primus",
+  "slug": "a-perfect-circle-puscifer-and-primus",
+  "stats_id": "43e43b6b",
+  "mbid": "7bddf8aa-3e0b-4527-b28e-c5ea077fcb15",
+  "fetched_at": "2026-04-30T15:31:39.404069Z",
+  "songs": [
+    {
+      "name": "Bullet Train to Iowa",
+      "songid": "23f9cc1b",
+      "count": 47
+    },
+    {
+      "name": "Judith",
+      "songid": "3d61de3",
+      "count": 47
+    },
+    {
+      "name": "My Name Is Mud",
+      "songid": "4bd67b3a",
+      "count": 47
+    },
+    {
+      "name": "Southbound Pachyderm",
+      "songid": "6bd75ebe",
+      "count": 47
+    },
+    {
+      "name": "The Humbling River",
+      "songid": "6bd4360a",
+      "count": 47
+    },
+    {
+      "name": "The Remedy",
+      "songid": "13ce5949",
+      "count": 47
+    },
+    {
+      "name": "Disillusioned",
+      "songid": "7bf5025c",
+      "count": 46
+    },
+    {
+      "name": "Grand Canyon",
+      "songid": "3ce594b",
+      "count": 46
+    },
+    {
+      "name": "Indigo Children",
+      "songid": "3bd7d818",
+      "count": 46
+    },
+    {
+      "name": "Jerry Was a Race Car Driver",
+      "songid": "5bd23354",
+      "count": 46
+    },
+    {
+      "name": "Kindred",
+      "songid": "5be9732c",
+      "count": 46
+    },
+    {
+      "name": "No Angel",
+      "songid": "3e9718f",
+      "count": 46
+    },
+    {
+      "name": "Pablo's Hippos",
+      "songid": "3be97048",
+      "count": 46
+    },
+    {
+      "name": "The Contrarian",
+      "songid": "7bf50208",
+      "count": 46
+    },
+    {
+      "name": "The Outsider",
+      "songid": "3bd79c74",
+      "count": 45
+    },
+    {
+      "name": "Too Many Puppies",
+      "songid": "7bd75ebc",
+      "count": 44
+    },
+    {
+      "name": "Weak and Powerless",
+      "songid": "73d78219",
+      "count": 44
+    },
+    {
+      "name": "The Package",
+      "songid": "3bd79c64",
+      "count": 35
+    },
+    {
+      "name": "The Noose",
+      "songid": "bd79dfa",
+      "count": 34
+    },
+    {
+      "name": "Counting Bodies Like Sheep to the Rhythm of the War Drums",
+      "songid": "43d31f73",
+      "count": 30
+    },
+    {
+      "name": "Man Overboard",
+      "songid": "2bdfa43a",
+      "count": 30
+    },
+    {
+      "name": "Flippant",
+      "songid": "7bcce2e0",
+      "count": 27
+    },
+    {
+      "name": "Blue",
+      "songid": "1bd68de4",
+      "count": 26
+    },
+    {
+      "name": "Little Lord Fentanyl",
+      "songid": "6b9046d6",
+      "count": 26
+    },
+    {
+      "name": "Polar Bear",
+      "songid": "2bd7d81a",
+      "count": 26
+    },
+    {
+      "name": "The Algorithm",
+      "songid": "739046d5",
+      "count": 26
+    },
+    {
+      "name": "The Doomed",
+      "songid": "3bf7bcbc",
+      "count": 26
+    },
+    {
+      "name": "Those Damned Blue-Collar Tweekers",
+      "songid": "6bd22636",
+      "count": 26
+    },
+    {
+      "name": "Welcome to This World",
+      "songid": "6bd75eae",
+      "count": 26
+    },
+    {
+      "name": "Duchess and the Proverbial Mind Spread",
+      "songid": "5bd6e750",
+      "count": 25
+    },
+    {
+      "name": "Here Come the Bastards",
+      "songid": "13d7c92d",
+      "count": 25
+    },
+    {
+      "name": "Tiny Monsters",
+      "songid": "2bdfa442",
+      "count": 25
+    },
+    {
+      "name": "Groundhog's Day",
+      "songid": "3bd6c4b8",
+      "count": 22
+    },
+    {
+      "name": "Horizons",
+      "songid": "23dfa43b",
+      "count": 21
+    },
+    {
+      "name": "The Hollow",
+      "songid": "3bd7a004",
+      "count": 21
+    },
+    {
+      "name": "The Underwhelming",
+      "songid": "23f9cc27",
+      "count": 21
+    },
+    {
+      "name": "Momma Sed",
+      "songid": "3bd7d824",
+      "count": 20
+    },
+    {
+      "name": "Postulous",
+      "songid": "3bf9cc18",
+      "count": 20
+    },
+    {
+      "name": "So Long, and Thanks for All the Fish",
+      "songid": "63f502f3",
+      "count": 20
+    },
+    {
+      "name": "Galileo",
+      "songid": "43ce57bb",
+      "count": 17
+    },
+    {
+      "name": "Tommy the Cat",
+      "songid": "3bd278d8",
+      "count": 16
+    },
+    {
+      "name": "Sgt. Baker",
+      "songid": "13d6455d",
+      "count": 14
+    },
+    {
+      "name": "Follow the Fool",
+      "songid": "3e28173",
+      "count": 11
+    },
+    {
+      "name": "Wynona's Big Brown Beaver",
+      "songid": "5bd75f00",
+      "count": 5
+    },
+    {
+      "name": "Over the Electric Grapevine",
+      "songid": "43d75ffb",
+      "count": 4
+    },
+    {
+      "name": "Eleven",
+      "songid": "6bd75eb2",
+      "count": 2
+    },
+    {
+      "name": "John the Fisherman",
+      "songid": "3bd7c4dc",
+      "count": 2
+    },
+    {
+      "name": "American Life",
+      "songid": "3d7c923",
+      "count": 1
+    },
+    {
+      "name": "\u00c6nema",
+      "songid": "3d699fb",
+      "count": 1
+    },
+    {
+      "name": "Fisticuffs",
+      "songid": "73d222c1",
+      "count": 1
+    },
+    {
+      "name": "Last Salmon Man",
+      "songid": "23ded0ff",
+      "count": 1
+    },
+    {
+      "name": "Shake Hands With Beef",
+      "songid": "bd645e2",
+      "count": 1
+    }
+  ]
+}
