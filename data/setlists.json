@@ -17292,5 +17292,265 @@
   },
   "opener:kian\u00ee-medina:2025-11-04": {
     "_error": "empty setlist"
+  },
+  "4b5f2316": {
+    "id": "4b5f2316",
+    "artist": "System of a Down",
+    "tour": "2025 North American Stadium Tour",
+    "eventDate": "28-08-2025",
+    "url": "https://www.setlist.fm/setlist/system-of-a-down/2025/metlife-stadium-east-rutherford-nj-4b5f2316.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "One Flew Over the Cuckoo's Nest (Opening Theme)",
+            "cover": "Jack Nitzsche",
+            "tape": true
+          },
+          {
+            "name": "X"
+          },
+          {
+            "name": "Suite-Pee"
+          },
+          {
+            "name": "Prison Song"
+          },
+          {
+            "name": "Violent Pornography"
+          },
+          {
+            "name": "Soldier Side - Intro"
+          },
+          {
+            "name": "B.Y.O.B."
+          },
+          {
+            "name": "Science"
+          },
+          {
+            "name": "Needles"
+          },
+          {
+            "name": "Deer Dance"
+          },
+          {
+            "name": "Radio/Video"
+          },
+          {
+            "name": "Dreaming",
+            "info": "breakdown only"
+          },
+          {
+            "name": "Hypnotize"
+          },
+          {
+            "name": "ATWA"
+          },
+          {
+            "name": "Bounce"
+          },
+          {
+            "name": "Suggestions"
+          },
+          {
+            "name": "Psycho",
+            "info": "with \u201cLet The Music Play\u201d by Shannon intro"
+          },
+          {
+            "name": "Chop Suey!"
+          },
+          {
+            "name": "Lonely Day",
+            "info": "with \u2018Careless Whisper\u2019 Intro"
+          },
+          {
+            "name": "Lost in Hollywood",
+            "info": "with \u2018Won\u2019t Get Fooled Again\u2019 by The Who Tease"
+          },
+          {
+            "name": "Snowblind",
+            "cover": "Black Sabbath",
+            "info": "tribute to Ozzy Osbourne"
+          },
+          {
+            "name": "Aerials"
+          },
+          {
+            "name": "Cigaro"
+          },
+          {
+            "name": "Forest"
+          },
+          {
+            "name": "Roulette"
+          },
+          {
+            "name": "Toxicity"
+          },
+          {
+            "name": "Sugar"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "headliner"
+  },
+  "opener:hobex:1998-04-10": {
+    "_error": "empty setlist"
+  },
+  "opener:wisp:2025-08-28": {
+    "id": "5b5f2308",
+    "artist": "Wisp",
+    "tour": null,
+    "eventDate": "28-08-2025",
+    "url": "https://www.setlist.fm/setlist/wisp/2025/metlife-stadium-east-rutherford-nj-5b5f2308.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Pandora"
+          },
+          {
+            "name": "Save me now"
+          },
+          {
+            "name": "Guide light"
+          },
+          {
+            "name": "Once then we\u2019ll be free"
+          },
+          {
+            "name": "Sword"
+          },
+          {
+            "name": "I remember how your hands felt on mine"
+          },
+          {
+            "name": "Your face"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:polyphia:2025-08-28": {
+    "id": "535f2309",
+    "artist": "Polyphia",
+    "tour": null,
+    "eventDate": "28-08-2025",
+    "url": "https://www.setlist.fm/setlist/polyphia/2025/metlife-stadium-east-rutherford-nj-535f2309.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Loud"
+          },
+          {
+            "name": "Chimera"
+          },
+          {
+            "name": "Goose"
+          },
+          {
+            "name": "40oz"
+          },
+          {
+            "name": "The Worst"
+          },
+          {
+            "name": "Champagne"
+          },
+          {
+            "name": "Euphoria"
+          },
+          {
+            "name": "Playing God"
+          },
+          {
+            "name": "G.O.A.T."
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:korn:2025-08-28": {
+    "id": "435f230b",
+    "artist": "Korn",
+    "tour": null,
+    "eventDate": "28-08-2025",
+    "url": "https://www.setlist.fm/setlist/korn/2025/metlife-stadium-east-rutherford-nj-435f230b.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Blind"
+          },
+          {
+            "name": "Twist"
+          },
+          {
+            "name": "Here to Stay"
+          },
+          {
+            "name": "Got the Life"
+          },
+          {
+            "name": "Clown"
+          },
+          {
+            "name": "Did My Time"
+          },
+          {
+            "name": "Porno Creep"
+          },
+          {
+            "name": "Shoots and Ladders",
+            "info": "Metallica's \"One\" outro"
+          },
+          {
+            "name": "Cold"
+          },
+          {
+            "name": "Twisted Transistor"
+          },
+          {
+            "name": "Dirty"
+          },
+          {
+            "name": "Somebody Someone"
+          },
+          {
+            "name": "A.D.I.D.A.S."
+          },
+          {
+            "name": "Y'All Want a Single"
+          },
+          {
+            "name": "4 U"
+          },
+          {
+            "name": "Falling Away From Me"
+          },
+          {
+            "name": "Freak on a Leash"
+          }
+        ]
+      }
+    ],
+    "info": "Opening act for System Of A Down",
+    "role": "opener"
   }
 }

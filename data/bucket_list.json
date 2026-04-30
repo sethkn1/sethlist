@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T15:35:42.863003Z",
+  "generated_at": "2026-04-30T15:55:29.651337Z",
   "bands": {
     "Mr. Bungle": {
       "slug": "mr-bungle",
@@ -1008,23 +1008,13 @@
       "stats_id": "23d69cd7",
       "showsAttended": 2,
       "totalLiveSongs": 105,
-      "heardCount": 35,
-      "coverage": 0.3333,
+      "heardCount": 39,
+      "coverage": 0.3714,
       "unheard": [
-        {
-          "name": "Cigaro",
-          "count": 211,
-          "songid": "7bd682b0"
-        },
         {
           "name": "Question!",
           "count": 196,
           "songid": "1bd6594c"
-        },
-        {
-          "name": "Forest",
-          "count": 180,
-          "songid": "3d6d12f"
         },
         {
           "name": "Kill Rock 'n Roll",
@@ -1052,11 +1042,6 @@
           "songid": "2bd654a6"
         },
         {
-          "name": "Violent Pornography",
-          "count": 106,
-          "songid": "1bd78590"
-        },
-        {
           "name": "Holy Mountains",
           "count": 101,
           "songid": "33d63809"
@@ -1065,11 +1050,6 @@
           "name": "I-E-A-I-A-I-O",
           "count": 76,
           "songid": "3bd62c84"
-        },
-        {
-          "name": "Roulette",
-          "count": 58,
-          "songid": "53d653e5"
         },
         {
           "name": "This Cocaine Makes Me Feel Like I'm on This Song",
@@ -1449,9 +1429,19 @@
           "songid": "63d7f667"
         },
         {
+          "name": "Cigaro",
+          "count": 211,
+          "songid": "7bd682b0"
+        },
+        {
           "name": "Spiders",
           "count": 209,
           "songid": "4bd7bbd2"
+        },
+        {
+          "name": "Forest",
+          "count": 180,
+          "songid": "3d6d12f"
         },
         {
           "name": "ATWA",
@@ -1504,6 +1494,11 @@
           "songid": "53d667cd"
         },
         {
+          "name": "Violent Pornography",
+          "count": 106,
+          "songid": "1bd78590"
+        },
+        {
           "name": "Marmalade",
           "count": 62,
           "songid": "5bd6074c"
@@ -1517,6 +1512,11 @@
           "name": "Dreaming",
           "count": 59,
           "songid": "53d597d1"
+        },
+        {
+          "name": "Roulette",
+          "count": 58,
+          "songid": "53d653e5"
         },
         {
           "name": "Tentative",
@@ -40024,8 +40024,8 @@
       "stats_id": "4bd6d3fe",
       "showsAttended": 1,
       "totalLiveSongs": 163,
-      "heardCount": 27,
-      "coverage": 0.1656,
+      "heardCount": 29,
+      "coverage": 0.1779,
       "unheard": [
         {
           "name": "Faget",
@@ -40036,11 +40036,6 @@
           "name": "Good God",
           "count": 541,
           "songid": "73d6ca19"
-        },
-        {
-          "name": "Did My Time",
-          "count": 530,
-          "songid": "bd6edb2"
         },
         {
           "name": "Right Now",
@@ -40096,11 +40091,6 @@
           "name": "Kill You",
           "count": 258,
           "songid": "bd6195a"
-        },
-        {
-          "name": "Twisted Transistor",
-          "count": 254,
-          "songid": "5bd78f0c"
         },
         {
           "name": "Trash",
@@ -40770,6 +40760,11 @@
           "songid": "2bd700be"
         },
         {
+          "name": "Did My Time",
+          "count": 530,
+          "songid": "bd6edb2"
+        },
+        {
           "name": "Divine",
           "count": 431,
           "songid": "73d6ee55"
@@ -40783,6 +40778,11 @@
           "name": "4 U",
           "count": 296,
           "songid": "6bd442fe"
+        },
+        {
+          "name": "Twisted Transistor",
+          "count": 254,
+          "songid": "5bd78f0c"
         },
         {
           "name": "Get Up!",
@@ -55424,14 +55424,6 @@
       "showsSeen": 1
     },
     {
-      "song": "Did My Time",
-      "songid": "bd6edb2",
-      "band": "Korn",
-      "bandSlug": "korn",
-      "playCount": 530,
-      "showsSeen": 1
-    },
-    {
       "song": "Sin",
       "songid": "33d64049",
       "band": "Nine Inch Nails",
@@ -57688,14 +57680,6 @@
       "showsSeen": 2
     },
     {
-      "song": "Twisted Transistor",
-      "songid": "5bd78f0c",
-      "band": "Korn",
-      "bandSlug": "korn",
-      "playCount": 254,
-      "showsSeen": 1
-    },
-    {
       "song": "Doolin-Dalton",
       "songid": "7bd58294",
       "band": "Eagles",
@@ -58550,14 +58534,6 @@
       "bandSlug": "the-black-crowes",
       "playCount": 212,
       "showsSeen": 1
-    },
-    {
-      "song": "Cigaro",
-      "songid": "7bd682b0",
-      "band": "System of a Down",
-      "bandSlug": "system-of-a-down",
-      "playCount": 211,
-      "showsSeen": 2
     },
     {
       "song": "Do Not Disturb",
@@ -59437,14 +59413,6 @@
       "band": "Bush",
       "bandSlug": "bush",
       "playCount": 181,
-      "showsSeen": 2
-    },
-    {
-      "song": "Forest",
-      "songid": "3d6d12f",
-      "band": "System of a Down",
-      "bandSlug": "system-of-a-down",
-      "playCount": 180,
       "showsSeen": 2
     },
     {
@@ -64394,14 +64362,6 @@
     {
       "song": "Revenga",
       "songid": "2bd654a6",
-      "band": "System of a Down",
-      "bandSlug": "system-of-a-down",
-      "playCount": 106,
-      "showsSeen": 2
-    },
-    {
-      "song": "Violent Pornography",
-      "songid": "1bd78590",
       "band": "System of a Down",
       "bandSlug": "system-of-a-down",
       "playCount": 106,
@@ -70813,14 +70773,6 @@
       "band": "Brit Floyd",
       "bandSlug": "brit-floyd",
       "playCount": 59,
-      "showsSeen": 2
-    },
-    {
-      "song": "Roulette",
-      "songid": "53d653e5",
-      "band": "System of a Down",
-      "bandSlug": "system-of-a-down",
-      "playCount": 58,
       "showsSeen": 2
     },
     {

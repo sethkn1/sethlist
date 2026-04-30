@@ -1,206 +1,22 @@
 {
   "Jack White": {
-    "_NEEDS_RESOLUTION": true,
-    "_instructions": "Pick one candidate below and replace this entry with: {\"mbid\": \"<full mbid>\", \"stats_id\": \"<first 7 hex>\", \"slug\": \"<slug>\"}",
-    "candidates": [
-      {
-        "score": 30,
-        "name": "Jack White",
-        "sortName": "White, Jack",
-        "disambiguation": "rock & blues multi\u2010instrumentalist, The White Stripes, Third Man Records",
-        "mbid": "3ae2fb37-8a23-429d-9920-bac811c4fc22",
-        "url": "https://www.setlist.fm/setlists/jack-white-33d69845.html",
-        "reason": "exact name match, slug matches existing setlist URLs (jack-white)"
-      },
-      {
-        "score": 30,
-        "name": "Jack White",
-        "sortName": "White, Jack",
-        "disambiguation": "UK dance band leader",
-        "mbid": "b367ff7a-d2f4-4cd9-8385-6927c47c6c5f",
-        "url": "https://www.setlist.fm/setlists/jack-white-6398125b.html",
-        "reason": "exact name match, slug matches existing setlist URLs (jack-white)"
-      },
-      {
-        "score": 0,
-        "name": "Jack Russell\u2019s Great White",
-        "sortName": "Russell, Jack, Great White",
-        "disambiguation": "",
-        "mbid": "52a9c3ae-092e-46ef-b1dd-c963901b3cdd",
-        "url": "https://www.setlist.fm/setlists/jack-russells-great-white-3bc4f05c.html",
-        "reason": "no signals"
-      },
-      {
-        "score": 0,
-        "name": "Jack White and The Bricks",
-        "sortName": "White, Jack and Bricks, The",
-        "disambiguation": "",
-        "mbid": "962b9083-46f3-4c5e-aa6a-c81cd01f5f7e",
-        "url": "https://www.setlist.fm/setlists/jack-white-and-the-bricks-3bc6e4e0.html",
-        "reason": "no signals"
-      },
-      {
-        "score": 0,
-        "name": "Beck feat. Jack White",
-        "sortName": "Beck feat. White, Jack",
-        "disambiguation": "",
-        "mbid": "ce087f8a-c2ee-4ac3-b4ec-4a98f7089d33",
-        "url": "https://www.setlist.fm/setlists/beck-feat-jack-white-43dcc34b.html",
-        "reason": "no signals"
-      }
-    ]
+    "mbid": "3ae2fb37-8a23-429d-9920-bac811c4fc22",
+    "stats_id": "33d69845",
+    "slug": "jack-white"
   },
   "Disturbed": {
-    "_NEEDS_RESOLUTION": true,
-    "_instructions": "Pick one candidate below and replace this entry with: {\"mbid\": \"<full mbid>\", \"stats_id\": \"<first 7 hex>\", \"slug\": \"<slug>\"}",
-    "candidates": [
-      {
-        "score": 32,
-        "name": "Disturbed",
-        "sortName": "Disturbed",
-        "disambiguation": "USA metal band",
-        "mbid": "4bb4e4e4-5f66-4509-98af-62dbb90c45c5",
-        "url": "https://www.setlist.fm/setlists/disturbed-1bd69910.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (disturbed)"
-      },
-      {
-        "score": 32,
-        "name": "Disturbed",
-        "sortName": "Disturbed",
-        "disambiguation": "'80s Thrash Metal Band",
-        "mbid": "bcee4d7d-72e6-44d0-8361-2d3b92fb8de5",
-        "url": "https://www.setlist.fm/setlists/disturbed-33d0fc95.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (disturbed)"
-      },
-      {
-        "score": 32,
-        "name": "Disturbed",
-        "sortName": "Disturbed",
-        "disambiguation": "Hard House",
-        "mbid": "7bd7bf68-505f-49a5-8642-50a87d096490",
-        "url": "https://www.setlist.fm/setlists/disturbed-4bc26f42.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (disturbed)"
-      },
-      {
-        "score": 32,
-        "name": "Disturbed",
-        "sortName": "Disturbed",
-        "disambiguation": "70s UK punk band",
-        "mbid": "448579df-6b71-4c98-a8ba-5f8be40f2b90",
-        "url": "https://www.setlist.fm/setlists/disturbed-23d2742f.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (disturbed)"
-      },
-      {
-        "score": 32,
-        "name": "Disturbed",
-        "sortName": "Disturbed",
-        "disambiguation": "OC remixer Mark Dillon",
-        "mbid": "dc75517c-d268-486d-bd5b-0eaff34eeef9",
-        "url": "https://www.setlist.fm/setlists/disturbed-43d22fa7.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (disturbed)"
-      }
-    ]
+    "mbid": "4bb4e4e4-5f66-4509-98af-62dbb90c45c5",
+    "stats_id": "1bd69910",
+    "slug": "disturbed"
   },
   "Genesis": {
-    "_NEEDS_RESOLUTION": true,
-    "_instructions": "Pick one candidate below and replace this entry with: {\"mbid\": \"<full mbid>\", \"stats_id\": \"<first 7 hex>\", \"slug\": \"<slug>\"}",
-    "candidates": [
-      {
-        "score": 32,
-        "name": "Genesis",
-        "sortName": "Genesis",
-        "disambiguation": "English rock band",
-        "mbid": "8e3fcd7d-bda1-4ca0-b987-b8528d2ee74e",
-        "url": "https://www.setlist.fm/setlists/genesis-1bd6b520.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (genesis)"
-      },
-      {
-        "score": 32,
-        "name": "Genesis",
-        "sortName": "Genesis",
-        "disambiguation": "obscure American progressive rock band",
-        "mbid": "c5725831-2596-48f1-8f1c-ebe237362860",
-        "url": "https://www.setlist.fm/setlists/genesis-4bd4c742.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (genesis)"
-      },
-      {
-        "score": 0,
-        "name": "Genesis Owusu",
-        "sortName": "Owusu, Genesis",
-        "disambiguation": "",
-        "mbid": "632258cb-4ab5-4f2d-be29-bcc641a275eb",
-        "url": "https://www.setlist.fm/setlists/genesis-owusu-3c85953.html",
-        "reason": "no signals"
-      },
-      {
-        "score": 0,
-        "name": "G2 Definitive Genesis",
-        "sortName": "G2 Definitive Genesis",
-        "disambiguation": "",
-        "mbid": "9880ebc0-c784-45d3-8fa2-7b2a1fb2d0c6",
-        "url": "https://www.setlist.fm/setlists/g2-definitive-genesis-2bdf545a.html",
-        "reason": "no signals"
-      },
-      {
-        "score": 0,
-        "name": "Tommy Genesis",
-        "sortName": "Genesis, Tommy",
-        "disambiguation": "rapper",
-        "mbid": "6281bbf0-3279-42b5-8692-a82a7296b3a1",
-        "url": "https://www.setlist.fm/setlists/tommy-genesis-13c6f9dd.html",
-        "reason": "no signals"
-      }
-    ]
+    "mbid": "8e3fcd7d-bda1-4ca0-b987-b8528d2ee74e",
+    "stats_id": "1bd6b520",
+    "slug": "genesis"
   },
   "Creed": {
-    "_NEEDS_RESOLUTION": true,
-    "_instructions": "Pick one candidate below and replace this entry with: {\"mbid\": \"<full mbid>\", \"stats_id\": \"<first 7 hex>\", \"slug\": \"<slug>\"}",
-    "candidates": [
-      {
-        "score": 32,
-        "name": "Creed",
-        "sortName": "Creed",
-        "disambiguation": "US rock band from Tallahassee, FL",
-        "mbid": "4b1a830b-0a1f-42e5-b8d5-1d6743912e99",
-        "url": "https://www.setlist.fm/setlists/creed-3bd6bcc8.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (creed)"
-      },
-      {
-        "score": 32,
-        "name": "Creed",
-        "sortName": "Creed",
-        "disambiguation": "Blues rock band",
-        "mbid": "54b51836-7462-4941-b67f-cfd40b3fafa1",
-        "url": "https://www.setlist.fm/setlists/creed-3bc80078.html",
-        "reason": "exact name match, sortName match, slug matches existing setlist URLs (creed)"
-      },
-      {
-        "score": 0,
-        "name": "Creed Bratton",
-        "sortName": "Bratton, Creed",
-        "disambiguation": "US actor and musician",
-        "mbid": "21223dac-c2c2-4833-ade0-fb9a5fe08ad6",
-        "url": "https://www.setlist.fm/setlists/creed-bratton-6bd7e242.html",
-        "reason": "no signals"
-      },
-      {
-        "score": 0,
-        "name": "Helios Creed",
-        "sortName": "Creed, Helios",
-        "disambiguation": "",
-        "mbid": "26a13357-fad6-4900-a324-ff252e681112",
-        "url": "https://www.setlist.fm/setlists/helios-creed-63d67e2b.html",
-        "reason": "no signals"
-      },
-      {
-        "score": 0,
-        "name": "Creed Fisher",
-        "sortName": "Fisher, Creed",
-        "disambiguation": "",
-        "mbid": "81c5acfa-62c8-4a42-bb7a-9e3e03aea3de",
-        "url": "https://www.setlist.fm/setlists/creed-fisher-4bf7f3c2.html",
-        "reason": "no signals"
-      }
-    ]
+    "mbid": "4b1a830b-0a1f-42e5-b8d5-1d6743912e99",
+    "stats_id": "3bd6bcc8",
+    "slug": "creed"
   }
 }
