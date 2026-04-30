@@ -2958,6 +2958,14 @@ function renderSongs() {
   const countEl = el("span", { class: "filter-count" });
   filterBar.appendChild(countEl);
   app.appendChild(filterBar);
+  // Now that the filter bar is in the DOM and has measurable height,
+  // publish that height as a CSS variable. The column-header row below
+  // the filter bar is `position: sticky` and uses this value to pin
+  // flush below the filter bar without a fixed-px guess that breaks
+  // across viewports (filter bar wraps from 77px on desktop to 226px
+  // on a phone). Recomputed on each render so changes from the band
+  // dropdown wrapping or screen rotation are reflected.
+  trackStickyHeight(filterBar, "--filter-bar-h");
 
   // Apply filters
   let filtered = allSongs;
@@ -6688,10 +6696,10 @@ function promptForImageUrl(p, which, onSuccess) {
 /**
  * Continuously sync the rendered height of `.site-header` to a CSS
  * variable `--header-h` on :root. Sticky elements that sit below the
- * header (the year strip on Timeline / Posters) use this variable for
- * their `top` value, so they always pin flush against the actual header
- * regardless of whether nav wrapped, accent bar grew, viewport rotated,
- * font scaled, etc.
+ * header (the year strip on Timeline / Posters; the songs filter bar)
+ * use this variable for their `top` value, so they always pin flush
+ * against the actual header regardless of whether nav wrapped, accent
+ * bar grew, viewport rotated, font scaled, etc.
  *
  * Without this: hardcoded breakpoint values like `top: 145px` mismatch
  * the real header height on devices that don't fit those buckets,
@@ -6721,4 +6729,43 @@ function setupHeaderHeightTracking() {
   // always fire a ResizeObserver entry on the header itself.
   window.addEventListener("resize", update);
   window.addEventListener("orientationchange", update);
+}
+
+/**
+ * Track the rendered height of a sticky element and publish it to a CSS
+ * variable. Used so a SECOND sticky element (e.g. the column-header row
+ * on the Songs page) can pin flush below the first sticky element by
+ * referencing both heights in its `top` calc.
+ *
+ * Re-callable: each call disconnects any prior observer for the same
+ * variable and starts fresh on the current element. Renderers that
+ * recreate their sticky elements on each render (renderSongs does) call
+ * this once after rendering and don't need to worry about stale observers.
+ *
+ * @param {Element} el           — the sticky element to measure
+ * @param {string} cssVarName    — e.g. "--filter-bar-h"
+ */
+const _stickyTrackers = new Map();
+function trackStickyHeight(el, cssVarName) {
+  // Disconnect any previous observer for this variable name.
+  const prev = _stickyTrackers.get(cssVarName);
+  if (prev) prev.disconnect();
+
+  if (!el) {
+    document.documentElement.style.removeProperty(cssVarName);
+    _stickyTrackers.delete(cssVarName);
+    return;
+  }
+
+  const update = () => {
+    const h = Math.ceil(el.getBoundingClientRect().height);
+    document.documentElement.style.setProperty(cssVarName, h + "px");
+  };
+  update();
+
+  if (typeof ResizeObserver !== "undefined") {
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    _stickyTrackers.set(cssVarName, ro);
+  }
 }

@@ -98,7 +98,9 @@ This is slower (one API call per non-festival show) and the report is more advis
 
 ### …refresh the bucket-list / song-stats data
 
-The "bucket list" feature shows, per artist you've seen 2+ times, which songs from their discography you have heard live and which you haven't. It runs on cached setlist data and per-band stats scraped from setlist.fm.
+The "bucket list" feature shows, per headliner you've seen, which songs from their live catalog you have heard and which you haven't. The dedicated bucket-list page (`#/bucket-list`) shows the cross-band master list; per-show modals show a band-specific section. The page has a "Frequent headliners (≥2 shows)" toggle for the narrower "bands I see often" view.
+
+The pipeline runs on cached setlist data plus per-band stats scraped from setlist.fm.
 
 To refresh after adding shows or after a setlist is added/edited on setlist.fm:
 
@@ -108,9 +110,38 @@ python3 prefetch_setlists.py             # pulls any new setlists
 python3 prefetch_band_mbids.py           # resolves MusicBrainz IDs for new headliners
 python3 prefetch_band_stats.py           # scrapes setlist.fm stats pages for play counts
 python3 build_data.py "Concert History.xlsx" "Poster Collection.xlsx" --skip-wiki
+python3 build_bucket_list.py             # aggregates everything into data/bucket_list.json
 ```
 
-`prefetch_band_mbids.py` and `prefetch_band_stats.py` only act on bands they don't already have data for, so re-runs are fast. The first time you run them is the slow run.
+`prefetch_band_mbids.py`, `prefetch_band_stats.py`, and `prefetch_setlists.py` all skip work they've already done, so re-runs are fast. The first time you run them on a new headliner is the slow part.
+
+`build_bucket_list.py` has no network dependency — it just aggregates `data/band_stats/*.json` plus `data/setlists.json` plus `data/band_mbids.json` into `data/bucket_list.json`. Runs in seconds. Always run it as the last step, otherwise the page will show stale numbers.
+
+#### When `prefetch_band_mbids.py` asks for manual disambiguation
+
+Some band names match multiple artists on MusicBrainz — "Genesis" could be the Phil Collins band or several other acts; "Disturbed" could be the metal band or other unrelated bands. When the script can't auto-pick, it writes the conflict to `data/band_mbids_overrides.json` with all candidates listed, then exits. You'll see output like:
+
+```
+[ 1/4] Genesis — CONFLICT (top score=32)
+⚠️  4 artists need manual disambiguation.
+   Edit data/band_mbids_overrides.json, pick a candidate per conflict, then re-run.
+```
+
+To resolve, open `data/band_mbids_overrides.json`. For each entry with `_NEEDS_RESOLUTION: true`, pick the right candidate from the `candidates` list and replace the entry with:
+
+```json
+"Genesis": {
+  "mbid": "<the chosen candidate's mbid>",
+  "stats_id": "<8-char hex from the end of the candidate's url>",
+  "slug": "<bare slug — everything before that 8-char hex>"
+}
+```
+
+The candidates list is sorted by match confidence; the top entry is usually right but check the `disambiguation` field to be sure (e.g. "USA metal band" vs "70s UK punk band").
+
+The slug+stats_id pair has to match setlist.fm's URL structure: `https://www.setlist.fm/stats/<slug>-<stats_id>.html`. The candidate's `url` field is `https://www.setlist.fm/setlists/<slug>-<stats_id>.html` — split the last path segment on its final hyphen to get the two parts. Don't include the 8-char hex in the slug, and don't truncate the stats_id.
+
+After resolving, re-run the chain from `prefetch_band_mbids.py` onward. Conflicts you've already resolved persist in the overrides file — they're only re-asked if you delete the overrides.
 
 ### …resize new About-page photos
 
@@ -335,40 +366,42 @@ On re-runs, `poster_images.csv` is **preserved and merged** — manually-added U
 
 ```
 sethlist/
-├── index.html                  the app
-├── styles.css                  visual design
-├── app.js                      logic (views, routing, modal)
-├── cities.js                   city coordinate lookup
-├── build_data.py               data pipeline
-├── download_drive_images.py    one-time Drive → local image downloader
-├── prefetch_setlists.py        setlist.fm API fetcher
-├── prefetch_band_mbids.py      resolves MusicBrainz IDs for headliners
-├── prefetch_band_stats.py      scrapes per-band play-count stats
-├── validate_concert_data.py    internal-consistency check on concerts xlsx
-├── validate_poster_data.py     internal-consistency check on posters xlsx
-├── validate_openers_api.py     cross-checks openers against setlist.fm
-├── resize_about_photos.sh      macOS-only image resizer for About page
+├── index.html                       the app
+├── styles.css                       visual design
+├── app.js                           logic (views, routing, modal)
+├── cities.js                        city coordinate lookup
+├── build_data.py                    main data pipeline (xlsx → json/csv)
+├── build_bucket_list.py             aggregates band stats + setlists into bucket_list.json
+├── download_drive_images.py         one-time Drive → local image downloader
+├── prefetch_setlists.py             setlist.fm API fetcher
+├── prefetch_band_mbids.py           resolves MusicBrainz IDs for headliners
+├── prefetch_band_stats.py           scrapes per-band play-count stats
+├── validate_concert_data.py         internal-consistency check on concerts xlsx
+├── validate_poster_data.py          internal-consistency check on posters xlsx
+├── validate_openers_api.py          cross-checks openers against setlist.fm
+├── resize_about_photos.sh           macOS-only image resizer for About page
 ├── data/
-│   ├── concerts.json           consumed by the app
-│   ├── posters.json            consumed by the app
-│   ├── setlists.json           consumed by the app (setlist.fm cache)
-│   ├── us-states.json          US map geometry
-│   ├── concerts.csv            editable mirror
-│   ├── posters.csv             editable mirror
-│   ├── poster_images.csv       image URLs (editable)
-│   ├── band_images.csv         band images + websites (editable)
-│   ├── festival_images.csv     festival logos, websites, wiki links (editable)
-│   ├── band_mbids.json         MusicBrainz IDs per headliner
-│   ├── band_stats/             per-band setlist.fm play-count data
-│   └── bucket_list.json        derived: which songs you've heard live per band
+│   ├── concerts.json                consumed by the app
+│   ├── posters.json                 consumed by the app
+│   ├── setlists.json                consumed by the app (setlist.fm cache)
+│   ├── us-states.json               US map geometry
+│   ├── concerts.csv                 editable mirror
+│   ├── posters.csv                  editable mirror
+│   ├── poster_images.csv            image URLs (editable)
+│   ├── band_images.csv              band images + websites (editable)
+│   ├── festival_images.csv          festival logos, websites, wiki links (editable)
+│   ├── band_mbids.json              MusicBrainz IDs per headliner
+│   ├── band_mbids_overrides.json    manual disambiguation when MBID lookup is ambiguous
+│   ├── band_stats/                  per-band setlist.fm play-count data
+│   └── bucket_list.json             derived: which songs you've heard live per band
 ├── vendor/
 │   ├── d3.min.js
 │   └── topojson-client.min.js
 ├── images/
-│   ├── about/                  resized photos for the About page
-│   ├── stock/                  poster stock images (downloaded by script)
-│   ├── personal/               your own photos of framed posters
-│   └── festivals/              festival logos (downloaded by script)
+│   ├── about/                       resized photos for the About page
+│   ├── stock/                       poster stock images (downloaded by script)
+│   ├── personal/                    your own photos of framed posters
+│   └── festivals/                   festival logos (downloaded by script)
 └── README.md
 ```
 

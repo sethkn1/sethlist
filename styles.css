@@ -1706,6 +1706,15 @@ main {
   padding-bottom: 14px;
   background: var(--ink);
   border-bottom: 2px solid var(--paper-dim);
+  /* Pin the column-header row directly below the sticky filter bar.
+     `--header-h` is set by setupHeaderHeightTracking() and `--filter-bar-h`
+     is set by trackStickyHeight() in renderSongs(). Together they describe
+     the total height of the two sticky elements above this one, so we
+     pin flush below them. z-index just under the filter bar (40) so when
+     scrolling, the filter bar still overlays this row. */
+  position: sticky;
+  top: calc(var(--header-h, 115px) + var(--filter-bar-h, 90px));
+  z-index: 30;
 }
 .col-rank {
   font-family: var(--font-mono);
