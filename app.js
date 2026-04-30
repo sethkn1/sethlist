@@ -4805,6 +4805,27 @@ function renderAbout() {
     "and I can't wait to see how it gets better."
   ));
 
+  // Section: Top songs playlist.
+  // Closing personal note that sits at the hinge between the emotional
+  // "why" content above and the technical "what" content below. The
+  // playlist itself is curated by Seth on Spotify; we just embed the
+  // iframe Spotify provides for the playlist URL. Lazy-loaded so this
+  // ~hundreds-of-KB widget doesn't hit on first page paint.
+  wrap.appendChild(el("h3", { class: "about-section" }, "Top songs from headliners Seth's seen live"));
+  // The iframe element. We construct it via DOM rather than innerHTML so
+  // attribute escaping is handled by the platform. Borderless rounded box
+  // matches Spotify's official embed styling.
+  const spotifyIframe = el("iframe", {
+    src: "https://open.spotify.com/embed/playlist/4R0ylKq45tVg6wiEc9MLIZ?utm_source=generator",
+    width: "100%",
+    height: "352",
+    loading: "lazy",
+    title: "Spotify playlist: Top songs from headliners Seth's seen live",
+    allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture",
+    style: "border: 0; border-radius: 12px; max-width: 100%;",
+  });
+  wrap.appendChild(spotifyIframe);
+
   // Section: What this site is — with live counts
   wrap.appendChild(el("h3", { class: "about-section" }, "What this site is"));
   wrap.appendChild(el("p", {},
