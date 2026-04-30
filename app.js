@@ -5086,23 +5086,34 @@ function closeModal(opts) {
   // history entry (mobile back button or browser back). We just dismiss
   // the modal UI; we must NOT call history.back() ourselves or we'd
   // double-pop.
+  //
+  // opts.navigateTo — when set to a hash like "#/bucket-list?band=Tool",
+  // close the modal AND navigate there in a single synchronous step. We
+  // replaceState the destination over the current modal URL (not pushState,
+  // since the modal entry is "ours" to consume), which avoids the race
+  // where history.back() and a separate hash assignment fight each other.
   opts = opts || {};
   if (modal.hidden) return;  // already closed; nothing to do
   modal.hidden = true;
   document.body.style.overflow = "";
 
-  // History cleanup. Three cases:
+  // History cleanup. Four cases now:
   //   1. fromPopstate=true   — browser already popped. Don't touch history.
-  //   2. We pushed an entry  — pop it via history.back() to unwind cleanly.
+  //   2. navigateTo set      — replaceState the destination over our modal
+  //                            entry, then dispatch hashchange to trigger
+  //                            the router. This is the "go somewhere else"
+  //                            close path, used by in-modal links to other
+  //                            views (e.g., the per-band bucket list link).
+  //   3. We pushed an entry  — pop it via history.back() to unwind cleanly.
   //                            (popstate WILL fire, but we've already set
   //                            modal.hidden=true so the popstate handler
   //                            short-circuits — see _onPopState below.)
-  //   3. We didn't push      — clean the modal=… param off the URL with
+  //   4. We didn't push      — clean the modal=… param off the URL with
   //                            replaceState so the URL stays correct
   //                            without adding another history entry.
   const pushed = MODAL_STATE.pushedHistory;
-  // Reset the flag NOW, before history.back(), so the synchronous-ish
-  // popstate that follows sees a clean state.
+  // Reset the flag NOW, before any history operation, so the popstate that
+  // follows sees a clean state.
   MODAL_STATE.kind = null;
   MODAL_STATE.id = null;
   MODAL_STATE.list = null;
@@ -5114,6 +5125,15 @@ function closeModal(opts) {
     // will run from the popstate that triggered us, and we want it to
     // leave the page scroll position alone.
     _suppressNextScroll = true;
+  } else if (opts.navigateTo) {
+    // Replace the modal's URL entry with the destination. Whether or not
+    // we pushed an entry on open, replaceState gives us exactly one
+    // history slot pointing at the destination — clean. Then dispatch
+    // hashchange so the router renders the new view. We do NOT suppress
+    // the scroll here: navigating to a new route should land at the top
+    // of that page, like any normal navigation.
+    history.replaceState(null, "", opts.navigateTo);
+    window.dispatchEvent(new HashChangeEvent("hashchange"));
   } else if (pushed) {
     // Pop the entry we pushed when the modal opened. This will fire
     // hashchange + popstate; suppress the router's scroll-to-top so the
@@ -6382,24 +6402,24 @@ function openConcertModal(c, navContext) {
   // list link stays — it has no equivalent header surface.
   const links = el("div", { class: "modal-links" });
   // Bucket list link: shown only when this band has bucket-list data
-  // (i.e., it's a headliner you've seen 2+ times). For festival rows we
-  // skip — they don't have a single artist context. The link drops the
-  // user on /songs?artist=X and scrolls to the unheard block.
+  // (i.e., it's a headliner whose stats have been prefetched). For
+  // festival rows we skip — they don't have a single artist context.
+  // The link goes to the dedicated bucket-list page filtered to this
+  // band: #/bucket-list?band=<artist>. We use closeModal({navigateTo})
+  // which closes the modal and replaces the modal URL with the
+  // destination atomically — no race between history.back() and a
+  // separate hash assignment, which is what produced an earlier "modal
+  // closes, stays on timeline" bug.
   if (c.artist && !c.festivalKey) {
     const bucketBand = getBucketListBand(c.artist);
     if (bucketBand && bucketBand.unheard && bucketBand.unheard.length > 0) {
+      const targetHash = "#/bucket-list?band=" + encodeURIComponent(c.artist);
       links.appendChild(el("a", {
         class: "m-link",
-        href: "#/songs?artist=" + encodeURIComponent(c.artist),
-        on: { click: () => {
-          closeModal();
-          // After the songs route renders, scroll the unheard block into view.
-          // Two requestAnimationFrame calls give the renderer enough time:
-          // one for the hashchange to dispatch + render, one for layout.
-          requestAnimationFrame(() => requestAnimationFrame(() => {
-            const block = document.querySelector(".songs-unheard-block");
-            if (block) block.scrollIntoView({ behavior: "smooth", block: "start" });
-          }));
+        href: targetHash,
+        on: { click: e => {
+          e.preventDefault();
+          closeModal({ navigateTo: targetHash });
         }},
       }, c.artist + " bucket list"));
     }
