@@ -577,15 +577,32 @@ function renderSetlistBlock(setlist, options = {}) {
     block.appendChild(ol);
   });
 
-  // Attribution
+  // Attribution + external links footer.
+  // Sits at the bottom of every setlist block. Two links:
+  //   - "From setlist.fm ↗" — attribution to the data source
+  //   - "♫ Spotify playlist ↗" — opens setlistfm.selbi.club's auto-converter
+  //     in a new tab. The third-party tool (by Selbi, MIT-licensed,
+  //     https://github.com/Selbi182/SetlistFmToSpotifyPlaylist) reads the
+  //     setlist.fm URL via the ?auto= query param, scrapes the songs from
+  //     setlist.fm's API, then creates a Spotify playlist on its own public
+  //     account and shows the user the resulting playlist URL. We don't
+  //     pre-generate playlists at build time — that would burn a hobby
+  //     project's resources for 100+ shows. One-tap link-out is the right
+  //     amount of integration for a free public service.
   if (setlist.url) {
-    block.appendChild(el("div", { class: "setlist-attrib" },
-      "From ",
-      el("a", {
-        href: setlist.url, target: "_blank", rel: "noopener",
-        class: "setlist-attrib-link"
-      }, "setlist.fm ↗")
-    ));
+    const footer = el("div", { class: "setlist-attrib" });
+    footer.appendChild(el("a", {
+      href: setlist.url, target: "_blank", rel: "noopener",
+      class: "setlist-attrib-link"
+    }, "setlist.fm ↗"));
+    footer.appendChild(el("span", { class: "setlist-attrib-sep" }, " · "));
+    footer.appendChild(el("a", {
+      href: "https://setlistfm.selbi.club?auto=" + encodeURIComponent(setlist.url),
+      target: "_blank", rel: "noopener",
+      class: "setlist-attrib-link",
+      title: "Generate a Spotify playlist for this setlist (opens setlistfm.selbi.club)"
+    }, "♫ Make Spotify playlist ↗"));
+    block.appendChild(footer);
   }
 
   return block;
