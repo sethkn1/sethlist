@@ -4,7 +4,7 @@ id,date,artist,illustrator,location,type,variant,number,tourShowSpecific,autogra
 2,2013-10-21,Nine Inch Nails,"Rob Sheridan, Russell Mills",Raleigh,SE,,Unnumbered,Tour,No,No,Yes,,https://expressobeans.com/public/detail.php/179172
 3,2014-01-30,Queens of the Stone Age,"Arens, Kii, Plastic Jesus",Raleigh,AP,,67/100,Day of Show,No,No,Yes,,https://expressobeans.com/public/detail.php/186961
 4,2014-07-12,Queens of the Stone Age,Brad Klausen,Providence,AP,,49/69,Day of Show,No,Yes,Yes,,https://expressobeans.com/public/detail.php/194219
-5,2014-08-11,Nine Inch Nails,Ames Brothers,Tampa,AP,,40/115,Day of Show,No,Yes,Yes,,https://expressobeans.com/public/detail.php/194934
+5,2014-08-11,Nine Inch Nails / Soundgarden,Ames Brothers,Tampa,AP,,40/115,Day of Show,No,Yes,Yes,,https://expressobeans.com/public/detail.php/194934
 6,2014-09-17,Jack White,Rob Jones,Boston,SE,,Unnumbered,Day of Show,No,Yes,Yes,,https://expressobeans.com/public/detail.php/196278
 7,2015-05-11,Faith No More,Sket One,Boston,AP,Sparkle Foil,16/20,Day of Show,No,Yes,Yes,Incorrect Show Date on Poster,https://expressobeans.com/public/detail.php/208452
 8,2015-07-19,Foo Fighters,Todd Slater,Boston,SE,Gold Foil,25/50,Day of Show,No,Yes,Yes,,https://expressobeans.com/public/detail.php/211539
@@ -57,10 +57,10 @@ id,date,artist,illustrator,location,type,variant,number,tourShowSpecific,autogra
 55,2023-11-09,Eagles,Richard Biffle,Raleigh,SE,,Unnumbered,Tour,No,No,Yes,,https://expressobeans.com/public/detail.php/317772
 56,2024-01-21,Tool,Liz Passerieux,Charlotte,SE,,435/750,Day of Show,No,No,Yes,,https://expressobeans.com/public/detail.php/321059
 57,2024-01-21,Tool,Liz Passerieux,Charlotte,SE,,711/750,Day of Show,Yes,No,Yes,,https://expressobeans.com/public/detail.php/321059
-58,2024-02-18,Tool,Korin Faught,Las Vegas,SE,,,Day of Show,No,No,Yes,Big Poster,https://expressobeans.com/public/detail.php/321675
+58,2024-02-18,Tool,Korin Faught,Las Vegas,SE,,177/750,Day of Show,No,No,Yes,Big Poster,https://expressobeans.com/public/detail.php/321675
 59,2024-04-07,Sessanta,Zoltron,Raleigh,VIP Poster,,Unnumbered,Tour,Yes,No,Yes,,https://expressobeans.com/public/detail.php/322555
 60,2024-04-07,Sessanta,Zeb Love,Raleigh,SE,,Unnumbered,Day of Show,No,No,Yes,Sessanta,https://expressobeans.com/public/detail.php/322934
-61,2024-04-07,Sessanta,Mark Dean Veca,Raleigh,SE,Foil,,Day of Show,Yes,No,Yes,Big Poster,https://expressobeans.com/public/detail.php/322926
+61,2024-04-07,Sessanta,Mark Dean Veca,Raleigh,SE,Foil,33/75,Day of Show,Yes,No,Yes,Big Poster,https://expressobeans.com/public/detail.php/322926
 62,2024-05-16,Sonic Temple Festival,Logan Schmitt,Columbus,SE,Foil,Unnumbered,Festival,No,No,Yes,,
 63,2024-06-26,Red Hot Chili Peppers,Burrito Breath,Raleigh,AP,Foil,47/50,Day of Show,No,No,Yes,,https://expressobeans.com/public/detail.php/324915
 64,2024-06-26,Red Hot Chili Peppers,Burrito Breath,Raleigh,SE,,Unnumbered,Day of Show,No,No,Yes,,https://expressobeans.com/public/detail.php/324915
@@ -72,3 +72,17 @@ id,date,artist,illustrator,location,type,variant,number,tourShowSpecific,autogra
 70,2025-09-05,Nine Inch Nails,Official / TBD,Raleigh,SE,Peel it back,Unnumbered,Tour,No,No,Yes,Peel it back tour poster,https://expressobeans.com/public/detail.php/334688
 71,2026-04-01,Puscifer,Boop a Doop,Durham,SE,Foil,31/75,Day of Show,No,No,Yes,Display,https://expressobeans.com/public/detail.php/339059
 72,2026-04-17,AVTT/PTTN,Kate Lamp,Greensboro,SE,,106/150,Day of Show,No,No,Yes,,https://expressobeans.com/public/detail.php/339352
+73,2020-10-30,Puscifer,Daniel Martin Diaz,,SE,Metallic Gold Ink,7/150,Day of Show,Yes,No,No,Existential Reckoning Release Poster,
+74,2021-04-17,Puscifer,Michael Byzewski,,SE,Round Foil,342/400,Day of Show,Yes,No,No,Billy D and the Hall of Feathered Serpents,
+75,2022-05-01,Nine Inch Nails,John Crawford,Franklin,SE,,14/250,Day of Show,No,No,No,,https://expressobeans.com/public/detail.php/319935
+76,2022-06-01,Puscifer,Jermaine Rogers,Los Angeles,SE,,39/167,Day of Show,No,No,No,,https://expressobeans.com/public/detail.php/306423
+77,2022-05-24,Nine Inch Nails,John Crawford,Philadelphia,SE,,68/425,Day of Show,No,No,No,,https://expressobeans.com/public/detail.php/307474
+78,2020-08-11,Rush,Ames Brothers,,AP,Swirl Foil,58/60,Tour,No,No,No,Fly by Night 45th Anniversary,
+79,2015-06-23,Faith No More,Robert Bowen,Hamburg,AP,,Unnumbered,Day of Show,No,No,No,,https://expressobeans.com/public/detail.php/209954
+80,2023-05-19,Mr. Bungle,Trey Spurance,Seattle,SE,,Unnumbered,Day of Show,Yes,No,No,Night 1 Poster,https://expressobeans.com/public/detail.php/316870
+81,2023-05-20,Mr. Bungle,Trey Spurance,Seattle,SE,,Unnumbered,Day of Show,Yes,No,No,Night 2 Poster,https://expressobeans.com/public/detail.php/316868
+82,2022-08-09,Primus / Ween,Todd Slater,Morrison,SE,Pot Leaf Foil,197/650,Day of Show,No,No,No,South Park 25th Anniversary,https://expressobeans.com/public/detail.php/307782
+83,2022-05-29,Pink Floyd,Cuyler Smith,,AP,3d Lenticular,73/250,Tour,No,No,No,Dark Side of the Moon,
+84,2019-10-15,Lizzo,Mike Tallman,Denver,AP,,Unnumbered,Day of Show,No,No,No,,
+85,2016-06-11,Pearl Jam,Steve Thomas,Manchester,SE,,Unnumbered,Day of Show,No,No,No,Bonnaroo,https://expressobeans.com/public/detail.php/225439
+86,2016-10-15,Van Morrison,Neal Williams,Santa Barbara,AP,,Unnumbered,Day of Show,No,No,No,,
