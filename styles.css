@@ -1607,48 +1607,6 @@ main {
   width: max-content;  /* let it grow to fit all tiles without wrapping */
   align-items: center;
 }
-/* Prev/next nav buttons. Positioned absolutely over the marquee at the
-   left and right edges. The mask gradient on .poster-marquee fades the
-   edges to transparent for the first/last 60px, which means the buttons
-   sit ON TOP of that fade — they're visible against the dark page bg
-   even though the marquee content itself is fading there. */
-.marquee-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 64px;
-  background: var(--ink-2);
-  color: var(--paper);
-  border: 2px solid var(--paper-dim);
-  font-family: var(--font-display);
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Slightly translucent at rest so the marquee shows through;
-     fully opaque on hover/focus so the affordance is clear. */
-  opacity: 0.7;
-  transition: opacity 150ms, background 150ms, border-color 150ms;
-}
-.marquee-nav:hover,
-.marquee-nav:focus-visible {
-  opacity: 1;
-  background: var(--accent);
-  border-color: var(--accent);
-  outline: none;
-}
-.marquee-nav-prev { left: 8px; }
-.marquee-nav-next { right: 8px; }
-/* On touch devices the buttons take valuable horizontal space; native
-   swipe is the primary affordance there. Hide the buttons on narrow
-   screens. */
-@media (max-width: 700px) {
-  .marquee-nav { display: none; }
-}
 .marquee-tile {
   flex: 0 0 auto;
   height: 100%;

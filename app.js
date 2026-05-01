@@ -263,8 +263,22 @@ function router() {
   if (!isTyping && !_suppressNextScroll) {
     window.scrollTo({ top: 0, behavior: "instant" });
   }
+
+  // When closing a modal, we want the underlying page to stay EXACTLY as
+  // it was — same scroll position, same marquee shuffle order, same lazy
+  // image load state, everything. Re-rendering the view from scratch
+  // breaks that: it shuffles the marquee anew, can shift element heights
+  // during rebuild (which loses scroll position), and resets per-render
+  // state. Since closeModal() never changes the page's underlying data
+  // (just the modal=… query param), the existing DOM is already correct
+  // and we can skip the render entirely. This is the difference between
+  // "modal close feels like it dismissed an overlay" (good) and "modal
+  // close feels like it reloaded the page" (bad).
+  const skipRender = _suppressNextScroll;
   _suppressNextScroll = false;
-  withPreservedFocus(fn);
+  if (!skipRender) {
+    withPreservedFocus(fn);
+  }
 
   // Debug overlay for sticky positioning issues. Activate by appending
   // ?debug=sticky to the URL. Shows the ancestor chain of .year-strip-wrap
@@ -2697,27 +2711,6 @@ function buildPosterMarquee(groupList) {
   }
   marquee.appendChild(track);
 
-  // Prev/next navigation buttons. Sit absolutely over the marquee at left
-  // and right edges. Click to nudge by one viewport-width worth; native
-  // scroll-snap or smooth-behavior on the container handles the actual
-  // animation. While the user is interacting (hovering the marquee or
-  // mid-button-click), the auto-scroll pauses and resumes from wherever
-  // they left it.
-  const prevBtn = el("button", {
-    class: "marquee-nav marquee-nav-prev",
-    "aria-label": "Scroll posters left",
-    type: "button",
-    on: { click: () => nudgeMarquee(marquee, -1) },
-  }, "‹");
-  const nextBtn = el("button", {
-    class: "marquee-nav marquee-nav-next",
-    "aria-label": "Scroll posters right",
-    type: "button",
-    on: { click: () => nudgeMarquee(marquee, +1) },
-  }, "›");
-  marquee.appendChild(prevBtn);
-  marquee.appendChild(nextBtn);
-
   // Auto-scroll engine.
   // Implementation switched from CSS keyframes (transform: translateX) to
   // a requestAnimationFrame loop that increments scrollLeft. Reason: native
@@ -2795,25 +2788,6 @@ function buildPosterMarquee(groupList) {
   });
 
   return marquee;
-}
-
-/**
- * Nudge the marquee horizontally by one viewport-width's worth. Direction
- * is +1 (next) or -1 (prev). Uses smooth scroll for a polished feel.
- *
- * Wraps around at the edges: if we're already near the start and asked to
- * go prev, jump to near the end (the duplicated content makes that visually
- * indistinguishable). And vice versa. This way the buttons never feel
- * "stuck" at an end.
- */
-function nudgeMarquee(marquee, direction) {
-  const step = marquee.clientWidth * 0.6;  // a bit less than full viewport so context is preserved
-  const max = marquee.scrollWidth - marquee.clientWidth;
-  let target = marquee.scrollLeft + direction * step;
-  // Clamp / wrap. For simplicity, clamp here — auto-scroll will pick it back
-  // up and continue from the new position.
-  target = Math.max(0, Math.min(target, max));
-  marquee.scrollTo({ left: target, behavior: "smooth" });
 }
 
 function posterGroupCard(g) {
