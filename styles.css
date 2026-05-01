@@ -1574,7 +1574,12 @@ main {
 .poster-marquee {
   width: 100%;
   height: 280px;
-  overflow: hidden;
+  /* Native horizontal scroll. The auto-scroll loop in JS increments
+     scrollLeft directly; manual gestures (trackpad, swipe, scrollbar
+     drag) and the prev/next buttons all use the same property, so they
+     compose naturally with auto-scroll without any conflict. */
+  overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
   margin: 0 0 20px 0;
   background: var(--ink);
@@ -1584,6 +1589,15 @@ main {
      disappearing into the background rather than snapping at hard edges. */
   -webkit-mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
   mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
+  /* Smooth out trackpad inertia / swipe momentum on mobile. */
+  -webkit-overflow-scrolling: touch;
+  /* Hide the native scrollbar — the prev/next buttons are the affordance.
+     The scrollbar would clutter the bottom of the marquee for no benefit. */
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE / old Edge */
+}
+.poster-marquee::-webkit-scrollbar {
+  display: none;                  /* Chrome, Safari, modern Edge */
 }
 .marquee-track {
   display: flex;
@@ -1591,32 +1605,49 @@ main {
   height: 100%;
   padding: 18px 0;
   width: max-content;  /* let it grow to fit all tiles without wrapping */
-  animation: marquee-scroll-single linear infinite;
   align-items: center;
-  /* Don't let the animation re-trigger on re-renders */
-  will-change: transform;
 }
-/* When the track has duplicated content (filter has 5+ items), use the
-   -50% animation so the loop is seamless. Otherwise, scroll the single
-   copy fully off-screen and reset (small visible jump but no duplicates). */
-.marquee-track.marquee-track-duplicated {
-  animation-name: marquee-scroll;
+/* Prev/next nav buttons. Positioned absolutely over the marquee at the
+   left and right edges. The mask gradient on .poster-marquee fades the
+   edges to transparent for the first/last 60px, which means the buttons
+   sit ON TOP of that fade — they're visible against the dark page bg
+   even though the marquee content itself is fading there. */
+.marquee-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 64px;
+  background: var(--ink-2);
+  color: var(--paper);
+  border: 2px solid var(--paper-dim);
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Slightly translucent at rest so the marquee shows through;
+     fully opaque on hover/focus so the affordance is clear. */
+  opacity: 0.7;
+  transition: opacity 150ms, background 150ms, border-color 150ms;
 }
-.poster-marquee:hover .marquee-track {
-  animation-play-state: paused;
+.marquee-nav:hover,
+.marquee-nav:focus-visible {
+  opacity: 1;
+  background: var(--accent);
+  border-color: var(--accent);
+  outline: none;
 }
-@keyframes marquee-scroll {
-  0%   { transform: translateX(0); }
-  /* -50% moves one full copy off-screen; the duplicate is already in place */
-  100% { transform: translateX(-50%); }
-}
-@keyframes marquee-scroll-single {
-  /* For non-duplicated tracks: drift slowly to give some motion, but don't
-     wrap (would reveal that there's no duplicate behind). The cubic loop
-     reverses direction at boundaries so it never reaches an empty edge. */
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(-30%); }
-  100% { transform: translateX(0); }
+.marquee-nav-prev { left: 8px; }
+.marquee-nav-next { right: 8px; }
+/* On touch devices the buttons take valuable horizontal space; native
+   swipe is the primary affordance there. Hide the buttons on narrow
+   screens. */
+@media (max-width: 700px) {
+  .marquee-nav { display: none; }
 }
 .marquee-tile {
   flex: 0 0 auto;

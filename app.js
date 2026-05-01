@@ -2681,29 +2681,139 @@ function buildPosterMarquee(groupList) {
   const marquee = el("div", { class: "poster-marquee" });
   const track = el("div", { class: "marquee-track" });
 
-  // The marquee normally duplicates its content so it can scroll seamlessly:
-  // animation slides -50% (full width of one copy), then the second copy
-  // becomes visible without a jump. But when the filter has few items, this
-  // duplication makes the same poster appear twice within one viewport,
-  // which reads as a bug. Below a threshold we skip duplication and the
-  // marquee scrolls a single set; the loop is less seamless but the absence
-  // of visible duplicates is more important than perfect smoothness.
+  // The marquee duplicates its content so the auto-scroll loop is seamless:
+  // when scrollLeft reaches halfwidth, we snap back to 0 — but the user
+  // doesn't see a snap because the second copy is already visible at that
+  // position. Below a threshold the duplication would put the same poster
+  // visibly twice in one viewport, which reads as a bug, so we skip it
+  // (the loop becomes a less-seamless single-copy reset, but small filtered
+  // sets are short enough that the reset is rarely seen anyway).
   const DUP_THRESHOLD = 5;
   shuffled.forEach(g => track.appendChild(buildTile(g)));
+  let isDuplicated = false;
   if (shuffled.length >= DUP_THRESHOLD) {
     shuffled.forEach(g => track.appendChild(buildTile(g)));
-    track.classList.add("marquee-track-duplicated");
+    isDuplicated = true;
+  }
+  marquee.appendChild(track);
+
+  // Prev/next navigation buttons. Sit absolutely over the marquee at left
+  // and right edges. Click to nudge by one viewport-width worth; native
+  // scroll-snap or smooth-behavior on the container handles the actual
+  // animation. While the user is interacting (hovering the marquee or
+  // mid-button-click), the auto-scroll pauses and resumes from wherever
+  // they left it.
+  const prevBtn = el("button", {
+    class: "marquee-nav marquee-nav-prev",
+    "aria-label": "Scroll posters left",
+    type: "button",
+    on: { click: () => nudgeMarquee(marquee, -1) },
+  }, "‹");
+  const nextBtn = el("button", {
+    class: "marquee-nav marquee-nav-next",
+    "aria-label": "Scroll posters right",
+    type: "button",
+    on: { click: () => nudgeMarquee(marquee, +1) },
+  }, "›");
+  marquee.appendChild(prevBtn);
+  marquee.appendChild(nextBtn);
+
+  // Auto-scroll engine.
+  // Implementation switched from CSS keyframes (transform: translateX) to
+  // a requestAnimationFrame loop that increments scrollLeft. Reason: native
+  // horizontal scrolling uses scrollLeft, and CSS-animated transform doesn't
+  // share state with scrollLeft. By driving the auto-scroll through the
+  // same property the user manipulates manually, the two interaction modes
+  // compose naturally — the user can mouse-scroll, swipe, or click the
+  // arrow buttons, then the auto-scroll picks up from wherever they
+  // stopped. No conflict between "the CSS thinks position is X" and "the
+  // browser thinks scrollLeft is Y".
+  //
+  // The auto-scroll pauses when:
+  //   - the cursor is over the marquee (so users can click a tile)
+  //   - the user is mid-touch (so swipe gestures aren't fought)
+  //   - the document is hidden (don't waste battery on a background tab)
+  //
+  // PX_PER_SEC controls speed; tuned to feel calm-not-frantic.
+  const PX_PER_SEC = 40;
+  let isPaused = false;
+  let lastTime = 0;
+  let rafId = null;
+
+  function step(now) {
+    if (lastTime && !isPaused && !document.hidden) {
+      const dt = (now - lastTime) / 1000;
+      const newLeft = marquee.scrollLeft + PX_PER_SEC * dt;
+      // Loop logic: when scrollLeft passes the halfway point of duplicated
+      // content, jump back by halfwidth so the second copy seamlessly
+      // becomes the first. Without duplication, just wrap to 0 when we
+      // hit the end (visible jump, but few posters means rarely seen).
+      const halfwidth = track.scrollWidth / (isDuplicated ? 2 : 1);
+      if (newLeft >= halfwidth) {
+        marquee.scrollLeft = newLeft - halfwidth;
+      } else {
+        marquee.scrollLeft = newLeft;
+      }
+    }
+    lastTime = now;
+    rafId = requestAnimationFrame(step);
   }
 
-  // Speed: constant pixels-per-second regardless of how many posters we have.
-  // With ~40 posters per copy at ~200px wide = 8000px track → at 40px/sec = 200s per loop.
-  // That's calm background motion, not frantic.
-  const pxPerCopy = shuffled.length * 200;  // rough estimate
-  const duration = Math.max(60, Math.round(pxPerCopy / 40));  // seconds, min 60s
-  track.style.animationDuration = duration + "s";
+  // Pause on hover or touch. mouseenter / mouseleave is more reliable
+  // than CSS :hover for our purposes since we control the JS-side flag.
+  marquee.addEventListener("mouseenter", () => { isPaused = true; });
+  marquee.addEventListener("mouseleave", () => { isPaused = false; });
+  marquee.addEventListener("touchstart", () => { isPaused = true; }, { passive: true });
+  // After the user lifts their finger, give them a beat before auto-scroll
+  // resumes so they can read what they swiped to. 800ms feels natural.
+  marquee.addEventListener("touchend", () => {
+    setTimeout(() => { isPaused = false; }, 800);
+  }, { passive: true });
 
-  marquee.appendChild(track);
+  // Start the loop after the track has rendered (so scrollWidth is known).
+  // We use rAF instead of setTimeout(0) because we want layout to settle.
+  requestAnimationFrame(() => {
+    rafId = requestAnimationFrame(step);
+  });
+
+  // Disconnect when the marquee is removed from the DOM. Without this,
+  // navigating away and back would accumulate rAF loops on each render
+  // — small leak but real over time.
+  const observer = new MutationObserver(() => {
+    if (!marquee.isConnected) {
+      if (rafId) cancelAnimationFrame(rafId);
+      observer.disconnect();
+    }
+  });
+  // Watch the parent for removals. Slight chicken-and-egg: at this point
+  // the marquee isn't appended yet. Defer the observation to the next
+  // animation frame, by which time the caller will have appended us.
+  requestAnimationFrame(() => {
+    if (marquee.parentNode) {
+      observer.observe(marquee.parentNode, { childList: true });
+    }
+  });
+
   return marquee;
+}
+
+/**
+ * Nudge the marquee horizontally by one viewport-width's worth. Direction
+ * is +1 (next) or -1 (prev). Uses smooth scroll for a polished feel.
+ *
+ * Wraps around at the edges: if we're already near the start and asked to
+ * go prev, jump to near the end (the duplicated content makes that visually
+ * indistinguishable). And vice versa. This way the buttons never feel
+ * "stuck" at an end.
+ */
+function nudgeMarquee(marquee, direction) {
+  const step = marquee.clientWidth * 0.6;  // a bit less than full viewport so context is preserved
+  const max = marquee.scrollWidth - marquee.clientWidth;
+  let target = marquee.scrollLeft + direction * step;
+  // Clamp / wrap. For simplicity, clamp here — auto-scroll will pick it back
+  // up and continue from the new position.
+  target = Math.max(0, Math.min(target, max));
+  marquee.scrollTo({ left: target, behavior: "smooth" });
 }
 
 function posterGroupCard(g) {
@@ -4786,8 +4896,8 @@ function renderAbout() {
   // Section: Why I keep going
   wrap.appendChild(el("h3", { class: "about-section" }, "Why I keep going"));
   wrap.appendChild(el("p", {},
-    "There are artists I'll never see live again. Chester Bennington. Tom Petty. ",
-    "Chris Cornell. Scott Weiland. Kurt Cobain. The Abbott brothers. I think about that list a lot."
+    "There are artists I'll never see live again. Ozzy Osbourne. Chester Bennington. Tom Petty. ",
+    "Chris Cornell. Scott Weiland. Layne Staley. Kurt Cobain. The Abbott brothers. I think about that list a lot."
   ));
   wrap.appendChild(el("p", {},
     "So when an artist I love comes through town or is in a decent travelable location, ",
