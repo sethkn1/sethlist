@@ -4816,7 +4816,7 @@ function renderAbout() {
   // attribute escaping is handled by the platform. Borderless rounded box
   // matches Spotify's official embed styling.
   const spotifyIframe = el("iframe", {
-    src: "https://open.spotify.com/embed/playlist/4R0ylKq45tVg6wiEc9MLIZ?utm_source=generator",
+    src: "https://open.spotify.com/embed/playlist/1NbFmzu1gaGVt7vAoUj58n?utm_source=generator",
     width: "100%",
     height: "352",
     loading: "lazy",
