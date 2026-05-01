@@ -615,10 +615,10 @@ main {
   z-index: 2;
 }
 .poster-group.not-attended {
-  opacity: 0.78;
-}
-.poster-group.not-attended .poster-thumb {
-  filter: grayscale(0.4);
+  /* No opacity/filter dimming — the "NOT ATTENDED" badge alone is enough
+     to mark these. Earlier the container was set to opacity:0.75 and the
+     image was desaturated, but that made non-attended posters harder to
+     see for no real benefit; the badge already communicates the state. */
 }
 .not-attended-badge {
   position: absolute;
@@ -2175,8 +2175,11 @@ main {
 }
 
 /* ============= Poster "not attended" states ============= */
-.poster-group.not-attended { opacity: 0.75; }
-.poster-group.not-attended .poster-thumb img { filter: saturate(0.6) brightness(0.85); }
+/* The "NOT ATTENDED" badge below carries the full weight of communicating
+   this state. Earlier versions also dimmed the container and desaturated
+   the image (opacity:0.75 + filter:saturate(0.6) brightness(0.85)), but
+   that made non-attended posters harder to see and distracted from the
+   poster art itself. Removed in favor of badge-only signaling. */
 .not-attended-badge {
   position: absolute;
   bottom: 10px;
