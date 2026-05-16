@@ -1477,5 +1477,22 @@
     "attended": false,
     "notes": null,
     "expressobeansLink": null
+  },
+  {
+    "id": 87,
+    "date": "2026-04-29",
+    "year": 2026,
+    "artist": "Bruno Mars",
+    "illustrator": "Andy Bird",
+    "location": "Charlotte",
+    "type": "SE",
+    "variant": null,
+    "number": "Unnumbered",
+    "tourShowSpecific": "Day of Show",
+    "autographed": false,
+    "framed": false,
+    "attended": false,
+    "notes": "Dana, Cheryl, Bill show",
+    "expressobeansLink": null
   }
 ]

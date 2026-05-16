@@ -17552,5 +17552,258 @@
     ],
     "info": "Opening act for System Of A Down",
     "role": "opener"
+  },
+  "634b9e13": {
+    "id": "634b9e13",
+    "artist": "Stone Temple Pilots",
+    "tour": "The Rise of Rock World Tour 2026",
+    "eventDate": "14-05-2026",
+    "url": "https://www.setlist.fm/setlist/stone-temple-pilots/2026/truliant-ampitheater-charlotte-nc-634b9e13.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Dead & Bloated"
+          },
+          {
+            "name": "Wicked Garden"
+          },
+          {
+            "name": "Vasoline"
+          },
+          {
+            "name": "Big Bang Baby"
+          },
+          {
+            "name": "Down"
+          },
+          {
+            "name": "Silvergun Superman"
+          },
+          {
+            "name": "Big Empty"
+          },
+          {
+            "name": "Plush"
+          },
+          {
+            "name": "Interstate Love Song"
+          },
+          {
+            "name": "Crackerman"
+          },
+          {
+            "name": "Trippin' on a Hole in a Paper Heart"
+          },
+          {
+            "name": "Sex Type Thing"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "headliner"
+  },
+  "opener:pierce-the-veil:2025-10-25": {
+    "id": "4b59af5e",
+    "artist": "Pierce the Veil",
+    "tour": "I Can't Hear You World Tour",
+    "eventDate": "25-10-2025",
+    "url": "https://www.setlist.fm/setlist/pierce-the-veil/2025/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-4b59af5e.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "El Rey",
+            "cover": "Jos\u00e9 Alfredo Jim\u00e9nez",
+            "tape": true
+          },
+          {
+            "name": "Death of an Executioner"
+          },
+          {
+            "name": "Bulls in the Bronx"
+          },
+          {
+            "name": "Pass the Nirvana"
+          },
+          {
+            "name": "I'm Low on Gas and You Need a Jacket"
+          },
+          {
+            "name": "I'd Rather Die Than Be Famous"
+          },
+          {
+            "name": "Where Is My Mind?",
+            "cover": "Pixies",
+            "info": "Snippet"
+          },
+          {
+            "name": "Floral & Fading"
+          },
+          {
+            "name": "Yeah Boy and Doll Face"
+          },
+          {
+            "name": "She Makes Dirty Words Sound Pretty",
+            "info": "Snippet"
+          },
+          {
+            "name": "I Don't Care If You're Contagious",
+            "info": "Snippet"
+          },
+          {
+            "name": "Wonderless"
+          },
+          {
+            "name": "May These Noises Startle You in Your Sleep Tonight"
+          },
+          {
+            "name": "Hell Above"
+          },
+          {
+            "name": "So Far So Fake"
+          },
+          {
+            "name": "Emergency Contact"
+          },
+          {
+            "name": "Circles"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "Disasterology"
+          },
+          {
+            "name": "Hold On Till May"
+          },
+          {
+            "name": "King for a Day"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:godsmack:2026-05-14": {
+    "id": "7b4b9e40",
+    "artist": "Godsmack",
+    "tour": "The Rise of Rock World Tour 2026",
+    "eventDate": "14-05-2026",
+    "url": "https://www.setlist.fm/setlist/godsmack/2026/truliant-ampitheater-charlotte-nc-7b4b9e40.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Surrender",
+            "info": "Extended Intro"
+          },
+          {
+            "name": "You and I"
+          },
+          {
+            "name": "When Legends Rise"
+          },
+          {
+            "name": "Cryin' Like a Bitch!!"
+          },
+          {
+            "name": "Straight Out of Line"
+          },
+          {
+            "name": "Awake"
+          },
+          {
+            "name": "Keep Away"
+          },
+          {
+            "name": "Love-Hate-Sex-Pain"
+          },
+          {
+            "name": "Voodoo"
+          },
+          {
+            "name": "Batalla de los tambores",
+            "info": "With excerpts from \"Back in Black\", \"Walk This Way\", \"Enter Sandman\", & \"Tom Sawyer\""
+          },
+          {
+            "name": "Whatever"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "Under Your Scars"
+          },
+          {
+            "name": "Bulletproof"
+          },
+          {
+            "name": "I Stand Alone"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:dorothy:2026-05-14": {
+    "id": "6b4b9ede",
+    "artist": "Dorothy",
+    "tour": "The Rise of Rock World Tour 2026",
+    "eventDate": "14-05-2026",
+    "url": "https://www.setlist.fm/setlist/dorothy/2026/truliant-ampitheater-charlotte-nc-6b4b9ede.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Down to the Bottom"
+          },
+          {
+            "name": "THE DEVIL I KNOW"
+          },
+          {
+            "name": "Raise Hell"
+          },
+          {
+            "name": "After Midnight"
+          },
+          {
+            "name": "BONES"
+          },
+          {
+            "name": "MUD"
+          },
+          {
+            "name": "Rest in Peace"
+          },
+          {
+            "name": "Whiskey Fever"
+          },
+          {
+            "name": "Dark Nights"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
   }
 }
