@@ -3344,9 +3344,15 @@ function computeArtistCoverage(displayName, normArtistKey) {
       if (role === "headliner" && !c.setlistLink) {
         reason = "No setlist URL in your spreadsheet";
       } else if (!cached) {
+        // Differentiate the two cases for honesty: a headliner show without
+        // cached data is a fixable gap (the prefetch chain hasn't been run
+        // since this show was added), whereas an opener show is intentional
+        // — we don't fetch deep-opener setlists. Both messages avoid naming
+        // the internal build script; that's plumbing the page reader doesn't
+        // need to see.
         reason = role === "headliner"
-          ? "Not yet fetched (run prefetch_setlists.py)"
-          : "Not yet searched (run prefetch_setlists.py)";
+          ? "Setlist data not yet available"
+          : "Opener setlists not collected";
       } else if (cached._error === "no match") {
         reason = "No match on setlist.fm";
       } else if (cached._error === "no artist match") {
