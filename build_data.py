@@ -310,6 +310,7 @@ def _posters_from_df(df, csv_mode=False):
             "autographed": clean(row.get(col("Autographed", "autographed"))) in ("Yes", "yes", True, 1, "1"),
             "framed": clean(row.get(col("Framed", "framed"))) in ("Yes", "yes", True, 1, "1"),
             "attended": clean(row.get(col("Attended", "attended"))) in ("Yes", "yes", True, 1, "1"),
+            "forSale": clean(row.get(col("For Sale or Trade", "For Sale or Trade ", "forSale"))) in ("Yes", "yes", True, 1, "1"),
             "notes": clean(row.get(col("Poster Notes:", "Poster Notes", "notes"))),
             "expressobeansLink": eb,
         })
@@ -341,7 +342,7 @@ def write_concerts_csv(path, concerts):
 def write_posters_csv(path, posters):
     fields = [
         "id", "date", "artist", "illustrator", "location", "type", "variant", "number",
-        "tourShowSpecific", "autographed", "framed", "attended", "notes",
+        "tourShowSpecific", "autographed", "framed", "attended", "forSale", "notes",
         "expressobeansLink",
     ]
     with open(path, "w", newline="", encoding="utf-8") as f:
@@ -349,7 +350,7 @@ def write_posters_csv(path, posters):
         writer.writeheader()
         for p in posters:
             row = {k: p.get(k, "") for k in fields}
-            for k in ("autographed", "framed", "attended"):
+            for k in ("autographed", "framed", "attended", "forSale"):
                 if row[k] is True: row[k] = "Yes"
                 elif row[k] is False: row[k] = "No"
             for k, v in row.items():

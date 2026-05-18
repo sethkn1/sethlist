@@ -2039,6 +2039,7 @@ function renderPosters() {
   const autographed = params.get("autographed") === "1";
   const framedOnly = params.get("framed") === "1";  // chip toggle: framed posters only
   const festivalOnly = params.get("festival") === "1";  // chip toggle: festival-related posters
+  const forSaleOnly = params.get("forSale") === "1";  // chip toggle: posters marked for sale / trade
   const notAttended = params.get("notAttended") === "1";
 
   // View header: title on the left, action buttons (Random / Screensaver) on the right.
@@ -2185,6 +2186,7 @@ function renderPosters() {
     : allTypes;
   const bandHasAutographed = bandPosters.some(p => p.autographed);
   const bandHasFramed = bandPosters.some(p => p.framed);
+  const bandHasForSale = bandPosters.some(p => p.forSale);
   const bandHasFestival = bandPosters.some(p => isFestivalPoster(p));
   const bandHasNotAttended = artist
     ? STATE.posters.filter(p => p.artist === artist).some(p => !p.attended)
@@ -2257,6 +2259,11 @@ function renderPosters() {
 
   filterBar.appendChild(makeChip("Autographed", autographed, !bandHasAutographed, "autographed"));
   filterBar.appendChild(makeChip("Framed", framedOnly, !bandHasFramed, "framed"));
+  filterBar.appendChild(makeChip("For sale / trade", forSaleOnly, !bandHasForSale, "forSale", {
+    title: bandHasForSale
+      ? "Show only posters Seth has available for sale or trade"
+      : "No for-sale or trade posters for this band"
+  }));
   filterBar.appendChild(makeChip("Festival", festivalOnly, !bandHasFestival, "festival", {
     title: bandHasFestival
       ? "Show only posters from festival events (festival-wide posters and band posters from festival days)"
@@ -2267,7 +2274,7 @@ function renderPosters() {
   // Reset link: visible whenever any filter is active. Clears all filter
   // params at once and returns the user to the unfiltered Posters view.
   const anyFilterActive = artist || illustrator || type || autographed ||
-    framedOnly || festivalOnly || notAttended || q;
+    framedOnly || festivalOnly || forSaleOnly || notAttended || q;
   if (anyFilterActive) {
     filterBar.appendChild(el("button", {
       class: "filter-reset-link",
@@ -2361,6 +2368,9 @@ function renderPosters() {
       }
       if (festivalOnly) {
         posters = posters.filter(v => isFestivalPoster(v));
+      }
+      if (forSaleOnly) {
+        posters = posters.filter(v => v.forSale);
       }
       return posters.length === g.posters.length ? g : { ...g, posters };
     })
@@ -2824,6 +2834,11 @@ function posterGroupCard(g) {
   // "Not attended" flag
   if (!g.attended) {
     thumb.appendChild(el("div", { class: "not-attended-badge" }, "DIDN'T ATTEND"));
+  }
+
+  // "For sale / trade" flag — shown if any poster in this group is available.
+  if (g.posters.some(p => p.forSale)) {
+    thumb.appendChild(el("div", { class: "for-sale-badge" }, "FOR SALE / TRADE"));
   }
 
   // Type + Variant badges
@@ -6617,7 +6632,16 @@ function openPosterModal(group, navContext) {
 
 function variantBlock(p) {
   const typeClass = classifyType(p.type);
-  const wrap = el("div", { class: "variant has-dual-images" });
+  const wrap = el("div", { class: "variant has-dual-images" + (p.forSale ? " for-sale" : "") });
+
+  // For Sale / Trade banner — full-width strip atop the variant so it's the
+  // first thing seen when this poster is one Seth has available.
+  if (p.forSale) {
+    wrap.appendChild(el("div", { class: "for-sale-banner" },
+      el("span", { class: "for-sale-banner-tag" }, "● Available"),
+      el("span", {}, "This poster is for sale or trade")
+    ));
+  }
 
   // Images section: show stock (reference image) and personal (user's photo)
   // side-by-side. Each holder handles its own fallback chain and renders a
