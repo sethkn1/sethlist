@@ -6218,29 +6218,17 @@ function openConcertModal(c, navContext) {
   //      Festival" but the day's lineup includes Tool, Slipknot, etc., each
   //      of which may have its own band-specific poster.
   //
-  // Per user direction, we now match by DATE primarily — any poster from the
-  // same date as the concert is shown in that concert's modal. We keep a
-  // small fuzzy-date window (±4 days) for non-festival concerts only, to
-  // catch posters dated slightly off from the show date (rare, but real:
-  // some posters carry the printing/release date rather than the show date).
+  // Per user direction, we match strictly by DATE: a poster is shown in a
+  // concert's modal only when its date is the exact show date.
+  //
+  // A ±4-day fuzzy window was tried previously (to catch posters carrying a
+  // printing/release date instead of the show date) but it wrongly pulled
+  // in posters from a *different* show on the same tour — e.g. a Nine Inch
+  // Nails poster from the 2022-05-01 Franklin, TN show appeared in the
+  // 2022-04-28 Raleigh, NC show's modal. Same artist + a nearby date is
+  // exactly the multi-stop tour case, so fuzzy date matching can't be
+  // trusted to tell two real shows apart.
   const normalizeArtist = s => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "").replace(/and/g, "");
-  const dateDiffDays = (a, b) => Math.abs(
-    (new Date(a + "T00:00:00") - new Date(b + "T00:00:00")) / 86400000
-  );
-  const editDist = (a, b) => {
-    if (a === b) return 0;
-    if (!a || !b) return Math.max((a||"").length, (b||"").length);
-    if (a.length < b.length) [a, b] = [b, a];
-    let prev = Array.from({length: b.length + 1}, (_, i) => i);
-    for (let i = 0; i < a.length; i++) {
-      const cur = [i + 1];
-      for (let j = 0; j < b.length; j++) {
-        cur.push(Math.min(cur[j] + 1, prev[j + 1] + 1, prev[j] + (a[i] !== b[j] ? 1 : 0)));
-      }
-      prev = cur;
-    }
-    return prev[b.length];
-  };
   const cArtist = normalizeArtist(c.artist);
 
   const shows = STATE.posters.filter(p => {
@@ -6282,16 +6270,8 @@ function openConcertModal(c, navContext) {
       return false;
     }
 
-    // Non-festival concerts: exact date always matches; otherwise allow a
-    // ±4 day fuzzy match if the artist also matches. This catches posters
-    // dated slightly off from the show (rare but real — e.g. printing
-    // date vs. show date).
-    if (p.date === c.date) return true;
-    if (dateDiffDays(p.date, c.date) > 4) return false;
-    const pArtist = normalizeArtist(p.artist);
-    if (!pArtist || !cArtist) return false;
-    return pArtist.includes(cArtist) || cArtist.includes(pArtist)
-        || editDist(pArtist, cArtist) <= 2;
+    // Non-festival concerts: a poster matches only on the exact show date.
+    return p.date === c.date;
   });
 
   modalBody.innerHTML = "";
@@ -6607,14 +6587,14 @@ function openPosterModal(group, navContext) {
     el("div", { class: "variant-list" }, ...group.posters.map(variantBlock))
   ));
 
-  // Back-link to concert
+  // Back-link to concert. Match strictly by exact date — a ±4-day window
+  // would mis-link a poster to a neighboring stop on the same tour (same
+  // artist, nearby date), the same false-positive that affected the
+  // concert modal's poster list.
   const normalizeArtist = s => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "").replace(/and/g, "");
-  const dateDiffDays = (a, b) => Math.abs(
-    (new Date(a + "T00:00:00") - new Date(b + "T00:00:00")) / 86400000
-  );
   const gArtist = normalizeArtist(group.artist);
   const c = STATE.concerts.find(x => {
-    if (dateDiffDays(x.date, group.date) > 4) return false;
+    if (x.date !== group.date) return false;
     const xArtist = normalizeArtist(x.artist);
     return xArtist && gArtist && (xArtist.includes(gArtist) || gArtist.includes(xArtist));
   });
