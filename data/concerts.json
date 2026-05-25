@@ -2141,6 +2141,26 @@
   },
   {
     "id": 107,
+    "date": "2025-07-16",
+    "year": 2025,
+    "dayOfWeek": "Wednesday",
+    "artist": "The Offspring",
+    "city": "Raleigh",
+    "state": "NC",
+    "venue": "Coastal Credit Union Music Park at Walnut Creek",
+    "attendedWith": "Josh R., Bill B.",
+    "hasPoster": false,
+    "setlistLink": "https://www.setlist.fm/setlist/the-offspring/2025/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-35b0123.html",
+    "tourName": "SUPERCHARGED Worldwide in '25",
+    "openingActs": "Jimmy Eat World, New Found Glory",
+    "notes": null,
+    "festivalKey": null,
+    "festivalName": null,
+    "festivalDayNumber": null,
+    "festivalTotalDays": null
+  },
+  {
+    "id": 108,
     "date": "2025-07-29",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -2160,7 +2180,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 108,
+    "id": 109,
     "date": "2025-08-21",
     "year": 2025,
     "dayOfWeek": "Thursday",
@@ -2180,7 +2200,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 109,
+    "id": 110,
     "date": "2025-08-28",
     "year": 2025,
     "dayOfWeek": "Thursday",
@@ -2200,7 +2220,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 110,
+    "id": 111,
     "date": "2025-09-05",
     "year": 2025,
     "dayOfWeek": "Friday",
@@ -2220,7 +2240,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 111,
+    "id": 112,
     "date": "2025-09-11",
     "year": 2025,
     "dayOfWeek": "Thursday",
@@ -2240,7 +2260,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 112,
+    "id": 113,
     "date": "2025-10-25",
     "year": 2025,
     "dayOfWeek": "Saturday",
@@ -2260,7 +2280,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 113,
+    "id": 114,
     "date": "2025-11-04",
     "year": 2025,
     "dayOfWeek": "Tuesday",
@@ -2280,7 +2300,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 114,
+    "id": 115,
     "date": "2026-02-10",
     "year": 2026,
     "dayOfWeek": "Tuesday",
@@ -2300,7 +2320,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 115,
+    "id": 116,
     "date": "2026-03-07",
     "year": 2026,
     "dayOfWeek": "Saturday",
@@ -2320,7 +2340,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 116,
+    "id": 117,
     "date": "2026-03-16",
     "year": 2026,
     "dayOfWeek": "Monday",
@@ -2340,7 +2360,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 117,
+    "id": 118,
     "date": "2026-03-26",
     "year": 2026,
     "dayOfWeek": "Thursday",
@@ -2360,7 +2380,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 118,
+    "id": 119,
     "date": "2026-04-01",
     "year": 2026,
     "dayOfWeek": "Wednesday",
@@ -2380,7 +2400,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 119,
+    "id": 120,
     "date": "2026-04-17",
     "year": 2026,
     "dayOfWeek": "Friday",
@@ -2400,7 +2420,7 @@
     "festivalTotalDays": null
   },
   {
-    "id": 120,
+    "id": 121,
     "date": "2026-05-14",
     "year": 2026,
     "dayOfWeek": "Thursday",

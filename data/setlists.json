@@ -17805,5 +17805,191 @@
     ],
     "info": null,
     "role": "opener"
+  },
+  "35b0123": {
+    "id": "35b0123",
+    "artist": "The Offspring",
+    "tour": "SUPERCHARGED Worldwide in '25",
+    "eventDate": "16-07-2025",
+    "url": "https://www.setlist.fm/setlist/the-offspring/2025/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-35b0123.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Thunderstruck",
+            "cover": "AC/DC",
+            "tape": true
+          },
+          {
+            "name": "Come Out and Play"
+          },
+          {
+            "name": "All I Want"
+          },
+          {
+            "name": "Want You Bad"
+          },
+          {
+            "name": "Looking Out for #1"
+          },
+          {
+            "name": "Staring at the Sun"
+          },
+          {
+            "name": "Original Prankster"
+          },
+          {
+            "name": "Hammerhead"
+          },
+          {
+            "name": "Mota"
+          },
+          {
+            "name": "Hit That"
+          },
+          {
+            "name": "Make It All Right"
+          },
+          {
+            "name": "Bad Habit"
+          },
+          {
+            "name": "Smoke on the Water / Paranoid / Detroit Rock City / In the Hall of the Mountain King"
+          },
+          {
+            "name": "I Wanna Be Sedated",
+            "cover": "Ramones"
+          },
+          {
+            "name": "Gotta Get Away",
+            "info": "Followed by drum solo"
+          },
+          {
+            "name": "Gone Away",
+            "info": "2021 piano version into 1997 version"
+          },
+          {
+            "name": "Why Don't You Get a Job?"
+          },
+          {
+            "name": "Pretty Fly (for a White Guy)"
+          },
+          {
+            "name": "The Kids Aren't Alright"
+          }
+        ]
+      },
+      {
+        "name": null,
+        "encore": 1,
+        "songs": [
+          {
+            "name": "You're Gonna Go Far, Kid"
+          },
+          {
+            "name": "Self Esteem"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "headliner"
+  },
+  "opener:jimmy-eat-world:2025-07-16": {
+    "id": "435b033b",
+    "artist": "Jimmy Eat World",
+    "tour": "North American Tour 2025",
+    "eventDate": "16-07-2025",
+    "url": "https://www.setlist.fm/setlist/jimmy-eat-world/2025/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-435b033b.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Pain"
+          },
+          {
+            "name": "Just Tonight..."
+          },
+          {
+            "name": "Work"
+          },
+          {
+            "name": "Let It Happen"
+          },
+          {
+            "name": "Lucky Denver Mint"
+          },
+          {
+            "name": "Bleed American"
+          },
+          {
+            "name": "Call It in the Air"
+          },
+          {
+            "name": "Big Casino"
+          },
+          {
+            "name": "Something Loud"
+          },
+          {
+            "name": "A Praise Chorus"
+          },
+          {
+            "name": "Sweetness"
+          },
+          {
+            "name": "The Middle"
+          }
+        ]
+      }
+    ],
+    "info": null,
+    "role": "opener"
+  },
+  "opener:new-found-glory:2025-07-16": {
+    "id": "35b716f",
+    "artist": "New Found Glory",
+    "tour": "North American Tour 2025",
+    "eventDate": "16-07-2025",
+    "url": "https://www.setlist.fm/setlist/new-found-glory/2025/coastal-credit-union-music-park-at-walnut-creek-raleigh-nc-35b716f.html",
+    "sets": [
+      {
+        "name": null,
+        "encore": null,
+        "songs": [
+          {
+            "name": "Understatement"
+          },
+          {
+            "name": "All Downhill From Here"
+          },
+          {
+            "name": "Hit or Miss"
+          },
+          {
+            "name": "100%"
+          },
+          {
+            "name": "Failure's Not Flattering",
+            "info": "with Zach Comtois on keyboards"
+          },
+          {
+            "name": "Dressed to Kill"
+          },
+          {
+            "name": "Intro"
+          },
+          {
+            "name": "My Friends Over You"
+          }
+        ]
+      }
+    ],
+    "info": "Dan O'Connor from Four Year Strong filled in on lead guitar; Zach Comtois from Motion City Soundtrack on rhythm guitar",
+    "role": "opener"
   }
 }
